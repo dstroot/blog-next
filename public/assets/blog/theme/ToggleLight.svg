@@ -4,7 +4,9 @@
     <title>lampDark Copy 2</title>
     <desc>Created with Sketch.</desc>
     <g id="lampDark-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval" stroke="#E2E2E2" stroke-width="50" cx="200" cy="200" r="149"></circle>
-        <path d="M100,100 C155.228475,100 200,144.771525 200,200 C200,255.228475 155.228475,300 100,300 L100,300 Z" id="Combined-Shape" fill="#E2E2E2" transform="translate(150.000000, 200.000000) scale(-1, -1) translate(-150.000000, -200.000000) "></path>
+        <g transform="scale(1,-1)">
+            <circle id="Oval" stroke="#E2E2E2" stroke-width="50" cx="200" cy="200" r="149"></circle>
+            <path d="M100,100 C155.228475,100 200,144.771525 200,200 C200,255.228475 155.228475,300 100,300 L100,300 Z" id="Combined-Shape" fill="#E2E2E2" transform="translate(150.000000, 200.000000) scale(-1, -1) translate(-150.000000, -200.000000) "></path>
+        </g>
     </g>
 </svg>
