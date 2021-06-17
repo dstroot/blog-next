@@ -10,13 +10,13 @@ export default function Intro() {
         Blog.
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+        <div className="text-right" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
         { theme == 'dark' ? 
           <Image src="/assets/blog/theme/ToggleLight.svg" alt="light" height={30} width={30} /> 
           : 
           <Image src="/assets/blog/theme/Toggle.svg" alt="dark" height={30} width={30} /> 
         }
-        </button>
+        </div>
         {CMS_NAME}.
       </h4>
     </section>
