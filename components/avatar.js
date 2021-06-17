@@ -8,7 +8,7 @@ export default function Avatar({ name, picture }) {
         alt={name}
         width={55}
         height={55}
-        className="w-12 h-12 rounded-full mr-4"
+        className="w-12 h-12 rounded-full"
       />
       <div className="ml-4 text-xl font-bold">{name}</div>
     </div>

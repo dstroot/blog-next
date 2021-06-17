@@ -1,14 +1,8 @@
-const round = (num) =>
-  num
-    .toFixed(7)
-    .replace(/(\.[0-9]+?)0+$/, '$1')
-    .replace(/\.0$/, '')
-const rem = (px) => `${round(px / 16)}rem`
-const em = (px, base) => `${round(px / base)}em`
-
 module.exports = {
+  darkMode: 'class',
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
+    typography: (theme) => ({}),
     extend: {
       colors: {
         'accent-1': '#FAFAFA',
@@ -38,4 +32,10 @@ module.exports = {
       },
     },
   },
+  variants: {},
+  plugins: [require('@tailwindcss/typography')],
 }
+
+/*
+By adding darkmode: 'class' to the config, you've instructed TailwindCSS to include all of the CSS utility classes for dark mode. This enables a dark variant that you can now add as classes to your React elements like className="bg-white dark:bg-gray-900" and the correct class will be provided when dark is active on your html element.
+*/
