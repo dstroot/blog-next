@@ -6,11 +6,11 @@ export default function Avatar({ name, picture }) {
       <Image
         src={picture}
         alt={name}
-        // width={500}
-        // height={500}
+        width={55}
+        height={55}
         className="w-12 h-12 rounded-full mr-4"
       />
-      <div className="text-xl font-bold">{name}</div>
+      <div className="ml-4 text-xl font-bold">{name}</div>
     </div>
   )
 }
