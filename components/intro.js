@@ -12,7 +12,7 @@ export default function Intro() {
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
         <div className="text-right" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
         { theme == 'dark' ? 
-          <Image src="/assets/blog/theme/ToggleLight.svg" alt="light" height={30} width={30} className="cursor-pointer rotate-90"/> 
+          <Image src="/assets/blog/theme/ToggleInverse.svg" alt="light" height={30} width={30} className="cursor-pointer"/> 
           : 
           <Image src="/assets/blog/theme/Toggle.svg" alt="dark" height={30} width={30} className="cursor-pointer"/> 
         }

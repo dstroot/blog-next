@@ -5,7 +5,7 @@ export default function MyApp({ Component, pageProps }) {
   return(
     <>
       {/* <DefaultSeo {...SEO} /> */}
-      <ThemeProvider>
+      <ThemeProvider attribute="media">
         <Component {...pageProps} />
       </ThemeProvider>
     </>
