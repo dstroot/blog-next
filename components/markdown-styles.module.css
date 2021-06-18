@@ -5,8 +5,13 @@
 .markdown p,
 .markdown ul,
 .markdown ol,
+/* .markdown li, */
 .markdown blockquote {
   @apply my-6;
+}
+
+.markdown li {
+  @apply list-disc ml-6 mb-4;
 }
 
 .markdown blockquote {

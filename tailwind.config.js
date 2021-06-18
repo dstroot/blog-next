@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: 'media',
+  darkMode: 'media',  // true false or 'media' or 'class'
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
     typography: (theme) => ({}),
@@ -32,7 +32,9 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [require('@tailwindcss/typography')],
 }
 
