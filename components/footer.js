@@ -1,4 +1,4 @@
-import Container from './container'
+import Container from "./container";
 
 export default function Footer() {
   return (
@@ -22,9 +22,11 @@ export default function Footer() {
               View on GitHub
             </a>
           </div>
-          <p><small>Crafted with ♥️ in California.</small></p>
+          <p>
+            <small>Crafted with ♥️ in California.</small>
+          </p>
         </div>
       </Container>
     </footer>
-  )
+  );
 }

@@ -15,5 +15,3 @@ ogImage:
 I often struggle to communicate large, impactful decisions across a large organization.  They did a great job with the "Assessment Matrix" matrix they created that clearly spells out each function by priority, and which platform "wins".
 
 In this case I think transparency wins.  Good example to learn from!
-
-<!--more-->
