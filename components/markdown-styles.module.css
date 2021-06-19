@@ -10,7 +10,7 @@
 }
 
 .markdown li {
-  @apply list-disc ml-6 mb-4;
+  @apply list-disc ml-6 mb-1;
 }
 
 .markdown blockquote {

@@ -1,20 +1,21 @@
 ---
-author: dan
-categories: null
-# date: '2012-10-21'
-published: true
-tags: null
-title: Minority Report and Big Data
+title: 'Minority Report and Big Data'
+excerpt: 'The United Arab Emirates holds the largest biometric database in the world, the Emirates Identity Authority has announced. The population register of Emirates ID has over **103 million digital fingerprints and over 15 million digital facial recognition records**, which includes multiple records of each UAE resident, and digital signatures as of October 11, 2012, senior officials said.'
+coverImage: '/assets/blog/img/minorityreport.jpeg'
+date: '2012-10-21T10:25:35-08:00'
+author:
+  name: Dan Stroot
+  picture: '/assets/blog/authors/dan.jpeg'
+ogImage:
+  url: '/assets/blog/img/minorityreport.jpeg'
 ---
-
-![Minority Report](/img/minorityreport.jpg)
 
 > The United Arab Emirates holds the largest biometric database in
 > the world, the Emirates Identity Authority has announced. The
 > population register of Emirates ID has over **103 million digital
 > fingerprints and over 15 million digital facial recognition
 > records**, which includes multiple records of each UAE resident,
-> and digital signatures as of October 11, senior officials said.
+> and digital signatures as of October 11, 2012, senior officials said.
 >
 > Dr. Ali Al Khoury, Director General of Emirates ID, said the
 > authority has submitted an official application to the World
@@ -27,9 +28,7 @@ title: Minority Report and Big Data
 > World Record Academy also confirmed to us that no other government
 > or authority has made a similar claim for such a record." 1
 
-<!--more-->
-
-The question you should be asking yourself right now is “for what purpose?” Collecting and storing all that data costs millions. What is the value of having it? Who has access to it? Why make it so publicly known?
+The question you should be asking yourself right now is “for what purpose?” What is the value of having it? Who has access to it? Why make it so publicly known?
 
 The Emirates Identity Authority states the benefits are:
 
@@ -44,7 +43,7 @@ The Emirates Identity Authority states the benefits are:
 
 Note the first _benefit_ listed is that it is mandatory for all people 15 years of age and older.
 
-### Let’s come up with some ideas of our own:
+### Let’s come up with some ideas of our own
 
 **Government Services:** This is the most obvious use. Governments collect taxes and provide services to their citizens. They need a simple, cheap, accurate way to identify you to prevent fraud. In the US we are familiar with the concept of people defrauding Social Security, Medicare, and many other government programs. Would a method that cuts down or eliminates fraud pay for itself?
 
@@ -78,7 +77,8 @@ If we see a face it we don’t recognize (you are not in the citizen database an
 In the end we all know there is a collision between privacy and security. Yet this is so much broader than many people realize. I do believe like all technology it has the power to make the world a better place when used responsibly.
 
 ### References
-1.  Emirates ID announces possession of world’s largest number of civil integrated biometrics, EIDA, October 14, 2012
-2.  Declan McCullagh, Real Life Minority Report Program Gets a Tryout, CBS News, October 7, 201
-3.  NSF Announces Interagency Progress on Administration’s Big Data Initiative, NSF.gov, October 3, 201
-4.  The U.S. Electronic Passport, U.S. Department of State, accessed October 21, 2012
+
+1. Emirates ID announces possession of world’s largest number of civil integrated biometrics, EIDA, October 14, 2012
+2. Declan McCullagh, Real Life Minority Report Program Gets a Tryout, CBS News, October 7, 201
+3. NSF Announces Interagency Progress on Administration’s Big Data Initiative, NSF.gov, October 3, 201
+4. The U.S. Electronic Passport, U.S. Department of State, accessed October 21, 2012

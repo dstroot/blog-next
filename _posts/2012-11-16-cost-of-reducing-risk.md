@@ -10,7 +10,6 @@ ogImage:
   url: '/assets/blog/img/edison.jpg'
 ---
 
-
 Many large organizations work exceptionally hard minimize "risk".   Ironically, by working so diligently to reduce risk they are paying for it anyway, and reducing innovation at the same time.
 
 From Joel Spolsky’s [Camels and Rubber Duckies](http://www.joelonsoftware.com/articles/CamelsandRubberDuckies.html): _(with some minor editing)_
