@@ -12,7 +12,6 @@
     "gray-matter": "4.0.2",
     "next": "latest",
     "next-themes": "^0.0.14",
-    "prettier": "^2.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-markdown": "^6.0.2",
@@ -26,7 +25,8 @@
     "eslint": "^7.28.0",
     "eslint-config-next": "^11.0.0",
     "postcss": "^8.2.4",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "prettier": "^2.3.1"
   },
   "license": "MIT"
 }
