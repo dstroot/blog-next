@@ -35,62 +35,74 @@ export default function About({ preview }) {
             </h2>
 
             <p>
-              I have been a Chief Information Officer for a long time and it’s
-              clear that “managing information” is just the price of entry. In
-              today’s world I believe CIO should mean “Chief Innovation
-              Officer”. My ambition is to find ways in which technology can be
-              leveraged for more effective, more engaging, and more sustainable
-              business growth.
+              I have been very fortunate in my career to have experienced
+              several major waves of technology innovation, including the birth
+              of the Internet. I have served in a variety of senior leadership
+              roles, including global CIO of Allianz Global Investors. I held a
+              leadership role within Accenture where digitally transformed a
+              trillion-dollar mutual fund manager’s complete set of trading,
+              settlement, portfolio accounting, mutual fund performance & risk
+              measurement technology. I helped launch the first Internet Bank
+              (Wingspan Bank).
             </p>
 
             <p>
-              Some examples I am interested are: Harnessing the consumerization
-              of technology for the enterprise. Encouraging and managing
-              corporate data “curation” and ownership - a precursor to better
-              analytics. Otherwise known as data governance, but this term does
-              not do justice to ownership. How to propagate ideas, mass
-              collaboration and the social enterprise. Social brand development,
-              social capital and online reputation. Frictionless security - i.e.
-              security that will not be actively resisted by employees.
-              Development approaches that are rapid, iterative & nimble -
-              basically how to use open source style collaboration for corporate
-              development. Scale computing in all forms, shapes and sizes. I
-              have been actively using Kubernetes and Golang for some time now
-              and have built out a library of Kubernetes deployment tools. Where
-              I’ve Worked Associate Partner: Accenture Global CIO: Allianz
-              Global Investors Chief Technology Officer: Santa Barbara Tax
-              Products Group Community Service Board Member, Ronald McDonald
-              House, Los Angeles Technology Committee Member, Santa Margarita
-              Catholic High School Education University of California at Los
-              Angeles, BA Economics, 1985 Magna Cum Laude Phi Beta Kappa Some
-              Example Open Source Contributions Skeleton (maintainer) Boostrap
-              (contributor) Kubernetes (contributor) Helmet (contributor) A
-              Little More on Me - the Personal Side I’ve been happily married to
-              Julie for over twenty-five years, and have I have two children,
-              Matt and Elise, who make me very proud. Julie and I met at UCLA.
-              Go Bruins! My favorites movies are Princess Bride and Dead Poets
-              Society. I actually have “Carpe Diem” imprinted on my custom iPad
-              cover. I love driving/riding anything with a motor and enjoy both
-              dirt and street motorcycing and yes I probably go too fast. I
-              generally love anything outdoors. Seems I have really gotten into
-              hiking lately. I appreciate a good 10-15 mile summit hike and have
-              hit most of the local southern California peaks. It’s good to get
-              your heart rate up for 4-8 hours! My favorite place on earth is
-              Hawaii, so a big mahalo to all of you who feel the same way. There
-              is no place else where I can literally step off the plane and feel
-              the weight lift from my shoulders and my spirit open up. Technical
-              Details About This Site We are all standing on the back of giants
-              and I am constantly amazed at the quality and diversity of the
-              open source tools available now. I love learning and using new
-              technology, and I am a curious person, so I am always interested
-              in what technologies others use to create sites - so I thought I
-              might share what tools I am using. This site is very simple. It is
-              a static site built using Hugo and hosted on GitHub and TLS is
-              provided by Cloudflare. Here is a quick list of what I am
-              currently using: Source code and content is managed on GitHub Site
-              analytics are provided by Google Analytics The build system is
-              Gulp.js The CSS is compiled from SCSS Site comments are provided
-              by Disqus
+              I have been a Chief Information Officer for a long time and it’s
+              clear that “managing information” is just the price of entry. In
+              today’s world CIO means “Chief Innovation Officer”. My ambition is
+              to find ways in which technology can be leveraged for more
+              effective, more engaging, and more sustainable business growth.
+            </p>
+
+            <p>
+              What is perhaps most interesting about me is I am still a hands on
+              person. I have the I have been actively using Kubernetes and
+              Golang for some time now and have built out a library of
+              Kubernetes deployment tools.
+            </p>
+
+            <p>
+              Where I’ve Worked
+              <ul>
+                <li>Associate Partner: Accenture</li>
+                <li>Global CIO: Allianz Global Investors</li>
+                <li>
+                  Chief Technology Officer: Santa Barbara Tax Products Group
+                </li>
+              </ul>
+              Community Service
+              <ul>
+                <li>Board Member, Ronald McDonald House, Los Angeles</li>
+                <li>
+                  Technology Committee Member, Santa Margarita Catholic High
+                  School
+                </li>
+              </ul>
+            </p>
+
+            <p>
+              Some Example Open Source Contributions Skeleton (maintainer)
+              Boostrap (contributor) Kubernetes (contributor) Helmet
+              (contributor)
+            </p>
+
+            <p>
+              I love learning and using new technology, and I am a curious
+              person, so I am always interested in what technologies others use
+              to create sites - so I thought I might share what tools I am
+              using. This site is very simple. It is a static site built using
+              Hugo and hosted on GitHub and TLS is provided by Cloudflare. Here
+              is a quick list of what I am currently using: Source code and
+              content is managed on GitHub Site analytics are provided by Google
+              Analytics The build system is Gulp.js The CSS is compiled from
+              SCSS Site comments are provided by Disqus
+            </p>
+            <p>
+              <small>
+                Dan holds a BA in Economics from the University of California at
+                Los Angeles where he graduated Magna Cum Laude and is a member
+                of Phi Beta Kappa.
+              </small>
             </p>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   const year = new Date(); // evergreen copyright year
   return (
-    <footer className="bg-gray-200 text-gray-600 px-6 lg:px-8 py-8">
+    <footer className="bg-gray-200 text-gray-800 px-6 lg:px-8 py-8">
       <div className="flex space-y-3">
         <div className="flex-grow">
           <div className="flex flex-row items-center">
@@ -17,8 +17,10 @@ export default function Footer() {
                 className="rounded-full shadow-avatar"
               />
             </div>
-            <div className="flex-initial ml-4 mb-2 text-xl font-bold">
-              Dan Stroot
+            <div className="flex-initial">
+              <h3 class="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left lg:pr-4 ml-4">
+                Dan Stroot
+              </h3>
             </div>
           </div>
           <p>
