@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </div>
             <div className="flex-initial">
-              <h3 class="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left lg:pr-4 ml-4">
+              <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left lg:pr-4 ml-4">
                 Dan Stroot
               </h3>
             </div>

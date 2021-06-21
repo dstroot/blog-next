@@ -27,7 +27,7 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex-initial">
-          <div class="flex md:flex-col space-x-4 md:space-y-2">
+          <div className="flex md:flex-col space-x-4 md:space-y-2">
             <div>
               <a
                 href="https://www.linkedin.com/in/danstroot"
