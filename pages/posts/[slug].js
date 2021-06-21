@@ -8,9 +8,8 @@ import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
-import { REPO } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
+import { CMS_NAME, REPO } from "../../lib/constants";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -19,6 +18,7 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  
   return (
     <Layout preview={preview}>
       <Container>

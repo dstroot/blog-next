@@ -9,8 +9,12 @@
   @apply my-6;
 }
 
+.markdown ul {
+  @apply list-outside list-disc ml-5;
+}
+
 .markdown li {
-  @apply list-disc ml-6 mb-1;
+  @apply list-disc mb-2;
 }
 
 .markdown blockquote {

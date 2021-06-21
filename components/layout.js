@@ -1,5 +1,5 @@
 // import Alert from '../components/alert'
-import Footer from "../components/footer";
+import Footer from "../components/footer3";
 import Meta from "../components/meta";
 
 export default function Layout({ preview, children }) {
