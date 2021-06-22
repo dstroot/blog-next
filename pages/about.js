@@ -49,17 +49,18 @@ export default function About({ preview }) {
             </p>
             <p>
               I have been a Chief Information Officer/Chief Technology Officer
-              for a long time and it’s clear that “managing information” is just
-              the price of entry. In today’s world CIO means “Chief Innovation
-              Officer”. It's what drives me and what I love about my work.
+              for a long time and it’s clear that &quot;managing
+              information&quot; is just the price of entry. In today’s world CIO
+              means &quot;Chief Innovation Officer&quot;. Its what drives me and
+              what I love about my work.
             </p>
             <p>
-              What is interesting about me is I am still a "hands-on" leader. I
-              have over 150 code repositories on GitHub; spanning many different
-              languages and technologies. I have contributed to open source
-              projects where possible to give back, but also simply because I
-              enjoy it. I actually still miss my days as a programmer where I
-              could focus on a single problem for 8-10 hours unbroken.
+              What is interesting about me is I am still a &quot;hands-on&quot;
+              leader. I have over 150 code repositories on GitHub; spanning many
+              different languages and technologies. I have contributed to open
+              source projects where possible to give back, but also simply
+              because I enjoy it. I actually still miss my days as a programmer
+              where I could focus on a single problem for 8-10 hours unbroken.
             </p>
             <small>
               <h3>Example Open Source Contributions:</h3>
