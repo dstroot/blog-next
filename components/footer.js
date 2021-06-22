@@ -83,7 +83,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center mt-4 lg:mt-6 border-t-2 border-gray-300 pt-2">
+        <div className="flex flex-col md:flex-row justify-between items-center mt-4 lg:mt-6 border-t-2 border-gray-300 pt-2">
           <div className="text-sm text-center md:text-left">
             &copy;{year.getFullYear()} Dan Stroot. All rights reserved.
           </div>
