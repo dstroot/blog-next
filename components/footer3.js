@@ -23,7 +23,7 @@ export default function Footer() {
               </h3>
             </div>
           </div>
-          <p>
+          <p className="mt-3">
             I love building things. Made in California. Family man, technologist
             and Hacker News aficionado. Eternally curious.
           </p>
