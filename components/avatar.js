@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Avatar({ name, picture }) {
+export default function Avatar({ name, picture, size }) {
   return (
     <Link href="/about">
       <a>
@@ -10,8 +10,8 @@ export default function Avatar({ name, picture }) {
             <Image
               src={picture}
               alt={name}
-              width={55}
-              height={55}
+              width={size}
+              height={size}
               className="w-12 h-12 rounded-full"
             />
           </div>
