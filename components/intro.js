@@ -1,4 +1,4 @@
-import { CMS_NAME } from "../lib/constants";
+import { CMS_NAME, TAGLINE } from "../lib/constants";
 import { ThemeChanger } from "./ThemeChanger";
 
 export default function Intro() {
@@ -9,7 +9,7 @@ export default function Intro() {
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
         <ThemeChanger />
-        {CMS_NAME}.
+        {CMS_NAME}. {TAGLINE}.
       </h4>
     </section>
   );

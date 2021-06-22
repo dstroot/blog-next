@@ -24,8 +24,8 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-3">
-            I love building things. Made in California. Family man, technologist
-            and Hacker News aficionado. Eternally curious.
+            I love building things. Family man, technologist and Hacker News
+            aficionado. Eternally curious.
           </p>
         </div>
         <div className="flex-shrink md:space-y-4 justify-center">

@@ -2,26 +2,27 @@ import Container from "../components/container";
 import Header from "../components/header";
 import PostTitle from "../components/post-title";
 import Layout from "../components/layout";
-// import Head from 'next/head'
-// import { CMS_NAME } from '../lib/constants'
+import Head from "next/head";
+import { CMS_NAME } from "../lib/constants";
 import Image from "next/image";
 import markdownStyles from "../components/markdown-styles.module.css";
 
 export default function About({ preview }) {
   return (
     <Layout preview={preview}>
+      <Head>
+        <title>{CMS_NAME} About</title>
+      </Head>
       <Container>
         <Header />
         <div className="flex flex-row">
-          <div className="flex-initial mr-4">
-            <div className="image-container w-10 md:w-16 lg:w-20">
-              <Image
-                src="/assets/blog/authors/dan.jpeg"
-                alt="Dan Stroot"
-                className="rounded-full mt-4 image"
-                layout="fill"
-              />
-            </div>
+          <div className="flex-initial mr-4 image-container w-10 md:w-16 lg:w-20">
+            <Image
+              src="/assets/blog/authors/dan.jpeg"
+              alt={CMS_NAME}
+              className="rounded-full mt-4 image"
+              layout="fill"
+            />
           </div>
           <div className="flex-initial -mt-2 md:-mt-1 lg:-mt-3">
             <PostTitle>About Me</PostTitle>
@@ -34,52 +35,54 @@ export default function About({ preview }) {
               I love building things. Made in California. Family man,
               technologist and Hacker News aficionado. Eternally curious.
             </h2>
-
             <p>
               I have been very fortunate in my career to have experienced
               several major waves of technology innovation, including the birth
-              of the Internet. I have served in a variety of senior leadership
-              roles, including global CIO of Allianz Global Investors. I held a
-              leadership role within Accenture where digitally transformed a
-              trillion-dollar mutual fund manager’s complete set of trading,
-              settlement, portfolio accounting, mutual fund performance & risk
-              measurement technology. I helped launch the first Internet Bank
+              of the Internet (really). I have served in a variety of senior
+              leadership roles, including Global CIO of Allianz Global Investors
+              where I was accountable for over $500M USD in annual technology
+              spend. I held a leadership role within Accenture where digitally
+              transformed a trillion-dollar mutual fund manager’s complete set
+              of trading, settlement, portfolio accounting, fund performance &
+              risk measurement systems. I helped launch the first Internet Bank
               (Wingspan Bank).
             </p>
-
             <p>
-              I have been a Chief Information Officer for a long time and it’s
-              clear that “managing information” is just the price of entry. In
-              today’s world CIO means “Chief Innovation Officer”. My ambition is
-              to find ways in which technology can be leveraged for more
-              effective, more engaging, and more sustainable business growth.
+              I have been a Chief Information Officer/Chief Technology Officer
+              for a long time and it’s clear that “managing information” is just
+              the price of entry. In today’s world CIO means “Chief Innovation
+              Officer”. It's what drives me and what I love about my work.
             </p>
-
             <p>
-              What is perhaps most interesting about me is I am still a hands on
-              person. I have over 150 repositories on GitHub.
+              What is interesting about me is I am still a "hands-on" leader. I
+              have over 150 code repositories on GitHub; spanning many different
+              languages and technologies. I have contributed to open source
+              projects where possible to give back, but also simply because I
+              enjoy it. I actually still miss my days as a programmer where I
+              could focus on a single problem for 8-10 hours unbroken.
             </p>
-
-            <p>
-              Some Example Open Source Contributions
+            <small>
+              <h3>Example Open Source Contributions:</h3>
               <ul>
                 <li>Skeleton (maintainer)</li>
                 <li>Boostrap (contributor)</li>
                 <li>Kubernetes(contributor)</li>
                 <li>Helmet (contributor)</li>
               </ul>
-            </p>
-
-            <p>
-              Where I’ve Worked
+              <h3>Where I’ve Worked</h3>
               <ul>
                 <li>Associate Partner: Accenture</li>
                 <li>Global CIO: Allianz Global Investors</li>
                 <li>
                   Chief Technology Officer: Santa Barbara Tax Products Group
                 </li>
+                <li>Founder: Verite Data Science</li>
+                <li>
+                  Chief Information Officer: Retirement Services Division,
+                  Pacific Life
+                </li>
               </ul>
-              Community Service
+              <h3>Community Service</h3>
               <ul>
                 <li>Board Member, Ronald McDonald House, Los Angeles</li>
                 <li>
@@ -87,25 +90,14 @@ export default function About({ preview }) {
                   School
                 </li>
               </ul>
-            </p>
-
-            <p>
-              I love learning and using new technology, and I am a curious
-              person, so I am always interested in what technologies others use
-              to create sites - so I thought I might share what tools I am
-              using. This site is very simple. It is a static site built using
-              Hugo and hosted on GitHub and TLS is provided by Cloudflare. Here
-              is a quick list of what I am currently using: Source code and
-              content is managed on GitHub Site analytics are provided by Google
-              Analytics The build system is Gulp.js The CSS is compiled from
-              SCSS Site comments are provided by Disqus
-            </p>
-
+            </small>
             <p>
               <small>
-                Dan holds a BA in Economics from the University of California at
-                Los Angeles where he graduated Magna Cum Laude and is a member
-                of Phi Beta Kappa.
+                <em>
+                  Dan holds a BA in Economics from the University of California
+                  at Los Angeles where he graduated Magna Cum Laude and is a
+                  member of Phi Beta Kappa.
+                </em>
               </small>
             </p>
           </div>
