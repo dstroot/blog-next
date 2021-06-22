@@ -14,15 +14,16 @@ export default function About({ preview }) {
         <Header />
         <div className="flex flex-row">
           <div className="flex-initial mr-4">
-            <Image
-              src="/assets/blog/authors/dan.jpeg"
-              alt="Dan Stroot"
-              width={80}
-              height={80}
-              className="rounded-full mt-4"
-            />
+            <div className="image-container w-10 md:w-16 lg:w-20">
+              <Image
+                src="/assets/blog/authors/dan.jpeg"
+                alt="Dan Stroot"
+                className="rounded-full mt-4 image"
+                layout="fill"
+              />
+            </div>
           </div>
-          <div className="flex-initial -mt-3">
+          <div className="flex-initial -mt-2 md:-mt-1 lg:-mt-3">
             <PostTitle>About Me</PostTitle>
           </div>
         </div>
@@ -56,9 +57,17 @@ export default function About({ preview }) {
 
             <p>
               What is perhaps most interesting about me is I am still a hands on
-              person. I have the I have been actively using Kubernetes and
-              Golang for some time now and have built out a library of
-              Kubernetes deployment tools.
+              person. I have over 150 repositories on GitHub.
+            </p>
+
+            <p>
+              Some Example Open Source Contributions
+              <ul>
+                <li>Skeleton (maintainer)</li>
+                <li>Boostrap (contributor)</li>
+                <li>Kubernetes(contributor)</li>
+                <li>Helmet (contributor)</li>
+              </ul>
             </p>
 
             <p>
@@ -81,12 +90,6 @@ export default function About({ preview }) {
             </p>
 
             <p>
-              Some Example Open Source Contributions Skeleton (maintainer)
-              Boostrap (contributor) Kubernetes (contributor) Helmet
-              (contributor)
-            </p>
-
-            <p>
               I love learning and using new technology, and I am a curious
               person, so I am always interested in what technologies others use
               to create sites - so I thought I might share what tools I am
@@ -97,6 +100,7 @@ export default function About({ preview }) {
               Analytics The build system is Gulp.js The CSS is compiled from
               SCSS Site comments are provided by Disqus
             </p>
+
             <p>
               <small>
                 Dan holds a BA in Economics from the University of California at

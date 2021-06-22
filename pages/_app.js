@@ -5,7 +5,10 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* <DefaultSeo {...SEO} /> */}
-      <ThemeProvider attribute="class">
+      <ThemeProvider
+        forcedTheme={Component.theme || undefined}
+        attribute="class"
+      >
         <Component {...pageProps} />
       </ThemeProvider>
     </>
