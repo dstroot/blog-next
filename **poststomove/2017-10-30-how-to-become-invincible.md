@@ -42,7 +42,7 @@ Second, carrots are not as good a source of vitamin A as we may think. Carrots c
 
 It turns out the reason we believe that carrots are good for our eyes is a bit of "fake news" way back from World War II. In the Battle of Britain, in 1940, the British fighter pilot, John Cunningham, became the first person to shoot down an enemy plane with the help of radar. In fact, in WW II, he was the RAF's top-scoring night fighter pilot, with a total of 20 kills. Some pilots like Cunningham, were better at night. His nickname was "Cats' Eyes". The RAF put out the story in the British newspapers that he, and his fellow night pilots, owed their exceptional night vision to carrots. 
 
-People believed this to the extent that they started growing and eating more carrots, so that they could better navigate at night during the blackouts that were compulsory during WW II.  But this story was a **myth invented by the RAF to hide their use of radar**, which was what really located the Luftwaffe bombers at night - not human carrot-assisted super-vision.  However this myth has propagated forward to this day.
+People believed this to the extent that they started growing and eating more carrots, so that they could better navigate at night during the blackouts that were compulsory during WW II.  But this story was a **myth invented by the RAF to hide their use of radar**, which was what really located the Luftwaffe bombers at night - not carrot-assisted super-vision.  However this myth has propagated forward to this day.
 
 So, things can change.  Being the truth is also about adapting what we perceive as the truth when new information is presented. Holding on to an “old truth” when it is no longer true, perhaps to save face, is not really “being the truth”. 
 

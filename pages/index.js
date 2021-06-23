@@ -14,7 +14,7 @@ export default function Index({ allPosts }) {
     <>
       <Layout>
         <Head>
-          <title>{CMS_NAME} Blog</title>
+          <title>{CMS_NAME} · Blog</title>
         </Head>
         <Container>
           <Intro />

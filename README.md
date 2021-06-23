@@ -17,5 +17,6 @@ TODO
 - [X] Add "Edit on GitHub" Link
 - [X] Add Syntax Highlighting
 - [X] Add Dark/Light Mode
-- [ ] Add About Me Page
-- [ ] Create a nice footer
+- [X] Add About Me Page
+- [X] Create a nice footer
+- [X] Add a "Read More" link

@@ -11,7 +11,7 @@ export default function About({ preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>{CMS_NAME} About</title>
+        <title>{CMS_NAME} · About</title>
       </Head>
       <Container>
         <Header />
