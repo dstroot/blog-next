@@ -1,5 +1,5 @@
 ---
-title: 'How to spot an underfunded IT department'
+title: 'Can you spot an underfunded IT department?'
 excerpt: 'If you recognize any of these behaviors in your own technology organization, you might be experiencing an underfunded technology department.  Your technology team doesn’t really hate you – they are more likely under resourced, overwhelmed, and have to say “no” just to survive.  People go into technology because they like building new things, they like solving business problems, and they love making businesses operate better.  The last thing on earth most technologists want to say is “no”.  '
 coverImage: '/assets/blog/img/old-computer.jpeg'
 date: '2021-06-10T10:25:35-08:00'

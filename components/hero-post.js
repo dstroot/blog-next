@@ -1,5 +1,4 @@
 import Avatar from "../components/avatar";
-import DateFormatter from "../components/date-formatter";
 import CoverImage from "../components/cover-image";
 import Link from "next/link";
 import { ReadMore } from "./read-more";
@@ -11,6 +10,7 @@ export default function HeroPost({
   excerpt,
   author,
   slug,
+  stats,
 }) {
   return (
     <section>
@@ -31,12 +31,17 @@ export default function HeroPost({
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
+            <Avatar
+              name={author.name}
+              picture={author.picture}
+              size={75}
+              date={date}
+              time={stats}
+            />
           </div>
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} size={35} />
           <ReadMore slug={slug} />
         </div>
       </div>

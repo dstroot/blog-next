@@ -7,7 +7,7 @@ author:
   name: "Dan Stroot"
   picture: '/assets/blog/authors/dan.jpeg'
 ogImage:
-  url: '/assets/blog/img/bias.jpg'
+  url: '/assets/blog/y /bias.jpg'
 ---
 
 As a CIO in a large, publicly owned financial services company I held the responsibility of keeping our client's (and our organization’s) data safe and secure.  As the economics of cloud services became compelling the largest hurdle to adoption was "potential security risks", by a large measure.

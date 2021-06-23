@@ -39,6 +39,7 @@ export default function Post({ post, morePosts, preview }) {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
+                time={post.stats.text}
               />
               <PostBody content={post.content} />
               <a href={githubPath} className="hover:underline text-gray-400">
