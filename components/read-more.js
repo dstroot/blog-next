@@ -3,7 +3,7 @@ import Link from "next/link";
 export const ReadMore = ({ slug }) => {
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
-      <a className="hover:underline text-2xl leading-snug">
+      <a className="hover:underline text-xl md:text-2xl leading-snug">
         Read More{" "}
         <svg
           className="h-6 w-6 inline-block -mt-1"

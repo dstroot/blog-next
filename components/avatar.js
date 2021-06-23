@@ -16,16 +16,14 @@ export default function Avatar({ name, picture, size, date, time }) {
               className="flex-none w-16 h-16 rounded-full bg-gray-100"
             />
             <div className="min-w-0 flex-auto">
-              {/* <p className="text-lime-600 dark:text-lime-400 text-sm sm:text-base lg:text-sm xl:text-base font-semibold uppercase">
-              <abbr title="Episode">Ep.</abbr> 128
-            </p> */}
-              <h2 className="text-black dark:text-white text-base sm:text-xl lg:text-base xl:text-xl font-semibold mb-0">
+              <p className="text-black dark:text-white text-base sm:text-xl lg:text-base xl:text-xl font-semibold mb-0 hover:underline">
                 Dan Stroot
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400">
+              </p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">
                 <DateFormatter dateString={date} /> · {time}
               </p>
             </div>
+            {/* <div className="min-w-0 flex-grow">test</div> */}
           </div>
         </div>
       </a>
