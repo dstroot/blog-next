@@ -1,11 +1,14 @@
-+++
-date = "2016-10-30T19:50:04-07:00"
-title = "Free to Believe Anything"
-draft = false
-description = ""
-+++
-
-![Cognitive Bias](/img/comic.png)
+---
+title: 'Free to Believe Anything'
+excerpt: 'When I was growing up, when you read the paper, watched the news, saw a film or a picture, you inherently believed in it.  You trusted the reality it portrayed. You trusted in journalism and even believed the news was actually "fair and balanced". Then technology destroyed the business model of traditional journalism.'
+coverImage: '/assets/blog/img/comic.png'
+date: '2016-10-30T19:50:04-07:00'
+author:
+  name: Dan Stroot
+  picture: '/assets/blog/authors/dan.jpeg'
+ogImage:
+  url: '/assets/blog/img/comic.png'
+---
 
 When I was growing up, when you read the paper, watched the news, saw a film or a picture, you inherently believed in it.  You trusted the reality it portrayed. You trusted in journalism and even believed the news was actually "fair and balanced". Then technology destroyed the business model of traditional journalism. The news institutions of the 20th century, print newspapers, the evening broadcast news, the trusted anchorman, are but relics of the past.
 
@@ -17,7 +20,7 @@ The Internet is filled with anti-vaxxers, World Trade truthers, Kennedy theorist
 
 >"In the new media landscape, the wall between news and entertainment is crumbling. The value of news is measured by its popularity. The loudest voice gets the most listeners. A lie bears equal weight as a fact."
 >
-><cite>&mdash; Vernon E. Jordan Jr., The Wall Street Journal</cite>
+>  <cite>&mdash; Vernon E. Jordan Jr., The Wall Street Journal</cite>
 
 The big internet platforms, through their algorithms, have become an eye of a needle which news and media must pass through, limiting the content a person sees to that which **already** conforms to their views. The Internet is becoming one big "echo chamber" which is designed to filter and shape the information someone sees based on previous searches, as well as information it might have about their location or preferences.
 
@@ -39,12 +42,10 @@ Donald Trump bypassed the old media gatekeepers and took his message straight to
 
 Yes, all candidates have equal access to technology, and of course we all have the freedom to listen to news and information the comfortably fits our views of the world. But isn't a a healthy democracy dependent on people being confronted by opposing ideas?
 
-#### References
+### References
 
-<span class="sources">
-[Angela Merkel: internet search engines are 'distorting perception'](https://www.theguardian.com/world/2016/oct/27/angela-merkel-internet-search-engines-are-distorting-our-perception)<br>
-[Facebook Top Source for Political News Among Millennials](http://www.journalism.org/2015/06/01/facebook-top-source-for-political-news-among-millennials/)<br>
-[How liars create the 'illusion of truth'](http://www.bbc.com/future/story/20161026-how-liars-create-the-illusion-of-truth)<br>
-[Both Old and New Media Are Failing Voters](http://www.wsj.com/articles/both-old-and-new-media-are-failing-voters-1478216173)<br>
-[How the Internet Is Loosening Our Grip on the Truth](http://www.nytimes.com/2016/11/03/technology/how-the-internet-is-loosening-our-grip-on-the-truth.html)
-</span>
+* [Angela Merkel: internet search engines are 'distorting perception'](https://www.theguardian.com/world/2016/oct/27/angela-merkel-internet-search-engines-are-distorting-our-perception)<br>
+* [Facebook Top Source for Political News Among Millennials](http://www.journalism.org/2015/06/01/facebook-top-source-for-political-news-among-millennials/)<br>
+* [How liars create the 'illusion of truth'](http://www.bbc.com/future/story/20161026-how-liars-create-the-illusion-of-truth)<br>
+* [Both Old and New Media Are Failing Voters](http://www.wsj.com/articles/both-old-and-new-media-are-failing-voters-1478216173)<br>
+* [How the Internet Is Loosening Our Grip on the Truth](http://www.nytimes.com/2016/11/03/technology/how-the-internet-is-loosening-our-grip-on-the-truth.html)

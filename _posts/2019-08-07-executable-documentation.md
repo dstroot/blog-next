@@ -1,8 +1,6 @@
 ---
 title: 'Executable Documentation'
-excerpt: 'Every team has manual procedures or checklists that they haven’t gotten around to automating yet. Sometimes there are branches and special cases to keep track of as you go. Procedures/checklists are frustrating because they’re focus-intensive yet require very little thought. They demand our full attention, but our attention isn’t rewarded with interesting problems or satisfying solutions – just another checkbox checked. Procedures like this are called a **slog**.
-
-Slogs are ripe for automation.'
+excerpt: 'Every team has manual procedures or checklists that they haven’t gotten around to automating yet. Sometimes there are branches and special cases to keep track of as you go. Procedures/checklists are frustrating because they’re focus-intensive yet require very little thought. They demand our full attention, but our attention isn’t rewarded with interesting problems or satisfying solutions – just another checkbox checked.'
 coverImage: '/assets/blog/img/exec_doc.png'
 date: '2019-08-07T10:25:35-08:00'
 author:
