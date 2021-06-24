@@ -10,6 +10,7 @@ import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import { CMS_NAME, REPO } from "../../lib/constants";
+import { GitHubLink } from "../../components/github";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -42,9 +43,7 @@ export default function Post({ post, morePosts, preview }) {
                 time={post.stats.text}
               />
               <PostBody content={post.content} />
-              <a href={githubPath} className="hover:underline text-gray-400">
-                Edit on GitHub
-              </a>
+              <GitHubLink path={githubPath} />
             </article>
           </>
         )}

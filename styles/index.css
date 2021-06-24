@@ -2,19 +2,21 @@
 
 /* Write your own custom base styles here */
 
-.image-container {
-  width: 100%;
-}
+@layer base {
+  .image-container {
+    width: 100%;
+  }
 
-.image-container > div {
-  position: unset !important;
-}
+  .image-container > div {
+    position: unset !important;
+  }
 
-.image-container .image {
-  object-fit: contain;
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
+  .image-container .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
 }
 
 /* Start purging... */

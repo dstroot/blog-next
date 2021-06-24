@@ -59,8 +59,9 @@ export default function About({ preview }) {
               leader. I have over 150 code repositories on GitHub; spanning many
               different languages and technologies. I have contributed to open
               source projects where possible to give back, but also simply
-              because I enjoy it. I actually still miss my days as a programmer
-              where I could focus on a single problem for 8-10 hours unbroken.
+              because I enjoy it. I LOVE building things, for example this
+              website, and I actually still miss my days as a programmer where I
+              could focus on a single problem domain.
             </p>
             <small>
               <h3>Example Open Source Contributions:</h3>
@@ -92,7 +93,7 @@ export default function About({ preview }) {
                 </li>
               </ul>
             </small>
-            <p>
+            <p className="mt-10">
               <small>
                 <em>
                   Dan holds a BA in Economics from the University of California

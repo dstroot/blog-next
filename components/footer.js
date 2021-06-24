@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   const year = new Date(); // evergreen copyright year
   return (
-    <footer className="bg-gray-200 text-gray-800 py-4 lg:py-6">
+    <footer className="bg-gray-800 text-gray-300 dark:bg-gray-200 dark:text-gray-700 py-4 lg:py-6">
       <Container>
         <div className="flex space-y-4">
           <div className="flex-grow">
@@ -24,7 +24,7 @@ export default function Footer() {
                 </h3>
               </div>
             </div>
-            <p className="mt-3">
+            <p className="md:text-xl mt-3">
               I love building things. Family man, technologist and Hacker News
               aficionado. Eternally curious.
             </p>
