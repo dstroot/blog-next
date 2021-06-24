@@ -146,11 +146,11 @@ The debate is not about banning gun ownership - rather it should be about how to
 
 #### References: 
 
-[Cornell Law School: Second Amendment](https://www.law.cornell.edu/wex/second_amendment)<br>
-[Historical timeline of the development of modern weapons](http://www.pbs.org/opb/historydetectives/technique/gun-timeline/)<br>
-[The Second Amendment & the Right to Bear Arms](https://www.livescience.com/26485-second-amendment.html)<br>
-[9 Things You May Not Know About the U.S. Armed Forces](http://www.history.com/news/9-things-you-may-not-know-about-the-u-s-armed-forces)<br>
-[US Militia](https://en.wikipedia.org/wiki/Militia#United_States)<br>
-[Law enforcement in the United States](https://en.wikipedia.org/wiki/Law_enforcement_in_the_United_States)<br>
-[Heckler & Koch MP7A1](https://www.armsunlimited.com/Heckler-Koch-MP7A1-PDW-4-6x30mm-Submachine-Gun-p/hk-mp7a1.htm)<br>
-[How the NRA Rewrote the Second Amendment](https://www.politico.com/magazine/story/2014/05/nra-guns-second-amendment-106856)
+* [Cornell Law School: Second Amendment](https://www.law.cornell.edu/wex/second_amendment)
+* [Historical timeline of the development of modern weapons](http://www.pbs.org/opb/historydetectives/technique/gun-timeline/)
+* [The Second Amendment & the Right to Bear Arms](https://www.livescience.com/26485-second-amendment.html)
+* [9 Things You May Not Know About the U.S. Armed Forces](http://www.history.com/news/9-things-you-may-not-know-about-the-u-s-armed-forces)
+* [Wikipedia: US Militia](https://en.wikipedia.org/wiki/Militia#United_States)
+* [Law enforcement in the United States](https://en.wikipedia.org/wiki/Law_enforcement_in_the_United_States)
+* [Heckler & Koch MP7A1](https://www.armsunlimited.com/Heckler-Koch-MP7A1-PDW-4-6x30mm-Submachine-Gun-p/hk-mp7a1.htm)
+* [How the NRA Rewrote the Second Amendment](https://www.politico.com/magazine/story/2014/05/nra-guns-second-amendment-106856)

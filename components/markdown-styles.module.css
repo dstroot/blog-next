@@ -30,7 +30,11 @@
 }
 
 .markdown a {
-  @apply text-indigo-800;
+  @apply text-blue-500 dark:text-blue-500;
+}
+
+.markdown a:hover {
+  @apply text-blue-700 dark:text-blue-300;
 }
 
 .markdown pre {
