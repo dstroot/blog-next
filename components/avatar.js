@@ -6,23 +6,21 @@ export default function Avatar({ name, picture, size, date }) {
   return (
     <Link href="/about">
       <a>
-        <div className="space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
-          <div className="flex items-center space-x-3.5 sm:space-x-5 lg:space-x-3.5 xl:space-x-5">
-            <Image
-              src={picture}
-              alt={name}
-              width={size}
-              height={size}
-              className="flex-none w-16 h-16 rounded-full bg-gray-100"
-            />
-            <div className="flex-auto">
-              <p className="text-black dark:text-white text-base sm:text-xl lg:text-base xl:text-xl font-semibold mb-0 hover:underline">
-                Dan Stroot
-              </p>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                <DateFormatter dateString={date} />
-              </p>
-            </div>
+        <div className="flex items-center space-x-5">
+          <Image
+            src={picture}
+            alt={name}
+            width={size}
+            height={size}
+            className="flex-none rounded-full bg-gray-100"
+          />
+          <div className="flex-auto">
+            <p className="text-black dark:text-white text-base sm:text-xl lg:text-base xl:text-xl font-semibold mb-0 hover:underline">
+              Dan Stroot
+            </p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">
+              <DateFormatter dateString={date} />
+            </p>
           </div>
         </div>
       </a>
