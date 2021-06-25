@@ -16,17 +16,15 @@ The Second Amendment was passed fifteen years after the American Revolution, in 
 
 James Madison originally proposed the Second Amendment as a way to provide more power to state militias. It begins with the concept that states must have a strong militia to ensure their security: _"A well regulated Militia, being necessary to the security of a free State..."_. The Second Amendment concludes with the notion that people must have the right to bear arms as an extension of the state militia concept (e.g. "the people" who can be called upon for military service during a time of need).
 
-<!--more-->
+It was deemed a compromise between Federalists — those who supported the Constitution as it was ratified — and anti-Federalists — those who supported states having more power. Recall that it took twelve years after the American Revolution for the Constitution to be ratified. During this time the states continued to govern themselves (the federal government didn't exist yet).
 
-It was deemed a compromise between Federalists — those who supported the Constitution as it was ratified — and anti-Federalists — those who supported states having more power. Recall that it took twelve years after the American Revolution for the Constitution to be ratified. During this time the states continued to govern themselves without an established, active federal government.
+The ratification of the Constitution in 1788 established the federal government’s authority, and gave Congress the power to raise and support armies. Article 1 Section 8 of the United States Constitution, control of the army and the power to direct the militia of the states, was delegated to the federal Congress. The First Congress did not immediately act upon this provision, however, choosing instead to set up the State, War and Treasury departments and the judiciary, among other things.
 
-The ratification of the Constitution in 1788 greatly expanded the federal government’s authority, in part by giving Congress the power to raise and support armies. Article 1 Section 8 of the United States Constitution, control of the army and the power to direct the militia of the states was delegated to the federal Congress. The First Congress did not immediately act upon this provision, however, choosing instead to set up the State, War and Treasury departments and the judiciary, among other things. 
+However on August 7, 1789, President Washington urged congress to establish “some uniform and effective system” for the military “on which the honor, safety and well being of our country so evidently and essentially depend.” It was not until September 29, 1789 (the last day of its first session), that Congress passed a bill empowering the president “to call into service, from time to time, such part of the militia of the states, respectively, as he may judge necessary.”
 
-However on August 7, 1789, President Washington urged congress to establish “some uniform and effective system” for the military “on which the honor, safety and well being of our country so evidently and essentially depend.” It was not until September 29, 1789 (the last day of its first session), that Congress passed a bill empowering the president “to call into service, from time to time, such part of the militia of the states, respectively, as he may judge necessary.” 
+Before that time the federal government lacked military power. After the American Revolution the Continental Army was disbanded. Believing that **“standing armies in time of peace are inconsistent with the principles of republican governments [and] dangerous to the liberties of a free people,”** the U.S. legislature disbanded the Continental Army following the Revolutionary War, except for a few dozen troops guarding munitions at West Point, New York, and Fort Pitt, Pennsylvania.
 
-Before that time the federal government lacked military power. After the American Revolution the Continental Army was disbanded. Believing that **“standing armies in time of peace are inconsistent with the principles of republican governments [and] dangerous to the liberties of a free people,”** the U.S. legislature disbanded the Continental Army following the Revolutionary War, except for a few dozen troops guarding munitions at West Point, New York, and Fort Pitt, Pennsylvania. 
-
-As the federal government ramped up and began operating in 1789 the states felt their power and independence threatened. The states wanted assurances that they could "balance" federal power and they wanted the right to keep their militias. In turn, the federal government was dependent on the state militias for its military power. 
+As the federal government ramped up and began operating in 1789 the states felt their power and independence threatened. The states wanted assurances that they could "balance" federal power and they wanted the right to keep their militias. In turn, the federal government was dependent on the state militias for its military power.
 
 ### The Militia Clauses
 
@@ -38,7 +36,7 @@ The first legislation on the subject was the Militia Act of 1792 which provided,
 
 >That each and every free able-bodied white male citizen of the respective States, resident therein, who is or shall be of age of eighteen years, and under the age of forty-five years (except as is herein after excepted) shall severally and respectively be enrolled in the militia, ... every citizen, so enrolled and notified, shall, within six months thereafter, **provide himself with a good musket or firelock**.
 
-It is clear both from the language in the Second Amendment as well as the political climate at the time that the Second Amendment was a balance of power issue between the states and the federal government.  It had little or nothing to do with an individual citizen's rights. However, citizens were not only encouraged to bear arms - it was legally mandated, but only in the context of being enrolled in the militia.
+It seems clear both from the language in the Second Amendment as well as the political climate at the time that the Second Amendment was a balance of power issue between the states and the federal government.  It had little or nothing to do with an individual citizen's rights.
 
 ### Interpretations of the Second Amendment
 
@@ -52,7 +50,7 @@ The collective rights view of the amendment is that it gives each state the righ
 
 Those with the individual rights viewpoint believe the amendment gives every citizen the right to own guns, free of federal regulations, to protect themselves in the face of danger. The individualists believe the amendment's militia clause was never meant to restrict each citizen's rights to bear arms. Note that there is not a single word about an individual’s right to a gun for self-defense or recreation in Madison’s notes from the Constitutional Convention.
 
-**The Supreme Court's View**
+### The Supreme Court's View
 
 Scholars highlight the prefatory language "a well regulated Militia" to argue the intention of the Second Amendment was only to restrict Congress from legislating away a state's right to self-defense. Scholars call this theory "the collective rights theory." A collective rights theory of the Second Amendment asserts that **citizens do not have an individual right to possess guns** and that local, state, and federal legislative bodies therefore possess the authority to regulate firearms without implicating a constitutional right.
 

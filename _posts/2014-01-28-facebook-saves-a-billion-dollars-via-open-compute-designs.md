@@ -1,16 +1,19 @@
-+++
-date = "2014-01-28T10:00:00-00:00"
-title = "Facebook Saves a BILLION Dollars via Open Compute Designs"
-draft = false
-description = ""
-+++
-
-![Facebook Server](/img/fb-server.jpg)
+---
+title: 'Facebook Saves a BILLION Dollars via Open Compute Designs'
+excerpt: 'Today at the Open Compute Summit, CEO Mark Zuckerberg said that "In the last three years alone, Facebook has saved more than a billion dollars in building out our infrastructure using Open Compute designs."'
+coverImage: '/assets/blog/img/fb-server.jpg'
+date: '2014-01-28T10:00:00-00:00'
+author:
+  name: "Dan Stroot"
+  picture: '/assets/blog/authors/dan.jpeg'
+ogImage:
+  url: '/assets/blog/y /fb-server.jpg'
+---
 
 Last week, IBM announced that it was selling its low-end server business to Chinese hardware manufacturer Lenovo. The deal has been widely viewed as the logical result of the commoditization of x86-based servers, in much the same way PCs were commoditized a decade ago.
 
 This week Microsoft announced it is joining the Open Compute Project and will “open source” its server designs, sharing them with the world at large.  Microsoft joins Facebook, Google, Amazon, Bloomberg, Intel, Box and many others.  Microsoft will be contributing designs for the servers that power global cloud services like Windows Azure, Office 365, and Bing.
-<!--more-->
+
 It's clear that the server business is never going to be same.  For Microsoft open source goes against it's DNA, and for IBM the server business was viewed as core not so long ago.  
 
 ### Billion Dollar Idea
@@ -21,9 +24,9 @@ Now, nearly three years later, the project lets Facebook crowdsource improvement
 
 Today at the Open Compute Summit, CEO Mark Zuckerberg said that "In the last three years alone, Facebook has saved more than **a billion dollars** in building out our infrastructure using Open Compute designs."
 
-> A Million Dollars Isn't Cool. You Know What's Cool? A Billion Dollars.
+> A Million Dollars Isn't Cool. You Know What's Cool? A **Billion** Dollars.
 >
->   _- Sean Parker in "The Social Network"_
+> <cite>&mdash; Sean Parker in "The Social Network"<cite>
 
 Zuckerberg also noted that "In just the last year we’ve saved the equivalent amount of energy of 40,000 homes in a year, and saved the amount of emissions equivalent to taking 50,000 cars off the road for a year."
 
@@ -43,7 +46,7 @@ So what is going to happen to Cisco?  Wonder why they were [downgraded](http://w
 
 All of this innovation is benefiting corporate clients who will either have better, faster, less expensive cloud platforms to leverage, or by directly reducing cost and complexity in their own data centers.  Saving energy and being "greener" is icing on the cake.  
 
-_Sources:_
+### Sources:
 
 * [Wired: Microsoft Open Sources Its Internet Servers](http://www.wired.com/wiredenterprise/2014/01/microsoft-open-compute-servers/)
 * [Open Compute Project](http://www.opencompute.org/)
