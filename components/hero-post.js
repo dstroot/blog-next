@@ -36,13 +36,12 @@ export default function HeroPost({
               picture={author.picture}
               size={75}
               date={date}
-              time={stats}
             />
           </div>
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <ReadMore slug={slug} />
+          <ReadMore slug={slug} stats={stats} />
         </div>
       </div>
     </section>

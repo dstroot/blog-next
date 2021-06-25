@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
 
-export default function Avatar({ name, picture, size, date, time }) {
+export default function Avatar({ name, picture, size, date }) {
   return (
     <Link href="/about">
       <a>
@@ -20,10 +20,9 @@ export default function Avatar({ name, picture, size, date, time }) {
                 Dan Stroot
               </p>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                <DateFormatter dateString={date} /> · {time}
+                <DateFormatter dateString={date} />
               </p>
             </div>
-            {/* <div className="min-w-0 flex-grow">test</div> */}
           </div>
         </div>
       </a>
