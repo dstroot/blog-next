@@ -1,9 +1,6 @@
 ---
 title: 'Work Like Hell'
-excerpt: "If other people are putting in 40-hour workweeks, and you're
-> putting in 100-hour workweeks, then, even if you're doing the same
-> thing, you will achieve in four months what it takes them a year
-> to achieve."
+excerpt: "If other people are putting in 40-hour workweeks, and you're putting in 100-hour workweeks, then, even if you're doing the same thing, you will achieve in four months what it takes them a year to achieve."
 coverImage: '/assets/blog/img/elon-musk.jpg'
 date: '2013-10-04T10:25:35-08:00'
 author:
