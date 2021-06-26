@@ -1,4 +1,4 @@
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Avatar2";
 import { CoverImage } from "./CoverImage";
 import { PostTitle } from "./PostTitle";
 

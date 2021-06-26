@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Avatar2";
 import { CoverImage } from "./CoverImage";
 import { ReadMore } from "./ReadMore";
 
