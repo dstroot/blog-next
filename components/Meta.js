@@ -4,6 +4,7 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 export const Meta = () => {
   return (
     <Head>
+      <link rel="manifest" href="/favicon/site.webmanifest" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -21,12 +22,16 @@ export const Meta = () => {
         sizes="16x16"
         href="/favicon/favicon-16x16.png"
       />
-      <link rel="manifest" href="/favicon/site.webmanifest" />
       <link
         rel="mask-icon"
         href="/favicon/safari-pinned-tab.svg"
         color="#000000"
       />
+
+      {/*
+          CSS and scripts to support syntax highlighting
+          https://www.filamentgroup.com/lab/load-css-simpler/
+      */}
 
       <link
         rel="preload"
@@ -47,6 +52,12 @@ export const Meta = () => {
         async
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
       ></script>
+
+      {/*
+          The page supports both dark and light color schemes,
+          and the preference is the order
+      */}
+      <meta name="color-scheme" content="light dark" />
 
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
