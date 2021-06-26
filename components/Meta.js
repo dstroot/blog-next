@@ -29,8 +29,15 @@ export const Meta = () => {
       />
 
       <link
+        rel="preload"
         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css"
+        as="style"
+      />
+      <link
         rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css"
+        media="print"
+        onLoad="this.media='all'"
       />
       <script
         async

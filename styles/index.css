@@ -6,18 +6,15 @@
   .image-container {
     width: 100%;
   }
-
   .image-container > div {
     position: unset !important;
   }
-
   .image-container .image {
     object-fit: contain;
     width: 100% !important;
     position: relative !important;
     height: unset !important;
   }
-
   .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -25,7 +22,6 @@
     height: 0;
     overflow: hidden;
   }
-
   .video-container iframe,
   .video-container object,
   .video-container embed {
