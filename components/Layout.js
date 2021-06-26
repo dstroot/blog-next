@@ -1,5 +1,5 @@
 // import Alert from "../components/alert";
-import { Footer } from "./Footer";
+import { Footer } from "./Footer2";
 import { Meta } from "./Meta";
 
 export const Layout = ({ children }) => {
