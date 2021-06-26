@@ -1,6 +1,7 @@
 module.exports = {
-  darkMode: "class", // true false or 'media' or 'class'
+  mode: "jit",
   purge: ["./components/**/*.js", "./pages/**/*.js"],
+  darkMode: "class", // true, false or 'media' or 'class'
   theme: {
     extend: {
       colors: {

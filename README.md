@@ -12,6 +12,8 @@ This blog-starter uses [Tailwind CSS](https://tailwindcss.com). To control the g
 
 This project is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
+https://github.com/vercel/next.js/tree/canary/examples/blog-starter
+
 TODO
 
 - [X] Add "Edit on GitHub" Link
