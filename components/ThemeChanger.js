@@ -6,7 +6,7 @@ export const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const divStyle = {
-    height: "30px",
+    height: "36px",
   };
 
   // When mounted on client, now we can show the UI
