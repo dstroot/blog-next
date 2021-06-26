@@ -1,7 +1,7 @@
-import Container from "./container";
 import Image from "next/image";
+import { Container } from "./Container";
 
-export default function Footer() {
+export const Footer = () => {
   const year = new Date(); // evergreen copyright year
   return (
     <footer className="dark:bg-dark-3 dark:text-gray-300 bg-gray-100 text-gray-600 py-4 lg:py-6">
@@ -94,7 +94,7 @@ export default function Footer() {
       </Container>
     </footer>
   );
-}
+};
 
 /*
 

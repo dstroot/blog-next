@@ -1,10 +1,11 @@
-import Container from "../components/container";
-import Header from "../components/header";
-import PostTitle from "../components/post-title";
-import Layout from "../components/layout";
 import Head from "next/head";
-import { CMS_NAME, ALERT } from "../lib/constants";
 import Image from "next/image";
+
+import { Container } from "../components/Container";
+import { Header } from "../components/Header";
+import { PostTitle } from "../components/PostTitle";
+import { Layout } from "../components/Layout";
+import { CMS_NAME, ALERT } from "../lib/constants";
 import markdownStyles from "../components/markdown-styles.module.css";
 
 export default function About() {

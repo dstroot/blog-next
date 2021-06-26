@@ -1,16 +1,17 @@
-import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../../components/container";
-import PostBody from "../../components/post-body";
-import Header from "../../components/header";
-import PostHeader from "../../components/post-header";
-import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import PostTitle from "../../components/post-title";
 import Head from "next/head";
+
+import { useRouter } from "next/router";
+import { Container } from "../../components/Container";
+import { PostBody } from "../../components/PostBody";
+import { Header } from "../../components/Header";
+import { PostHeader } from "../../components/PostHeader";
+import { Layout } from "../../components/Layout";
+import { getPostBySlug, getAllPosts } from "../../lib/api";
+import { PostTitle } from "../../components/PostTitle";
 import markdownToHtml from "../../lib/markdownToHtml";
 import { CMS_NAME, REPO, ALERT } from "../../lib/constants";
-import { GitHubLink } from "../../components/github";
+import { GitHubLink } from "../../components/GitHubLink";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();

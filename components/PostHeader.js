@@ -1,13 +1,13 @@
-import Avatar from "../components/avatar";
-import CoverImage from "../components/cover-image";
-import PostTitle from "../components/post-title";
+import { Avatar } from "./Avatar";
+import { CoverImage } from "./CoverImage";
+import { PostTitle } from "./PostTitle";
 
-export default function PostHeader({ title, coverImage, date, author, time }) {
+export const PostHeader = ({ title, coverImage, date, author }) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
       <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} height={620} width={1240} />
+        <CoverImage title={title} src={coverImage} width={1240} height={620} />
       </div>
       <div className="max-w-2xl mx-auto">
         <div className="block mb-6">
@@ -16,10 +16,9 @@ export default function PostHeader({ title, coverImage, date, author, time }) {
             picture={author.picture}
             size={55}
             date={date}
-            time={time}
           />
         </div>
       </div>
     </>
   );
-}
+};

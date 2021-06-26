@@ -1,9 +1,9 @@
-import Avatar from "../components/avatar";
-import CoverImage from "../components/cover-image";
 import Link from "next/link";
-import { ReadMore } from "./read-more";
+import { Avatar } from "./Avatar";
+import { CoverImage } from "./CoverImage";
+import { ReadMore } from "./ReadMore";
 
-export default function HeroPost({
+export const HeroPost = ({
   title,
   coverImage,
   date,
@@ -11,7 +11,7 @@ export default function HeroPost({
   author,
   slug,
   stats,
-}) {
+}) => {
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -46,4 +46,4 @@ export default function HeroPost({
       </div>
     </section>
   );
-}
+};

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import DateFormatter from "./date-formatter";
+import { DateFormatter } from "./DateFormatter";
 
-export default function Avatar({ name, picture, size, date }) {
+export const Avatar = ({ name, picture, size, date }) => {
   return (
     <Link href="/about">
       <a>
@@ -26,7 +26,7 @@ export default function Avatar({ name, picture, size, date }) {
       </a>
     </Link>
   );
-}
+};
 
 /*
           <div className="flex-shrink md:space-y-4 justify-center">

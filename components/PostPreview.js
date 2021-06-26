@@ -1,9 +1,9 @@
-import Avatar from "../components/avatar";
-import CoverImage from "./cover-image";
 import Link from "next/link";
-import { ReadMore } from "./read-more";
+import { Avatar } from "./Avatar";
+import { CoverImage } from "./CoverImage";
+import { ReadMore } from "./ReadMore";
 
-export default function PostPreview({
+export const PostPreview = ({
   title,
   coverImage,
   date,
@@ -11,7 +11,7 @@ export default function PostPreview({
   author,
   slug,
   stats,
-}) {
+}) => {
   return (
     <div>
       <div className="mb-5">
@@ -40,4 +40,4 @@ export default function PostPreview({
       <ReadMore slug={slug} stats={stats} />
     </div>
   );
-}
+};

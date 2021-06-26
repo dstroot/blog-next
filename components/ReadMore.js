@@ -4,9 +4,9 @@ export const ReadMore = ({ slug, stats }) => {
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
       <a>
-        <div className="flex items-center space-x-3.5">
+        <div className="flex items-center space-x-3">
           <div className="flex-initial">
-            <p className="text-black dark:text-white font-semibold m-0 hover:underline">
+            <p className="text-black dark:text-white font-semibold hover:underline">
               Read More
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-sm">

@@ -1,8 +1,8 @@
 // import Alert from "../components/alert";
-import Footer from "./footer";
-import Meta from "../components/meta";
+import { Footer } from "./Footer";
+import { Meta } from "./Meta";
 
-export default function Layout({ alert, children }) {
+export const Layout = ({ children }) => {
   return (
     <>
       <Meta />
@@ -13,4 +13,4 @@ export default function Layout({ alert, children }) {
       <Footer />
     </>
   );
-}
+};

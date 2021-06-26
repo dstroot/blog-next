@@ -1,7 +1,7 @@
 import { CMS_NAME, TAGLINE } from "../lib/constants";
 import { ThemeChanger } from "./ThemeChanger";
 
-export default function Intro() {
+export const Intro = () => {
   return (
     <>
       <div className="mt-4 flex-none">
@@ -17,4 +17,4 @@ export default function Intro() {
       </section>
     </>
   );
-}
+};
