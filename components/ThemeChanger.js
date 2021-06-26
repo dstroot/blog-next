@@ -5,13 +5,16 @@ import Image from "next/image";
 export const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const divStyle = {
+    height: "30px",
+  };
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
-  // TODO: To avoid Content Layout Shift, consider rendering a
-  // skeleton until mounted on the client side.
-  if (!mounted) return null;
+  // To avoid Content Layout Shift rendering a
+  // skeleton div until mounted on the client side.
+  if (!mounted) return <div style={divStyle}></div>;
 
   return (
     <div
