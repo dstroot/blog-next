@@ -1,4 +1,4 @@
-import Container from "./container";
+import Container from "./Container2";
 
 export default function Alert({ alert }) {
   return alert ? (

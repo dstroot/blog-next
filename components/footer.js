@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container } from "./Container";
+import { Container } from "./Container2";
 
 export const Footer = () => {
   const year = new Date(); // evergreen copyright year
