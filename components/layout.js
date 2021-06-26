@@ -1,13 +1,13 @@
-// import Alert from '../components/alert'
+import Alert from "../components/alert";
 import Footer from "./footer";
 import Meta from "../components/meta";
 
-export default function Layout({ preview, children }) {
+export default function Layout({ alert, children }) {
   return (
     <>
       <Meta />
       <div className="min-h-screen">
-        {/* <Alert preview={preview} /> */}
+        <Alert alert={alert} />
         <main>{children}</main>
       </div>
       <Footer />

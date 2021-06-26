@@ -9,7 +9,7 @@ import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
-import { CMS_NAME, REPO } from "../../lib/constants";
+import { CMS_NAME, REPO, ALERT } from "../../lib/constants";
 import { GitHubLink } from "../../components/github";
 
 export default function Post({ post, morePosts, preview }) {
@@ -21,7 +21,7 @@ export default function Post({ post, morePosts, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+    <Layout alert={ALERT}>
       <Container>
         <Header />
         {router.isFallback ? (

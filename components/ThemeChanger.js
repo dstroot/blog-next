@@ -9,7 +9,7 @@ export const ThemeChanger = () => {
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
-  // To avoid Content Layout Shift, consider rendering a
+  // TODO: To avoid Content Layout Shift, consider rendering a
   // skeleton until mounted on the client side.
   if (!mounted) return null;
 

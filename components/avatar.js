@@ -12,7 +12,7 @@ export default function Avatar({ name, picture, size, date }) {
             alt={name}
             width={size}
             height={size}
-            className="flex-none rounded-full bg-gray-100"
+            className="flex-initial rounded-full"
           />
           <div className="flex-auto">
             <p className="text-black dark:text-white text-base sm:text-xl lg:text-base xl:text-xl font-semibold mb-0 hover:underline">

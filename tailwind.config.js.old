@@ -2,14 +2,13 @@ module.exports = {
   darkMode: "class", // true false or 'media' or 'class'
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
+    typography: (theme) => ({}),
     extend: {
       colors: {
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",
         "accent-7": "#333",
-        "dark-1": "#1a1a1a", // #1a1a1a 121212
-        "dark-2": "#222222",
-        "dark-3": "#282828",
+        dark: "#121212",
       },
       spacing: {
         28: "7rem",
@@ -35,7 +34,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 
 /*
