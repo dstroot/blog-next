@@ -11,7 +11,7 @@ export default function Intro() {
         <p className="text-7xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
           Blog.
         </p>
-        <p className="text-center md:text-left mt-1 md:pl-8 font-semibold italic text-2xl">
+        <p className="text-center md:text-left mt-1 md:pl-8 font-semibold italic md:text-2xl">
           {CMS_NAME}. {TAGLINE}.
         </p>
       </section>
