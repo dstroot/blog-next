@@ -4,7 +4,7 @@ import { ThemeChanger } from "./ThemeChanger";
 export default function Intro() {
   return (
     <>
-      <div className="mt-4">
+      <div className="mt-4 flex-none">
         <ThemeChanger />
       </div>
       <section className="flex flex-col md:flex-row items-center md:justify-between md:mt-10 mb-10 md:mb-12">
