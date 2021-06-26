@@ -6,7 +6,7 @@ import { Container } from "../../components/Container";
 import { PostBody } from "../../components/PostBody";
 import { Header } from "../../components/Header";
 import { PostHeader } from "../../components/PostHeader";
-import { Layout } from "../../components/Layout2";
+import { Layout } from "../../components/Layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import { PostTitle } from "../../components/PostTitle";
 import markdownToHtml from "../../lib/markdownToHtml";
