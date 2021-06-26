@@ -1,6 +1,6 @@
 import { Container } from "./Container";
 
-export default function Alert({ alert }) {
+export const Alert = ({ alert }) => {
   return alert ? (
     <div className="bg-gray-900 text-gray-100 dark:bg-gray-100 dark:text-gray-900">
       <Container>
@@ -8,4 +8,4 @@ export default function Alert({ alert }) {
       </Container>
     </div>
   ) : null;
-}
+};

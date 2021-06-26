@@ -1,4 +1,4 @@
-import Alert from "./Alert";
+import { Alert } from "./Alert";
 import { Footer } from "./Footer";
 import { Meta } from "./Meta";
 
