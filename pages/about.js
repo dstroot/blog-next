@@ -2,9 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 
 import { Container } from "../components/Container";
-import { Header } from "../components/Header2";
+import { Header } from "../components/Header";
 import { PostTitle } from "../components/PostTitle";
-import { Layout } from "../components/Layout";
+import { Layout } from "../components/Layout2";
 import { CMS_NAME, ALERT } from "../lib/constants";
 import markdownStyles from "../components/markdown-styles.module.css";
 
