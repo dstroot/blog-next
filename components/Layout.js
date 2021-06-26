@@ -2,7 +2,7 @@ import { Alert } from "./Alert";
 import { Footer } from "./Footer";
 import { Meta } from "./Meta";
 
-export const Layout = ({ children }) => {
+export const Layout = ({ alert, children }) => {
   return (
     <>
       <Meta />
