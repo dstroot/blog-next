@@ -1,20 +1,21 @@
 ---
-author: dan
-categories: null
-# date: '2013-07-25'
-published: true
-tags: null
-title: Hosting your Blog on Amazon S3
-slug: hosting-your-blog-on-s3
+title: 'Hosting your Blog on Amazon S3'
+excerpt: 'In order to serve your site from S3 you need to first create a bucket to hold the content. So, using the S3 web console create a bucket. Next we need to setup the bucket for web hosting. Click the properties button to edit the properties of your new bucket.  Then go to the Static Website Hosting section and click "Enabled website hosting". I am also using a redirect rule to redirect all errors back to the root of my blog.  That way no one ever gets a 404.  Cool right?'
+coverImage: '/assets/blog/img/aws_hosting.png'
+date: '2013-07-25T15:15:42-08:00'
+author:
+  name: Dan Stroot
+  picture: '/assets/blog/authors/dan.jpeg'
+ogImage:
+  url: '/assets/blog/img/aws_hosting.png'
 ---
 
 One of the cleanest designed blogs I have seen in a while belongs to [Karma Mobility](http://blog.yourkarma.com/).  So I asked in the comments on a particularly interesting post by Stefan Borsje and he very nicely responded "Thanks Daniel! This blog uses Jekyll and is hosted on S3."
 
 Hmmm.  That's two cool things at once.
 
-<!--more-->
 
-So let's do this! I know a little about Jekyll and I know it's engine behind GitHub Pages, plus om Github you can host it for free.But it has two disadvantages I know of:
+So let's do this! I know a little about Jekyll and I know it's engine behind GitHub Pages, plus on Github you can host it for free. But it has two disadvantages I know of:
 
 * You can not use custom Jekyll plugins with GitHub Pages. Your site is generated with `--safe`.
 * There is no possibility to redirect requests. This is vital if you do not want to lose any link traffic when fixing a typo in your URL.
@@ -63,7 +64,7 @@ In the "Permissions" section you also need to add a bucket policy that makes you
 
 Now you could click Upload next and push your site up on S3.
 
-### But we have another trick up our sleeve - s3_website
+### But we have another trick up our sleeve
 
 [s3_website](https://github.com/laurilehmijoki/s3_website)
 
@@ -115,7 +116,5 @@ That my friends is AWESOME!
 You must be able to point a CNAME at CloudFront.  I was creating a blog so it was easy.  You do this via your DNS provider, which in many cases is your domain registrar unless you already moved your DNS hosting elsewhere.  I created a blog CNAME (so my URL will end up being blog.website.com) pointing to the Amazon CloudFront domain that was assigned.  It looks like this: xxxxxxxxxxxx.cloudfront.net.  Boom! done.
 
 ### References
-- http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
-- http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html
-- http://holgr.com/blog/2011/12/getting-a-custom-404-document-using-amazon-cloudfront-and-s3/
-- http://legatomaniac.blogspot.com/2013/06/howto-avoid-403-in-cloudfront-requests.html
+- [Hosting a static website using Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
+- [Using custom URLs on AWS](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html)

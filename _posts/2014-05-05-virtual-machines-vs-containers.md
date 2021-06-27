@@ -1,23 +1,24 @@
-+++
-date = "2014-05-05T10:00:00-00:00"
-title = "Virtual Machines vs Containers"
-draft = false
-description = ""
-+++
-
-![Docker](/img/docker.png)
+---
+title: 'Virtual Machines vs Containers'
+excerpt: 'Personally I think the next wave of infrastructure efficiency will be driven by Linux container technology (LinuX Containers = LXC). The LXC container approach does not require a hypervisor - instead you run isolated "containers" on a Linux host. LXC provides operating system-level virtualization, but instead of creating a full-fledged virtual machine LXC containers leverage cgroups (control groups) to completely isolate the operating environment, including process trees, network, user ids and mounted file systems. This work was started by engineers at Google and in late 2007 it was merged into kernel version 2.6.24.'
+coverImage: '/assets/blog/img/docker.png'
+date: '2014-05-05T10:00:00-00:00'
+author:
+  name: Dan Stroot
+  picture: '/assets/blog/authors/dan.jpeg'
+ogImage:
+  url: '/assets/blog/img/docker.png'
+---
 
 Three driving forces of infrastructure efficiency in a large, distributed environment were:
 
-- Data center consolidation _(KPI: How many DCs do you have?)_
-- Host virtualization _(KPI: what percentage of your servers are virtual?)_
-- "Cloud" in its various forms _(KPI: How many servers are you still running?)_
+- **Data center consolidation** _(KPI: How many DCs do you have?)_
+- **Host virtualization** _(KPI: what percentage of your servers are virtual?)_
+- **"Cloud" in its various forms** _(KPI: How many servers are you still running?)_
 
-Assuming you have been aggresive you may not have any data centers left.  You may be buying services rather than servers, and/or all of your remaining machines might be virtualized and hosted in someone else's data center. Now what?  
+Assuming you have been aggressive you may not have any data centers left.  You may be buying services rather than servers, and/or all of your remaining machines might be virtualized and hosted in someone else's data center. Now what?
 
-<!--more-->
-
-### Where is the next level of infrastructure efficiency going to come from?
+### Where is future infrastructure efficiency going to come from?
 
 Personally I think the next wave of infrastructure efficiency will be driven by Linux container technology (LinuX Containers = LXC). The LXC container approach does **not** require a hypervisor - instead you run isolated "containers" on a Linux host.  
 
@@ -25,7 +26,7 @@ LXC provides operating system-level virtualization, but instead of creating a fu
 
 This work was started by engineers at Google and in late 2007 it was merged into kernel version 2.6.24. LXC also relies on other kinds of namespace-isolation functionality, which have been developed and integrated into the mainline Linux kernel since then. It looks something like this:
 
-![Docker](/img/dockervsvm.png)
+![Docker](/assets/blog/img/dockervsvm.png)
 
 ### Is LXC Technology Really Better?
 
@@ -56,7 +57,7 @@ Here are some of the major benefits of Linux Containers from my perspective:
 #### Ecosystem
 
 - Growing in popularity -- just checkout the google trends for docker or LXC.
-- Vibrant community and numerous 3rd party applications (1000s of prebuilt images on docker index and 100s of open source apps on github or other public sources).
+- Vibrant community and numerous 3rd party applications (1000s of prebuilt images on docker index and 100s of open source apps on GitHub or other public sources).
 
 #### Benchmarks
 
