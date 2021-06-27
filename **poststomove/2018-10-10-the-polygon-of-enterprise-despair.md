@@ -20,11 +20,9 @@ Prior to Amazon's founding Sears had everything. Global supply chain, check. Top
 
 Unfortunately for an incumbent, change is **much** harder than anyone imagines it to be.
 
-<!--more-->
-
 > "The most important component of evolution is death. Or, said another way, it’s easier to create a new organism than to change an existing one. Most organisms are highly resistant to change, but when they die it becomes possible for new and improved organisms to take their place. This rule applies to social structures such as corporations as well as biological organisms: very few companies are capable of making significant changes in their culture or business model, so it is good for companies eventually to go out of business, thereby opening space for better companies in the future."
 >
-> <div class="bqfoot"><cite>&mdash; John Ousterhout, Stanford professor ([My Favorite Sayings](http://web.stanford.edu/~ouster/cgi-bin/sayings.php))</div></cite>
+> <cite>&mdash; John Ousterhout, Stanford professor ([My Favorite Sayings](http://web.stanford.edu/~ouster/cgi-bin/sayings.php))</cite>
 
 Boards should be concerned, and settling for panaceas like innovation studios and occasional hackathons won’t be enough to secure a company’s digital future. There is a huge gulf between the speed and agility of a digital start-up and a large, entrenched incumbent. Not only do enterprises lack the proper digital skills, they simply cannot respond fast enough to react. This inertia has a name - it's called the **Polygon of Enterprise Despair.**
 

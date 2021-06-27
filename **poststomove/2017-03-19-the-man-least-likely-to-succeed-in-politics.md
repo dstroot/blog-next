@@ -81,7 +81,7 @@ This scale is used to understand how big an impact emotions make upon an individ
 >
 >We define low-information voters as those who do not know certain basic facts about government and lack what psychologists call a “need for cognition.” Those with a high need for cognition have a positive attitude toward tasks that require reasoning and effortful thinking and are, therefore, more likely to invest the time and resources to do so when evaluating complex issues. Those with a low need for cognition, on the other hand, find little reward in the collection and evaluation of new information when it comes to problem solving and the consideration of competing issue positions. They are more likely to rely on cognitive shortcuts, such as “experts” or other opinion leaders, for cues.
 >
-><div class="bqfoot"><cite>&mdash; Richard Fording and Sanford Schram: "‘Low information voters’ are a crucial part of Trump’s support", Washington Post, November 7, 2016</div></cite>
+><cite>&mdash; Richard Fording and Sanford Schram: "‘Low information voters’ are a crucial part of Trump’s support", Washington Post, November 7, 2016</cite>
 
 Voters who score poorly on the Need for Cognition Scale **are easier targets to sell political ideas to.** They are the easiest group of floating voters to target and capture based on a emotional message, delivered or shared by somebody they trust. 
 
@@ -126,7 +126,6 @@ However, people are not randomly wrong. Presented with someone else’s argument
 
 #### References
 
-<span class="sources">
 [Massive networks of fake accounts found on Twitter](http://www.bbc.com/news/technology-38724082)<br>
 [1 in 10 Twitter accounts is fake, say researchers](http://www.nbcnews.com/business/1-10-twitter-accounts-fake-say-researchers-2D11655362)<br>
 [What Marketers Can Learn from Trump About The Science of Persuasion](https://www.process.st/science-of-persuasion/)<br>
@@ -142,4 +141,4 @@ However, people are not randomly wrong. Presented with someone else’s argument
 [Information Operations
 and Facebook](https://fbnewsroomus.files.wordpress.com/2017/04/facebook-and-information-operations-v1.pdf)<br>
 [What Facebook Did to American Democracy](https://www.theatlantic.com/technology/archive/2017/10/what-facebook-did/542502/?single_page=true)
-</span>
+
