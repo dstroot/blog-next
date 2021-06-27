@@ -9,12 +9,17 @@
   @apply my-6;
 }
 
-.markdown ul {
+.markdown ul,
+.markdown ol {
   @apply list-outside list-disc ml-5;
 }
 
-.markdown li {
+.markdown ul > li {
   @apply list-disc mb-2;
+}
+
+.markdown ol > li {
+  @apply list-decimal mb-2;
 }
 
 .markdown blockquote {

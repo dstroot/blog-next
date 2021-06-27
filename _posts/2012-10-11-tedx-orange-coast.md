@@ -1,18 +1,19 @@
 ---
-author: dan
-categories: null
-# date: '2012-10-11'
-published: true
-tags: null
-title: TEDx Orange Coast 2012
+title: 'TEDx Orange Coast 2012'
+excerpt: 'Yesterday I had the pleasure of attending the TEDx Orange County conference where the theme was relevance.  Specifically how do you stay relevant in today’s world? As the day progressed this theme blossomed for me.   I took away a number of new ideas and perspectives.  I learned things from people whom I expected to learn things from but also from unexpected places, which quite frankly is the best kind of serendipity.'
+coverImage: '/assets/blog/img/tedx.png'
+date: '2012-10-11T10:25:35-08:00'
+author:
+  name: Dan Stroot
+  picture: '/assets/blog/authors/dan.jpeg'
+ogImage:
+  url: '/assets/blog/img/tedx.png'
 ---
-
-![TEDx](/img/TEDx-logo.jpg)
 
 Yesterday I had the pleasure of mental stimulation.  The theme of the TEDx OC conference was relevance.  Specifically how do you stay relevant in today’s world?
 
 As the day progressed this theme blossomed for me.   I took away a number of new ideas and perspectives.  I learned things from people whom I expected to learn things from but also from unexpected places, which quite frankly is the best kind of serendipity.
-<!--more-->
+
 Rick Warren was the host in the late afternoon.  Rick Warren is the founder of Saddleback Church.  Today, it is an evangelical congregation averaging 22,000 weekly attendees, a 120-acre campus, and has more than 300 community ministries.  He is large in stature as well as personality, but as the host I wasn’t thinking of him in the same manner as a presenter – subtle way of saying I wasn’t expecting much.
 
 It’s obvious in hindsight that Rick must know some things about growing and nurturing an organization.  When he spoke of relevance it was startlingly relevant!  I took away two really great points and I thought I’d share them here.  The first point is relevant to both you as a person, as well as organizations.  Rick’s quote:
@@ -29,7 +30,7 @@ One idea I loved was the point Rick made to “develop a lab mentality”.  Neve
 Today, many companies (if not all) are trying to be more innovative.  But how?  There are many great examples in the wild.  For example in advertising you are starting to see “labs” emerge as a new nomenclature.  Olgivy and BBH have created labs and I’ll use BBH’s as an example.  Here is their mission and vision:
 
 > Labs is BBH’s global innovation unit. We’re tasked with pioneering
-> new outputs and approaches: exploring emerging platforms and behaviours
+> new outputs and approaches: exploring emerging platforms and behaviors
 > on behalf of brands, and developing new agency models along the way.
 > Our overall ambition is to find ways in which marketing innovation can
 > be a powerful force for good (more effective, more engaging, more
