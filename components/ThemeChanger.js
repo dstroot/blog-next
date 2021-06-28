@@ -16,19 +16,21 @@ export const ThemeChanger = () => {
   const hasMounted = useHasMounted();
   const { theme, setTheme } = useTheme();
   const divStyle = {
-    height: "36px",
+    height: "30px",
+    width: "30px",
   };
 
   if (!hasMounted) {
     // To avoid Content Layout Shift rendering a
     // skeleton div until mounted on the client side.
-    return <div style={divStyle}></div>;
+    // return <div style={divStyle}> </div>;
+    return null;
   }
 
   // When mounted on client, we can show the UI
   return (
     <div
-      className="cursor-pointer float-right"
+      className="cursor-pointer block ml-auto mr-0"
       onClick={() => {
         setTheme(theme === "light" ? "dark" : "light");
       }}
