@@ -7,16 +7,16 @@ export const Meta = () => {
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <link
         rel="apple-touch-icon"
-        sizes="180x180"
-        href="/favicon/apple-touch-icon.png"
+        sizes="192x192"
+        href="/favicon/maskable_icon_x192.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/favicon/favicon-32x32.png"
+        href="/favicon/favicon.png"
       />
-      <link
+      {/* <link
         rel="icon"
         type="image/png"
         sizes="16x16"
@@ -26,7 +26,7 @@ export const Meta = () => {
         rel="mask-icon"
         href="/favicon/safari-pinned-tab.svg"
         color="#000000"
-      />
+      /> */}
 
       {/*
           CSS and scripts to support syntax highlighting
@@ -59,7 +59,7 @@ export const Meta = () => {
       */}
       <meta name="color-scheme" content="light dark" />
 
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link rel="shortcut icon" href="/favicon/favicon.png" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
