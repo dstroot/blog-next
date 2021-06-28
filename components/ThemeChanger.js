@@ -23,8 +23,7 @@ export const ThemeChanger = () => {
   if (!hasMounted) {
     // To avoid Content Layout Shift rendering a
     // skeleton div until mounted on the client side.
-    // return <div style={divStyle}> </div>;
-    return null;
+    return <div style={divStyle}> </div>;
   }
 
   // When mounted on client, we can show the UI
