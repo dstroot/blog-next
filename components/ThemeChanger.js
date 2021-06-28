@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 
 // When dealing with a server-side rendered application (through
 // frameworks like Gatsby or Next, or any sort of SSR setup), it can
@@ -43,12 +42,12 @@ export const ThemeChanger = () => {
             viewBox="0 0 400 400"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g transform="rotate(-180 200 200)" fill-rule="evenodd" fill="none">
+            <g transform="rotate(-180 200 200)" fillRule="evenodd" fill="none">
               <circle
                 r="149"
                 cy="200"
                 cx="200"
-                stroke-width="50"
+                strokeWidth="50"
                 stroke="#E2E2E2"
               />
               <path
@@ -67,10 +66,10 @@ export const ThemeChanger = () => {
             viewBox="0 0 400 400"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
               <circle
                 stroke="#131313"
-                stroke-width="50"
+                strokeWidth="50"
                 cx="200"
                 cy="200"
                 r="149"
