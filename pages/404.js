@@ -9,10 +9,10 @@ export default function Custom404() {
         </Link>
       </div>
       <div className="mt-20 flex flow-col justify-center items-center">
-        <div className="text-4xl md:text-8xl font-bold tracking-tighter leading-tight border-r-4 pr-6">
+        <div className="text-4xl md:text-8xl font-bold tracking-tighter leading-tight border-r-4 pr-3 md:pr-6">
           404
         </div>
-        <div className="font-semibold italic text-xl md:text-2xl pl-6">
+        <div className="font-semibold italic text-base md:text-2xl pl-3 md:pl-6">
           This page could not be found.
         </div>
       </div>
