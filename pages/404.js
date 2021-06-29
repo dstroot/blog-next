@@ -9,7 +9,7 @@ export default function Custom404() {
         </Link>
       </div>
       <div className="mt-20 flex flex-col md:flex-row justify-center items-center">
-        <div className="text-8xl font-bold tracking-tighter leading-tight border-b-4 md:border-r-4 pb-3 md:pr-6">
+        <div className="text-8xl font-bold tracking-tighter leading-tight border-b-4 md:border-r-4 md:border-b-0 pb-3 md:pr-6">
           404
         </div>
         <div className="font-semibold italic text-xl md:text-2xl pt-3 md:pl-6">
