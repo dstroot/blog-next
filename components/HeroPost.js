@@ -31,7 +31,7 @@ export const HeroPost = ({
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div className="mb-4 md:mb-0">
             <Avatar
               name={author.name}
               picture={author.picture}
