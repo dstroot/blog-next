@@ -1,4 +1,4 @@
-import cn from "classnames";
+// import cn from "classnames";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,13 +7,12 @@ export const CoverImage = ({ title, src, slug, height, width, priority }) => {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm", {
-        "hover:shadow-md transition-shadow duration-200": slug,
-      })}
+      // className="hover:shadow-lg transition-shadow duration-200"
       layout="responsive"
       width={width}
       height={height}
       priority={priority}
+      // placeholder="blur"
     />
   );
   return (

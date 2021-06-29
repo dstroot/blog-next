@@ -22,5 +22,7 @@ TODO
 - [X] Add About Me Page
 - [X] Create a nice footer
 - [X] Add a "Read More" link
-- [ ] Favicon
-- [ ] Manifest and other images/icons (test with lighthouse)
+- [X] Favicon
+- [X] Manifest and other images/icons (test with lighthouse)
+- [X] Custom 404 page
+- [X] 100 Lighthouse Scores
