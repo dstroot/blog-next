@@ -7,6 +7,11 @@ module.exports = {
     options: {
       keyframes: true,
     },
+    transform: {
+      md: (content) => {
+        return remark().process(content);
+      },
+    },
   },
   darkMode: "class", // true, false or 'media' or 'class'
   theme: {

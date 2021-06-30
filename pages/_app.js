@@ -6,7 +6,6 @@ export default function MyApp({ Component, pageProps }) {
     <>
       {/* <DefaultSeo {...SEO} /> */}
       <ThemeProvider
-        forcedTheme={Component.theme || undefined}
         attribute="class"
       >
         <Component {...pageProps} />
