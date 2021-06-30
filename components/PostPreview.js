@@ -32,7 +32,7 @@ export const PostPreview = ({
         <Avatar
           name={author.name}
           picture={author.picture}
-          size={55}
+          size={50}
           date={date}
         />
       </div>

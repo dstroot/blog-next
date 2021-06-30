@@ -19,7 +19,7 @@ export const Footer = () => {
                 />
               </div>
               <div className="flex-initial">
-                <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left lg:pr-4 ml-4">
+                <h3 className="text-4xl font-bold tracking-tighter leading-tight text-center lg:text-left lg:pr-4 ml-4">
                   Dan Stroot
                 </h3>
               </div>
@@ -29,8 +29,8 @@ export const Footer = () => {
               aficionado. Eternally curious.
             </p>
           </div>
-          <div className="flex-shrink md:space-y-4 justify-center">
-            <div className="inline-block px-4 md:block">
+          <div className="flex-shrink space-y-4">
+            <div className="px-4">
               <a
                 href="https://www.linkedin.com/in/danstroot"
                 className="hover:text-gray-500"
@@ -47,7 +47,7 @@ export const Footer = () => {
                 </svg>
               </a>
             </div>
-            <div className="inline-block px-4 md:block">
+            <div className="px-4">
               <a
                 href="https://github.com/dstroot"
                 className="hover:text-gray-500"
@@ -64,7 +64,7 @@ export const Footer = () => {
                 </svg>
               </a>
             </div>
-            <div className="inline-block px-4 md:block">
+            <div className="px-4">
               <a
                 href="https://twitter.com/danstroot"
                 className="hover:text-gray-500"

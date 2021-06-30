@@ -1,35 +1,37 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   mode: "jit",
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: {
+    content: ["./components/**/*.js", "./pages/**/*.js"],
+    options: {
+      keyframes: true,
+    },
+  },
   darkMode: "class", // true, false or 'media' or 'class'
   theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: colors.black,
+      white: colors.white,
+      gray: colors.trueGray,
+      blue: colors.blue,
+    },
     extend: {
       colors: {
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",
         "accent-7": "#333",
-        "dark-1": "#1a1a1a", // #1a1a1a 121212
+        "dark-1": "#1a1a1a",
         "dark-2": "#222222",
         "dark-3": "#282828",
-      },
-      spacing: {
-        28: "7rem",
       },
       letterSpacing: {
         tighter: "-.04em",
       },
       lineHeight: {
         tight: 1.2,
-      },
-      fontSize: {
-        "5xl": "2.5rem",
-        "6xl": "2.75rem",
-        "7xl": "4.5rem",
-        "8xl": "6.25rem",
-      },
-      boxShadow: {
-        sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
-        md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
     },
   },

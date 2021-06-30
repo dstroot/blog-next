@@ -34,7 +34,7 @@ export const ThemeChanger = () => {
         setTheme(theme === "light" ? "dark" : "light");
       }}
     >
-      {theme == "dark" ? (
+      {theme === "dark" ? (
         <>
           <span className="sr-only">Light Mode</span>
           <svg

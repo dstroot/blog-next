@@ -1,46 +1,5 @@
-@tailwind base;
+@import "tailwindcss/base";
+@import "./custom-base-styles.css";
 
-/* Write your own custom base styles here */
-
-@layer base {
-  .image-container {
-    width: 100%;
-  }
-  .image-container > div {
-    position: unset !important;
-  }
-  .image-container .image {
-    object-fit: contain;
-    width: 100% !important;
-    position: relative !important;
-    height: unset !important;
-  }
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-  }
-  .video-container iframe,
-  .video-container object,
-  .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/* Start purging... */
-@tailwind components;
-/* Stop purging. */
-
-/* Write you own custom component styles here */
-
-/* Start purging... */
-@tailwind utilities;
-/* Stop purging. */
-
-/* Your own custom utilities */
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
