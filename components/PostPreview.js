@@ -1,7 +1,9 @@
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { Avatar } from "./Avatar";
 import { CoverImage } from "./CoverImage";
 import { ReadMore } from "./ReadMore";
+import useIntersectionObserver from "../lib/use-intersection-observer";
 
 export const PostPreview = ({
   title,
@@ -11,9 +13,26 @@ export const PostPreview = ({
   author,
   slug,
   stats,
+  onIsVisible,
 }) => {
+  const ref = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useIntersectionObserver({
+    target: ref,
+    onIntersect: ([{ isIntersecting }], observerElement) => {
+      if (isIntersecting) {
+        if (!isVisible) {
+          onIsVisible();
+          setIsVisible(true);
+        }
+        observerElement.unobserve(ref.current);
+      }
+    },
+  });
+
   return (
-    <div>
+    <div ref={ref}>
       <div className="mb-5">
         <CoverImage
           slug={slug}
@@ -28,7 +47,7 @@ export const PostPreview = ({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
+      <div className="mb-4">
         <Avatar
           name={author.name}
           picture={author.picture}
@@ -37,7 +56,7 @@ export const PostPreview = ({
         />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <ReadMore slug={slug} stats={stats} />
+      {isVisible && <ReadMore slug={slug} stats={stats} />}
     </div>
   );
 };
