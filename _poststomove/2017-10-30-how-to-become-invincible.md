@@ -1,3 +1,37 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  title = "How to Become Invincible"
+
+  description = ""
+
+  draft = false
+
+  keywords = []
+
+  categories = []
+
+  date = "2017-10-30T10:25:35-08:00"
+
+  +++
+
+
+  ![Truth](/img/truth.jpg)
+
+
+  Do you want to become invincible? I mean “rock solid”; impenetrable; bullet-proof? The answer is simple: strive to **be the truth**.
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 title = "How to Become Invincible"
 description = ""

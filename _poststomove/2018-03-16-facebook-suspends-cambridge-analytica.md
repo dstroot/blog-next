@@ -1,3 +1,53 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  title = "Facebook suspends Cambridge Analytica"
+
+  description = ""
+
+  draft = false
+
+  keywords = [
+
+  ]
+
+  categories = [
+
+  ]
+
+  date = "2018-03-17T10:25:35-08:00"
+
+
+  +++
+
+
+  ![Alexander Nix](/img/cambridge_analytica.jpg)
+
+
+  A year ago I wrote about how big data, collected from social media sites, and machine learning was used to influence voting in the United States in [The man least likely to succeed in politics](https://danstroot.com/2017/03/19/the-man-least-likely-to-succeed-in-politics/). Collecting big data, and more specifically social data about each of us, has been described as the "new goldrush".  Yet many of us are unaware of how technology is enabling the use (and misuse) of our personal data. As a technologist I find this area fascinating and evolving rapidly.
+
+
+  In the article I discussed how the Trump campaign used a firm named Cambridge Analytica to identify potential voters and to influence them. It was shown that by harvesting and studying a person's Facebook profile and "likes" researchers can know them better than their spouse. 
+
+
+  Now, Facebook announced that it has suspended Cambridge Analytica over concerns that it and other parties improperly obtained and stored users' personal information. Facebook admits it knew about this issue in 2015, prior to the election.  
+
+
+  > In 2015, we learned that a psychology professor at the University of Cambridge named Dr. Aleksandr Kogan lied to us and violated our Platform Policies by passing data from an app that was using Facebook Login to SCL/Cambridge Analytica, a firm that does political, government and military work around the globe. 
+
+  <div class="bqfoot"><cite>&mdash; Facebook, "Suspending Cambridge Analytica and SCL Group from Facebook", March 16, 2018</div></cite>
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 title = "Facebook suspends Cambridge Analytica"
 description = ""

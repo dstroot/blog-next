@@ -1,17 +1,17 @@
 ---
-author: dan
-categories: null
-# date: '2011-06-10'
-published: true
-tags: null
 title: The Corporate iCloud
+excerpt: 'Apple’s announcements at this year’s WWDC keynote will have far reaching effects.  Much has already been written about the impacts to you and me as consumers of Apple products.  But let’s stop and think for a moment about how this will affect our perceptions about technology, and how that will translate into the corporate IT space.'
+coverImage: /assets/blog/img/icloud2.jpg
+date: "2011-06-10"
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/icloud2.jpg
+seoURL: "/2011/06/10/corporate-icloud/"
 ---
 
-![iCloud](/img/icloud2.jpg)
-
 >Apple’s announcements at this year’s WWDC keynote will have far reaching effects.  Much has already been written about the impacts to you and me as consumers of Apple products.  But let’s stop and think for a moment about how this will affect our perceptions about technology, and how that will translate into the corporate IT space.
-
-<!--more-->
 
 ### Apple’s Vision
 
@@ -48,4 +48,5 @@ I think there is a huge opportunity for DropBox, or a company like DropBox, to h
 What do you think?
 
 Source:
-http://techcrunch.com/2011/06/08/apple-icloud-google-cloud/
+
+[Apple iCloud](http://techcrunch.com/2011/06/08/apple-icloud-google-cloud/)

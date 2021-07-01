@@ -1,3 +1,15 @@
+---
+title: ""
+excerpt: ""
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2014-06-29T10:00:00-00:00"
 title = "Setup a CoreOS Playground"

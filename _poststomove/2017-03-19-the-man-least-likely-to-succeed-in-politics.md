@@ -1,3 +1,40 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  title = "The Man Least Likely to Succeed in Politics"
+
+  description = ""
+
+  keywords = [
+
+  ]
+
+  categories = [
+
+  ]
+
+  date = "2017-03-19T10:25:35-08:00"
+
+
+  +++
+
+
+  ![Nixon meets Elvis](/img/Elvis-Nixon.png)
+
+
+  Dick Nixon understood that getting the smart, popular kids to vote for you didn't matter. He called the popular kids "Franklins" and he called his kind the "Orthogonians".  Nixon discovered that being hated by the "Franklins" was no impediment to political success.
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 title = "The Man Least Likely to Succeed in Politics"
 description = ""

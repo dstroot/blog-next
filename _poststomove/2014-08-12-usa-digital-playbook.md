@@ -1,3 +1,32 @@
+---
+title: ""
+excerpt: >
+  +++
+
+  date = "2014-08-12T10:00:00-00:00"
+
+  title = "USA's Digital Playbook"
+
+  draft = false
+
+  description = ""
+
+  +++
+
+
+  ![Digital Playbook](/img/USDS_Playbook.png)
+
+
+  The White House announced on Monday, August 11th 2014, that it is formally launching a new U.S. Digital Service and that it has hired Mikey Dickerson to lead it.  Mickey Dickerson is an engineer widely credited with playing a central role in salvaging HealthCare.gov. The idea behind the USDS is institutionalizing the approach that saved the US health care website.
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2014-08-12T10:00:00-00:00"
 title = "USA's Digital Playbook"

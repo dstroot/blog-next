@@ -1,10 +1,14 @@
 ---
-author: dan
-categories: null
-# date: '2011-12-22'
-published: true
-tags: null
 title: The Corporate iCloud, part 2
+excerpt: ""
+coverImage: /assets/blog/img/icloud2.jpg
+date: "2011-11-01"
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/icloud2.jpg
+seoURL: ""
 ---
 
 When Apple introduced iCloud I wrote an article about the potential impact in the corporate computing space: [The Corporate iCloud](http://danstroot.com/2011/06/10/corporate-icloud/).

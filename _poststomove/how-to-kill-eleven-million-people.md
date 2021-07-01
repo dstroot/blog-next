@@ -1,3 +1,50 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  title = "How to Kill 11 Million People?"
+
+  description = ""
+
+  draft = false
+
+  keywords = [
+
+  ]
+
+  categories = [
+
+  ]
+
+  date = "2017-08-10T10:25:35-08:00"
+
+  +++
+
+
+  ![Holocaust](/img/holocaust.jpg)
+
+
+  _This blog was meant for technology topics, not politics. However, I watched what happened in Charlottesville, VA on 8/12/2017.  I actually saw people saluting and carrying Nazi flags. I was shocked that our president didn't immediately denounce racial hatred and bigotry. We cannot condone or allow racism, and we cannot allow our leaders to support it - especially if those leaders also **lie to us**. Citizens must demand truth, honesty and integrity from our leaders, or suffer the consequences of our own ignorance and apathy._
+
+
+  <hr>
+
+
+  One particular aspect of the Holocaust remains puzzling. How do you actually go about killing eleven million people? Why for month after month and year after year, did millions of intelligent human beings—guarded by a relatively few Nazi soldiers—willingly load their families into tens of thousands of cattle cars to be transported by rail to one of the many death camps scattered across Europe? 
+
+
+  The answer is simple – **you lie to them**.
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 title = "How to Kill 11 Million People?"
 description = ""

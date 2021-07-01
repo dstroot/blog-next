@@ -1,3 +1,35 @@
+---
+title: ""
+excerpt: >
+  +++
+
+  date = "2014-02-01T10:00:00-00:00"
+
+  title = "Fixing Windows 8"
+
+  draft = false
+
+  description = ""
+
+  +++
+
+
+  ![Windows 8](/img/windows8.jpg)
+
+
+  I just saw [this piece](http://jaymachalani.com/blog/2013/12/12/fixing-windows-8) by Jay Machalani about restructuring the UI/UX of Windows 8.  It's a brilliant piece of work!
+
+
+  He did significant research to inform his opinions and came up with 5 key design rules to guide his work which are really at the heart of the issues and confusion that users are currently facing.
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2014-02-01T10:00:00-00:00"
 title = "Fixing Windows 8"

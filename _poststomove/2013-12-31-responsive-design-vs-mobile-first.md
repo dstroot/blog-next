@@ -1,10 +1,17 @@
 ---
-author: dan
-categories: null
-# date: '2013-12-31'
-published: true
-tags: null
 title: Responsive Design vs. Mobile-First
+excerpt: >+
+  
+  I have heard some people speak of "mobile-first" and "responsive design" interchangeably making them sound as if they were one and the same.  However I think there are some subtle differences.  I believe responsive design is the broadest possible definition. It says to me that we are going to target all platforms, screen sizes, pixel densities, etc.  It means that the user experience will be custom tailored to the exact device you just happen to be viewing it with. This should be our ultimate goal, right?
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
 ---
 
 I have heard some people speak of "mobile-first" and "responsive design" interchangeably making them sound as if they were one and the same.  However I think there are some subtle differences.  I believe responsive design is the broadest possible definition. It says to me that we are going to target all platforms, screen sizes, pixel densities, etc.  It means that the user experience will be custom tailored to the exact device you just happen to be viewing it with. This should be our ultimate goal, right?

@@ -1,4 +1,66 @@
-+++
+---
+title: ""
+excerpt: >+
+  +++TOML
+
+  title = "I'm OK; the Bull is Dead."
+
+  description = ""
+
+  keywords = [
+
+  ]
+
+  categories = [
+
+  ]
+
+  date = "2019-02-08T10:25:35-08:00"
+
+  published = "true"
+
+
+  +++
+
+
+  ![bull](/img/bull.jpg)
+
+
+  Years ago I read a great article on clear communication. Unfortunately it is hard to find these days. I am reproducing it here for posterity and full attribution.
+
+
+  ---
+
+
+  By Gopal K. Kapur<br/>
+
+  <small>Computerworld | JUN 21, 2004 7:00 AM PT</small>
+
+
+  Early in my career, when I worked as an engineer, my boss had a process by which the engineering team was expected to report project status. He insisted that we use the following steps, in the specified order:
+
+
+  1. **Punch line:** The facts; no adjectives, adverbs or modifiers. "Milestone 4 wasn't hit on time, and we didn't start Task 8 as planned." Or, "Received charter approval as planned."
+
+  2. **Current status:** How the punch-line statement affects the project. "Because of the missed milestone, the critical path has been delayed five days."
+
+  3. **Next steps:** The solution, if any. "I will be able to make up three days during the next two weeks but will still be behind by two days."
+
+  4. **Explanation:** The reason behind the punch line. "Two of the five days' delay is due to late discovery of a hardware interface problem, and the remaining three days' delay is due to being called to help the customer support staff for a production problem."
+
+
+  Notice the almost reverse order of these points in comparison with the common reporting style in which team members start with a long explanation of why things went wrong. Using the four steps described above, the project manager learns the most important information first, then he learns supporting information to help complete the story.
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
++++TOML
 title = "I'm OK; the Bull is Dead."
 description = ""
 keywords = [

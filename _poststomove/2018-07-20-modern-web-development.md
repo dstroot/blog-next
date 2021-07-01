@@ -1,3 +1,58 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  title = "Modern Web Development"
+
+  description = ""
+
+  draft = false
+
+  keywords = [
+
+  ]
+
+  categories = [
+
+  ]
+
+  date = "2018-07-20T10:25:35-08:00"
+
+
+  +++
+
+
+  ![Rekit](/img/rekit.png)
+
+
+  Web development has evolved faster than nearly every other software engineering discipline. The pace of innovation has been relentless, and front-end developers are confronted with new frameworks, tools, and standards for “modern” web development **constantly**. Framework fatigue is real thing. Even the languages of the web (HTML, CSS, and ECMAScript) have gone through a major modernization effort (and the pace of change increased):
+
+
+  <small>
+
+
+  - HTML > HTML5 > HTML 5.2
+
+  - CSS 3 > CSS 4 + SCSS, PostCSS, autoprefixer, etc.
+
+  - ECMAScript 5 (2009) > ECMAScript 2015, ECMAScript 2016, ECMAScript 2017, ECMAScript 2018
+
+
+  </small>
+
+
+  The positive aspects of all the "churn" in the web development ecosystem are some truly incredible innovations that have fundamentally changed web development to enable much richer, engaging, and performant web "applications".
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 title = "Modern Web Development"
 description = ""

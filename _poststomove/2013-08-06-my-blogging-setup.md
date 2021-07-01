@@ -1,11 +1,17 @@
 ---
-author: dan
-categories: null
-# date: '2013-08-06'
-published: false
-tags: null
 title: My Blogging Setup
-url: /2013/08/06/my-blogging-setup
+excerpt: >
+  
+
+  Blogs need a core concept that will engage your audience.  Placing a post how to install Python on Windows, along with a picture of your favorite band and an assessment of Apple's business strategy all in the same place means you probably won't appeal to anyone in particular.  However a blog called "Ant Farm" that has *every* post focused on raising healthy and happy ants - well that will build an audience for sure.  So if you have, or want, seperate audiences you will need seperate blogs.
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: /2013/08/06/my-blogging-setup
 ---
 
 

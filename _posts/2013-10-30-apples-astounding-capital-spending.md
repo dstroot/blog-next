@@ -1,18 +1,25 @@
-+++
-date = "2013-10-30T10:00:00-00:00"
-title = "Apple's Astounding Capital Expenditures"
-draft = false
-description = ""
-+++
+---
+title: "Apple's Astounding Capital Expenditures"
+excerpt: >
 
-![Earth's Weather](/img/iSpaceship.jpg)
+  Apple’s most recent 10-K filing with the U.S. Securities and Exchange Commission shows the company has budgeted $11 billion in capital expenditures for fiscal 2014. This is more than 5 times Apple's capital expenditure in 2010 and 57 percent more than the $7 billion it spent in 2013. What is Apple planning to do with all that additional money?
+
+coverImage: "/assets/blog/img/iSpaceship.jpg"
+date: "2013-10-30"
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: "/assets/blog/img/iSpaceship.jpg"
+seoURL: ""
+---
 
 Apple’s most recent 10-K filing with the U.S. Securities and Exchange Commission shows the company has budgeted **$11 billion in capital expenditures for fiscal 2014**.
 
 This is more than **5 times** Apple's capital expenditure in 2010 and **57 percent more than the $7 billion it spent in 2013**.
 
 What is Apple planning to do with all that additional money?
-<!--more-->
+
 According to [Horace Dediu](http://www.asymco.com/2013/10/30/how-many-ios-devices-will-be-produced-in-the-next-12-months/) perhaps Apple is just conducting business as usual and the increased CAPEX simply reflects potentially higher sales volumes for iOS devices in 2014.  He has a chart that tracks capital expenditure against iOS device volume and they track very closely.  But I think the relationship may be somewhat coincidental.
 
 Consider Apple's desire to move away from Samsung. Be it on displays or in chips, I suspect this strategic direction is increasing CAPEX significantly without any corresponding unit sale increases.

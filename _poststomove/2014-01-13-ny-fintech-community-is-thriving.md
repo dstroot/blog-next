@@ -1,3 +1,36 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  date = "2014-01-13T10:00:00-00:00"
+
+  title = "NY FinTech Community is Thriving"
+
+  draft = false
+
+  description = ""
+
+  +++
+
+
+  ![FX Trading UI](/img/new-ui.jpg)
+
+
+  I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node and came across a blog post from [Francesca Krihely](http://francescak.me/blog/2013/04/09/fintech-hackathon-recap/) about the FinTech hackathon in NY from back in April, 2013.  
+
+
+  This interested me because as a former "insider" in a large financial services company I can see clearly how open source code and tooling is replacing more proprietry code and tooling (for example .net/visual studio) but it requires an entirely different skill set for internal developers.
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2014-01-13T10:00:00-00:00"
 title = "NY FinTech Community is Thriving"

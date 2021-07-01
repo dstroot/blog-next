@@ -1,3 +1,40 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  date = "2015-01-22T10:00:00-00:00"
+
+  title = "Make Big Bets"
+
+  draft = false
+
+  description = ""
+
+  +++
+
+
+  ![Children](/img/african_children.jpg)
+
+
+  The Bill and Melinda Gates Foundation just released it's [annual letter](http://www.gatesnotes.com/2015-annual-letter?page=0&lang=en&WT.mc_id=01_21_2015_AL2015-GF_GFO_domain_Top_21).  I have come to look forward to these letters because I find them incredibly inspiring. This year instead of an annual update they are re-baselining and taking a fifteen year view of the future. As I read this year's letter I was simultaneously moved, inspired and awed by the scope their mission:
+
+
+  >"The lives of people in poor countries will improve faster in the next 15 years than **at any other time in history**. And their lives will improve more than anyone else's."
+
+  >
+
+  ><cite>&mdash; 2015 Gates Annual Letter</cite>
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2015-01-22T10:00:00-00:00"
 title = "Make Big Bets"

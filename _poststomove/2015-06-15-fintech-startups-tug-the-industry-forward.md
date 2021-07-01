@@ -1,3 +1,36 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  date = "2015-06-15T10:00:00-00:00"
+
+  title = "FinTech Startups Tug the Industry Forward"
+
+  draft = false
+
+  description = ""
+
+  +++
+
+
+  ![FinTech](/img/billguard.png)
+
+
+  Financial services companies are among the most highly regulated industries in the world.  They also suffer from a trust issue.  Trust is a key ingredient in making a financial services business viable. Why would I ever buy insurance, banking services or invest my savings via a company that I didn’t trust?
+
+
+  After the sub-prime debt crisis in 2008 it became clear that the financial services industry would need to rebuild it’s image. Companies would need to zealously rebuild their brands to aspire to become “trusted advisors”. From an IT standpoint it is crystal clear that client and corporate data must be guarded and protected to prevent any loss as well as minimize the potential for damage to an organization’s reputation. How to manage the risk and yet stay innovative?
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2015-06-15T10:00:00-00:00"
 title = "FinTech Startups Tug the Industry Forward"

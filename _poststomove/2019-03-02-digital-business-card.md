@@ -1,3 +1,45 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  title = "Digital Business Card"
+
+  description = ""
+
+  keywords = [
+
+  ]
+
+  categories = [
+
+  ]
+
+  date = "2019-03-02T10:25:35-08:00"
+
+  published = "true"
+
+
+  +++
+
+
+  ![shredded paper](/img/shredded.jpg)
+
+
+  Recently I took on a new role. I was asked for information so that business cards could be ordered for me. I reflected a moment and realized I don't really use business cards anymore. I decided that I needed a digital way to share my business (and personal) information, and I wanted to be able to control what I share. One of the side benefits of this is I don't have to share my personal mobile phone number either. The number below is purchased through Twilio and is only used to reply with my digital business card.
+
+
+  You can send a SMS (type anything) to [+1 949 333-0466](tel:+19493330466) to try it out.
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 title = "Digital Business Card"
 description = ""

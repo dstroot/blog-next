@@ -1,3 +1,33 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  date = "2014-02-18T10:00:00-00:00"
+
+  title = "IPv6 Gets Real"
+
+  draft = false
+
+  description = ""
+
+  +++
+
+
+  ![IPv6](/img/IPv6-google.jpg)
+
+
+  Google’s IPv6 measurements crossed the 3% milestone just under five months from when the 2% milestone was crossed.  Prior to that it had taken 11 months to go from 1% to 2%.  
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2014-02-18T10:00:00-00:00"
 title = "IPv6 Gets Real"

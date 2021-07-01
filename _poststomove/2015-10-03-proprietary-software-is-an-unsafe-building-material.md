@@ -1,3 +1,38 @@
+---
+title: ""
+excerpt: >
+  +++
+
+  date = "2015-10-03T10:00:00-00:00"
+
+  title = "Proprietary Software is an Unsafe Building Material"
+
+  draft = false
+
+  description = ""
+
+  +++
+
+
+  ![Volkswagen](/img/volkswagen.jpg)
+
+
+  At one point in time I worked for an organization that banned the use of open source software.  They were concerned that in the event of issues "there would be no support".  At the time they believed that commercial software from companies like IBM, Oracle, Microsoft and SAP was "safer" because there was a commercial entity that stood behind the products they sold and provided support.
+
+
+  ### Now that's changing
+
+
+  Most technology leadership today recognizes that proprietary software is not safer than open source software. Basic metrics around the number of disclosed vulnerabilities and "time to patch availability" seem to give an edge to open source software at least being patched faster.  Not only that but you have the option to inspect the code yourself, and patch it yourself - options that are simply not available with commercial, closed software. This causes a re-evaluation of the relationship of proprietary, commercial software to operating a safe and secure business.
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2015-10-03T10:00:00-00:00"
 title = "Proprietary Software is an Unsafe Building Material"

@@ -1,3 +1,15 @@
+---
+title: ""
+excerpt: ""
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 title = "The Polygon of Enterprise Despair"
 description = ""

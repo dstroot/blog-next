@@ -1,11 +1,16 @@
 ---
-author: dan
-categories: null
-# date: '2013-08-06'
-published: false
-tags: null
 title: My Social Media Setup
-url: /2013/08/06/my-social-media-setup
+excerpt: >
+  
+  Social media is overwhelming - we are inundated with email, text messages, tweets, facebook posts and who knows what else.  How to stay on top of it and share appropriately?
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: /2013/08/06/my-social-media-setup
 ---
 
 Social media is overwhelming - we are inundated with email, text messages, tweets, facebook posts and who knows what else.  How to stay on top of it and share appropriately?

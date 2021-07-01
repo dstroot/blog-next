@@ -1,3 +1,51 @@
+---
+title: ""
+excerpt: >+
+  +++
+
+  title = "Turn Your Company Inside-Out for $3/mo"
+
+  description = ""
+
+  keywords = [
+
+  ]
+
+  categories = [
+
+  ]
+
+  date = "2018-01-18T10:25:35-08:00"
+
+  +++
+
+
+  ![Citadel](/img/citadel.jpg)
+
+
+  I have already described the "inside out" corporation [here](https://danstroot.com/2017/04/10/the-inside-out-corporation/). 
+
+
+  It imagines a world where:
+
+
+  * Corporate networks no longer exist (so VPNs and other remote access solutions are no longer needed)
+
+  * There is no concept of "in" or "outside" the corporate network.
+
+  * All corporate services are accessible anywhere over the Internet **securely**.
+
+  * Corporate network costs are reduced appropriately.
+
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 title = "Turn Your Company Inside-Out for $3/mo"
 description = ""

@@ -1,3 +1,40 @@
+---
+title: ""
+excerpt: >
+  +++
+
+  date = "2014-06-29T10:00:00-00:00"
+
+  title = "CoreOS: thousands of machines and millions of Docker containers... no hypervisor needed."
+
+  draft = false
+
+  description = ""
+
+  +++
+
+
+  ![CoreOS](/img/coreos-logo.png)
+
+
+  I have been playing around with CoreOS to get a sense of how everything works. The vision of this project is incredible.
+
+
+  CoreOS describes itself as *"a new Linux distribution that has been re-architected to provide features needed to run modern infrastructure stacks. The strategies and architectures that influence CoreOS allow companies like Google, Facebook and Twitter to run their services at scale with high resilience."*
+
+
+  CoreOS displaces hypervisors and machine virtualization in favor of Docker and Linux containers.  CoreOS uses Linux containers to manage your services at a high level of abstraction. A single service's code and all dependencies are packaged within a container that can be run on one or many CoreOS machines.
+
+   Clustering works across platforms, meaning there is no cloud vendor lock-in. For example, CoreOS runs on Amazon EC2, Rackspace, QEMU/KVM, VMware and OpenStack and your own hardware. Running a single CoreOS cluster on multiple different clouds or cloud + bare metal is supported and encouraged. This lack of lock-in is the reason why I have supported OpenStack and CoreOS takes this even further.
+coverImage: ""
+date: 2021-07-01
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: ""
+seoURL: ""
+---
 +++
 date = "2014-06-29T10:00:00-00:00"
 title = "CoreOS: thousands of machines and millions of Docker containers... no hypervisor needed."
