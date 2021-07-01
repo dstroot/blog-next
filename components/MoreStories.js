@@ -14,7 +14,6 @@ export const MoreStories = ({ posts }) => {
   const onIsVisible = (index) => {
     if (index === postList.length - 1 && !endList) {
       setPage((page) => page + 1);
-      console.log("Page: " + page);
     }
   };
 
