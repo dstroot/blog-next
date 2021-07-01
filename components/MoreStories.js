@@ -62,7 +62,7 @@ export const MoreStories = ({ posts }) => {
         })}
       </div>
       {endList && (
-        <div className="m-12 text-xl md:text-3xl text-center">
+        <div className="my-12 text-xl md:text-3xl text-center">
           Wow! You made it to the end!
         </div>
       )}
