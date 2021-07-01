@@ -36,7 +36,7 @@ export const MoreStories = ({ posts }) => {
       });
     };
     fetchPosts(page);
-  }, [page]); // if "page" changes run effect
+  }, [page, posts, length]); // if "page" changes run effect
 
   return (
     <section>
