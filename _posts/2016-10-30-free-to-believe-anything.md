@@ -50,8 +50,12 @@ Yes, all candidates have equal access to technology, and of course we all have t
 
 ### References
 
-* [Angela Merkel: internet search engines are 'distorting perception'](https://www.theguardian.com/world/2016/oct/27/angela-merkel-internet-search-engines-are-distorting-our-perception)<br>
-* [Facebook Top Source for Political News Among Millennials](http://www.journalism.org/2015/06/01/facebook-top-source-for-political-news-among-millennials/)<br>
-* [How liars create the 'illusion of truth'](http://www.bbc.com/future/story/20161026-how-liars-create-the-illusion-of-truth)<br>
-* [Both Old and New Media Are Failing Voters](http://www.wsj.com/articles/both-old-and-new-media-are-failing-voters-1478216173)<br>
-* [How the Internet Is Loosening Our Grip on the Truth](http://www.nytimes.com/2016/11/03/technology/how-the-internet-is-loosening-our-grip-on-the-truth.html)
+[Angela Merkel: internet search engines are 'distorting perception'](https://www.theguardian.com/world/2016/oct/27/angela-merkel-internet-search-engines-are-distorting-our-perception)
+
+[Facebook Top Source for Political News Among Millennials](http://www.journalism.org/2015/06/01/facebook-top-source-for-political-news-among-millennials/)
+
+[How liars create the 'illusion of truth'](http://www.bbc.com/future/story/20161026-how-liars-create-the-illusion-of-truth)
+
+[Both Old and New Media Are Failing Voters](http://www.wsj.com/articles/both-old-and-new-media-are-failing-voters-1478216173)
+
+[How the Internet Is Loosening Our Grip on the Truth](http://www.nytimes.com/2016/11/03/technology/how-the-internet-is-loosening-our-grip-on-the-truth.html)
