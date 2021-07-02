@@ -1,28 +1,17 @@
 ---
-title: ""
-excerpt: ""
-coverImage: ""
-date: 2021-07-01
+title: "The Polygon of Enterprise Despair"
+excerpt: >-
+  As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the same moment, on the same day, Amazon.com is the most valuable company in the world with an $810B valuation, or 184 times greater. Prior to Amazon's founding Sears had everything. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Brand recognition and established customer base, check. Unfortunately for an incumbent, change is much harder than anyone imagines it to be.
+coverImage: "/assets/blog/img/polygon.png"
+date: "2019-01-06"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: "/assets/blog/img/polygon.png"
 seoURL: ""
 ---
-+++
-title = "The Polygon of Enterprise Despair"
-description = ""
-keywords = [
-]
-categories = [
-]
-date = "2019-01-06T10:25:35-08:00"
-published = "true"
-
-+++
-
-![The polygon of enterprise despair](/img/polygon.png)
 
 When enterprises see the changes wrought by disruptors in music (Spotify), advertising (Google) or retail (Amazon), they wonder what may be in store for them.
 
@@ -154,7 +143,7 @@ The winners (or losers depending on your perspective) were several people still 
 
 > “You take the new thing and shove it into the old paradigm”.
 >
-> <div class="bqfoot"><cite>&mdash; Rob Wolcott, Professor of Innovation & Entrepreneurship at Northwestern Kellogg</div></cite>
+> <cite>&mdash; Rob Wolcott, Professor of Innovation & Entrepreneurship at Northwestern Kellogg</cite>
 
 Can enterprises using spreadsheets from 1995 transform into digital winners?
 
@@ -162,7 +151,7 @@ Can enterprises using spreadsheets from 1995 transform into digital winners?
 
 Most companies embarking on ‘digital transformation’ are "consciously incompetent". They know what’s not working, and they know they have skill gaps and process issues, but are under the illusion that if they just adopt "the right process" it will save them. These companies frequently adopt an Agile or Lean process in name but not in practice. This is what’s sometimes referred to as scrum-theater.
 
-![The polygon of enterprise despair](/img/agile_manifesto.jpg)
+![The polygon of enterprise despair](/assets/blog/img/agile_manifesto.jpg)
 
 If your software team is the only Agile part of the product team, that’s scrum-theater. At this stage you’re gathering little or no market feedback. Product backlogs are prioritized around dev and engineering and not for customer value. Product teams are rushing to build solutions first before validating market value.
 
@@ -258,7 +247,7 @@ All this makes the effort of making changes far more onerous than it is elsewher
 
 #### References
 
-https://www.kellogg.northwestern.edu/faculty/directory/wolcott_robert.aspx#research=page1
-https://medium.com/pminsider/its-time-to-get-real-about-digital-transformation-a268a186844d
-https://www.radicalproduct.com/
-https://zwischenzugs.com/2018/10/02/why-are-enterprises-so-slow/
+* [Robert Wolcott](https://www.kellogg.northwestern.edu/faculty/directory/wolcott_robert.aspx#research=page1)
+* [It’s Time To Get Real About Digital Transformation](https://medium.com/pminsider/its-time-to-get-real-about-digital-transformation-a268a186844d)
+* [Vision Driven Products](https://www.radicalproduct.com/)
+* [Why are enterprises so slow?](https://zwischenzugs.com/2018/10/02/why-are-enterprises-so-slow/)
