@@ -7,7 +7,7 @@ excerpt: President Barack Obama, on his first day in office in 2009, signed an
   data and the http://www.data.gov website to distribute the data.
 coverImage: /assets/blog/img/data_gov.png
 date: "2014-07-01"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

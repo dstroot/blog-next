@@ -8,7 +8,7 @@ excerpt: At one point in time I worked for an organization that banned the use
   and provided support. Now that's changing...
 coverImage: /assets/blog/img/volkswagen.jpg
 date: "2015-10-03"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

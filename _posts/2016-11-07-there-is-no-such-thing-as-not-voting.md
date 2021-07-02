@@ -5,7 +5,7 @@ excerpt: If you are bored and disgusted by politics and don't bother to vote,
   parties.
 coverImage: /assets/blog/img/dfw.jpg
 date: "2016-11-07"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

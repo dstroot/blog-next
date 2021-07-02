@@ -8,7 +8,7 @@ excerpt: The Red Cross, via a company called mGive, has got the major U.S.
   $100,000 per minute!
 coverImage: /assets/blog/img/haiti.jpg
 date: "2010-01-15"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

@@ -9,7 +9,7 @@ excerpt: 'One of the challenges in a large distributed enterprise is "finding
   copy" to "somewhere where I can find it".'
 coverImage: /assets/blog/img/Google_Enterprise_Search.png
 date: "2014-03-14"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

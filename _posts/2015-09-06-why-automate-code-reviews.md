@@ -5,7 +5,7 @@ excerpt: Ask a programmer to review 10 lines of code, they'll make 10
   good!"
 coverImage: /assets/blog/img/better_code.png
 date: "2015-09-06"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

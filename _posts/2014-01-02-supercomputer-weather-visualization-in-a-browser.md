@@ -4,18 +4,16 @@ excerpt: This is a pretty amazing technology demonstration of what is possible
   using the currently available open source tooling, open source data, and using
   cloud service providers for hosting and content delivery.  It was written by
   Cameron Beccario (@cambecc). Check it out below.
-coverImage: ""
-date: "2021-07-01"
-published: false
+coverImage: /assets/blog/img/earth_wind_map.png
+date: "2014-01-02"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog
+  url: /assets/blog/img/earth_wind_map.png
 seoURL: ""
 ---
-
-![Earth's Weather](/img/earth_wind_map.jpg)
 
 This is a pretty amazing technology demonstration of what is possible using the currently available open source tooling, open source data, and using cloud service providers for hosting and content delivery.  It was written by Cameron Beccario (@cambecc). Check it out below.
 

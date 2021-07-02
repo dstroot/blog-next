@@ -1,9 +1,9 @@
 ---
 title: Setup a CoreOS Playground
-excerpt: ""
+excerpt: "Do you want your own CoreOS fleet?"
 coverImage: /assets/blog/img/coreos-logo.png
 date: "2014-06-29"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -16,7 +16,7 @@ seoURL: ""
 
 I recommend using Vagrant and VirtualBox. If you have them installed fire up a terminal and go to where you keep your Vagrant files and:
 
-```
+```shell
 $ git clone https://github.com/coreos/coreos-vagrant.git
 $ cd coreos-vagrant
 ```
@@ -30,13 +30,13 @@ In order to initialize a cluster (or fleet, or hive, or whatever you want to cal
 
 Start the machine(s):
 
-```
+```shell
 $ vagrant up
 ```
 
 List the status of the running machines:
 
-```
+```shell
 $ vagrant status
 Current machine states:
 
@@ -51,20 +51,12 @@ VM, run `vagrant status NAME`.
 
 Connect to one of the machines:
 
-```
+```shell
 $ vagrant ssh core-01 -- -A
 ```
-
-
-
-
-
-
-
-
 - Each unit of computing is described by a unit file (files because neckbeards know to keep things simple).  Here's what it looks like - this example is just running a dockerfile to run busybox and then a bash command to echo "Hello World" repeatedly.
 
-```
+```shell
 [Unit]
 Description=My Service
 After=docker.service
@@ -75,8 +67,8 @@ ExecStart=/usr/bin/docker run busybox /bin/sh -c "while true; do echo Hello Worl
 
 [Install]
 WantedBy=multi-user.target
+```
 
-
-_Sources:_
+Sources:
 
 * [KVM and Docker LXC Benchmarking with OpenStack](http://bodenr.blogspot.com/2014/05/kvm-and-docker-lxc-benchmarking-with.html)

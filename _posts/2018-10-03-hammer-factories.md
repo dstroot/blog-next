@@ -7,7 +7,7 @@ excerpt: There is a post from 2005 by Benji Smith in the old (and now closed)
   Discussion Group ever disappears.
 coverImage: /assets/blog/img/hammer.jpg
 date: "2018-10-03"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

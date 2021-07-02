@@ -5,7 +5,7 @@ excerpt: Today at the Open Compute Summit, CEO Mark Zuckerberg said that "In the
   building out our infrastructure using Open Compute designs.s
 coverImage: /assets/blog/img/fb-server.jpg
 date: "2014-01-28"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

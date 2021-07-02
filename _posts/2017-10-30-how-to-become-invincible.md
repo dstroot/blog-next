@@ -4,7 +4,7 @@ excerpt: >-
   Do you want to become invincible? I mean “rock solid”; impenetrable; bullet-proof? The answer is simple: strive to **be the truth**.
 coverImage: /assets/blog/img/truth.jpg
 date: "2017-10-30"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

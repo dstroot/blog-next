@@ -5,7 +5,7 @@ excerpt: >-
   Dick Nixon understood that getting the smart, popular kids to vote for you didn't matter. He called the popular kids "Franklins" and he called his kind the "Orthogonians".  Nixon discovered that being hated by the "Franklins" was no impediment to political success.
 coverImage: /assets/blog/img/Elvis-Nixon.png
 date: "2017-03-19"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -57,17 +57,17 @@ Interestingly, by studying a person's Facebook "likes" researchers can know them
 
 With 170 likes per person, Kosinski’s methods were able to predict the following attributes with the connected rates of accuracy.
 
-![Kosinski Research](/img/Facebook-research.png)
+![Kosinski Research](/assets/blog/img/Facebook-research.png)
 
 ### Can this information be used to influence voters?
 
 One psychometric framework is known as The Big Five, or OCEAN.  This approach is centered around summarizing an individual’s personality through relation to five key categories:
 
-![OCEAN](/img/ocean.png)
+![OCEAN](/assets/blog/img/ocean.png)
 
 We know this methodology is employed by Cambridge Analytica as their CEO Alexander Nix is pictured here below giving a presentation with the Big Five methodology taking center stage as one of the ways of understanding data.
 
-![Alexander Nix](/img/Nix-presenting-research.png)
+![Alexander Nix](/assets/blog/img/Nix-presenting-research.png)
 
 A politician in a US election needs to appeal to more than 65 million people in order to win the election. You need to find people susceptible to your product or message and be able to convert them. This is where the psychometric emotional mapping techniques offered through the Big Five methodology can help.
 
@@ -105,13 +105,13 @@ The bots targeted people by a hashtag symbol, like #Clinton. Their purpose: to r
 Quotes from the article:
 
 >The same was true even of people inside Facebook. “If you’d come to me in 2012, when the last presidential election was raging and we were cooking up ever more complicated ways to monetize Facebook data, and told me that Russian agents in the Kremlin’s employ would be buying Facebook ads to subvert American democracy, I’d have asked where your tin-foil hat was,” wrote Antonio García Martínez, who managed ad targeting for Facebook back then. “And yet, now we live in that otherworldly political reality.”
-<hr>
+
 >Through 2015, Breitbart went from a medium-sized site with a small Facebook page of 100,000 likes into a powerful force shaping the election with almost 1.5 million likes. In the key metric for Facebook’s News Feed, its posts got 886,000 interactions from Facebook users in January. By July, Breitbart had surpassed The New York Times’ main account in interactions. By December, it was doing 10 million interactions per month, about 50 percent of Fox News, which had 11.5 million likes on its main page. 
-<hr>
+
 >A Guardian reporter who looked into Russian military doctrine around information war found a handbook that described how it might work. “The deployment of information weapons, [the book] suggests, ‘acts like an invisible radiation’ upon its targets: ‘The population doesn’t even feel it is being acted upon. So the state doesn’t switch on its self-defense mechanisms,’” wrote Peter Pomerantsev.
-<hr>
+
 >Jonathan Albright, research director of the Tow Center for Digital Journalism at Columbia University, pulled data on the six publicly known Russia-linked Facebook pages. He found that their posts had been shared 340 million times. And those were six of 470 pages that Facebook has linked to Russian operatives. You’re probably talking billions of shares, with who knows how many views, and with what kind of specific targeting.
-<hr>
+
 >Add everything up. The chaos of a billion-person platform that competitively dominated media distribution. The known electoral efficacy of Facebook. The wild fake news and misinformation rampaging across the internet generally and Facebook specifically. The Russian info operations. All of these things were known. And yet no one could quite put it all together: The dominant social network had altered the information and persuasion environment of the election beyond recognition while taking a very big chunk of the estimated $1.4 billion worth of digital advertising purchased during the election. 
 
 *UPDATE 03/16/2018:* [Facebook suspends Trump-affiliated data firm over privacy concerns](https://www.politico.com/story/2018/03/16/facebook-cambridge-analytica-suspended-trump-campaign-468692) Politico informs us that Cambridge Analytica has been suspended after Mueller requested emails from Cambridge Analytica’s Trump-affiliated employees in connection with the probe into Russian election meddling. 

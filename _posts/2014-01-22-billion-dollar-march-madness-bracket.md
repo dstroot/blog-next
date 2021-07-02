@@ -4,7 +4,7 @@ excerpt: "You read that right: one billion. Not one million. Not one hundred
   million. Not five hundred million. One billion U.S. dollars."
 coverImage: /assets/blog/img/ncaa-brackets.jpg
 date: "2014-01-22"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

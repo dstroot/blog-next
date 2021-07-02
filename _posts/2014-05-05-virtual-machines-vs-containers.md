@@ -11,7 +11,7 @@ excerpt: Personally I think the next wave of infrastructure efficiency will be
   was merged into kernel version 2.6.24.
 coverImage: /assets/blog/img/docker.png
 date: "2014-05-05"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

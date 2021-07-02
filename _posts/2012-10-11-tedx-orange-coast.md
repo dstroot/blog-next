@@ -8,7 +8,7 @@ excerpt: Yesterday I had the pleasure of attending the TEDx Orange County
   which quite frankly is the best kind of serendipity.
 coverImage: /assets/blog/img/tedx.png
 date: "2012-10-11"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

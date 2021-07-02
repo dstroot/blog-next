@@ -4,7 +4,7 @@ excerpt: 'I have already described the "inside out" corporation
   [here](https://danstroot.com/2017/04/10/the-inside-out-corporation/). '
 coverImage: /assets/blog/img/citadel.jpg
 date: "2018-01-18"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

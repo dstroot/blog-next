@@ -7,7 +7,7 @@ excerpt: Most information security practitioners do a poor job explaining the
   until Sir Edmund Hillary did it.
 coverImage: /assets/blog/img/SmartCarLock.png
 date: "2015-09-26"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

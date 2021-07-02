@@ -5,7 +5,7 @@ excerpt: Years ago I read a great article on clear communication. Unfortunately
   attribution.
 coverImage: /assets/blog/img/bull.jpg
 date: "2019-02-08"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

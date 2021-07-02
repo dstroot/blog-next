@@ -6,7 +6,7 @@ excerpt: Like many people in the Technology world I watched Apple's iPad
   used for business.  How could a new category like this be used?
 coverImage: /assets/blog/img/iPad2010.jpg
 date: "2010-01-29"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

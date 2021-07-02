@@ -6,7 +6,7 @@ excerpt: I have been building a website recently just to get current with the
   was time to benchmark one of my own applications!
 coverImage: /assets/blog/img/icloud2.jpg
 date: "2012-07-01"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

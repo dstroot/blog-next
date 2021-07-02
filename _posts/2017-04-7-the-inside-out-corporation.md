@@ -7,7 +7,7 @@ excerpt: Most companies still have a separate corporate network, protected by
   that extra cost, complexity, overhead, and effort?
 coverImage: /assets/blog/img/internet.jpg
 date: "2017-04-10"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

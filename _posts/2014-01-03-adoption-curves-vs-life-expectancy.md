@@ -8,7 +8,7 @@ excerpt: >
   individuals might experience in their lifetimes."
 coverImage: /assets/blog/img/adoption_curve.jpg
 date: "2013-11-19"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

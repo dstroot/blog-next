@@ -6,7 +6,7 @@ excerpt: In the article I compared what I was doing with Dropbox as a potential
   bit differently.
 coverImage: /assets/blog/img/icloud2.jpg
 date: "2011-11-01"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

@@ -7,14 +7,14 @@ excerpt: I have heard some people speak of "mobile-first" and "responsive
   are going to target all platforms, screen sizes, pixel densities, etc.  It
   means that the user experience will be custom tailored to the exact device you
   just happen to be viewing it with. This should be our ultimate goal, right?
-coverImage: ""
-date: "2021-07-01"
-published: false
+coverImage: "/assets/blog/img/mobile-first.png"
+date: "2013-12-31"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog
+  url: /assets/blog/img/mobile-first.png
 seoURL: ""
 ---
 

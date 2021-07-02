@@ -9,7 +9,7 @@ excerpt: Recently I took on a new role. I was asked for information so that
   through Twilio and is only used to reply with my digital business card.
 coverImage: /assets/blog/img/shredded.jpg
 date: "2019-03-02"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

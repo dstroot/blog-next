@@ -6,7 +6,7 @@ excerpt: >
   reducing innovation at the same time.
 coverImage: /assets/blog/img/edison.jpg
 date: "2012-11-16"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

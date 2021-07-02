@@ -8,7 +8,7 @@ excerpt: >
   planning to do with all that additional money?
 coverImage: /assets/blog/img/iSpaceship.jpg
 date: "2013-10-30"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

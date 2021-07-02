@@ -6,7 +6,7 @@ excerpt: As a CIO in a large, publicly owned financial services company I held
   hurdle to adoption was "potential security risks", by a large measure.
 coverImage: /assets/blog/img/bias.jpg
 date: "2013-10-15"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

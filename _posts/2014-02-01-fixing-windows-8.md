@@ -6,14 +6,14 @@ excerpt: I just saw [this
   of work! He did significant research to inform his opinions and came up with 5
   key design rules to guide his work which are really at the heart of the issues
   and confusion that users are currently facing.
-coverImage: /assets/blogimg/windows8.jpg
+coverImage: /assets/blog/img/windows8.jpg
 date: "2014-02-01"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blogimg/windows8.jpg
+  url: /assets/blog/img/windows8.jpg
 seoURL: ""
 ---
 

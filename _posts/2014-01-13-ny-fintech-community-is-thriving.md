@@ -10,7 +10,7 @@ excerpt: 'I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node
   skill set for internal developers.'
 coverImage: /assets/blog/img/new-ui.jpg
 date: "2014-01-13"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

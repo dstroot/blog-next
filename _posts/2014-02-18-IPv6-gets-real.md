@@ -5,7 +5,7 @@ excerpt: "Google’s IPv6 measurements crossed the 3% milestone just under five
   months to go from 1% to 2%.  "
 coverImage: /assets/blog/img/IPv6-google.jpg
 date: "2014-02-18"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

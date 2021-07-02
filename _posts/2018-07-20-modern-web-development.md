@@ -6,7 +6,7 @@ excerpt: Web development has evolved faster than nearly every other software
   for “modern” web development **constantly**. Framework fatigue is real thing.
 coverImage: /assets/blog/img/rekit.png
 date: "2018-07-20"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

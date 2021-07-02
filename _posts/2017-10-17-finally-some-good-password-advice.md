@@ -5,7 +5,7 @@ excerpt: 'In every organization I have worked with managing user authentication
   best practices were **failed attempts to fix the user, not the system**. '
 coverImage: /assets/blog/img/password.jpg
 date: "2017-10-16"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

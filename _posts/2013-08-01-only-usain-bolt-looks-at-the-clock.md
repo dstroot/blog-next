@@ -5,7 +5,7 @@ excerpt: If you watch someone run the 100 meters, they sneak glances around.
   pack.  I noticed that only Usain Bolt looks at the clock. Why?
 coverImage: /assets/blog/img/usain-bolt2.jpg
 date: "2013-08-01"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

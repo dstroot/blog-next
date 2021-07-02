@@ -1,0 +1,39 @@
+---
+title: It’s secure… until it’s not
+excerpt: Is there a such thing as perfect security? No.
+coverImage: /assets/blog/img/SmartCarLock.png
+date: "2015-09-26"
+published: true
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/SmartCarLock.png
+seoURL: ""
+---
+
+In the 1770s Joseph Bramah created a lock that was vastly superior to any the world ever seen. Bramah believed it was 100% theft-proof. Bramah was so confident in his design that he published a pamphlet detailing exactly how it worked and he put it in the window of his London storefront, and painted on it a challenge:
+
+>“The artist who can make an instrument that will pick or open this lock shall receive 200 Guineas the moment it is produced.”
+
+Then Jeremiah Chubb created the Chubb detector lock. The way Chubb’s lock worked was that if a lock picker tried to lift one of the tumblers up too high, a latching mechanism would trigger, causing the lock to seize up. When that happened, even the key wouldn’t open the lock. To reset the lock, the owner would have to put in a different key and rotate it in the opposite direction to reset the tumblers.
+
+Thus, if lock owners went to unlock a chest, or a vault, or a front door, and found that their key didn’t work, they would know that someone had tried to get in—and that they had failed.
+
+For 70 years, the names Chubb and Bramah meant “perfect security”.
+
+In 1851, London was hosting The Great Exhibition—the first international exhibition of manufactured products. One of the attendees was A. C. Hobbs, an American locksmith. Back in the states, Hobbs had made a name for himself by showing bank managers that their locks could be easily picked, and convincing them to buy one of his. Hobbs was selling lots of locks.
+
+On day one of the exhibition, Hobbs publicly announced that he would pick the Chubb detector lock — the one that stops working if you pick it incorrectly. It took Hobbs about 25 minutes. And the way Hobbs did it was to use the lock against itself.
+He would pick it until he tripped the detector mechanism, causing the lock to seize up. That would give Hobbs information about how it worked, and then he would pick the lock in the opposite direction to reset the detector. He’d go back and forth firing and resetting the detector until the lock told him everything he needed to know about how to get it open.
+
+But the Chubb detector lock was really just a warm up. The main event was the Bramah safety lock—the one with the challenge painted on it in gold lettering, which had been sitting Bramah’s storefront window for 70 years, unbeaten.
+
+After working on the lock for about 52 hours over the course of fourteen days, Hobbs opened it.
+
+Overnight, the feeling of perfect security had evaporated. And we have never gotten it back.
+
+#### References
+
+* [In 1851 a man picked two unpickable locks...](http://gizmodo.com/in-1851-a-man-picked-two-unpickable-locks-and-changed-1698557792)
+* [Bramah Lock](https://en.wikipedia.org/wiki/Bramah_lock)

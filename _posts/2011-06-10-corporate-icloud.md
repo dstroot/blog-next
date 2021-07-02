@@ -7,7 +7,7 @@ excerpt: Apple’s announcements at this year’s WWDC keynote will have far
   translate into the corporate IT space.
 coverImage: /assets/blog/img/icloud2.jpg
 date: "2011-06-10"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

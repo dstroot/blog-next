@@ -8,7 +8,7 @@ excerpt: >
   institutionalizing the approach that saved the US health care website.
 coverImage: /assets/blog/img/USDS_Playbook.png
 date: "2014-08-12"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

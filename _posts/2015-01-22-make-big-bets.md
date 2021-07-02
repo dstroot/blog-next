@@ -8,7 +8,7 @@ excerpt: The Bill and Melinda Gates Foundation just released it's annual
   mission.
 coverImage: /assets/blog/img/african_children.jpg
 date: "2015-01-22"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

@@ -9,7 +9,7 @@ excerpt: Internet access is so fundamentally important that many people believe
   improves the lives of all citizens.
 coverImage: /assets/blog/img/internet.jpg
 date: "2017-12-22"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

@@ -9,7 +9,7 @@ excerpt: >
   said.
 coverImage: /assets/blog/img/minorityreport.jpeg
 date: "2012-10-21"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

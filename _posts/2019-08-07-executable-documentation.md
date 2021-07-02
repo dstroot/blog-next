@@ -8,7 +8,7 @@ excerpt: Every team has manual procedures or checklists that they haven’t gott
   satisfying solutions – just another checkbox checked.
 coverImage: /assets/blog/img/exec_doc.png
 date: "2019-08-07"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

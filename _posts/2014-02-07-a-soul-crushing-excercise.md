@@ -8,7 +8,7 @@ excerpt: This morning I saw a post on LinkedIn by Bob Sutton who is a Stanford
   and soul crushing exercise.”
 coverImage: /assets/blog/img/soulcrushing.jpg
 date: "2014-02-07"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

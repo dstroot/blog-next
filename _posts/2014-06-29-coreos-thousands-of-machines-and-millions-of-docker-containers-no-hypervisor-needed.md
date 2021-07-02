@@ -10,7 +10,7 @@ excerpt: >
   their services at scale with high resilience."
 coverImage: /assets/blog/img/coreos-logo.png
 date: "2014-06-29"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

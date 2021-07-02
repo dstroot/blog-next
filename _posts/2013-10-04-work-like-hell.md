@@ -5,7 +5,7 @@ excerpt: If other people are putting in 40-hour workweeks, and you're putting in
   achieve in four months what it takes them a year to achieve.
 coverImage: /assets/blog/img/elon-musk.jpg
 date: "2013-10-04"
-published: "true"
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

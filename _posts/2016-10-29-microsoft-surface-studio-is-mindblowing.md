@@ -7,7 +7,7 @@ excerpt: Saw the new Microsoft Surface Studio this weekend at the Microsoft
   your field of vision.
 coverImage: /assets/blog/img/Surface_Studio.jpg
 date: "2016-10-29"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

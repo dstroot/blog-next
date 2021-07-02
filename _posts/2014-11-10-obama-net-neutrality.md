@@ -8,14 +8,14 @@ excerpt: >
   Internet as a basic utility, and something that Americans have a basic right
   to. This means no blocking, no throttling, more transparency and no paid
   prioritization.
-coverImage: /assets/blog/img/obama_internet.png
+coverImage: /assets/blog/img/obama_internet.jpg
 date: "2014-11-10"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/obama_internet.png
+  url: /assets/blog/img/obama_internet.jpg
 seoURL: ""
 ---
 
