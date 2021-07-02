@@ -36,7 +36,7 @@ This has some huge advantages. You can "prove" an application before you scale i
 
 The architecture looks like this:
 
-![architecture](/img/serverless.png)
+![architecture](/assets/blog/img/serverless.png)
 
 <small>NOTE: I didn't draw this - it is automatically generated from the CloudFormation script that the Serverless framework creates. Automatic, "perfect", evergreen documentation - because it is showing exactly what is actually deployed. Cool!</small>
 
@@ -52,7 +52,7 @@ Prerequisites
 - A Twilio account
 - Node.js and NPM or Yarn installed on your development machine
 - Use NPM or Yarn to install Serverless:
-  ```sh
+  ```shell
   # Installing the serverless cli
   npm install -g serverless
   ```
@@ -63,7 +63,7 @@ Prerequisites
 
 Use serverless to scaffold a lambda function using the Node.js template.
 
-```sh
+```shell
 # Create a new Serverless Service/Project
 $ serverless create --template aws-nodejs --path my-service
 
@@ -77,19 +77,19 @@ NOTE: the actual lambda code is in the repo linked below. I am outlining how to 
 
 - Test the function locally. Note "-f" specifies the function and "-p" passes in data to simulate an API call
 
-  ```sh
+  ```shell
   serverless invoke local -f twilio -p data.json
   ```
 
 - Deploy the Service
 
-  ```sh
+  ```shell
   serverless deploy
   ```
 
 - Fetch the Function Logs
 
-  ```sh
+  ```shell
   serverless logs -f twilio -t
   ```
 
@@ -97,7 +97,7 @@ NOTE: the actual lambda code is in the repo linked below. I am outlining how to 
 
 Once your API is up and running you simply point the Twilio webhook of your phone number to your API endpoint:
 
-![Twilio](/img/twilio.png)
+![Twilio](/assets/blog/img/twilio.png)
 
 When an SMS is sent to my Twilio phone number, Twilio calls my API and posts the SMS as the payload. The lambda function formats a response using Twilio's XML format and sends it back as the HTTP response. Twilio reads the XML which instructs Twilio to respond with a MMS message with my digital business card information.
 
