@@ -1,8 +1,8 @@
 ---
 title: Can you spot an underfunded Technology department?
 excerpt: People go into technology because they love building new things, solving business problems, and making businesses operate better. The last 
-  thing on earth most technologists want to say is “no”.  When your technology starts telling you "no" it may be that they are feeling overwhelmed.  
-  There are many unintuitive signs that indicate a Technology might be underfunded, such as buying premium support contracts, or using expensive 
+  thing on earth most technologists want to say is “no”.  When your technology team starts telling you no it may be that they are feeling overwhelmed.  
+  There are many unintuitive signs that indicate a Technology might be overwhelmed or underfunded, such as buying premium support contracts, or using expensive 
   consultants. Read on to learn the telltale signs of an underfunded Technology Organization.
 coverImage: /assets/blog/img/old-computer.jpeg
 date: "2021-06-10"
@@ -15,7 +15,7 @@ ogImage:
 seoURL: ""
 ---
 
-People go into technology because they love building new things, solving business problems, and making businesses operate better.  **The last thing on earth most technologists want to say is “no”.**  When your technology starts telling you "no", or stops answering email, it may be that they are feeling overwhelmed.  There are unintuitive signs that indicate a Technology might be underfunded, such as buying premium support contracts, or using expensive consultants.  Here are the telltale signs of an underfunded Technology Organization.  If you recognize these signs in your own technology organization, you should be concerned:
+People go into technology because they love building new things, solving business problems, and making businesses operate better.  **The last thing on earth most technologists want to say is “no”.**  When your technology team starts telling you no, or stops answering email, it may be that they are feeling overwhelmed.  There are unintuitive signs that indicate a Technology might be overwhelmed or underfunded, such as buying premium support contracts, or using expensive consultants.  Here are the telltale signs of an underfunded Technology Organization.  If you recognize these signs in your own technology organization, you should be concerned:
 
 * **No Seat at the Table**: The CIO often does not have a seat at the executive leadership table.  Technology is not valued/strategic, so the CIO will report into a Chief Operating Officer, or worse the Chief Financial Officer.
 * **Outdated Technology**: Due to lack of investment, it is likely running older technologies.  You know, things like mainframes, older datacenter technologies, older networking, older storage.  One company I know of in 2019 had an employee who told me “when I started, I expected to receive a laptop.  It’s been seven years and I am still waiting”.
