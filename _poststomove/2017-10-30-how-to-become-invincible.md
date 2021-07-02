@@ -1,51 +1,19 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  title = "How to Become Invincible"
-
-  description = ""
-
-  draft = false
-
-  keywords = []
-
-  categories = []
-
-  date = "2017-10-30T10:25:35-08:00"
-
-  +++
-
-
-  ![Truth](/img/truth.jpg)
-
-
+title: How to Become Invincible
+excerpt: >-
   Do you want to become invincible? I mean “rock solid”; impenetrable; bullet-proof? The answer is simple: strive to **be the truth**.
-
-coverImage: ""
-date: 2021-07-01
+coverImage: /assets/blog/img/truth.jpg
+date: "2017-10-30"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/truth.jpg
 seoURL: ""
 ---
-+++
-title = "How to Become Invincible"
-description = ""
-draft = false
-keywords = []
-categories = []
-date = "2017-10-30T10:25:35-08:00"
-+++
-
-![Truth](/img/truth.jpg)
 
 Do you want to become invincible? I mean “rock solid”; impenetrable; bullet-proof? The answer is simple: strive to **be the truth**.
-
-<!--more-->
  
 In every situation we should always be faithful to the "truth" of whatever it is we’re dealing with. This means:
  

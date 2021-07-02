@@ -1,66 +1,27 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  title = "I Feel the Need for Speed"
-
-  description = ""
-
-  keywords = [
-
-  ]
-
-  categories = [
-
-  ]
-
-  date = "2017-01-10T10:25:35-08:00"
-
-
-  +++
-
-
-  ![San Francisco MOMA](/img/speed.png)
-
-
-  Today google released a [new tool](https://testmysite.withgoogle.com) to test how mobile friendly your website is.  Since I recently rebuilt this site and been using a variety of tools to test it I was excited to see how well the site scored.  The UI is very nice but you have to opt-in to email to get your detailed report. I am definitely not a fan of that "dark pattern".
-
-
-  Usually my go-to benchmark is the the venerable [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/). PageSpeed Insights is very clear about delivering actionable steps you can take to improve overall speed and performance.  Not too long ago Google also added a mobile section to give you insight about your mobile page performance as well.
-
-
-  However I recently adopted Google's [Lighthouse](https://github.com/GoogleChrome/lighthouse) tool and found that to be exceptionally useful, particularly since it is service worker aware.  As a result this site will now run even when the network connection is severed on your mobile device. (Service workers should be a separate article)
-
-coverImage: ""
-date: 2021-07-01
+title: I Feel the Need for Speed
+excerpt: >
+  Today google released a [new tool](https://testmysite.withgoogle.com) to test
+  how mobile friendly your website is.  Since I recently rebuilt this site and
+  been using a variety of tools to test it I was excited to see how well the
+  site scored.  The UI is very nice but you have to opt-in to email to get your
+  detailed report. I am definitely not a fan of that "dark pattern".
+coverImage: /assets/blog/img/speed.png
+date: "2017-01-10"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/speed.png
 seoURL: ""
 ---
-+++
-title = "I Feel the Need for Speed"
-description = ""
-keywords = [
-]
-categories = [
-]
-date = "2017-01-10T10:25:35-08:00"
-
-+++
-
-![San Francisco MOMA](/img/speed.png)
 
 Today google released a [new tool](https://testmysite.withgoogle.com) to test how mobile friendly your website is.  Since I recently rebuilt this site and been using a variety of tools to test it I was excited to see how well the site scored.  The UI is very nice but you have to opt-in to email to get your detailed report. I am definitely not a fan of that "dark pattern".
 
 Usually my go-to benchmark is the the venerable [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/). PageSpeed Insights is very clear about delivering actionable steps you can take to improve overall speed and performance.  Not too long ago Google also added a mobile section to give you insight about your mobile page performance as well.
 
 However I recently adopted Google's [Lighthouse](https://github.com/GoogleChrome/lighthouse) tool and found that to be exceptionally useful, particularly since it is service worker aware.  As a result this site will now run even when the network connection is severed on your mobile device. (Service workers should be a separate article)
-
-<!--more-->
 
 Google has pushed hard to support the unprecedented move to mobile device browsing. In November 2014, Google started labeling sites as “mobile-friendly” to denote which pages are optimized for phones. In February 2015, Google announced plans to roll out mobile ranking changes on April 21 (an unprecedented move — the company almost never announces algorithm changes in advance).
 

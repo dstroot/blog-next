@@ -1,22 +1,25 @@
 ---
 title: My Blogging Setup
-excerpt: >
-  
-
-  Blogs need a core concept that will engage your audience.  Placing a post how to install Python on Windows, along with a picture of your favorite band and an assessment of Apple's business strategy all in the same place means you probably won't appeal to anyone in particular.  However a blog called "Ant Farm" that has *every* post focused on raising healthy and happy ants - well that will build an audience for sure.  So if you have, or want, seperate audiences you will need seperate blogs.
+excerpt: Blogs need a core concept that will engage your audience.  Placing a
+  post how to install Python on Windows, along with a picture of your favorite
+  band and an assessment of Apple's business strategy all in the same place
+  means you probably won't appeal to anyone in particular.  However a blog
+  called "Ant Farm" that has *every* post focused on raising healthy and happy
+  ants - well that will build an audience for sure.  So if you have, or want,
+  separate audiences you will need separate blogs.
 coverImage: ""
-date: 2021-07-01
+date: "2013-08-06"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
-seoURL: /2013/08/06/my-blogging-setup
+  url: /assets/blog
+seoURL: ""
 ---
 
+Blogs need a core concept that will engage your audience.  Placing a post how to install Python on Windows, along with a picture of your favorite band and an assessment of Apple's business strategy all in the same place means you probably won't appeal to anyone in particular.  However a blog called "Ant Farm" that has *every* post focused on raising healthy and happy ants - well that will build an audience for sure.  So if you have, or want, separate audiences you will need separate blogs.
 
-Blogs need a core concept that will engage your audience.  Placing a post how to install Python on Windows, along with a picture of your favorite band and an assessment of Apple's business strategy all in the same place means you probably won't appeal to anyone in particular.  However a blog called "Ant Farm" that has *every* post focused on raising healthy and happy ants - well that will build an audience for sure.  So if you have, or want, seperate audiences you will need seperate blogs.
-<!--more-->
 ## My Audiences
 1. *Personal:* personal thoughts, pictures, etc.  (Is this even necessary in the Facebook era?)
 2. *WanderingCIO:* Blog about more strategic thoughts and ideas regarding managing technology

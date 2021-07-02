@@ -1,20 +1,21 @@
 ---
 title: My Social Media Setup
-excerpt: >
-  
-  Social media is overwhelming - we are inundated with email, text messages, tweets, facebook posts and who knows what else.  How to stay on top of it and share appropriately?
+excerpt: Social media is overwhelming - we are inundated with email, text
+  messages, tweets, facebook posts and who knows what else.  How to stay on top
+  of it and share appropriately?
 coverImage: ""
-date: 2021-07-01
+date: "2013-08-06"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
-seoURL: /2013/08/06/my-social-media-setup
+  url: /assets/blog
+seoURL: ""
 ---
 
 Social media is overwhelming - we are inundated with email, text messages, tweets, facebook posts and who knows what else.  How to stay on top of it and share appropriately?
-<!--more-->
+
 Feedly -> Buffer -> Everything (Twitter, Facebook, Linkedin)
 
 ## Weapons of Choice

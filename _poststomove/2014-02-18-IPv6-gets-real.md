@@ -1,45 +1,20 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  date = "2014-02-18T10:00:00-00:00"
-
-  title = "IPv6 Gets Real"
-
-  draft = false
-
-  description = ""
-
-  +++
-
-
-  ![IPv6](/img/IPv6-google.jpg)
-
-
-  Google’s IPv6 measurements crossed the 3% milestone just under five months from when the 2% milestone was crossed.  Prior to that it had taken 11 months to go from 1% to 2%.  
-
-coverImage: ""
-date: 2021-07-01
+title: IPv6 Gets Real
+excerpt: "Google’s IPv6 measurements crossed the 3% milestone just under five
+  months from when the 2% milestone was crossed.  Prior to that it had taken 11
+  months to go from 1% to 2%.  "
+coverImage: /assets/blog/img/IPv6-google.jpg
+date: "2014-02-18"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/IPv6-google.jpg
 seoURL: ""
 ---
-+++
-date = "2014-02-18T10:00:00-00:00"
-title = "IPv6 Gets Real"
-draft = false
-description = ""
-+++
-
-![IPv6](/img/IPv6-google.jpg)
 
 Google’s IPv6 measurements crossed the 3% milestone just under five months from when the 2% milestone was crossed.  Prior to that it had taken 11 months to go from 1% to 2%.  
-
-<!--more-->
 
 Google is measuring the percentage of users that access Google services over IPv6.  Given the range of IPv6-connected services that Google offers, including YouTube, Google+, and Gmail, these measurements provide a good view into the amount of IPv6 deployed in access networks around the world.
 

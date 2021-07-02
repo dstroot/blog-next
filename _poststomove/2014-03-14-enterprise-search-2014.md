@@ -1,48 +1,26 @@
 ---
-title: ""
-excerpt: >
-  +++
-
-  date = "2014-03-14T10:00:00-00:00"
-
-  title = "Enterprise Search 2014"
-
-  draft = false
-
-  description = ""
-
-  +++
-
-
-  ![Google Enterprise Search](/img/Google_Enterprise_Search.png)
-
-
-  One of the challenges in a large distributed enterprise is "finding stuff".  Sure we call it collaboration, knowledge management, or any number of other sophisticated terms but often it boils down to just finding stuff.
-
-
-  To compensate the organization reacts by saving multiple copies and versions of a file in many different locations: email, shared file systems, intranets, etc.  Of course this compounds the issue and drives the desire to save "my copy" to "somewhere where I can find it".
-coverImage: ""
-date: 2021-07-01
+title: Enterprise Search 2014
+excerpt: 'One of the challenges in a large distributed enterprise is "finding
+  stuff".  Sure we call it collaboration, knowledge management, or any number of
+  other sophisticated terms but often it boils down to just finding stuff. To
+  compensate the organization reacts by saving multiple copies and versions of a
+  file in many different locations: email, shared file systems, intranets,
+  etc.  Of course this compounds the issue and drives the desire to save "my
+  copy" to "somewhere where I can find it".'
+coverImage: /assets/blog/img/Google_Enterprise_Search.png
+date: "2014-03-14"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/Google_Enterprise_Search.png
 seoURL: ""
 ---
-+++
-date = "2014-03-14T10:00:00-00:00"
-title = "Enterprise Search 2014"
-draft = false
-description = ""
-+++
-
-![Google Enterprise Search](/img/Google_Enterprise_Search.png)
 
 One of the challenges in a large distributed enterprise is "finding stuff".  Sure we call it collaboration, knowledge management, or any number of other sophisticated terms but often it boils down to just finding stuff.
 
 To compensate the organization reacts by saving multiple copies and versions of a file in many different locations: email, shared file systems, intranets, etc.  Of course this compounds the issue and drives the desire to save "my copy" to "somewhere where I can find it".
-<!--more-->
 
 A CIO's role is to figure out how to make this problem go away.  So we start with good solid information management concepts:
 

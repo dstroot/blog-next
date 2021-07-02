@@ -1,50 +1,27 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  date = "2014-01-13T10:00:00-00:00"
-
-  title = "NY FinTech Community is Thriving"
-
-  draft = false
-
-  description = ""
-
-  +++
-
-
-  ![FX Trading UI](/img/new-ui.jpg)
-
-
-  I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node and came across a blog post from [Francesca Krihely](http://francescak.me/blog/2013/04/09/fintech-hackathon-recap/) about the FinTech hackathon in NY from back in April, 2013.  
-
-
-  This interested me because as a former "insider" in a large financial services company I can see clearly how open source code and tooling is replacing more proprietry code and tooling (for example .net/visual studio) but it requires an entirely different skill set for internal developers.
-
-coverImage: ""
-date: 2021-07-01
+title: NY FinTech Community is Thriving
+excerpt: 'I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node
+  and came across a blog post from [Francesca
+  Krihely](http://francescak.me/blog/2013/04/09/fintech-hackathon-recap/) about
+  the FinTech hackathon in NY from back in April, 2013. This interested me
+  because as a former "insider" in a large financial services company I can see
+  clearly how open source code and tooling is replacing more proprietry code and
+  tooling (for example .net/visual studio) but it requires an entirely different
+  skill set for internal developers.'
+coverImage: /assets/blog/img/new-ui.jpg
+date: "2014-01-13"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/new-ui.jpg
 seoURL: ""
 ---
-+++
-date = "2014-01-13T10:00:00-00:00"
-title = "NY FinTech Community is Thriving"
-draft = false
-description = ""
-+++
-
-![FX Trading UI](/img/new-ui.jpg)
 
 I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node and came across a blog post from [Francesca Krihely](http://francescak.me/blog/2013/04/09/fintech-hackathon-recap/) about the FinTech hackathon in NY from back in April, 2013.  
 
 This interested me because as a former "insider" in a large financial services company I can see clearly how open source code and tooling is replacing more proprietry code and tooling (for example .net/visual studio) but it requires an entirely different skill set for internal developers.
-
-<!--more-->
 
 For the corporate economics to work the cost of the "new" platform has to be not just lower (or more productive) than the old, but low enough to also fund the transition (i.e. reskilling or hiring of the types of developers that would be needed) as well as overcome corporate inertia. The hard part is predicting "when".
 

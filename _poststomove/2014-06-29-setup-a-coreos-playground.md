@@ -1,23 +1,16 @@
 ---
-title: ""
+title: Setup a CoreOS Playground
 excerpt: ""
-coverImage: ""
-date: 2021-07-01
+coverImage: /assets/blog/img/coreos-logo.png
+date: "2014-06-29"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/coreos-logo.png
 seoURL: ""
 ---
-+++
-date = "2014-06-29T10:00:00-00:00"
-title = "Setup a CoreOS Playground"
-draft = true
-description = ""
-+++
-
-![CoreOS](/img/coreos-logo.png)
 
 ### If you want to test your very own CoreOS "fleet"
 

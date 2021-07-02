@@ -1,66 +1,23 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  title = "Facebook suspends Cambridge Analytica"
-
-  description = ""
-
-  draft = false
-
-  keywords = [
-
-  ]
-
-  categories = [
-
-  ]
-
-  date = "2018-03-17T10:25:35-08:00"
-
-
-  +++
-
-
-  ![Alexander Nix](/img/cambridge_analytica.jpg)
-
-
-  A year ago I wrote about how big data, collected from social media sites, and machine learning was used to influence voting in the United States in [The man least likely to succeed in politics](https://danstroot.com/2017/03/19/the-man-least-likely-to-succeed-in-politics/). Collecting big data, and more specifically social data about each of us, has been described as the "new goldrush".  Yet many of us are unaware of how technology is enabling the use (and misuse) of our personal data. As a technologist I find this area fascinating and evolving rapidly.
-
-
-  In the article I discussed how the Trump campaign used a firm named Cambridge Analytica to identify potential voters and to influence them. It was shown that by harvesting and studying a person's Facebook profile and "likes" researchers can know them better than their spouse. 
-
-
-  Now, Facebook announced that it has suspended Cambridge Analytica over concerns that it and other parties improperly obtained and stored users' personal information. Facebook admits it knew about this issue in 2015, prior to the election.  
-
-
-  > In 2015, we learned that a psychology professor at the University of Cambridge named Dr. Aleksandr Kogan lied to us and violated our Platform Policies by passing data from an app that was using Facebook Login to SCL/Cambridge Analytica, a firm that does political, government and military work around the globe. 
-
-  <div class="bqfoot"><cite>&mdash; Facebook, "Suspending Cambridge Analytica and SCL Group from Facebook", March 16, 2018</div></cite>
-
-coverImage: ""
-date: 2021-07-01
+title: Facebook suspends Cambridge Analytica
+excerpt: A year ago I wrote about how big data, collected from social media
+  sites, and machine learning was used to influence voting in the United States
+  in [The man least likely to succeed in
+  politics](https://danstroot.com/2017/03/19/the-man-least-likely-to-succeed-in-politics/).
+  Collecting big data, and more specifically social data about each of us, has
+  been described as the "new goldrush".  Yet many of us are unaware of how
+  technology is enabling the use (and misuse) of our personal data. As a
+  technologist I find this area fascinating and evolving rapidly.
+coverImage: /assets/blog/img/cambridge_analytica.jpg
+date: "2018-03-17"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/cambridge_analytica.jpg
 seoURL: ""
 ---
-+++
-title = "Facebook suspends Cambridge Analytica"
-description = ""
-draft = false
-keywords = [
-]
-categories = [
-]
-date = "2018-03-17T10:25:35-08:00"
-
-+++
-
-![Alexander Nix](/img/cambridge_analytica.jpg)
 
 A year ago I wrote about how big data, collected from social media sites, and machine learning was used to influence voting in the United States in [The man least likely to succeed in politics](https://danstroot.com/2017/03/19/the-man-least-likely-to-succeed-in-politics/). Collecting big data, and more specifically social data about each of us, has been described as the "new goldrush".  Yet many of us are unaware of how technology is enabling the use (and misuse) of our personal data. As a technologist I find this area fascinating and evolving rapidly.
 
@@ -70,8 +27,6 @@ Now, Facebook announced that it has suspended Cambridge Analytica over concerns 
 
 > In 2015, we learned that a psychology professor at the University of Cambridge named Dr. Aleksandr Kogan lied to us and violated our Platform Policies by passing data from an app that was using Facebook Login to SCL/Cambridge Analytica, a firm that does political, government and military work around the globe. 
 <div class="bqfoot"><cite>&mdash; Facebook, "Suspending Cambridge Analytica and SCL Group from Facebook", March 16, 2018</div></cite>
-
-<!--more-->
 
 Cambridge Analytica has gained attention for its work with the Trump presidential campaign as well as a campaign supporting Britain's exit from the European Union. Cambridge Analytica has been scrutinized for ties with Julian Assange/WikiLeaks and the Mercer family. Rebekah Mercer and her father, hedge-fund billionaire Robert Mercer, are part owners of Cambridge Analytica. The Mercer family is among the top Trump donors, and helps fund the conservative website Breitbart.
 
@@ -131,15 +86,14 @@ It's clear the US needs a similar regulatory structure as our current one is lac
 
 #### References
 
-<span class="sources">
-[Politico: Facebook suspends Trump-affiliated data firm over privacy concerns](https://www.politico.com/story/2018/03/16/facebook-cambridge-analytica-suspended-trump-campaign-468692?cid=apn)<br>
-[Facebook: Suspending Cambridge Analytica and SCL Group from Facebook](https://newsroom.fb.com/news/2018/03/suspending-cambridge-analytica/)<br>
-[WSJ: Mueller Sought Emails of Trump Campaign Data Firm](https://www.wsj.com/articles/mueller-sought-emails-of-trump-campaign-data-firm-1513296899)<br>
-[50 million Facebook profiles harvested for Cambridge Analytica in major data breach](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election)<br>
-[How Trump Consultants Exploited the Facebook Data of Millions](https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html)<br>
-[Facebook Executive Planning to Leave Company Amid Disinformation Backlash](https://www.nytimes.com/2018/03/19/technology/facebook-alex-stamos.html?hp&action=click&pgtype=Homepage&clickSource=story-heading&module=first-column-region&region=top-news&WT.nav=top-news)<br>
-[The Cambridge Analytica scandal isn’t a scandal: this is how Facebook works](https://www.independent.co.uk/voices/camridge-analytica-scandal-how-facebook-works-harvesting-data-politics-trump-brexit-a8264051.html)<br>
-[Cambridge Analytica filmed suggesting bribes and sex workers to entrap politicians](https://www.channel4.com/news/cambridge-analytica-revealed-trumps-election-consultants-filmed-saying-they-use-bribes-and-sex-workers-to-entrap-politicians-investigation)<br>
-[The EU General Data Protection Regulation (GDPR)](https://www.eugdpr.org/eugdpr.org.html)<br>
-[Making sense of the Facebook and Cambridge Analytica nightmare](https://www.engadget.com/amp/2018/03/19/facebook-and-cambridge-analytica-nightmare/)<br>
-</span>
+* [Politico: Facebook suspends Trump-affiliated data firm over privacy concerns](https://www.politico.com/story/2018/03/16/facebook-cambridge-analytica-suspended-trump-campaign-468692?cid=apn)
+* [Facebook: Suspending Cambridge Analytica and SCL Group from Facebook](https://newsroom.fb.com/news/2018/03/suspending-cambridge-analytica/)
+* [WSJ: Mueller Sought Emails of Trump Campaign Data Firm](https://www.wsj.com/articles/mueller-sought-emails-of-trump-campaign-data-firm-1513296899)
+* [50 million Facebook profiles harvested for Cambridge Analytica in major data breach](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election)
+* [How Trump Consultants Exploited the Facebook Data of Millions](https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html)
+* [Facebook Executive Planning to Leave Company Amid Disinformation Backlash](https://www.nytimes.com/2018/03/19/technology/facebook-alex-stamos.html?hp&action=click&pgtype=Homepage&clickSource=story-heading&module=first-column-region&region=top-news&WT.nav=top-news)
+* [The Cambridge Analytica scandal isn’t a scandal: this is how Facebook works](https://www.independent.co.uk/voices/camridge-analytica-scandal-how-facebook-works-harvesting-data-politics-trump-brexit-a8264051.html)
+* [Cambridge Analytica filmed suggesting bribes and sex workers to entrap politicians](https://www.channel4.com/news/cambridge-analytica-revealed-trumps-election-consultants-filmed-saying-they-use-bribes-and-sex-workers-to-entrap-politicians-investigation)
+* [The EU General Data Protection Regulation (GDPR)](https://www.eugdpr.org/eugdpr.org.html)
+* [Making sense of the Facebook and Cambridge Analytica nightmare](https://www.engadget.com/amp/2018/03/19/facebook-and-cambridge-analytica-nightmare/)
+

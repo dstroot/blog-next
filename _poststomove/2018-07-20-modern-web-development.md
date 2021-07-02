@@ -1,71 +1,19 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  title = "Modern Web Development"
-
-  description = ""
-
-  draft = false
-
-  keywords = [
-
-  ]
-
-  categories = [
-
-  ]
-
-  date = "2018-07-20T10:25:35-08:00"
-
-
-  +++
-
-
-  ![Rekit](/img/rekit.png)
-
-
-  Web development has evolved faster than nearly every other software engineering discipline. The pace of innovation has been relentless, and front-end developers are confronted with new frameworks, tools, and standards for “modern” web development **constantly**. Framework fatigue is real thing. Even the languages of the web (HTML, CSS, and ECMAScript) have gone through a major modernization effort (and the pace of change increased):
-
-
-  <small>
-
-
-  - HTML > HTML5 > HTML 5.2
-
-  - CSS 3 > CSS 4 + SCSS, PostCSS, autoprefixer, etc.
-
-  - ECMAScript 5 (2009) > ECMAScript 2015, ECMAScript 2016, ECMAScript 2017, ECMAScript 2018
-
-
-  </small>
-
-
-  The positive aspects of all the "churn" in the web development ecosystem are some truly incredible innovations that have fundamentally changed web development to enable much richer, engaging, and performant web "applications".
-
-coverImage: ""
-date: 2021-07-01
+title: Modern Web Development
+excerpt: Web development has evolved faster than nearly every other software
+  engineering discipline. The pace of innovation has been relentless, and
+  front-end developers are confronted with new frameworks, tools, and standards
+  for “modern” web development **constantly**. Framework fatigue is real thing.
+coverImage: /assets/blog/img/rekit.png
+date: "2018-07-20"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/rekit.png
 seoURL: ""
 ---
-+++
-title = "Modern Web Development"
-description = ""
-draft = false
-keywords = [
-]
-categories = [
-]
-date = "2018-07-20T10:25:35-08:00"
-
-+++
-
-![Rekit](/img/rekit.png)
 
 Web development has evolved faster than nearly every other software engineering discipline. The pace of innovation has been relentless, and front-end developers are confronted with new frameworks, tools, and standards for “modern” web development **constantly**. Framework fatigue is real thing. Even the languages of the web (HTML, CSS, and ECMAScript) have gone through a major modernization effort (and the pace of change increased):
 
@@ -78,8 +26,6 @@ Web development has evolved faster than nearly every other software engineering 
 </small>
 
 The positive aspects of all the "churn" in the web development ecosystem are some truly incredible innovations that have fundamentally changed web development to enable much richer, engaging, and performant web "applications".
-
-<!--more-->
 
 One of the best things to come along lately are **progressive web applications**. Progressive web apps are "installable" and provide user experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser, no install required. They are [responsive](https://danstroot.com/2013/12/31/responsive-design-vs.-mobile-first/) to screen size, pixel density and orientation. They can load quickly (even _without_ an Internet connection), can have an icon on the home screen, and can run as an app with a top-level, full screen experience.
 
@@ -182,8 +128,6 @@ A+ Security Headers Score:
 
 #### References
 
-<span class="sources">
-[Google: Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)<br>
-[Google: HTTPS as a ranking signal](https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html)<br>
-[Firebase: Pricing](https://firebase.google.com/pricing/)<br>
-</span>
+* [Google: Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
+* [Google: HTTPS as a ranking signal](https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html)
+* [Firebase: Pricing](https://firebase.google.com/pricing/)

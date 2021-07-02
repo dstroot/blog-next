@@ -1,75 +1,20 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  title = "The Inside-Out Corporation"
-
-  description = ""
-
-  keywords = [
-
-  ]
-
-  categories = [
-
-  ]
-
-  date = "2017-04-10T10:25:35-08:00"
-
-  published = "true"
-
-
-  +++
-
-
-  ![the Internet](/img/internet.jpg)
-
-
-  Using my personal laptop from any coffee shop, I can:
-
-
-  * Access my bank account(s)
-
-  * Access my retirement and brokerage accounts
-
-  * Use my credit card to buy things
-
-  * Review my medical test results
-
-  * Send love notes to my wife
-
-
-  These are the most sensitive and private things I can imagine, and I can do these things **securely from any untrusted network anywhere in the world**. 
-
-
-  ### So why do corporate networks still exist?
-
-
-  Most companies still have a separate corporate network, protected by firewalls, intrusion prevention/detection, dedicated administrators, VPNs, etc. Why is it that I can access information which is the most important, private, and precious to me, from any computer, via any network, **without all that extra cost, complexity, overhead, and effort?**
-
-coverImage: ""
-date: 2021-07-01
+title: The Inside-Out Corporation
+excerpt: Most companies still have a separate corporate network, protected by
+  firewalls, intrusion prevention/detection, dedicated administrators, VPNs,
+  etc. Why is it that I can access information which is the most important,
+  private, and precious to me, from any computer, via any network, without all
+  that extra cost, complexity, overhead, and effort?
+coverImage: /assets/blog/img/internet.jpg
+date: "2017-04-10"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/internet.jpg
 seoURL: ""
 ---
-+++
-title = "The Inside-Out Corporation"
-description = ""
-keywords = [
-]
-categories = [
-]
-date = "2017-04-10T10:25:35-08:00"
-published = "true"
-
-+++
-
-![the Internet](/img/internet.jpg)
 
 Using my personal laptop from any coffee shop, I can:
 
@@ -84,8 +29,6 @@ These are the most sensitive and private things I can imagine, and I can do thes
 ### So why do corporate networks still exist?
 
 Most companies still have a separate corporate network, protected by firewalls, intrusion prevention/detection, dedicated administrators, VPNs, etc. Why is it that I can access information which is the most important, private, and precious to me, from any computer, via any network, **without all that extra cost, complexity, overhead, and effort?**
-
-<!--more-->
 
 Even before the Internet, there were corporate networks.  These networks were designed the way medieval castles were designed; as fortresses. They were designed to keep the unwanted out, using a heavily fortified gate (e.g. a firewall - a single point of ingress and egress).  Anyone outside is considered dangerous, and anyone inside is trusted.  However, anyone who makes it past the drawbridge has the run of the place. 
 

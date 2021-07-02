@@ -1,22 +1,24 @@
 ---
 title: Responsive Design vs. Mobile-First
-excerpt: >+
-  
-  I have heard some people speak of "mobile-first" and "responsive design" interchangeably making them sound as if they were one and the same.  However I think there are some subtle differences.  I believe responsive design is the broadest possible definition. It says to me that we are going to target all platforms, screen sizes, pixel densities, etc.  It means that the user experience will be custom tailored to the exact device you just happen to be viewing it with. This should be our ultimate goal, right?
-
+excerpt: I have heard some people speak of "mobile-first" and "responsive
+  design" interchangeably making them sound as if they were one and the
+  same.  However I think there are some subtle differences.  I believe
+  responsive design is the broadest possible definition. It says to me that we
+  are going to target all platforms, screen sizes, pixel densities, etc.  It
+  means that the user experience will be custom tailored to the exact device you
+  just happen to be viewing it with. This should be our ultimate goal, right?
 coverImage: ""
-date: 2021-07-01
+date: "2021-07-01"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog
 seoURL: ""
 ---
 
 I have heard some people speak of "mobile-first" and "responsive design" interchangeably making them sound as if they were one and the same.  However I think there are some subtle differences.  I believe responsive design is the broadest possible definition. It says to me that we are going to target all platforms, screen sizes, pixel densities, etc.  It means that the user experience will be custom tailored to the exact device you just happen to be viewing it with. This should be our ultimate goal, right?
-
-<!--more-->
 
 "Mobile-first" is a narrower definition and implies that the majority of the design effort is going to be geared towards the mobile experience.  But there are a lot of other things it doesn't clarify such as:
 

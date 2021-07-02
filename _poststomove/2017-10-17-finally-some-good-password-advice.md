@@ -1,67 +1,24 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  title = "Finally: Some Sane Password Advice"
-
-  description = ""
-
-  draft = false
-
-  keywords = [
-
-  ]
-
-  categories = [
-
-  ]
-
-  date = "2017-10-16T10:25:35-08:00"
-
-  +++
-
-
-  ![Passwords](/img/password.jpg)
-
-
-  In every organization I have worked with managing user authentication and passwords was a huge challenge.  The key issue was that the "old" password best practices were **failed attempts to fix the user, not the system**. 
-
-
-  In order for passwords to be difficult to crack they should be both long and complex. Since people have a very hard time remembering long passwords we have accommodated shorter passwords - by adding rules to ensure a minimum level of complexity. Unfortunately this makes the resulting password challenging for a person to remember. 
-
-
-  Length is actually more relevant to cracking difficulty than complexity. For short passwords we can literally try every possibility, thus complexity does not even matter. It is **much better to have longer passwords** (with less enforced complexity), i.e. a "pass phrase".  E.g. "ilovewatchingthesopranos" is much more secure than "Xc$1>".
-
-coverImage: ""
-date: 2021-07-01
+title: "Finally: Some Sane Password Advice"
+excerpt: 'In every organization I have worked with managing user authentication
+  and passwords was a huge challenge.  The key issue was that the "old" password
+  best practices were **failed attempts to fix the user, not the system**. '
+coverImage: /assets/blog/img/password.jpg
+date: "2017-10-16"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/password.jpg
 seoURL: ""
 ---
-+++
-title = "Finally: Some Sane Password Advice"
-description = ""
-draft = false
-keywords = [
-]
-categories = [
-]
-date = "2017-10-16T10:25:35-08:00"
-+++
-
-![Passwords](/img/password.jpg)
 
 In every organization I have worked with managing user authentication and passwords was a huge challenge.  The key issue was that the "old" password best practices were **failed attempts to fix the user, not the system**. 
 
 In order for passwords to be difficult to crack they should be both long and complex. Since people have a very hard time remembering long passwords we have accommodated shorter passwords - by adding rules to ensure a minimum level of complexity. Unfortunately this makes the resulting password challenging for a person to remember. 
 
 Length is actually more relevant to cracking difficulty than complexity. For short passwords we can literally try every possibility, thus complexity does not even matter. It is **much better to have longer passwords** (with less enforced complexity), i.e. a "pass phrase".  E.g. "ilovewatchingthesopranos" is much more secure than "Xc$1>".
-
-<!--more-->
 
 We also required users to change their passwords periodically. Why? Just in case their password was compromised because we lacked the sophistication to **know** if their password was compromised!  
 
