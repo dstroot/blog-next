@@ -1,8 +1,9 @@
 ---
 title: Can you spot an underfunded Technology department?
-excerpt: Here are the telltale signs of an underfunded Technology
-  Organization.  If you recognize these many of these signs, you should be
-  concerned!
+excerpt: People go into technology because they love building new things, solving business problems, and making businesses operate better. The last 
+  thing on earth most technologists want to say is “no”.  When your technology starts telling you "no" it may be that they are feeling overwhelmed.  
+  There are many unintuitive signs that indicate a Technology might be underfunded, such as buying premium support contracts, or using expensive 
+  consultants. Read on to learn the telltale signs of an underfunded Technology Organization.
 coverImage: /assets/blog/img/old-computer.jpeg
 date: "2021-06-10"
 published: "true"
@@ -14,7 +15,7 @@ ogImage:
 seoURL: ""
 ---
 
-Here are the telltale signs of an underfunded Technology Organization.  If you recognize these signs in your own technology organization, you should be concerned:
+People go into technology because they love building new things, solving business problems, and making businesses operate better.  **The last thing on earth most technologists want to say is “no”.**  When your technology starts telling you "no", or stops answering email, it may be that they are feeling overwhelmed.  There are unintuitive signs that indicate a Technology might be underfunded, such as buying premium support contracts, or using expensive consultants.  Here are the telltale signs of an underfunded Technology Organization.  If you recognize these signs in your own technology organization, you should be concerned:
 
 * **No Seat at the Table**: The CIO often does not have a seat at the executive leadership table.  Technology is not valued/strategic, so the CIO will report into a Chief Operating Officer, or worse the Chief Financial Officer.
 * **Outdated Technology**: Due to lack of investment, it is likely running older technologies.  You know, things like mainframes, older datacenter technologies, older networking, older storage.  One company I know of in 2019 had an employee who told me “when I started, I expected to receive a laptop.  It’s been seven years and I am still waiting”.
@@ -34,4 +35,4 @@ Here are the telltale signs of an underfunded Technology Organization.  If you r
 * **The Department of "No"**: The technology department becomes known as the department of “no”.  Because technology employees become world class experts at saying no to requests for more capabilities or better technology. Not because they want to, because they have to be able to grow this skill to survive.  
 * **Increasing Shadow Technology**: Shadow technology is known as technology that is being practiced outside of the technology organization.  It can be beneficial, but it can also be suboptimal.  In any case, in an organization with an underfunded technology organization it’s almost certain that “shadow technology” is increasing.  Areas will attempt to solve their technology problems with or without the technology organization’s help.  
 
-People go into technology because they like building new things, they like solving business problems, and they love making businesses operate better.  **The last thing on earth most technologists want to say is “no”.**  Fund them so they can say **"yes"!**
+**The last thing on earth most technologists want to say is “no”.**  Give them the resources so they can say **"yes"!**
