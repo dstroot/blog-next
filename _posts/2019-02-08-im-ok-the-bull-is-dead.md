@@ -1,13 +1,17 @@
 ---
-title: "I'm OK; the Bull is Dead."
-excerpt: 'Years ago I read a great article on clear communication. Unfortunately it is hard to find these days. I am reproducing it here for posterity and full attribution.'
-coverImage: '/assets/blog/img/bull.jpg'
-date: '2019-02-08T10:25:35-08:00'
+title: I'm OK; the Bull is Dead.
+excerpt: Years ago I read a great article on clear communication. Unfortunately
+  it is hard to find these days. I am reproducing it here for posterity and full
+  attribution.
+coverImage: /assets/blog/img/bull.jpg
+date: "2019-02-08"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/bull.jpg'
+  url: /assets/blog/img/bull.jpg
+seoURL: ""
 ---
 
 Years ago I read a great article on clear communication. Unfortunately it is hard to find these days. I am reproducing it here for posterity and full attribution.

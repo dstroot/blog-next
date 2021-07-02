@@ -1,13 +1,17 @@
 ---
-title: 'Can you spot an underfunded Technology department?'
-excerpt: 'Here are the telltale signs of an underfunded Technology Organization.  If you recognize these many of these signs, you should be concerned!'
-coverImage: '/assets/blog/img/old-computer.jpeg'
-date: '2021-06-10T10:25:35-08:00'
+title: Can you spot an underfunded Technology department?
+excerpt: Here are the telltale signs of an underfunded Technology
+  Organization.  If you recognize these many of these signs, you should be
+  concerned!
+coverImage: /assets/blog/img/old-computer.jpeg
+date: "2021-06-10"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/old-computer.jpeg'
+  url: /assets/blog/img/old-computer.jpeg
+seoURL: ""
 ---
 
 Here are the telltale signs of an underfunded Technology Organization.  If you recognize these signs in your own technology organization, you should be concerned:

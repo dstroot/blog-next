@@ -1,13 +1,17 @@
 ---
-title: 'Facebook Saves a BILLION Dollars via Open Compute Designs'
-excerpt: 'Today at the Open Compute Summit, CEO Mark Zuckerberg said that "In the last three years alone, Facebook has saved more than a billion dollars in building out our infrastructure using Open Compute designs."'
-coverImage: '/assets/blog/img/fb-server.jpg'
-date: '2014-01-28T10:00:00-00:00'
+title: Facebook Saves a BILLION Dollars via Open Compute Designs
+excerpt: Today at the Open Compute Summit, CEO Mark Zuckerberg said that "In the
+  last three years alone, Facebook has saved more than a billion dollars in
+  building out our infrastructure using Open Compute designs.s
+coverImage: /assets/blog/img/fb-server.jpg
+date: "2014-01-28"
+published: "true"
 author:
-  name: "Dan Stroot"
-  picture: '/assets/blog/authors/dan.jpeg'
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/y /fb-server.jpg'
+  url: /assets/blog/y /fb-server.jpg
+seoURL: ""
 ---
 
 Last week, IBM announced that it was selling its low-end server business to Chinese hardware manufacturer Lenovo. The deal has been widely viewed as the logical result of the commoditization of x86-based servers, in much the same way PCs were commoditized a decade ago.

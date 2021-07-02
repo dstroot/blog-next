@@ -1,13 +1,19 @@
 ---
-title: 'Is it Secure?'
-excerpt: 'Most information security practitioners do a poor job explaining the relative nature of security.  Secure relative to what? A bot that looks for un-patched systems? A determined hacker? A nation-state?  Security is a "scale of difficulty" – like mountain climbing. Everest was thought to be unclimbable until Sir Edmund Hillary did it.'
-coverImage: '/assets/blog/img/SmartCarLock.png'
-date: '2015-09-26T10:00:00-00:00'
+title: Is it Secure?
+excerpt: Most information security practitioners do a poor job explaining the
+  relative nature of security.  Secure relative to what? A bot that looks for
+  un-patched systems? A determined hacker? A nation-state?  Security is a "scale
+  of difficulty" – like mountain climbing. Everest was thought to be unclimbable
+  until Sir Edmund Hillary did it.
+coverImage: /assets/blog/img/SmartCarLock.png
+date: "2015-09-26"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/SmartCarLock.png'
+  url: /assets/blog/img/SmartCarLock.png
+seoURL: ""
 ---
 
 _**Q**_: Is it secure? <br>

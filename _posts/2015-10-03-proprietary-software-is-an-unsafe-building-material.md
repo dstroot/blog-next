@@ -1,16 +1,19 @@
 ---
-title: "Proprietary Software is an Unsafe Building Material"
-excerpt: >
-  
-  At one point in time I worked for an organization that banned the use of open source software.  They were concerned that in the event of issues "there would be no support".  At the time they believed that commercial software from companies like IBM, Oracle, Microsoft and SAP was "safer" because there was a commercial entity that stood behind the products they sold and provided support. Now that's changing...
-
-coverImage: "/assets/blog/img/volkswagen.jpg"
+title: Proprietary Software is an Unsafe Building Material
+excerpt: At one point in time I worked for an organization that banned the use
+  of open source software.  They were concerned that in the event of issues
+  "there would be no support".  At the time they believed that commercial
+  software from companies like IBM, Oracle, Microsoft and SAP was "safer"
+  because there was a commercial entity that stood behind the products they sold
+  and provided support. Now that's changing...
+coverImage: /assets/blog/img/volkswagen.jpg
 date: "2015-10-03"
+published: "true"
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: "/assets/blog/img/volkswagen.jpg"
+  url: /assets/blog/img/volkswagen.jpg
 seoURL: ""
 ---
 

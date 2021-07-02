@@ -9,8 +9,8 @@ export const Layout = ({ alert, children }) => {
       <div className="min-h-screen">
         <Alert alert={alert} />
         <main>{children}</main>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

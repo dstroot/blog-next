@@ -1,18 +1,21 @@
 ---
-title: 'iPad Goes Corporate'
-excerpt: "Like many people in the Technology world I watched Apple's iPad announcement this week with intense interest.  Unlike most people I am interested not in the consumer space  - but rather how could this device be used for business.  How could a new category like this be used?"
-coverImage: '/assets/blog/img/iPad2010.jpg'
-date: '2010-01-29T10:25:35-08:00'
+title: iPad Goes Corporate
+excerpt: Like many people in the Technology world I watched Apple's iPad
+  announcement this week with intense interest.  Unlike most people I am
+  interested not in the consumer space  - but rather how could this device be
+  used for business.  How could a new category like this be used?
+coverImage: /assets/blog/img/iPad2010.jpg
+date: "2010-01-29"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/iPad2010.jpg'
+  url: /assets/blog/img/iPad2010.jpg
+seoURL: ""
 ---
 
 Like many people in the Technology world I watched Apple's iPad announcement this week with intense interest.  Unlike most people I am interested not in the consumer space  - but rather how could this device be used for business.  How could a new category like this be used?
-
-<!--more-->
 
 ### Opportunities for the iPad in financial services:
 

@@ -1,72 +1,30 @@
 ---
-title: ""
-excerpt: >+
-  +++
-
-  title = "How to Kill 11 Million People?"
-
-  description = ""
-
-  draft = false
-
-  keywords = [
-
-  ]
-
-  categories = [
-
-  ]
-
-  date = "2017-08-10T10:25:35-08:00"
-
-  +++
-
-
-  ![Holocaust](/img/holocaust.jpg)
-
-
-  _This blog was meant for technology topics, not politics. However, I watched what happened in Charlottesville, VA on 8/12/2017.  I actually saw people saluting and carrying Nazi flags. I was shocked that our president didn't immediately denounce racial hatred and bigotry. We cannot condone or allow racism, and we cannot allow our leaders to support it - especially if those leaders also **lie to us**. Citizens must demand truth, honesty and integrity from our leaders, or suffer the consequences of our own ignorance and apathy._
-
-
-  <hr>
-
-
-  One particular aspect of the Holocaust remains puzzling. How do you actually go about killing eleven million people? Why for month after month and year after year, did millions of intelligent human beings—guarded by a relatively few Nazi soldiers—willingly load their families into tens of thousands of cattle cars to be transported by rail to one of the many death camps scattered across Europe? 
-
-
-  The answer is simple – **you lie to them**.
-
-coverImage: ""
-date: 2021-07-01
+title: How to Kill 11 Million People?
+excerpt: This blog is meant for technology topics, not politics. However, I
+  watched what happened in Charlottesville, VA on 8/12/2017.  I actually saw
+  people saluting and carrying Nazi flags. I was shocked that our president
+  didn't immediately denounce racial hatred and bigotry. We cannot condone or
+  allow racism, and we cannot allow our leaders to support it. Citizens must
+  demand truth, honesty and integrity from our leaders, or suffer the
+  consequences of our own ignorance and apathy.
+coverImage: /assets/blog/img/holocaust.jpg
+date: "2017-08-13"
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: ""
+  url: /assets/blog/img/holocaust.jpg
 seoURL: ""
 ---
-+++
-title = "How to Kill 11 Million People?"
-description = ""
-draft = false
-keywords = [
-]
-categories = [
-]
-date = "2017-08-10T10:25:35-08:00"
-+++
 
-![Holocaust](/img/holocaust.jpg)
-
-_This blog was meant for technology topics, not politics. However, I watched what happened in Charlottesville, VA on 8/12/2017.  I actually saw people saluting and carrying Nazi flags. I was shocked that our president didn't immediately denounce racial hatred and bigotry. We cannot condone or allow racism, and we cannot allow our leaders to support it - especially if those leaders also **lie to us**. Citizens must demand truth, honesty and integrity from our leaders, or suffer the consequences of our own ignorance and apathy._
+_This blog was meant for technology topics, not politics. However, I watched what happened in Charlottesville, VA on 8/12/2017.  I actually saw people saluting and carrying Nazi flags. I was shocked that our president didn't immediately denounce racial hatred and bigotry. We cannot condone or allow racism, and we cannot allow our leaders to support it. Citizens must demand truth, honesty and integrity from our leaders, or suffer the consequences of our own ignorance and apathy._
 
 <hr>
 
 One particular aspect of the Holocaust remains puzzling. How do you actually go about killing eleven million people? Why for month after month and year after year, did millions of intelligent human beings—guarded by a relatively few Nazi soldiers—willingly load their families into tens of thousands of cattle cars to be transported by rail to one of the many death camps scattered across Europe? 
 
-The answer is simple – **you lie to them**.
-
-<!--more-->
+### The answer is simple – **you lie to them**.
 
 An intricate web of lies was designed to be delivered in stages to ensure the cooperation of the condemned (but unknowing) Jews. 
 
@@ -84,7 +42,7 @@ An intricate web of lies was designed to be delivered in stages to ensure the co
 
 The Jewish husbands and fathers were accepting of the explanation and comforted by the fact that there weren’t more armed soldiers. They helped their families into the railcars. The containers, designed to transport eight cows, were each packed with a minimum of one hundred human beings and quickly padlocked. 
 
-At that moment they were lost.
+### At that moment they were lost.
 
 It has been standard operating procedure for many politicians to say whatever is needed in order to get elected. The danger to any government is not a single bad politician, or even a group of them. **The most dangerous thing any nation faces is a citizenry capable of trusting liars to lead them.**
 
@@ -92,7 +50,7 @@ It has been standard operating procedure for many politicians to say whatever is
 >
 ><cite>&mdash; John, 8:32</cite>
 
-Can the absence of truth place you in bondage?  Psychologists and sociologists say dictators have two main tools; fear and control of information. Manufacturing an external threat, like Jews to Hitler's Germany, help keep the society off balance and collectively paranoid. However, **controlling information** is the key to maintaining a totalitarian state.
+If the truth can set you free can the absence of truth place you in bondage?  Psychologists and sociologists say dictators have two main tools; fear and control of information. Manufacturing an external threat, like Jews to Hitler's Germany, help keep the society off balance and collectively paranoid. However, **controlling information** is the key to maintaining a totalitarian state.
 
 >The price good men pay for indifference to public affairs is to be ruled by inferior men.
 >
@@ -109,6 +67,4 @@ Citizens must demand truth, honesty and integrity from each other and our leade
 
 #### References
 
-<span class="sources">
-[How Do You Kill 11 Million People?: Why the Truth Matters More Than You Think.]( https://www.amazon.com/dp/B005ENBA3E/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)<br>
-</span>
+[How Do You Kill 11 Million People?: Why the Truth Matters More Than You Think.]( https://www.amazon.com/dp/B005ENBA3E/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)

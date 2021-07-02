@@ -1,11 +1,12 @@
 ---
 title: 20.5 Million hits a day using an Amazon Micro server ($15 a month) and Node.js
-excerpt: >+
-  
-  I have been building a website recently just to get current with the latest web technologies and scaling.  I  saw this post on Hacker News "10 Million hits a day with WordPress using a $15 server" and was intrigued.  It was time to benchmark one of my own applications!
-
+excerpt: I have been building a website recently just to get current with the
+  latest web technologies and scaling.  I  saw this post on Hacker News "10
+  Million hits a day with WordPress using a $15 server" and was intrigued.  It
+  was time to benchmark one of my own applications!
 coverImage: /assets/blog/img/icloud2.jpg
 date: "2012-07-01"
+published: "true"
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

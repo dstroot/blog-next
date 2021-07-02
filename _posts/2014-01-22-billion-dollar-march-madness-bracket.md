@@ -1,13 +1,16 @@
 ---
-title: 'Billion Dollar March Madness Bracket'
-excerpt: 'You read that right: one billion. Not one million. Not one hundred million. Not five hundred million. One billion U.S. dollars.'
-coverImage: '/assets/blog/img/ncaa-brackets.jpg'
-date: '2014-01-22T10:00:00-00:00'
+title: Billion Dollar March Madness Bracket
+excerpt: "You read that right: one billion. Not one million. Not one hundred
+  million. Not five hundred million. One billion U.S. dollars."
+coverImage: /assets/blog/img/ncaa-brackets.jpg
+date: "2014-01-22"
+published: "true"
 author:
-  name: "Dan Stroot"
-  picture: '/assets/blog/authors/dan.jpeg'
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/y /ncaa-brackets.jpg'
+  url: /assets/blog/y /ncaa-brackets.jpg
+seoURL: ""
 ---
 
 Quicken Loans and Warren Buffet announced a billion dollar prize for a perfect NCAA college bracket prediction. As Quicken Loans puts it:

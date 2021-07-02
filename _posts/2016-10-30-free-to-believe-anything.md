@@ -1,13 +1,19 @@
 ---
-title: 'Free to Believe Anything'
-excerpt: 'When I was growing up, when you read the paper, watched the news, saw a film or a picture, you inherently believed in it.  You trusted the reality it portrayed. You trusted in journalism and even believed the news was actually "fair and balanced". Then technology destroyed the business model of traditional journalism.'
-coverImage: '/assets/blog/img/comic2.png'
-date: '2016-10-30T19:50:04-07:00'
+title: Free to Believe Anything
+excerpt: When I was growing up, when you read the paper, watched the news, saw a
+  film or a picture, you inherently believed in it.  You trusted the reality it
+  portrayed. You trusted in journalism and even believed the news was actually
+  "fair and balanced". Then technology destroyed the business model of
+  traditional journalism.
+coverImage: /assets/blog/img/comic2.png
+date: "2016-10-31"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/comic2.png'
+  url: /assets/blog/img/comic2.png
+seoURL: ""
 ---
 
 When I was growing up, when you read the paper, watched the news, saw a film or a picture, you inherently believed in it.  You trusted the reality it portrayed. You trusted in journalism and even believed the news was actually "fair and balanced". Then technology destroyed the business model of traditional journalism. The news institutions of the 20th century, print newspapers, the evening broadcast news, the trusted anchorman, are but relics of the past.

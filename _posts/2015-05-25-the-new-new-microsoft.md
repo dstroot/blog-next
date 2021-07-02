@@ -1,13 +1,19 @@
 ---
-title: 'The "New" New Microsoft'
-excerpt: "I've been a fan of Microsoft during my whole technical career.  However I don't recommend Microsoft any longer for server workloads, and haven't for years due to the fact that the Linux ecosystem is far less expensive and has more innovative people working on it and sharing what they do openly. However, I am very impressed with the direction and leadership of Satya Nadella."
-coverImage: '/assets/blog/img/satya-nadella-microsoft-ceo.jpg'
-date: '2015-05-25T10:00:00-00:00'
+title: The "New" New Microsoft
+excerpt: I've been a fan of Microsoft during my whole technical career.  However
+  I don't recommend Microsoft any longer for server workloads, and haven't for
+  years due to the fact that the Linux ecosystem is far less expensive and has
+  more innovative people working on it and sharing what they do openly. However,
+  I am very impressed with the direction and leadership of Satya Nadella.
+coverImage: /assets/blog/img/satya-nadella-microsoft-ceo.jpg
+date: "2015-05-25"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/satya-nadella-microsoft-ceo.jpg'
+  url: /assets/blog/img/satya-nadella-microsoft-ceo.jpg
+seoURL: ""
 ---
 
 I've been a fan of Microsoft during my whole technical career.  However I don't recommend Microsoft any longer for server workloads, and haven't for years due to the fact that the Linux ecosystem is far less expensive and has more innovative people working on it and sharing what they do openly. However, I am very impressed with the direction and leadership of Satya Nadella.

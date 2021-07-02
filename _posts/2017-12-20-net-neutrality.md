@@ -1,21 +1,26 @@
 ---
-title: 'Why Net Neutrality Matters'
-excerpt: "Internet access is so fundamentally important that many people believe that Internet access should be a legal right. The British government has said that it will guarantee a legal right to high-speed internet for all homes and businesses in the U.K. by 2020 under the Digital Economy Act of 2017.
-
-Regardless of your belief in the Internet as a legal right, we should all be able to agree that access to the Internet promotes the digital economy and improves the lives of all citizens.  "
-coverImage: '/assets/blog/img/internet.jpg'
-date: '2017-12-22T11:23:42-08:00'
+title: Why Net Neutrality Matters
+excerpt: Internet access is so fundamentally important that many people believe
+  that Internet access should be a legal right. The British government has said
+  that it will guarantee a legal right to high-speed internet for all homes and
+  businesses in the U.K. by 2020 under the Digital Economy Act of 2017.
+  Regardless of your belief in the Internet as a legal right, we should all be
+  able to agree that access to the Internet promotes the digital economy and
+  improves the lives of all citizens.
+coverImage: /assets/blog/img/internet.jpg
+date: "2017-12-22"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/internet.jpg'
+  url: /assets/blog/img/internet.jpg
+seoURL: ""
 ---
 
 > The Internet is becoming the town square for the global village of tomorrow. 
 >
 ><cite>&mdash; Bill Gates</cite>
-
 
 The internet is one of humanities greatest accomplishments and resources. It provides us with:
 

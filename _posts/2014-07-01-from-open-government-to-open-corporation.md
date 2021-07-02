@@ -1,13 +1,19 @@
 ---
-title: 'From Open Government to Open Corporation'
-excerpt: 'President Barack Obama, on his first day in office in 2009, signed an executive order stating that all government information that did not have to be kept secret for security or privacy reasons should be made public. The administration also launched the Open Data Initiative to publish government data and the http://www.data.gov website to distribute the data.'
-coverImage: '/assets/blog/img/data_gov.png'
-date: '2014-07-01T10:00:00-00:00'
+title: From Open Government to Open Corporation
+excerpt: President Barack Obama, on his first day in office in 2009, signed an
+  executive order stating that all government information that did not have to
+  be kept secret for security or privacy reasons should be made public. The
+  administration also launched the Open Data Initiative to publish government
+  data and the http://www.data.gov website to distribute the data.
+coverImage: /assets/blog/img/data_gov.png
+date: "2014-07-01"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/data_gov.png'
+  url: /assets/blog/img/data_gov.png
+seoURL: ""
 ---
 
 ### Let's Talk About Open Government

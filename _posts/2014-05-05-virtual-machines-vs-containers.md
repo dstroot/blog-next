@@ -1,13 +1,23 @@
 ---
-title: 'Virtual Machines vs Containers'
-excerpt: 'Personally I think the next wave of infrastructure efficiency will be driven by Linux container technology (LinuX Containers = LXC). The LXC container approach does not require a hypervisor - instead you run isolated "containers" on a Linux host. LXC provides operating system-level virtualization, but instead of creating a full-fledged virtual machine LXC containers leverage cgroups (control groups) to completely isolate the operating environment, including process trees, network, user ids and mounted file systems. This work was started by engineers at Google and in late 2007 it was merged into kernel version 2.6.24.'
-coverImage: '/assets/blog/img/docker.png'
-date: '2014-05-05T10:00:00-00:00'
+title: Virtual Machines vs Containers
+excerpt: Personally I think the next wave of infrastructure efficiency will be
+  driven by Linux container technology (LinuX Containers = LXC). The LXC
+  container approach does not require a hypervisor - instead you run isolated
+  "containers" on a Linux host. LXC provides operating system-level
+  virtualization, but instead of creating a full-fledged virtual machine LXC
+  containers leverage cgroups (control groups) to completely isolate the
+  operating environment, including process trees, network, user ids and mounted
+  file systems. This work was started by engineers at Google and in late 2007 it
+  was merged into kernel version 2.6.24.
+coverImage: /assets/blog/img/docker.png
+date: "2014-05-05"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/docker.png'
+  url: /assets/blog/img/docker.png
+seoURL: ""
 ---
 
 Three driving forces of infrastructure efficiency in a large, distributed environment were:

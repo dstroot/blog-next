@@ -1,15 +1,20 @@
 ---
-title: 'Lessons from Haiti- Never Under Estimate Ease of Use'
-excerpt: 'The Red Cross, via a company called mGive, has got the major U.S. carriers on board to allow people to very easily donate $10 to the Red Cross via a simple SMS text message.
-
-This led to an "unprecedented mobile response," and has raised over $10 million in relief for Haiti.  With text donations peaking at a rate of 10,000 a minute, at $10 per donation, this is raising $100,000 per minute!'
-coverImage: '/assets/blog/img/haiti.jpg'
-date: '2010-01-15T10:25:35-08:00'
+title: Lessons from Haiti- Never Under Estimate Ease of Use
+excerpt: The Red Cross, via a company called mGive, has got the major U.S.
+  carriers on board to allow people to very easily donate $10 to the Red Cross
+  via a simple SMS text message. This led to an "unprecedented mobile response,"
+  and has raised over $10 million in relief for Haiti.  With text donations
+  peaking at a rate of 10,000 a minute, at $10 per donation, this is raising
+  $100,000 per minute!
+coverImage: /assets/blog/img/haiti.jpg
+date: "2010-01-15"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/haiti.jpg'
+  url: /assets/blog/img/haiti.jpg
+seoURL: ""
 ---
 
 My assistant Kathy told me today about donating to Haitian relief efforts by simply sending a text message from my cellphone.  The Red Cross, via a company called mGive, has got the major U.S. carriers on board to allow people to very easily donate $10 to the Red Cross via a simple SMS text message.

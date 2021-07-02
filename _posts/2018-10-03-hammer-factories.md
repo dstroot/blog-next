@@ -1,13 +1,19 @@
 ---
-title: 'Hammer Factories'
-excerpt: 'There is a post from 2005 by Benji Smith in the old (and now closed) Joel on Software Discussion Group. It is titled "Why I Hate Frameworks". But I know it as "the hammer factory" post. It is just brilliant, even 13 years later. I am reproducing it here for posterity in case the old Joel on Software Discussion Group ever disappears.'
-coverImage: '/assets/blog/img/hammer.png'
-date: '2018-10-03T10:25:35-08:00'
+title: Hammer Factories
+excerpt: There is a post from 2005 by Benji Smith in the old (and now closed)
+  Joel on Software Discussion Group. It is titled "Why I Hate Frameworks". But I
+  know it as "the hammer factory" post. It is just brilliant, even 13 years
+  later. I am reproducing it here for posterity in case the old Joel on Software
+  Discussion Group ever disappears.
+coverImage: /assets/blog/img/hammer.jpg
+date: "2018-10-03"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/hammer.png'
+  url: /assets/blog/img/hammer.jpg
+seoURL: ""
 ---
 
 There is a post from 2005 by [Benji Smith](http://www.benjismith.net/) in the old (and now closed) [Joel on Software Discussion Group](http://discuss.joelonsoftware.com/?joel.3.219431.12). It's titled "Why I Hate Frameworks". But I know it as "the hammer factory" post. It's just brilliant, even 13 years later. I am reproducing it here for posterity in case the old Joel on Software Discussion Group ever disappears.

@@ -1,14 +1,16 @@
 ---
-title: "Why Automate Code Reviews?"
-excerpt: >+
-  Ask a programmer to review 10 lines of code, they'll make 10 suggestions. Ask them to review 1,000 lines of code and they'll say "it looks good!"
-coverImage: "/assets/blog/img/better_code.png"
+title: Why Automate Code Reviews?
+excerpt: Ask a programmer to review 10 lines of code, they'll make 10
+  suggestions. Ask them to review 1,000 lines of code and they'll say "it looks
+  good!"
+coverImage: /assets/blog/img/better_code.png
 date: "2015-09-06"
+published: "true"
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: "/assets/blog/img/better_code.png"
+  url: /assets/blog/img/better_code.png
 seoURL: ""
 ---
 

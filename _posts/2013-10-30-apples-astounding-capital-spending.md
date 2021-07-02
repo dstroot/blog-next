@@ -1,16 +1,19 @@
 ---
-title: "Apple's Astounding Capital Expenditures"
+title: Apple's Astounding Capital Expenditures
 excerpt: >
-
-  Apple’s most recent 10-K filing with the U.S. Securities and Exchange Commission shows the company has budgeted $11 billion in capital expenditures for fiscal 2014. This is more than 5 times Apple's capital expenditure in 2010 and 57 percent more than the $7 billion it spent in 2013. What is Apple planning to do with all that additional money?
-
-coverImage: "/assets/blog/img/iSpaceship.jpg"
+  Apple’s most recent 10-K filing with the U.S. Securities and Exchange
+  Commission shows the company has budgeted $11 billion in capital expenditures
+  for fiscal 2014. This is more than 5 times Apple's capital expenditure in 2010
+  and 57 percent more than the $7 billion it spent in 2013. What is Apple
+  planning to do with all that additional money?
+coverImage: /assets/blog/img/iSpaceship.jpg
 date: "2013-10-30"
+published: "true"
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: "/assets/blog/img/iSpaceship.jpg"
+  url: /assets/blog/img/iSpaceship.jpg
 seoURL: ""
 ---
 

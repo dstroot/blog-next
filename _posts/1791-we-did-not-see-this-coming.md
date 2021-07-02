@@ -1,13 +1,22 @@
 ---
-title: '1791: We Did Not See This Coming'
-excerpt: 'The Second Amendment was passed fifteen years after the American Revolution, in 1791, as part of the Bill of Rights. This was just three years after the Constitution was ratified in 1788. The complete Second Amendment of the United States Constitution reads: "A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed." James Madison originally proposed the Second Amendment as a way to provide more power to state militias. It begins with the concept...'
-coverImage: '/assets/blog/img/armory1.jpg'
-date: '2017-10-10T10:25:35-08:00'
+title: "1791: We Did Not See This Coming"
+excerpt: 'The Second Amendment was passed fifteen years after the American
+  Revolution, in 1791, as part of the Bill of Rights. This was just three years
+  after the Constitution was ratified in 1788. The complete Second Amendment of
+  the United States Constitution reads: "A well regulated Militia, being
+  necessary to the security of a free State, the right of the people to keep and
+  bear Arms, shall not be infringed." James Madison originally proposed the
+  Second Amendment as a way to provide more power to state militias. It begins
+  with the concept...'
+coverImage: /assets/blog/img/armory1.jpg
+date: "2017-10-10"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/armory1.jpg'
+  url: /assets/blog/img/armory1.jpg
+seoURL: ""
 ---
 
 The Second Amendment was passed fifteen years after the American Revolution, in 1791, as part of the Bill of Rights. This was just three years after the Constitution was ratified in 1788. The complete Second Amendment of the United States Constitution reads: 

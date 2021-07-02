@@ -1,16 +1,19 @@
 ---
-title: "Make Big Bets"
-excerpt: >
-
-  The Bill and Melinda Gates Foundation just released it's annual letter.  I have come to look forward to these letters because I find them incredibly inspiring. This year instead of an annual update they are re-baselining and taking a fifteen year view of the future. As I read this year's letter I was simultaneously moved, inspired and awed by the scope their mission.
-
-coverImage: "/assets/blog/img/african_children.jpg"
+title: Make Big Bets
+excerpt: The Bill and Melinda Gates Foundation just released it's annual
+  letter.  I have come to look forward to these letters because I find them
+  incredibly inspiring. This year instead of an annual update they are
+  re-baselining and taking a fifteen year view of the future. As I read this
+  year's letter I was simultaneously moved, inspired and awed by the scope their
+  mission.
+coverImage: /assets/blog/img/african_children.jpg
 date: "2015-01-22"
+published: "true"
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: "/assets/blog/img/african_children.jpg"
+  url: /assets/blog/img/african_children.jpg
 seoURL: ""
 ---
 

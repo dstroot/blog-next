@@ -1,13 +1,20 @@
 ---
-title: 'TEDx Orange Coast 2012'
-excerpt: 'Yesterday I had the pleasure of attending the TEDx Orange County conference where the theme was relevance.  Specifically how do you stay relevant in today’s world? As the day progressed this theme blossomed for me.   I took away a number of new ideas and perspectives.  I learned things from people whom I expected to learn things from but also from unexpected places, which quite frankly is the best kind of serendipity.'
-coverImage: '/assets/blog/img/tedx.png'
-date: '2012-10-11T10:25:35-08:00'
+title: TEDx Orange Coast 2012
+excerpt: Yesterday I had the pleasure of attending the TEDx Orange County
+  conference where the theme was relevance.  Specifically how do you stay
+  relevant in today’s world? As the day progressed this theme blossomed for me.
+  I took away a number of new ideas and perspectives.  I learned things from
+  people whom I expected to learn things from but also from unexpected places,
+  which quite frankly is the best kind of serendipity.
+coverImage: /assets/blog/img/tedx.png
+date: "2012-10-11"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/tedx.png'
+  url: /assets/blog/img/tedx.png
+seoURL: ""
 ---
 
 Yesterday I had the pleasure of mental stimulation.  The theme of the TEDx OC conference was relevance.  Specifically how do you stay relevant in today’s world?

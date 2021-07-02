@@ -1,13 +1,18 @@
 ---
-title: 'Apple Reaches for Greatness Without Apology'
-excerpt: "Like many people in the Technology world I watched Apple's iPad announcement this week with intense interest.  Unlike most people I am interested not in the consumer space  - but rather how could this device be used for business.  How could a new category like this be used?"
-coverImage: '/assets/blog/img/SteveJobsCloseUp-lg.jpg'
-date: '2012-05-29T10:25:35-08:00'
+title: Apple Reaches for Greatness Without Apology
+excerpt: Like many people in the Technology world I watched Apple's iPad
+  announcement this week with intense interest.  Unlike most people I am
+  interested not in the consumer space  - but rather how could this device be
+  used for business.  How could a new category like this be used?
+coverImage: /assets/blog/img/SteveJobsCloseUp-lg.jpg
+date: "2012-05-29"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/SteveJobsCloseUp-lg.jpg'
+  url: /assets/blog/img/SteveJobsCloseUp-lg.jpg
+seoURL: ""
 ---
 
 >I haven’t got any sort of odd chip on my shoulder about proving anything to myself or anybody else.  And remember, though the outside world looks at success from a numerical point of view, my yardstick might be quite different than that.  My yardstick may be how every computer that’s designed from here on out will have to be at least as good as a Macintosh.

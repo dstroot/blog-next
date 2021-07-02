@@ -1,13 +1,18 @@
 ---
-title: 'Intrinsic Bias'
-excerpt: 'As a CIO in a large, publicly owned financial services company I held the responsibility of keeping our clients (and our corporate) data safe and secure.  As the economics of cloud services became compelling the largest hurdle to adoption was "potential security risks", by a large measure.'
-coverImage: '/assets/blog/img/bias.jpg'
-date: '2013-10-15T10:25:35-08:00'
+title: Intrinsic Bias
+excerpt: As a CIO in a large, publicly owned financial services company I held
+  the responsibility of keeping our clients (and our corporate) data safe and
+  secure.  As the economics of cloud services became compelling the largest
+  hurdle to adoption was "potential security risks", by a large measure.
+coverImage: /assets/blog/img/bias.jpg
+date: "2013-10-15"
+published: "true"
 author:
-  name: "Dan Stroot"
-  picture: '/assets/blog/authors/dan.jpeg'
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/y /bias.jpg'
+  url: /assets/blog/y /bias.jpg
+seoURL: ""
 ---
 
 As a CIO in a large, publicly owned financial services company I held the responsibility of keeping our client's (and our organization’s) data safe and secure.  As the economics of cloud services became compelling the largest hurdle to adoption was "potential security risks", by a large measure.

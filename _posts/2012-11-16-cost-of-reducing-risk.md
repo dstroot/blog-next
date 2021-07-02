@@ -1,13 +1,18 @@
 ---
-title: 'Risk Mitigation Costs Too Much'
-excerpt: 'Many large organizations work exceptionally hard minimize "risk".   Ironically, by working so diligently to reduce risk they are paying for it anyway, and reducing innovation at the same time.'
-coverImage: '/assets/blog/img/edison.jpg'
-date: '2012-11-16T10:25:35-08:00'
+title: Risk Mitigation Costs Too Much
+excerpt: >
+  Many large organizations work exceptionally hard minimize "risk".  Ironically,
+  by working so diligently to reduce risk they are paying for it anyway, and
+  reducing innovation at the same time.
+coverImage: /assets/blog/img/edison.jpg
+date: "2012-11-16"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/edison.jpg'
+  url: /assets/blog/img/edison.jpg
+seoURL: ""
 ---
 
 Many large organizations work exceptionally hard minimize "risk".   Ironically, by working so diligently to reduce risk they are paying for it anyway, and reducing innovation at the same time.

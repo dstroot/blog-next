@@ -1,13 +1,21 @@
 ---
-title: 'Hosting your Blog on Amazon S3'
-excerpt: 'In order to serve your site from S3 you need to first create a bucket to hold the content. So, using the S3 web console create a bucket. Next we need to setup the bucket for web hosting. Click the properties button to edit the properties of your new bucket.  Then go to the Static Website Hosting section and click "Enabled website hosting". I am also using a redirect rule to redirect all errors back to the root of my blog.  That way no one ever gets a 404.  Cool right?'
-coverImage: '/assets/blog/img/aws_hosting.png'
-date: '2013-07-25T15:15:42-08:00'
+title: Hosting your Blog on Amazon S3
+excerpt: In order to serve your site from S3 you need to first create a bucket
+  to hold the content. So, using the S3 web console create a bucket. Next we
+  need to setup the bucket for web hosting. Click the properties button to edit
+  the properties of your new bucket.  Then go to the Static Website Hosting
+  section and click "Enabled website hosting". I am also using a redirect rule
+  to redirect all errors back to the root of my blog.  That way no one ever gets
+  a 404.  Cool right?
+coverImage: /assets/blog/img/aws_hosting.png
+date: "2013-07-25"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/aws_hosting.png'
+  url: /assets/blog/img/aws_hosting.png
+seoURL: ""
 ---
 
 One of the cleanest designed blogs I have seen in a while belongs to [Karma Mobility](http://blog.yourkarma.com/).  So I asked in the comments on a particularly interesting post by Stefan Borsje and he very nicely responded "Thanks Daniel! This blog uses Jekyll and is hosted on S3."

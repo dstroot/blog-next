@@ -1,13 +1,20 @@
 ---
-title: 'A Soul Crushing Exercise'
-excerpt: "This morning I saw a post on LinkedIn by Bob Sutton who is a Stanford Professor and Co-author of Scaling up Excellence.  He discusses Adobe's move to abolish it's employee stack ranking system.  After the system was eliminated, one Adobe employee noted that a feeling of relief spread throughout the company because the old annual review system was “a soul-less and soul crushing exercise.”"
-coverImage: '/assets/blog/img/soulcrushing.jpg'
-date: '2014-02-07T10:00:00-00:00'
+title: A Soul Crushing Exercise
+excerpt: This morning I saw a post on LinkedIn by Bob Sutton who is a Stanford
+  Professor and Co-author of Scaling up Excellence.  He discusses Adobe's move
+  to abolish it's employee stack ranking system.  After the system was
+  eliminated, one Adobe employee noted that a feeling of relief spread
+  throughout the company because the old annual review system was “a soul-less
+  and soul crushing exercise.”
+coverImage: /assets/blog/img/soulcrushing.jpg
+date: "2014-02-07"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/soulcrushing.jpg'
+  url: /assets/blog/img/soulcrushing.jpg
+seoURL: ""
 ---
 
 This morning I saw a post on LinkedIn by Bob Sutton who is a Stanford Professor and Co-author of Scaling up Excellence.  He discusses Adobe's move to abolish it's employee stack ranking system.  After the system was eliminated, one Adobe employee noted that a feeling of relief spread throughout the company because the old annual review system was **“a soul-less and soul crushing exercise.”**

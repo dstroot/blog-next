@@ -9,8 +9,10 @@ import { getAllPosts } from "../lib/api";
 import { CMS_NAME, ALERT } from "../lib/constants";
 
 export default function Index({ allPosts }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  const filteredPosts = allPosts.filter((post) => post.published);
+  const heroPost = filteredPosts[0];
+  const morePosts = filteredPosts.slice(1);
+
   return (
     <>
       <Head>
@@ -40,11 +42,12 @@ export default function Index({ allPosts }) {
 export async function getStaticProps() {
   const allPosts = getAllPosts([
     "title",
+    "excerpt",
     "date",
+    "published",
     "slug",
     "author",
     "coverImage",
-    "excerpt",
   ]);
 
   return {

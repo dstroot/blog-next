@@ -1,13 +1,17 @@
 ---
-title: 'Only Usain Bolt Looks at the Clock'
-excerpt: "If you watch someone run the 100 meters, they sneak glances around. Sprinters watch each other while they run.  They want to know where are in the pack.  I noticed that only Usain Bolt looks at the clock. Why?"
-coverImage: '/assets/blog/img/usain-bolt2.jpg'
-date: '2013-08-01T10:25:35-08:00'
+title: Only Usain Bolt Looks at the Clock
+excerpt: If you watch someone run the 100 meters, they sneak glances around.
+  Sprinters watch each other while they run.  They want to know where are in the
+  pack.  I noticed that only Usain Bolt looks at the clock. Why?
+coverImage: /assets/blog/img/usain-bolt2.jpg
+date: "2013-08-01"
+published: "true"
 author:
   name: Dan Stroot
-  picture: '/assets/blog/authors/dan.jpeg'
+  picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: '/assets/blog/img/usain-bolt2.jpg'
+  url: /assets/blog/img/usain-bolt2.jpg
+seoURL: ""
 ---
 
 When you watch the 100 meters, runners sneak glances around. They watch each other while they run.  They want to know where are in the pack. Usain Bolt doesn't. He looks at the clock, not the other runners. Why?
