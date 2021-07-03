@@ -4,7 +4,7 @@ excerpt: >-
   As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the same moment, on the same day, Amazon.com is the most valuable company in the world with an $810B valuation, or 184 times greater. Prior to Amazon's founding Sears had everything. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Brand recognition and established customer base, check. Unfortunately for an incumbent, change is much harder than anyone imagines it to be.
 coverImage: "/assets/blog/img/polygon.png"
 date: "2019-01-06"
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

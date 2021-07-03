@@ -5,14 +5,14 @@ excerpt: Most companies still have a separate corporate network, protected by
   etc. Why is it that I can access information which is the most important,
   private, and precious to me, from any computer, via any network, without all
   that extra cost, complexity, overhead, and effort?
-coverImage: /assets/blog/img/internet.jpg
+coverImage: /assets/blog/img/citadel.png
 date: "2017-04-10"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/internet.jpg
+  url: /assets/blog/img/citadel.png
 seoURL: ""
 ---
 
@@ -26,7 +26,7 @@ Using my personal laptop from any coffee shop, I can:
 
 These are the most sensitive and private things I can imagine, and I can do these things **securely from any untrusted network anywhere in the world**. 
 
-### So why do corporate networks still exist?
+### Why do corporate networks still exist?
 
 Most companies still have a separate corporate network, protected by firewalls, intrusion prevention/detection, dedicated administrators, VPNs, etc. Why is it that I can access information which is the most important, private, and precious to me, from any computer, via any network, **without all that extra cost, complexity, overhead, and effort?**
 
@@ -94,12 +94,12 @@ Here are some of the companies that specialize in turning organizations "inside-
 
 <table>
   <tr>
-    <td><a href="https://auth0.com/"><img src="/img/auth0_logo.png" alt="Auth0" class="img-responsive" width="150"></a></td>
-    <td><a href="https://www.okta.com/"><img src="/img/okta_logo.svg" alt="Okta" class="img-responsive" width="150"></a></td>
+    <td><a href="https://auth0.com/"><img src="/assets/blog/img/auth0_logo.png" alt="Auth0" class="img-responsive" width="150"></a></td>
+    <td><a href="https://www.okta.com/"><img src="/assets/blog/img/okta_logo.svg" alt="Okta" class="img-responsive" width="150"></a></td>
   </tr>
   <tr>
-    <td><a href="https://www.onelogin.com/"><img src="/img/onelogin_logo.png" alt="Onelogin" class="img-responsive" width="150"></a></td>
-    <td><a href="https://www.pingidentity.com/en.html"><img src="/img/ping_logo.png" alt="Ping Identity" class="img-responsive" width="150"></a></td>
+    <td><a href="https://www.onelogin.com/"><img src="/assets/blog/img/onelogin_logo.png" alt="Onelogin" class="img-responsive" width="150"></a></td>
+    <td><a href="https://www.pingidentity.com/en.html"><img src="/assets/blog/img/ping_logo.png" alt="Ping Identity" class="img-responsive" width="150"></a></td>
   </tr>
 </table>
 
@@ -115,7 +115,7 @@ As a result, web applications behind the proxy don't have to have any identity o
 
 Google has made this **available as a free product** called the [Identity-Aware Proxy](https://cloud.google.com/iap/).  It works like this:
 
-![Identity-Aware Proxy](/img/iap-lead_2x.png)
+![Identity-Aware Proxy](/assets/blog/img/iap-lead_2x.png)
 
 Bitly has also open-sourced a project called [oauth2_proxy](https://github.com/bitly/oauth2_proxy). which is described as "a reverse proxy and static file server that provides authentication using Providers (Google, Azure, Facebook, GitHub, and others) to validate accounts by email, domain or group". 
 
@@ -146,11 +146,10 @@ Here are the main components summarized:
 
 #### References
 
-<span class="sources">
 [BeyondCorp: A new approach to enterprise security](https://cloud.google.com/beyondcorp/)<br>
 [No Firewalls, No Problem for Google](https://threatpost.com/no-firewalls-no-problem-for-google/123748/)<br>
 [Fundamentals of the BeyondCorp ‘Zero-Trust’ Security Framework](https://dzone.com/articles/fundamentals-of-the-beyondcorp-zero-trust-security)<br>
 [Google leads the way out of the castle to the cloud](http://blog.code42.com/google-beyondcorp-leads-the-way-out-of-the-castle-to-the-cloud/)<br>
 [Bitly's Oauth2 Proxy](https://github.com/bitly/oauth2_proxy)<br>
 [Ditch your VPN, improve security and go to the cloud](https://www.blog.google/topics/google-cloud/how-use-beyondcorp-ditch-your-vpn-improve-security-and-go-cloud/)<br>
-</span>
+

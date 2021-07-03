@@ -3,23 +3,25 @@
 }
 
 .markdown p,
-.markdown ul,
-.markdown ol,
 .markdown blockquote {
   @apply my-6;
 }
 
 .markdown ul,
 .markdown ol {
-  @apply list-outside list-disc ml-5;
+  @apply list-outside ml-5;
 }
 
 .markdown ul > li {
-  @apply list-disc mb-2;
+  @apply list-disc;
 }
 
 .markdown ol > li {
-  @apply list-decimal mb-2;
+  @apply list-decimal;
+}
+
+.markdown li > p {
+  @apply my-3;
 }
 
 .markdown blockquote {

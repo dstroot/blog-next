@@ -3,14 +3,14 @@ title: The Man Least Likely to Succeed in Politics
 excerpt: >-
   
   Dick Nixon understood that getting the smart, popular kids to vote for you didn't matter. He called the popular kids "Franklins" and he called his kind the "Orthogonians".  Nixon discovered that being hated by the "Franklins" was no impediment to political success.
-coverImage: /assets/blog/img/Elvis-Nixon.png
+coverImage: /assets/blog/img/elvis_nixon.png
 date: "2017-03-19"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/Elvis-Nixon.png
+  url: /assets/blog/img/elvis_nixon.png
 seoURL: ""
 ---
 

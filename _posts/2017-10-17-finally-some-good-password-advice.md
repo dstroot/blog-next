@@ -52,10 +52,9 @@ All I can say is that it is about time we had some sane advice.  These changes w
 
 #### References
 
-<span class="sources">
 [NIST Special Publication 800-63-3](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf)<br>
 [Stop Trying to Fix the User](http://ieeexplore.ieee.org/document/7676198/)<br>
 [Why Password Expiration is Bad](https://securingthehuman.sans.org/blog/2017/03/23/time-for-password-expiration-to-die)<br>
 [Why Password Complexity Rules are Bad](https://www.wsj.com/articles/the-man-who-wrote-those-password-rules-has-a-new-tip-n3v-r-m1-d-1502124118)<br>
 [Changes in Password Best Practices](https://www.schneier.com/blog/archives/2017/10/changes_in_pass.html)<br>
-</span>
+

@@ -8,14 +8,14 @@ excerpt: >
   run modern infrastructure stacks. The strategies and architectures that
   influence CoreOS allow companies like Google, Facebook and Twitter to run
   their services at scale with high resilience."
-coverImage: /assets/blog/img/coreos-logo.png
+coverImage: /assets/blog/img/coreos_2.png
 date: "2014-06-29"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/coreos-logo.png
+  url: /assets/blog/img/coreos_2.png
 seoURL: ""
 ---
 

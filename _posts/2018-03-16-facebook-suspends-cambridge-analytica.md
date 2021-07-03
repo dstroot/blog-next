@@ -2,24 +2,22 @@
 title: Facebook suspends Cambridge Analytica
 excerpt: A year ago I wrote about how big data, collected from social media
   sites, and machine learning was used to influence voting in the United States
-  in [The man least likely to succeed in
-  politics](https://danstroot.com/2017/03/19/the-man-least-likely-to-succeed-in-politics/).
-  Collecting big data, and more specifically social data about each of us, has
-  been described as the "new goldrush".  Yet many of us are unaware of how
-  technology is enabling the use (and misuse) of our personal data. As a
-  technologist I find this area fascinating and evolving rapidly.
-coverImage: /assets/blog/img/cambridge_analytica.jpg
+  in "The man least likely to succeed in politics". Collecting data, and more 
+  specifically social data about each of us, has been described as the "new goldrush".  
+  Yet many of us are unaware of how technology is enabling the use (and misuse) of our 
+  personal data. As a technologist I find this area fascinating and evolving rapidly.
+coverImage: /assets/blog/img/cambridge_analytica.png
 date: "2018-03-17"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/cambridge_analytica.jpg
+  url: /assets/blog/img/cambridge_analytica.png
 seoURL: ""
 ---
 
-A year ago I wrote about how big data, collected from social media sites, and machine learning was used to influence voting in the United States in [The man least likely to succeed in politics](https://danstroot.com/2017/03/19/the-man-least-likely-to-succeed-in-politics/). Collecting big data, and more specifically social data about each of us, has been described as the "new goldrush".  Yet many of us are unaware of how technology is enabling the use (and misuse) of our personal data. As a technologist I find this area fascinating and evolving rapidly.
+A year ago I wrote about how big data, collected from social media sites, and machine learning was used to influence voting in the United States in [The man least likely to succeed in politics](/posts/2017-03-19-the-man-least-likely-to-succeed-in-politics/). Collecting big data, and more specifically social data about each of us, has been described as the "new goldrush".  Yet many of us are unaware of how technology is enabling the use (and misuse) of our personal data. As a technologist I find this area fascinating and evolving rapidly.
 
 In the article I discussed how the Trump campaign used a firm named Cambridge Analytica to identify potential voters and to influence them. It was shown that by harvesting and studying a person's Facebook profile and "likes" researchers can know them better than their spouse. 
 

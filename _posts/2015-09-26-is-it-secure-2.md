@@ -1,18 +1,20 @@
 ---
 title: It’s secure… until it’s not
 excerpt: Is there a such thing as perfect security? No.
-coverImage: /assets/blog/img/SmartCarLock.png
+coverImage: /assets/blog/img/bramah.png
 date: "2015-09-26"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/SmartCarLock.png
+  url: /assets/blog/img/bramah.png
 seoURL: ""
 ---
 
 In the 1770s Joseph Bramah created a lock that was vastly superior to any the world ever seen. Bramah believed it was 100% theft-proof. Bramah was so confident in his design that he published a pamphlet detailing exactly how it worked and he put it in the window of his London storefront, and painted on it a challenge:
+
+
 
 >“The artist who can make an instrument that will pick or open this lock shall receive 200 Guineas the moment it is produced.”
 
@@ -30,6 +32,8 @@ He would pick it until he tripped the detector mechanism, causing the lock to se
 But the Chubb detector lock was really just a warm up. The main event was the Bramah safety lock—the one with the challenge painted on it in gold lettering, which had been sitting Bramah’s storefront window for 70 years, unbeaten.
 
 After working on the lock for about 52 hours over the course of fourteen days, Hobbs opened it.
+
+![challenge lock](/assets/blog/img/bramah-challenge.jpg)
 
 Overnight, the feeling of perfect security had evaporated. And we have never gotten it back.
 

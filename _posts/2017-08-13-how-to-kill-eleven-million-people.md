@@ -9,7 +9,7 @@ excerpt: This blog is meant for technology topics, not politics. However, I
   consequences of our own ignorance and apathy.
 coverImage: /assets/blog/img/holocaust.jpg
 date: "2017-08-13"
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
