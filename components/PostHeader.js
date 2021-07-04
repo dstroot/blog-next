@@ -7,7 +7,13 @@ export const PostHeader = ({ title, coverImage, date, author }) => {
     <>
       <PostTitle>{title}</PostTitle>
       <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} width={1240} height={620} />
+        <CoverImage
+          title={title}
+          src={coverImage}
+          width={1240}
+          height={620}
+          priority={true}
+        />
       </div>
       <div className="max-w-2xl mx-auto">
         <div className="block mb-6">
