@@ -5,14 +5,14 @@ excerpt: There is a post from 2005 by Benji Smith in the old (and now closed)
   know it as "the hammer factory" post. It is just brilliant, even 13 years
   later. I am reproducing it here for posterity in case the old Joel on Software
   Discussion Group ever disappears.
-coverImage: /assets/blog/img/hammer.jpg
+coverImage: /assets/blog/img/hammer.png
 date: "2018-10-03"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/hammer.jpg
+  url: /assets/blog/img/hammer.png
 seoURL: ""
 ---
 
