@@ -5,14 +5,14 @@ excerpt: Most information security practitioners do a poor job explaining the
   un-patched systems? A determined hacker? A nation-state?  Security is a "scale
   of difficulty" – like mountain climbing. Everest was thought to be unclimbable
   until Sir Edmund Hillary did it.
-coverImage: /assets/blog/img/SmartCarLock.png
+coverImage: /assets/blog/img/smart-car-lock.png
 date: "2015-09-26"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/SmartCarLock.png
+  url: /assets/blog/img/smart-car-lock.png
 seoURL: ""
 ---
 
