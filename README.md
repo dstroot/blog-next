@@ -25,4 +25,6 @@ TODO
 - [X] Favicon
 - [X] Manifest and other images/icons (test with lighthouse)
 - [X] Custom 404 page
+- [X] Add RSS feed
+- [ ] Add analytics (Vercel, Plausible, GA, or?)
 - [X] 100 Lighthouse Scores
