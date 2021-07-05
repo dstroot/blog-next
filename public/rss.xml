@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Feed Title</title>
+        <link>http://example.com/</link>
+        <description>This is my personal feed!</description>
+        <lastBuildDate>Sun, 14 Jul 2013 07:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>awesome</generator>
+        <language>en</language>
+        <image>
+            <title>Feed Title</title>
+            <url>http://example.com/image.png</url>
+            <link>http://example.com/</link>
+        </image>
+        <copyright>All rights reserved 2013, John Doe</copyright>
+        <category>Technology</category>
+        <item>
+            <title><![CDATA[Can you spot an underfunded Technology department?]]></title>
+            <link>2021-06-10-can-you-spot-an-underfunded-technology-dept</link>
+            <guid>2021-06-10-can-you-spot-an-underfunded-technology-dept</guid>
+            <pubDate>Thu, 10 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[People go into technology because they love building new things, solving business problems, and making businesses operate better. The last thing on earth most technologists want to say is “no”.  When your technology team starts telling you no it may be that they are feeling overwhelmed. There are many unintuitive signs that indicate a technology team might be overwhelmed or underfunded, such as buying premium support contracts, or using expensive consultants. Read on to learn the telltale signs of an underfunded technology organization.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Executable Documentation]]></title>
+            <link>2019-08-07-executable-documentation</link>
+            <guid>2019-08-07-executable-documentation</guid>
+            <pubDate>Wed, 07 Aug 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Every team has manual procedures or checklists that they haven’t gotten around to automating yet. Sometimes there are branches and special cases to keep track of as you go. Procedures/checklists are frustrating because they’re focus-intensive yet require very little thought. They demand our full attention, but our attention isn’t rewarded with interesting problems or satisfying solutions – just another checkbox checked.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA["Digital" Business Card?]]></title>
+            <link>2019-03-02-digital-business-card</link>
+            <guid>2019-03-02-digital-business-card</guid>
+            <pubDate>Sat, 02 Mar 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Recently I took on a new role and I was about ordering new business cards.  I reflected a moment and realized I don't really use business cards anymore. I  decided that I needed a digital way to share my business (and personal) information,  and I wanted to be able to control what I share. One of the side benefits of this  is I don't have to share my personal mobile phone number either. ]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[I'm OK; the Bull is Dead.]]></title>
+            <link>2019-02-08-im-ok-the-bull-is-dead</link>
+            <guid>2019-02-08-im-ok-the-bull-is-dead</guid>
+            <pubDate>Fri, 08 Feb 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Years ago I read a great article on clear communication. Unfortunately it is hard to find these days. I am reproducing it here for posterity and full attribution.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[The Inertia of Enterprise Despair]]></title>
+            <link>2018-10-10-the-inertia-of-enterprise-despair</link>
+            <guid>2018-10-10-the-inertia-of-enterprise-despair</guid>
+            <pubDate>Sun, 06 Jan 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the same moment, on the same day, Amazon.com is the most valuable company in the world with an $810B valuation, or 184 times greater. Prior to Amazon's founding Sears had everything. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Brand recognition and established customer base, check. Unfortunately for an incumbent, change is much harder than anyone ever imagines it to be.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Hammer Factories]]></title>
+            <link>2018-10-03-hammer-factories</link>
+            <guid>2018-10-03-hammer-factories</guid>
+            <pubDate>Wed, 03 Oct 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[There is a post from 2005 by Benji Smith in the old (and now closed) Joel on Software Discussion Group. It is titled "Why I Hate Frameworks". But I know it as "the hammer factory" post. It is just brilliant, even 13 years later. I am reproducing it here for posterity in case the old Joel on Software Discussion Group ever disappears.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Modern Web Development]]></title>
+            <link>2018-07-20-modern-web-development</link>
+            <guid>2018-07-20-modern-web-development</guid>
+            <pubDate>Fri, 20 Jul 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Web development has evolved faster than nearly every other software engineering discipline. The pace of innovation has been relentless, and front-end developers are confronted with new frameworks, tools, and standards for “modern” web development **constantly**. Framework fatigue is real thing.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Facebook suspends Cambridge Analytica]]></title>
+            <link>2018-03-16-facebook-suspends-cambridge-analytica</link>
+            <guid>2018-03-16-facebook-suspends-cambridge-analytica</guid>
+            <pubDate>Sat, 17 Mar 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[A year ago I wrote about how big data, collected from social media sites, and machine learning was used to influence voting in the United States in "The man least likely to succeed in politics". Collecting data, and more specifically social data about each of us, has been described as the "new goldrush". Yet many of us are unaware of how technology is enabling the use (and misuse) of our personal data. As a technologist I find this area fascinating and evolving rapidly.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Turn Your Company Inside-Out for $3/mo]]></title>
+            <link>2018-01-18-turn-your-company-inside-out</link>
+            <guid>2018-01-18-turn-your-company-inside-out</guid>
+            <pubDate>Thu, 18 Jan 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[I have already described the "inside out" corporation.  This idea was first evangelized by Google (who know a thing or two about infrastructure and security) and they called it "BeyondCorp".]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Why Net Neutrality Matters]]></title>
+            <link>2017-12-20-why-net-neutrality-matters</link>
+            <guid>2017-12-20-why-net-neutrality-matters</guid>
+            <pubDate>Fri, 22 Dec 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[Internet access is so fundamentally important that many people believe that Internet access should be a legal right. The British government has said that it will guarantee a legal right to high-speed internet for all homes and businesses in the U.K. by 2020 under the Digital Economy Act of 2017. Regardless of your belief in the Internet as a legal right, we should all be able to agree that access to the Internet promotes the digital economy and improves the lives of all citizens.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[How to Become Invincible]]></title>
+            <link>2017-10-30-how-to-become-invincible</link>
+            <guid>2017-10-30-how-to-become-invincible</guid>
+            <pubDate>Mon, 30 Oct 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[Do you want to become invincible? I mean “rock solid”; impenetrable; bullet-proof? The answer is simple: strive to **be the truth**.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Finally: Some Sane Password Advice]]></title>
+            <link>2017-10-17-finally-some-good-password-advice</link>
+            <guid>2017-10-17-finally-some-good-password-advice</guid>
+            <pubDate>Mon, 16 Oct 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[In every organization I have worked with managing user authentication and passwords was a huge challenge.  The key issue was that the "old" password best practices were **failed attempts to fix the user, not the system**. ]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[1791: We Did Not See This Coming]]></title>
+            <link>2017-10-10-1791-we-did-not-see-this-coming</link>
+            <guid>2017-10-10-1791-we-did-not-see-this-coming</guid>
+            <pubDate>Tue, 10 Oct 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Second Amendment was passed fifteen years after the American Revolution, in 1791, as part of the Bill of Rights. This was just three years after the Constitution was ratified in 1788. The complete Second Amendment of the United States Constitution reads: "A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed." James Madison originally proposed the Second Amendment as a way to provide more power to state militias. It begins with the concept...]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[How to Kill 11 Million People?]]></title>
+            <link>2017-08-13-how-to-kill-eleven-million-people</link>
+            <guid>2017-08-13-how-to-kill-eleven-million-people</guid>
+            <pubDate>Sun, 13 Aug 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[This blog is meant for technology topics, not politics. However, I watched what happened in Charlottesville, VA on 8/12/2017.  I actually saw people saluting and carrying Nazi flags. I was shocked that our president didn't immediately denounce racial hatred and bigotry. We cannot condone or allow racism, and we cannot allow our leaders to support it. Citizens must demand truth, honesty and integrity from our leaders, or suffer the consequences of our own ignorance and apathy.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Internet != Smarter People]]></title>
+            <link>2017-07-09-dumb-information</link>
+            <guid>2017-07-09-dumb-information</guid>
+            <pubDate>Sun, 09 Jul 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[I was certain the Internet would make people smarter and more informed via better access to information. Instead, in many ways the opposite happened.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[The Inside-Out Corporation]]></title>
+            <link>2017-04-7-the-inside-out-corporation</link>
+            <guid>2017-04-7-the-inside-out-corporation</guid>
+            <pubDate>Mon, 10 Apr 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[Most companies still have a separate corporate network, protected by firewalls, intrusion prevention/detection, dedicated administrators, VPNs, etc. Why is it that I can access information which is the most important, private, and precious to me, from any computer, via any network, without all that extra cost, complexity, overhead, and effort?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[The Man Least Likely to Succeed in Politics]]></title>
+            <link>2017-03-19-the-man-least-likely-to-succeed-in-politics</link>
+            <guid>2017-03-19-the-man-least-likely-to-succeed-in-politics</guid>
+            <pubDate>Sun, 19 Mar 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+Dick Nixon understood that getting the smart, popular kids to vote for you didn't matter. He called the popular kids "Franklins" and he called his kind the "Orthogonians".  Nixon discovered that being hated by the "Franklins" was no impediment to political success.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[I Feel the Need for Speed]]></title>
+            <link>2017-01-10-i-feel-the-need-for-speed</link>
+            <guid>2017-01-10-i-feel-the-need-for-speed</guid>
+            <pubDate>Tue, 10 Jan 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today google released a [new tool](https://testmysite.withgoogle.com) to test how mobile friendly your website is.  Since I recently rebuilt this site and been using a variety of tools to test it I was excited to see how well the site scored.  The UI is very nice but you have to opt-in to email to get your detailed report. I am definitely not a fan of that "dark pattern".
+]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[There is No Such Thing as Not Voting]]></title>
+            <link>2016-11-07-there-is-no-such-thing-as-not-voting</link>
+            <guid>2016-11-07-there-is-no-such-thing-as-not-voting</guid>
+            <pubDate>Mon, 07 Nov 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[If you are bored and disgusted by politics and don't bother to vote, you are in effect voting for the entrenched establishments of the two major parties.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Free to Believe Anything]]></title>
+            <link>2016-10-30-free-to-believe-anything</link>
+            <guid>2016-10-30-free-to-believe-anything</guid>
+            <pubDate>Mon, 31 Oct 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[When I was growing up, when you read the paper, watched the news, saw a film or a picture, you inherently believed in it.  You trusted the reality it portrayed. You trusted in journalism and even believed the news was actually "fair and balanced". Then technology destroyed the business model of traditional journalism.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Microsoft Surface Studio is Mindblowing]]></title>
+            <link>2016-10-29-microsoft-surface-studio-is-mindblowing</link>
+            <guid>2016-10-29-microsoft-surface-studio-is-mindblowing</guid>
+            <pubDate>Sat, 29 Oct 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Saw the new Microsoft Surface Studio this weekend at the Microsoft store at the South Coast Plaza. I thought the display is pretty mind blowing. I have gotten used to wide screen displays but somehow the resolution and format of the screen just feels right. The display floats in space and fills your field of vision.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Proprietary Software is an Unsafe Building Material]]></title>
+            <link>2015-10-03-proprietary-software-is-an-unsafe-building-material</link>
+            <guid>2015-10-03-proprietary-software-is-an-unsafe-building-material</guid>
+            <pubDate>Sat, 03 Oct 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[At one point in time I worked for an organization that banned the use of open source software.  They were concerned that in the event of issues "there would be no support".  At the time they believed that commercial software from companies like IBM, Oracle, Microsoft and SAP was "safer" because there was a commercial entity that stood behind the products they sold and provided support. Now that's changing...]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[It’s secure… until it’s not]]></title>
+            <link>2015-09-26-is-it-secure-2</link>
+            <guid>2015-09-26-is-it-secure-2</guid>
+            <pubDate>Sat, 26 Sep 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[Is there a such thing as perfect security? In the 1770s Joseph Bramah created a lock that was vastly superior to any the world ever seen. Bramah believed it was 100% theft-proof. It was, and then it wasn't.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Is it Secure?]]></title>
+            <link>2015-09-26-is-it-secure</link>
+            <guid>2015-09-26-is-it-secure</guid>
+            <pubDate>Sat, 26 Sep 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[Most information security practitioners do a poor job explaining the relative nature of security.  Secure relative to what? A bot that looks for un-patched systems? A determined hacker? A nation-state?  Security is a "scale of difficulty" – like mountain climbing. Everest was thought to be unclimbable until Sir Edmund Hillary did it.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Why Automate Code Reviews?]]></title>
+            <link>2015-09-06-why-automate-code-reviews</link>
+            <guid>2015-09-06-why-automate-code-reviews</guid>
+            <pubDate>Sun, 06 Sep 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[Ask a programmer to review 10 lines of code, they'll make 10 suggestions. Ask them to review 1,000 lines of code and they'll say "it looks good!"]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[FinTech Startups Tug the Industry Forward]]></title>
+            <link>2015-06-15-fintech-startups-tug-the-industry-forward</link>
+            <guid>2015-06-15-fintech-startups-tug-the-industry-forward</guid>
+            <pubDate>Mon, 15 Jun 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[Financial services companies are among the most highly regulated industries in the world.  They also suffer from a trust issue.  Trust is a key ingredient in making a financial services business viable. Why would I ever buy insurance, banking services or invest my savings via a company that I didn’t trust?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[The "New" New Microsoft]]></title>
+            <link>2015-05-25-the-new-new-microsoft</link>
+            <guid>2015-05-25-the-new-new-microsoft</guid>
+            <pubDate>Mon, 25 May 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[I've been a fan of Microsoft during my whole technical career.  However I don't recommend Microsoft any longer for server workloads, and haven't for years due to the fact that the Linux ecosystem is far less expensive and has more innovative people working on it and sharing what they do openly. However, I am very impressed with the direction and leadership of Satya Nadella.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Make Big Bets]]></title>
+            <link>2015-01-22-make-big-bets</link>
+            <guid>2015-01-22-make-big-bets</guid>
+            <pubDate>Thu, 22 Jan 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Bill and Melinda Gates Foundation just released it's annual letter.  I have come to look forward to these letters because I find them incredibly inspiring. This year instead of an annual update they are re-baselining and taking a fifteen year view of the future. As I read this year's letter I was simultaneously moved, inspired and awed by the scope their mission.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Keep it Simple... UX Design]]></title>
+            <link>2015-01-13-kiss-my-ux</link>
+            <guid>2015-01-13-kiss-my-ux</guid>
+            <pubDate>Tue, 13 Jan 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[Having done some user interface work over the break I discovered that my design approach was...]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[President Obama's Plan for a Free and Open Internet]]></title>
+            <link>2014-11-10-obama-net-neutrality</link>
+            <guid>2014-11-10-obama-net-neutrality</guid>
+            <pubDate>Mon, 10 Nov 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today President Barack Obama has come out in favor of net neutrality in very public way.  He lays out in no uncertain terms that he believes no cable company or access provider should be able to put limits on access to the Internet. In addition, he’s suggesting that the FCC recognizes access to the Internet as a basic utility, and something that Americans have a basic right to. This means no blocking, no throttling, more transparency and no paid prioritization.
+]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[USA's Digital Playbook]]></title>
+            <link>2014-08-12-usa-digital-playbook</link>
+            <guid>2014-08-12-usa-digital-playbook</guid>
+            <pubDate>Tue, 12 Aug 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[The White House announced on Monday, August 11th 2014, that it is formally launching a new U.S. Digital Service and that it has hired Mikey Dickerson to lead it.  Mickey Dickerson is an engineer widely credited with playing a central role in salvaging HealthCare.gov. The idea behind the USDS is institutionalizing the approach that saved the US health care website.
+]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[From Open Government to Open Corporation]]></title>
+            <link>2014-07-01-from-open-government-to-open-corporation</link>
+            <guid>2014-07-01-from-open-government-to-open-corporation</guid>
+            <pubDate>Tue, 01 Jul 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[President Barack Obama, on his first day in office in 2009, signed an executive order stating that all government information that did not have to be kept secret for security or privacy reasons should be made public. The administration also launched the Open Data Initiative to publish government data and the http://www.data.gov website to distribute the data.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[CoreOS: thousands of machines and millions of Docker containers... no hypervisor needed.]]></title>
+            <link>2014-06-29-coreos-thousands-of-machines-and-millions-of-docker-containers-no-hypervisor-needed</link>
+            <guid>2014-06-29-coreos-thousands-of-machines-and-millions-of-docker-containers-no-hypervisor-needed</guid>
+            <pubDate>Sun, 29 Jun 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[I have been playing around with CoreOS to get a sense of how everything works. The vision of this project is incredible. CoreOS describes itself as "a new Linux distribution that has been re-architected to provide features needed to run modern infrastructure stacks. The strategies and architectures that influence CoreOS allow companies like Google, Facebook and Twitter to run their services at scale with high resilience."
+]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Setup a CoreOS Playground]]></title>
+            <link>2014-06-29-setup-a-coreos-playground</link>
+            <guid>2014-06-29-setup-a-coreos-playground</guid>
+            <pubDate>Sun, 29 Jun 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[Do you want your own CoreOS fleet?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Virtual Machines vs Containers]]></title>
+            <link>2014-05-05-virtual-machines-vs-containers</link>
+            <guid>2014-05-05-virtual-machines-vs-containers</guid>
+            <pubDate>Mon, 05 May 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[Personally I think the next wave of infrastructure efficiency will be driven by Linux container technology (LinuX Containers = LXC). The LXC container approach does not require a hypervisor - instead you run isolated "containers" on a Linux host. LXC provides operating system-level virtualization, but instead of creating a full-fledged virtual machine LXC containers leverage cgroups (control groups) to completely isolate the operating environment, including process trees, network, user ids and mounted file systems. This work was started by engineers at Google and in late 2007 it was merged into kernel version 2.6.24.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Enterprise Search 2014]]></title>
+            <link>2014-03-14-enterprise-search-2014</link>
+            <guid>2014-03-14-enterprise-search-2014</guid>
+            <pubDate>Fri, 14 Mar 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[One of the challenges in a large distributed enterprise is "finding stuff".  Sure we call it collaboration, knowledge management, or any number of other sophisticated terms but often it boils down to just finding stuff. To compensate the organization reacts by saving multiple copies and versions of a file in many different locations: email, shared file systems, intranets, etc.  Of course this compounds the issue and drives the desire to save "my copy" to "somewhere where I can find it".]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[More Than Just a Scaffold]]></title>
+            <link>2014-03-03-more-than-just-a-scaffold</link>
+            <guid>2014-03-03-more-than-just-a-scaffold</guid>
+            <pubDate>Mon, 03 Mar 2014 00:00:00 GMT</pubDate>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[IPv6 Gets Real]]></title>
+            <link>2014-02-18-IPv6-gets-real</link>
+            <guid>2014-02-18-IPv6-gets-real</guid>
+            <pubDate>Tue, 18 Feb 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[Google’s IPv6 measurements crossed the 3% milestone just under five months from when the 2% milestone was crossed.  Prior to that it had taken 11 months to go from 1% to 2%.  ]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[A Soul Crushing Exercise]]></title>
+            <link>2014-02-07-a-soul-crushing-excercise</link>
+            <guid>2014-02-07-a-soul-crushing-excercise</guid>
+            <pubDate>Fri, 07 Feb 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[This morning I saw a post on LinkedIn by Bob Sutton who is a Stanford Professor and Co-author of Scaling up Excellence.  He discusses Adobe's move to abolish it's employee stack ranking system.  After the system was eliminated, one Adobe employee noted that a feeling of relief spread throughout the company because the old annual review system was “a soul-less and soul crushing exercise.”]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Fixing Windows 8]]></title>
+            <link>2014-02-01-fixing-windows-8</link>
+            <guid>2014-02-01-fixing-windows-8</guid>
+            <pubDate>Sat, 01 Feb 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[I just saw [this piece](http://jaymachalani.com/blog/2013/12/12/fixing-windows-8) by Jay Machalani about restructuring the UI/UX of Windows 8.  It's a brilliant piece of work! He did significant research to inform his opinions and came up with 5 key design rules to guide his work which are really at the heart of the issues and confusion that users are currently facing.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Facebook Saves a BILLION Dollars via Open Compute Designs]]></title>
+            <link>2014-01-28-facebook-saves-a-billion-dollars-via-open-compute-designs</link>
+            <guid>2014-01-28-facebook-saves-a-billion-dollars-via-open-compute-designs</guid>
+            <pubDate>Tue, 28 Jan 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today at the Open Compute Summit, CEO Mark Zuckerberg said that "In the last three years alone, Facebook has saved more than a billion dollars in building out our infrastructure using Open Compute designs.s]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Billion Dollar March Madness Bracket]]></title>
+            <link>2014-01-22-billion-dollar-march-madness-bracket</link>
+            <guid>2014-01-22-billion-dollar-march-madness-bracket</guid>
+            <pubDate>Wed, 22 Jan 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[You read that right: one billion. Not one million. Not one hundred million. Not five hundred million. One billion U.S. dollars.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[NY FinTech Community is Thriving]]></title>
+            <link>2014-01-13-ny-fintech-community-is-thriving</link>
+            <guid>2014-01-13-ny-fintech-community-is-thriving</guid>
+            <pubDate>Mon, 13 Jan 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node and came across a blog post from [Francesca Krihely](http://francescak.me/blog/2013/04/09/fintech-hackathon-recap/) about the FinTech hackathon in NY from back in April, 2013. This interested me because as a former "insider" in a large financial services company I can see clearly how open source code and tooling is replacing more proprietry code and tooling (for example .net/visual studio) but it requires an entirely different skill set for internal developers.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Supercomputer Weather Visualization in a Browser]]></title>
+            <link>2014-01-02-supercomputer-weather-visualization-in-a-browser</link>
+            <guid>2014-01-02-supercomputer-weather-visualization-in-a-browser</guid>
+            <pubDate>Thu, 02 Jan 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[This is a pretty amazing technology demonstration of what is possible using the currently available open source tooling, open source data, and using cloud service providers for hosting and content delivery.  It was written by Cameron Beccario (@cambecc). Check it out below.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Responsive Design vs. Mobile-First]]></title>
+            <link>2013-12-31-responsive-design-vs-mobile-first</link>
+            <guid>2013-12-31-responsive-design-vs-mobile-first</guid>
+            <pubDate>Tue, 31 Dec 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[I have heard some people speak of "mobile-first" and "responsive design" interchangeably making them sound as if they were one and the same.  However I think there are some subtle differences.  I believe responsive design is the broadest possible definition. It says to me that we are going to target all platforms, screen sizes, pixel densities, etc.  It means that the user experience will be custom tailored to the exact device you just happen to be viewing it with. This should be our ultimate goal, right?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Technology Adoption Curves vs. Birth Year and Life Expectancy]]></title>
+            <link>2014-01-03-adoption-curves-vs-life-expectancy</link>
+            <guid>2014-01-03-adoption-curves-vs-life-expectancy</guid>
+            <pubDate>Tue, 19 Nov 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[Asymco has done a fascinating piece of research mapping technology adoption curves, technology refresh rates, and human lifespan, to predict technology lifetime ownership. "...knowing how what innovations become universal and the speed at which these technologies are replaced can give us an idea of what individuals might experience in their lifetimes."
+]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Apple's Astounding Capital Expenditures]]></title>
+            <link>2013-10-30-apples-astounding-capital-spending</link>
+            <guid>2013-10-30-apples-astounding-capital-spending</guid>
+            <pubDate>Wed, 30 Oct 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[Apple’s most recent 10-K filing with the U.S. Securities and Exchange Commission shows the company has budgeted $11 billion in capital expenditures for fiscal 2014. This is more than 5 times Apple's capital expenditure in 2010 and 57 percent more than the $7 billion it spent in 2013. What is Apple planning to do with all that additional money?
+]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Intrinsic Bias]]></title>
+            <link>2013-10-15-intrinsic-bias</link>
+            <guid>2013-10-15-intrinsic-bias</guid>
+            <pubDate>Tue, 15 Oct 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[As a CIO in a large, publicly owned financial services company I held the responsibility of keeping our clients (and our corporate) data safe and secure.  As the economics of cloud services became compelling the largest hurdle to adoption was "potential security risks", by a large measure.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Work Like Hell]]></title>
+            <link>2013-10-04-work-like-hell</link>
+            <guid>2013-10-04-work-like-hell</guid>
+            <pubDate>Fri, 04 Oct 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[If other people are putting in 40-hour workweeks, and you're putting in 100-hour workweeks, then, even if you're doing the same thing, you will achieve in four months what it takes them a year to achieve.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[My Blogging Setup]]></title>
+            <link>2013-08-06-my-blogging-setup</link>
+            <guid>2013-08-06-my-blogging-setup</guid>
+            <pubDate>Tue, 06 Aug 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blogs need a core concept that will engage your audience.  Placing a post how to install Python on Windows, along with a picture of your favorite band and an assessment of Apple's business strategy all in the same place means you probably won't appeal to anyone in particular.  However a blog called "Ant Farm" that has *every* post focused on raising healthy and happy ants - well that will build an audience for sure.  So if you have, or want, separate audiences you will need separate blogs.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[My Social Media Setup]]></title>
+            <link>2013-08-06-my-social-media-setup</link>
+            <guid>2013-08-06-my-social-media-setup</guid>
+            <pubDate>Tue, 06 Aug 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[Social media is overwhelming - we are inundated with email, text messages, tweets, facebook posts and who knows what else.  How to stay on top of it and share appropriately?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Only Usain Bolt Looks at the Clock]]></title>
+            <link>2013-08-01-only-usain-bolt-looks-at-the-clock</link>
+            <guid>2013-08-01-only-usain-bolt-looks-at-the-clock</guid>
+            <pubDate>Thu, 01 Aug 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[If you watch someone run the 100 meters, they sneak glances around. Sprinters watch each other while they run.  They want to know where are in the pack.  I noticed that only Usain Bolt looks at the clock. Why?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Hosting your Blog on Amazon S3]]></title>
+            <link>2013-07-25-hosting-your-blog-on-amazon-s3</link>
+            <guid>2013-07-25-hosting-your-blog-on-amazon-s3</guid>
+            <pubDate>Thu, 25 Jul 2013 00:00:00 GMT</pubDate>
+            <description><![CDATA[In order to serve your site from S3 you need to first create a bucket to hold the content. So, using the S3 web console create a bucket. Next we need to setup the bucket for web hosting. Click the properties button to edit the properties of your new bucket.  Then go to the Static Website Hosting section and click "Enabled website hosting". I am also using a redirect rule to redirect all errors back to the root of my blog.  That way no one ever gets a 404.  Cool right?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Risk Mitigation Costs Too Much]]></title>
+            <link>2012-11-16-cost-of-reducing-risk</link>
+            <guid>2012-11-16-cost-of-reducing-risk</guid>
+            <pubDate>Fri, 16 Nov 2012 00:00:00 GMT</pubDate>
+            <description><![CDATA[Many large organizations work exceptionally hard minimize "risk".  Ironically, by working so diligently to reduce risk they are paying for it anyway, and reducing innovation at the same time.
+]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Minority Report and Big Data]]></title>
+            <link>2012-10-21-minority-report-and-big-data</link>
+            <guid>2012-10-21-minority-report-and-big-data</guid>
+            <pubDate>Sun, 21 Oct 2012 00:00:00 GMT</pubDate>
+            <description><![CDATA[The United Arab Emirates holds the largest biometric database in the world, the Emirates Identity Authority has announced. The population register of Emirates ID has over **103 million digital fingerprints and over 15 million digital facial recognition records**, which includes multiple records of each UAE resident, and digital signatures as of October 11, 2012, senior officials said.
+]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[TEDx Orange Coast 2012]]></title>
+            <link>2012-10-11-tedx-orange-coast</link>
+            <guid>2012-10-11-tedx-orange-coast</guid>
+            <pubDate>Thu, 11 Oct 2012 00:00:00 GMT</pubDate>
+            <description><![CDATA[Yesterday I had the pleasure of attending the TEDx Orange County conference where the theme was relevance.  Specifically how do you stay relevant in today’s world? As the day progressed this theme blossomed for me. I took away a number of new ideas and perspectives.  I learned things from people whom I expected to learn things from but also from unexpected places, which quite frankly is the best kind of serendipity.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[20.5 Million hits a day using an Amazon Micro server ($15 a month) and Node.js]]></title>
+            <link>2012-04-30-20-million-hits-per-day</link>
+            <guid>2012-04-30-20-million-hits-per-day</guid>
+            <pubDate>Sun, 01 Jul 2012 00:00:00 GMT</pubDate>
+            <description><![CDATA[I have been building a website recently just to get current with the latest web technologies and scaling.  I  saw this post on Hacker News "10 Million hits a day with WordPress using a $15 server" and was intrigued.  It was time to benchmark one of my own applications!]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Apple Reaches for Greatness Without Apology]]></title>
+            <link>2012-05-02-apple-reaches-for-greatness</link>
+            <guid>2012-05-02-apple-reaches-for-greatness</guid>
+            <pubDate>Tue, 29 May 2012 00:00:00 GMT</pubDate>
+            <description><![CDATA[Like many people in the Technology world I watched Apple's iPad announcement this week with intense interest.  Unlike most people I am interested not in the consumer space  - but rather how could this device be used for business.  How could a new category like this be used?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[The Corporate iCloud, part 2]]></title>
+            <link>2011-12-22-corporate-icloud-part-2</link>
+            <guid>2011-12-22-corporate-icloud-part-2</guid>
+            <pubDate>Tue, 01 Nov 2011 00:00:00 GMT</pubDate>
+            <description><![CDATA[In the article I compared what I was doing with Dropbox as a potential corporate version of iCloud.  It turns out there was a LOT more there than meets the eye.  Dropbox may even have **become** iCloud had some things gone a bit differently.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[The Corporate iCloud]]></title>
+            <link>2011-06-10-corporate-icloud</link>
+            <guid>2011-06-10-corporate-icloud</guid>
+            <pubDate>Fri, 10 Jun 2011 00:00:00 GMT</pubDate>
+            <description><![CDATA[Apple’s announcements at this year’s WWDC keynote will have far reaching effects.  Much has already been written about the impacts to you and me as consumers of Apple products.  But let’s stop and think for a moment about how this will affect our perceptions about technology, and how that will translate into the corporate IT space.]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[iPad Goes Corporate]]></title>
+            <link>2010-01-29-ipad-goes-corporate</link>
+            <guid>2010-01-29-ipad-goes-corporate</guid>
+            <pubDate>Fri, 29 Jan 2010 00:00:00 GMT</pubDate>
+            <description><![CDATA[Like many people in the Technology world I watched Apple's iPad announcement this week with intense interest.  Unlike most people I am interested not in the consumer space  - but rather how could this device be used for business.  How could a new category like this be used?]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+        <item>
+            <title><![CDATA[Lessons from Haiti- Never Under Estimate Ease of Use]]></title>
+            <link>2010-01-15-lessons-from-haiti</link>
+            <guid>2010-01-15-lessons-from-haiti</guid>
+            <pubDate>Fri, 15 Jan 2010 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Red Cross, via a company called mGive, has got the major U.S. carriers on board to allow people to very easily donate $10 to the Red Cross via a simple SMS text message. This led to an "unprecedented mobile response," and has raised over $10 million in relief for Haiti.  With text donations peaking at a rate of 10,000 a minute, at $10 per donation, this is raising $100,000 per minute!]]></description>
+            <author>janedoe@example.com (Jane Doe)</author>
+        </item>
+    </channel>
+</rss>
