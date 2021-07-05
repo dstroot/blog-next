@@ -6,14 +6,14 @@ excerpt: A year ago I wrote about how big data, collected from social media
   specifically social data about each of us, has been described as the "new goldrush".  
   Yet many of us are unaware of how technology is enabling the use (and misuse) of our 
   personal data. As a technologist I find this area fascinating and evolving rapidly.
-coverImage: /assets/blog/img/cambridge_analytica.png
+coverImage: /assets/blog/img/cambridge_analytica.jpg
 date: "2018-03-17"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/cambridge_analytica.png
+  url: /assets/blog/img/cambridge_analytica.jpg
 seoURL: ""
 ---
 

@@ -6,14 +6,14 @@ excerpt: >-
   decided that I needed a digital way to share my business (and personal) information, 
   and I wanted to be able to control what I share. One of the side benefits of this 
   is I don't have to share my personal mobile phone number either. 
-coverImage: /assets/blog/img/black_card.png
+coverImage: /assets/blog/img/black_card.jpg
 date: "2019-03-02"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/black_card.png
+  url: /assets/blog/img/black_card.jpg
 seoURL: ""
 ---
 

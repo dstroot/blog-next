@@ -4,14 +4,14 @@ excerpt: Web development has evolved faster than nearly every other software
   engineering discipline. The pace of innovation has been relentless, and
   front-end developers are confronted with new frameworks, tools, and standards
   for “modern” web development **constantly**. Framework fatigue is real thing.
-coverImage: /assets/blog/img/rekit.png
+coverImage: /assets/blog/img/rekit.jpg
 date: "2018-07-20"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/rekit.png
+  url: /assets/blog/img/rekit.jpg
 seoURL: ""
 ---
 

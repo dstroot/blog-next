@@ -5,14 +5,14 @@ excerpt: Most companies still have a separate corporate network, protected by
   etc. Why is it that I can access information which is the most important,
   private, and precious to me, from any computer, via any network, without all
   that extra cost, complexity, overhead, and effort?
-coverImage: /assets/blog/img/citadel.png
+coverImage: /assets/blog/img/citadel.jpg
 date: "2017-04-10"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/citadel.png
+  url: /assets/blog/img/citadel.jpg
 seoURL: ""
 ---
 
