@@ -9,7 +9,7 @@ excerpt: In order to serve your site from S3 you need to first create a bucket
   a 404.  Cool right?
 coverImage: /assets/blog/img/aws_hosting.png
 date: "2013-07-25"
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

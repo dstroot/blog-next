@@ -5,14 +5,14 @@ excerpt: Apple’s announcements at this year’s WWDC keynote will have far
   me as consumers of Apple products.  But let’s stop and think for a moment
   about how this will affect our perceptions about technology, and how that will
   translate into the corporate IT space.
-coverImage: /assets/blog/img/icloud2.jpg
+coverImage: /assets/blog/img/icloud-hero.webp
 date: "2011-06-10"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/icloud2.jpg
+  url: /assets/blog/img/icloud-hero.webp
 seoURL: ""
 ---
 

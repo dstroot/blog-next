@@ -10,7 +10,7 @@ author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/y /fb-server.jpg
+  url: /assets/blog/img/fb-server.jpg
 seoURL: ""
 ---
 

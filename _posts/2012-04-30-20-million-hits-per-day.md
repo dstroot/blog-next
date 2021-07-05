@@ -6,7 +6,7 @@ excerpt: I have been building a website recently just to get current with the
   was time to benchmark one of my own applications!
 coverImage: /assets/blog/img/icloud2.jpg
 date: "2012-07-01"
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -15,7 +15,7 @@ ogImage:
 seoURL: ""
 ---
 
-I have been building a website recently just to get current with the latest web technologies and scaling.  I  saw this post on Hacker News: [10 Million hits a day with WordPress using a $15 server](http://www.ewanleith.com/blog/900/10-million-hits-a-day-with-wordpress-using-a-15-server "10 Million hits a day with WordPress using a $15 server") and was intrigued.  It was time to benchmark one of my own applications ([vizilinkz.com](http://www.vizilinkz.com/ "ViziLinkz")) since it also runs on an Amazon Micro server for now as my development/production machine.
+I have been building a website recently just to get current with the latest web technologies and scaling.  I  saw this post on Hacker News: [10 Million hits a day with WordPress using a $15 server](http://www.ewanleith.com/blog/900/10-million-hits-a-day-with-wordpress-using-a-15-server "10 Million hits a day with WordPress using a $15 server") and was intrigued.  It was time to benchmark one of my own applications since it also runs on an Amazon Micro server for now as my development/production machine.
 
 First, let’s get this out of the way. Amazon will throttle your micro server into the ground if you actually ran this level of traffic for an extended period of time. This [article ](http://gregsramblings.com/2011/02/07/amazon-ec2-micro-instance-cpu-steal/)explains it rather well. However this experiment still illustrates what is possible with this level of virtual hardware. If you actually have high levels of traffic then you already know a micro instance is not for you.
 
@@ -36,7 +36,7 @@ To alter the environment we can set the NODE_ENV environment variable, for examp
 
 This is very important, as many caching mechanisms are only enabled when in production.
 
-So I set environment to production and we are ready to start testing. Like the original WordPress post I am also using blitz.io and therefore had to do some housekeeping setting my application to serve their API key (clever since it prevents you from using blitz.io as a DoS tool). Once all that was done I was ready to run my first load test. I wasn’t really sure what to expect.
+So I set environment to production and we are ready to start testing. I am also using blitz.io and therefore had to do some housekeeping setting my application to serve their API key (clever since it prevents you from using blitz.io as a DoS tool). Once all that was done I was ready to run my first load test. I wasn’t really sure what to expect.
 
 **Let’s run a blitz.io “rush” to see how we’re doing:**
 
@@ -64,5 +64,5 @@ This has profound implications for "corporate IT"!
 
 _References_
 
-*   [http://www.ewanleith.com/blog/900/10-million-hits-a-day-with-wordpress-using-a-15-server](http://www.ewanleith.com/blog/900/10-million-hits-a-day-with-wordpress-using-a-15-server)
-*   [http://gregsramblings.com/2011/02/07/amazon-ec2-micro-instance-cpu-steal/](http://gregsramblings.com/2011/02/07/amazon-ec2-micro-instance-cpu-steal/)
+* [http://www.ewanleith.com/blog/900/10-million-hits-a-day-with-wordpress-using-a-15-server](http://www.ewanleith.com/blog/900/10-million-hits-a-day-with-wordpress-using-a-15-server)
+* [http://gregsramblings.com/2011/02/07/amazon-ec2-micro-instance-cpu-steal/](http://gregsramblings.com/2011/02/07/amazon-ec2-micro-instance-cpu-steal/)

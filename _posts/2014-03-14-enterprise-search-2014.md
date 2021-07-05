@@ -7,14 +7,14 @@ excerpt: 'One of the challenges in a large distributed enterprise is "finding
   file in many different locations: email, shared file systems, intranets,
   etc.  Of course this compounds the issue and drives the desire to save "my
   copy" to "somewhere where I can find it".'
-coverImage: /assets/blog/img/Google_Enterprise_Search.png
+coverImage: /assets/blog/img/google_appliance.jpg
 date: "2014-03-14"
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/Google_Enterprise_Search.png
+  url: /assets/blog/img/google_appliance.jpg
 seoURL: ""
 ---
 

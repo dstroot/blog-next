@@ -3,7 +3,7 @@ title: Setup a CoreOS Playground
 excerpt: "Do you want your own CoreOS fleet?"
 coverImage: /assets/blog/img/coreos_2.png
 date: "2014-06-29"
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

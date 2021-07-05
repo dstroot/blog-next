@@ -9,7 +9,7 @@ author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/y /ncaa-brackets.jpg
+  url: /assets/blog/img/ncaa-brackets.jpg
 seoURL: ""
 ---
 
