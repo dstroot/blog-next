@@ -1,37 +1,45 @@
 ---
-title: "The Polygon of Enterprise Despair"
+title: "The Inertia of Enterprise Despair"
 excerpt: >-
-  As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the same moment, on the same day, Amazon.com is the most valuable company in the world with an $810B valuation, or 184 times greater. Prior to Amazon's founding Sears had everything. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Brand recognition and established customer base, check. Unfortunately for an incumbent, change is much harder than anyone imagines it to be.
-coverImage: "/assets/blog/img/polygon.png"
+  As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the same moment, on the same day, Amazon.com is the most valuable company in the world with an $810B valuation, or 184 times greater. Prior to Amazon's founding Sears had everything. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Brand recognition and established customer base, check. Unfortunately for an incumbent, change is much harder than anyone ever imagines it to be.
+coverImage: "/assets/blog/img/committee.jpg"
 date: "2019-01-06"
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: "/assets/blog/img/polygon.png"
+  url: "/assets/blog/img/committee.jpg"
 seoURL: ""
 ---
 
-When enterprises see the changes wrought by disruptors in music (Spotify), advertising (Google) or retail (Amazon), they wonder what may be in store for them.
-
-As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the same moment, on the same day, Amazon.com is the most valuable company in the world with an$810B valuation, or 184 times greater.
+As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the **same moment**, on the **same day**, Amazon.com is the most valuable company in the world with an$810B valuation, or 184 times greater.
 
 Prior to Amazon's founding Sears had everything. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Brand recognition and established customer base, check.
 
-Unfortunately for an incumbent, change is **much** harder than anyone imagines it to be.
+Unfortunately for an incumbent, change is **much** harder than anyone ever imagines it to be.
 
 > "The most important component of evolution is death. Or, said another way, it’s easier to create a new organism than to change an existing one. Most organisms are highly resistant to change, but when they die it becomes possible for new and improved organisms to take their place. This rule applies to social structures such as corporations as well as biological organisms: very few companies are capable of making significant changes in their culture or business model, so it is good for companies eventually to go out of business, thereby opening space for better companies in the future."
 >
 > <cite>&mdash; John Ousterhout, Stanford professor ([My Favorite Sayings](http://web.stanford.edu/~ouster/cgi-bin/sayings.php))</cite>
 
-Boards should be concerned, and settling for panaceas like innovation studios and occasional hackathons won’t be enough to secure a company’s digital future. There is a huge gulf between the speed and agility of a digital start-up and a large, entrenched incumbent. Not only do enterprises lack the proper digital skills, they simply cannot respond fast enough to react. This inertia has a name - it's called the **Polygon of Enterprise Despair.**
+Boards should be concerned, and settling for panaceas like innovation studios and occasional hackathons won’t be enough to secure a company’s digital future. There is a huge gulf between the speed and agility of a digital start-up and a large, entrenched incumbent. Not only do enterprises lack the proper digital skills, they simply cannot respond fast enough to react. This inertia has a name - it's called the **Intertia of Enterprise Despair.**  
 
-Some of you may have heard of [Paul Shetler](https://www.paulshetler.com/). Paul was the CEO of the Digital Transformation Office and the Chief Digital Officer of the Australian Government's Digital Transformation Agency. I believe Paul coined the term "Square of Enterprise Despair". I have taken some liberties with Paul's ideas and extended them to the "Polygon of Enterprise Despair". It certainly doesn't have the same ring to it, but it is a more complete picture to the challenges of working within a large enterprise.
+It is made of these components:
 
-Tackling the Polygon of Enterprise Despair means reversing the deskilling and learnt helplessness of the organization that feeds it. The reason why so many firms rely on contractors and heavy governance is ultimately because they don’t trust their employees to deliver anymore. In too many companies, that’s for good reason: a BCG report found digital capability and training is lacking, across industries like retail, financial services and consumer goods.
+* Institutional Inertia
+* Cost Allocation
+* Risk Management
+* Capability
+* Hiring Practices
+* Security
+* Outdated Paradigms
+* Regulation
+* Procurement
+* Legacy
+* Change Control
 
-Let's run through each of the facets on the polygon of enterprise despair so we can understand and hopefully counteract them:
+Tackling the Inertia of Enterprise Despair means reversing the deskilling and learnt helplessness of the organization that feeds it. The reason why so many firms rely on contractors and heavy governance is ultimately because they don’t trust their employees to deliver anymore. 
 
 ### 1. Institutional Inertia
 
@@ -53,27 +61,27 @@ Whatever route taken business as usual is no longer an option.
 
 Poor cost allocation models create all manner of suboptimal enterprise behavior. They create a sense of helplessness for the department receiving the allocation. Leaders feel they are unable to manage the allocation amount or service level. Maybe they would like a lower (or higher) service level and are willing to sacrifice (or pay) for the privilege. But the enterprise usually only offers limited options, generally "one price, one service level".
 
-Worse, the models that build up the costs to be allocated are usually only known inside the allocating organization and rarely reflect reality. If the organization receiving the allocation wants to "pull out" and buy the service from a third party they are usually told they can't because that would simply drive up costs for the remaining parties (same pie, bigger slices). So they feel stuck.
+Worse, the models that build up the costs to be allocated are usually only known inside the allocating organization and rarely reflect reality. If the organization receiving the allocation wants to "pull out" and buy the service from a third party they are usually told they can't because that would simply drive up costs for the remaining parties (same pie, bigger slices). 
 
 They conclude that if they can't change the allocation they can make damn sure to get the best possible service level. So they begin to beat on the organization supplying the service for higher service levels. This of course eventually ruins the working relationship between them and continues until all parties thoroughly dislike each other. It goes without saying that things do not move quickly or efficiently at this point because the parties stop speaking to each other, and in really bad cases they actively sabotage each other.
 
-Cost allocations must be completely transparent, and both costs and service levels must be benchmarked against the market. The receiving organization must be given the freedom to opt out. Finally, the enterprise must recognize that some costs should not be allocated, especially for those centralized services that divisions or subsidiaries are forced to adopt.
+Cost allocations must be completely transparent, and both costs and service levels must be benchmarked against the market. The receiving organization must be given the freedom to opt out. Finally, the enterprise must recognize that many costs should simply not be allocated, especially for those centralized services that divisions or subsidiaries are forced to adopt.
 
 ### 3. Risk Management
 
-Enterprises have well-developed risk management muscles, particularly in regulated industries like healthcare or financial services. Since IT is the basis for nearly all business processes within a financial services company, the Risk Management function is always very interested in the consequences of a significant IT failure/outage, or a data breach.
+Enterprises have well-developed risk management muscles, particularly in regulated industries like healthcare or financial services. Since technology is the basis for nearly all business processes within a financial services company, the Risk Management function is always very interested in the consequences of a significant IT failure/outage, or a data breach.
 
-They are so interested that they are very involved in key functions like project delivery and change management. The effect of this involvement is lots of documentation and meetings, two things that are sure to slow anything to a crawl.
+They are so interested that they are very involved in key functions like project delivery and change management. The effect of this involvement is **lots of documentation and meetings**, two things that are sure to slow anything to a crawl.
 
-Like some aspects of security, occassionally the risk management activities are referred to internally as "risk management theatre". It exists to show we have it, and it's primary purpose is management reporting. It is less clear if it truly averts much risk - particularly "black swan" risks. It is usually focused on issues that either occur regularly, or at least have already occurred in the past. It rarely anticipates issues that have never happened before, but of course those are the ones that can actually take down the company.
+Like some aspects of security, occasionally the risk management activities are referred to internally as "risk management theatre". It exists to show we have it, and it's primary purpose is management reporting. It is less clear if it truly averts much risk - particularly "black swan" type risks. It is usually focused on issues that either occur regularly, or at least have already occurred in the past. It rarely anticipates issues that have never happened before, but of course those are the most important risks to avoid. 
 
-The financial crises of 2009 is a great illustration. Does anyone think Bear Stearns or Lehman didn't have a risk management function? Of course they did - they just didn't anticipate or understand the actual risks facing the firms.
+The financial crises of 2009 is a great illustration. Does anyone think Bear Stearns or Lehman didn't have a risk management function? Of course they did - they just didn't anticipate or understand the actual risks facing them.
 
 Another example is a firm I know that created a "fund of funds", containing curated hedge funds. It sold daily liquidity, but the hedge funds only allowed monthly or quarterly liquidity. This worked quite well as money flowed in. It was of course a disaster during the crash. Risk Management never even looked at it ahead of time. But they know they can make departments like IT fill out loads of forms which can be used to create wonderful reports.
 
 Risk Management should a) be skilled enough to actually have a conversation about IT architecture because that is what determines how resilient a company's technology really is, and b) figure out how to reduce their "friction" to forward progress.
 
-Risk management is (by definition) meant to reduce risk, which also by definition promotes the status quo.
+Risk management is (by definition) meant to reduce risk, which also **by definition promotes the status quo**.
 
 ### 4. Capability
 
@@ -91,7 +99,7 @@ Conversely, in a large organization the process goes something like this:
 
 Basically, this step will allow the human resources manager, hiring manager, and other members of management to determine if we really need this new position and define what the new employee will be required to do in the new position.
 
-#### Step 2: Create a job description.
+#### Step 2: Create a job description
 
 Before anything else, the organization must first define exactly what it needs. Job analysis involves identification of the activities of the job, and the attributes that are needed for it. These are the main parts that will make up the job description. According to human resource managers, the job description is the “core of a successful recruitment process”.
 
@@ -131,7 +139,7 @@ Processes around this vary, but essentially, one or more security experts descen
 
 The beatings will continue until risks are identified (I’ve never heard of there being none). The outcome is a report outlining the set of risks that have been identified. These risks may need to be ‘signed off’ by someone senior so that responsibility lies with them if there is a breach. That process in itself is arduous (especially when the senior management person doesn’t fully understand the risk) and will be repeated on a regular basis until the risks are sufficiently ‘mitigated’ through further engineering effort or process controls.
 
-The real issue is very few senior leaders understand IT security and into the knowledge gap flows money and resources resulting in "lots of security" with questionable real effectiveness and measurable decreases in productivity across the company
+The real issue is very few senior leaders understand IT security and into the knowledge gap flows money and resources.  The result is "lots of security" with questionable real effectiveness, measurable increases in cost and schedule, and measurable decreases in productivity (and possible the morale of capable engineers) across the company.
 
 ### 6. Outdated Paradigms
 
@@ -149,9 +157,9 @@ Can enterprises using spreadsheets from 1995 transform into digital winners?
 
 #### Agile-ish and Scrum-Theater
 
-Most companies embarking on ‘digital transformation’ are "consciously incompetent". They know what’s not working, and they know they have skill gaps and process issues, but are under the illusion that if they just adopt "the right process" it will save them. These companies frequently adopt an Agile or Lean process in name but not in practice. This is what’s sometimes referred to as scrum-theater.
+Most companies embarking on ‘digital transformation’ are "consciously incompetent". They know what’s not working, and they know they have skill gaps and process issues, but are under the illusion that if they just adopt "the right process" it will save them. These companies frequently adopt an Agile or Lean process in name but not in practice. This is what’s sometimes referred to as agile-theater.
 
-![The polygon of enterprise despair](/assets/blog/img/agile_manifesto.jpg)
+![Agile-ish Manifesto](/assets/blog/img/agile_manifesto.jpg)
 
 If your software team is the only Agile part of the product team, that’s scrum-theater. At this stage you’re gathering little or no market feedback. Product backlogs are prioritized around dev and engineering and not for customer value. Product teams are rushing to build solutions first before validating market value.
 
@@ -173,13 +181,13 @@ So to ‘simplify’ things large enterprises often create a set of rules that c
 
 These rules become huge inhibitors of change. Regulators embrace paradigms that are rooted in the experiences of software built in previous decades - because that is what worked back then. And if you want to change that, it will itself likely take years and agreement from multiple parties who are unlikely to want to risk losing their job. So you can end up in a situation where you are forced to work in a way prescribed years ago by your internal legal and compliance team, which are in turn based on interpretations of regulations which were written years before. All based on software development processes that were in vogue years before that!
 
-Obviously, this slows things down further and makes change quite difficult. Want to bring development and operations closer together and form a "devops" team? Well that's not how we did it 25 years ago! Therefore it's not recognized as best practice by the regulators and would definitely be frowned upon.
+Obviously, this slows things down further and makes change quite difficult. Want to bring development and operations closer together and form a "DevOps" team? Well that's not how we did it 25 years ago! Therefore it's not recognized as best practice by the regulators and would definitely be frowned upon.
 
 ### 8. Procurement
 
-As an enterprise grows it suddenly wakes up one day and realizes there are 50 departments/divisions/subsidiaries all buying "widgets" and if it could just coordinate and consolidate all "widget spend" it would save money. The logical thing to do is to create a centralized purchasing function to acquire widgets at the lowest possible price.
+As an enterprise grows up it suddenly wakes up one day and realizes there are 50 departments/divisions/subsidiaries all buying "widgets" and if it could just coordinate and consolidate all "widget spend" it would save money. The logical thing to do is to create a centralized purchasing function to acquire widgets at the lowest possible price.
 
-There are many ways in which this perfectly sensible idea goes wrong. The first of which is that the new head of widget procurement and the widget procurement officers and analysts all must justify their roles. It wouldn't make sense spending $1M annually to operate our widget procurement office while only saving$500k on widgets, would it?
+There are so many ways in which this perfectly sensible idea goes wrong. The first of which is that the new head of widget procurement and the widget procurement officers and analysts all must justify their roles. It wouldn't make sense spending $1M annually to operate our widget procurement office while only saving $500k on widgets, would it?
 
 The logical responses are:
 
