@@ -1,5 +1,5 @@
 ---
-title: Can you spot an underfunded Technology department?
+title: Can you Spot an Underfunded Technology Department?
 excerpt: People go into technology because they love building new things, solving business problems, and making businesses operate better. The last 
   thing on earth most technologists want to say is “no”.  When your technology team starts telling you no it may be that they are feeling overwhelmed.  
   There are many unintuitive signs that indicate a technology team might be overwhelmed or underfunded, such as buying premium support contracts, or using expensive 
