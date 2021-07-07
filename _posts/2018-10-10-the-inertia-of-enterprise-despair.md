@@ -13,7 +13,7 @@ ogImage:
 seoURL: ""
 ---
 
-As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the **same moment**, on the **same day**, Amazon.com is the most valuable company in the world with an $810B dollar valuation, or **184 times greater**.
+As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the **same moment**, on the **same day**, Amazon.com is the most valuable company in the world with an $810 billion dollar valuation, or **184 times greater**.
 
 Prior to Amazon's founding Sears had everything going for it. Brand recognition and established customer base, check. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Bricks and mortar stores in addition to catalog sales, check.
 
@@ -46,9 +46,9 @@ Enterprises are realizing they are now becoming **software companies**, and the 
 
 Transformation by consensus, or by occasional hackathon, will not work, because transformation is not iteration from a low baseline: it requires making fundamental changes to an organization’s structure and processes. Digital transformation is about **business transformation**.  It involves making fundamental changes to the organization's core processes and workforce.
 
-Organizations that want to thrive in the digital age need to wield the political will to radically transform themselves, rather than adopting superficial solutions. They must redesign how they operate, redesign their internal structure, and re-staff. Given what we know about the challenges of organizational change this will likely **fail**.
+Organizations that want to thrive in the digital age need to wield the political will to radically transform themselves, rather than adopting superficial solutions. They must redesign how they operate, redesign their internal structure, and re-staff. Given what we know about the challenges of organizational change this will likely fail.
 
-What may work is to create a "digital as a business" organization that is completely segregated the parent company. This new organization can recruit the talent it needs and operate like a startup. This is the clearest way to slay the Inertia of Enterprise Despair, and compete on a level playing field with the "Industry+Tech" startups that plan to make you irrelevant.
+What may work is to create a "digital" organization that is completely segregated the parent company. This new organization can recruit the talent it needs and operate like a startup. This is the clearest way to slay the Inertia of Enterprise Despair, and compete on a level playing field with the "Industry+Tech" startups that plan to make you irrelevant.
 
 The challenge is to make this new organization as separate as possible, including location - and it has to be able to choose what corporate functions it taps into, otherwise it is yoked to the same "chassis" as the parent. Many organizations have created in-house VC funds to seek out promising startups and take a stake in them to secure their digital future. This approach creates the maximum amount of independence and separation.
 
