@@ -3,7 +3,7 @@ title: Are we Paying the Ransom or Not?
 excerpt: The answer will 
   depend primarily on how quickly the technology team contained the infection, how much effort 
   it will be to eradicate the malware and restore the systems and data, and whether backups are immutable.
-  Interestingly it takes the same amount of time if you pay the ransom or not!
+  Interestingly, it takes the same amount of time if you pay the ransom or not!
 coverImage: /assets/blog/img/ransomware.jpg
 date: "2021-07-10"
 published: true
