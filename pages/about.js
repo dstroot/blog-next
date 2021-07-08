@@ -26,7 +26,7 @@ export default function About() {
                 layout="fill"
               />
             </div>
-            <div className="flex-initial -mt-2 md:-mt-1 lg:-mt-3">
+            <div className="flex-initial -mt-2 md:-mt-1 lg:mt-1">
               <PostTitle>About Me</PostTitle>
             </div>
           </div>
@@ -44,10 +44,11 @@ export default function About() {
                 senior leadership roles, including Global CIO of Allianz Global
                 Investors where I was accountable for over $500M USD in annual
                 technology spend. I held a leadership role within Accenture
-                where digitally transformed a trillion-dollar mutual fund
-                manager’s complete set of trading, settlement, portfolio
-                accounting, fund performance & risk measurement systems. I
-                helped launch the first Internet Bank (Wingspan Bank).
+                where I led a team of over 100 people who digitally transformed
+                a trillion-dollar mutual fund manager’s complete set of trading,
+                settlement, portfolio accounting, fund performance & risk
+                measurement systems. I helped launch the first Internet Bank
+                (Wingspan Bank).
               </p>
               <p>
                 I have been a Chief Information Officer/Chief Technology Officer
@@ -60,43 +61,75 @@ export default function About() {
                 What is interesting about me is I am still a
                 &quot;hands-on&quot; leader. I have over 150 code repositories
                 on GitHub; spanning many different languages and technologies. I
-                have contributed to open source projects where possible to give
-                back, but also simply because I enjoy it. I LOVE building
-                things, for example this website, and I actually still miss my
-                days as a programmer where I could focus on a single problem
-                domain.
+                actually still miss my days as a programmer where I could focus
+                on a single problem domain.
               </p>
-              <small>
-                <h3>Example Open Source Contributions:</h3>
-                <ul>
-                  <li>Skeleton (maintainer)</li>
-                  <li>Boostrap (contributor)</li>
-                  <li>Kubernetes(contributor)</li>
-                  <li>Helmet (contributor)</li>
-                </ul>
-                <h3>Where I’ve Worked</h3>
-                <ul>
-                  <li>Associate Partner: Accenture</li>
-                  <li>Global CIO: Allianz Global Investors</li>
-                  <li>
-                    Chief Technology Officer: Santa Barbara Tax Products Group
-                  </li>
-                  <li>Founder: Verite Data Science</li>
-                  <li>
-                    Chief Information Officer: Retirement Services Division,
-                    Pacific Life
-                  </li>
-                </ul>
-                <h3>Community Service</h3>
-                <ul>
-                  <li>Board Member, Ronald McDonald House, Los Angeles</li>
-                  <li>
-                    Technology Committee Member, Santa Margarita Catholic High
-                    School
-                  </li>
-                </ul>
-              </small>
-              <p className="mt-10">
+              <h3>
+                <a href="https://dstroot.github.io/readme/">My Readme</a>
+              </h3>
+
+              <h3>Where I’ve Worked</h3>
+              <ul>
+                <li>
+                  Associate Partner:{" "}
+                  <a href="https://www.accenture.com/us-en">Accenture</a>
+                </li>
+                <li>
+                  Global Chief Information Officer:{" "}
+                  <a href="https://www.allianzgi.com/">
+                    Allianz Global Investors
+                  </a>
+                </li>
+                <li>
+                  Chief Technology Officer:{" "}
+                  <a href="https://www.sbtpg.com/">
+                    Santa Barbara Tax Products Group
+                  </a>
+                </li>
+                <li>
+                  Founder:{" "}
+                  <a href="https://veritedatascience.com/">
+                    Verite Data Science
+                  </a>
+                </li>
+                <li>
+                  Chief Information Officer: Retirement Services Division,{" "}
+                  <a href="https://www.pacificlife.com/">Pacific Life</a>
+                </li>
+              </ul>
+              <h3>Community Service</h3>
+              <ul>
+                <li>
+                  Board Member,{" "}
+                  <a href="https://rmhcsc.org/">
+                    Ronald McDonald House, Los Angeles
+                  </a>
+                </li>
+                <li>
+                  Technology Committee Member,{" "}
+                  <a href="https://www.smhs.org/">
+                    Santa Margarita Catholic High School
+                  </a>
+                </li>
+              </ul>
+              <h3>Example Open Source Contributions</h3>
+              <ul>
+                <li>
+                  <a href="https://github.com/dstroot/skeleton">Skeleton</a>{" "}
+                  (maintainer)
+                </li>
+                <li>
+                  <a href="https://getbootstrap.com/">Bootstrap</a>{" "}
+                  (contributor)
+                </li>
+                <li>
+                  <a href="https://kubernetes.io/">Kubernetes</a> (contributor)
+                </li>
+                <li>
+                  <a href="https://helmetjs.github.io/">Helmet</a> (contributor)
+                </li>
+              </ul>
+              <p className="mt-10 leading-none">
                 <small>
                   <em>
                     Dan holds a BA in Economics from the University of

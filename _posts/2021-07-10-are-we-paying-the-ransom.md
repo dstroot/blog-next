@@ -21,7 +21,7 @@ seoURL: ""
 
 The Colonial Pipeline breach that crippled the East Coast’s fuel supply recently was not particularly sophisticated. It has been traced back to a VPN login that was compromised. The credentials had leaked already and appeared in a dark web password cache. The VPN credentials allowed the attackers to gain access to Colonial's network by simply logging in (multi-factor authentication was not in use). Once inside they were able to gain elevated privileges to encrypt files.
 
-Companies that are attacked, and pay the ransom, are typically less secure than most. However even with robust security, it will [never be perfect](https://www.danstroot.com/posts/2015-09-26-is-it-secure).  Therefore, **recovery** should be a higher focus.
+Companies that are attacked, and pay the ransom, are typically less secure than most. However even with robust security, it will [never be perfect](/posts/2015-09-26-is-it-secure).  Therefore, **recovery** should be a higher focus.
 
 * Can we respond in the containment phase fast enough?
 * Do we know our data is backed up in immutable format?

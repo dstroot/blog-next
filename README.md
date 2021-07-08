@@ -14,6 +14,14 @@ This project is deployed on [Vercel](https://vercel.com/new?utm_source=github&ut
 
 https://github.com/vercel/next.js/tree/canary/examples/blog-starter
 
+Made With:
+
+* [Tailwind](https://tailwindcss.com/)
+* [Next.js](https://nextjs.org/)
+* [Vercel](https://vercel.com/home) Hosting & Analytics
+* [React](https://reactjs.org/)
+* [Hero Icons](https://heroicons.com/)
+
 TODO
 
 - [X] Add "Edit on GitHub" Link
