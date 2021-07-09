@@ -27,7 +27,7 @@ Web development has evolved faster than nearly every other software engineering 
 
 The positive aspects of all the "churn" in the web development ecosystem are some truly incredible innovations that have fundamentally changed web development to enable much richer, engaging, and performant web "applications".
 
-One of the best things to come along lately are **progressive web applications**. Progressive web apps are "installable" and provide user experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser, no install required. They are [responsive](https://danstroot.com/2013/12/31/responsive-design-vs.-mobile-first/) to screen size, pixel density and orientation. They can load quickly (even _without_ an Internet connection), can have an icon on the home screen, and can run as an app with a top-level, full screen experience.
+One of the best things to come along lately are **progressive web applications**. Progressive web apps are "installable" and provide user experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser, no install required. They are [responsive](/2013-12-31-responsive-design-vs.-mobile-first) to screen size, pixel density and orientation. They can load quickly (even _without_ an Internet connection), can have an icon on the home screen, and can run as an app with a top-level, full screen experience.
 
 > By the way **this** blog is a progressive web app and has been for a couple years. Boom.
 
@@ -61,7 +61,7 @@ Your site will also rank lower in Google’s search results if it is not served 
 
 The **not** modern web:
 
-![No TLS](/img/no-TLS.png)
+![No TLS](/assets/blog/img/no-TLS.png)
 
 #### So how do you build a progressive, TLS-secured, **web application**<br> - that gets **perfect** marks <small>(Lighthouse, Qualys and Securityheaders.com</small>)<br> - over a **weekend**<br> - and deploy it for **free**?
 
@@ -116,15 +116,15 @@ I deployed it using Google Firebase Hosting - deploying your app from a local di
 
 Perfect Lighthouse scores:
 
-![Lighthouse](/img/Lighthouse_Report.png)
+![Lighthouse](/assets/blog/img/Lighthouse_Report.png)
 
 A+ Qualys Score:
 
-![Qualys SSL Labs](/img/SSL_Labs.png)
+![Qualys SSL Labs](/assets/blog/img/SSL_Labs.png)
 
 A+ Security Headers Score:
 
-![Security Headers](/img/security_headers.png)
+![Security Headers](/assets/blog/img/security_headers.png)
 
 #### References
 

@@ -55,6 +55,7 @@ export const MoreStories = ({ posts }) => {
                 slug={post.slug}
                 excerpt={post.excerpt}
                 stats={post.stats}
+                // fileName={post.fileName}
                 onIsVisible={() => onIsVisible(index)}
               />
             </div>

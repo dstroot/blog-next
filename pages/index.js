@@ -49,6 +49,8 @@ export async function getStaticProps() {
     "slug",
     "author",
     "coverImage",
+    "fileName",
+    "stats",
   ]);
 
   // build rss feed when site builds

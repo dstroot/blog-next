@@ -13,6 +13,7 @@ export const PostPreview = ({
   author,
   slug,
   stats,
+  // fileName,
   onIsVisible,
 }) => {
   const ref = useRef();
