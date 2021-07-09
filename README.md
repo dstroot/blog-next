@@ -26,6 +26,7 @@ TODO
 
 - [X] Add "Edit on GitHub" Link
 - [X] Add Syntax Highlighting
+- [X] Add emoji (https://github.com/rhysd/remark-emoji)
 - [X] Add Dark/Light Mode
 - [X] Add About Me Page
 - [X] Create a nice footer
