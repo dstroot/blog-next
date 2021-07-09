@@ -21,12 +21,14 @@ Made With:
 * [Vercel](https://vercel.com/home) Hosting & Analytics
 * [React](https://reactjs.org/)
 * [Hero Icons](https://heroicons.com/)
+* [Remark](https://github.com/remarkjs) Markdown processing
+* [Gray Matter](https://github.com/jonschlinkert/gray-matter) YAML Front Matter
 
 TODO
 
 - [X] Add "Edit on GitHub" Link
 - [X] Add Syntax Highlighting
-- [X] Add emoji (https://github.com/rhysd/remark-emoji)
+- [X] Add emoji support (https://github.com/rhysd/remark-emoji)
 - [X] Add Dark/Light Mode
 - [X] Add About Me Page
 - [X] Create a nice footer
@@ -37,3 +39,4 @@ TODO
 - [X] Add RSS feed
 - [ ] Add analytics (Vercel, Plausible, GA, or?)
 - [X] 100 Lighthouse Scores
+- [X] Pseudo infinite scrolling - scroll in chunks to end of list - speeds initial page load
