@@ -72,11 +72,11 @@
   }
 
   .markdown a {
-    @apply text-blue-500;
+    @apply text-blue-500 dark:text-blue-300;
   }
 
   .markdown a:hover {
-    @apply text-blue-700 dark:text-blue-300;
+    @apply text-blue-700 dark:text-blue-500;
   }
 
   .markdown pre {
