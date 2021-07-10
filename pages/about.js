@@ -1,12 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-
 import { Container } from "../components/Container";
 import { Header } from "../components/Header";
 import { PostTitle } from "../components/PostTitle";
 import { Layout } from "../components/Layout";
 import { CMS_NAME, ALERT } from "../lib/constants";
-import markdownStyles from "../components/markdown-styles.module.css";
 
 export default function About() {
   return (
@@ -32,7 +30,7 @@ export default function About() {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className={markdownStyles["markdown"]}>
+            <div className="markdown">
               <h2>
                 I love building things. Made in California. Family man,
                 technologist and Hacker News aficionado. Eternally curious.
