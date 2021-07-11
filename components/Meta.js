@@ -1,4 +1,5 @@
 import Head from "next/head";
+// import Script from "next/script";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 
 export const Meta = () => {
@@ -52,6 +53,14 @@ export const Meta = () => {
         async
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
       ></script>
+      {/* <Script
+        strategy="beforeInteractive"
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"
+      />
+      <Script
+        strategy="afterInteractive"
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
+      /> */}
 
       {/*
           The page supports both dark and light color schemes,
@@ -66,6 +75,27 @@ export const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`${CMS_NAME}`} />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+
+      {/* 
+      Global Site Tag (gtag.js) - Google Analytics 
+      https://blog.jarrodwatts.com/track-user-behaviour-on-your-website-with-google-analytics-and-nextjs
+      https://nextjs.org/docs/basic-features/script
+      */}
+      {/* <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'XXXXXXXXXX', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script> */}
     </Head>
   );
 };
