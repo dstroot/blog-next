@@ -1,30 +1,26 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
-// When dealing with a server-side rendered application (through
-// frameworks like Gatsby or Next, or any sort of SSR setup), it can
-// be useful to know whether you're rendering on the server or the client.
-function useHasMounted() {
-  const [hasMounted, setHasMounted] = useState(false);
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-  return hasMounted;
-}
-
 export const ThemeChanger = () => {
-  const hasMounted = useHasMounted();
-  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, theme, setTheme } = useTheme();
   const divStyle = {
     height: "30px",
     width: "30px",
   };
 
-  if (!hasMounted) {
-    // To avoid Content Layout Shift rendering a
-    // skeleton div until mounted on the client side.
-    return <div style={divStyle}> </div>;
-  }
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), []);
+
+  // if theme is 'system' change it to the resolved theme
+  useEffect(() => {
+    if (theme === "system") {
+      setTheme(resolvedTheme);
+    }
+  }, [resolvedTheme, theme, setTheme]);
+
+  // if not mounted show a placeholder
+  if (!mounted) return <div style={divStyle}> </div>;
 
   // When mounted on client, we can show the UI
   return (
