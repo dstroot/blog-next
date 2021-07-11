@@ -38,5 +38,7 @@ TODO
 - [X] Custom 404 page
 - [X] Add RSS feed
 - [ ] Add analytics (Vercel, Plausible, GA, or?)
+- [X] Add Archive page
+- [ ] Add Search?
 - [X] 100 Lighthouse Scores
 - [X] Pseudo infinite scrolling - scroll in chunks to end of list - speeds initial page load

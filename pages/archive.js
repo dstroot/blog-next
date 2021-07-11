@@ -1,9 +1,9 @@
 import Head from "next/head";
-
 import { Container } from "../components/Container";
-import { List } from "../components/List";
+import { Archive } from "../components/Archive";
 import { Header } from "../components/Header";
 import { Layout } from "../components/Layout";
+import { PostTitle } from "../components/PostTitle";
 import { getAllPosts } from "../lib/api";
 import { CMS_NAME, ALERT } from "../lib/constants";
 
@@ -13,12 +13,15 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · List</title>
+        <title>{CMS_NAME} · Archive</title>
       </Head>
       <Layout alert={ALERT}>
         <Container>
           <Header />
-          {posts.length > 0 && <List posts={posts} />}
+          <PostTitle>Archive</PostTitle>
+          <div className="max-w-2xl mx-auto mb-10 markdown">
+            {posts.length > 0 && <Archive posts={posts} />}
+          </div>
         </Container>
       </Layout>
     </>
@@ -28,14 +31,14 @@ export default function Index({ allPosts }) {
 export async function getStaticProps() {
   const allPosts = getAllPosts([
     "title",
-    "excerpt",
+    // "excerpt",
     "date",
     "published",
     "slug",
     // "author",
     // "coverImage",
     // "fileName",
-    "stats",
+    // "stats",
   ]);
 
   return {
