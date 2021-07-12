@@ -13,16 +13,22 @@ export const ThemeChanger = () => {
   useEffect(() => setMounted(true), []);
 
   // if theme is 'system' change it to the resolved theme
+  // tailwind needs body class to be "light" or "dark"
   useEffect(() => {
-    if (theme === "system") {
-      setTheme(resolvedTheme);
+    if (mounted) {
+      if (resolvedTheme === undefined && theme === undefined) {
+        setTheme("light"); // light is default
+      }
+      if (theme === "system") {
+        setTheme(resolvedTheme);
+      }
     }
-  }, [resolvedTheme, theme, setTheme]);
+  }, [resolvedTheme, theme, setTheme, mounted]);
 
-  // if not mounted show a placeholder
+  // if not mounted return a placeholder
   if (!mounted) return <div style={divStyle}> </div>;
 
-  // When mounted on client, we can show the UI
+  // When mounted on client, show the UI
   return (
     <div
       className="cursor-pointer block ml-auto mr-0"
@@ -82,3 +88,13 @@ export const ThemeChanger = () => {
     </div>
   );
 };
+
+/**
+{theme !== undefined && (
+  <select value={theme} onChange={e => setTheme(e.target.value)}>
+    <option value="dark">Dark</option>
+    <option value="light">Light</option>
+    <option value="system">System</option>
+  </select>
+)}
+ */
