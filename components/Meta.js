@@ -5,18 +5,13 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 export const Meta = () => {
   return (
     <Head>
-      <link rel="manifest" href="/favicon/site.webmanifest" />
+      <link rel="manifest" href="site.webmanifest" />
       <link
         rel="apple-touch-icon"
         sizes="192x192"
-        href="/favicon/maskable_icon_x192.png"
+        href="maskable_icon_x192.png"
       />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon/favicon.png"
-      />
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
       {/* <link
         rel="icon"
         type="image/png"
