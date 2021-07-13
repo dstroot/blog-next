@@ -44,6 +44,10 @@ module.exports = {
     // extend: { translate: ["dark"] },
   },
   plugins: [],
+  corePlugins: {
+    // ...
+    backgroundImage: false,
+  },
 };
 
 /*

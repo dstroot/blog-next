@@ -6,10 +6,10 @@ export const ReadMore = ({ slug, stats }) => {
       <a>
         <div className="flex items-center space-x-3">
           <div className="flex-initial">
-            <p className="transition-colors duration-300 text-gray-900 dark:text-gray-100 font-semibold hover:underline">
+            <p className="transition-colors text-gray-900 dark:text-gray-100 font-semibold hover:underline">
               Read More
             </p>
-            <p className="transition-colors duration-300 text-gray-600 dark:text-gray-300 text-sm">
+            <p className="transition-colors text-gray-600 dark:text-gray-300 text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 inline-block -mt-1"

@@ -15,10 +15,10 @@ export const Avatar = ({ name, picture, size, date }) => {
             className="flex-initial rounded-full"
           />
           <div className="flex-auto">
-            <p className="transition-colors duration-300 text-gray-900 dark:text-gray-100 text-base sm:text-xl lg:text-base xl:text-xl font-semibold mb-0 hover:underline">
+            <p className="transition-colors text-gray-900 dark:text-gray-100 text-xl font-semibold mb-0 hover:underline">
               Dan Stroot
             </p>
-            <p className="transition-colors duration-300 text-gray-600 dark:text-gray-300 text-sm">
+            <p className="transition-colors text-gray-600 dark:text-gray-300 text-sm">
               <DateFormatter dateString={date} />
             </p>
           </div>
