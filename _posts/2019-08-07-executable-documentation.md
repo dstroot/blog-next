@@ -127,4 +127,3 @@ So you take this concept pretty far!
 [Record shell sessions](https://www.youtube.com/watch?v=tweyWNr6X18)</br>
 [NYT - The Checklist](https://www.newyorker.com/magazine/2007/12/10/the-checklist)</br>
 [The Simple Genius of Checklists, from B-17 to the Apollo Missions](https://blog.nuclino.com/the-simple-genius-of-checklists-from-b-17-to-the-apollo-missions)
-
