@@ -8,7 +8,7 @@ export const Footer = () => {
       <Container>
         <div className="flex space-y-4">
           <div className="flex-grow">
-            <div className="flex flex-row items-center">
+            {/* <div className="flex flex-row items-center">
               <div className="flex-initial">
                 <Image
                   src="/assets/blog/authors/dan.jpeg"
@@ -23,13 +23,13 @@ export const Footer = () => {
                   Dan Stroot
                 </h3>
               </div>
-            </div>
+            </div> */}
             <p className="md:text-xl mt-3">
               I love building things. Family man, technologist and Hacker News
               aficionado. Eternally curious.
             </p>
           </div>
-          <div className="flex-shrink space-y-4">
+          {/* <div className="flex-shrink space-y-4">
             <div className="px-4">
               <a
                 href="https://www.linkedin.com/in/danstroot"
@@ -81,23 +81,26 @@ export const Footer = () => {
                 </svg>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center mt-4 lg:mt-6 border-t-2 border-gray-300 pt-2">
+        {/* <div className="flex flex-col md:flex-row justify-between items-center mt-4 lg:mt-6 border-t-2 border-gray-300 pt-2">
           <div className="text-sm text-center md:text-left">
             &copy;{year.getFullYear()} Dan Stroot. All rights reserved.
           </div>
           <div className="text-sm mt-0 text-center md:text-right">
             Crafted with ♥️ in California.
           </div>
-        </div>
+        </div> */}
       </Container>
 
       <Container>
         <div class="flex flex-col md:flex-row items-center justify-between text-sm py-3">
           <div class="flex flex-wrap min-w-0 whitespace-nowrap items-center space-x-3 order-2 md:order-1">
-            <div class="mr-2">GitHub Inc. © 2021</div>
-            <a
+            <div class="mr-2">
+              &copy;&nbsp;{year.getFullYear()} Dan Stroot. Crafted with ♥️ in
+              California.
+            </div>
+            {/* <a
               class="p-2"
               href="https://docs.github.com/en/github/site-policy/github-terms-of-service"
             >
@@ -108,7 +111,7 @@ export const Footer = () => {
               href="https://docs.github.com/en/github/site-policy/github-privacy-statement"
             >
               Privacy
-            </a>
+            </a> */}
           </div>
           <div class="flex items-center space-x-1 order-1 md:order-1">
             <a class="p-2" href="https://twitter.com/github">
