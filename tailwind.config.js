@@ -38,6 +38,10 @@ module.exports = {
       lineHeight: {
         tight: 1.2,
       },
+      // backgroundImage: (theme) => ({
+      //   "footer-texture":
+      //     "url('/assets/blog/img/universe_generative_pattern.png')",
+      // }),
     },
   },
   variants: {
@@ -45,8 +49,11 @@ module.exports = {
   },
   plugins: [],
   corePlugins: {
-    // ...
     backgroundImage: false,
+    float: false,
+    objectFit: false,
+    objectPosition: false,
+    animation: false,
   },
 };
 
