@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "./Container";
 
 export const Footer = () => {
@@ -31,15 +32,9 @@ export const Footer = () => {
               Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
               {year.getFullYear()}, Dan Stroot.
             </div>
-            <a className="p-2 hover:text-gray-500" href="/archive">
-              Post Archive
-            </a>
-            {/* <a
-              className="p-2"
-              href="https://docs.github.com/en/github/site-policy/github-privacy-statement"
-            >
-              Privacy
-            </a> */}
+            <Link href="/archive" className="p-2 hover:text-gray-500">
+              <a>Post Archive</a>
+            </Link>
           </div>
           <div className="flex items-center space-x-1 order-1 md:order-1">
             <a
