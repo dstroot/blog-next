@@ -41,6 +41,8 @@ The GitHub Copilot editor extension sends your comments and code to the GitHub C
 
 3. Microsoft offers a very extensible and widely used Integrated Development Environment (IDE) called Visual Studio Code, or VSCode.  GitHub Copilot is available today only as a Visual Studio Code extension.
 
+> For now, we’re focused on delivering the best experience in Visual Studio Code only.
+
 Copilot will **drive programmers to use VSCode** because when they use VSCode and Copilot they will be more productive. The code suggestions they choose from Copilot will further train Copilot so eventually it will make even better suggestions. Programers will have an incentive to save their code on GitHub because eventually it will improve Copilot, which further improves their productivity and code quality.  
 
 This virtuous circle is a way to s.  
