@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { Container } from "./Container";
 import { CMS_NAME } from "../lib/constants";
 
@@ -33,9 +33,9 @@ export const Footer = () => {
               Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
               {year.getFullYear()}, Dan Stroot.
             </div>
-            <Link href="/archive" className="p-2 hover:text-gray-500">
+            {/* <Link href="/archive" className="p-2 hover:text-gray-500">
               <a>Post Archive</a>
-            </Link>
+            </Link> */}
           </div>
           <div className="flex items-center space-x-1 order-1 md:order-1">
             <a
