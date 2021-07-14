@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./Container";
+import { CMS_NAME } from "../lib/constants";
 
 export const Footer = () => {
   const year = new Date(); // evergreen copyright year
@@ -11,7 +12,7 @@ export const Footer = () => {
           <div className="mb-4 md:mr-8 md:mb-0">
             <Image
               src="/assets/blog/authors/dan.jpeg"
-              alt="Dan Stroot"
+              alt={CMS_NAME}
               width={85}
               height={85}
               layout="fixed"

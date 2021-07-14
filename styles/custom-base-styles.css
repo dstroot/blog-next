@@ -59,7 +59,7 @@
   }
 }
 
-/* .image-container {
+.image-container {
   width: 100%;
 }
 .image-container > div {
@@ -70,7 +70,7 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
-} */
+}
 
 .video-container {
   position: relative;
