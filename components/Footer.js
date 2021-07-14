@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <footer className="transition-colors dark:bg-dark-3 dark:text-gray-300 bg-gray-100 text-gray-600 py-4 lg:py-6">
       <Container>
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center mb-2">
           <div className="mb-4 md:mr-8 md:mb-0">
             <Image
               src="/assets/blog/authors/dan.jpeg"
@@ -27,8 +27,8 @@ export const Footer = () => {
         {/* 
             Bottom Section
         */}
-        <div className="flex flex-col md:flex-row items-center justify-between text-sm py-3">
-          <div className="flex flex-wrap min-w-0 whitespace-nowrap items-center space-x-3 order-2 md:order-1">
+        <div className="flex flex-col md:flex-row items-center justify-between text-sm">
+          <div className="flex flex-wrap min-w-0 whitespace-nowrap items-center order-2 md:order-1">
             <div className="mr-2">
               Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
               {year.getFullYear()}, Dan Stroot.
@@ -37,7 +37,7 @@ export const Footer = () => {
               <a>Post Archive</a>
             </Link> */}
           </div>
-          <div className="flex items-center space-x-1 order-1 md:order-1">
+          <div className="flex items-center space-x-2 order-1 md:order-2 mb-3 md:mb-0">
             <a
               className="p-2 hover:text-gray-500"
               href="https://twitter.com/danstroot"
