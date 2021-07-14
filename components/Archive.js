@@ -1,5 +1,5 @@
-import { parseISO } from "date-fns";
 import Link from "next/link";
+import { parseISO } from "date-fns";
 import { DateFormatter } from "./DateFormatter";
 
 export const Archive = ({ posts }) => {
@@ -8,8 +8,8 @@ export const Archive = ({ posts }) => {
   return (
     <>
       {posts.map((post, index) => {
-        const postDate = parseISO(post.date);
-        newYear = postDate.getFullYear();
+        newYear = parseISO(post.date).getFullYear();
+
         if (year != newYear) {
           year = newYear;
           changed = true;

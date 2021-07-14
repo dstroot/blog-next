@@ -16,10 +16,10 @@ if (hasMounted) {
 
 */
 
-export function useHasMounted() {
+export const useHasMounted = () => {
   const [hasMounted, setHasMounted] = useState(false);
   useEffect(() => {
     setHasMounted(true);
   }, []);
   return hasMounted;
-}
+};

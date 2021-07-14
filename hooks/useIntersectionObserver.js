@@ -8,7 +8,7 @@ rootMargin: Margin around the root. Serves to grow or shrink each side of the ro
 threshold: at what percentage of the target's visibility the observer's callback should be executed
  */
 
-const useIntersectionObserver = ({
+export const useIntersectionObserver = ({
   target,
   onIntersect, // callback
   threshold = 0.2, // when 20% visible
@@ -34,5 +34,3 @@ const useIntersectionObserver = ({
     };
   });
 };
-
-export default useIntersectionObserver;

@@ -1,5 +1,4 @@
 import Head from "next/head";
-// import Script from "next/script";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 
 export const Meta = () => {
@@ -48,14 +47,6 @@ export const Meta = () => {
         async
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
       ></script>
-      {/* <Script
-        strategy="beforeInteractive"
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"
-      />
-      <Script
-        strategy="afterInteractive"
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
-      /> */}
 
       {/*
           The page supports both dark and light color schemes,

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Avatar } from "./Avatar";
 import { CoverImage } from "./CoverImage";
 import { ReadMore } from "./ReadMore";
-import useIntersectionObserver from "../lib/use-intersection-observer";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 export const PostPreview = ({
   title,
