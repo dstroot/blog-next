@@ -7,11 +7,12 @@ export const Intro = () => {
       <div className="flex flex-col">
         <ThemeChanger />
         <div className="flex flex-col md:flex-row items-center md:justify-between">
-          <p className="text-7xl md:text-8xl font-bold tracking-tighter leading-tight">
-            Blog.
+          <p className="text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+            {/* Blog */}
+            {CMS_NAME}
           </p>
           <p className="mt-2 font-semibold italic text-xl md:text-2xl">
-            {CMS_NAME}. {TAGLINE}.
+            {TAGLINE}.
           </p>
         </div>
       </div>

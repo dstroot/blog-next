@@ -24,12 +24,12 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Layout alert={ALERT}>
       <Container>
-        <Header />
+        {/* <Header /> */}
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-6 md:mb-10">
+            <article className="mb-6 md:mb-10 mt-6 md:mt-10">
               <Head>
                 <title>
                   {CMS_NAME} · {post.title}
