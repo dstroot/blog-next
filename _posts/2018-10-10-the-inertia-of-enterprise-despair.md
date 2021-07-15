@@ -25,18 +25,16 @@ Unfortunately for an incumbent, change is **much** harder than anyone ever imagi
 
 There is a huge gulf between the speed and agility of a digital start-up and a large, entrenched incumbent. Not only do enterprises lack the proper digital skills, they simply cannot respond fast enough to react. This inertia has a name - it's called the **Inertia of Enterprise Despair.**  It is made of these components:
 
-* Institutional Inertia
-* Cost Allocation
-* Risk Management
-* Capability
-* Security
-* Outdated Paradigms
-* Regulation
-* Procurement
-* Legacy Systems
-* Change Control
-
-The reason why so many firms rely on contractors and heavy governance is ultimately because they don’t trust their employees to deliver anymore.
+1. Institutional Inertia
+1. Cost Allocation
+1. Risk Management
+1. Capability
+1. Security
+1. Outdated Paradigms
+1. Regulation
+1. Procurement
+1. Legacy Systems
+1. Change Control
 
 ### 1. Institutional Inertia
 

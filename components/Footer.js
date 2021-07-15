@@ -27,7 +27,7 @@ export const Footer = () => {
         {/* 
             Bottom Section
         */}
-        <div className="flex flex-col md:flex-row items-center md:items-end justify-between font-light text-xs">
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-between text-xs">
           <div className="flex items-center order-2 md:order-1 dark:text-gray-400">
             Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
             {year.getFullYear()}, Dan Stroot.
