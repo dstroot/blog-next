@@ -1,12 +1,12 @@
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 import { Container } from "./Container";
 import { CMS_NAME } from "../lib/constants";
 
 export const Footer = () => {
   const year = new Date(); // evergreen copyright year
   return (
-    <footer className="transition-colors dark:bg-dark-3 dark:text-gray-300 bg-gray-100 text-gray-600">
+    <footer className="transition-colors dark:bg-dark-4 dark:text-gray-300 bg-gray-100 text-gray-600">
       <Container>
         <div className="flex flex-col md:flex-row items-center mb-2">
           <div className="mb-4 md:mr-8 md:mb-0">
@@ -27,16 +27,19 @@ export const Footer = () => {
         {/* 
             Bottom Section
         */}
-        <div className="flex flex-col md:flex-row items-center md:items-end justify-between text-sm">
-          <div className="flex flex-wrap min-w-0 whitespace-nowrap items-center order-2 md:order-1">
-            <div className="mr-2">
-              Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
-              {year.getFullYear()}, Dan Stroot.
-            </div>
-            {/* <Link href="/archive" className="p-2 hover:text-gray-500">
-              <a>Post Archive</a>
-            </Link> */}
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-between font-light text-xs">
+          <div className="flex items-center order-2 md:order-1 dark:text-gray-400">
+            Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
+            {year.getFullYear()}, Dan Stroot.
           </div>
+          {/* <div className="flex items-center text-xs font-medium dark:text-gray-400 hover:underline">
+            <Link
+              href="/archive"
+              className="font-medium dark:text-gray-400 hover:underline hover:text-gray-500"
+            >
+              <a>Post Archive</a>
+            </Link>
+          </div> */}
           <div className="flex items-center space-x-2 order-1 md:order-2 mb-3 md:mb-0">
             <a
               className="p-2 hover:text-gray-500"

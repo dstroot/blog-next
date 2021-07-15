@@ -5,7 +5,7 @@ import { Layout } from "../components/Layout";
 import { CMS_NAME, ALERT } from "../lib/constants";
 
 const darkBackground = {
-  backgroundColor: "#1D1E20",
+  backgroundColor: "#2A2B2D", // 2A2B2D  1D1E20
   padding: "40px",
 };
 
@@ -80,11 +80,11 @@ export default function About() {
             <div className="bg-gray-100 text-gray-800 text-xs font-semibold p-10">
               Header
             </div>
-            <div className="bg-gray-800 text-gray-100 text-xs font-semibold p-10">
+            <div className="bg-dark-4 text-gray-100 text-xs font-semibold p-10">
               Header
             </div>
-            <div className="bg-gray-800 text-gray-300 text-xs font-light p-10">
-              <span style={darkText}>Text</span>
+            <div className="bg-dark-4 text-gray-300 text-xs font-light p-10">
+              Text
             </div>
 
             {/*
@@ -148,7 +148,7 @@ export default function About() {
               className="text-xs font-semibold hover:underline"
               href="#"
             >
-              Apple Inc.
+              <span style={darkTextHeader}>Apple Inc.</span>
             </a>
             <div
               style={darkBackground}
