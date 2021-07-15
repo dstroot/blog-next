@@ -25,16 +25,16 @@ Unfortunately for an incumbent, change is **much** harder than anyone ever imagi
 
 There is a huge gulf between the speed and agility of a digital start-up and a large, entrenched incumbent. Not only do enterprises lack the proper digital skills, they simply cannot respond fast enough to react. This inertia has a name - it's called the **Inertia of Enterprise Despair.**  It is made of these components:
 
-1. Institutional Inertia
-1. Cost Allocation
-1. Risk Management
-1. Capability
-1. Security
-1. Outdated Paradigms
-1. Regulation
-1. Procurement
-1. Legacy Systems
-1. Change Control
+  1. Institutional Inertia
+  2. Cost Allocation
+  3. Risk Management
+  4. Talent
+  5. Security
+  6. Outdated Paradigms
+  7. Regulation
+  8. Procurement
+  9. Legacy Systems
+  10. Change Control
 
 ### 1. Institutional Inertia
 
@@ -74,7 +74,7 @@ The financial crises of 2009 is a great illustration. Does anyone think Bear Ste
 
 Risk Management should a) be skilled enough to actually have a conversation about IT architecture because that is what determines how resilient a company's technology really is, and b) figure out how to reduce their "friction" to technology adoption.
 
-### 4. Capability
+### 4. Talent
 
 An organization is only as good as it's people. Successful organizations start out with great people. Great people help build the company and many successful careers are built as the company matures. Over time the great people go on to other challenges, or they retire. New leaders must take the reins, usually people who grew up inside the company and respect the culture and track record that made the company successful. These people are **terrific choices for continuity**, and maintaining the status quo. Conversely if the market really changes, and the company has to reinvent itself, these leaders struggle.
 
