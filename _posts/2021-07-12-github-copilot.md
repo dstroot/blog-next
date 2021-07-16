@@ -1,12 +1,12 @@
 ---
-title: GitHub Copilot
+title: Mob programming with 65 million of your peers
 excerpt: You are contributing value, whether you like it not, when you make 
   your code public. Training machine learning models on publicly available data is 
   considered fair use across the machine learning community. The models gain insight 
   and accuracy from the public collective intelligence. The only way to extract value back out is to use Copilot yourself.
 coverImage: /assets/blog/img/copilot.jpg
 date: "2021-07-12"
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -83,7 +83,7 @@ It also has the possible outcome of increasing wages for solution architects, se
 
 - [GitHub Copilot](https://copilot.github.com/)
 
-- [serach](https://www.google.com/search?q=hackernews+github+copilot&oq=hack&aqs=chrome.2.69i57j0i67l2j69i61j69i65l2j69i61l2.4105j0j4&sourceid=chrome&ie=UTF-8)
+- [search](https://www.google.com/search?q=hackernews+github+copilot&oq=hack&aqs=chrome.2.69i57j0i67l2j69i61j69i65l2j69i61l2.4105j0j4&sourceid=chrome&ie=UTF-8)
 
 - [GitHub’s Commercial AI Tool Was Built From Open Source Code](https://www.wired.com/story/github-commercial-ai-tool-built-open-source-code/)
 
