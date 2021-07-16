@@ -67,20 +67,15 @@ The other main concern is that even if Copilot synthesizes code, rather than reg
 
 ## Lower Barriers to Entry for Coders
 
-How disruptive will Copilot be for the Software Engineering Industry? Creating intelligent systems to "co-code" with you will bring enormous change to the developer experience. GitHub Copilot has the potential to lower barriers to entry, enabling more people to explore software development and join the next generation of developers. This opens the door for many people who may not otherwise be able to get a developer position, but it will also lower wages for entry level programmers who code in common languages. It also may increase the desire to move coding jobs to lower cost locations in the world because the resulting code quality would be more normalized if it was developed using Copilot.  
+How disruptive will Copilot be for the Software Engineering Industry? Creating intelligent systems to "co-code" with you will bring enormous change to the developer experience. GitHub Copilot has the potential to lower barriers to entry, enabling more people to explore software development and join the next generation of developers. This opens the door for many people who may not otherwise be able to get a developer position, but it will **almost certainly lower wages for entry level programmers** who code in common languages.
 
-However, **software engineering is not the same thing as writing code**. Software engineering is a much more profound task that implies broad knowledge, problem solving skills, and creativity. Copilot could actually drive up demand and increase wages for solution architects, senior lead developers, and others with more experience and specialized skills. As "writing the code" becomes more commoditized, more experienced people will likely be in higher demand to "oversee" the work.
+However, **software engineering is not the same thing as writing code**. Software engineering is a much more profound task that implies broad knowledge, problem solving skills, and creativity. Copilot could actually drive up demand and increase wages for solution architects, senior lead developers, and others with more experience and specialized skills. As "writing the code" becomes more commoditized, **more experienced people will likely be in higher demand** to "oversee" the work.
 
 ### References
 
 - [GitHub Copilot](https://copilot.github.com/)
 - [GitHub’s Commercial AI Tool Was Built From Open Source Code](https://www.wired.com/story/github-commercial-ai-tool-built-open-source-code/)
+
 <!-- 
-
 - [search](https://www.google.com/search?q=hackernews+github+copilot&oq=hack&aqs=chrome.2.69i57j0i67l2j69i61j69i65l2j69i61l2.4105j0j4&sourceid=chrome&ie=UTF-8)
-
-
-
-
 - [HN](https://news.ycombinator.com/item?id=27676939) -->
-  
