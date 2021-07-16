@@ -10,15 +10,15 @@
 
   .markdown ul,
   .markdown ol {
-    @apply list-outside ml-5;
+    @apply list-outside ml-7;
   }
 
   .markdown ul > li {
-    @apply list-disc;
+    @apply list-disc mb-1;
   }
 
   .markdown ol > li {
-    @apply list-decimal;
+    @apply list-decimal mb-1;
   }
 
   .markdown li > p {
