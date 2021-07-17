@@ -10,14 +10,14 @@ excerpt: Personally I think the next wave of infrastructure efficiency will be
   file systems. This work was started by engineers at Google and in late 2007 it
   was merged into kernel version 2.6.24.
 coverImage: /assets/blog/img/docker.png
-date: "2014-05-05"
+date: '2014-05-05'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/docker.png
-seoURL: ""
+seoURL: https://danstroot.com/2014/05/04/virtual-machines-vs-containers/
 ---
 
 Three driving forces of infrastructure efficiency in a large, distributed environment were:
@@ -26,11 +26,11 @@ Three driving forces of infrastructure efficiency in a large, distributed enviro
 - **Host virtualization** _(KPI: what percentage of your servers are virtual?)_
 - **"Cloud" in its various forms** _(KPI: How many servers are you still running?)_
 
-Assuming you have been aggressive you may not have any data centers left.  You may be buying services rather than servers, and/or all of your remaining machines might be virtualized and hosted in someone else's data center. Now what?
+Assuming you have been aggressive you may not have any data centers left. You may be buying services rather than servers, and/or all of your remaining machines might be virtualized and hosted in someone else's data center. Now what?
 
 ### Where is future infrastructure efficiency going to come from?
 
-Personally I think the next wave of infrastructure efficiency will be driven by Linux container technology (LinuX Containers = LXC). The LXC container approach does **not** require a hypervisor - instead you run isolated "containers" on a Linux host.  
+Personally I think the next wave of infrastructure efficiency will be driven by Linux container technology (LinuX Containers = LXC). The LXC container approach does **not** require a hypervisor - instead you run isolated "containers" on a Linux host.
 
 LXC provides operating system-level virtualization, but instead of creating a full-fledged virtual machine LXC containers leverage cgroups (control groups) to completely isolate application's view of the operating environment, including process trees, network, user ids and mounted file systems. Cgroups are a Linux kernel feature to limit, account, and isolate resource usage (CPU, memory, disk I/O, etc.) of process groups.
 
@@ -50,7 +50,7 @@ Here are some of the major benefits of Linux Containers from my perspective:
 #### Agile
 
 - VM-like agility -- it's still "virtualization".
-- With VMs we often touted our ability to ship a machine "over the wire" since a virtual machine is basically just a large file.  It also allows better business recovery scenarios where I can have a snapshot of my production machine(s) copied to a different datacenter at regular intervals. Guess what? LXC containers are an order of magnitude smaller!
+- With VMs we often touted our ability to ship a machine "over the wire" since a virtual machine is basically just a large file. It also allows better business recovery scenarios where I can have a snapshot of my production machine(s) copied to a different datacenter at regular intervals. Guess what? LXC containers are an order of magnitude smaller!
 - Developers can essentially use the exact same containers as those deployed into production.
 
 #### Lightweight
@@ -79,8 +79,8 @@ Here are some of the major benefits of Linux Containers from my perspective:
 
 ### Summary
 
-The next wave of server density is likely to be driven by LXC technology instead of traditional VM technology.  This technology may also increase further an organizations agility, developer productivity and even business continuity. However, LXC technology is not yet as mature or "manageable" as VM technology, but tools like Docker are developing quickly.
+The next wave of server density is likely to be driven by LXC technology instead of traditional VM technology. This technology may also increase further an organizations agility, developer productivity and even business continuity. However, LXC technology is not yet as mature or "manageable" as VM technology, but tools like Docker are developing quickly.
 
 _Sources:_
 
-* [KVM and Docker LXC Benchmarking with OpenStack](http://bodenr.blogspot.com/2014/05/kvm-and-docker-lxc-benchmarking-with.html)
+- [KVM and Docker LXC Benchmarking with OpenStack](http://bodenr.blogspot.com/2014/05/kvm-and-docker-lxc-benchmarking-with.html)

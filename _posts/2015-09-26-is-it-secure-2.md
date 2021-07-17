@@ -1,21 +1,22 @@
 ---
 title: It’s secure… until it’s not
-excerpt: Is there a such thing as perfect security? In the 1770s Joseph Bramah created a lock that 
-    was vastly superior to any the world ever seen. Bramah believed it was 100% theft-proof. It was, and then it wasn't. 
+excerpt: Is there a such thing as perfect security? In the 1770s Joseph Bramah
+  created a lock that was vastly superior to any the world ever seen. Bramah
+  believed it was 100% theft-proof. It was, and then it wasn't.
 coverImage: /assets/blog/img/bramah.jpg
-date: "2015-09-26"
+date: '2015-09-26'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/bramah.jpg
-seoURL: ""
+seoURL: https://danstroot.com/2015/09/25/is-it-secure-2/
 ---
 
 In the 1770s Joseph Bramah created a lock that was vastly superior to any the world ever seen. Bramah believed it was 100% theft-proof. Bramah was so confident in his design that he published a pamphlet detailing exactly how it worked and he put it in the window of his London storefront, and painted on it a challenge:
 
->“The artist who can make an instrument that will pick or open this lock shall receive 200 Guineas the moment it is produced.”
+> “The artist who can make an instrument that will pick or open this lock shall receive 200 Guineas the moment it is produced.”
 
 Then Jeremiah Chubb created the Chubb detector lock. The way Chubb’s lock worked was that if a lock picker tried to lift one of the tumblers up too high, a latching mechanism would trigger, causing the lock to seize up. When that happened, even the key wouldn’t open the lock. To reset the lock, the owner would have to put in a different key and rotate it in the opposite direction to reset the tumblers.
 
@@ -38,5 +39,5 @@ Overnight, the feeling of perfect security had evaporated. And we have never got
 
 #### References
 
-* [In 1851 a man picked two unpickable locks...](http://gizmodo.com/in-1851-a-man-picked-two-unpickable-locks-and-changed-1698557792)
-* [Bramah Lock](https://en.wikipedia.org/wiki/Bramah_lock)
+- [In 1851 a man picked two unpickable locks...](http://gizmodo.com/in-1851-a-man-picked-two-unpickable-locks-and-changed-1698557792)
+- [Bramah Lock](https://en.wikipedia.org/wiki/Bramah_lock)

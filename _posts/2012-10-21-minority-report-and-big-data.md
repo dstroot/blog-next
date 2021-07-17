@@ -8,14 +8,14 @@ excerpt: >
   UAE resident, and digital signatures as of October 11, 2012, senior officials
   said.
 coverImage: /assets/blog/img/minorityreport.jpeg
-date: "2012-10-21"
+date: '2012-10-21'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/minorityreport.jpeg
-seoURL: ""
+seoURL: https://danstroot.com/2012/10/20/minority-report-and-big-data/
 ---
 
 > The United Arab Emirates holds the largest biometric database in
@@ -40,14 +40,14 @@ The question you should be asking yourself right now is “for what purpose?” 
 
 The Emirates Identity Authority states the benefits are:
 
-* ID Card is mandatory for all citizen [sic] and legal residence [sic] 15 years [sic] and above
-* Identification and Verification as per International Standards
-* Protect individuals’ identity
-* Can be used to access Secure eServices
-* Provides Identity Information
-* Stores many ID applications in future
-* Prevents fraud & Identity Theft
-* Portable personal database
+- ID Card is mandatory for all citizen [sic] and legal residence [sic] 15 years [sic] and above
+- Identification and Verification as per International Standards
+- Protect individuals’ identity
+- Can be used to access Secure eServices
+- Provides Identity Information
+- Stores many ID applications in future
+- Prevents fraud & Identity Theft
+- Portable personal database
 
 Note the first _benefit_ listed is that it is mandatory for all people 15 years of age and older.
 

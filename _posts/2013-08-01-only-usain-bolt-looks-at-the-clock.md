@@ -4,25 +4,25 @@ excerpt: If you watch someone run the 100 meters, they sneak glances around.
   Sprinters watch each other while they run.  They want to know where are in the
   pack.  I noticed that only Usain Bolt looks at the clock. Why?
 coverImage: /assets/blog/img/usain-bolt2.jpg
-date: "2013-08-01"
+date: '2013-08-01'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/usain-bolt2.jpg
-seoURL: ""
+seoURL: https://danstroot.com/2013/07/31/only-usain-bolt-looks-at-the-clock/
 ---
 
-When you watch the 100 meters, runners sneak glances around. They watch each other while they run.  They want to know where are in the pack. Usain Bolt doesn't. He looks at the clock, not the other runners. Why?
+When you watch the 100 meters, runners sneak glances around. They watch each other while they run. They want to know where are in the pack. Usain Bolt doesn't. He looks at the clock, not the other runners. Why?
 
-Usain Bolt looks at the clock because he’s used to being ahead of everyone else.  It is _because he is really only competing against himself_.
+Usain Bolt looks at the clock because he’s used to being ahead of everyone else. It is _because he is really only competing against himself_.
 
-When trying to introduce innovation I often get asked a frustrating question. The question is "Who else is doing/using this?" or "How does [_name any other company in your industry_] do it?".  
+When trying to introduce innovation I often get asked a frustrating question. The question is "Who else is doing/using this?" or "How does [_name any other company in your industry_] do it?".
 
-It seems in order to make a decision some people want to know what everyone else is doing first.  This line of questioning is almost inevitable in a large organization but it makes me cringe when I hear it.
+It seems in order to make a decision some people want to know what everyone else is doing first. This line of questioning is almost inevitable in a large organization but it makes me cringe when I hear it.
 
-Think about it for a moment. This isn't the recipe for leadership and innovation.  This is the recipe for risk avoidance and going with the herd.  It is the runners in the pack looking around to see where everyone else is.
+Think about it for a moment. This isn't the recipe for leadership and innovation. This is the recipe for risk avoidance and going with the herd. It is the runners in the pack looking around to see where everyone else is.
 
 > **PROTIP:**
 > You can't define your metrics in terms of others. In other words

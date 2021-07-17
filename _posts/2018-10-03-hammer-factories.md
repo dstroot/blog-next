@@ -6,14 +6,14 @@ excerpt: There is a post from 2005 by Benji Smith in the old (and now closed)
   later. I am reproducing it here for posterity in case the old Joel on Software
   Discussion Group ever disappears.
 coverImage: /assets/blog/img/hammer.png
-date: "2018-10-03"
+date: '2018-10-03'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/hammer.png
-seoURL: ""
+seoURL: https://danstroot.com/2018/10/02/hammer-factories/
 ---
 
 There is a post from 2005 by [Benji Smith](http://www.benjismith.net/) in the old (and now closed) [Joel on Software Discussion Group](http://discuss.joelonsoftware.com/?joel.3.219431.12). It's titled "Why I Hate Frameworks". But I know it as "the hammer factory" post. It's just brilliant, even 13 years later. I am reproducing it here for posterity in case the old Joel on Software Discussion Group ever disappears.

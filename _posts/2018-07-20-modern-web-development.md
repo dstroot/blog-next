@@ -5,25 +5,21 @@ excerpt: Web development has evolved faster than nearly every other software
   front-end developers are confronted with new frameworks, tools, and standards
   for “modern” web development **constantly**. Framework fatigue is real thing.
 coverImage: /assets/blog/img/rekit.jpg
-date: "2018-07-20"
+date: '2018-07-20'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/rekit.jpg
-seoURL: ""
+seoURL: https://danstroot.com/2018/07/19/modern-web-development/
 ---
 
 Web development has evolved faster than nearly every other software engineering discipline. The pace of innovation has been relentless, and front-end developers are confronted with new frameworks, tools, and standards for “modern” web development **constantly**. Framework fatigue is real thing. Even the languages of the web (HTML, CSS, and ECMAScript) have gone through a major modernization effort (and the pace of change increased):
 
-<small>
-
 - HTML > HTML5 > HTML 5.2
 - CSS 3 > CSS 4 + SCSS, PostCSS, autoprefixer, etc.
 - ECMAScript 5 (2009) > ECMAScript 2015, ECMAScript 2016, ECMAScript 2017, ECMAScript 2018
-
-</small>
 
 The positive aspects of all the "churn" in the web development ecosystem are some truly incredible innovations that have fundamentally changed web development to enable much richer, engaging, and performant web "applications".
 
@@ -63,11 +59,9 @@ The **not** modern web:
 
 ![No TLS](/assets/blog/img/no-TLS.png)
 
-#### So how do you build a progressive, TLS-secured, **web application**<br> - that gets **perfect** marks <small>(Lighthouse, Qualys and Securityheaders.com</small>)<br> - over a **weekend**<br> - and deploy it for **free**?
+#### So how do you build a progressive, TLS-secured, **web application**- that gets **perfect** marks <small>(Lighthouse, Qualys and Securityheaders.com</small>) - over a **weekend** - and deploy it for **free**?
 
 You must stand on the shoulders of giants. Seriously. This project uses the "giants" of modern web development:
-
-<small>
 
 - React
 - Yarn
@@ -81,8 +75,6 @@ You must stand on the shoulders of giants. Seriously. This project uses the "gia
 - autoprefixer
 - PostCSS
 - Etc.
-
-</small>
 
 Given all the tools and complexity, it might take days just to be able to configure a development environment, **or** you can just install `create-react-app`. You are up and running in about 35 seconds with **no build configuration** work.
 
@@ -128,6 +120,6 @@ A+ Security Headers Score:
 
 #### References
 
-* [Google: Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
-* [Google: HTTPS as a ranking signal](https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html)
-* [Firebase: Pricing](https://firebase.google.com/pricing/)
+- [Google: Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
+- [Google: HTTPS as a ranking signal](https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html)
+- [Firebase: Pricing](https://firebase.google.com/pricing/)

@@ -1,25 +1,25 @@
 ---
 title: '"Digital" Business Card?'
-excerpt: >-
-  Recently I took on a new role and I was about ordering new business cards. 
-  I reflected a moment and realized I don't really use business cards anymore. I 
-  decided that I needed a digital way to share my business (and personal) information, 
-  and I wanted to be able to control what I share. One of the side benefits of this 
-  is I don't have to share my personal mobile phone number either. 
+excerpt: Recently I took on a new role and I was about ordering new business
+  cards.  I reflected a moment and realized I don't really use business cards
+  anymore. I  decided that I needed a digital way to share my business (and
+  personal) information,  and I wanted to be able to control what I share. One
+  of the side benefits of this  is I don't have to share my personal mobile
+  phone number either.
 coverImage: /assets/blog/img/black_card.jpg
-date: "2019-03-02"
+date: '2019-03-02'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/black_card.jpg
-seoURL: ""
+seoURL: https://danstroot.com/2019/03/01/digital-business-card/
 ---
 
-Recently I took on a new role and I was about ordering new business cards. I reflected a moment and realized I don't really use business cards anymore. I decided that I needed a **digital** way to share my business (and personal) information, and I wanted to be able to control what I share.  One of the side benefits of this is I **don't have to share my personal mobile phone number** either. 
+Recently I took on a new role and I was about ordering new business cards. I reflected a moment and realized I don't really use business cards anymore. I decided that I needed a **digital** way to share my business (and personal) information, and I wanted to be able to control what I share. One of the side benefits of this is I **don't have to share my personal mobile phone number** either.
 
-Here's the concept - provide a phone number that anyone can send a SMS message (a text) to and receive an automated response with a vCard attached so it can be imported into their electronic contact list with a press of a button.  
+Here's the concept - provide a phone number that anyone can send a SMS message (a text) to and receive an automated response with a vCard attached so it can be imported into their electronic contact list with a press of a button.
 
 Depending on what they send in their message my personal and/or employment information would be sent. But the SMS number is **not** my mobile phone number - it is purchased through Twilio and is **only** used to reply with my digital business card. A phone number can be obtained through Twilio for $1 per month and messages cost fractions of cent to send - cheaper than printing and handing out paper business cards.
 
@@ -55,6 +55,7 @@ Prerequisites
 - A Twilio account
 - Node.js and NPM or Yarn installed on your development machine
 - Use NPM or Yarn to install Serverless:
+
   ```shell
   # Installing the serverless cli
   npm install -g serverless

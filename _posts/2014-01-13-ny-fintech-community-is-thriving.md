@@ -9,17 +9,17 @@ excerpt: 'I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node
   tooling (for example .net/visual studio) but it requires an entirely different
   skill set for internal developers.'
 coverImage: /assets/blog/img/new-ui.jpg
-date: "2014-01-13"
+date: '2014-01-13'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/new-ui.jpg
-seoURL: ""
+seoURL: https://danstroot.com/2014/01/12/ny-fintech-community-is-thriving/
 ---
 
-I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node and came across a blog post from [Francesca Krihely](http://francescak.me/blog/2013/04/09/fintech-hackathon-recap/) about the FinTech hackathon in NY from back in April, 2013.  
+I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node and came across a blog post from [Francesca Krihely](http://francescak.me/blog/2013/04/09/fintech-hackathon-recap/) about the FinTech hackathon in NY from back in April, 2013.
 
 This interested me because as a former "insider" in a large financial services company I can see clearly how open source code and tooling is replacing more proprietry code and tooling (for example .net/visual studio) but it requires an entirely different skill set for internal developers.
 
@@ -27,9 +27,9 @@ For the corporate economics to work the cost of the "new" platform has to be not
 
 I get the sense that the momentum is picking up. The NY hackathon atracted over 400 people and the apps/apis were very interesting (you can read Francesca's post for more) but all built on a modern technology stack.
 
-The underlying technology stacks of companies like Twitter, Facebook, eBay, etc. are designed for millions of events per minute.  There is an obvious parallel to trading technology where you need to deliver real-time news, tick data, messages, etc. to a user interface that allows for quick understanding and reaction.  
+The underlying technology stacks of companies like Twitter, Facebook, eBay, etc. are designed for millions of events per minute. There is an obvious parallel to trading technology where you need to deliver real-time news, tick data, messages, etc. to a user interface that allows for quick understanding and reaction.
 
-One of the companies I discovered is [OpenFin](https://openf.in/).  Since I used to deliver equity trading applications to global trading desks I know the challenges well.  I really like the approach here and it's clear to me this is what the future holds.  This is similar to [Caplin.com](http://www.caplin.com) and others.  
+One of the companies I discovered is [OpenFin](https://openf.in/). Since I used to deliver equity trading applications to global trading desks I know the challenges well. I really like the approach here and it's clear to me this is what the future holds. This is similar to [Caplin.com](http://www.caplin.com) and others.
 
 It is really exciting to see all the innovation!
 

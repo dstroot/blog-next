@@ -4,14 +4,14 @@ excerpt: Years ago I read a great article on clear communication. Unfortunately
   it is hard to find these days. I am reproducing it here for posterity and full
   attribution.
 coverImage: /assets/blog/img/bull.jpg
-date: "2019-02-08"
+date: '2019-02-08'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/bull.jpg
-seoURL: ""
+seoURL: https://danstroot.com/2019/02/07/im-ok-the-bull-is-dead/
 ---
 
 Years ago I read a great article on clear communication. Unfortunately it is hard to find these days. I am reproducing it here for posterity and full attribution.

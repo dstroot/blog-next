@@ -1,19 +1,25 @@
 ---
-title: "The Inertia of Enterprise Despair"
-excerpt: >-
-  As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the same moment, on the same day, Amazon.com is the most valuable company in the world with an $810B valuation, or 184 times greater. Prior to Amazon's founding Sears had everything. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Brand recognition and established customer base, check. Unfortunately for an incumbent, change is much harder than anyone ever imagines it to be.
-coverImage: "/assets/blog/img/committee.jpg"
-date: "2019-01-06"
+title: The Inertia of Enterprise Despair
+excerpt: As of this writing, in early 2019 Sears announced it is near
+  liquidation, with a $4.4B bid to keep operating.  At the same moment, on the
+  same day, Amazon.com is the most valuable company in the world with an $810B
+  valuation, or 184 times greater. Prior to Amazon's founding Sears had
+  everything. Global supply chain, check. Top notch distribution operation,
+  check. System and infrastructure to take orders and handling billing, check.
+  Brand recognition and established customer base, check. Unfortunately for an
+  incumbent, change is much harder than anyone ever imagines it to be.
+coverImage: /assets/blog/img/committee.jpg
+date: '2019-01-06'
 published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: "/assets/blog/img/committee.jpg"
-seoURL: ""
+  url: /assets/blog/img/committee.jpg
+seoURL: https://danstroot.com/2019/01/05/the-inertia-of-enterprise-despair/
 ---
 
-As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating.  At the **same moment**, on the **same day**, Amazon.com is the most valuable company in the world with an $810 billion dollar valuation, or **184 times greater**.
+As of this writing, in early 2019 Sears announced it is near liquidation, with a $4.4B bid to keep operating. At the **same moment**, on the **same day**, Amazon.com is the most valuable company in the world with an $810 billion dollar valuation, or **184 times greater**.
 
 Prior to Amazon's founding Sears had everything going for it. Brand recognition and established customer base, check. Global supply chain, check. Top notch distribution operation, check. System and infrastructure to take orders and handling billing, check. Bricks and mortar stores in addition to catalog sales, check.
 
@@ -23,18 +29,18 @@ Unfortunately for an incumbent, change is **much** harder than anyone ever imagi
 >
 > <cite>&mdash; John Ousterhout, Stanford University ([My Favorite Sayings](http://web.stanford.edu/~ouster/cgi-bin/sayings.php))</cite>
 
-There is a huge gulf between the speed and agility of a digital start-up and a large, entrenched incumbent. Not only do enterprises lack the proper digital skills, they simply cannot respond fast enough to react. This inertia has a name - it's called the **Inertia of Enterprise Despair.**  It is made of these components:
+There is a huge gulf between the speed and agility of a digital start-up and a large, entrenched incumbent. Not only do enterprises lack the proper digital skills, they simply cannot respond fast enough to react. This inertia has a name - it's called the **Inertia of Enterprise Despair.** It is made of these components:
 
-  1. Institutional Inertia
-  2. Cost Allocation
-  3. Risk Management
-  4. Talent
-  5. Security
-  6. Outdated Paradigms
-  7. Regulation
-  8. Procurement
-  9. Legacy Systems
-  10. Change Control
+1. Institutional Inertia
+2. Cost Allocation
+3. Risk Management
+4. Talent
+5. Security
+6. Outdated Paradigms
+7. Regulation
+8. Procurement
+9. Legacy Systems
+10. Change Control
 
 ### 1. Institutional Inertia
 
@@ -42,7 +48,7 @@ Large incumbent enterprises exist because they **did things right**. They made g
 
 Enterprises are realizing they are now becoming **software companies**, and the people running a software company need to know how to do that. There needs to be digital training at every level of the organization, including in the boardroom and executive suite.
 
-Transformation by consensus, or by occasional hackathon, will not work, because transformation is not iteration from a low baseline: it requires making fundamental changes to an organization’s structure and processes. Digital transformation is about **business transformation**.  It involves making fundamental changes to the organization's core processes and workforce.
+Transformation by consensus, or by occasional hackathon, will not work, because transformation is not iteration from a low baseline: it requires making fundamental changes to an organization’s structure and processes. Digital transformation is about **business transformation**. It involves making fundamental changes to the organization's core processes and workforce.
 
 Organizations that want to thrive in the digital age need to wield the political will to radically transform themselves, rather than adopting superficial solutions. They must redesign how they operate, redesign their internal structure, and re-staff. Given what we know about the challenges of organizational change this will likely fail.
 
@@ -54,7 +60,7 @@ Many organizations have created in-house VC funds to seek out promising startups
 
 Poor cost allocation models create all manner of suboptimal enterprise behavior. They create a sense of **helplessness** for the department receiving the allocation. Leaders feel they are unable to manage the allocation amount or service level. Maybe they would like a lower (or higher) service level and are willing to sacrifice (or pay) for the privilege. But the enterprise usually only offers limited options, generally "one price, one service level".
 
-Worse, the models that build up the costs to be allocated are usually only known inside the allocating organization and rarely reflect reality. If the organization receiving the allocation wants to "pull out" and buy the service from a third party they are usually told they can't because that would simply drive up costs for the remaining parties (same pie, bigger slices). 
+Worse, the models that build up the costs to be allocated are usually only known inside the allocating organization and rarely reflect reality. If the organization receiving the allocation wants to "pull out" and buy the service from a third party they are usually told they can't because that would simply drive up costs for the remaining parties (same pie, bigger slices).
 
 They conclude that if they can't change the allocation they can make damn sure to get the best possible service level. So they begin to beat on the organization supplying the service. This of course eventually ruins the working relationship between them and continues until all parties **thoroughly dislike each other**. It goes without saying that things do not move quickly or efficiently at this point because the parties stop speaking to each other, and in really bad cases they actively sabotage each other.
 
@@ -68,7 +74,7 @@ Enterprises have well-developed risk management muscles, particularly in regulat
 
 They are so interested that they are very involved in key functions like project delivery and change management. The effect of this involvement is **lots of documentation and meetings**, two things that are sure to slow anything to a crawl.
 
-Like some aspects of security, occasionally the risk management activities are referred to as "risk management theatre". It exists to show we have it, and it's primary purpose is management reporting. It is less clear if it truly averts risk - particularly "black swan" type risks. It is usually focused on issues that either occur regularly, or at least have already occurred in the past. It rarely anticipates issues that have never happened before, but of course those are the most important risks to avoid. 
+Like some aspects of security, occasionally the risk management activities are referred to as "risk management theatre". It exists to show we have it, and it's primary purpose is management reporting. It is less clear if it truly averts risk - particularly "black swan" type risks. It is usually focused on issues that either occur regularly, or at least have already occurred in the past. It rarely anticipates issues that have never happened before, but of course those are the most important risks to avoid.
 
 The financial crises of 2009 is a great illustration. Does anyone think Bear Stearns or Lehman didn't have a risk management function? Of course they did - they just didn't anticipate or understand the actual risks facing them.
 
@@ -78,7 +84,7 @@ Risk Management should a) be skilled enough to actually have a conversation abou
 
 An organization is only as good as it's people. Successful organizations start out with great people. Great people help build the company and many successful careers are built as the company matures. Over time the great people go on to other challenges, or they retire. New leaders must take the reins, usually people who grew up inside the company and respect the culture and track record that made the company successful. These people are **terrific choices for continuity**, and maintaining the status quo. Conversely if the market really changes, and the company has to reinvent itself, these leaders struggle.
 
-As the company grows it will develop a strong HR organization with all the best intentions. The HR professionals will perform their duties with professionalism and dedication. Unfortunately through hiring practices and compensation practices **they will force the workforce to become "average" rather than exceptional**. 
+As the company grows it will develop a strong HR organization with all the best intentions. The HR professionals will perform their duties with professionalism and dedication. Unfortunately through hiring practices and compensation practices **they will force the workforce to become "average" rather than exceptional**.
 
 #### Hiring Practices
 
@@ -130,7 +136,7 @@ Processes around this vary, but essentially, one or more security experts descen
 
 **The beatings will continue until risks are identified** (I’ve never heard of there being none). The outcome is a report outlining the set of risks that have been identified. These risks may need to be ‘signed off’ by someone senior so that responsibility lies with them if there is a breach. That process in itself is arduous (especially when the senior management person doesn’t fully understand technology) and will be repeated on a regular basis until the risks are sufficiently ‘mitigated’ through further engineering effort or process controls.
 
-The real issue is very few senior leaders understand technology security and **into the knowledge gap flows money and resources**.  The result is "lots of security" with questionable real effectiveness, measurable increases in cost and schedule, and measurable decreases in productivity (and possibly the morale of capable engineers) across the company.
+The real issue is very few senior leaders understand technology security and **into the knowledge gap flows money and resources**. The result is "lots of security" with questionable real effectiveness, measurable increases in cost and schedule, and measurable decreases in productivity (and possibly the morale of capable engineers) across the company.
 
 ### 6. Outdated Paradigms
 
@@ -140,7 +146,7 @@ The real issue is very few senior leaders understand technology security and **i
 
 The winners (or losers depending on your perspective) were several people **still using spreadsheets from 1995**, the year that Excel began to take root with the launch of Microsoft Office for Windows 95. Hopefully they are presumably using a modern version of Excel. Yet these files — and the 'business logic' they contain — are still working for them now, some twenty-three years later.
 
-Can enterprises using spreadsheets from 1995 transform into digital winners?  Will their employees be able to redesign the process from the ground up using modern technology.  Unlikely.
+Can enterprises using spreadsheets from 1995 transform into digital winners? Will their employees be able to redesign the process from the ground up using modern technology. Unlikely.
 
 > “You take the new thing and shove it into the old paradigm”.
 >
@@ -182,9 +188,9 @@ There are so many ways in which this perfectly sensible idea goes wrong. The fir
 
 The logical responses are:
 
-1.  **Attempt to create more savings.** Let's squeeze the widget vendors harder, cut down the number of widget vendors so we have more leverage, commit to certain levels of widget spend, etc. If all goes well we will save even more money! However, the widget procurement process is now slower and less responsive to business needs. We may be saving on widgets but it may take months longer to buy widgets due to extensive negotiations. We now may be committed to buy a certain number of widgets - and if our needs change those savings may evaporate. We usually alienate our suppliers through this process so they have very little incentives to go "above and beyond" when called for. Finally, vendor consolidation may leave us more vulnerable to vendor risk. The fact our risk went up, our vendors don't like us anymore, and our agility went down, are very real costs, but unfortunately they are hard to quantify and therefore don't count.
-2.  **Put the savings in a better light.** I have seen savings estimated off the "highest widget price" vs. the "average widget price". Or, based on what widget prices are expected to be in the future. Or, based on some external benchmark like "industry average widget price". Anything that can be used to make our savings figures look as good as possible. Is this cynical? Yes. Does it really happen? Yes.
-3.  **Cast a wider net.** Are we not saving enough on widgets to justify a department of widget procurement? Easy - what other things do we buy that the procurement office can help with? This is where technology always comes into focus. Technology is a large spend in any enterprise and that makes it an attractive target. However, **buying technology is not the same as buying widgets.**
+1. **Attempt to create more savings.** Let's squeeze the widget vendors harder, cut down the number of widget vendors so we have more leverage, commit to certain levels of widget spend, etc. If all goes well we will save even more money! However, the widget procurement process is now slower and less responsive to business needs. We may be saving on widgets but it may take months longer to buy widgets due to extensive negotiations. We now may be committed to buy a certain number of widgets - and if our needs change those savings may evaporate. We usually alienate our suppliers through this process so they have very little incentives to go "above and beyond" when called for. Finally, vendor consolidation may leave us more vulnerable to vendor risk. The fact our risk went up, our vendors don't like us anymore, and our agility went down, are very real costs, but unfortunately they are hard to quantify and therefore don't count.
+2. **Put the savings in a better light.** I have seen savings estimated off the "highest widget price" vs. the "average widget price". Or, based on what widget prices are expected to be in the future. Or, based on some external benchmark like "industry average widget price". Anything that can be used to make our savings figures look as good as possible. Is this cynical? Yes. Does it really happen? Yes.
+3. **Cast a wider net.** Are we not saving enough on widgets to justify a department of widget procurement? Easy - what other things do we buy that the procurement office can help with? This is where technology always comes into focus. Technology is a large spend in any enterprise and that makes it an attractive target. However, **buying technology is not the same as buying widgets.**
 
 First of all, technologists who are making big platform technology acquisition decisions have to look years into the future. Whatever decisions taken today will affect an enterprise for a long time. We have to meet with the vendors and understand their roadmaps. We must evaluate their underlying architecture. We must understand the ecosystem they operate in. This knowledge comes by building relationships with Value Added Resellers (VARs) and the vendors themselves.
 
@@ -246,6 +252,6 @@ All this makes the effort of making changes far more onerous than it is elsewher
 
 #### References
 
-* [It’s Time To Get Real About Digital Transformation](https://medium.com/pminsider/its-time-to-get-real-about-digital-transformation-a268a186844d)
-* [Vision Driven Products](https://www.radicalproduct.com/)
-* [Why are enterprises so slow?](https://zwischenzugs.com/2018/10/02/why-are-enterprises-so-slow/)
+- [It’s Time To Get Real About Digital Transformation](https://medium.com/pminsider/its-time-to-get-real-about-digital-transformation-a268a186844d)
+- [Vision Driven Products](https://www.radicalproduct.com/)
+- [Why are enterprises so slow?](https://zwischenzugs.com/2018/10/02/why-are-enterprises-so-slow/)
