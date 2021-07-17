@@ -42,6 +42,8 @@ export const PostPreview = ({
           height={278}
           width={556}
           priority={false}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk4AcAABUAET9MVpIAAAAASUVORK5CYII="
         />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">

@@ -3,14 +3,13 @@
     @apply text-lg leading-relaxed;
   }
 
-  .markdown p,
-  .markdown blockquote {
-    @apply my-6;
+  .markdown p {
+    @apply my-4;
   }
 
   .markdown ul,
   .markdown ol {
-    @apply list-outside ml-7;
+    @apply list-outside ml-8;
   }
 
   .markdown ul > li {
@@ -26,19 +25,19 @@
   }
 
   .markdown blockquote {
-    @apply font-medium text-lg border-l-4 border-gray-400 pl-3.5;
+    @apply font-medium text-lg border-l-4 border-gray-400 pl-3.5 my-6;
   }
 
   .markdown h2 {
-    @apply text-3xl mt-12 mb-4 leading-snug;
+    @apply text-3xl mt-6 mb-4 leading-snug;
   }
 
   .markdown h3 {
-    @apply text-2xl mt-8 mb-4 leading-snug;
+    @apply text-2xl mt-4 mb-4 leading-snug;
   }
 
   .markdown h4 {
-    @apply text-xl mt-6 mb-4 leading-snug;
+    @apply text-xl mt-4 mb-4 leading-snug;
   }
 
   .markdown a {
@@ -78,6 +77,8 @@
   padding-top: 30px;
   height: 0;
   overflow: hidden;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .video-container iframe,
