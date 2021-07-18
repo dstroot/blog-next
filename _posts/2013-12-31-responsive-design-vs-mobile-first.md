@@ -60,6 +60,6 @@ I believe in the mobile-first progressive enhancement approach but I'd still rat
   };
 
   if( !(isMobile.any()) ) {
-    document.write('<div class="hidden-xs hidden-sm"><h3>See for yourself:</h3><div style="background-image:url(&#39;/assets/img/iphone5.png&#39;);background-repeat:no-repeat;margin: 0px 0px 0px 0px;padding: 145px 0px 0px 27px;width:375px;height:820px"><iframe src="http://danstroot.com" width="320" height="550"></iframe></div></div>');
+    document.write('<div class="hidden-xs hidden-sm"><h3>See for yourself:</h3><div style="background-image:url(&#39;/_next/image?url=%2Fassets%2Fblog%2Fimg%2Fiphone5.png&w=375&q=75&#39;);background-repeat:no-repeat;margin: 0px 0px 0px 0px;padding: 145px 0px 0px 27px;width:375px;height:820px"><iframe src="http://www.danstroot.com" width="320" height="550"></iframe></div></div>');
   }
 </script>
