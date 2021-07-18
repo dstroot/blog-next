@@ -8,7 +8,7 @@ excerpt: I have heard some people speak of "mobile-first" and "responsive
   means that the user experience will be custom tailored to the exact device you
   just happen to be viewing it with. This should be our ultimate goal, right?
 coverImage: /assets/blog/img/mobile-first.png
-date: '2013-12-31'
+date: "2013-12-31"
 published: true
 author:
   name: Dan Stroot

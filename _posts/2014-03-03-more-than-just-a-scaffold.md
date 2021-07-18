@@ -1,18 +1,16 @@
 ---
 title: More Than Just a Scaffold
-excerpt: ''
-coverImage: /assets/blog/authors/dan.jpeg
-date: '2014-03-03'
+excerpt: ""
+coverImage: /assets/blog/img/skeleton-sm.jpg
+date: "2014-03-03"
 published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog
+  url: /assets/blog/img/skeleton-sm.jpg
 seoURL: https://danstroot.com/2014/03/02/more-than-just-a-scaffold/
 ---
-
-<img class="lazy img-rounded img-responsive" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACwAAAAAAQABAAACAkQBADs=" alt="Skeleton Website" data-src="/assets/blog/img/skeleton-sm.jpg" width="750">
 
 Yeoman example:
 

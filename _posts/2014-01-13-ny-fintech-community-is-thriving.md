@@ -9,7 +9,7 @@ excerpt: 'I was reading up on the "MEAN" stack: Mongo, Express, Angular and Node
   tooling (for example .net/visual studio) but it requires an entirely different
   skill set for internal developers.'
 coverImage: /assets/blog/img/new-ui.jpg
-date: '2014-01-13'
+date: "2014-01-13"
 published: true
 author:
   name: Dan Stroot

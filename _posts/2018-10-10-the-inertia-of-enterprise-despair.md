@@ -9,7 +9,7 @@ excerpt: As of this writing, in early 2019 Sears announced it is near
   Brand recognition and established customer base, check. Unfortunately for an
   incumbent, change is much harder than anyone ever imagines it to be.
 coverImage: /assets/blog/img/committee.jpg
-date: '2019-01-06'
+date: "2019-01-06"
 published: true
 author:
   name: Dan Stroot
@@ -46,23 +46,21 @@ There is a huge gulf between the speed and agility of a digital start-up and a l
 
 Large incumbent enterprises exist because they **did things right**. They made good choices, hired good people and created outstanding products and services. The fact they were so successful under the old paradigms is exactly what makes it so hard to adapt to new ones.
 
-Enterprises are realizing they are now becoming **software companies**, and the people running a software company need to know how to do that. There needs to be digital training at every level of the organization, including in the boardroom and executive suite.
-
 Transformation by consensus, or by occasional hackathon, will not work, because transformation is not iteration from a low baseline: it requires making fundamental changes to an organization’s structure and processes. Digital transformation is about **business transformation**. It involves making fundamental changes to the organization's core processes and workforce.
 
-Organizations that want to thrive in the digital age need to wield the political will to radically transform themselves, rather than adopting superficial solutions. They must redesign how they operate, redesign their internal structure, and re-staff. Given what we know about the challenges of organizational change this will likely fail.
+Enterprises are realizing they are now becoming **software companies**, and the people running a software company need to know how to do that. Organizations that want to thrive in the digital age need to wield the political will to radically transform themselves, rather than adopting superficial solutions. They must redesign how they operate, redesign their internal structure, and re-staff. Given what we know about the challenges of organizational change this will likely fail.
 
-What may work is to create a "digital" organization that is segregated the parent company. This new organization can recruit the talent it needs and operate like a startup. The challenge is to make this new organization as separate as possible; it has to be able to choose what corporate functions it taps into, otherwise it is yoked to the same "chassis" as the parent.
+What works better is to create a "digital" organization that is segregated the parent company. This new organization can recruit the talent it needs and operate like a startup. The challenge is to make this new organization as separate as possible; it has to be able to choose what corporate functions it taps into, otherwise it is yoked to the same "chassis" as the parent.
 
 Many organizations have created in-house VC funds to seek out promising startups and take a stake in them to secure their digital future. This approach creates the maximum amount of independence and separation. This is the clearest way to compete on a level playing field with the "Industry+Tech" startups that plan to make you irrelevant.
 
 ### 2. Cost Allocation
 
-Poor cost allocation models create all manner of suboptimal enterprise behavior. They create a sense of **helplessness** for the department receiving the allocation. Leaders feel they are unable to manage the allocation amount or service level. Maybe they would like a lower (or higher) service level and are willing to sacrifice (or pay) for the privilege. But the enterprise usually only offers limited options, generally "one price, one service level".
+Poor cost allocation models create all manner of suboptimal enterprise behavior. They create a sense of **helplessness** for the department receiving the allocation. Leaders on the receiving end feel they are unable to manage the allocation amount or service level. Maybe they would like a lower (or higher) service level and are willing to sacrifice (or pay) for the privilege. But there are typically limited options, generally "one price, one service level".
 
-Worse, the models that build up the costs to be allocated are usually only known inside the allocating organization and rarely reflect reality. If the organization receiving the allocation wants to "pull out" and buy the service from a third party they are usually told they can't because that would simply drive up costs for the remaining parties (same pie, bigger slices).
+Worse, the models that build up the costs to be allocated are only known inside the allocating organization and rarely reflect reality. If the organization receiving the allocation wants to "pull out" and buy the service from a third party they are usually told they can't because that would simply drive up costs for the remaining business units (same pie, bigger slices).
 
-They conclude that if they can't change the allocation they can make damn sure to get the best possible service level. So they begin to beat on the organization supplying the service. This of course eventually ruins the working relationship between them and continues until all parties **thoroughly dislike each other**. It goes without saying that things do not move quickly or efficiently at this point because the parties stop speaking to each other, and in really bad cases they actively sabotage each other.
+Leaders conclude that if they can't change the allocation they can make damn sure to get the best possible service level. So they begin to beat on the organization supplying the service. This of course eventually ruins the working relationship between them and continues until all parties **thoroughly dislike each other**. It goes without saying that things do not move quickly or efficiently at this point because the parties stop speaking to each other, and in really bad cases they actively sabotage each other.
 
 Cost allocations must be completely transparent, and both costs and service levels must be benchmarked against the market. The receiving organization must be given the freedom to opt out. Finally, the enterprise must recognize that many costs should simply not be allocated, especially for those centralized services that divisions or subsidiaries are forced to adopt.
 
@@ -72,13 +70,13 @@ Risk management is by definition meant to reduce risk, which also **by definitio
 
 Enterprises have well-developed risk management muscles, particularly in regulated industries like healthcare or financial services. Since technology is the basis for nearly all business processes within a financial services company, the Risk Management function is always very interested in the consequences of a significant IT failure/outage, or a data breach.
 
-They are so interested that they are very involved in key functions like project delivery and change management. The effect of this involvement is **lots of documentation and meetings**, two things that are sure to slow anything to a crawl.
+They are so interested that they become very involved in key functions like project delivery and change management. The effect of this involvement is **lots of documentation and meetings**, two things that are sure to slow anything to a crawl.
 
 Like some aspects of security, occasionally the risk management activities are referred to as "risk management theatre". It exists to show we have it, and it's primary purpose is management reporting. It is less clear if it truly averts risk - particularly "black swan" type risks. It is usually focused on issues that either occur regularly, or at least have already occurred in the past. It rarely anticipates issues that have never happened before, but of course those are the most important risks to avoid.
 
 The financial crises of 2009 is a great illustration. Does anyone think Bear Stearns or Lehman didn't have a risk management function? Of course they did - they just didn't anticipate or understand the actual risks facing them.
 
-Risk Management should a) be skilled enough to actually have a conversation about IT architecture because that is what determines how resilient a company's technology really is, and b) figure out how to reduce their "friction" to technology adoption.
+Risk Management should a) be skilled enough to actually have a conversation about IT architecture because that is what determines how resilient a company's technology really is, and b) figure out how to reduce their "friction" to a technology adoption - which they have zero incentive to do.
 
 ### 4. Talent
 
@@ -134,7 +132,7 @@ If you’re working on something significant in a large enterprise, such as a ne
 
 Processes around this vary, but essentially, one or more security experts descend at some point on your project and audit it. It’s a medieval trial by ordeal. You get poked and prodded in various ways while questions are asked to determine weaknesses in your story. There will likely be references to various 'security standards' which in turn are enforced with differing degrees of severity.
 
-**The beatings will continue until risks are identified** (I’ve never heard of there being none). The outcome is a report outlining the set of risks that have been identified. These risks may need to be ‘signed off’ by someone senior so that responsibility lies with them if there is a breach. That process in itself is arduous (especially when the senior management person doesn’t fully understand technology) and will be repeated on a regular basis until the risks are sufficiently ‘mitigated’ through further engineering effort or process controls.
+**The beatings will continue until the security weaknesses are identified** (I’ve never heard of there being none). The outcome is a report outlining the set of risks that have been identified. These risks may need to be ‘signed off’ by someone senior so that responsibility lies with them if there is a breach. That process in itself is arduous (especially when the senior management person doesn’t fully understand technology) and will be repeated on a regular basis until the risks are sufficiently ‘mitigated’ through further engineering effort or process controls.
 
 The real issue is very few senior leaders understand technology security and **into the knowledge gap flows money and resources**. The result is "lots of security" with questionable real effectiveness, measurable increases in cost and schedule, and measurable decreases in productivity (and possibly the morale of capable engineers) across the company.
 
@@ -144,21 +142,21 @@ The real issue is very few senior leaders understand technology security and **i
 
 > "I just realized that a spreadsheet I use weekly was first created in 2004 and has been in constant use now for over 13 years!"
 
-The winners (or losers depending on your perspective) were several people **still using spreadsheets from 1995**, the year that Excel began to take root with the launch of Microsoft Office for Windows 95. Hopefully they are presumably using a modern version of Excel. Yet these files — and the 'business logic' they contain — are still working for them now, some twenty-three years later.
+The winners (or losers depending on your perspective) were several organizations **still using spreadsheets from 1995**, the year that Excel began to take root with the launch of Microsoft Office for Windows 95. Hopefully they are now using a modern version of Excel. Yet these files — and the 'business logic' they contain — are still working for them, some twenty-three years later.
 
 Can enterprises using spreadsheets from 1995 transform into digital winners? Will their employees be able to redesign the process from the ground up using modern technology. Unlikely.
 
 > “You take the new thing and shove it into the old paradigm”.
 >
-> <cite>&mdash; Rob Wolcott, Professor of Innovation & Entrepreneurship at Northwestern Kellogg</cite>
+> <cite>&mdash; Rob Wolcott, Professor of Innovation & Entrepreneurship, Northwestern Kellogg</cite>
 
 #### Agile-ish and Scrum-Theater
 
-Many companies embarking on ‘digital transformation’ are "consciously incompetent". They know what’s not working, and they know they have skill gaps and process issues, but are under the illusion that if they just adopt "the right process" it will save them. These companies frequently adopt an Agile or Lean process in name but not in practice. This is what’s sometimes referred to as agile-theater.
+Many companies embarking on ‘digital transformation’ are "consciously incompetent". They know what’s not working, and they know they have skill gaps and process issues, but are under the illusion that if they just adopt "the right process" it will save them. These companies frequently adopt an Agile or Lean process in name **but not in practice**. This is what’s sometimes referred to as agile-theater.
 
 ![Agile-ish Manifesto](/assets/blog/img/agile_manifesto.jpg)
 
-If your software team is the only Agile part of the product team, that’s scrum-theater. At this stage you’re gathering little or no market feedback. Product backlogs are prioritized around dev and engineering and not for customer value. Product teams are rushing to build solutions first before validating market value.
+If your software team is the only Agile part of the product team, that’s agile-theater. If the product manager is from the technology team, that's agile theater. At this stage you’re probably gathering little or no market feedback. Product backlogs are prioritized around dev and engineering and not for customer value. Product teams are rushing to build solutions first before validating market value or product/market fit.
 
 #### You Must Start with a Product Vision
 
@@ -225,11 +223,11 @@ Some risks can be managed by staffing the centralized procurement office with ex
 
 All large enterprises have a base of legacy applications and code; plus legacy people, with legacy skills to care for them. New, younger employees view working on this stuff as career suicide and run as far away as possible. Unfortunately legacy applications are always at the heart of the enterprise's most basic business processes - after all they were so important they were the first automation projects in historical times.
 
-More automation grew around them and integrated with those systems, taking into account their data structures and quirks. Then even more automation was layered on top of that, and later we added data warehouses, analytics and bolted on web architecture. **Replacing legacy systems is like open heart surgery on an elderly patient - wonderful news when it works, but funeral arrangements must be made if it doesn't**.
+More automation grew around them and integrated with those systems, taking into account their data structures and quirks. Then even more automation was layered on top of that, and later we added data warehouses, web architecture, and bolted on analytics. **Replacing legacy systems is like open heart surgery on an elderly patient - wonderful news when it works, but funeral arrangements must be made if it doesn't**.
 
 > "If it ain't broke, don't fix it!"
 
-It becomes nearly impossible to gain sponsorship to replace legacy systems because of the inherent costs and risks. What executive wants to sponsor a legacy system replacement when they can instead champion a new predictive analytics system or a brand new web site? So these systems lumber on like large ancient beasts, cared for and fed by a tribe that speaks "assembly", "VSAM", "JCL" and "COBOL" and communes with companies like IBM that were dominant when "I Dream of Jeanie" was on TV. Of course there is no current documentation of how the system works or what the system does - it exists only in the heads of the tribe members.
+It becomes nearly impossible to gain sponsorship to replace legacy systems because of the inherent costs and risks. What executive wants to sponsor a legacy system replacement when they can instead champion a new predictive analytics system or a brand new web site? So these systems lumber on like large ancient beasts, cared for and fed by a tribe that speaks "assembly", "VSAM", "JCL" and "COBOL" and communes with companies that were dominant when "I Dream of Jeanie" was on TV. Of course there is no current documentation of how the system works or what the system does - it exists only in the heads of the tribe members.
 
 CIO's talk about reducing "run" costs to free up resources for "change". Legacy systems usually have many years of intricate patching and modifications making them very brittle and difficult to change. Older hardware and software may require added compatibility layers to facilitate integration with "modern" hardware and software. All of this drives up the run costs. The key issue is how do you materially change your run costs without ever having the sponsorship, resources and political will to tackle the legacy systems? I suppose it's for the same reason that some of us smoke and are overweight; we know it's bad for us but somehow the will to change evades us.
 
