@@ -8,7 +8,7 @@ excerpt: Internet access is so fundamentally important that many people believe
   able to agree that access to the Internet promotes the digital economy and
   improves the lives of all citizens.
 coverImage: /assets/blog/img/internet_2.png
-date: '2017-12-22'
+date: "2017-12-22"
 published: true
 author:
   name: Dan Stroot

@@ -1,5 +1,5 @@
 ---
-title: '1791: We Did Not See This Coming'
+title: "1791: We Did Not See This Coming"
 excerpt: 'The Second Amendment was passed fifteen years after the American
   Revolution, in 1791, as part of the Bill of Rights. This was just three years
   after the Constitution was ratified in 1788. The complete Second Amendment of
@@ -9,7 +9,7 @@ excerpt: 'The Second Amendment was passed fifteen years after the American
   Second Amendment as a way to provide more power to state militias. It begins
   with the concept...'
 coverImage: /assets/blog/img/armory1.jpg
-date: '2017-10-10'
+date: "2017-10-10"
 published: true
 author:
   name: Dan Stroot

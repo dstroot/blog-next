@@ -5,7 +5,7 @@ excerpt: Web development has evolved faster than nearly every other software
   front-end developers are confronted with new frameworks, tools, and standards
   for “modern” web development **constantly**. Framework fatigue is real thing.
 coverImage: /assets/blog/img/rekit.jpg
-date: '2018-07-20'
+date: "2018-07-20"
 published: true
 author:
   name: Dan Stroot

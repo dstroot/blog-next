@@ -6,7 +6,7 @@ excerpt: When I was growing up, when you read the paper, watched the news, saw a
   "fair and balanced". Then technology destroyed the business model of
   traditional journalism.
 coverImage: /assets/blog/img/comic2.png
-date: '2016-10-31'
+date: "2016-10-31"
 published: true
 author:
   name: Dan Stroot
@@ -19,8 +19,6 @@ seoURL: https://danstroot.com/2016/10/30/free-to-believe-anything/
 When I was growing up, when you read the paper, watched the news, saw a film or a picture, you inherently believed in it. You trusted the reality it portrayed. You trusted in journalism and even believed the news was actually "fair and balanced". Then technology destroyed the business model of traditional journalism. The news institutions of the 20th century, print newspapers, the evening broadcast news, the trusted anchorman, are but relics of the past.
 
 We turned to the Internet, but then we all learned the hard way that we can’t trust the Internet. We no longer know what is real and what is fake. With everything now digital, and with excellent tools to edit audio, video, and photos, we have become skeptics. As soon as we see a viral video on YouTube we immediately say to ourselves “that’s fake”. Every magazine with a beautiful girl on the cover we think to ourselves “Photoshop”. When we read a blog post we think “spin”.
-
-<!--more-->
 
 The Internet is filled with anti-vaxxers, World Trade truthers, Kennedy theorists, religious fanatics of all stripes, and people who think that Barack Obama is a foreign-born Muslim. (He's not). Since we no longer trust the news or what we read on the Internet we live in strange and interesting times. Now people are free to believe whatever they want to believe by discounting anything they see that does not align with their beliefs.
 

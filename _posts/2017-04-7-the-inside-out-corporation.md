@@ -6,7 +6,7 @@ excerpt: Most companies still have a separate corporate network, protected by
   private, and precious to me, from any computer, via any network, without all
   that extra cost, complexity, overhead, and effort?
 coverImage: /assets/blog/img/citadel.jpg
-date: '2017-04-10'
+date: "2017-04-10"
 published: true
 author:
   name: Dan Stroot
@@ -146,9 +146,9 @@ Here are the main components summarized:
 
 #### References
 
-[BeyondCorp: A new approach to enterprise security](https://cloud.google.com/beyondcorp/)<br>
-[No Firewalls, No Problem for Google](https://threatpost.com/no-firewalls-no-problem-for-google/123748/)<br>
-[Fundamentals of the BeyondCorp ‘Zero-Trust’ Security Framework](https://dzone.com/articles/fundamentals-of-the-beyondcorp-zero-trust-security)<br>
-[Google leads the way out of the castle to the cloud](http://blog.code42.com/google-beyondcorp-leads-the-way-out-of-the-castle-to-the-cloud/)<br>
-[Bitly's Oauth2 Proxy](https://github.com/bitly/oauth2_proxy)<br>
-[Ditch your VPN, improve security and go to the cloud](https://www.blog.google/topics/google-cloud/how-use-beyondcorp-ditch-your-vpn-improve-security-and-go-cloud/)<br>
+- [BeyondCorp: A new approach to enterprise security](https://cloud.google.com/beyondcorp/)
+- [No Firewalls, No Problem for Google](https://threatpost.com/no-firewalls-no-problem-for-google/123748/)
+- [Fundamentals of the BeyondCorp ‘Zero-Trust’ Security Framework](https://dzone.com/articles/fundamentals-of-the-beyondcorp-zero-trust-security)
+- [Google leads the way out of the castle to the cloud](http://blog.code42.com/google-beyondcorp-leads-the-way-out-of-the-castle-to-the-cloud/)
+- [Bitly's Oauth2 Proxy](https://github.com/bitly/oauth2_proxy)
+- [Ditch your VPN, improve security and go to the cloud](https://www.blog.google/topics/google-cloud/how-use-beyondcorp-ditch-your-vpn-improve-security-and-go-cloud/)

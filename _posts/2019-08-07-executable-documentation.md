@@ -7,7 +7,7 @@ excerpt: Every team has manual procedures or checklists that they haven’t gott
   attention, but our attention isn’t rewarded with interesting problems or
   satisfying solutions – just another checkbox checked.
 coverImage: /assets/blog/img/exec_doc.png
-date: '2019-08-07'
+date: "2019-08-07"
 published: true
 author:
   name: Dan Stroot
@@ -123,7 +123,7 @@ So you take this concept pretty far!
 
 #### Resources
 
-[Manual work is a bug](https://queue.acm.org/detail.cfm?id=3197520)</br>
-[Record shell sessions](https://www.youtube.com/watch?v=tweyWNr6X18)</br>
-[NYT - The Checklist](https://www.newyorker.com/magazine/2007/12/10/the-checklist)</br>
-[The Simple Genius of Checklists, from B-17 to the Apollo Missions](https://blog.nuclino.com/the-simple-genius-of-checklists-from-b-17-to-the-apollo-missions)
+- [Manual work is a bug](https://queue.acm.org/detail.cfm?id=3197520)</br>
+- [Record shell sessions](https://www.youtube.com/watch?v=tweyWNr6X18)</br>
+- [NYT - The Checklist](https://www.newyorker.com/magazine/2007/12/10/the-checklist)</br>
+- [The Simple Genius of Checklists, from B-17 to the Apollo Missions](https://blog.nuclino.com/the-simple-genius-of-checklists-from-b-17-to-the-apollo-missions)

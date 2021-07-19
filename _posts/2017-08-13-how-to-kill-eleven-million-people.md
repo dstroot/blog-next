@@ -8,7 +8,7 @@ excerpt: This blog is meant for technology topics, not politics. However, I
   demand truth, honesty and integrity from our leaders, or suffer the
   consequences of our own ignorance and apathy.
 coverImage: /assets/blog/img/holocaust.jpg
-date: '2017-08-13'
+date: "2017-08-13"
 published: false
 author:
   name: Dan Stroot

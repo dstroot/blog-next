@@ -1,0 +1,39 @@
+---
+title: Event Based Systems
+excerpt: You are contributing value, whether you like it not, when you make your
+  code public. Training machine learning models on publicly available data is
+  considered fair use across the machine learning community. The models gain
+  insight and accuracy from the public collective intelligence. The only way to
+  extract value back out is to use Copilot yourself.
+coverImage: /assets/blog/img/copilot.jpg
+date: "2021-07-2s2"
+published: false
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/copilot.jpg
+seoURL: https://danstroot.com/2021/07/11/github-copilot/
+---
+
+[GitHub](https://github.com/) (owned by [Microsoft](https://www.microsoft.com/en-us/)), has partnered with [OpenAI](https://openai.com/) to create an AI tool called [Copilot](https://copilot.github.com/) that **writes code for you**. Open AI developed Codex, an AI that translates natural language into code, and Codex is integrated with Copilot. Side note: _OpenAI runs on Microsoft Azure_.
+
+Today, a human still has to review and accept the code suggestions, which providers of Copilot argue transfers all liability. This will be an area to watch closely.
+
+### See Copilot Answer Leetcode Code Interview Questions
+
+Let's watch Copilot in action answering leetcode coding interview questions:
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/72W_VvFRqc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+### Lower Barriers to Entry for Coders
+
+How disruptive will Copilot be for the Software Engineering Industry? Creating intelligent systems to "co-code" with you will bring enormous change to the developer experience. GitHub Copilot has the potential to lower barriers to entry, enabling more people to explore software development and join the next generation of developers. This opens the door for many people who may not otherwise be able to get a developer position, but it will **almost certainly lower wages for entry level programmers** who code in common languages.
+
+However, **software engineering is not the same thing as writing code**. Software engineering is a much more profound task that implies broad knowledge, problem solving skills, and creativity. Copilot could actually drive up demand and increase wages for solution architects, senior lead developers, and others with more experience and specialized skills. As "writing the code" becomes more commoditized, **more experienced people will likely be in higher demand** to "oversee" the work.
+
+### References
+
+- [Thinking in events: from databases to distributed collaboration software](https://dl.acm.org/doi/10.1145/3465480.3467835)

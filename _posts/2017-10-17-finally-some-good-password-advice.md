@@ -1,10 +1,10 @@
 ---
-title: 'Finally: Some Sane Password Advice'
+title: "Finally: Some Sane Password Advice"
 excerpt: 'In every organization I have worked with managing user authentication
   and passwords was a huge challenge.  The key issue was that the "old" password
   best practices were **failed attempts to fix the user, not the system**. '
 coverImage: /assets/blog/img/password.jpg
-date: '2017-10-16'
+date: "2017-10-16"
 published: true
 author:
   name: Dan Stroot

@@ -7,7 +7,7 @@ excerpt: >
   site scored.  The UI is very nice but you have to opt-in to email to get your
   detailed report. I am definitely not a fan of that "dark pattern".
 coverImage: /assets/blog/img/speed.png
-date: '2017-01-10'
+date: "2017-01-10"
 published: false
 author:
   name: Dan Stroot
@@ -37,9 +37,8 @@ Why?
 
 In other words making your site run well on a phone means it will run great on more capable hardware with more reliable networking and your page ranking will reflect it.
 
-#### References:
+#### References
 
-- https://testmysite.withgoogle.com
-- https://github.com/GoogleChrome/lighthouse
-- http://venturebeat.com/2016/03/16/google-will-start-ranking-mobile-friendly-sites-even-higher-in-may/
-- https://developers.google.com/speed/pagespeed/insights/
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse)
+- [Google will start ranking ‘mobile-friendly’ sites even higher in May](http://venturebeat.com/2016/03/16/google-will-start-ranking-mobile-friendly-sites-even-higher-in-may/)
+- [PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
