@@ -3,7 +3,8 @@ title: Are we Paying the Ransom or Not?
 excerpt: The answer will depend primarily on how quickly the technology team
   contained the infection, how much effort it will be to eradicate the malware
   and restore the systems and data, and whether backups are immutable.
-  Interestingly, it takes the same amount of time if you pay the ransom or not!
+  Many victims still pay the ransom even when they have the means to restore
+  everything from backups on their own. Why?
 coverImage: /assets/blog/img/ransomware.jpg
 date: "2021-07-10"
 published: true
@@ -22,17 +23,17 @@ The Colonial Pipeline breach that crippled the East Coast’s fuel supply recent
 Companies that are attacked, and pay the ransom, are typically less secure than most. However even with robust security, it will [never be perfect](/posts/2015-09-26-is-it-secure). Therefore, **recovery** should be a higher focus for even highly secure companies:
 
 - Can we respond in the containment phase fast enough?
-- Do we know our data is backed up in immutable format? If our backups are encrypted where are the decryption keys?
+- Do we know our data is backed up in immutable format? If we encrypt our backups for security where are the decryption keys? Hopefully not in the filesystem the ransomware just compromised.
 - Can we reinstall our software - do we have the correct software media and version, license keys, etc.? Is it also in immutable format?
 - Do our business continuity plans drill specifically for this scenario?
 
-That last bullet is one of the most important. Many victims still pay the ransom **even when they have the means to restore everything from backups on their own**.
+That last bullet is key. Many victims still pay the ransom **even when they have the means to restore everything from backups on their own**.
 
-## Why Pay the Ransom
+### Why Pay the Ransom
 
 The biggest reasons ransomware targets still pay even when they have reliable backups are:
 
-1. **Nobody at the victim organization bothered to test in advance how long this data restoration process might take**. For example, what if an organization is storing backups on AWS Glacier? If they get attacked by ransomware they may suddenly discover thay have petabytes of data to restore over the Internet, and they realize that even with their fast connections **it’s going to take months to download all the backup files**. Many technology teams don't even have a back-of-the-napkin calculation of how long it would take for a full, complete restore.
+1. **Nobody at the victim organization bothered to test in advance how long the data restoration process might take**. For example, what if an organization is storing backups on AWS Glacier? If they get attacked by ransomware they may suddenly discover thay have terabytes or petabytes of data to restore over the Internet, and that even with a fast connection **it’s going to take months to download all the backup files**. Many technology teams don't even have a back-of-the-napkin calculation of how long it would take for a full, complete restore.
 
 2. The next most-common scenario involves victims that have off-site, encrypted backups of their data but discover that **the digital key needed to decrypt their backups was stored on the same local file-sharing network that got encrypted by the ransomware**.
 
@@ -42,7 +43,7 @@ The biggest reasons ransomware targets still pay even when they have reliable ba
 
 If you haven't thought about and tested the scenarios above then **yes, you are paying the ransom**.
 
-## Steps in a Typical Ransomware Attack
+### Steps in a Typical Ransomware Attack
 
 1. **Infection**: After it has been delivered to the system via email attachment, phishing email, infected application or other method, the ransomware installs itself on the endpoint and any network devices it can access.
 2. **Secure Key Exchange**: The ransomware contacts the command and control server operated by the criminals behind the attack to generate the cryptographic keys to be used on the local system.
@@ -78,7 +79,7 @@ There is a **wealth** of information about security best practices. No need to r
 There are three main steps in recovery:
 
 1. **Containment** - involves rapid response by severing network connections and taking systems offline so they don’t infect other systems.
-2. **Eradication** - means wiping the malware from the system and/or completely rebuilding the system. Executives might think, why rebuild the system? However, as we know some malware embeds itself into systems in ways that make it impossible to eradicate without rebuilding the system from scratch. In any case, this process takes time. And interestingly it takes the **same amount of time if you pay the ransom or not** because in either case **you have to rebuild all of your systems to eradicate the ransomware** and this is often the most time consuming step. Of course, the manner of infection must be tracked down and the vulnerability addressed or you will be reinfected.
+2. **Eradication** - means wiping the malware from the system and/or completely rebuilding the system. Executives might think, why rebuild the system? However, as we know some malware embeds itself into systems in ways that make it impossible to eradicate without rebuilding the system from scratch. In any case, this process takes time. And interestingly it may take the **same amount of time if you pay the ransom or not** because in either case **you have to rebuild all of your systems to eradicate the ransomware** - this is often the most time consuming step. Of course, the manner of infection must be tracked down and the vulnerability addressed or you will be reinfected.
 3. **Recovery** - Once they systems are rebuilt in a cleanroom the data can be restored and the system brought online. This a very delicate process because if the malware was not fully eradicated you will re-infect yourself. Each system must be brought online and validated in as isolated a manner as possible, in the correct sequence. Immutable backup options such as Object Lock offer users a way to maintain truly air-gapped backups. The data is fixed, unchangeable, and cannot be deleted within the time frame set by the end-user.
 
 If you haven't thought about and tested ransomware recovery scenarios prior to becoming infected then **yes, you are paying the ransom**.
