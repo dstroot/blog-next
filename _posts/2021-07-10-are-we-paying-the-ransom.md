@@ -22,9 +22,9 @@ The Colonial Pipeline breach that crippled the East Coast’s fuel supply recent
 
 Companies that are attacked, and pay the ransom, are typically less secure than most. However even with robust security, it will [never be perfect](/posts/2015-09-26-is-it-secure). Therefore, **preparation and recovery should be a higher focus**, even for highly secure companies.
 
-Without thorough prparation we find many victims **still pay the ransom even when they have the means to restore everything**.
+Without thorough preparation many victims **still pay the ransom even when they have the means to restore everything**.
 
-### Why Pay
+### Why Pay?
 
 Reasons ransomware targets still pay (even when they have reliable backups) are:
 
@@ -42,9 +42,9 @@ If you haven't thought about the scenarios above then **yes, you are paying the 
 
 There are three themes to get right to protect your organization against ransomware: Prevention, Preparation and Recovery.
 
-- **Prevention** stops attacks before they happen.
-- **Preparation** ensures our backups are good, accessible, restorable in a reasonable timeframe.
-- **Recovery** minimizes the damage, speeds recovery, and avoids paying the ransom.
+1. **Prevention** stops attacks before they happen.
+2. **Preparation** ensures backups are good, accessible, and restorable in a reasonable timeframe.
+3. **Recovery** minimizes the damage, speeds rebuilding, and avoids paying the ransom.
 
 ### Prevention
 
@@ -59,7 +59,7 @@ For example:
 - Keep you administrative surface area small. This means not giving your users admin privileges.
 - Use multi-factor authentication (Google introduced MFA logins for users and eliminated the threat of phishing).
 
-There is a **wealth** of information about security best practices on the web. No need to repeat it all here.
+There is a **wealth** of information about security best practices on the web. No need to repeat it here.
 
 ### Preparation
 
@@ -67,9 +67,9 @@ There is a **wealth** of information about security best practices on the web. N
 
 This is number one - **ransomware is a professional business**. Criminals literally earn their living by attacking companies like yours. Companies need skilled technical people because of the sheer aggregation of risk; they are your last line of defense. If you do get hit with ransomware you want people on payroll, and on site, ASAP. You don't want to call your technology sourcing partner when you get hit and have them put you on hold while they take calls from their bigger clients that have also been hit with the same malware. Or worse, they been hit too.
 
-You probably don't need a group of rockstar 10x-types, but you do need solid, fundamental IT knowledge and ability to solve technical challenges. There's no glamour or glory busines continuity, and no easy sources of funding like inforation security.
+You probably don't need a group of rockstar 10x-types, but you do need solid, fundamental IT knowledge and ability to solve technical challenges. There's no glamour or glory busines continuity, and no easy sources of funding like for information security.
 
-There is glory in "slashing the IT budget, with no disruptions in operations, because cutting the fat is good for business". Be very careful you aren't creating a "Texas Power Grid" situation, it works until it doesn't, and it will stop working when you you need it most.
+There is glory in "cutting the IT budget, with no disruptions in operations, because cutting the fat is good for business!". Be very careful you aren't creating a "Texas power grid" situation, e.g. it works until it doesn't, and it will stop working when you you need it most.
 
 #### 2. Clean House
 
