@@ -5,6 +5,7 @@ import { Header } from "../components/Header";
 import { PostTitle } from "../components/PostTitle";
 import { Layout } from "../components/Layout";
 import { CMS_NAME, ALERT } from "../lib/constants";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -127,6 +128,9 @@ export default function About() {
                   <a href="https://helmetjs.github.io/">Helmet</a> (contributor)
                 </li>
               </ul>
+              <Link href="/archive">
+                <a className="mt-8 mb-8 text-xl block">[ Post Archive ]</a>
+              </Link>
               <p className="mt-10 leading-none">
                 <small>
                   <em>

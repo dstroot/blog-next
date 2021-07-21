@@ -19,7 +19,7 @@ export default function Index({ allPosts }) {
         <Container>
           <Header />
           <PostTitle>Archive</PostTitle>
-          <div className="max-w-2xl mx-auto mb-10 markdown">
+          <div className="max-w-2xl mx-auto mb-10">
             {posts.length > 0 && <Archive posts={posts} />}
           </div>
         </Container>
@@ -29,17 +29,7 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    "title",
-    // "excerpt",
-    "date",
-    "published",
-    "slug",
-    // "author",
-    // "coverImage",
-    // "fileName",
-    // "stats",
-  ]);
+  const allPosts = getAllPosts(["title", "date", "published", "slug"]);
 
   return {
     props: { allPosts },

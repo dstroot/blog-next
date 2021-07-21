@@ -24,13 +24,13 @@ export const Archive = ({ posts }) => {
                 {year}
               </h3>
             )}
-            <div className="grid grid-flow-col gap-6 ml-8 items-center">
+            <div className="grid grid-flow-col gap-6 ml-8 items-center text-gray-700 dark:text-gray-300">
               <div className="truncate">
                 <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-                  <a>{post.title}</a>
+                  <a className="hover:underline">{post.title}</a>
                 </Link>
               </div>
-              <div className="text-gray-500 text-right text-sm">
+              <div className="text-right text-sm">
                 <DateFormatter dateString={post.date} />
               </div>
             </div>
