@@ -24,7 +24,7 @@ export const Archive = ({ posts }) => {
                 {year}
               </h3>
             )}
-            <div className="grid grid-flow-col gap-6 ml-8 items-center text-gray-700 dark:text-gray-300">
+            <div className="grid grid-flow-col gap-6 ml-8 items-center text-gray-800 dark:text-gray-200">
               <div className="truncate">
                 <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
                   <a className="hover:underline">{post.title}</a>

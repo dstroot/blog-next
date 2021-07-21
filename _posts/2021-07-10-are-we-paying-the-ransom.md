@@ -20,59 +20,56 @@ The first question executives will ask when they find out their company has fall
 
 The Colonial Pipeline breach that crippled the East Coast’s fuel supply recently was not particularly sophisticated. It has been traced back to a VPN login that was compromised. The credentials had leaked already and appeared in a dark web password cache. The VPN credentials allowed the attackers to gain access to Colonial's network by simply logging in (multi-factor authentication was not in use). Once inside they were able to gain elevated privileges to encrypt files.
 
-Companies that are attacked, and pay the ransom, are typically less secure than most. However even with robust security, it will [never be perfect](/posts/2015-09-26-is-it-secure). Therefore, **preparation and recovery should be a higher focus**, even for highly secure companies:
+Companies that are attacked, and pay the ransom, are typically less secure than most. However even with robust security, it will [never be perfect](/posts/2015-09-26-is-it-secure). Therefore, **preparation and recovery should be a higher focus**, even for highly secure companies.
 
-- Can we respond in the containment phase fast enough?
-- Do we know our data is backed up in immutable format? If we encrypt our backups for security where are the decryption keys? Hopefully not in the filesystem the ransomware just compromised.
-- Can we reinstall our software - do we have the correct software media and version, license keys, etc.? Is it also in immutable format?
-- Do we know our system/server configuration?
-- Do our business continuity plans drill specifically for this scenario?
+Without thorough prparation we find many victims **still pay the ransom even when they have the means to restore everything**.
 
-That last bullet is key. Many victims **still pay the ransom even when they have the means to restore everything** from backups on their own. Why?
+### Why Pay
 
-### Why Pay the Ransom
+Reasons ransomware targets still pay (even when they have reliable backups) are:
 
-The biggest reasons ransomware targets still pay even when they have reliable backups are:
+1. **Nobody bothered to test in advance how long the data restoration process might take**. For example, what if an organization stores backups on AWS Glacier? If they get attacked by ransomware they may suddenly discover they have terabytes (or petabytes) of data to restore over the Internet, and that even with a fast connection **it’s going to take months to download all the backup data**. Many technology teams don't even have a back-of-the-napkin calculation of how long it would take for a full, complete restore.
 
-1. **Nobody bothered to test in advance how long the data restoration process might take**. For example, what if an organization stores backups on AWS Glacier? If they get attacked by ransomware they may suddenly discover they have terabytes (or petabytes) of data to restore over the Internet, and that even with a fast connection **it’s going to take months to download all the backup files**. Many technology teams don't even have a back-of-the-napkin calculation of how long it would take for a full, complete restore.
-
-2. The next most-common scenario involves victims that have off-site, encrypted backups of their data but discover that **the digital key needed to decrypt their backups was stored on the same local file-sharing network that was encrypted by the ransomware**.
+2. The next most-common scenario involves victims that have off-site, encrypted backups of their data but discover that **the digital keys needed to decrypt their backups were stored on the same local file-sharing network that was encrypted by the ransomware**.
 
 3. Maybe you have the data backed up and accessible, but your **software was stored on the same local file-sharing network that got encrypted by the ransomware** You have backups, the data is there, but the application to actually do the restoration is encrypted, or the software you need to reinstall is encrypted.
 
-4. Finally, **many companies don’t know their systems dependencies**, and so they don’t know in which order they should build/restore systems.
+4. Finally, **many companies don’t know their systems dependencies**, and so they don’t know in which order they should build/restore systems. Nor do they have a clear repeatable process to configure systems - they find they have been cloning a build image Larry created before he left last year.
 
-If you haven't thought about and tested the scenarios above then **yes, you are paying the ransom**.
+If you haven't thought about the scenarios above then **yes, you are paying the ransom**.
 
 ### Ransomware Protection
 
-There are three things to get right: Prevention, Preparation and Recovery.
+There are three themes to get right to protect your organization against ransomware: Prevention, Preparation and Recovery.
 
 - **Prevention** stops attacks before they happen.
-- **Preparation** ensures our backups are good, and we can restore in a reasonable timeframe.
+- **Preparation** ensures our backups are good, accessible, restorable in a reasonable timeframe.
 - **Recovery** minimizes the damage, speeds recovery, and avoids paying the ransom.
 
 ### Prevention
 
-There is nothing special about ransomware prevention. It is "Security 101". All normal security and anti-malware practices apply. For example:
+There is nothing special about ransomware prevention. It is "Security 101". **All normal security and anti-malware practices apply**.
 
-- Keep software updated and patched
-- Use anti-virus and anti-malware software
-- Use security policies to prevent malware from launching
+For example:
+
+- Keep software updated and patched.
+- Use anti-virus and anti-malware software.
+- Use security policies to prevent malware from launching.
+- Use good email hygiene. Train your employees against phishing.
 - Keep you administrative surface area small. This means not giving your users admin privileges.
 - Use multi-factor authentication (Google introduced MFA logins for users and eliminated the threat of phishing).
 
-There is a **wealth** of information about security best practices. No need to repeat it all here.
+There is a **wealth** of information about security best practices on the web. No need to repeat it all here.
 
 ### Preparation
 
 #### 1. You Need People who Understand Technology
 
-This is number one for a reason - **ransomware is a professional business**. Criminals literally earn their living by attacking companies like yours. Your IT professionals are your line of defense. Companies need skilled technical people because of the sheer aggregation of risk. An outsourced IT provider is not going to protect you the same way smart staff will, and if you do get hit with ransomware you need people on payroll, and on site, ASAP. Not everyone needs a group of rockstar 10x-types, but you do need solid, fundamental IT knowledge and ability to solve technical challenges.
+This is number one - **ransomware is a professional business**. Criminals literally earn their living by attacking companies like yours. Companies need skilled technical people because of the sheer aggregation of risk; they are your last line of defense. If you do get hit with ransomware you want people on payroll, and on site, ASAP. You don't want to call your technology sourcing partner when you get hit and have them put you on hold while they take calls from their bigger clients that have also been hit with the same malware. Or worse, they been hit too.
 
-You don't want to call your technology sourcing partner when you get hit and have them put you on hold while they take calls from their bigger clients that have also been hit with the same malware.
+You probably don't need a group of rockstar 10x-types, but you do need solid, fundamental IT knowledge and ability to solve technical challenges. There's no glamour or glory busines continuity, and no easy sources of funding like inforation security.
 
-There's no glamour in back ups. Even less in testing back-ups. There is glory in "slashing the IT budget with no disruptions in operations, cutting the fat is good for business". Be careful you aren't creating a "Texas Power Grid" situation, it works until it doesn't, and it will stop working when you you need it most.
+There is glory in "slashing the IT budget, with no disruptions in operations, because cutting the fat is good for business". Be very careful you aren't creating a "Texas Power Grid" situation, it works until it doesn't, and it will stop working when you you need it most.
 
 #### 2. Clean House
 
@@ -80,11 +77,11 @@ Scrub old data you don't need. Backups will be an order of magnitude smaller, ea
 
 #### 3. Automate System Provisioning and Configuration
 
-In the old days machine configurate was a hand-crafted art. In many cases systems were built out and configured as an artist molds clay. Little bits added and smeared in over time until the the system is "configured", but recreating the steps would be impossible. Especially when they were configured by Frank, but he left 2 years ago and he never documented anything.
+In the old days machine configurate was a hand-crafted art. In many cases systems were built out and configured as an artist molds clay. Little bits added and changed over time until the the system is "configured", but recreating the steps would be impossible. Especially when they were configured by Frank, but he left 2 years ago and he never documented anything.
 
-If the "ball of clay" becomes a virtualized machine, it can be copied and/or backed up - it's **exact** configuration is preserved. That is step one.
+If we virtualized the "ball of clay", it can be copied and/or backed up - it's **exact** configuration is preserved. That is step one.
 
-Step two automates machine provisioning (pets vs. cattle). Using tools like Git & Ansible, and tools like Terraform, it is possible to create a fully automated process to instantiate machines in a repeatable manner. I've seen an Ansible playbook that does 200 administrative tasks for each of the servers for a particular environment - all of the configuration is version-controlled within Git repositories. Changes are applied by CI, all of the process also being thoroughly documented.
+Step two automates machine provisioning (pets vs. cattle). Using tools like Git, Chef, Ansible, and Terraform, it is possible to create a fully automated process to instantiate machines in a repeatable manner. I've seen an Ansible playbook that does 200 administrative tasks for each of the servers for a particular environment - all of the configuration is version-controlled within Git repositories. Changes are applied by CI, all of the process thoroughly documented.
 
 Everything from installing packages, creating or removing user accounts, setting up firewall rules, setting up directories and sending the necessary configuration, systemd services for legacy stuff, container clusters, container deployments, monitoring, container registries, analytics, APM and so on are handled this way.
 
@@ -94,9 +91,9 @@ Automated configuration means it's repeatable, can be tested, and can be done in
 
 #### 4. Immutable Backups
 
-Mirroring and data replication are good for availability but bad for backup purposes - if the files being replicated become encrypted via ransomware it is possible the mirroring will just copy the freshly encrypted file(s) to the other location.
+Mirroring and data replication are great for availability but bad for backup purposes - if the files being replicated become encrypted via ransomware it is possible the mirroring will just copy the freshly encrypted file(s) or data to the other location.
 
-In fact, you should monitor disk activity. Establish a baseline and then keep an eye on it. If you get hit your disk usage will suddenly skyrocket as it rewrites/encrypts all your files. Your mirroring or replication network traffic will also spike up.
+In fact, you should monitor disk activity. If you get hit your disk usage will suddenly skyrocket as it rewrites/encrypts all your files. Your mirroring or replication network traffic will also spike up.
 
 Keep immutable, offline, airgapped backups:
 
@@ -111,27 +108,27 @@ Keep immutable, offline, airgapped backups:
 
 #### 5. Monitor Your Backup Processes
 
-Set up monitoring so you know when something goes wrong with your backups. Gather and expose enough information to know what's going on! This could be as simple as an automated email every morning, showing the duration of the backup job, and the amount of data written, and amount changed since last time. But you need to monitor this. Don't just go for a failure alarm (have one of those, and make it fail-safe so it alerts if the backup didn't succeed, even if the backup script didn't run at all!) - also notify yourself on success so you are aware of the backups and what goes on.
+Set up monitoring so you know when something goes wrong with your backups. Gather and expose enough information to know exactly what's going on. This could be as simple as an automated email every morning, showing the duration of the backup job, and the amount of data written, and amount changed since last time. But you need to monitor this. Don't just go for a failure alarm (have one of those, and make it fail-safe so it alerts if the backup didn't succeed, even if the backup script didn't run at all) also notify yourself on success so you are aware of the backups and what normal metrics look like.
 
 #### 6. Test Restoration
 
-Assume your backup will not be restorable unless proven otherwise. Practice restoring to a non-production environment to see what you missed. Document it all! In the old days tape media went bad, tape catalogs became corrupted, the label on the tape didn't match the contents. Today there are much better technologies but assume your systems cannot be restored unless it has been recently tested.
+Assume your backup will not be restorable unless proven otherwise. Practice restoring to a non-production environment to see what you missed. Document everything. In the old days tape media went bad, tape catalogs became corrupted, the label on the tape didn't match the contents. Today there are much better technologies, but assume your systems cannot be restored unless this has been recently tested.
 
-#### 7. Define the Order to Rebuild
+#### 7. Define Rebuild Steps
 
-When rebuilding a new "clean" environment there are a many prerequisites and "order of operation" issues. You need DNS to access the Internet and DHCP services to assign IP addresses to machines. You need authentication, and many other dependencies will soon become apparent.
+When rebuilding a new "cleanroom" environment there are a many prerequisites and "order of operation" issues. You need DNS to access the Internet and DHCP services to assign IP addresses to machines. You need authentication, and many other dependencies will soon become apparent.
 
 Start with tabletop exercises to somply think through and document your systems dependencies and order of operations necessary to rebuild. Document this process and store copies documentation in a place that is separate and airgapped from your main environment.
 
 Divide the rebuild into stages:
 
 1. Pepare cleanroom
-2. Establish network perimeter
-3. Establish core services (DHS, DHCP, Authentication, etc.) inside perimeter
-4. Initialize rebuilt process, create new admin accounts
+2. Establish new network perimeter
+3. Establish new core services (DHS, DHCP, Authentication, etc.) inside perimeter
+4. Initialize rebuild process, create new admin accounts...
 5. Etc.
 
-It may not be feasible to test a full rebuild scenario but even drilling on the initial stages is important for an accelerated recovery.
+It may not be feasible to test a full rebuild scenario but even testing and practicing the initial stages is very important for an accelerated recovery. These steps are typically the ones that trip up ransomeware victimes because they were never considered.
 
 ### Recovery
 
@@ -140,7 +137,7 @@ It may not be feasible to test a full rebuild scenario but even drilling on the 
 There are three main steps in recovery:
 
 1. **Containment** - involves rapid response by severing network connections and taking systems offline so they don’t infect other systems.
-2. **Eradication** - means wiping the malware from the system and/or completely rebuilding the system. Executives might think, why rebuild the system? However, as we know some malware embeds itself into systems in ways that make it impossible to eradicate without rebuilding the system from scratch. In any case, this process takes time. And interestingly it may take the **same amount of time if you pay the ransom or not** because in either case **you have to rebuild all of your systems to eradicate the ransomware** - this is often the most time consuming step. Of course, the manner of infection must be tracked down and the vulnerability addressed or you will be reinfected.
+2. **Eradication** - means wiping the malware from the system and/or completely rebuilding the system. Executives might think, why rebuild the system? However, as we know some malware embeds itself into systems in ways that make it impossible to eradicate without rebuilding the system from scratch. In any case, this process takes time. And interestingly it may take the **same amount of time if you pay the ransom or not because in either case you have to rebuild all of your systems to eradicate the ransomware** - this is often the most time consuming step. Of course, the manner of infection must be tracked down and the vulnerability addressed or you will be reinfected.
 3. **Recovery** - Once they systems are rebuilt in a cleanroom the data can be restored and the system brought online. This a very delicate process because if the malware was not fully eradicated you will re-infect yourself. Each system must be brought online and validated in as isolated a manner as possible, in the correct sequence.
 
 If you haven't thought about and tested ransomware recovery scenarios prior to becoming infected then **yes, you are paying the ransom**.
