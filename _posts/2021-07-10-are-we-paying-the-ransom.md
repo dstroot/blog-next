@@ -20,7 +20,7 @@ The first question executives will ask when they find out their company has fall
 
 The Colonial Pipeline breach that crippled the East Coast’s fuel supply recently was not particularly sophisticated. It has been traced back to a VPN login that was compromised. The credentials had leaked already and appeared in a dark web password cache. The VPN credentials allowed the attackers to gain access to Colonial's network by simply logging in (multi-factor authentication was not in use). Once inside they were able to gain elevated privileges to encrypt files.
 
-Companies that are attacked, and pay the ransom, are typically less secure than most. However even with robust security, it will [never be perfect](/posts/2015-09-26-is-it-secure). Therefore, **preparation and recovery should be a higher focus**, even for highly secure companies.
+Companies that are attacked, and pay the ransom, are typically less secure than most. However even with robust security, it will [never be perfect](/posts/2015-09-26-is-it-secure). Therefore, preparation and recovery should be a higher focus, even for highly secure companies.
 
 Without thorough preparation many victims **still pay the ransom even when they have the means to restore everything**.
 
@@ -87,7 +87,7 @@ Everything from installing packages, creating or removing user accounts, setting
 
 No one has write access on the server itself (unless explicitly given in the playbook, or the admins) and even the servers themselves can be wiped and reinstalled with a newer OS version (mostly thanks to Docker), plus all of the changes are auditable, since they coincide with the Git repo history.
 
-Automated configuration means it's repeatable, can be tested, and can be done in the event of an emergency (**as long as your tools and scripts were not encrypted by the ransomware**).
+Automated configuration means it's repeatable, can be tested, and can be done in the event of an emergency (**as long as your tools and scripts were not encrypted by the ransomware!**).
 
 #### 4. Immutable Backups
 
@@ -100,7 +100,7 @@ Keep immutable, offline, airgapped backups:
 1. Use a COW (copy-on-write) filesystem like btrfs or ZFS
 2. Set up snapshots to be taken periodically (hourly/daily) and sent to a different host or volume with some type of immutable file system.
 3. Manually backup snapshots or the full volume to offline, airgapped storage every N days/weeks/months.
-4. Figure out how you'll stop a someone who gets in from deleting or accessing your backups. Assume they'll be attacked. Understand what the backup solutions offer in terms of security. Can you use protection on an s3 storage bucket to prevent deletion, even with the access key? Don't let **anything** delete or format any volumes named "Backup".
+4. Figure out how you'll stop a someone who gets in from deleting or accessing your backups. Assume they'll be attacked. Understand what the backup solutions offer in terms of security. Can you use protection on an S3 storage bucket to prevent deletion, even with the access key? Don't let **anything** delete or format any backup volumes.
 5. If you're going to use encrypted backups, understand where the keys are stored and how they're used. More importantly, understand how you'll have the keys to decrypt the backups after a disaster. Can you use asymmetric crypto so only public keys get stored on your servers?
 6. Make the offsite backup 'pull' based - so the credentials to access the data already backed up do not exist on the system being backed up.
 7. Ensure you have enough copies. One isn't enough - what if the payment card on your storage account expires, or you get locked out? Three backups in two locations, at least one off-premises.

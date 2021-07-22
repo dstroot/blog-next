@@ -9,7 +9,7 @@ excerpt: People go into technology because they love building new things,
   expensive consultants. Read on to learn the telltale signs of an underfunded
   technology organization.
 coverImage: /assets/blog/img/old-computer.jpeg
-date: '2021-06-10'
+date: "2021-06-10"
 published: true
 author:
   name: Dan Stroot
@@ -46,4 +46,4 @@ Here are the telltale signs of an underfunded technology organization. If you re
 - **Premium Support**: There will be low usage of open-source technology and high usage of vendor software with premium level support contracts. This is because they want to be able to “call the vendor” when something goes wrong, rather than expect (or rely on) their own employees to figure it out.
 - **The Department of "No"**: The technology department becomes known as the department of “no”. Because technology employees become world class experts at saying no to requests for more capabilities or better technology. Not because they want to, because they have to be able to grow this skill to survive.
 
-**The last thing on earth most technologists want to say is “no”.** Give them enough resources so they can say **"yes"!**
+Resource constraints cause many types of unwanted behavior. Resource constrained warehouses might on skimp on buying fire insurance, resource constrained restaurants might skimp on sanitation, Resource constrained power companies might skimp on line maintenance and cause a fire or power outage. Resourced constrained technology departments mainly just want to say "yes" to your requests. **The last thing on earth most technologists want to say is “no”.** Give them enough resources so they can say **"yes"!**
