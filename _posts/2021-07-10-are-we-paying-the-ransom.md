@@ -28,15 +28,15 @@ Without thorough preparation many victims **still pay the ransom even when they 
 
 Reasons ransomware targets still pay (even when they have reliable backups) are:
 
-1. **Nobody bothered to test in advance how long the data restoration process might take**. For example, what if an organization stores backups on AWS Glacier? If they get attacked by ransomware they may suddenly discover they have terabytes (or petabytes) of data to restore over the Internet, and that even with a fast connection **it’s going to take months to download all the backup data**. Many technology teams don't even have a back-of-the-napkin calculation of how long it would take for a full, complete restore.
+1. **Nobody bothered to test in advance how long the data restoration process might take**. For example, what if an organization stores backups on AWS Glacier? If they get attacked by ransomware they may suddenly discover they have terabytes (or petabytes) of data to restore over the Internet, and that even with a fast connection it’s going to take months to download all the backup data. Many technology teams don't even have a back-of-the-napkin calculation of how long it would take for a full, complete restore.
 
-2. The next most-common scenario involves victims that have off-site, encrypted backups of their data but discover that **the digital keys needed to decrypt their backups were stored on the same local file-sharing network that was encrypted by the ransomware**.
+2. Sometimes victims that have off-site, encrypted backups of their data but discover that **the digital keys needed to decrypt their backups were stored on the same local file-sharing network that was encrypted by the ransomware**.
 
-3. Maybe you have the data backed up and accessible, but your **software was stored on the same local file-sharing network that got encrypted by the ransomware** You have backups, the data is there, but the application to actually do the restoration is encrypted, or the software you need to reinstall is encrypted.
+3. Maybe you have the data backed up and accessible, but your **software was stored on the same local file-sharing network that got encrypted by the ransomware**. You have backups, but the application to actually do the restoration is encrypted, or the software you need to reinstall is encrypted.
 
 4. Finally, **many companies don’t know their systems dependencies**, and so they don’t know in which order they should build/restore systems. Nor do they have a clear repeatable process to configure systems - they find they have been cloning a build image Larry created before he left last year.
 
-If you haven't thought about the scenarios above then **yes, you are paying the ransom**.
+If you haven't thought about these things then **yes, you are paying the ransom**.
 
 ### Ransomware Protection
 
@@ -46,9 +46,11 @@ There are three themes to get right to protect your organization against ransomw
 2. **Preparation** ensures backups are good, accessible, and restorable in a reasonable timeframe.
 3. **Recovery** minimizes the damage, speeds rebuilding, and avoids paying the ransom.
 
+Organizations seem to be thinking mainly about how to prevent getting hit by ransomware, or recovery.This article will cover all three areas but mainly focus on preparation.
+
 ### Prevention
 
-There is nothing special about ransomware prevention. It is "Security 101". **All normal security and anti-malware practices apply**.
+There is nothing special about ransomware prevention. It is "Security 101". All normal security and anti-malware practices apply.
 
 For example:
 
@@ -59,33 +61,31 @@ For example:
 - Keep you administrative surface area small. This means not giving your users admin privileges.
 - Use multi-factor authentication (Google introduced MFA logins for users and eliminated the threat of phishing).
 
-There is a **wealth** of information about security best practices on the web. No need to repeat it here.
+There is a wealth of information about security best practices on the web. No need to repeat it here.
 
 ### Preparation
 
 #### 1. You Need People who Understand Technology
 
-This is number one - **ransomware is a professional business**. Criminals literally earn their living by attacking companies like yours. Companies need skilled technical people because of the sheer aggregation of risk; they are your last line of defense. If you do get hit with ransomware you want people on payroll, and on site, ASAP. You don't want to call your technology sourcing partner when you get hit and have them put you on hold while they take calls from their bigger clients that have also been hit with the same malware. Or worse, they been hit too.
+This is number one - **ransomware is a professional business**. Criminals literally earn their living by attacking companies like yours. Companies need skilled technical people because of the sheer aggregation of risk; they are your last line of defense. If you do get hit with ransomware you want people on payroll, and on site, ASAP. You don't want to call your technology sourcing partner when you get hit and have them put you on hold while they take calls from their bigger clients that have also been hit with the same malware. Or worse, they have been hit too.
 
 You probably don't need a group of rockstar 10x-types, but you do need solid, fundamental IT knowledge and ability to solve technical challenges. There's no glamour or glory busines continuity, and no easy sources of funding like for information security.
 
-There is glory in "cutting the IT budget, with no disruptions in operations, because cutting the fat is good for business!". Be very careful you aren't creating a "Texas power grid" situation, e.g. it works until it doesn't, and it will stop working when you you need it most.
-
 #### 2. Clean House
 
-Scrub old data you don't need. Backups will be an order of magnitude smaller, easier to manage, more reliable, cheaper, and **faster to restore**. In the event of a ransomware attack recovery speed is paramount. This is so fundamental **and so hard to do** in many companies. I could say more here but my instinct is just to repeat the first sentence over and over.
+Scrub old data you don't need. Backups will be an order of magnitude smaller, easier to manage, more reliable, cheaper, and **faster to restore**. In the event of a ransomware attack recovery speed is paramount. This is so fundamental **and yet so hard to do** in many companies. I could say more here but my instinct is just to repeat the first sentence over and over.
 
 #### 3. Automate System Provisioning and Configuration
 
-In the old days machine configurate was a hand-crafted art. In many cases systems were built out and configured as an artist molds clay. Little bits added and changed over time until the the system is "configured", but recreating the steps would be impossible. Especially when they were configured by Frank, but he left 2 years ago and he never documented anything.
+In the old days machine configurate was a hand-crafted art. In many cases systems were configured as an artist molds clay. Little bits added and changed over time, but recreating the steps would be impossible. Especially when they were configured by Frank, but he left 2 years ago and he never documented anything.
 
-If we virtualized the "ball of clay", it can be copied and/or backed up - it's **exact** configuration is preserved. That is step one.
+If we virtualized the configured machine, the entire machine can now be copied and/or backed up - it's **exact** configuration is preserved. That is step one. Most machines are alreday virtual these days though, and you really have to have a process to create machines in a repeatable manner.
 
 Step two automates machine provisioning (pets vs. cattle). Using tools like Git, Chef, Ansible, and Terraform, it is possible to create a fully automated process to instantiate machines in a repeatable manner. I've seen an Ansible playbook that does 200 administrative tasks for each of the servers for a particular environment - all of the configuration is version-controlled within Git repositories. Changes are applied by CI, all of the process thoroughly documented.
 
 Everything from installing packages, creating or removing user accounts, setting up firewall rules, setting up directories and sending the necessary configuration, systemd services for legacy stuff, container clusters, container deployments, monitoring, container registries, analytics, APM and so on are handled this way.
 
-No one has write access on the server itself (unless explicitly given in the playbook, or the admins) and even the servers themselves can be wiped and reinstalled with a newer OS version (mostly thanks to Docker), plus all of the changes are auditable, since they coincide with the Git repo history.
+No one should have write access on the server itself (unless explicitly given in the playbook, or the admins) and even the servers themselves can be wiped and reinstalled with a newer OS version (mostly thanks to Docker), plus all of the changes are auditable, since they coincide with the Git repo history.
 
 Automated configuration means it's repeatable, can be tested, and can be done in the event of an emergency (**as long as your tools and scripts were not encrypted by the ransomware!**).
 
@@ -128,7 +128,7 @@ Divide the rebuild into stages:
 4. Initialize rebuild process, create new admin accounts...
 5. Etc.
 
-It may not be feasible to test a full rebuild scenario but even testing and practicing the initial stages is very important for an accelerated recovery. These steps are typically the ones that trip up ransomeware victimes because they were never considered.
+It may not be feasible to test a full rebuild scenario but even testing and practicing the initial stages is very important for an accelerated recovery. These steps are typically the ones that trip up ransomware victims.
 
 ### Recovery
 
