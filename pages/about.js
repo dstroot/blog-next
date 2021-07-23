@@ -16,22 +16,25 @@ export default function About() {
       <Layout alert={ALERT}>
         <Container>
           <Header />
-          <div className="flex flex-row">
-            <div className="flex-initial mr-4 image-container w-10 md:w-16 lg:w-20">
+
+          <div className="flex flex-row items-center mb-12">
+            <div className="flex-initial mr-4 image-container w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 relative">
               <Image
                 src="/assets/blog/authors/dan.jpeg"
                 alt={CMS_NAME}
-                className="rounded-full mt-4 image"
+                className="rounded-full image"
                 layout="fill"
               />
             </div>
-            <div className="flex-initial -mt-2 md:-mt-1 lg:mt-1">
-              <PostTitle>About Me</PostTitle>
+            <div className="flex-initial">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left">
+                About Me
+              </h1>
             </div>
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="markdown">
+            <div className="prose prose-lg dark:prose-dark max-w-none">
               <h2>
                 I love building things. Made in California. Family man,
                 technologist and Hacker News aficionado. Eternally curious.
@@ -66,7 +69,6 @@ export default function About() {
               <h3>
                 <a href="https://dstroot.github.io/readme/">My Readme</a>
               </h3>
-
               <h3>Where I’ve Worked</h3>
               <ul>
                 <li>
