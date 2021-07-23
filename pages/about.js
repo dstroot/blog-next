@@ -17,7 +17,7 @@ export default function About() {
         <Container>
           <Header />
 
-          <div className="flex flex-row items-center mb-12">
+          <div className="flex flex-row items-center mb-8 md:mb-12">
             <div className="flex-initial mr-4 image-container w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 relative">
               <Image
                 src="/assets/blog/authors/dan.jpeg"
@@ -34,7 +34,7 @@ export default function About() {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="prose prose-lg dark:prose-dark max-w-none">
+            <div className="prose md:prose-lg dark:prose-dark max-w-none">
               <h2>
                 I love building things. Made in California. Family man,
                 technologist and Hacker News aficionado. Eternally curious.
