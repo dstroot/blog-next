@@ -6,7 +6,7 @@ import { CMS_NAME } from "../lib/constants";
 export const Footer = () => {
   const year = new Date(); // evergreen copyright year
   return (
-    <footer className="transition-colors dark:bg-dark-4 dark:text-gray-300 bg-gray-100 text-gray-600">
+    <footer className="bg-gray-100 text-gray-600 dark:bg-dark-4 dark:text-gray-300 transition-colors">
       <Container>
         <div className="flex flex-col md:flex-row items-center mb-2">
           <div className="mb-4 md:mr-8 md:mb-0">
