@@ -7,11 +7,6 @@ module.exports = {
     options: {
       keyframes: true,
     },
-    transform: {
-      md: (content) => {
-        return remark().process(content);
-      },
-    },
   },
   darkMode: "class", // true, false or 'media' or 'class'
   theme: {
@@ -41,6 +36,7 @@ module.exports = {
       },
       typography(theme) {
         return {
+          /*   The light side (default) */
           DEFAULT: {
             css: {
               "ul > li::before": { backgroundColor: theme("colors.gray.700") },
@@ -49,14 +45,12 @@ module.exports = {
               blockquote: {
                 borderLeftWidth: "0.5rem",
                 borderLeftColor: theme("colors.gray.300"),
-                quotes: '"\\201C""\\201D""\\2018""\\2019"',
               },
-              "blockquote p:first-of-type::before": {
-                content: "",
-              },
-              "blockquote p:last-of-type::after": {
-                content: "",
-              },
+              "blockquote p:first-of-type::before": false,
+              "blockquote p:last-of-type::after": false,
+
+              "code::before": false,
+              "code::after": false,
 
               a: {
                 color: theme(`colors.blue.500`),
