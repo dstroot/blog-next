@@ -119,7 +119,7 @@ Executable documentation as concept can be very broad - many producst are based 
 - [Ansible](https://www.ansible.com/)
 - [Jupyter](https://jupyter.org)
 
-So you take this concept pretty far!
+So you can take this concept pretty far!
 
 #### Resources
 
