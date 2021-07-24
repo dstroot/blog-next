@@ -27,14 +27,14 @@ Almost any slog can be turned into executable documentation. Executable document
 
 ```shell
 #! /bin/sh
-# ------------------------------------------------------------------------------
+# ------------------------------------------------------------
 # Copyright (c) 2014 Dan Stroot
 # All rights reserved.
-# ------------------------------------------------------------------------------
+# ------------------------------------------------------------
 # NAME:           example.sh
 # PURPOSE:        example of executable documentation
 # VERSION:  1.0   Initial version
-# ------------------------------------------------------------------------------
+# ------------------------------------------------------------
 set -e
 
 # Default settings
@@ -100,8 +100,11 @@ Notice this script **doesn’t actually do any of the steps of the procedure**! 
 At first glance, it might not be obvious that this script provides any value, but the value is immense. First, these scripts actually do something: they allow storing and updating the _state_ of a process. By having these scripts run in a shell rather than in your head, the current state is stored in a machine, not your brain.
 
 - It’s now much less likely that you’ll lose your place and skip a step. This makes it easier to maintain focus on the actual work and power through the slog. You can even exit the script and it will tell you where you stopped.
+
 - Each step of the procedure is now encapsulated in a function, which makes it possible to replace the text in any given step with code that actually performs the action.
+
 - Over time, you’ll develop a library of useful steps, which will make future automation tasks more efficient.
+
 - It will lower the inhibition to automation - each run you can just automate one or two more steps.
 
 Executable documentation doesn’t initially save your team any manual effort. However, **it lowers the activation energy for automating tasks**, which allows the team to eliminate toil over time.
