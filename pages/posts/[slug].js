@@ -1,5 +1,6 @@
 import ErrorPage from "next/error";
 import Head from "next/head";
+import markdownToHtml from "../../lib/markdownToHtml";
 
 import { useRouter } from "next/router";
 import { Container } from "../../components/Container";
@@ -9,9 +10,8 @@ import { PostHeader } from "../../components/PostHeader";
 import { Layout } from "../../components/Layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import { PostTitle } from "../../components/PostTitle";
-import markdownToHtml from "../../lib/markdownToHtml";
+
 import { CMS_NAME, REPO, ALERT } from "../../lib/constants";
-import { GitHubLink } from "../../components/GitHubLink";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -43,8 +43,7 @@ export default function Post({ post, morePosts, preview }) {
                 author={post.author}
                 time={post.stats.text}
               />
-              <PostBody content={post.content} />
-              <GitHubLink path={githubPath} />
+              <PostBody content={post.content} path={githubPath} />
             </article>
           </>
         )}
