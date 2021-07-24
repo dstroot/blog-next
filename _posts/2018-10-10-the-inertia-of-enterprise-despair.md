@@ -252,4 +252,4 @@ All this makes the effort of making changes far more onerous than it is elsewher
 
 - [It’s Time To Get Real About Digital Transformation](https://medium.com/pminsider/its-time-to-get-real-about-digital-transformation-a268a186844d)
 - [Vision Driven Products](https://www.radicalproduct.com/)
-- [Why are enterprises so slow?](https://zwischenzugs.com/2018/10/02/why-are-enterprises-so-slow/)
+<!-- - [Why are enterprises so slow?](https://zwischenzugs.com/2018/10/02/why-are-enterprises-so-slow/) -->
