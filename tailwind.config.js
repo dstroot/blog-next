@@ -38,31 +38,50 @@ module.exports = {
         return {
           /*   The light side (default) */
           DEFAULT: {
-            css: {
-              "ul > li::before": { backgroundColor: theme("colors.gray.700") },
-              "ol > li::before": { color: theme("colors.gray.700") },
+            css: [
+              {
+                "ul > li::before": {
+                  backgroundColor: theme("colors.gray.700"),
+                },
+                "ol > li::before": { color: theme("colors.gray.700") },
 
-              blockquote: {
-                borderLeftWidth: "0.5rem",
-                borderLeftColor: theme("colors.gray.300"),
+                blockquote: {
+                  borderLeftWidth: "0.5rem",
+                  borderLeftColor: theme("colors.gray.300"),
+                },
+                "blockquote p:first-of-type::before": false,
+                "blockquote p:last-of-type::after": false,
+
+                a: {
+                  color: theme(`colors.blue.500`),
+                  textDecoration: `none`,
+                  "&:hover": {
+                    textDecoration: `underline`,
+                  },
+                },
+
+                "code::before": false,
+                "code::after": false,
               },
-              "blockquote p:first-of-type::before": false,
-              "blockquote p:last-of-type::after": false,
-
-              a: {
-                color: theme(`colors.blue.500`),
-                textDecoration: `none`,
-                "&:hover": {
-                  textDecoration: `underline`,
+            ],
+          },
+          /*     Size     */
+          lg: {
+            css: [
+              {
+                li: {
+                  marginTop: "0",
+                  marginBottom: "0",
+                },
+                code: {
+                  fontSize: "0.875rem",
+                },
+                pre: {
+                  fontSize: "0.875rem",
+                  lineHeight: "1.2",
                 },
               },
-
-              "pre code": {
-                fontSize: "0.875rem",
-              },
-              "code::before": false,
-              "code::after": false,
-            },
+            ],
           },
           /*   The dark side   */
           dark: {

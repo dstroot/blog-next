@@ -34,7 +34,7 @@ export default function About() {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="prose md:prose-lg dark:prose-dark max-w-none">
+            <div className="prose prose-lg dark:prose-dark max-w-none">
               <h2>
                 I love building things. Made in California. Family man,
                 technologist and Hacker News aficionado. Eternally curious.
