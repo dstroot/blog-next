@@ -78,7 +78,7 @@ module.exports = {
                 },
                 pre: {
                   fontSize: "0.875rem",
-                  lineHeight: "1.2",
+                  lineHeight: "1.3",
                 },
               },
             ],
