@@ -1,6 +1,6 @@
 export const GitHubLink = ({ path }) => {
   return (
-    <div className="float-right">
+    <p className="float-right">
       <a href={path} className="hover:underline text-xs text-gray-500">
         <span className="mr-2">Edit this page</span>
         <svg
@@ -18,6 +18,6 @@ export const GitHubLink = ({ path }) => {
           <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
         </svg>
       </a>
-    </div>
+    </p>
   );
 };

@@ -25,9 +25,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        "accent-1": "#FAFAFA",
-        "accent-2": "#EAEAEA",
-        "accent-7": "#333",
         "dark-1": "#1a1a1a",
         "dark-2": "#222222",
         "dark-3": "#282828",
@@ -156,7 +153,6 @@ module.exports = {
   },
   variants: {
     extend: { typography: ["dark"] },
-    aspectRatio: ["responsive", "hover"],
   },
   plugins: [
     require("@tailwindcss/typography"),
