@@ -98,12 +98,19 @@ In fact, you should monitor disk activity. If you get hit your disk usage will s
 Keep immutable, offline, airgapped backups:
 
 1. Use a COW (copy-on-write) filesystem like btrfs or ZFS
+
 2. Set up snapshots to be taken periodically (hourly/daily) and sent to a different host or volume with some type of immutable file system.
+
 3. Manually backup snapshots or the full volume to offline, airgapped storage every N days/weeks/months.
+
 4. Figure out how you'll stop a someone who gets in from deleting or accessing your backups. Assume they'll be attacked. Understand what the backup solutions offer in terms of security. Can you use protection on an S3 storage bucket to prevent deletion, even with the access key? Don't let **anything** delete or format any backup volumes.
+
 5. If you're going to use encrypted backups, understand where the keys are stored and how they're used. More importantly, understand how you'll have the keys to decrypt the backups after a disaster. Can you use asymmetric crypto so only public keys get stored on your servers?
+
 6. Make the offsite backup 'pull' based - so the credentials to access the data already backed up do not exist on the system being backed up.
+
 7. Ensure you have enough copies. One isn't enough - what if the payment card on your storage account expires, or you get locked out? Three backups in two locations, at least one off-premises.
+
 8. There's all sorts of other things to consider like data consistency and whether operations on your systems are atomic (what happens if the backup snapshot is taken mid-operation in your app?) that you'll want to think about too.
 
 #### 5. Monitor Your Backup Processes
@@ -137,7 +144,9 @@ It may not be feasible to test a full rebuild scenario but even testing and prac
 There are three main steps in recovery:
 
 1. **Containment** - involves rapid response by severing network connections and taking systems offline so they don’t infect other systems.
+
 2. **Eradication** - means wiping the malware from the system and/or completely rebuilding the system. Executives might think, why rebuild the system? However, as we know some malware embeds itself into systems in ways that make it impossible to eradicate without rebuilding the system from scratch. In any case, this process takes time. And interestingly it may take the **same amount of time if you pay the ransom or not because in either case you have to rebuild all of your systems to eradicate the ransomware** - this is often the most time consuming step. Of course, the manner of infection must be tracked down and the vulnerability addressed or you will be reinfected.
+
 3. **Recovery** - Once they systems are rebuilt in a cleanroom the data can be restored and the system brought online. This a very delicate process because if the malware was not fully eradicated you will re-infect yourself. Each system must be brought online and validated in as isolated a manner as possible, in the correct sequence.
 
 If you haven't thought about and tested ransomware recovery scenarios prior to becoming infected then **yes, you are paying the ransom**.
