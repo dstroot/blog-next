@@ -2,13 +2,18 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
+  // https://purgecss.com/
   purge: {
     content: ["./components/**/*.js", "./pages/**/*.js"],
     options: {
       keyframes: true,
     },
+    safelist: ["aspect-w-16", "aspect-h-9"],
   },
-  darkMode: "class", // true, false or 'media' or 'class'
+  darkMode: "class", // true, false, 'media' or 'class'
+  /*
+  The theme section is where you define your color palette, fonts, type scale, border sizes, breakpoints — anything related to the visual design of your site.
+  */
   theme: {
     colors: {
       transparent: "transparent",
@@ -36,7 +41,7 @@ module.exports = {
       },
       typography(theme) {
         return {
-          /*   The light side (default) */
+          /*   The light side (default)   */
           DEFAULT: {
             css: [
               {
@@ -65,7 +70,7 @@ module.exports = {
               },
             ],
           },
-          /*     Size     */
+          /*      Size     */
           lg: {
             css: [
               {
@@ -151,8 +156,12 @@ module.exports = {
   },
   variants: {
     extend: { typography: ["dark"] },
+    aspectRatio: ["responsive", "hover"],
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
 
 /*
@@ -187,6 +196,7 @@ https://zaengle.com/blog/tailwind-typography-plugin
 https://tjaddison.com/blog/2020/08/updating-to-tailwind-typography-to-style-markdown-posts/
 https://github.com/jjranalli/nightwind
 https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
+https://www.themes.dev/blog/easily-embed-responsive-youtube-video-with-tailwind-css/
 */
 
 /**

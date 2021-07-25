@@ -21,8 +21,6 @@ Quicken Loans and Warren Buffet announced a billion dollar prize for a perfect N
 
 My first reaction when I heard this is "where is the value?". Companies award prizes all time and we know the reason this occurs is basic economics - which teaches us that the "cost" of the prize is less than the "value" the company derives from offering the prize. So what amount marketing, exposure or publicity is worth **one billion dollars?**
 
-<!--more-->
-
 The details of the prize are actually $25 million dollars for 40 years. So we can reframe the question as "What amount of addional loan volume must Quicken Loans generate to produce more than $25 million of additional profit annually?" To get there we need to know the average revenue per loan and Quicken's profit margin. For example if we assume $1,500 revenue per loan and a $10% profit margin this means Quicken Loans would earn a profit of $150 per loan. So $25,000,000 / $150 = 166,667 loans (rounding up).
 
 ### This All May be Moot
@@ -42,8 +40,8 @@ Get schooled by DePaul math professor Jay Bergen:
 
 <!-- [![Odds of a perfect NCAA Basketball Bracket](https://img.youtube.com/vi/O6Smkv11Mj4/0.jpg)](https://www.youtube.com/watch?v=O6Smkv11Mj4) -->
 
-<div class="video-container">
-  <iframe src="https://www.youtube.com/embed/O6Smkv11Mj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+  <iframe src="https://www.youtube.com/embed/O6Smkv11Mj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Using 1 in 128 billion odds, if everyone in the United States filled out a bracket, we'd see a perfect one **every 400 years**! ESPN which has run a tournament challenge for the past 16 years has **never had a perfect bracket in over 30 million entries** according to the network. I assume that many of the people filling those out are pretty smart.

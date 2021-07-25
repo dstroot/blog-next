@@ -7,6 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
     "date-fns": "2.16.1",
     "feed": "^4.2.2",

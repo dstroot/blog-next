@@ -6,7 +6,7 @@ excerpt: You are contributing value, whether you like it not, when you make your
   insight and accuracy from the public collective intelligence. The only way to
   extract value back out is to use Copilot yourself.
 coverImage: /assets/blog/img/copilot.jpg
-date: '2021-07-12'
+date: "2021-07-12"
 published: true
 author:
   name: Dan Stroot
@@ -70,8 +70,8 @@ Today, a human still has to review and accept the code suggestions, which provid
 
 Let's watch Copilot in action answering leetcode coding interview questions:
 
-<div class="video-container">
-  <iframe src="https://www.youtube.com/embed/FHwnrYm0mNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+  <iframe src="https://www.youtube.com/embed/FHwnrYm0mNc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Lower Barriers to Entry for Coders
