@@ -1,15 +1,14 @@
 ---
 title: President Obama's Plan for a Free and Open Internet
-excerpt: >
-  Today President Barack Obama has come out in favor of net neutrality in very
-  public way.  He lays out in no uncertain terms that he believes no cable
-  company or access provider should be able to put limits on access to the
-  Internet. In addition, he’s suggesting that the FCC recognizes access to the
-  Internet as a basic utility, and something that Americans have a basic right
-  to. This means no blocking, no throttling, more transparency and no paid
-  prioritization.
+excerpt: Today President Barack Obama has come out in favor of net
+  neutrality in very public way.  He lays out in no uncertain terms that
+  he believes no cable company or access provider should be able to put
+  limits on access to the Internet. In addition, he’s suggesting that the
+  FCC recognizes access to the Internet as a basic utility, and something
+  that Americans have a basic right to. This means no blocking, no throttling,
+  more transparency and no paid prioritization.
 coverImage: /assets/blog/img/obama_internet.jpg
-date: '2014-11-10'
+date: "2014-11-10"
 published: true
 author:
   name: Dan Stroot

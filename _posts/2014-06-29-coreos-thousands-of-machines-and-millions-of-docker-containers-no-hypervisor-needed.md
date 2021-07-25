@@ -1,15 +1,14 @@
 ---
-title: 'CoreOS: thousands of machines and millions of Docker containers... no
-  hypervisor needed.'
-excerpt: >
-  I have been playing around with CoreOS to get a sense of how everything works.
-  The vision of this project is incredible. CoreOS describes itself as "a new
+title: "CoreOS: thousands of machines and millions of Docker containers... no
+  hypervisor needed."
+excerpt: I have been playing around with CoreOS to get a sense of how everything
+  works. The vision of this project is incredible. CoreOS describes itself as "a new
   Linux distribution that has been re-architected to provide features needed to
   run modern infrastructure stacks. The strategies and architectures that
   influence CoreOS allow companies like Google, Facebook and Twitter to run
   their services at scale with high resilience."
 coverImage: /assets/blog/img/coreos_2.png
-date: '2014-06-29'
+date: "2014-06-29"
 published: true
 author:
   name: Dan Stroot

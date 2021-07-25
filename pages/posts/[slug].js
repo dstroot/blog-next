@@ -29,7 +29,7 @@ export default function Post({ post, morePosts, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-6 md:mb-10 mt-6 md:mt-10">
+            <article className="mb-6 mt-6 md:mb-10 md:mt-10">
               <Head>
                 <title>
                   {CMS_NAME} · {post.title}

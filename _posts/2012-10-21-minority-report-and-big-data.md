@@ -1,14 +1,13 @@
 ---
 title: Minority Report and Big Data
-excerpt: >
-  The United Arab Emirates holds the largest biometric database in the world,
-  the Emirates Identity Authority has announced. The population register of
+excerpt: The United Arab Emirates holds the largest biometric database in the
+  world, the Emirates Identity Authority has announced. The population register of
   Emirates ID has over **103 million digital fingerprints and over 15 million
   digital facial recognition records**, which includes multiple records of each
   UAE resident, and digital signatures as of October 11, 2012, senior officials
   said.
 coverImage: /assets/blog/img/minorityreport.jpeg
-date: '2012-10-21'
+date: "2012-10-21"
 published: true
 author:
   name: Dan Stroot

@@ -54,7 +54,7 @@ export async function getStaticProps() {
   ]);
 
   // build rss feed when site builds
-  generateRSSFeed(allPosts);
+  await generateRSSFeed(allPosts);
 
   return {
     props: { allPosts },
