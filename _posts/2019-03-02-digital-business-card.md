@@ -7,7 +7,7 @@ excerpt: Recently I took on a new role and I was about ordering new business
   of the side benefits of this  is I don't have to share my personal mobile
   phone number either.
 coverImage: /assets/blog/img/black_card.jpg
-date: "2019-03-02"
+date: '2019-03-02'
 published: true
 author:
   name: Dan Stroot

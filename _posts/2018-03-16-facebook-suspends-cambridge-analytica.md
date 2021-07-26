@@ -8,7 +8,7 @@ excerpt: A year ago I wrote about how big data, collected from social media
   (and misuse) of our personal data. As a technologist I find this area
   fascinating and evolving rapidly.
 coverImage: /assets/blog/img/cambridge_analytica.jpg
-date: "2018-03-17"
+date: '2018-03-17'
 published: true
 author:
   name: Dan Stroot

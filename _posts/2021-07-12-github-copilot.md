@@ -6,7 +6,7 @@ excerpt: You are contributing value, whether you like it not, when you make your
   insight and accuracy from the public collective intelligence. The only way to
   extract value back out is to use Copilot yourself.
 coverImage: /assets/blog/img/copilot.jpg
-date: "2021-07-12"
+date: '2021-07-12'
 published: true
 author:
   name: Dan Stroot

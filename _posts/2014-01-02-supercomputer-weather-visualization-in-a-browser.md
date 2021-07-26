@@ -5,7 +5,7 @@ excerpt: This is a pretty amazing technology demonstration of what is possible
   cloud service providers for hosting and content delivery.  It was written by
   Cameron Beccario (@cambecc). Check it out below.
 coverImage: /assets/blog/img/earth_wind_map.jpg
-date: "2014-01-02"
+date: '2014-01-02'
 published: true
 author:
   name: Dan Stroot

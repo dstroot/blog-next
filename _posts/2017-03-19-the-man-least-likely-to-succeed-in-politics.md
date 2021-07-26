@@ -5,7 +5,7 @@ excerpt: Dick Nixon understood that getting the smart, popular kids to vote for
   the "Orthogonians".  Nixon discovered that being hated by the "Franklins" was
   no impediment to political success.
 coverImage: /assets/blog/img/elvis_nixon.jpg
-date: "2017-03-19"
+date: '2017-03-19'
 published: true
 author:
   name: Dan Stroot

@@ -7,7 +7,7 @@ excerpt: Every team has manual procedures or checklists that they haven’t gott
   attention, but our attention isn’t rewarded with interesting problems or
   satisfying solutions – just another checkbox checked.
 coverImage: /assets/blog/img/exec_doc.png
-date: "2019-08-07"
+date: '2019-08-07'
 published: true
 author:
   name: Dan Stroot

@@ -5,7 +5,7 @@ excerpt: As a CIO in a large, publicly owned financial services company I held
   secure.  As the economics of cloud services became compelling the largest
   hurdle to adoption was "potential security risks", by a large measure.
 coverImage: /assets/blog/img/bias.jpg
-date: "2013-10-15"
+date: '2013-10-15'
 published: true
 author:
   name: Dan Stroot

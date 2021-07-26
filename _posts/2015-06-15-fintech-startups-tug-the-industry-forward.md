@@ -6,7 +6,7 @@ excerpt: Financial services companies are among the most highly regulated
   buy insurance, banking services or invest my savings via a company that I
   didn’t trust?
 coverImage: /assets/blog/img/billguard.png
-date: "2015-06-15"
+date: '2015-06-15'
 published: false
 author:
   name: Dan Stroot

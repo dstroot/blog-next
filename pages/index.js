@@ -1,13 +1,13 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import { Container } from "../components/Container";
-import { MoreStories } from "../components/MoreStories";
-import { HeroPost } from "../components/HeroPost";
-import { Intro } from "../components/Intro";
-import { Layout } from "../components/Layout";
-import { getAllPosts } from "../lib/api";
-import { generateRSSFeed } from "../lib/feed";
-import { CMS_NAME, ALERT } from "../lib/constants";
+import { Container } from '../components/Container';
+import { MoreStories } from '../components/MoreStories';
+import { HeroPost } from '../components/HeroPost';
+import { Intro } from '../components/Intro';
+import { Layout } from '../components/Layout';
+import { getAllPosts } from '../lib/api';
+import { generateRSSFeed } from '../lib/feed';
+import { CMS_NAME, ALERT } from '../lib/constants';
 
 export default function Index({ allPosts }) {
   const filteredPosts = allPosts.filter((post) => post.published);
@@ -42,15 +42,15 @@ export default function Index({ allPosts }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts([
-    "title",
-    "excerpt",
-    "date",
-    "published",
-    "slug",
-    "author",
-    "coverImage",
-    "fileName",
-    "stats",
+    'title',
+    'excerpt',
+    'date',
+    'published',
+    'slug',
+    'author',
+    'coverImage',
+    'fileName',
+    'stats',
   ]);
 
   // build rss feed when site builds

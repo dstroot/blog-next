@@ -4,7 +4,7 @@ excerpt: If you are bored and disgusted by politics and don't bother to vote,
   you are in effect voting for the entrenched establishments of the two major
   parties.
 coverImage: /assets/blog/img/dfw.jpg
-date: "2016-11-07"
+date: '2016-11-07'
 published: true
 author:
   name: Dan Stroot

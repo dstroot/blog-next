@@ -6,7 +6,7 @@ excerpt: Most information security practitioners do a poor job explaining the
   of difficulty" – like mountain climbing. Everest was thought to be unclimbable
   until Sir Edmund Hillary did it.
 coverImage: /assets/blog/img/smart-car-lock.jpg
-date: "2015-09-26"
+date: '2015-09-26'
 published: true
 author:
   name: Dan Stroot

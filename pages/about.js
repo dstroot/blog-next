@@ -1,11 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Container } from "../components/Container";
-import { Header } from "../components/Header";
-import { PostTitle } from "../components/PostTitle";
-import { Layout } from "../components/Layout";
-import { CMS_NAME, ALERT } from "../lib/constants";
-import Link from "next/link";
+import Head from 'next/head';
+import Image from 'next/image';
+import { Container } from '../components/Container';
+import { Header } from '../components/Header';
+import { PostTitle } from '../components/PostTitle';
+import { Layout } from '../components/Layout';
+import { CMS_NAME, ALERT } from '../lib/constants';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -17,24 +17,24 @@ export default function About() {
         <Container>
           <Header />
 
-          <div className="flex flex-row items-center mb-8 md:mb-12">
-            <div className="flex-initial mr-4 image-container w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 relative">
+          <div className='flex flex-row items-center mb-8 md:mb-12'>
+            <div className='flex-initial mr-4 image-container w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 relative'>
               <Image
-                src="/assets/blog/authors/dan.jpeg"
+                src='/assets/blog/authors/dan.jpeg'
                 alt={CMS_NAME}
-                className="rounded-full image"
-                layout="fill"
+                className='rounded-full image'
+                layout='fill'
               />
             </div>
-            <div className="flex-initial">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left">
+            <div className='flex-initial'>
+              <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left'>
                 About Me
               </h1>
             </div>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="prose prose-lg dark:prose-dark max-w-none">
+          <div className='max-w-2xl mx-auto'>
+            <div className='prose prose-lg dark:prose-dark max-w-none'>
               <h2>
                 I love building things. Made in California. Family man,
                 technologist and Hacker News aficionado. Eternally curious.
@@ -67,48 +67,48 @@ export default function About() {
                 on a single problem domain.
               </p>
               <h3>
-                <a href="https://dstroot.github.io/readme/">My Readme</a>
+                <a href='https://dstroot.github.io/readme/'>My Readme</a>
               </h3>
               <h3>Where I’ve Worked</h3>
               <ul>
                 <li>
-                  Associate Partner:{" "}
-                  <a href="https://www.accenture.com/us-en">Accenture</a>
+                  Associate Partner:{' '}
+                  <a href='https://www.accenture.com/us-en'>Accenture</a>
                 </li>
                 <li>
-                  Global Chief Information Officer:{" "}
-                  <a href="https://www.allianzgi.com/">
+                  Global Chief Information Officer:{' '}
+                  <a href='https://www.allianzgi.com/'>
                     Allianz Global Investors
                   </a>
                 </li>
                 <li>
-                  Chief Technology Officer:{" "}
-                  <a href="https://www.sbtpg.com/">
+                  Chief Technology Officer:{' '}
+                  <a href='https://www.sbtpg.com/'>
                     Santa Barbara Tax Products Group
                   </a>
                 </li>
                 <li>
-                  Founder:{" "}
-                  <a href="https://veritedatascience.com/">
+                  Founder:{' '}
+                  <a href='https://veritedatascience.com/'>
                     Verite Data Science
                   </a>
                 </li>
                 <li>
-                  Chief Information Officer: Retirement Services Division,{" "}
-                  <a href="https://www.pacificlife.com/">Pacific Life</a>
+                  Chief Information Officer: Retirement Services Division,{' '}
+                  <a href='https://www.pacificlife.com/'>Pacific Life</a>
                 </li>
               </ul>
               <h3>Community Service</h3>
               <ul>
                 <li>
-                  Board Member,{" "}
-                  <a href="https://rmhcsc.org/">
+                  Board Member,{' '}
+                  <a href='https://rmhcsc.org/'>
                     Ronald McDonald House, Los Angeles
                   </a>
                 </li>
                 <li>
-                  Technology Committee Member,{" "}
-                  <a href="https://www.smhs.org/">
+                  Technology Committee Member,{' '}
+                  <a href='https://www.smhs.org/'>
                     Santa Margarita Catholic High School
                   </a>
                 </li>
@@ -116,24 +116,24 @@ export default function About() {
               <h3>Example Open Source Contributions</h3>
               <ul>
                 <li>
-                  <a href="https://github.com/dstroot/skeleton">Skeleton</a>{" "}
+                  <a href='https://github.com/dstroot/skeleton'>Skeleton</a>{' '}
                   (maintainer)
                 </li>
                 <li>
-                  <a href="https://getbootstrap.com/">Bootstrap</a>{" "}
+                  <a href='https://getbootstrap.com/'>Bootstrap</a>{' '}
                   (contributor)
                 </li>
                 <li>
-                  <a href="https://kubernetes.io/">Kubernetes</a> (contributor)
+                  <a href='https://kubernetes.io/'>Kubernetes</a> (contributor)
                 </li>
                 <li>
-                  <a href="https://helmetjs.github.io/">Helmet</a> (contributor)
+                  <a href='https://helmetjs.github.io/'>Helmet</a> (contributor)
                 </li>
               </ul>
-              <Link href="/archive">
-                <a className="mt-8 mb-8 text-xl block">[ Post Archive ]</a>
+              <Link href='/archive'>
+                <a className='mt-8 mb-8 text-xl block'>[ Post Archive ]</a>
               </Link>
-              <p className="mt-10 leading-none">
+              <p className='mt-10 leading-none'>
                 <small>
                   <em>
                     Dan holds a BA in Economics from the University of

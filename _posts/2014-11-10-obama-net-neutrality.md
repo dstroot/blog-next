@@ -8,7 +8,7 @@ excerpt: Today President Barack Obama has come out in favor of net
   that Americans have a basic right to. This means no blocking, no throttling,
   more transparency and no paid prioritization.
 coverImage: /assets/blog/img/obama_internet.jpg
-date: "2014-11-10"
+date: '2014-11-10'
 published: true
 author:
   name: Dan Stroot
@@ -38,15 +38,17 @@ It doesn't matter whether you are on the "red team" or the "blue team" - this is
 - We have to think carefully about the paid access issue. Does "no slow lanes" also mean "No Fast Lanes"? What if I want an ISP to provide a service where I get premium access to YouTube content, or Netflix content? Should that be illegal?
 - It is not a requirement that ISPs block unlawful content, rather it is a prohibition on blocking lawful content. But a strong enough prohibition on blocking lawful content (e.g., one which provides consequences whenever lawful content is blocked, even if the intent was to block unlawful content and the lawful content just got caught up in the filter) actually reduces the incentive for ISPs to attempt to identify and block unlawful content, since attempting to do so but making a misidentification in the process can result in penalties. In other words access to child pornography, terrorist information, and illicit drugs could actually increase as a result (i.e. "the law of unintended consequences").
 
-### Here is President Obama's Video:
+### Here is President Obama's Video
 
-{{< youtube uKcjQPVwfDk >}}
+<div class="aspect-w-16 aspect-h-9">
+  <iframe src="https://www.youtube.com/embed/uKcjQPVwfDk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-### Update:
+### Update
 
 As someone who considers himself a Republican It saddens me that this issue has become so polarized along party lines.
 
-{{< tweet 531834493922189313 >}}
+<!-- {{< tweet 531834493922189313 >}} -->
 
 The only similarity to the Affordable Care Act is that Obama supports it. There may be a rational, reasoned argument against Net Neutrality, but Republicans aren’t making it, and neither are the cable companies or cellular providers.
 

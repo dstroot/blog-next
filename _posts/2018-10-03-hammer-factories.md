@@ -6,7 +6,7 @@ excerpt: There is a post from 2005 by Benji Smith in the old (and now closed)
   later. I am reproducing it here for posterity in case the old Joel on Software
   Discussion Group ever disappears.
 coverImage: /assets/blog/img/hammer.png
-date: "2018-10-03"
+date: '2018-10-03'
 published: true
 author:
   name: Dan Stroot

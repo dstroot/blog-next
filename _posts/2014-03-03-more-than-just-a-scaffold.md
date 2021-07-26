@@ -1,8 +1,8 @@
 ---
 title: More Than Just a Scaffold
-excerpt: ""
+excerpt: ''
 coverImage: /assets/blog/img/skeleton-sm.jpg
-date: "2014-03-03"
+date: '2014-03-03'
 published: false
 author:
   name: Dan Stroot
@@ -39,7 +39,9 @@ Tooling is good - if you are developer you should be **really, really into your 
 
 Paul Irish's Tooling Presentation:
 
-<iframe width="750" src="//www.youtube.com/embed/Mk-tFn2Ix6g" frameborder="0" allowfullscreen></iframe>
+<div class="aspect-w-16 aspect-h-9">
+  <iframe src="https://www.youtube.com/embed/Mk-tFn2Ix6g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 But what happens when you want to go beyond tooling? When you just want a working basic site with authentication?
 

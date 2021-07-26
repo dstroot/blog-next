@@ -6,7 +6,7 @@ excerpt: The answer will depend primarily on how quickly the technology team
   Many victims still pay the ransom even when they have the means to restore
   everything from backups on their own. Why?
 coverImage: /assets/blog/img/ransomware.jpg
-date: "2021-07-10"
+date: '2021-07-10'
 published: true
 author:
   name: Dan Stroot

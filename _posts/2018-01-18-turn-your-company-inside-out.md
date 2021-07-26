@@ -4,7 +4,7 @@ excerpt: I have already described the "inside out" corporation.  This idea was
   first evangelized by Google (who know a thing or two about infrastructure and
   security) and they called it "BeyondCorp".
 coverImage: /assets/blog/img/citadel.jpg
-date: "2018-01-18"
+date: '2018-01-18'
 published: true
 author:
   name: Dan Stroot

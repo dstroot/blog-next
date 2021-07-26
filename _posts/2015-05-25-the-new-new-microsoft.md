@@ -6,7 +6,7 @@ excerpt: I've been a fan of Microsoft during my whole technical career.  However
   more innovative people working on it and sharing what they do openly. However,
   I am very impressed with the direction and leadership of Satya Nadella.
 coverImage: /assets/blog/img/satya-nadella-microsoft-ceo.jpg
-date: "2015-05-25"
+date: '2015-05-25'
 published: true
 author:
   name: Dan Stroot

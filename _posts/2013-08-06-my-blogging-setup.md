@@ -8,7 +8,7 @@ excerpt: Blogs need a core concept that will engage your audience.  Placing a
   ants - well that will build an audience for sure.  So if you have, or want,
   separate audiences you will need separate blogs.
 coverImage: /assets/blog/authors/dan.jpeg
-date: "2013-08-06"
+date: '2013-08-06'
 published: false
 author:
   name: Dan Stroot

@@ -9,7 +9,7 @@ excerpt: As of this writing, in early 2019 Sears announced it is near
   Brand recognition and established customer base, check. Unfortunately for an
   incumbent, change is much harder than anyone ever imagines it to be.
 coverImage: /assets/blog/img/committee.jpg
-date: "2019-01-06"
+date: '2019-01-06'
 published: true
 author:
   name: Dan Stroot

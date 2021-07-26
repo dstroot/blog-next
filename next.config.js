@@ -17,8 +17,8 @@ module.exports = {
       // },
       // this rebuilds the path to match the new format
       {
-        source: "/:yr(\\d{1,})/:mo(\\d{1,})/:d(\\d{1,})/:slug",
-        destination: "/posts/:yr-:mo-:d-:slug", // Matched parameters can be used in the destination
+        source: '/:yr(\\d{1,})/:mo(\\d{1,})/:d(\\d{1,})/:slug',
+        destination: '/posts/:yr-:mo-:d-:slug', // Matched parameters can be used in the destination
         permanent: false,
       },
     ];

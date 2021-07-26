@@ -6,7 +6,7 @@ excerpt: Apple’s most recent 10-K filing with the U.S. Securities and Exchange
   and 57 percent more than the $7 billion it spent in 2013. What is Apple
   planning to do with all that additional money?
 coverImage: /assets/blog/img/iSpaceship.jpg
-date: "2013-10-30"
+date: '2013-10-30'
 published: true
 author:
   name: Dan Stroot

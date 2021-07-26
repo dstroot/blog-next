@@ -1,16 +1,16 @@
-import Head from "next/head";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
+import Head from 'next/head';
+import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
 
 export const Meta = () => {
   return (
     <Head>
-      <link rel="manifest" href="site.webmanifest" />
+      <link rel='manifest' href='site.webmanifest' />
       <link
-        rel="apple-touch-icon"
-        sizes="192x192"
-        href="maskable_icon_x192.png"
+        rel='apple-touch-icon'
+        sizes='192x192'
+        href='maskable_icon_x192.png'
       />
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+      <link rel='icon' type='image/png' sizes='32x32' href='favicon.png' />
       {/* <link
         rel="icon"
         type="image/png"
@@ -29,38 +29,38 @@ export const Meta = () => {
       */}
 
       <link
-        rel="preload"
-        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css"
-        as="style"
+        rel='preload'
+        href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css'
+        as='style'
       />
       <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css"
-        media="print"
+        rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css'
+        media='print'
         onLoad="this.media='all'"
       />
       <script
         async
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"
+        src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js'
       ></script>
       <script
         async
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"
+        src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js'
       ></script>
 
       {/*
           The page supports both dark and light color schemes,
           and the preference is the order
       */}
-      <meta name="color-scheme" content="light dark" />
+      <meta name='color-scheme' content='light dark' />
 
-      <link rel="shortcut icon" href="/favicon/favicon.png" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-      <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="description" content={`${CMS_NAME}`} />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <link rel='shortcut icon' href='/favicon/favicon.png' />
+      <meta name='msapplication-TileColor' content='#000000' />
+      <meta name='msapplication-config' content='/favicon/browserconfig.xml' />
+      <meta name='theme-color' content='#000' />
+      <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
+      <meta name='description' content={`${CMS_NAME}`} />
+      <meta property='og:image' content={HOME_OG_IMAGE_URL} />
 
       {/* 
       Global Site Tag (gtag.js) - Google Analytics 

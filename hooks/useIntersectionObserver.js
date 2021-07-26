@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 /**
 The Intersection Observer API allows you to configure a callback that is called whenever one element, called the target, intersects either the device viewport or a specified element; for the purpose of this API, this is called the root element or root. 
@@ -12,7 +12,7 @@ export const useIntersectionObserver = ({
   target,
   onIntersect, // callback
   threshold = 0.2, // when 20% visible
-  rootMargin = "0px", // don't adjust viewport margin
+  rootMargin = '0px', // don't adjust viewport margin
 }) => {
   useEffect(() => {
     if (!target) {

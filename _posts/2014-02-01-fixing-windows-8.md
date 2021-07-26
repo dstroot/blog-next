@@ -7,7 +7,7 @@ excerpt: I just saw [this
   key design rules to guide his work which are really at the heart of the issues
   and confusion that users are currently facing.
 coverImage: /assets/blog/img/windows8.jpg
-date: "2014-02-01"
+date: '2014-02-01'
 published: true
 author:
   name: Dan Stroot

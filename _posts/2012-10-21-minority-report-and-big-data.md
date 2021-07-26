@@ -7,7 +7,7 @@ excerpt: The United Arab Emirates holds the largest biometric database in the
   UAE resident, and digital signatures as of October 11, 2012, senior officials
   said.
 coverImage: /assets/blog/img/minorityreport.jpeg
-date: "2012-10-21"
+date: '2012-10-21'
 published: true
 author:
   name: Dan Stroot

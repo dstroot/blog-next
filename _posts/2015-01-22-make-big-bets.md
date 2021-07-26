@@ -7,7 +7,7 @@ excerpt: The Bill and Melinda Gates Foundation just released it's annual
   year's letter I was simultaneously moved, inspired and awed by the scope their
   mission.
 coverImage: /assets/blog/img/african_children.jpg
-date: "2015-01-22"
+date: '2015-01-22'
 published: true
 author:
   name: Dan Stroot

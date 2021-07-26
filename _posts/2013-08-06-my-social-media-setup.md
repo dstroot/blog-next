@@ -4,7 +4,7 @@ excerpt: Social media is overwhelming - we are inundated with email, text
   messages, tweets, facebook posts and who knows what else.  How to stay on top
   of it and share appropriately?
 coverImage: /assets/blog/authors/dan.jpeg
-date: "2013-08-06"
+date: '2013-08-06'
 published: false
 author:
   name: Dan Stroot

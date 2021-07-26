@@ -6,7 +6,7 @@ excerpt: The White House announced on Monday, August 11th 2014, that it
   playing a central role in salvaging HealthCare.gov. The idea behind the USDS is
   institutionalizing the approach that saved the US health care website.
 coverImage: /assets/blog/img/USDS_Playbook.png
-date: "2014-08-12"
+date: '2014-08-12'
 published: true
 author:
   name: Dan Stroot
@@ -26,6 +26,6 @@ The playbook is basically applied common sense and smart best practices from sil
 
 As a CIO I think the playbook should really be **everyone's** playbook - it's very good and worth a read.
 
-### Sources:
+### References
 
 - [White House launches ‘U.S. Digital Service,’ with HealthCare.gov fixer at the helm](http://www.washingtonpost.com/blogs/the-switch/wp/2014/08/11/white-house-launches-u-s-digital-service-with-healthcare-gov-fixer-at-the-helm/)

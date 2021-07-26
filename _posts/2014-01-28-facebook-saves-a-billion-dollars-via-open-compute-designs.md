@@ -4,7 +4,7 @@ excerpt: Today at the Open Compute Summit, CEO Mark Zuckerberg said that "In the
   last three years alone, Facebook has saved more than a billion dollars in
   building out our infrastructure using Open Compute designs.s
 coverImage: /assets/blog/img/fb-server.jpg
-date: "2014-01-28"
+date: '2014-01-28'
 published: true
 author:
   name: Dan Stroot

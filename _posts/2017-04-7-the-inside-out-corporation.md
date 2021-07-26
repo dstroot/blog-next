@@ -6,7 +6,7 @@ excerpt: Most companies still have a separate corporate network, protected by
   private, and precious to me, from any computer, via any network, without all
   that extra cost, complexity, overhead, and effort?
 coverImage: /assets/blog/img/citadel.jpg
-date: "2017-04-10"
+date: '2017-04-10'
 published: true
 author:
   name: Dan Stroot

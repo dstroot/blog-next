@@ -1,7 +1,7 @@
-import Head from "next/head";
-import { Container } from "../components/Container";
-import { Header } from "../components/Header";
-import { CMS_NAME } from "../lib/constants";
+import Head from 'next/head';
+import { Container } from '../components/Container';
+import { Header } from '../components/Header';
+import { CMS_NAME } from '../lib/constants';
 
 export default function Custom404() {
   return (
@@ -11,11 +11,11 @@ export default function Custom404() {
       </Head>
       <Container>
         <Header />
-        <div className="mt-20 flex flex-col md:flex-row justify-center items-center">
-          <div className="text-8xl font-bold tracking-tighter leading-tight border-b-4 md:border-r-4 md:border-b-0 pb-3 md:pr-6">
+        <div className='mt-20 flex flex-col md:flex-row justify-center items-center'>
+          <div className='text-8xl font-bold tracking-tighter leading-tight border-b-4 md:border-r-4 md:border-b-0 pb-3 md:pr-6'>
             404
           </div>
-          <div className="font-semibold italic text-xl md:text-2xl pt-3 md:pl-6">
+          <div className='font-semibold italic text-xl md:text-2xl pt-3 md:pl-6'>
             This page could not be found.
           </div>
         </div>

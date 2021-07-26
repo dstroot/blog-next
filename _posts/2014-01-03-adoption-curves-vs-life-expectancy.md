@@ -6,7 +6,7 @@ excerpt: Asymco has done a fascinating piece of research mapping technology
   speed at which these technologies are replaced can give us an idea of what
   individuals might experience in their lifetimes."
 coverImage: /assets/blog/img/adoption_curve.jpg
-date: "2013-11-19"
+date: '2013-11-19'
 published: true
 author:
   name: Dan Stroot

@@ -6,7 +6,7 @@ excerpt: When I was growing up, when you read the paper, watched the news, saw a
   "fair and balanced". Then technology destroyed the business model of
   traditional journalism.
 coverImage: /assets/blog/img/comic2.png
-date: "2016-10-31"
+date: '2016-10-31'
 published: true
 author:
   name: Dan Stroot

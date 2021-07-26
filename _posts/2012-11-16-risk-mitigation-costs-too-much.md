@@ -4,7 +4,7 @@ excerpt: Many large organizations work exceptionally hard minimize "risk".
   Ironically, by working so diligently to reduce risk they are paying for it
   anyway, and reducing innovation at the same time.
 coverImage: /assets/blog/img/edison.jpg
-date: "2012-11-16"
+date: '2012-11-16'
 published: true
 author:
   name: Dan Stroot

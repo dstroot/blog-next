@@ -1,6 +1,6 @@
 ---
-title: "CoreOS: thousands of machines and millions of Docker containers... no
-  hypervisor needed."
+title: 'CoreOS: thousands of machines and millions of Docker containers... no
+  hypervisor needed.'
 excerpt: I have been playing around with CoreOS to get a sense of how everything
   works. The vision of this project is incredible. CoreOS describes itself as "a new
   Linux distribution that has been re-architected to provide features needed to
@@ -8,7 +8,7 @@ excerpt: I have been playing around with CoreOS to get a sense of how everything
   influence CoreOS allow companies like Google, Facebook and Twitter to run
   their services at scale with high resilience."
 coverImage: /assets/blog/img/coreos_2.png
-date: "2014-06-29"
+date: '2014-06-29'
 published: true
 author:
   name: Dan Stroot
@@ -26,7 +26,7 @@ CoreOS displaces hypervisors and machine virtualization in favor of Docker and L
 
 Clustering works across platforms, meaning there is no cloud vendor lock-in. For example, CoreOS runs on Amazon EC2, Rackspace, QEMU/KVM, VMware and OpenStack and your own hardware. Running a single CoreOS cluster on multiple different clouds or cloud + bare metal is supported and encouraged. This lack of lock-in is the reason why I have supported OpenStack and CoreOS takes this even further.
 
-#### We begin with concept of a large fleet of machines that start (and remain) exactly consistent at the OS level.
+#### We begin with concept of a large fleet of machines that start (and remain) exactly consistent at the OS level
 
 - First, think of CoreOS somewhat like you might think of a hypervisor today. It is the first layer you put down on bare metal, or as a virtual machine in a cloud. It is a "bare minimum" Linux-based OS that supports Linux LXC containers.
 - It is designed to run as a large fleet (hive?) of machines. It includes built-in primitives such as distributed locking and master election, plus key services necessary to manage the fleet of machines. (more on this later).
@@ -35,7 +35,7 @@ Clustering works across platforms, meaning there is no cloud vendor lock-in. For
   - CoreOS also has the tenant of **automatically** updating itself. This avoids the issue of inconsistent state from machine to machine within a large cluster. Conceptually this is roughly like a self-updating hypervisor.
   - Each machine has to acquire and hold a reboot lock before it is allowed to reboot. The reboot lock is held until the machine releases it after a successful update. The number of machines allowed to reboot simultaneously is configurable. The main goal to allow for an update to be applied to a fleet quickly, without impacting capacity for the services running on the cluster.
 
-#### Next, we have the concept that the fleet of machines is simply a single pool of compute resources.
+#### Next, we have the concept that the fleet of machines is simply a single pool of compute resources
 
 - You treat your CoreOS cluster as if it has a single, shared init system - one giant systemd if you will.
 - Instead of running a service on a specific machine, services are submitted to the cluster via the cluster manager, fleetctl, which decides where they should run.
@@ -49,7 +49,7 @@ Clustering works across platforms, meaning there is no cloud vendor lock-in. For
 - The etcd client runs on each machine in a cluster. etcd gracefully handles master election during network partitions and the loss of the current master.
 - Docker containers can read, write and listen to etcd over the docker0 network interface. With these three actions you construct extremely sophisticated orchestration to happen whenever etcd values change. An example of this would be listening for changes and then to reconfigure an upstream proxy when a new container of an application is started.
 - Since etcd is replicated, all changes are reflected across the entire cluster. Your application can always reach the local etcd instance at 127.0.0.1:4001.
-- Your applications can read and write data into etcd. Common examples are storing database connection details, cache settings, feature flags, and more. Let's say we're running a simple web app like Wordpress. Instead of hardcoding our database address with in the config file, we'll fetch it from etcd instead. It's as simple as curl-ing http://127.0.0.1:4001/v1/keys/database and using the response within your DB connection code.
+- Your applications can read and write data into etcd. Common examples are storing database connection details, cache settings, feature flags, and more. Let's say we're running a simple web app like Wordpress. Instead of hardcoding our database address with in the config file, we'll fetch it from etcd instead. It's as simple as curl-ing [http://127.0.0.1:4001/v1/keys/database](http://127.0.0.1:4001/v1/keys/database) and using the response within your DB connection code.
 
 ### Summary
 

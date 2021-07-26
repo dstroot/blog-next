@@ -7,7 +7,7 @@ excerpt: At one point in time I worked for an organization that banned the use
   because there was a commercial entity that stood behind the products they sold
   and provided support. Now that's changing...
 coverImage: /assets/blog/img/volkswagen.jpg
-date: "2015-10-03"
+date: '2015-10-03'
 published: true
 author:
   name: Dan Stroot

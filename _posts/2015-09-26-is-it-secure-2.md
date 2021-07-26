@@ -4,7 +4,7 @@ excerpt: Is there a such thing as perfect security? In the 1770s Joseph Bramah
   created a lock that was vastly superior to any the world ever seen. Bramah
   believed it was 100% theft-proof. It was, and then it wasn't.
 coverImage: /assets/blog/img/bramah.jpg
-date: "2015-09-26"
+date: '2015-09-26'
 published: true
 author:
   name: Dan Stroot

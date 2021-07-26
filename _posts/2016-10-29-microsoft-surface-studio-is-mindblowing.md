@@ -6,7 +6,7 @@ excerpt: Saw the new Microsoft Surface Studio this weekend at the Microsoft
   format of the screen just feels right. The display floats in space and fills
   your field of vision.
 coverImage: /assets/blog/img/Surface_Studio2x.jpg
-date: "2016-10-29"
+date: '2016-10-29'
 published: true
 author:
   name: Dan Stroot

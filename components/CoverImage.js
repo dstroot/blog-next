@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export const CoverImage = ({
   title,
@@ -15,7 +15,7 @@ export const CoverImage = ({
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      layout="responsive"
+      layout='responsive'
       width={width}
       height={height}
       priority={priority}
@@ -24,9 +24,9 @@ export const CoverImage = ({
     />
   );
   return (
-    <div className="sm:mx-0">
+    <div className='sm:mx-0'>
       {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+        <Link as={`/posts/${slug}`} href='/posts/[slug]'>
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (

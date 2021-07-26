@@ -1,9 +1,9 @@
 ---
 title: Billion Dollar March Madness Bracket
-excerpt: "You read that right: one billion. Not one million. Not one hundred
-  million. Not five hundred million. One billion U.S. dollars."
+excerpt: 'You read that right: one billion. Not one million. Not one hundred
+  million. Not five hundred million. One billion U.S. dollars.'
 coverImage: /assets/blog/img/ncaa-brackets.jpg
-date: "2014-01-22"
+date: '2014-01-22'
 published: true
 author:
   name: Dan Stroot

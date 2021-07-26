@@ -7,7 +7,7 @@ excerpt: >
   site scored.  The UI is very nice but you have to opt-in to email to get your
   detailed report. I am definitely not a fan of that "dark pattern".
 coverImage: /assets/blog/img/speed.png
-date: "2017-01-10"
+date: '2017-01-10'
 published: false
 author:
   name: Dan Stroot
