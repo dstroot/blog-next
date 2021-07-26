@@ -5,7 +5,7 @@ import { Layout } from "../components/Layout";
 import { CMS_NAME, ALERT } from "../lib/constants";
 
 const darkBackground = {
-  backgroundColor: "#2A2B2D", // 2A2B2D  1D1E20
+  backgroundColor: "#1D1E20", // 2A2B2D  1D1E20
   padding: "40px",
 };
 
@@ -90,38 +90,32 @@ export default function About() {
             {/*
             Links
             */}
-            <a
-              style={lightBackground}
-              className="text-xs font-light hover:underline"
-              href="#"
-            >
-              <span style={lightText}>Text</span>
-            </a>
-            <a
-              style={lightBackground}
-              className="text-xs font-semibold hover:underline"
-              href="#"
-            >
-              <span style={lightTextHeader}>Header</span>
-            </a>
-            <a
-              style={darkBackground}
-              className="text-xs font-semibold hover:underline"
-              href="#"
-            >
-              <span style={darkTextHeader}>Header</span>
-            </a>
-            <a
-              style={darkBackground}
-              className="text-xs font-light hover:underline"
-              href="#"
-            >
-              <span style={darkText}>Text</span>
-            </a>
+
+            <div style={lightBackground} className="text-xs font-light">
+              <a href="#" className="hover:underline">
+                <span style={lightText}>Text</span>
+              </a>
+            </div>
+            <div style={lightBackground} className="text-xs font-semibold">
+              <a href="#" className="hover:underline">
+                <span style={lightTextHeader}>Header</span>
+              </a>
+            </div>
+            <div style={darkBackground} className="text-xs font-semibold">
+              <a href="#" className="hover:underline">
+                <span style={darkTextHeader}>Header</span>
+              </a>
+            </div>
+            <div style={darkBackground} className="text-xs font-light">
+              <a href="#" className="hover:underline">
+                <span style={darkText}>Text</span>
+              </a>
+            </div>
 
             {/*
             Links
             */}
+
             <div
               style={lightBackground}
               className="text-xs font-light text-left"
