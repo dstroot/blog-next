@@ -16,7 +16,16 @@ export default function About() {
       <Layout alert={ALERT}>
         <Container>
           <Header />
-
+          <div className='invisible xl:visible fixed left-top mt-36 ml-20'>
+            <Image
+              src='/assets/blog/img/personality.jpg'
+              alt={CMS_NAME}
+              height={300}
+              width={191}
+              className=''
+              layout='intrinsic'
+            />
+          </div>
           <div className='flex flex-row items-center mb-8 md:mb-12'>
             <div className='flex-initial mr-4 image-container w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 relative'>
               <Image
@@ -32,7 +41,16 @@ export default function About() {
               </h1>
             </div>
           </div>
-
+          {/* <div className='fixed top left'>
+            <Image
+              src='/assets/blog/img/personality.jpg'
+              alt={CMS_NAME}
+              height={300}
+              width={191}
+              className=''
+              layout='intrinsic'
+            />
+          </div> */}
           <div className='max-w-2xl mx-auto'>
             <div className='prose prose-lg dark:prose-dark max-w-none'>
               <h2>
@@ -66,19 +84,16 @@ export default function About() {
                 actually still miss my days as a programmer where I could focus
                 on a single problem domain.
               </p>
-              <h3>
-                <a href='https://dstroot.github.io/readme/'>My Readme</a>
-              </h3>
               <h3>Where I’ve Worked</h3>
               <ul>
                 <li>
-                  Associate Partner:{' '}
-                  <a href='https://www.accenture.com/us-en'>Accenture</a>
+                  Chief Information Officer: Retirement Services Division,{' '}
+                  <a href='https://www.pacificlife.com/'>Pacific Life</a>
                 </li>
                 <li>
-                  Global Chief Information Officer:{' '}
-                  <a href='https://www.allianzgi.com/'>
-                    Allianz Global Investors
+                  Founder:{' '}
+                  <a href='https://veritedatascience.com/'>
+                    Verite Data Science
                   </a>
                 </li>
                 <li>
@@ -88,28 +103,28 @@ export default function About() {
                   </a>
                 </li>
                 <li>
-                  Founder:{' '}
-                  <a href='https://veritedatascience.com/'>
-                    Verite Data Science
+                  Global Chief Information Officer:{' '}
+                  <a href='https://www.allianzgi.com/'>
+                    Allianz Global Investors
                   </a>
                 </li>
                 <li>
-                  Chief Information Officer: Retirement Services Division,{' '}
-                  <a href='https://www.pacificlife.com/'>Pacific Life</a>
+                  Associate Partner:{' '}
+                  <a href='https://www.accenture.com/us-en'>Accenture</a>
                 </li>
               </ul>
               <h3>Community Service</h3>
               <ul>
                 <li>
-                  Board Member,{' '}
-                  <a href='https://rmhcsc.org/'>
-                    Ronald McDonald House, Los Angeles
-                  </a>
-                </li>
-                <li>
                   Technology Committee Member,{' '}
                   <a href='https://www.smhs.org/'>
                     Santa Margarita Catholic High School
+                  </a>
+                </li>
+                <li>
+                  Board Member,{' '}
+                  <a href='https://rmhcsc.org/'>
+                    Ronald McDonald House, Los Angeles
                   </a>
                 </li>
               </ul>
@@ -130,15 +145,27 @@ export default function About() {
                   <a href='https://helmetjs.github.io/'>Helmet</a> (contributor)
                 </li>
               </ul>
-              <Link href='/archive'>
-                <a className='mt-8 mb-8 text-xl block'>[ Post Archive ]</a>
-              </Link>
+              <div className='mt-8 mb-8 text-xl block'>
+                <Link href='/archive'>
+                  <a>[ Post Archive ]</a>
+                </Link>
+                <a href='https://dstroot.github.io/readme/'> [ My Readme ]</a>
+              </div>
               <p className='mt-10 leading-none'>
                 <small>
                   <em>
                     Dan holds a BA in Economics from the University of
                     California at Los Angeles where he graduated Magna Cum Laude
                     and is a member of Phi Beta Kappa.
+                  </em>
+                </small>
+              </p>
+              <p className='mt-10 leading-none'>
+                <small>
+                  <em>
+                    Opinions expressed here are solely my own. They do not
+                    reflect the views of my employer, nor are they endorsed by
+                    my employer or any organization with which I am affiliated.
                   </em>
                 </small>
               </p>
