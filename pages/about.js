@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Container } from '../components/Container';
 import { Header } from '../components/Header';
-import { PostTitle } from '../components/PostTitle';
+// import { PostTitle } from '../components/PostTitle';
 import { Layout } from '../components/Layout';
 import { CMS_NAME, ALERT } from '../lib/constants';
 import Link from 'next/link';
@@ -41,16 +41,6 @@ export default function About() {
               </h1>
             </div>
           </div>
-          {/* <div className='fixed top left'>
-            <Image
-              src='/assets/blog/img/personality.jpg'
-              alt={CMS_NAME}
-              height={300}
-              width={191}
-              className=''
-              layout='intrinsic'
-            />
-          </div> */}
           <div className='max-w-2xl mx-auto'>
             <div className='prose prose-lg dark:prose-dark max-w-none'>
               <h2>
@@ -165,7 +155,7 @@ export default function About() {
                   <em>
                     Opinions expressed here are solely my own. They do not
                     reflect the views of my employer, nor are they endorsed by
-                    my employer or any organization with which I am affiliated.
+                    my employer, or any organization with which I am affiliated.
                   </em>
                 </small>
               </p>

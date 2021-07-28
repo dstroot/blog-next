@@ -82,6 +82,9 @@ module.exports = {
                   fontSize: '0.875rem',
                   lineHeight: '1.3',
                 },
+                cite: {
+                  fontSize: '1.0rem',
+                },
               },
             ],
           },
