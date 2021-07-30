@@ -6,7 +6,28 @@ import { Layout } from '../components/Layout';
 import { PostTitle } from '../components/PostTitle';
 import { CMS_NAME, ALERT } from '../lib/constants';
 
-export default function Index({ questions }) {
+// unbiased shuffle algorithm: Fisher-Yates (aka Knuth) Shuffle.
+function shuffle(array) {
+  var currentIndex = array.length;
+  var randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex !== 0) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
+export default function Index({ survey }) {
   return (
     <>
       <Head>
@@ -17,13 +38,33 @@ export default function Index({ questions }) {
           <Header />
           <PostTitle>Survey</PostTitle>
           <div className='max-w-2xl mx-auto mb-10 prose prose-lg dark:prose-dark'>
-            {questions.questions.length > 0 &&
-              questions.questions.map((question) => {
-                return (
-                  <div key={`${question.id}`}>
-                    <Question question={question} />
-                  </div>
-                );
+            <h2>Welcome!</h2>
+            <p>
+              This survey will help you assess the amount of corportate bullsh*t
+              in your organization. The survey consists of 15 questions,
+              presented in random order, and will take you approximately 10
+              minutes to thoughtfully answer them.
+            </p>
+            <p>
+              After you complete the survey we will show how your organization
+              compares to others. The results will help you diagnose what causes
+              the bullsh*t in your organization. Then we provide strategies to
+              deal with corportate bullsh*t. For example, how might your
+              organization become more data-driven? How might you be able to
+              &quot;call bullsh*t&quot; on your boss? There is a lot to explore.
+            </p>
+            <p>
+              We ask for your mobile number to prevent people (or bots) from
+              voting multiple times and diluting the value of the overall
+              results. Second, we store your survey results keyed by your mobile
+              number. If you want to take the survey again and update your
+              results we make that possible. We will <em>never</em> call you and
+              we will <em>never share or sell your data</em> to any third party
+              (we only have a phone number!).
+            </p>
+            {survey.length > 0 &&
+              survey.map((question) => {
+                return <Question key={`${question.id}`} question={question} />;
               })}
           </div>
         </Container>
@@ -33,9 +74,11 @@ export default function Index({ questions }) {
 }
 
 export async function getStaticProps() {
-  const questions = require('../lib/questions.json');
+  const data = require('../lib/questions.json');
+  let survey = data.survey;
+  shuffle(survey); // randomize questions
 
   return {
-    props: { questions },
+    props: { survey },
   };
 }
