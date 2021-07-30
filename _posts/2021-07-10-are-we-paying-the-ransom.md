@@ -81,7 +81,7 @@ In the old days machine configurate was a hand-crafted art. In many cases system
 
 If we virtualized the configured machine, the entire machine can now be copied and/or backed up - it's **exact** configuration is preserved. That is step one. Most machines are alreday virtual these days though, and you really have to have a process to create machines in a repeatable manner.
 
-Step two automates machine provisioning (pets vs. cattle). Using tools like Git, Chef, Ansible, and Terraform, it is possible to create a fully automated process to instantiate machines in a repeatable manner. I've seen an Ansible playbook that does 200 administrative tasks for each of the servers for a particular environment - all of the configuration is version-controlled within Git repositories. Changes are applied by CI, all of the process thoroughly documented.
+Step two automates machine provisioning ([pets vs. cattle](https://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/)). Using tools like Git, Chef, Ansible, and Terraform, it is possible to create a fully automated process to instantiate machines in a repeatable manner. I've seen an Ansible playbook that does 200 administrative tasks for each of the servers for a particular environment - all of the configuration is version-controlled within Git repositories. Changes are applied by CI, all of the process thoroughly documented.
 
 Everything from installing packages, creating or removing user accounts, setting up firewall rules, setting up directories and sending the necessary configuration, systemd services for legacy stuff, container clusters, container deployments, monitoring, container registries, analytics, APM and so on are handled this way.
 
