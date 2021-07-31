@@ -70,7 +70,5 @@ _Lashinsky, Adam (2011). Inside Apple &#8212; From Steve Jobs down to the janito
 
 References:
 
-- [http://www.culture-making.com/articles/a_world_without_jobs#more](http://www.culture-making.com/articles/a_world_without_jobs#more)
-- [http://andrewsullivan.theatlantic.com/the_daily_dish/2011/01/apple-and-our-culture-ctd-3.html](http://andrewsullivan.theatlantic.com/the_daily_dish/2011/01/apple-and-our-culture-ctd-3.html)
-- [http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/01/28/apop012811.DTL&amp;ao=2](http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/01/28/apop012811.DTL&ao=2)
-- [http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/01/28/apop012811.DTL](http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/01/28/apop012811.DTL)
+- [Apple And Our Culture](https://www.theatlantic.com/daily-dish/archive/2011/01/apple-and-our-culture-ctd/176973/)
+- [How Steve Jobs 'out-Japanned' Japan](http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/01/28/apop012811.DTL&ao=2)
