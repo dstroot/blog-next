@@ -42,3 +42,4 @@ TODO
 - [ ] Add Search?
 - [X] 100 Lighthouse Scores
 - [X] Pseudo infinite scrolling - scroll in chunks to end of list - speeds initial page load
+- [ ] Add easy way to embed youTube, Twitter, etc.

@@ -5,27 +5,7 @@ import { Header } from '../components/Header';
 import { Layout } from '../components/Layout';
 import { PostTitle } from '../components/PostTitle';
 import { CMS_NAME, ALERT } from '../lib/constants';
-
-// unbiased shuffle algorithm: Fisher-Yates (aka Knuth) Shuffle.
-function shuffle(array) {
-  var currentIndex = array.length;
-  var randomIndex;
-
-  // While there remain elements to shuffle...
-  while (currentIndex !== 0) {
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
-  }
-
-  return array;
-}
+import { randomize, randomizeArray } from '../lib/randomizeArray';
 
 export default function Index({ survey }) {
   return (
@@ -76,7 +56,7 @@ export default function Index({ survey }) {
 export async function getStaticProps() {
   const data = require('../lib/questions.json');
   let survey = data.survey;
-  shuffle(survey); // randomize questions
+  randomize(survey); // randomize questions
 
   return {
     props: { survey },
