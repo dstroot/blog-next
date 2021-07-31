@@ -16,30 +16,31 @@ https://github.com/vercel/next.js/tree/canary/examples/blog-starter
 
 Made With:
 
-* [Tailwind](https://tailwindcss.com/)
-* [Next.js](https://nextjs.org/)
-* [Vercel](https://vercel.com/home) Hosting & Analytics
-* [React](https://reactjs.org/)
-* [Hero Icons](https://heroicons.com/)
-* [Remark](https://github.com/remarkjs) Markdown processing
-* [Gray Matter](https://github.com/jonschlinkert/gray-matter) YAML Front Matter
+- [Tailwind](https://tailwindcss.com/)
+- [Next.js](https://nextjs.org/)
+- [Vercel](https://vercel.com/home) Hosting & Analytics
+- [React](https://reactjs.org/)
+- [Hero Icons](https://heroicons.com/)
+- [Remark](https://github.com/remarkjs) Markdown processing
+- [Gray Matter](https://github.com/jonschlinkert/gray-matter) YAML Front Matter
 
 TODO
 
-- [X] Add "Edit on GitHub" Link
-- [X] Add Syntax Highlighting
-- [X] Add emoji support (https://github.com/rhysd/remark-emoji)
-- [X] Add Dark/Light Mode
-- [X] Add About Me Page
-- [X] Create a nice footer
-- [X] Add a "Read More" link
-- [X] Favicon
-- [X] Manifest and other images/icons (test with lighthouse)
-- [X] Custom 404 page
-- [X] Add RSS feed
+- [x] Add "Edit on GitHub" Link
+- [x] Add Syntax Highlighting
+- [x] Add emoji support (https://github.com/rhysd/remark-emoji)
+- [x] Add "GitHub Flavored Markdown" support (mainly for tables)
+- [x] Add Dark/Light Mode
+- [x] Add About Me Page
+- [x] Create a nice footer
+- [x] Add a "Read More" link
+- [x] Favicon
+- [x] Manifest and other images/icons (test with lighthouse)
+- [x] Custom 404 page
+- [x] Add RSS feed
 - [ ] Add analytics (Vercel, Plausible, GA, or?)
-- [X] Add Archive page
+- [x] Add Archive page
 - [ ] Add Search?
-- [X] 100 Lighthouse Scores
-- [X] Pseudo infinite scrolling - scroll in chunks to end of list - speeds initial page load
-- [ ] Add easy way to embed youTube, Twitter, etc.
+- [x] 100 Lighthouse Scores
+- [x] Pseudo infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
+- [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
