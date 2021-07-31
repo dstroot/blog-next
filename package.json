@@ -7,6 +7,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@remark-embedder/core": "^1.4.2",
+    "@remark-embedder/transformer-oembed": "^1.0.2",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
     "date-fns": "2.16.1",

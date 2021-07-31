@@ -40,9 +40,11 @@ Get schooled by DePaul math professor Jay Bergen:
 
 <!-- [![Odds of a perfect NCAA Basketball Bracket](https://img.youtube.com/vi/O6Smkv11Mj4/0.jpg)](https://www.youtube.com/watch?v=O6Smkv11Mj4) -->
 
-<div class="aspect-w-16 aspect-h-9">
+<!-- <div class="aspect-w-16 aspect-h-9">
   <iframe src="https://www.youtube.com/embed/O6Smkv11Mj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
+
+https://youtu.be/O6Smkv11Mj4
 
 Using 1 in 128 billion odds, if everyone in the United States filled out a bracket, we'd see a perfect one **every 400 years**! ESPN which has run a tournament challenge for the past 16 years has **never had a perfect bracket in over 30 million entries** according to the network. I assume that many of the people filling those out are pretty smart.
 

@@ -76,9 +76,13 @@ The clear legal issue for users of Copilot discussed by IP lawyer [Kate Downing]
 
 Let's watch Copilot in action answering leetcode coding interview questions:
 
-<div class="aspect-w-16 aspect-h-9">
+<!-- <div class="aspect-w-16 aspect-h-9">
   <iframe src="https://www.youtube.com/embed/FHwnrYm0mNc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
+
+<!-- You can just paste the youTube share link and it will be handled.  -->
+
+https://youtu.be/FHwnrYm0mNc
 
 ### Lower Barriers to Entry for Coders
 

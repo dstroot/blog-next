@@ -46,17 +46,19 @@ It doesn't matter whether you are on the "red team" or the "blue team" - this is
 
 ### Here is President Obama's Video
 
-<div class="aspect-w-16 aspect-h-9">
+<!-- <div class="aspect-w-16 aspect-h-9">
   <iframe src="https://www.youtube.com/embed/uKcjQPVwfDk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
+
+https://youtu.be/uKcjQPVwfDk
 
 ### Update
 
 As someone who considers himself a Republican It saddens me that this issue has become so polarized along party lines.
 
-<!-- {{< tweet 531834493922189313 >}} -->
+https://twitter.com/SenTedCruz/status/531834493922189313?s=20
 
-The only similarity to the Affordable Care Act is that Obama supports it. There may be a rational, reasoned argument against Net Neutrality, but Republicans aren’t making it, and neither are the cable companies or cellular providers.
+The only similarity to the Affordable Care Act is that Obama supports it. There may be a rational, reasoned argument against Net Neutrality, but Republicans aren’t making them, and neither are the cable companies or cellular providers.
 
 The main thrust seems to be "Government regulation of the Internet will be bad." And yet, we seem to have no issues regulating banks, power utilities, telephone companies and other utilities. The other argument seems to be the "slippery slope" argument - by introducing goverment regulation it is easy to envision that we will soon start regulating **content**. However, with our country's foundation on free speech I find that argument quite a stretch and exactly the opposite of Obama's first principle: "No Blocking".
 
