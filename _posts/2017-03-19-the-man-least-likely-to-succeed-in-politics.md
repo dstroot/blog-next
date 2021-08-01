@@ -108,7 +108,7 @@ Quotes from the article:
 
 > Through 2015, Breitbart went from a medium-sized site with a small Facebook page of 100,000 likes into a powerful force shaping the election with almost 1.5 million likes. In the key metric for Facebook’s News Feed, its posts got 886,000 interactions from Facebook users in January. By July, Breitbart had surpassed The New York Times’ main account in interactions. By December, it was doing 10 million interactions per month, about 50 percent of Fox News, which had 11.5 million likes on its main page.
 
-> A Guardian reporter who looked into Russian military doctrine around information war found a handbook that described how it might work. “The deployment of information weapons, [the book] suggests, ‘acts like an invisible radiation’ upon its targets: ‘The population doesn’t even feel it is being acted upon. So the state doesn’t switch on its self-defense mechanisms,’” wrote Peter Pomerantsev.
+> A Guardian reporter who looked into Russian military doctrine around information war found a handbook that described how it might work. “The deployment of information weapons ‘acts like an invisible radiation’ upon its targets: ‘The population doesn’t even feel it is being acted upon. So the state doesn’t switch on its self-defense mechanisms,’” wrote Peter Pomerantsev.
 
 > Jonathan Albright, research director of the Tow Center for Digital Journalism at Columbia University, pulled data on the six publicly known Russia-linked Facebook pages. He found that their posts had been shared 340 million times. And those were six of 470 pages that Facebook has linked to Russian operatives. You’re probably talking billions of shares, with who knows how many views, and with what kind of specific targeting.
 

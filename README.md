@@ -44,3 +44,4 @@ TODO
 - [x] 100 Lighthouse Scores
 - [x] Pseudo infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
+- [X] Add ability to lint markdown files using https://github.com/remarkjs/remark-lint. Rules: 

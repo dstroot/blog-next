@@ -42,7 +42,7 @@ I'll conclude with a philosophical note about software design: Assessing the sec
 
 Engineers design bridges with built-in safety margins in order to guard against unforeseen circumstances (unexpectedly high winds, corrosion causing joints to weaken, a traffic accident severing support cables, et cetera); secure software should likewise be designed to tolerate failures within individual components. Using a MAC to make sure that an attacker cannot exploit a bug (or a side channel) in encryption code is an example of this approach: If everything works as designed, this adds nothing to the security of the system; but in the real world where components fail, it can mean the difference between being compromised or not. The concept of "security in depth" is not new to network administators; but it's time for software engineers to start applying the same engineering principles within individual applications as well.
 
-3pt14159 1 day ago [–]
+3pt14159 1 day ago
 
 There are of course many nuanced differences because no analogy is perfect, but I think the main tangible difference is that one is in the physical space while the other is in the virtual space. Virtual space doesn't operate the same way because the limits are different. Attackers can easily maintain anonymity, attackers can replicate an attack easily without additional effort/cost on their part, attackers can purchase "blueprints" for an attack that are basically the same thing as the attack itself, attacks can be carried out at a distance, & there are many strong financial motives for carrying out the attack. The financial motive is particularly important because it funds the every growing arms raise between offence & defense. In the physical space this kind of race is only visible in nation states whereas in the virtual space both nation states & private actors participate in this race.
 
@@ -51,4 +51,4 @@ Similarly, that's why IT development is a bit different from construction. Chang
 ### References
 
 - [Thinking in events: from databases to distributed collaboration software](https://www.daemonology.net/blog/2009-06-24-encrypt-then-mac.html)
-  [](https://en.wikipedia.org/wiki/Strength_of_materials)
+- [Strength of Materials](https://en.wikipedia.org/wiki/Strength_of_materials)
