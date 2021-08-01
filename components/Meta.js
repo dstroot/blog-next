@@ -28,12 +28,10 @@ export const Meta = () => {
           https://www.filamentgroup.com/lab/load-css-simpler/
       */}
 
-      <link
-        rel='preload'
-        href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css'
-        as='style'
-        charset='utf-8'
-      />
+      {/* 
+      This is a trick to asyncronously load css that is needed later. Load for "print" 
+      and switch to "all" when loaded.
+      */}
       <link
         rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-okaidia.min.css'
