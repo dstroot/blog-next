@@ -5,7 +5,7 @@ import { Header } from '../components/Header';
 import { Layout } from '../components/Layout';
 import { PostTitle } from '../components/PostTitle';
 import { CMS_NAME, ALERT } from '../lib/constants';
-import { randomize, randomizeArray } from '../lib/randomizeArray';
+import { randomize } from '../lib/randomizeArray';
 
 export default function Index({ survey }) {
   return (

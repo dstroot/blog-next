@@ -9,8 +9,7 @@ import { getAllPosts } from '../lib/api';
 import { generateRSSFeed } from '../lib/feed';
 import { CMS_NAME, ALERT } from '../lib/constants';
 
-export default function Index({ allPosts }) {
-  const filteredPosts = allPosts.filter((post) => post.published);
+export default function Index({ filteredPosts }) {
   const heroPost = filteredPosts[0];
   const morePosts = filteredPosts.slice(1);
 
@@ -53,10 +52,13 @@ export async function getStaticProps() {
     'stats',
   ]);
 
+  // don't publish drafts
+  const filteredPosts = allPosts.filter((post) => post.published);
+
   // build rss feed when site builds
-  await generateRSSFeed(allPosts);
+  await generateRSSFeed(filteredPosts);
 
   return {
-    props: { allPosts },
+    props: { filteredPosts },
   };
 }
