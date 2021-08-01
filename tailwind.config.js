@@ -2,6 +2,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
+  experimental: { optimizeCss: true },
   // https://purgecss.com/
   purge: {
     content: ['./components/**/*.js', './pages/**/*.js'],
