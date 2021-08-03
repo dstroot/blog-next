@@ -95,7 +95,4 @@ However, **software engineering is not the same thing as writing code**. Softwar
 - [GitHub Copilot](https://copilot.github.com/)
 - [GitHub’s Commercial AI Tool Was Built From Open Source Code](https://www.wired.com/story/github-commercial-ai-tool-built-open-source-code/)
 - [Is GitHub Copilot a blessing, or a curse?](https://www.fast.ai/2021/07/19/copilot/)
-
-<!--
-- [search](https://www.google.com/search?q=hackernews+github+copilot&oq=hack&aqs=chrome.2.69i57j0i67l2j69i61j69i65l2j69i61l2.4105j0j4&sourceid=chrome&ie=UTF-8)
-- [HN](https://news.ycombinator.com/item?id=27676939) -->
+- [Free Software Foundation: Call for white papers on philosophical and legal questions around Copilot](https://www.fsf.org/blogs/licensing/fsf-funded-call-for-white-papers-on-philosophical-and-legal-questions-around-copilot)
