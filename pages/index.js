@@ -50,7 +50,7 @@ export async function getStaticProps() {
     'coverImage',
     'fileName',
     'stats',
-  ]);
+  ]).filter((post) => post.published);
 
   // don't publish drafts
   const filteredPosts = allPosts.filter((post) => post.published);
