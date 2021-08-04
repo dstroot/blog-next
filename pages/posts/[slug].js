@@ -7,12 +7,11 @@ import { Container } from '../../components/Container';
 import { PostBody } from '../../components/PostBody';
 import { Header } from '../../components/Header';
 import { PostHeader } from '../../components/PostHeader';
-import { Layout } from '../../components/Layout';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
 import { PostTitle } from '../../components/PostTitle';
+import { CMS_NAME, REPO } from '../../lib/constants';
 
-import { CMS_NAME, REPO, ALERT } from '../../lib/constants';
-
+// TODO: more posts at bottom
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   const githubPath = REPO + '/blob/master/_posts/' + post.fileName;
@@ -22,33 +21,32 @@ export default function Post({ post, morePosts, preview }) {
   }
 
   return (
-    <Layout alert={ALERT}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
-              <Head>
-                <title>
-                  {CMS_NAME} · {post.title}
-                </title>
-                <meta property='og:image' content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-                time={post.stats.text}
-              />
-              <PostBody content={post.content} path={githubPath} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+    <Container>
+      <Header />
+      {router.isFallback ? (
+        <PostTitle>Loading…</PostTitle>
+      ) : (
+        <>
+          <Head>
+            <title>
+              {CMS_NAME} · {post.title}
+            </title>
+            <meta property='og:image' content={post.ogImage.url} />
+          </Head>
+
+          <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+              time={post.stats.text}
+            />
+            <PostBody content={post.content} path={githubPath} />
+          </article>
+        </>
+      )}
+    </Container>
   );
 }
 

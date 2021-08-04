@@ -10,6 +10,7 @@ export default function Custom404() {
       <Head>
         <title>{CMS_NAME} · 404</title>
       </Head>
+
       <Container>
         <Header />
         <div className='mt-20 flex flex-col md:flex-row justify-center items-center'>

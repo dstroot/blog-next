@@ -1,5 +1,6 @@
 import '../styles/index.css';
 import { ThemeProvider } from 'next-themes';
+import { Layout } from '../components/Layout';
 
 // https://nextjs.org/docs/advanced-features/custom-app
 // https://jools.dev/nextjs-_appjs-example
@@ -8,7 +9,9 @@ export default function MyApp({ Component, pageProps }) {
     <>
       {/* <DefaultSeo {...SEO} /> */}
       <ThemeProvider attribute='class'>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </>
   );

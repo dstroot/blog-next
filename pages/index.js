@@ -4,10 +4,9 @@ import { Container } from '../components/Container';
 import { MoreStories } from '../components/MoreStories';
 import { HeroPost } from '../components/HeroPost';
 import { Intro } from '../components/Intro';
-import { Layout } from '../components/Layout';
 import { getAllPosts } from '../lib/api';
 import { generateRSSFeed } from '../lib/feed';
-import { CMS_NAME, ALERT } from '../lib/constants';
+import { CMS_NAME } from '../lib/constants';
 
 export default function Index({ filteredPosts }) {
   const heroPost = filteredPosts[0];
@@ -18,23 +17,22 @@ export default function Index({ filteredPosts }) {
       <Head>
         <title>{CMS_NAME} · Blog</title>
       </Head>
-      <Layout alert={ALERT}>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-              stats={heroPost.stats}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
+
+      <Container>
+        <Intro />
+        {heroPost && (
+          <HeroPost
+            title={heroPost.title}
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            author={heroPost.author}
+            slug={heroPost.slug}
+            excerpt={heroPost.excerpt}
+            stats={heroPost.stats}
+          />
+        )}
+        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+      </Container>
     </>
   );
 }
