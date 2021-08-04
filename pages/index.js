@@ -8,9 +8,9 @@ import { getAllPosts } from '../lib/api';
 import { generateRSSFeed } from '../lib/feed';
 import { CMS_NAME } from '../lib/constants';
 
-export default function Index({ filteredPosts }) {
-  const heroPost = filteredPosts[0];
-  const morePosts = filteredPosts.slice(1);
+export default function Index({ allPosts }) {
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
 
   return (
     <>
@@ -48,15 +48,12 @@ export async function getStaticProps() {
     'coverImage',
     'fileName',
     'stats',
-  ]).filter((post) => post.published);
-
-  // don't publish drafts
-  const filteredPosts = allPosts.filter((post) => post.published);
+  ]).filter((post) => post.published); // don't publish drafts
 
   // build rss feed when site builds
-  await generateRSSFeed(filteredPosts);
+  await generateRSSFeed(allPosts);
 
   return {
-    props: { filteredPosts },
+    props: { allPosts },
   };
 }
