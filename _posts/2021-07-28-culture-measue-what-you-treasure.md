@@ -6,7 +6,7 @@ excerpt: When measuring culture note that culture is an outcome. If you could
   the current state help you improve it, or do you have to go deeper?
 coverImage: /assets/blog/img/culture.jpg
 date: '2021-07-28'
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -114,47 +114,78 @@ Some office environments are noisy, lack privacy, or are simply to stimulating f
 
 ### 6. Collaboration
 
-Collaboration has many layers, and once again, employee feedback is the key to getting to the bottom of them. To fully measure collaboration, look for collaboration within teams, as well as collaboration between teams.
+Collaboration has many layers, and once again, employee feedback is the key. To assess collaboration, look for collaboration within teams, as well as collaboration between teams.
+
+Many people focus on collaboration _tools_: email, the intranet, corporate social media, video conferencing, instant messaging, etc. Collaboration isn't about tools, it's about **behavior**.
+
+Collaborative behaviors include:
+
+1. **Psychological safety** - Creating an environment that makes it **safe to openly communicate** unlocks collaboration. It also unlocks the power of diversity because one of the most powerful tenets of inclusiveness is an environment in which people feel free to express themselves.
+
+2. **Communicating** — leaders need to model open and effective communication, and appropriate delegation to foster collaboration within and across teams. Collaboration cannot thrive where people are simply told what to do.
+
+3. **Delegating** — Decisions are one area where collaboration can either help or detract from progress. Companies with highly collaborative cultures make slow decisons, and evidence suggests they are not better decisions. Even worse is when companies try to make decisions unanimous - employees who disagree feel stifled. An essential component of good collaboration is clarity about who is authorized to make decisions.
+
+4. **Managing meetings** — Collaborate with the right people! Only invite those with the needed skills and knowledge to meetings and assign a stated purpose/goal to each meeting. Avoid "meeting tourists", and for those who desire to know what happened in the meeting update them asyncronously after.
 
 **Possible metrics:**
 
-- Ask employees?
-- This is challenging to measure
+- Ask employees - do they feel safe when they collaborate?
+- Do employees feel leadership is modeling collaborative behaviors?
+- Do employees feel meetings have the "right" attendees? Meetings should be used to make decisions. Meetings simply to provide a status update are better handled through a status report.
 
 ### 7. Support
 
-Employees should feel supported by the overall company, their manager and peers. According to a study in Harvard Business Review, [middle managers are the most disgruntled group in the workforce](https://hbr.org/2014/11/why-middle-managers-are-so-unhappy), possibly because they are lacking the support they need to be successful. By digging into this metric on an individual and group level, we can expose important trends in engagement.
+Employees should feel supported by the overall company, their manager and peers. As leaders, we cannot control the way an employee feels at work. We cannot demand engagement, job satisfaction, or motivation in the workplace. We cannot demand that any employee feels valued.
 
-**Possible metrics:**
-
-- Ask employees?
-
-### 8. Performance Focus
+We **can** do the things that employees want and need to feel valued and supported at work. If your people believe you’re not valuing or supporting them, eventually they’ll find a leader who does — a leader who truly appreciates their energy, effort, and results.
 
 Everyone should understand what determines success in their role, and they should be rewarded or recognized accordingly. Larger rewards do not necessarily make for a stronger culture. Instead, take time to understand _if_ employees feel they are appreciated and _how_ they would like to be recognized.
 
+According to a study in Harvard Business Review, [middle managers are the most disgruntled group in the workforce](https://hbr.org/2014/11/why-middle-managers-are-so-unhappy), possibly because they are lacking the support they need to be successful.
+
 **Possible metrics:**
 
-- Ask employees to rate communication, how is it working top down, across the company and in your department?
-- Number of Teams posts in Technology Team Channels
+- Ask employees!
+- Think positive - are we encouraging success or correcting mistakes? Encouraging success makes people feel valued.
+- Are we celebrating success? Are we recognizing and rewarding employees? (How's our DVIP pool?)
+- Are we celebratiing milestones in years of employment? Do we value tenure? Do we celebrate careers? Careers are different than job titles. Valuing employees in the workplace means also valuing all the experience, insight, and advice they’ve gained that helps them be their best in their current role and helps your team. Celebrate the years of service they give to you, and the years of experience they’ve gained throughout their career.
+- Do we have solid training and skills development opportunities?
 
-### 9. Responsibility
+### 8. Responsibility
 
 Responsibility encompasses employee accountability for actions and results, as well as the ability to make decisions regarding their work. While it seems like an individual metric, these behaviors should be promoted and assessed on a company-wide level. And believe me, you’ll find that employees are eager to report back on their experience in this area.
 
-**Possible metrics:**
-
-- Ask employees to rate communication, how is it working top down, across the company and in your department?
-- Number of Teams posts in Technology Team Channels
-
-### 10. Mission and Value Alignment
-
-The first step is having a mission statement and company values, and that’s the easy part. You should also keep regular tabs on if employees _know_ your mission and values, _understand_ them, and _live_ by them. This process starts during recruitment, so don’t let this metric fall to the wayside during periods of high growth.
+Good people thrive under clear responsibility and accountability. They seek it out. Employees who don't want responsibility or accountablity are damaging to the organization.
 
 **Possible metrics:**
 
-- Ask employees to rate communication, how is it working top down, across the company and in your department?
-- Number of Teams posts in Technology Team Channels
+- Define Accountable Behavior.
+- Create SMART Goals And Measure Results.
+- Do employees have clear performance metrics?
+- Are employee reviews and checkins conducted in a timely manner?
+
+### 9. Mission and Value Alignment
+
+The first step is having a mission statement and company values. Vision and mission statements must be real and relevant, not an insipid product of forced strategic planning theater. If they aren't "real" they won't unite and inspire employees, and could imbued more cynicism into the workforce.
+
+Ironically, the main reason that companies will refuse to measure their vision or mission is the claim that they are deliberately broad for aspirational purposes and deliberately vague so everyone can find their own meaning in them. Being broad and vague means they cannot drive employee energy and focus.
+
+Here's an example:
+
+> “To refresh the world… To inspire moments of optimism and happiness… To create value and make a difference.”
+
+Can you guess the company? It's Cola Cola.
+
+Once you have a real mission and values you should make sure employees _know_ your mission and values, _understand_ them, and _live_ by them. This process starts during recruitment, and continues during the employee's tenure with the company.
+
+**Possible metrics:**
+
+- Do employees know the Mission, Vision and Values of the company?
+- Do employees understand how their role is aligned to the company's mission?
+- Do employees like the mission and values of the company? Does it align with their personal values?
+- Does it provide enough clarity to drive daily decisons and priorities within the organization?
+- Is it measurable? A company can't claim that it is excelling if it doesn't have an objective measure of how well it’s fulfilling its mission and employees won't care.
 
 ## Culture Outcomes
 
@@ -162,7 +193,7 @@ If you get the ingredients right you should achieve the culture you desire. The 
 
 ### Employee Engagement
 
-What is employee engagement? Examples of employee engagement definitions include:
+What is employee engagement?
 
 - **Quantum Workplace** - "Employee engagement is the strength of the mental and emotional connection employees feel toward their places of work."
 
@@ -172,7 +203,7 @@ What is employee engagement? Examples of employee engagement definitions include
 
 - **Aon Hewitt** - Employee engagement is "the level of an employee's psychological investment in their organization."
 
-Behaviors of engaged and disengaged employees:
+Behaviors of engaged employees:
 
 | **Engaged behaviors**                 | **Disengaged behaviors**              |
 | ------------------------------------- | ------------------------------------- |
