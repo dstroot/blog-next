@@ -1,13 +1,12 @@
 ---
 title: 'Culture - Measure what you Treasure'
-excerpt: How do you actually measure culture? When determining how to measure
-  culture note that culture is an outcome. If you could measure culture directly,
-  you would be measuring a result - e.g. the current state (kind of like reading
-  the speedometer in your car). Does simply knowing the current state help you
-  improve it?
+excerpt: When measuring culture note that culture is an outcome. If you could
+  measure culture directly, you would be measuring a result - e.g. the current
+  state (kind of like reading the speedometer in your car). Does simply knowing
+  the current state help you improve it, or do you have to go deeper?
 coverImage: /assets/blog/img/culture.jpg
 date: '2021-07-28'
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -18,9 +17,7 @@ seoURL:
 
 How do you actually measure culture? When determining how to measure culture note that culture is an **outcome**. If you could measure culture directly, you would be measuring a result - e.g. the current state (kind of like reading the speedometer in your car). Does simply knowing the current state help you improve it? Does knowing the speed of your car help you to speed up or slow down? Or, are those changes made through other means (e.g. the brakes and accelerator)?
 
-You can measure employee burnout, or employee engagement, but those are **outcomes, not inputs** of your culture. They describe the current state.
-
-I am suggesting you might have more success improving culture if you could measure and improve the "ingredients", "inputs", or "drivers" of a great culture (the gas and brakes), which in turn would lead to the cultural outcome you desire (the right speed).
+You can measure employee burnout, or employee engagement, but those are **outcomes** of your culture. They describe the current state. I suggest you might have more success improving culture if you could measure and improve the "ingredients", "inputs", or "drivers" of a great culture (the gas and brakes), which in turn would lead to the cultural outcome you desire (the right speed).
 
 Side Note: One of the values in my family was following the rules. So we had a defined bedtime as children, and we were expected to adhere to it. In my view my family just "followed the rules". My friends interpreted that as my parents being strict. Interestingly, **My friends had the exact same bedtime**, but their parents didn't enforce it. They had the same "rules" but a different cultural outcome. Another way to say this is one aspect of culture is not the slogan on the wall but rather how you allow people to behave. What you _actually_ allow vs. what you _say_ you allow. This is another way to view culture as an outcome.
 
@@ -36,8 +33,10 @@ Are our current channels of communication effective at helping everyone in the c
 
 **Possible metrics:**
 
-- Ask employees to rate communication, how is it working top down, across the company and in your department?
-- Number of Teams posts in Technology Team Channels
+- Ask employees to rate communication, how is it working top down, across the company and in your department? Focus groups are effective ways to measure internal communications.
+- Number of posts in Technology Teams channels
+- Email open rates
+- Intranet analytics
 
 ### 2. Innovation
 
@@ -54,36 +53,63 @@ When measuring innovation, remember that it comes in many forms, such as resourc
 - Ask employees if they understand the goals of the organization?
 - Do they feel like their ideas are heard and acted upon?
 - Do they see others innovating?
+- Do they feel the company values innovation and are they "invited" to participate?
 
 ### 3. Agility
 
-Agility is key to staying competitive. How quickly can we respond to changes in the market? Do we we ever stop or cancel any projects in favor of new ones? If no programs/projects are ever deprioritized it's nearly impossible to be agile. Agility is also related to communications as changing views of the market and priorities need to be clearly communicated to employees along with "why".
+Agility is key to staying competitive. Agile organizations can quickly redirect their people and priorities toward value-creating opportunities. A common misconception is that stability and scale must be sacrificed for speed and flexibility. Truly agile organizations combine both: a strong "spine" provides the stability and "muscles" for developing and scaling dynamic capabilities.
+
+Structural stability (standard operating procedures) and cultural stability (shared purpose, direction, and values) is necessary to support dynamic capabilities (e.g. fluid changes to strategy and products). Otherwise it may feel like chaos.
+
+Agility is also related to strong internal communications - changing views of the market and priorities need to be clearly and quickly communicated to employees; along with "why" they are important.
+
+Agility can be enabled by:
+
+1. A network of autonomous, empowered teams each with clear objectives. What is each team's "north star"?
+2. There can be no overlap between teams (which creates internal politics that will slow down agility).
+3. Autonomy is enabled by creating cross-functional teams with full end-to-end accountability for specific goals and/or products.
+4. Rapid decisions, short learning cycles in each team.
+5. Dynamic people, who have a shared passion for what they do. If someone on the team is not performing the team needs to ability to "vote them off the island". Put another way, if the team does not the ability to directly choose its members it must at least have the ability to chose who is _not_ on the team.
+
+> "Without purpose and autonomy you’re in a world where people come in to work, they do their little bit, and they go home. They aren't engaged because they are not sure where that fits into the big scheme of things, and they are focused internally, not on the customer. Teams need direct ownership and real-time accountability, plus absolute clarity about how thier mission fits into the company's mission. That’s where engagement comes from — employee engagement goes off the chart because people have richer jobs, they’ve got a broader perspective, and they’re focused on solving problems. They don’t feel like hamsters — they feel like they’re part of a squad that’s on a mission."
+
+Finally, studies show that it's truly a blessing to have long tenured, experienced employees. You just don't want to allow them to become stale and bored. They should have a new role/opportunity on a new team every 18-36 months to keep them engaged and fresh.
 
 **Possible metrics:**
 
 - Ask employees to rate agility, what is slowing them down?
-- Are priorities clear? How often do you perceive prioties changing?
-- Number of projects deferred or canceled in favor of newer porjects/priorities?
+- Ask employees what is their team's "north star"?
+- Do they have the skills and reasources to achieve their mission?
+- Do they feel they get to decide "how" they achieve their mission?
+- How do they handle teammates who are not engaged?
+- Number of projects deferred or canceled in favor of newer projects/priorities? If no programs/projects are ever deprioritized it's nearly impossible to be agile as we add new projects to respond to market conditions. Teams become overwhelmed and may burn out.
 
 ### 4. Wellness
 
 Wellness encompasses the mental and physical health of employees. Not only does wellness lead to happier and more productive employees but this metric also has an important ripple effect. According to [a study in Health Affairs](http://content.healthaffairs.org/content/29/2/304.full), medical costs and absentee costs fall about $3.27 and $2.73 respectively for every dollar spent on wellness programs.
 
+However, this metric is _not_ about reducing healthcare costs (athough it may be an outcome) - it is about making sure employees know the company cares about them and is helping them with their personal wellness journey. This journey can take many forms, both physical and spiritual. It also means the company accepts them for who they are, so it touches on diversity and inclusion for all employees.
+
+Since we are social animals, wellness also stems from feeling connected - a sense of social connectedness to the organization.
+
 **Possible metrics:**
 
 - Ask employees to rate their perceived "wellness level"? (stress, exercise, work hours, etc.)
-- Sick days, absence trends
-- Employ the Maslach Burnout Inventory (MBI) to measure employee state
+- Ask employees if they feel they can be authentic and be themselves at work.
+- Ask employees if they consider coworkers as friends.
+- Measure sick days, absence trends
+- Employ the Maslach Burnout Inventory (MBI) to measure employee burnout
 
 ### 5. Work Environment
 
-You don’t need a trendy office to have an effective work environment. What is most important is that the workplace provides for comfortable, productive employees. For instance, small details, such as the temperature of the office, could be resulting in big losses in productivity. Focus on employee comments related to the workplace, and you will find some of the easiest and fastest ways to improve their performance.
+You don’t need a trendy office to have an effective work environment. What is most important is that the workplace provides for comfortable, productive employees. For instance, small details, such as the temperature of the office, or ambient noise, could be resulting in big losses in productivity. Focus on employee comments related to the workplace, and you will find some of the easiest and fastest ways to improve the work environment.
 
-Some office environments are noisy, lack privacy, or are simply to stimulating for deep thought. Employees may "self select" by working away from the office when they "just need to get something done". Pay attention because that may indicate issue with the environment.
+Some office environments are noisy, lack privacy, or are simply to stimulating for deep thought. Employees may "self select" by working away from the office when they "just need to get something done". Pay attention because that may indicate issues with the environment. Just like in a hotel, the "occupancy rate" is an important metric to watch as it can indicate how changes affect employees desire to be in the office.
 
 **Possible metrics:**
 
-- Ask employees... they'll tell you!
+- Ask employees, they'll tell you!
+- Measure occupancy rate.
 - Observe those employees that choose to work outside the office and ask why.
 
 ### 6. Collaboration
@@ -138,13 +164,13 @@ If you get the ingredients right you should achieve the culture you desire. The 
 
 What is employee engagement? Examples of employee engagement definitions include:
 
-- Quantum Workplace - "Employee engagement is the strength of the mental and emotional connection employees feel toward their places of work."
+- **Quantum Workplace** - "Employee engagement is the strength of the mental and emotional connection employees feel toward their places of work."
 
-- Gallup - "Engaged employees as those who are involved in, enthusiastic about and committed to their work and workplace."
+- **Gallup** - "Engaged employees as those who are involved in, enthusiastic about and committed to their work and workplace."
 
-- Willis Towers Watson – "Engagement is employees' willingness and ability to contribute to company success."
+- **Willis Towers Watson** – "Engagement is employees' willingness and ability to contribute to company success."
 
-- Aon Hewitt - Employee engagement is "the level of an employee's psychological investment in their organization."
+- **Aon Hewitt** - Employee engagement is "the level of an employee's psychological investment in their organization."
 
 Behaviors of engaged and disengaged employees:
 
@@ -160,12 +186,12 @@ Behaviors of engaged and disengaged employees:
 
 Six drivers of employee engagement that have the greatest impact:
 
-1. The leaders of their organization are committed to making it a great place to work.
-2. Trust in the leaders of the organization to set the right course.
-3. Belief that the organization will be successful in the future.
-4. Understanding of how I fit into the organization's future plans.
-5. The leaders of the organization value people as their most important resource.
-6. The organization makes investments to make employees more successful.
+1. Trust in the leaders of the organization to set the right course.
+2. Belief that the organization will be successful in the future.
+3. Belief that leaders are committed to making it a great place to work.
+4. Understanding of how they fit into the organization's future plans.
+5. Belief that leaders of the organization value them (employees).
+6. Visible investments made to make employees more successful.
 
 ### Voluntary Turnover
 
@@ -214,3 +240,4 @@ Well known for its commitment to culture, Zappos management places a high priori
 - [The Hazards of a “Nice” Company Culture](https://hbr.org/2021/06/the-hazards-of-a-nice-company-culture)
 - [High-Performing Teams Start with a Culture of Shared Values](https://hbr.org/2021/05/high-performing-teams-start-with-a-culture-of-shared-values)
 - [Employee Net Promoter Score](https://www.questionpro.com/blog/employee-net-promoter-score-enps/)
+- [Enterprise agility: Buzz or business impact?](https://www.mckinsey.com/business-functions/organization/our-insights/enterprise-agility-buzz-or-business-impact#)
