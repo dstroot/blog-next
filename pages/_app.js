@@ -1,6 +1,8 @@
 import '../styles/index.css';
 import { ThemeProvider } from 'next-themes';
 
+// https://nextjs.org/docs/advanced-features/custom-app
+// https://jools.dev/nextjs-_appjs-example
 export default function MyApp({ Component, pageProps }) {
   return (
     <>

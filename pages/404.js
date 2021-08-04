@@ -3,6 +3,7 @@ import { Container } from '../components/Container';
 import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
 
+// https://nextjs.org/docs/advanced-features/custom-error-page
 export default function Custom404() {
   return (
     <>

@@ -199,6 +199,14 @@ JetBlue also actively uses a Net Promoter Score for employees. “When you get y
 
 Well known for its commitment to culture, Zappos management places a high priority on the concept of connectedness to support its core values. To measure success in supporting this connectedness, the firm uses several tools including a Face game that, along with FaceMail, encourages employees to know each other and associate faces with names. Its effectiveness is regularly measured with an internal feedback system called Z60.
 
+> “You don’t create your future. You create your daily habits, and they create your future.”
+>
+> <cite>― Randy Gage, Author</cite>
+
+> “With outcome-based habits, the focus is on what you want to achieve. With identity-based habits, the focus is on who you wish to become.”
+>
+> <cite>― James Clear, Atomic Habits</cite>
+
 ### Resources
 
 - [How to Measure Burnout Accurately and Ethically](https://hbr.org/2021/03/how-to-measure-burnout-accurately-and-ethically)

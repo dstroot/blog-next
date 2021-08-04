@@ -1,6 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-export default class MyDocument extends Document {
+// https://nextjs.org/docs/advanced-features/custom-document
+// A custom Document is commonly used to augment your application's <html> and <body> tags.
+class MyDocument extends Document {
   render() {
     return (
       <Html lang='en'>
@@ -13,3 +15,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;
