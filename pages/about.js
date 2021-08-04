@@ -16,10 +16,10 @@ export default function About() {
         <Header />
         <div className='invisible xl:visible fixed left-top mt-36 ml-20'>
           <Image
-            src='/assets/blog/img/personality.jpg'
+            src='/assets/blog/img/maker.jpg'
             alt={CMS_NAME}
-            height={300}
-            width={191}
+            height={828}
+            width={250}
             className=''
             layout='intrinsic'
           />
