@@ -1,9 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Container } from '../components/Container';
 import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
-import Link from 'next/link';
+
+// images
+import maker from '../public/assets/blog/img/maker.jpg';
+import me from '../public/assets/blog/authors/dan.jpeg';
 
 export default function About() {
   return (
@@ -14,23 +18,24 @@ export default function About() {
 
       <Container>
         <Header />
-        <div className='invisible xl:visible fixed left-top mt-36 ml-20'>
+        <div className='invisible xl:visible fixed left-top mt-36 ml-10'>
           <Image
-            src='/assets/blog/img/maker.jpg'
+            src={maker}
             alt={CMS_NAME}
-            height={828}
-            width={250}
-            className=''
+            height={662}
+            width={200}
             layout='intrinsic'
+            placeholder='blur'
           />
         </div>
         <div className='flex flex-row items-center mb-8 md:mb-12'>
           <div className='flex-initial mr-4 image-container w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 relative'>
             <Image
-              src='/assets/blog/authors/dan.jpeg'
+              src={me}
               alt={CMS_NAME}
               className='rounded-full image'
               layout='fill'
+              placeholder='blur'
             />
           </div>
           <div className='flex-initial'>
