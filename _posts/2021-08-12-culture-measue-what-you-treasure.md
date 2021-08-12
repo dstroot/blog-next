@@ -5,8 +5,8 @@ excerpt: When measuring culture note that culture is an outcome. If you could
   state (kind of like reading the speedometer in your car). Does simply knowing
   the current state help you improve it, or do you have to go deeper?
 coverImage: /assets/blog/img/culture.jpg
-date: '2021-07-28'
-published: false
+date: '2021-08-12'
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -18,6 +18,8 @@ seoURL:
 How do you actually measure culture? When determining how to measure culture note that culture is an **outcome**. If you could measure culture directly, you would be measuring a result - e.g. the current state (kind of like reading the speedometer in your car). Does simply knowing the current state help you improve it? Does knowing the speed of your car help you to speed up or slow down? Or, are those changes made through other means (e.g. the brakes and accelerator)?
 
 You can measure employee burnout, or employee engagement, but those are **outcomes** of your culture. They describe the current state. I suggest you might have more success improving culture if you could measure and improve the "ingredients", "inputs", or "drivers" of a great culture (the gas and brakes), which in turn would lead to the cultural outcome you desire (the right speed).
+
+![Culture Diagram](/assets/blog/img/culture2.jpg)
 
 Side Note: One of the values in my family was following the rules. So we had a defined bedtime as children, and we were expected to adhere to it. In my view my family just "followed the rules". My friends interpreted that as my parents being strict. Interestingly, **My friends had the exact same bedtime**, but their parents didn't enforce it. They had the same "rules" but a different cultural outcome. Another way to say this is one aspect of culture is not the slogan on the wall but rather how you allow people to behave. What you _actually_ allow vs. what you _say_ you allow. This is another way to view culture as an outcome.
 
@@ -244,7 +246,7 @@ Note the relationship of measuring employee burnout to employee engagement.
 
 ## Examples of effective programs
 
-**JetBlue**
+### JetBlue
 
 The airline employs a robust measurement program and tracks, among other metrics, employee satisfaction scores. According to Ann Rhoades, co-founder of JetBlue, former Chief People Officer of Southwest Airlines and Promus Hotel Company, “When an employee tells us they are very happy to be part of the organization, we calculate that number. It is a measure for all of our managers **and a portion of their bonus was based on the employee satisfaction score** in their department.”
 
@@ -252,17 +254,17 @@ Rhoades stressed that it’s important that every person is involved in meeting 
 
 JetBlue also actively uses a Net Promoter Score for employees. “When you get your six-month and 12-month employee satisfaction score, we ask you to tell us how long you intend to stay with us and would you recommend to family and friends to fly with and to work for JetBlue,” Rhoades said. “Those are critically important metrics for us.  It tells us whether our people are recruiting other A-players to work for us and whether they’re also telling their family that this is a great brand. If your own people aren’t promoting the company you have a serious problem.
 
-**Zappos**
+### Zappos
 
 Well known for its commitment to culture, Zappos management places a high priority on the concept of connectedness to support its core values. To measure success in supporting this connectedness, the firm uses several tools including a Face game that, along with FaceMail, encourages employees to know each other and associate faces with names. Its effectiveness is regularly measured with an internal feedback system called Z60.
 
-> “You don’t create your future. You create your daily habits, and they create your future.”
+<!-- > “You don’t create your future. You create your daily habits, and they create your future.”
 >
 > <cite>― Randy Gage, Author</cite>
 
 > “With outcome-based habits, the focus is on what you want to achieve. With identity-based habits, the focus is on who you wish to become.”
 >
-> <cite>― James Clear, Atomic Habits</cite>
+> <cite>― James Clear, Atomic Habits</cite> -->
 
 ### Resources
 
