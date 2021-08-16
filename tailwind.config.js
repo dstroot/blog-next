@@ -37,6 +37,9 @@ module.exports = {
       lineHeight: {
         tight: 1.2,
       },
+      outline: {
+        transparent: '2px #983799',
+      },
       typography(theme) {
         return {
           /*   The light side (default)   */

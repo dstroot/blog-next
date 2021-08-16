@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes';
 export const DarkMode = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, theme, setTheme } = useTheme();
+  const [selected, setSelected] = useState('auto');
 
   const divStyle = {
     height: '30px',
@@ -43,15 +44,41 @@ export const DarkMode = () => {
   if (!mounted) return <div style={divStyle}> </div>;
 
   // When mounted on client show the UI
+  // <div className={"w-full flex-grow lg:flex lg:items-center lg:w-auto " + (selected ? 'bg-blue-600 hover:bg-blue-800 text-white' : 'text-blue-600')}></div>
+  // flex flex-row justify-center
   return (
-    <div className='flex flex-row justify-center rounded-full border border-blue-500 space-x-0.5 m-4'>
-      <div className='flex-1 border text-center border-black bg-blue-600 hover:bg-blue-800 text-white  rounded-full items-center justify-center focus:outline-none transition duration-300 font-light text-sm'>
+    <div className='flex flex-row justify-center rounded-full border border-blue-500 m-4'>
+      <div
+        className={
+          'flex-1 outline-none text-center rounded-full transition duration-200 text-sm hover:cursor-pointer' +
+          (selected === 'light'
+            ? ' bg-blue-600  text-white font-medium'
+            : ' text-blue-600 font-light')
+        }
+        onClick={() => setSelected('light')}
+      >
         Light
       </div>
-      <div className='flex-1 border text-center border-black  text-blue-600  rounded-full items-center justify-center focus:outline-none transition duration-300 font-light text-sm'>
+      <div
+        className={
+          'flex-1 border border-transparent text-center rounded-full transition duration-200 text-sm hover:cursor-pointer' +
+          (selected === 'auto'
+            ? ' bg-blue-600  text-white font-medium'
+            : ' text-blue-600 font-light')
+        }
+        onClick={() => setSelected('auto')}
+      >
         Auto
       </div>
-      <div className='flex-1 border text-center border-black text-blue-600  rounded-full items-center justify-center focus:outline-none transition duration-300 font-light text-sm'>
+      <div
+        className={
+          'flex-1 border border-transparent text-center rounded-full transition duration-200 text-sm hover:cursor-pointer' +
+          (selected === 'dark'
+            ? ' bg-blue-600  text-white font-medium'
+            : ' text-blue-600 font-light')
+        }
+        onClick={() => setSelected('dark')}
+      >
         Dark
       </div>
     </div>
