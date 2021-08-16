@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Container } from '../components/Container';
 import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
+import { DarkMode } from '../components/DarkMode';
 
 const darkBackground = {
   backgroundColor: '#1D1E20', // 2A2B2D  1D1E20
@@ -154,7 +155,9 @@ export default function About() {
           <a href='https://developer.apple.com/'>
             https://developer.apple.com/
           </a>
+          <DarkMode />
         </div>
+        <DarkMode />
       </Container>
     </>
   );
