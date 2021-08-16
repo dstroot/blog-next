@@ -47,12 +47,12 @@ export const DarkMode = () => {
   // <div className={"w-full flex-grow lg:flex lg:items-center lg:w-auto " + (selected ? 'bg-blue-600 hover:bg-blue-800 text-white' : 'text-blue-600')}></div>
   // flex flex-row justify-center
   return (
-    <div className='flex flex-row justify-center rounded-full border border-blue-500 m-4'>
+    <div className='inline-flex rounded-full border border-blue-500 p-0.5 text-center tracking-tight text-xs m-2'>
       <div
         className={
-          'flex-1 outline-none text-center rounded-full transition duration-200 text-sm hover:cursor-pointer' +
+          'flex-1 rounded-full transition duration-100 hover:cursor-pointer px-2' +
           (selected === 'light'
-            ? ' bg-blue-600  text-white font-medium'
+            ? ' bg-blue-600  text-white'
             : ' text-blue-600 font-light')
         }
         onClick={() => setSelected('light')}
@@ -61,9 +61,9 @@ export const DarkMode = () => {
       </div>
       <div
         className={
-          'flex-1 border border-transparent text-center rounded-full transition duration-200 text-sm hover:cursor-pointer' +
+          'flex-1 rounded-full transition duration-100 hover:cursor-pointer px-2' +
           (selected === 'auto'
-            ? ' bg-blue-600  text-white font-medium'
+            ? ' bg-blue-600  text-white'
             : ' text-blue-600 font-light')
         }
         onClick={() => setSelected('auto')}
@@ -72,9 +72,9 @@ export const DarkMode = () => {
       </div>
       <div
         className={
-          'flex-1 border border-transparent text-center rounded-full transition duration-200 text-sm hover:cursor-pointer' +
+          'flex-1 rounded-full transition duration-100 hover:cursor-pointer px-2' +
           (selected === 'dark'
-            ? ' bg-blue-600  text-white font-medium'
+            ? ' bg-blue-600  text-white'
             : ' text-blue-600 font-light')
         }
         onClick={() => setSelected('dark')}
