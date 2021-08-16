@@ -1,27 +1,18 @@
 import Head from 'next/head';
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
+import { CMS_NAME, BASE_URL, HOME_OG_IMAGE_URL } from '../lib/constants';
 
 export const Meta = () => {
   return (
     <Head>
       <link rel='manifest' href='site.webmanifest' />
+      <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
       <link
         rel='apple-touch-icon'
         sizes='192x192'
         href='maskable_icon_x192.png'
       />
       <link rel='icon' type='image/png' sizes='32x32' href='favicon.png' />
-      {/* <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon/favicon-16x16.png"
-      />
-      <link
-        rel="mask-icon"
-        href="/favicon/safari-pinned-tab.svg"
-        color="#000000"
-      /> */}
+      <link rel='shortcut icon' href='favicon.png' />
 
       {/*
           CSS and scripts to support syntax highlighting
@@ -55,14 +46,45 @@ export const Meta = () => {
           and the preference is the order
       */}
       <meta name='color-scheme' content='light dark' />
-
-      <link rel='shortcut icon' href='/favicon/favicon.png' />
-      <meta name='msapplication-TileColor' content='#000000' />
-      <meta name='msapplication-config' content='/favicon/browserconfig.xml' />
       <meta name='theme-color' content='#000' />
-      <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
-      <meta name='description' content={`${CMS_NAME}`} />
-      <meta property='og:image' content={HOME_OG_IMAGE_URL} />
+
+      {/* Meta Tags */}
+      <title>Dan Stroot · Blog</title>
+      <meta
+        name='description'
+        content='Dan Stroot · The most popular blog in the world.'
+      />
+      <meta name='author' content='Dan Stroot' />
+
+      {/* Open Graph Tags */}
+      <meta property='og:image' content={HOME_OG_IMAGE_URL} key='image' />
+      <meta property='og:title' content={`${CMS_NAME}`} key='title' />
+      {/*
+        Add it to all “shareable” pages.
+        Focus on accuracy, value, and clickability.
+        Keep it short to prevent overflow. There’s no official guidance 
+        on this, but 40 characters for mobile and 60 for desktop is roughly the sweet spot.
+        Use the raw title. Don’t include branding (e.g., your site name). 
+      */}
+      <meta
+        property='og:description'
+        content='Dan Stroot · The most popular blog in the world.'
+        key='description'
+      />
+      {/*
+        Complement the title to make the snippet as appealing and click-worthy as possible.
+        Copy your meta description here if it makes sense. 
+        Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates.
+      */}
+      <meta property='og:url' content={`${BASE_URL}`} key='url' />
+      <meta property='og:image' content={HOME_OG_IMAGE_URL} key='image' />
+      {/*
+        Use custom images for “shareable” pages (e.g., homepage, articles, etc.)
+        Use your logo or any other branded image for the rest of your pages.
+        Use images with a 1.91:1 ratio and minimum recommended dimensions of 
+        1200x630 for optimal clarity across all devices.
+      */}
+      <meta property='og:type' content='website' key='type' />
 
       {/* 
       Global Site Tag (gtag.js) - Google Analytics 

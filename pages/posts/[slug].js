@@ -9,7 +9,7 @@ import { Header } from '../../components/Header';
 import { PostHeader } from '../../components/PostHeader';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
 import { PostTitle } from '../../components/PostTitle';
-import { CMS_NAME, REPO } from '../../lib/constants';
+import { CMS_NAME, BASE_URL, REPO } from '../../lib/constants';
 
 // TODO: more posts at bottom
 export default function Post({ post, morePosts, preview }) {
@@ -31,7 +31,45 @@ export default function Post({ post, morePosts, preview }) {
             <title>
               {CMS_NAME} · {post.title}
             </title>
-            <meta property='og:image' content={post.ogImage.url} />
+            {/*
+              https://ahrefs.com/blog/open-graph-meta-tags/ 
+
+            */}
+            <meta property='og:title' content={post.title} key='title' />
+            {/*
+              Add it to all “shareable” pages.
+              Focus on accuracy, value, and clickability.
+              Keep it short to prevent overflow. There’s no official guidance 
+              on this, but 40 characters for mobile and 60 for desktop is roughly the sweet spot.
+              Use the raw title. Don’t include branding (e.g., your site name). 
+            */}
+            <meta
+              property='og:description'
+              content={post.excerpt}
+              key='description'
+            />
+            {/*
+              Complement the title to make the snippet as appealing and click-worthy as possible.
+              Copy your meta description here if it makes sense. 
+              Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates.
+             */}
+            <meta
+              property='og:url'
+              content={`${BASE_URL}/posts/${post.slug}`}
+              key='url'
+            />
+            <meta
+              property='og:image'
+              content={`${BASE_URL}${post.coverImage}`}
+              key='image'
+            />
+            {/**
+             Use custom images for “shareable” pages (e.g., homepage, articles, etc.)
+             Use your logo or any other branded image for the rest of your pages.
+             Use images with a 1.91:1 ratio and minimum recommended dimensions of 
+             1200x630 for optimal clarity across all devices.
+             */}
+            <meta property='og:type' content='article' key='type' />
           </Head>
 
           <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
@@ -60,6 +98,7 @@ export async function getStaticProps({ params }) {
     'ogImage',
     'coverImage',
     'fileName',
+    'excerpt',
     'stats',
   ]);
 
