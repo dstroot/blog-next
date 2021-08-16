@@ -24,6 +24,7 @@ Made With:
 - [Remark](https://github.com/remarkjs) Markdown processing
 - [Gray Matter](https://github.com/jonschlinkert/gray-matter) YAML Front Matter
 - [Megatags](https://megatags.co/)
+- [Web Code Tools](https://webcode.tools)
 
 TODO
 
@@ -46,4 +47,4 @@ TODO
 - [x] Pseudo infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
 - [x] Add ability to lint markdown files using https://github.com/remarkjs/remark-lint.
-- [ ] Add all the open graph seo meta tags. See megatags above.
+- [ ] Add all the open graph seo meta tags. See megatags or web code tools above. https://ahrefs.com/blog/open-graph-meta-tags/

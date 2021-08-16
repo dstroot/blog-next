@@ -77,7 +77,6 @@ export const Meta = () => {
         Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates.
       */}
       <meta property='og:url' content={`${BASE_URL}`} key='url' />
-      <meta property='og:image' content={HOME_OG_IMAGE_URL} key='image' />
       {/*
         Use custom images for “shareable” pages (e.g., homepage, articles, etc.)
         Use your logo or any other branded image for the rest of your pages.
