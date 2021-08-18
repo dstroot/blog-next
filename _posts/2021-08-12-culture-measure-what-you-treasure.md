@@ -171,7 +171,7 @@ Good people thrive under clear responsibility and accountability. They seek it o
 
 ### 9. Mission and Value Alignment
 
-The first step is having a mission statement and company values. Vision and mission statements must be real and relevant, not an insipid product of forced strategic planning theater. If they aren't "real" they won't unite and inspire employees, and could imbued more cynicism into the workforce.
+The first step is having a mission statement and company values. Vision and mission statements must be real and relevant, not an insipid product of forced strategic planning theater. If they aren't "real" they won't unite and inspire employees, and could imbue more cynicism into the workforce.
 
 Ironically, the main reason that companies will refuse to measure their vision or mission is the claim that they are deliberately broad for aspirational purposes and deliberately vague so everyone can find their own meaning in them. Being broad and vague means they cannot drive employee energy and focus.
 
@@ -181,7 +181,7 @@ Here's an example:
 
 Can you guess the company? It's Cola Cola.
 
-Once you have a real mission and values you should make sure employees _know_ your mission and values, _understand_ them, and _live_ by them. This process starts during recruitment, and continues during the employee's tenure with the company.
+Once you have a **real** mission and values you should make sure employees _know_ your mission and values, _understand_ them, and _live_ by them. This process starts during recruitment, and continues during the employee's tenure with the company.
 
 **Possible metrics:**
 
