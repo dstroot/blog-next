@@ -15,15 +15,17 @@ ogImage:
 seoURL:
 ---
 
-How do you actually measure culture? When determining how to measure culture note that culture is an **outcome**. If you could measure culture directly, you would be measuring a result - e.g. the current state (kind of like reading the speedometer in your car). Does simply knowing the current state help you improve it? Does knowing the speed of your car help you to speed up or slow down? Or, are those changes made through other means (e.g. the brakes and accelerator)?
+How do you measure culture? How do you change culture? What do we even mean by the word "culture"?
 
-You can measure employee burnout, or employee engagement, but those are **outcomes** of your culture. They describe the current state. I suggest you might have more success improving culture if you could measure and improve the "ingredients", "inputs", or "drivers" of a great culture (the gas and brakes), which in turn would lead to the cultural outcome you desire (the right speed).
+Many organizations attempt to measure culture using employee engagement surveys, unplanned turnover metrics, employee burnout measurement, and even Glassdoor comments. Do these actually measure your culture? No, they measure the **outcomes** of your culture. 
+
+What if you aren't achieving the outcomes you desire? If you want to change or improve your culture you have to focus on the **ingredients** of a great culture, not the outcomes. The "inputs", or "drivers" of culture are those that will lead to the cultural outcome you desire. What do those ingredients look like?  
 
 ![Culture Diagram](/assets/blog/img/culture2.jpg)
 
-Side Note: One of the values in my family was following the rules. So we had a defined bedtime as children, and we were expected to adhere to it. In my view my family just "followed the rules". My friends interpreted that as my parents being strict. Interestingly, **My friends had the exact same bedtime**, but their parents didn't enforce it. They had the same "rules" but a different cultural outcome. Another way to say this is one aspect of culture is not the slogan on the wall but rather how you allow people to behave. What you _actually_ allow vs. what you _say_ you allow. This is another way to view culture as an outcome.
+Side Note: One of the values in my family was following the rules. So we had a defined bedtime as children, and we were expected to adhere to it. In my view my family just "followed the rules". My friends interpreted that as my parents being strict. Interestingly, My friends had the exact same bedtime, but their parents didn't enforce it. They had the same "rules" but a different cultural outcome. Another way to say this is one aspect of culture is not the slogan on the wall but rather how you allow people to behave. What you _actually_ allow vs. what you _say_ you allow. 
 
-When I think about what would create a culture that I would be proud to be part of I think of these "ingredients" or "inputs":
+When I think about what would create a culture that I would be proud to be part of I focus on these "ingredients":
 
 ## Cultural Ingredients
 
