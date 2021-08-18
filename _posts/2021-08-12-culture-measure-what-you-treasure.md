@@ -23,9 +23,7 @@ What if you aren't achieving the outcomes you desire? If you want to change or i
 
 ![Culture Diagram](/assets/blog/img/culture2.jpg)
 
-Side Note: One of the values in my family was following the rules. So we had a defined bedtime as children, and we were expected to adhere to it. In my view my family just "followed the rules". My friends interpreted that as my parents being strict. Interestingly, My friends had the exact same bedtime, but their parents didn't enforce it. They had the same "rules" but a different cultural outcome. Another way to say this is one aspect of culture is not the slogan on the wall but rather how you allow people to behave. What you _actually_ allow vs. what you _say_ you allow. 
-
-When I think about what would create a culture that I would be proud to be part of I focus on these "ingredients":
+Side Note: One of the values in my family was following the rules. So we had a defined bedtime as children, and we were expected to adhere to it. In my view my family just "followed the rules". My friends interpreted that as my parents being strict. Interestingly, My friends had the exact same bedtime, but their parents just didn't enforce it. They had the same "rules" but a different cultural outcome. Another way to say this is one aspect of culture is not the slogan on the wall but rather how you allow people to behave. What you _actually_ allow vs. what you _say_ you allow. It's why metrics are important - you have to measure the ingredients, not just the outcomes. 
 
 ## Cultural Ingredients
 
