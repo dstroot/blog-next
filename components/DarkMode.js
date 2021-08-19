@@ -7,22 +7,9 @@ export const DarkMode = () => {
   const [selected, setSelected] = useState('auto');
 
   const divStyle = {
-    height: '30px',
+    height: '15px',
     width: '30px',
   };
-
-  // small pills inside border
-
-  //   .text {
-  //     box-sizing: border-box;
-  //     display: inline-block;
-  //     padding: 1px 6px;
-  //     min-width: 42px;
-  //     border: 1px solid transparent;
-  //     border-radius: var(--toggle-border-radius-inner, 2px);
-  //     text-align: center;
-  //     color: var(--toggle-color-text);
-  // }
 
   // When mounted on client we can show the UI
   useEffect(() => setMounted(true), []);
