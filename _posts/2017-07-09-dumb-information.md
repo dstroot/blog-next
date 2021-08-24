@@ -4,7 +4,7 @@ excerpt: I was certain the Internet would make people smarter and more informed
   via better access to information. Instead, in many ways the opposite happened.
 coverImage: /assets/blog/img/umberto-eco.jpg
 date: '2017-07-09'
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

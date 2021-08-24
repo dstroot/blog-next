@@ -9,7 +9,7 @@ excerpt: A year ago I wrote about how big data, collected from social media
   fascinating and evolving rapidly.
 coverImage: /assets/blog/img/cambridge_analytica.jpg
 date: '2018-03-17'
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

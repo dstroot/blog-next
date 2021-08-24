@@ -7,7 +7,7 @@ excerpt: When I was growing up, when you read the paper, watched the news, saw a
   traditional journalism.
 coverImage: /assets/blog/img/comic2.png
 date: '2016-10-31'
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
