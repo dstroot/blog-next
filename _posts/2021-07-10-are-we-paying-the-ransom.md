@@ -69,7 +69,7 @@ There is a wealth of information about security best practices on the web. No ne
 
 This is number one - **ransomware is a professional business**. Criminals literally earn their living by attacking companies like yours. Companies need skilled technical people because of the sheer aggregation of risk; they are your last line of defense. If you do get hit with ransomware you want people on payroll, and on site, ASAP. You don't want to call your technology sourcing partner when you get hit and have them put you on hold while they take calls from their bigger clients that have also been hit with the same malware. Or worse, they have been hit too.
 
-You probably don't need a group of Rockstar 10x-types, but you do need solid, fundamental IT knowledge and ability to solve technical challenges. There's no glamour or glory busines continuity, and no easy sources of funding like for information security.
+You probably don't need a group of Rockstar 10x-types, but you do need solid, fundamental IT knowledge and ability to solve technical challenges. There's no glamour or glory in busines continuity, and thus it's more challenging to gain funding, unlike information security.
 
 #### 2. Clean House
 
