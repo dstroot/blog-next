@@ -1,3 +1,69 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+:root {
+  --hue: 204;
+  --sat: 100%;
+  --lum: 30%;
+}
+
+.blue0 {
+  --lum: 10%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue1 {
+  --lum: 15%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue2 {
+  --lum: 20%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue3 {
+  --lum: 25%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue4 {
+  --lum: 30%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue5 {
+  --lum: 35%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue6 {
+  --lum: 40%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue7 {
+  --lum: 45%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue8 {
+  --lum: 50%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue9 {
+  --lum: 55%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue10 {
+  --lum: 60%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue11 {
+  --lum: 65%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}

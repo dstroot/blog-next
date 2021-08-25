@@ -54,7 +54,6 @@ export default function About() {
           <div className='col-span-2 bg-dark-1 text-gray-100 text-2xl p-10'>
             Dark
           </div>
-
           {/*
             Basic Styles
             */}
@@ -70,7 +69,6 @@ export default function About() {
           <div style={darkBackground} className='text-xs font-light'>
             <span style={darkText}>Text</span>
           </div>
-
           {/*
             Basic Styles
             */}
@@ -86,11 +84,9 @@ export default function About() {
           <div className='bg-dark-4 text-gray-300 text-xs font-light p-10'>
             Text
           </div>
-
           {/*
             Links
             */}
-
           <div style={lightBackground} className='text-xs font-light'>
             <a href='#' className='hover:underline'>
               <span style={lightText}>Text</span>
@@ -111,11 +107,25 @@ export default function About() {
               <span style={darkText}>Text</span>
             </a>
           </div>
-
           {/*
             Links
             */}
-
+          <div className='text-xs font-light blue0 p-12'>text</div>
+          <div className='text-xs font-semibold blue1 p-12'>text</div>
+          <div className='text-xs font-semibold blue2 p-12'>text</div>
+          <div className='text-xs font-light blue3 p-12'>text</div>
+          <div className='text-xs font-light blue4 p-12'>text</div>
+          <div className='text-xs font-semibold blue5 p-12'>text</div>
+          <div className='text-xs font-semibold blue6 p-12'>text</div>
+          <div className='text-xs font-light blue7 p-12'>text</div>
+          <div className='text-xs font-light blue8 p-12'>text</div>
+          <div className='text-xs font-semibold blue9 p-12'>text</div>
+          <div className='text-xs font-semibold blue10 p-12'>text</div>
+          <div className='text-xs font-light blue11 p-12'>text</div>
+          {/* https://www.youtube.com/watch?v=IHaT_rjC2gM */}
+          {/*
+            Links
+            */}
           <div style={lightBackground} className='text-xs font-light text-left'>
             <span style={lightTextMuted}>Copyright © 2021 </span>
             <a
