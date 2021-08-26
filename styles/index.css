@@ -67,3 +67,23 @@
   --lum: 65%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
+
+.blue12 {
+  --lum: 70%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue13 {
+  --lum: 75%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue14 {
+  --lum: 80%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue15 {
+  --lum: 85%;
+  background: hsl(var(--hue), var(--sat), var(--lum));
+}

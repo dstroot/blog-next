@@ -122,6 +122,10 @@ export default function About() {
           <div className='text-xs font-semibold blue9 p-12'>text</div>
           <div className='text-xs font-semibold blue10 p-12'>text</div>
           <div className='text-xs font-light blue11 p-12'>text</div>
+          <div className='text-xs font-light blue12 p-12'>text</div>
+          <div className='text-xs font-semibold blue13 p-12'>text</div>
+          <div className='text-xs font-semibold blue14 p-12'>text</div>
+          <div className='text-xs font-light blue15 p-12'>text</div>
           {/* https://www.youtube.com/watch?v=IHaT_rjC2gM */}
           {/*
             Links
