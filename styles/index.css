@@ -8,82 +8,211 @@
   --lum: 30%;
 }
 
-.blue0 {
+.bg-blue0 {
   --lum: 10%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue1 {
+.bg-blue1 {
   --lum: 15%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue2 {
+.bg-blue2 {
   --lum: 20%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue3 {
+.bg-blue3 {
   --lum: 25%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue4 {
+.bg-blue4 {
   --lum: 30%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue5 {
+.bg-blue5 {
   --lum: 35%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue6 {
+.bg-blue6 {
   --lum: 40%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue7 {
+.bg-blue7 {
   --lum: 45%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue8 {
+.bg-blue8 {
   --lum: 50%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue9 {
+.bg-blue9 {
   --lum: 55%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue10 {
+.bg-blue10 {
   --lum: 60%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue11 {
+.bg-blue11 {
   --lum: 65%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue12 {
+.bg-blue12 {
   --lum: 70%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue13 {
+.bg-blue13 {
   --lum: 75%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue14 {
+.bg-blue14 {
   --lum: 80%;
   background: hsl(var(--hue), var(--sat), var(--lum));
 }
 
-.blue15 {
+.bg-blue15 {
   --lum: 85%;
   background: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue0 {
+  --lum: 10%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue1 {
+  --lum: 15%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue2 {
+  --lum: 20%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue3 {
+  --lum: 25%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue4 {
+  --lum: 30%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue5 {
+  --lum: 35%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue6 {
+  --lum: 40%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue7 {
+  --lum: 45%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue8 {
+  --lum: 50%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue9 {
+  --lum: 55%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue10 {
+  --lum: 60%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue11 {
+  --lum: 65%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue12 {
+  --lum: 70%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue13 {
+  --lum: 75%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue14 {
+  --lum: 80%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.blue15 {
+  --lum: 85%;
+  color: hsl(var(--hue), var(--sat), var(--lum));
+}
+
+.warning-light {
+  /* --lum: 80%;
+  background: hsl(var(--hue), var(--sat), var(--lum)); */
+  background: hsl(34, 100%, 50%);
+}
+
+.warning-dark {
+  /* --lum: 85%; */
+  background: hsl(34, 100%, 65%);
+}
+
+.error-light {
+  /* --lum: 80%;
+  background: hsl(var(--hue), var(--sat), var(--lum)); */
+  background: hsl(0, 66%, 47%);
+}
+
+.error-dark {
+  /* --lum: 85%; */
+  background: hsl(0, 66%, 62%);
+}
+
+.success-light {
+  /* --lum: 80%;
+  background: hsl(var(--hue), var(--sat), var(--lum)); */
+  background: hsl(174, 100%, 27%);
+}
+
+.success-dark {
+  /* --lum: 85%; */
+  background: hsl(174, 100%, 42%);
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.error-text {
+  color: hsl(0, 66%, 47%);
+}
+
+.warning-text {
+  color: hsl(34, 100%, 50%);
+}
+
+.success-text {
+  color: hsl(174, 100%, 27%);
 }

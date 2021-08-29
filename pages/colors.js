@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { Container } from '../components/Container';
 import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
@@ -110,22 +111,22 @@ export default function About() {
           {/*
             Links
             */}
-          <div className='text-xs font-light blue0 p-12'>text</div>
-          <div className='text-xs font-semibold blue1 p-12'>text</div>
-          <div className='text-xs font-semibold blue2 p-12'>text</div>
-          <div className='text-xs font-light blue3 p-12'>text</div>
-          <div className='text-xs font-light blue4 p-12'>text</div>
-          <div className='text-xs font-semibold blue5 p-12'>text</div>
-          <div className='text-xs font-semibold blue6 p-12'>text</div>
-          <div className='text-xs font-light blue7 p-12'>text</div>
-          <div className='text-xs font-light blue8 p-12'>text</div>
-          <div className='text-xs font-semibold blue9 p-12'>text</div>
-          <div className='text-xs font-semibold blue10 p-12'>text</div>
-          <div className='text-xs font-light blue11 p-12'>text</div>
-          <div className='text-xs font-light blue12 p-12'>text</div>
-          <div className='text-xs font-semibold blue13 p-12'>text</div>
-          <div className='text-xs font-semibold blue14 p-12'>text</div>
-          <div className='text-xs font-light blue15 p-12'>text</div>
+          <div className='text-xs font-light bg-blue0 p-12'>text</div>
+          <div className='text-xs font-semibold bg-blue1 p-12'>text</div>
+          <div className='text-xs font-semibold bg-blue2 p-12'>text</div>
+          <div className='text-xs font-light bg-blue3 p-12'>text</div>
+          <div className='text-xs font-light bg-blue4 p-12'>text</div>
+          <div className='text-xs font-semibold bg-blue5 p-12'>text</div>
+          <div className='text-xs font-semibold bg-blue6 p-12'>text</div>
+          <div className='text-xs font-light bg-blue7 p-12'>text</div>
+          <div className='text-xs font-light bg-blue8 p-12'>text</div>
+          <div className='text-xs font-semibold bg-blue9 p-12'>text</div>
+          <div className='text-xs font-semibold bg-blue10 p-12'>text</div>
+          <div className='text-xs font-light bg-blue11 p-12'>text</div>
+          <div className='text-xs font-light bg-blue12 p-12'>text</div>
+          <div className='text-xs font-semibold bg-blue13 p-12'>text</div>
+          <div className='text-xs font-semibold bg-blue14 p-12'>text</div>
+          <div className='text-xs font-light bg-blue15 p-12'>text</div>
           {/* https://www.youtube.com/watch?v=IHaT_rjC2gM */}
           {/*
             Links
@@ -166,12 +167,140 @@ export default function About() {
             </a>{' '}
             <span style={darkTextMuted}>All rights reserved.</span>
           </div>
+
           <a href='https://developer.apple.com/'>
             https://developer.apple.com/
           </a>
           <DarkMode />
         </div>
+        <div className='flex flex-row w-full'>
+          <div style={lightBackground} className='w-1/2 h-48'></div>
+          <div style={darkBackground} className='w-1/2 h-48'>
+            <div className='overlay p-8 rounded'></div>
+            <div className='warning-light p-2 rounded'></div>
+            <div className='error-light p-2 rounded'></div>
+            <div className='success-light p-2 rounded'></div>
+          </div>
+          <div className='warning-light p-12'></div>
+          <div className='warning-dark p-12'></div>
+          <div className='error-light p-12'></div>
+          <div className='error-dark p-12'></div>
+          <div className='success-light p-12'></div>
+          <div className='success-dark p-12'></div>
+        </div>
         <DarkMode />
+
+        <div className='flex flex-row space-x-4'>
+          <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
+            <img
+              className='w-full'
+              src='/assets/blog/img/black_card.jpg'
+              alt='Mountain'
+            />
+            {/* <Image
+            src='/assets/blog/img/black_card.jpg'
+            alt='Black Card'
+            layout='fill'
+            // width={width}
+            // height={height}
+          /> */}
+            <div className='px-6 py-4'>
+              <div className='font-bold text-xl mb-2 text-gray-700 dark:text-gray-300'>
+                Mountain
+              </div>
+              <p className='text-gray-600 dark:text-gray-400 text-base'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div className='px-6 pt-4 pb-2'>
+              <span className='inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 dark:text-gray-400 mr-2 mb-2'>
+                #photography
+              </span>
+              <span className='inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 dark:text-gray-400 mr-2 mb-2'>
+                #travel
+              </span>
+              <span className='inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 dark:text-gray-400 mr-2 mb-2'>
+                #winter
+              </span>
+            </div>
+          </div>
+
+          <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
+            <img
+              className='w-full'
+              src='/assets/blog/img/black_card.jpg'
+              alt='Mountain'
+            />
+            {/* <Image
+            src='/assets/blog/img/black_card.jpg'
+            alt='Black Card'
+            layout='fill'
+            // width={width}
+            // height={height}
+          /> */}
+            <div className='px-6 py-4'>
+              <div className='font-bold text-xl mb-2 blue7 dark:blue4'>
+                Mountain
+              </div>
+              <p className='text-gray-600 dark:text-gray-400 text-base'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div className='px-6 pt-4 pb-2'>
+              <span className='inline-block error-dark dark:error-light rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+                #photography
+              </span>
+              <span className='inline-block success-dark dark:success-light rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+                #travel
+              </span>
+              <span className='inline-block warning-dark dark:warning-light rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+                #winter
+              </span>
+            </div>
+          </div>
+
+          <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
+            <img
+              className='w-full'
+              src='/assets/blog/img/black_card.jpg'
+              alt='Mountain'
+            />
+            {/* <Image
+            src='/assets/blog/img/black_card.jpg'
+            alt='Black Card'
+            layout='fill'
+            // width={width}
+            // height={height}
+          /> */}
+            <div className='px-6 py-4'>
+              <div className='font-bold text-xl mb-2 text-gray-700 dark:text-gray-300'>
+                <span className='error-text'>Mountain </span>
+                <span className='warning-text'>Mountain </span>
+                <span className='success-text'>Mountain </span>
+              </div>
+              <p className='text-gray-600 dark:text-gray-400 text-base'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div className='px-6 pt-4 pb-2'>
+              <div className='inline-block error-light dark:error-dark rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+                #photography
+              </div>
+              <div className='inline-block success-light dark:success-dark rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+                #travel
+              </div>
+              <div className='inline-block warning-light dark:warning-dark rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+                #winter
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
     </>
   );
