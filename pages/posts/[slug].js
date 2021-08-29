@@ -114,6 +114,9 @@ export async function getStaticProps({ params }) {
   };
 }
 
+// https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation
+// Next.js will statically pre-render all the paths specified
+// for each path the params will be fed into "getStaticProps"
 export async function getStaticPaths() {
   const posts = getAllPosts(['slug']);
 
