@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import { Container } from '../components/Container';
 import { MoreStories } from '../components/MoreStories';
 import { HeroPost } from '../components/HeroPost';

@@ -17,7 +17,7 @@ export const PostHeader = ({ title, coverImage, date, author }) => {
           blurDataURL=''
         />
       </div>
-      <div className='max-w-2xl mx-auto'>
+      <div className='max-w-3xl mx-auto'>
         <div className='mb-6'>
           <Avatar
             name={author.name}
