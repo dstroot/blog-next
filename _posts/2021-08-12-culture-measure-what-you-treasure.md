@@ -171,19 +171,27 @@ Good people thrive under clear responsibility and accountability. They seek it o
 
 The first step is having a mission statement and company values. Vision and mission statements must be real and relevant, not an insipid product of forced strategic planning theater. If they aren't "real" they won't unite and inspire employees, and could imbue more cynicism into the workforce.
 
-Ironically, the main reason that companies will refuse to measure their vision or mission is the claim that they are deliberately broad for aspirational purposes and deliberately vague so everyone can find their own meaning in them. Being broad and vague means they cannot drive employee energy and focus.
+Ironically, the main reason that companies will refuse to measure their vision or mission is the claim that they are deliberately broad for aspirational purposes and deliberately vague so everyone can find their own meaning in them. Being broad and vague means they cannot/will not drive employee energy and focus.
 
 Here's an example:
 
 > “To refresh the world… To inspire moments of optimism and happiness… To create value and make a difference.”
 
-Can you guess the company? It's Cola Cola.
+Can you guess the company? ........ It's Cola Cola.
 
 Once you have a **real** mission and values you should make sure employees _know_ your mission and values, _understand_ them, and _live_ by them. This process starts during recruitment, and continues during the employee's tenure with the company.
 
+To be clear and actionable for employees your guiding principles or values must be verbs, not nouns. Examples:
+
+* Instead of "Integrity": "Always do the right thing"
+* Instead of "Innovation": "Think Different", or "Look at the problem from a different angle"
+* Instead of "Client Focus": "Always make decisions with the client's best interests in mind"
+
+This makes how you should act clear and unambiguous.
+
 **Possible metrics:**
 
-- Do employees know the Mission, Vision and Values of the company?
+- Do employees know the Mission, Vision and Values of the company?  Does it actually inspire them?
 - Do employees understand how their role is aligned to the company's mission?
 - Do employees like the mission and values of the company? Does it align with their personal values?
 - Does it provide enough clarity to drive daily decisons and priorities within the organization?
