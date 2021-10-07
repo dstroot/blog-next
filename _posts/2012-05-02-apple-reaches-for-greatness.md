@@ -72,7 +72,7 @@ _Lashinsky, Adam (2011). Inside Apple &#8212; From Steve Jobs down to the janito
 
 ![Jony Ive](/assets/blog/img/jony_ive.jpg)
 
-_Following Steve Jobs’s death on October 5, 2011, Jony Ive delivered a eulogy in which he referred to the chairman and co-founder of Apple as “my closest and my most loyal friend.” Ive wrote this remembrance in which he reflects on the spirit of their collaboration. These words inspire me deep in my soul_
+_Following Steve Jobs’s death on October 5, 2011, Jony Ive wrote this remembrance in which he reflects on the spirit of their collaboration. These words inspire me deeply in ways I cannot completely express._
 
 > "He was without doubt the most inquisitive human I have ever met. His insatiable curiosity was not limited or distracted by his knowledge or expertise, nor was it casual or passive. It was ferocious, energetic and restless. His curiosity was practiced with intention and rigor.
 >
