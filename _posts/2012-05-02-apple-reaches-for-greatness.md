@@ -68,7 +68,26 @@ The accountability mindset extends down the ranks. At Apple there is never any c
 
 _Lashinsky, Adam (2011). Inside Apple &#8212; From Steve Jobs down to the janitor: How America's most successful &#8211; and most secretive &#8211; big company really works._
 
+### Remembering Steve Jobs
+
+![Jony Ive](/assets/blog/img/jony_ive.jpg)
+
+_Following Steve Jobs’s death on October 5, 2011, Jony Ive delivered a eulogy in which he referred to the chairman and co-founder of Apple as “my closest and my most loyal friend.” Ive wrote this remembrance in which he reflects on the spirit of their collaboration. These words inspire me deep in my soul_
+
+> "He was without doubt the most inquisitive human I have ever met. His insatiable curiosity was not limited or distracted by his knowledge or expertise, nor was it casual or passive. It was ferocious, energetic and restless. His curiosity was practiced with intention and rigor.
+>
+> Many of us have an innate predisposition to be curious. I believe that after a traditional education, or working in an environment with many people, curiosity is a decision requiring intent and discipline.
+>
+> In larger groups our conversations gravitate towards the tangible, the measurable. It is more comfortable, far easier and more socially acceptable talking about what is known. Being curious and exploring tentative ideas were far more important to Steve than being socially acceptable.
+>
+> Our curiosity begs that we learn. And for Steve, wanting to learn was far more important than wanting to be right.
+>
+> Our curiosity united us. It formed the basis of our joyful and productive collaboration. I think it also tempered our fear of doing something terrifyingly new."
+>
+> <cite>- Jony Ive, Wall Street Journal, 2021</cite>
+
 References:
 
 - [Apple And Our Culture](https://www.theatlantic.com/daily-dish/archive/2011/01/apple-and-our-culture-ctd/176973/)
 - [How Steve Jobs 'out-Japanned' Japan](http://www.sfgate.com/cgi-bin/article.cgi?f=/g/a/2011/01/28/apop012811.DTL&ao=2)
+- [Jony Ive on What He Misses Most About Steve Jobs](https://www.wsj.com/articles/jony-ive-steve-jobs-memories-10th-anniversary-11633354769)
