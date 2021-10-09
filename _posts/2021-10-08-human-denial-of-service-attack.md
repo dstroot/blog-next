@@ -2,7 +2,7 @@
 title: Human Denial of Service Attacks
 excerpt:
   Can companies create human "denial of service" attacks against their own employees?
-  They can and they do - all in the name of 'making the business better'. If you work
+  They can and they do - all in the name of collaboration and 'making the business better'. If you work
   in a large organization you will recognize the pattern. Here's how it works...
 coverImage: /assets/blog/img/ddos-attack.jpg
 date: '2021-10-08'
@@ -91,10 +91,20 @@ The worse the DDoS attack the deeper the hierarchy must be. The hierarchy is the
 
 In the middle of the hierarchy stack are the "professional meeting attenders". The middle managers who everyone wonders "what is their job?" and "why don't they accomplish anything?". Their job is simply to absorb the DDoS attacks so the people below them can work normally and respond to service requests.
 
+The [Harvard Business Review](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year) discovered that a **weekly executive meeting was consuming 300,000 hours of time** annually because of the trickle down effect. 1 weekly meeting took up 7,000 hours (headcount x hours x weeks). However, that forced 11 unit meetings (20,000 hours), forced 21 team meetings (63,000 hours) and forced 130 preparatory meetings (210,000 hours) in a chain reaction.
+
 Those at the top of the organization see their roles as 'agents of change' and they launch initiatives in their areas to 'make the business better' but of course this is the primary source of the DDoS attacks. These programs generate hundreds (thousands?) of hours of meetings each across the organization.
 
 Ironically, launching too many 'make the business better' programs at once inevitably makes it worse. It requires more layers of middle management to absorb the DDoS attack on its employees that ensues. Or they simply get overwhelmed, and the underlying services suffer resource depletion and ultimately stop responding.
 
-This is the paradox of change, too little and you fall behind, too much and you overwhelm your capacity and slow everything down. The truly enlightened organizations lead change from the top in a limited fashion because they have the right metrics and incentives that drive consistent **change, innovation and excellence inside the business areas themselves.** No meetings necessary.
+This is the paradox of change, too little and you fall behind, too much and you overwhelm your capacity and slow everything down. The truly enlightened organizations have the right metrics and incentives that drive consistent **change, innovation and excellence inside the business areas themselves.** No meetings necessary.
 
-ps - If you think this looks sensationalized, or you think there is no person or department that everyone wants to meet with with sadly you are wrong. I have led technology teams for 30 years. Everyone wants to meet with technology - all the time. Risk, compliance, legal, audit, finance, every committee, every operations area, every distribution area, countless vendors, countless consultants, etc. It's worse than I show above, and worse than you imagine.
+> Meetings should be like salt - a spice sprinkled carefully to enhance a dish, not poured recklessly over every forkful. Too much salt destroys a dish. Too many meetings destroy morale and motivation.
+>
+> <cite>&mdash; Jason Fried</cite>
+
+_If you think this looks sensationalized, or you think there is no person or department that everyone wants to meet with with sadly you are wrong. Everyone wants to meet with technology - all the time. Risk, compliance, legal, audit, finance, every committee, every operations area, every distribution area, countless vendors, countless consultants, etc. It's actually worse than I show above, and worse than you imagine._
+
+#### References
+
+- [This Weekly Meeting Took Up 300,000 Hours a Year](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year)
