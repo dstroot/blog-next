@@ -1,19 +1,22 @@
 ---
-title: Human Denial of Service Attacks
-excerpt:
-  Can companies create human "denial of service" attacks against their own employees?
-  They can and they do - all in the name of collaboration and 'making the business better'. If you work
-  in a large organization you will recognize the pattern. Here's how it works...
-coverImage: /assets/blog/img/ddos-attack.jpg
-date: '2021-10-08'
+title: Make Meetings Disappear
+excerpt: 'Bloomberg installed a framed New Yorker cartoon in every conference room in its New York headquarters that reads: “I know we didn’t accomplish anything, but that’s what meetings are for.” What other ways can we make meetings disappear?'
+coverImage: /assets/blog/img/new_yorker_meetings.png
+date: '2021-10-11'
 published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/ddos-attack.jpg
+  url: /assets/blog/img/new_yorker_meetings.png
 seoURL: https://danstroot.com/2021/07/11/github-copilot/
 ---
+
+Bloomberg installed a framed New Yorker cartoon in every conference room in its New York headquarters that reads: “I know we didn’t accomplish anything, but that’s what meetings are for.”
+
+The cartoon, created by Kaamran Hafeez, depicts a typical scene from corporate America.
+
+An insider surmised that Bloomberg — the man — had the cartoons placed in the conference rooms in order to “subtly discourage pointless meetings.” Another source noted that there seems to be an endless drag of meetings, making it impossible to book a conference room in the building, which is headquartered on 60th Street and Lexington Avenue.
 
 > Meetings should be like salt - a spice sprinkled carefully to enhance a dish, not poured recklessly over every forkful. Too much salt destroys a dish. Too many meetings destroy morale and motivation.
 >
@@ -33,3 +36,4 @@ Ideally, organizations would have very few meetings because people would know th
 
 - [This Weekly Meeting Took Up 300,000 Hours a Year](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year)
 - [How to Avoid Collaboration Fatigue](https://hbr.org/2014/07/how-to-avoid-collaboration-fatigue)
+- [Bloomberg Showcases New Yorker Cartoon to Discourage Pointless Meetings](https://wwd.com/business-news/media/bloomberg-new-yorker-cartoon-kaamran-hafeez-conference-rooms-10270074-10270074/)

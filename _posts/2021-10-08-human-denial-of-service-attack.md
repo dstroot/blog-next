@@ -20,14 +20,14 @@ Suppose you have a service that responds to requests. A "denial of service" (DoS
 It's a very simple attack that relies on the attacker's ability to "out scale" the service, causing resource depletion and ultimately failure of the service. We can depict it like this:
 
 ```shell
-Attacker -(requests)-> Service
+Attacker -("requests")-> Service
 ```
 
 A "distributed" denial of service (DDoS) attack is the same thing, using multiple attackers to amplify the request flood. The more "distributed" the attack is (i.e. the more attackers) the more likely it is to succeed, and the harder it is to find and take down all the attackers.
 
 ```shell
 Attacker ---\
-Attacker ---|-(requests)-> Service
+Attacker ---|-("requests")-> Service
 Attacker ---/
 ```
 
@@ -35,7 +35,7 @@ If you can't fend off the attackers, you need "buffers" and/or "rate limiters" t
 
 ```shell
 Attacker ---\
-Attacker ---|-(requests)->[rate limiter]-[buffer]->Service
+Attacker ---|-("requests")->[rate limiter]-[buffer]->Service
 Attacker ---/
 ```
 
@@ -85,17 +85,17 @@ It gets worse:
                           +-----------------+   +-----------------+
 ```
 
-We can't have the people who actually "do the work" attend hundreds of hours of meetings per week. We need a spokesperson, or a leader, who will attend on their behalf, and who will respond appropriately for them, and who will let them know if anything important was discussed. This is exactly what happens - and why companies create hierarchy.
+We can't have the people who actually "do the work" attend dozens or hundreds of hours of meetings per week. We need a spokesperson, or a leader, who will attend on their behalf, and who will respond appropriately for them, and who will let them know if anything important was discussed. This is exactly what happens - and why companies create hierarchy.
 
 The worse the DDoS attack the deeper the hierarchy must be. The hierarchy is the "buffer" or "rate limiter" of the system.
 
 In the middle of the hierarchy stack are the "professional meeting attenders". The middle managers who everyone wonders "what is their job?" and "why don't they accomplish anything?". Their job is simply to absorb the DDoS attacks so the people below them can work normally and respond to service requests.
 
-The [Harvard Business Review](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year) discovered that at one company a **weekly executive meeting was consuming 300,000 hours of time** annually because of the trickle down effect. 1 weekly meeting took up 7,000 hours (headcount x hours x weeks). However, that forced 11 unit meetings (20,000 hours), forced 21 team meetings (63,000 hours) and forced 130 preparatory meetings (210,000 hours) in a chain reaction. Here's the kicker: **that total doesn't even include the preparation time for the meetings!**
-
 Those at the top of the organization see their roles as 'agents of change' and they launch initiatives in their areas to 'make the business better' but of course this is the primary source of the DDoS attacks. These programs generate hundreds (thousands?) of hours of meetings each across the organization.
 
-Ironically, launching too many 'make the business better' programs at once inevitably makes it worse. It requires more layers of middle management to absorb the DDoS attack on its employees that ensues. Or they simply get overwhelmed, and the underlying services suffer resource depletion and ultimately stop responding.
+For example, the [Harvard Business Review](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year) discovered that at one company a **weekly executive meeting was consuming 300,000 hours of time** annually. 1 weekly meeting took up 7,000 hours (headcount x hours x weeks). However, that forced 11 unit meetings (20,000 hours), forced 21 team meetings (63,000 hours) and forced 130 preparatory meetings (210,000 hours) in a chain reaction. Here's the kicker: **that total doesn't even include the preparation time for the meetings!**
+
+Launching too many 'make the business better' programs at once inevitably makes it worse. It requires more layers of middle management to absorb the DDoS attack on its employees that ensues. Or they simply get overwhelmed, and the underlying services suffer resource depletion and ultimately stop responding.
 
 This is the paradox of change, too little and you fall behind, too much and you overwhelm your capacity and slow everything down. The truly enlightened organizations have the right metrics and incentives that drive consistent **change, innovation and excellence inside the business areas themselves.** No meetings necessary.
 
