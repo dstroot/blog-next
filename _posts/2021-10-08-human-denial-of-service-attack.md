@@ -91,7 +91,7 @@ The worse the DDoS attack the deeper the hierarchy must be. The hierarchy is the
 
 In the middle of the hierarchy stack are the "professional meeting attenders". The middle managers who everyone wonders "what is their job?" and "why don't they accomplish anything?". Their job is simply to absorb the DDoS attacks so the people below them can work normally and respond to service requests.
 
-The [Harvard Business Review](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year) discovered that a **weekly executive meeting was consuming 300,000 hours of time** annually because of the trickle down effect. 1 weekly meeting took up 7,000 hours (headcount x hours x weeks). However, that forced 11 unit meetings (20,000 hours), forced 21 team meetings (63,000 hours) and forced 130 preparatory meetings (210,000 hours) in a chain reaction.
+The [Harvard Business Review](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year) discovered that at one company a **weekly executive meeting was consuming 300,000 hours of time** annually because of the trickle down effect. 1 weekly meeting took up 7,000 hours (headcount x hours x weeks). However, that forced 11 unit meetings (20,000 hours), forced 21 team meetings (63,000 hours) and forced 130 preparatory meetings (210,000 hours) in a chain reaction. Here's the kicker: **that total doesn't even include the preparation time for the meetings!**
 
 Those at the top of the organization see their roles as 'agents of change' and they launch initiatives in their areas to 'make the business better' but of course this is the primary source of the DDoS attacks. These programs generate hundreds (thousands?) of hours of meetings each across the organization.
 
