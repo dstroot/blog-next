@@ -14,7 +14,7 @@ seoURL: https://danstroot.com/2021/07/11/github-copilot/
 
 Bloomberg - the company - installed a framed New Yorker cartoon in every conference room in its New York headquarters that reads: “I know we didn’t accomplish anything, but that’s what meetings are for.”
 
-Bloomberg employees said there seems to be an endless drag of meetings, making it impossible to book a conference room in the building. Some concluded that Bloomberg — the man — had the cartoons placed in the conference rooms to “discourage pointless meetings.”
+Bloomberg employees said there is an endless drag of meetings, making it impossible to book a conference room in the building. Some concluded that Bloomberg — the man — had the cartoons placed in the conference rooms to “discourage pointless meetings.”
 
 ### Agreeing with Mr. Bloomberg
 
@@ -32,14 +32,116 @@ Bloomberg employees said there seems to be an endless drag of meetings, making i
 
 - **Meetings are band-aids**. Too often, meetings are the only way things get done within a company. Without meetings, people don’t know what to do, how to do it, and are afraid to take action. It creates limited forward progress, and yet, they are needed because some progress is better than none. It is often a manual solution to a systemic problem. It does not solve the root cause of the problem.
 
+- **Right intentions, wrong format**. A lot of the time, meeting-heavy work culture comes from good intentions. In the spirit of transparency and inclusion, teammates add meetings to the calendar to bring folks along and ensure everyone has context. Inclusion and transparency are foundational to great teamwork, but back-to-back meetings isn’t the only way to get there.
+
 - **Meetings reduce leverage**. People get stacked on top of each other, observing, commenting, and group-thinking answers. Have you been in meetings where there is a VP, Director, Manager, and Analyst from the same department. Hmm, not efficient.
 
 - **Meetings are inevitable**. I am not so Pollyanna that I believe meetings can be abolished. In fact, it is how most organizations function. They use meetings to push things along, generate momentum, and gain consensus.
 
 Ideally, organizations would have few meetings because people would know the organization / department / personal mission, collaborate daily, know where to find information and resources, innovate, make mistakes, and organically course-correct within a culture of trust and growth. Sadly, that is rare.
 
+### How to Stop Having "Too Many Meetings" by Building an Asynchronous Culture
+
+Rely less on meetings and more on data.
+
+Data is unbiased, accurate, and insightful in a way that humans can’t be (especially after the fifth meeting of the day). It can help managers better understand how teams are working, how projects are progressing, and even how employees are feeling—boosting overall trust and work quality. Data can be the deciding factor in finally getting rid of useless meetings.
+
+Meetings aren’t always an accurate or even truthful reflection of the work that’s being done. Employees can only provide a subjective measurement of their progress—and they typically under- or overestimate their performance. We’re only human. Different personality types can also send misleading messages: Someone who appears unengaged or uninterested may actually be one of your most productive employees.
+
+Then there’s the risk of meetings being merely transactional, where team members autopilot their updates (and repeat the work that’s already being done by project management tools), or simply tell managers what they want to hear.
+
+Data gives a more in-depth look at employees’ productivity, objectively telling you most of what you need to know about their progress, quality, and output.
+
+Analytics platforms such as [ActivTrak](https://www.activtrak.com/), [Timely](https://memory.ai/timely), and [ZeroedIn](https://www.zeroedin.com/) integrate with a wide range of teams’ project management tools, codebase, and more to document employee performance in real time, and to automate reporting rather than relying on information shared in meetings. Managers can turn to data around priority metrics (e.g., the number of completed tickets or projects finished within budget) to review team or individual productivity without interrupting employees’ workflow.
+
+Building trust with coworkers
+
+People want to feel that they have autonomy on the job, and excessive check-ins may give them the impression they’re under surveillance. But teams that are given more freedom will in turn be less dependent on their leadership, giving them space to develop their own creativity, resilience, and problem-solving skills.
+
+The point here is that managers need to take a leap of faith. Ask yourself honestly: Where could you be less hands-on when it comes to deliverables? If you’re struggling to give certain employees more independence, why is that? It might be a red flag that something is wrong in your relationship with your staff, or that their work isn’t up to scratch.
+
+Rather than fall back on meetings, see if this is actually a chance to give your employees more educational opportunities. Using performance data, you can easily identify who needs assistance in what areas and offer them corresponding training materials. With such data, employees don’t have to feel shy about asking for extra support, and managers can foster a closer informal relationship with the team.
+
+### Async
+
+Async communication happens in writing, instead of in-person. It’s a great way to keep teams in sync without having to meet in-person or over video. It also has the added benefit of improving access to information and creating a written record of all your team’s progress and accomplishments.
+
+Async communication works really well for meetings like standups and status updates. But it can also be used to replace or shorten many other meetings on your team’s calendars too.
+
+- **Status updates**: Rather than holding a daily or weekly round-robin, teams use async written updates (like check-ins) to share progress on in-flight work and flag blockers. This eliminates a meeting that can sometimes feel repetitive and helps folks more easily surface context about the work that they wouldn’t have had time for in a 30-second update.
+- **Standups**: For async standups, teams use daily written updates to share what they’re working on, what they’ve accomplished, and how they’re doing. Not only does this cut down on the number of hours spent in meetings each week, but it also gives folks a line of sight into how everyone’s doing so they can collaborate and support each other.
+- **Team meeting**: Adding an async pre-read component can help folks align before the team meeting and come prepared. This ensures a more productive discussion and can often help cut down the meeting’s length.
+- **Brainstorms and retros**: Try having folks do an async pre-read beforehand and prepare a few ideas too. When people come prepared with context and ideas, it’s easier to get creative more quickly and means the session can be shorter. (Bonus: This approach is more inclusive of different personalities and work styles too.)
+- **1:1s**: Instead of meetings centered around status updates, consider using async check-ins or even email to share updates. Then you can use your meeting time to chat about personal development or how you’re feeling.
+
+### Async “meeting” templates
+
+Use these templates to shift your current meetings to an asynchronous format or prepare beforehand with a pre-read or meeting prep to save time and align.
+
+Asynchronous daily standup template
+Goal: A quick daily pulse check.
+
+- Plan: What are you working on today? Share your top 1-3 priorities.
+- Progress: How have you moved work forward since we last checked in?
+- Blocked: What are you blocked on?
+- Mood: How are you feeling today?
+
+Asynchronous status update template
+Goal: Sync up on a certain project or initiative.
+
+- Status check: What’s the status of this project? How have you moved it forward since your last check-in?
+- Blocked: Is there anything you’re blocked on?
+- FYI: Is there anything the team needs to be aware of?
+
+Team meeting pre-read template
+Goal: Align beforehand to fuel a shorter, more engaging discussion in person.
+
+- Weekly focus: What’s your primary focus this week?
+- FYI: Is there anything the team needs to be aware of?
+- Team-building: Rotate in a different team-building question each week to get to know each other and spark discussion.
+- Celebrate: What’s something or someone to celebrate this week?
+
+Retro prep template
+Goal: Prep ideas before you meet for a shorter, more productive retro.
+
+- Working: What went well during this sprint or project?
+- Work on: What could have gone better?
+- Learning: What’s your biggest takeaway from this cycle?
+- Gratitude: Say thanks to someone who helped you out or went above and beyond.
+
+1:1 prep template
+Goal: Make 1:1 facetime more about personal growth and development.
+
+- Mood: How are you doing this week?
+- Accomplishment: What are you most proud of this week?
+- Learning: What did you learn this week?
+- Blocked: Is there anything you’re blocked on?
+
+As physicist Albert-László Barabási once wrote, “Time is our most valuable non-renewable resource, and if we want to treat it with respect, we need to set priorities.”
+
+Time is the most valuable asset you have. It’s a non-renewable resource you can never replenish. You can always make more money, but you can never make more time, and time can only be spent once. What money buys is time. Time is what’s really valuable.
+
+> "My favorite things in life don’t cost any money. It’s really clear that the most precious resource we all have is time."
+>
+> <cite>&mdash; Steve Jobs</cite>
+
+> "Time is the coin of your life. It is the only coin you have, and only you can determine how it will be spent. Be careful lest you let other people spend it for you."
+>
+> <cite>&mdash; Carl Sandburg</cite>
+
+> "Time is the most valuable thing a man can spend."
+>
+> <cite>&mdash; Theophrastus</cite>
+
 #### References
 
 - [This Weekly Meeting Took Up 300,000 Hours a Year](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year)
 - [How to Avoid Collaboration Fatigue](https://hbr.org/2014/07/how-to-avoid-collaboration-fatigue)
 - [Bloomberg Showcases New Yorker Cartoon to Discourage Pointless Meetings](https://wwd.com/business-news/media/bloomberg-new-yorker-cartoon-kaamran-hafeez-conference-rooms-10270074-10270074/)
+- [How to Stop Having "Too Many Meetings" by Building an Asynchronous Culture](https://www.yac.com/blog/too-many-meetings)
+- [Estimate the Cost of a Meeting with This Calculator](https://hbr.org/2016/01/estimate-the-cost-of-a-meeting-with-this-calculator)
+- [Too many meetings? Here’s how to fix that.](https://www.range.co/blog/how-to-fix-too-many-meetings)
+- [Stop the Meeting Madness](https://hbr.org/2017/07/stop-the-meeting-madness)
+- [How to Avoid Collaboration Fatigue](https://hbr.org/2014/07/how-to-avoid-collaboration-fatigue)
+- [To beat Zoom fatigue, your workplace needs fewer meetings and more data](https://fortune.com/2021/02/08/zoom-fatigue-fewer-meetings-data-analytics-leadership-advice/)
+- [Your scarcest resource](https://hbr.org/2014/05/your-scarcest-resource)
