@@ -12,67 +12,69 @@ ogImage:
 seoURL: https://danstroot.com/2021/07/11/github-copilot/
 ---
 
-Bloomberg - the company - installed a framed New Yorker cartoon in every conference room in its New York headquarters that reads: “I know we didn’t accomplish anything, but that’s what meetings are for.”
+Bloomberg - the company - [installed a framed New Yorker cartoon](https://wwd.com/business-news/media/bloomberg-new-yorker-cartoon-kaamran-hafeez-conference-rooms-10270074-10270074/) in every conference room in its New York headquarters that reads: “I know we didn’t accomplish anything, but that’s what meetings are for.”
 
-Bloomberg employees said there is an endless drag of meetings, making it impossible to book a conference room in the building. Some concluded that Bloomberg — the man — had the cartoons placed in the conference rooms to “discourage pointless meetings.”
+Bloomberg employees noted there is an endless drag of meetings, making it impossible to book a conference room in the building. Some concluded that Bloomberg — the man — had the cartoons placed in the conference rooms to “discourage pointless meetings.”
 
-### Agreeing with Mr. Bloomberg
+### Should we Discourage Meetings?
 
-- **Meetings are often a waste of time**. There are often TOO many people invited, for TOO long of a time, covering TOO little content, with TOO little accountability. If I spend $60 taking one of our employees for lunch, in order to be reimberused I have to upload the receipt, explain where and when when the lunch occurred, the purpose, and the number of people in attendance and then my supervisor has to approve it. For $60 dollars! If I call an hour meeting with 12 people, and to make the math easy let's say their time is worth $100 per hour, I have just "spent" $1,200 dollars with zero accountability.
+- **Meetings are often a waste of time**. There are often TOO many people invited, for TOO long of a time, covering TOO little content, with TOO little accountability. If I spend $60 taking one of our employees for lunch, to be reimbursed I have to upload the receipt, explain where and when the lunch occurred, the purpose, the number of people in attendance, and then my supervisor has to approve it. For $60 dollars! If I call an hour meeting with 12 people, and to make the math easy let's say their time is worth $100 per hour, I have just "spent" $1,200 dollars with zero accountability.
 
-- **Meetings are often disrespectful**. Have you ever attended a meeting where the presenter is “holding court”, essentially walking through their agenda, and holding the audience hostage. Bad form, and disrespectful. You should have to have to earn the right to call a meeting. If you want to get input on an idea, project, proposal, or initiative then do the research, put together a persuasive view, walk the halls and talk to the right people, send out an email to get feedback, get buy-in, and start doing the work. Once it has momentum, get the right funding and resources in place and THEN call the kick-off meeting.
+- **Meetings are often disrespectful**. Have you ever attended a meeting where the presenter is “holding court”, walking through their agenda, and holding the audience hostage? Bad form, and disrespectful. You should have to have to earn the right to call a meeting. If you want to get input on an idea, project, proposal, or initiative then do the research, put together a persuasive view, walk the halls and talk to the right people, send out an email to get feedback, get buy-in, and start doing the work. Once it has momentum, get the right funding and resources in place, and THEN call the kick-off meeting.
 
-- **Meetings are often poorly run**. Some people are better than others, but some meetings have no agenda, no facilitation, no clear purpose, or meeting minutes. That is unacceptable. Time = money; it's money the company will never get back. Plus, as the saying goes: “That is an hour of my life that I will never get back.”
+- **Meetings are often poorly run**. Some people are better than others, but some meetings have no agenda, no facilitation, no clear purpose, or meeting minutes. That is unacceptable. Time = money. Plus, as the saying goes: “That is an hour of my life that I will never get back.”
 
-> "Between depriving a man of one hour from his life and depriving him of his life there exists only a difference of degree. You have done violence to him, consumed his energy."
->
-> <cite>&mdash; Frank Herbert, Dune Messiah</cite>
+  > "Between depriving a man of one hour from his life and depriving him of his life there exists only a difference of degree."
+  >
+  > <cite>&mdash; Frank Herbert, Dune Messiah</cite>
 
-- **Meetings are indiscriminate**. We all get invited to meetings once in a while when we wonder “why was I invited?” Some companies are hierarchical - they have to invite "all the bosses" to get something done. If you don't have a speaking or deciding role, you don’t need to be there. You can get the meeting minutes. Whenever I decide to NOT accept a meeting invite, and discover that the meeting was unproductive, I consider it a huge win. You **must make this OK** in your culture or people will be too polite to decline meetings.
+- **Meetings are indiscriminate**. We all get invited to meetings occassionally where we wonder “why was I invited?” Some companies are hierarchical - they must invite "all the bosses" to get something done. If you don't have a speaking or deciding role, you don’t need to be there. You can get the meeting minutes. Whenever I can NOT accept a meeting invite, I consider it a huge win. You **must make this OK** in your culture or people will be too polite to decline meetings.
 
-- **Meetings are band-aids**. Too often, meetings are the only way things get done within a company. Without meetings, people don’t know what to do, how to do it, and are afraid to take action. It creates limited forward progress, and yet, they are needed because some progress is better than none. It is often a manual solution to a systemic problem. It does not solve the root cause of the problem.
+- **Meetings are band-aids**. Too often, meetings are the only way things get done within a company. Without meetings, people don’t know what to do, how to do it, and are afraid to act. It creates limited forward progress, and yet, they are needed because some progress is better than none. In fact, it is how most organizations function. They use meetings to push things along, generate momentum, and gain consensus. It is often a manual solution to a systemic problem. It does not solve the root cause of the problem. Ideally, organizations would have few meetings because people would know the organization / department mission, collaborate asynchronously, know where to find information and resources, innovate, make mistakes, and organically course-correct within a culture of trust and growth. Sadly, that is rare.
 
 - **Right intentions, wrong format**. A lot of the time, meeting-heavy work culture comes from good intentions. In the spirit of transparency and inclusion, teammates add meetings to the calendar to bring folks along and ensure everyone has context. Inclusion and transparency are foundational to great teamwork, but back-to-back meetings isn’t the only way to get there.
 
-- **Meetings reduce leverage**. People get stacked on top of each other, observing, commenting, and group-thinking answers. Have you been in meetings where there is a VP, Director, Manager, and Analyst from the same department. Hmm, not efficient.
+- **Meetings reduce leverage**. People get stacked on top of each other, observing, commenting, and group-thinking answers. Have you been in meetings where there is a VP, Director, Manager, and Analyst from the same department? Not efficient.
 
-- **Meetings are inevitable**. I am not so Pollyanna that I believe meetings can be abolished. In fact, it is how most organizations function. They use meetings to push things along, generate momentum, and gain consensus.
+### How to Stop "Too Many Meetings" (by Building an Asynchronous Culture)
 
-Ideally, organizations would have few meetings because people would know the organization / department / personal mission, collaborate daily, know where to find information and resources, innovate, make mistakes, and organically course-correct within a culture of trust and growth. Sadly, that is rare.
+1. Rely less on meetings and more on data.
 
-### How to Stop Having "Too Many Meetings" by Building an Asynchronous Culture
+   Data is unbiased, accurate, and insightful in a way that humans can’t be (especially after the fifth meeting of the day). It can help managers better understand how teams are working, how projects are progressing, and even how employees are feeling—boosting overall trust and work quality. Data can be the deciding factor in finally getting rid of useless meetings.
 
-Rely less on meetings and more on data.
+   Meetings aren’t always an accurate or even truthful reflection of the work that’s being done. Employees can only provide a subjective measurement of their progress—and they typically under- or overestimate their performance. We’re only human. Different personality types can also send misleading messages: Someone who appears unengaged or uninterested may actually be one of your most productive employees.
 
-Data is unbiased, accurate, and insightful in a way that humans can’t be (especially after the fifth meeting of the day). It can help managers better understand how teams are working, how projects are progressing, and even how employees are feeling—boosting overall trust and work quality. Data can be the deciding factor in finally getting rid of useless meetings.
+   Then there’s the risk of meetings being merely transactional, where team members autopilot their updates (and repeat the work that’s already being done by project management tools), or simply tell managers what they want to hear.
 
-Meetings aren’t always an accurate or even truthful reflection of the work that’s being done. Employees can only provide a subjective measurement of their progress—and they typically under- or overestimate their performance. We’re only human. Different personality types can also send misleading messages: Someone who appears unengaged or uninterested may actually be one of your most productive employees.
+   Data gives a more in-depth look at employees’ productivity, objectively telling you most of what you need to know about their progress, quality, and output.
 
-Then there’s the risk of meetings being merely transactional, where team members autopilot their updates (and repeat the work that’s already being done by project management tools), or simply tell managers what they want to hear.
+   Analytics platforms such as [ActivTrak](https://www.activtrak.com/), [Timely](https://memory.ai/timely), and [ZeroedIn](https://www.zeroedin.com/) integrate with a wide range of teams’ project management tools, codebase, and more to document employee performance in real time, and to automate reporting rather than relying on information shared in meetings. Managers can turn to data around priority metrics (e.g., the number of completed tickets or projects finished within budget) to review team or individual productivity without interrupting employees’ workflow.
 
-Data gives a more in-depth look at employees’ productivity, objectively telling you most of what you need to know about their progress, quality, and output.
+2. Rely less on meetings and more on trust
 
-Analytics platforms such as [ActivTrak](https://www.activtrak.com/), [Timely](https://memory.ai/timely), and [ZeroedIn](https://www.zeroedin.com/) integrate with a wide range of teams’ project management tools, codebase, and more to document employee performance in real time, and to automate reporting rather than relying on information shared in meetings. Managers can turn to data around priority metrics (e.g., the number of completed tickets or projects finished within budget) to review team or individual productivity without interrupting employees’ workflow.
+   People want to feel that they have autonomy on the job, and excessive check-ins may give them the impression they’re under surveillance. But teams that are given more freedom will in turn be less dependent on their leadership, giving them space to develop their own creativity, resilience, and problem-solving skills.
 
-Building trust with coworkers
+   The point here is that managers need to take a leap of faith. Ask yourself honestly: Where could you be less hands-on when it comes to deliverables? If you’re struggling to give certain employees more independence, why is that? It might be a red flag that something is wrong in your relationship with your staff, or that their work isn’t up to scratch.
 
-People want to feel that they have autonomy on the job, and excessive check-ins may give them the impression they’re under surveillance. But teams that are given more freedom will in turn be less dependent on their leadership, giving them space to develop their own creativity, resilience, and problem-solving skills.
+   Rather than fall back on meetings, see if this is actually a chance to give your employees more educational opportunities. Using performance data, you can easily identify who needs assistance in what areas and offer them corresponding training materials. With such data, employees don’t have to feel shy about asking for extra support, and managers can foster a closer informal relationship with the team.
 
-The point here is that managers need to take a leap of faith. Ask yourself honestly: Where could you be less hands-on when it comes to deliverables? If you’re struggling to give certain employees more independence, why is that? It might be a red flag that something is wrong in your relationship with your staff, or that their work isn’t up to scratch.
+3. Rely less on syncronous communications and more on asynchronous collaboration
 
-Rather than fall back on meetings, see if this is actually a chance to give your employees more educational opportunities. Using performance data, you can easily identify who needs assistance in what areas and offer them corresponding training materials. With such data, employees don’t have to feel shy about asking for extra support, and managers can foster a closer informal relationship with the team.
+   Async communication happens in writing, instead of in-person. It’s a great way to keep teams in sync without having to meet in-person or over video. It also has the added benefit of improving access to information and creating a written record of all your team’s progress and accomplishments.
 
-### Async
+   Async communication works really well for meetings like standups and status updates. But it can also be used to replace or shorten many other meetings on your team’s calendars too.
 
-Async communication happens in writing, instead of in-person. It’s a great way to keep teams in sync without having to meet in-person or over video. It also has the added benefit of improving access to information and creating a written record of all your team’s progress and accomplishments.
+   Examples:
 
-Async communication works really well for meetings like standups and status updates. But it can also be used to replace or shorten many other meetings on your team’s calendars too.
+   - **Status updates**: Rather than holding a daily or weekly round-robin, teams use async written updates (like check-ins) to share progress on in-flight work and flag blockers. This eliminates a meeting that can sometimes feel repetitive and helps folks more easily surface context about the work that they wouldn’t have had time for in a 30-second update.
 
-- **Status updates**: Rather than holding a daily or weekly round-robin, teams use async written updates (like check-ins) to share progress on in-flight work and flag blockers. This eliminates a meeting that can sometimes feel repetitive and helps folks more easily surface context about the work that they wouldn’t have had time for in a 30-second update.
-- **Standups**: For async standups, teams use daily written updates to share what they’re working on, what they’ve accomplished, and how they’re doing. Not only does this cut down on the number of hours spent in meetings each week, but it also gives folks a line of sight into how everyone’s doing so they can collaborate and support each other.
-- **Team meeting**: Adding an async pre-read component can help folks align before the team meeting and come prepared. This ensures a more productive discussion and can often help cut down the meeting’s length.
-- **Brainstorms and retros**: Try having folks do an async pre-read beforehand and prepare a few ideas too. When people come prepared with context and ideas, it’s easier to get creative more quickly and means the session can be shorter. (Bonus: This approach is more inclusive of different personalities and work styles too.)
-- **1:1s**: Instead of meetings centered around status updates, consider using async check-ins or even email to share updates. Then you can use your meeting time to chat about personal development or how you’re feeling.
+   - **Standups**: For async standups, teams use daily written updates to share what they’re working on, what they’ve accomplished, and how they’re doing. Not only does this cut down on the number of hours spent in meetings each week, but it also gives folks a line of sight into how everyone’s doing so they can collaborate and support each other.
+
+   - **Team meetings**: Adding an async pre-read component can help folks align before the team meeting and come prepared. This ensures a more productive discussion and can often help cut down the meeting’s length.
+
+   - **Brainstorms and retros**: Try having folks do an async pre-read beforehand and prepare a few ideas too. When people come prepared with context and ideas, it’s easier to get creative more quickly and means the session can be shorter. (Bonus: This approach is more inclusive of different personalities and work styles too.)
+
+   - **1:1s**: Instead of meetings centered around status updates, consider using async check-ins or even email to share updates. Then you can use your meeting time to chat about personal development or how you’re feeling.
 
 ### Async “meeting” templates
 
