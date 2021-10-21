@@ -1,7 +1,17 @@
 import Head from 'next/head';
 import { CMS_NAME, BASE_URL, HOME_OG_IMAGE_URL } from '../lib/constants';
 
-export const Meta = () => {
+export const Meta = (props) => {
+  const { children, ...customMeta } = props;
+
+  const meta = {
+    title: 'Dan Stroot · Blog',
+    description: 'Dan Stroot · The most popular blog in the world.',
+    image: HOME_OG_IMAGE_URL, // eg: https://learnnext-blog.vercel.app/img/banner-800x514.png
+    type: 'website',
+    ...customMeta,
+  };
+
   return (
     <Head>
       <link rel='manifest' href='site.webmanifest' />
@@ -50,13 +60,17 @@ export const Meta = () => {
 
       {/* Meta Tags */}
       <title>Dan Stroot · Blog</title>
+      <meta name='robots' content='follow, index' />
       <meta
         name='description'
         content='Dan Stroot · The most popular blog in the world.'
       />
       <meta name='author' content='Dan Stroot' />
 
-      {/* Open Graph Tags */}
+      {/* Open Graph Tags 
+      
+        In SEO, we're obsessed with fine-tuning our titles and meta descriptions to get the highest possible click-through rate
+      */}
       <meta property='og:image' content={HOME_OG_IMAGE_URL} key='image' />
       <meta property='og:title' content={`${CMS_NAME}`} key='title' />
       {/*
@@ -85,11 +99,36 @@ export const Meta = () => {
       */}
       <meta property='og:type' content='website' key='type' />
 
+      {/*
+        Twitter Tags
+
+        Twitter Cards are essentially tweets on steroids. In addition to your 140-character message, you can include images, videos, audio, and download links. This makes your tweet much more dynamic and highly clickable.
+
+        https://www.contentkingapp.com/academy/twitter-cards/
+
+        There are four Twitter Card types you can use:
+
+          Summary Card
+          Summary Card with Large Image
+          App Card
+          Player Card
+      */}
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:site' content='@danstroot' />
+      <meta name='twitter:title' content={`${CMS_NAME}`} />
+      <meta
+        name='twitter.description'
+        content='Dan Stroot · The most popular blog in the world.'
+      />
+      <meta name='twitter:image' content={HOME_OG_IMAGE_URL} />
+      <meta name='twitter:creator' content='@danstroot' />
+
       {/* 
       Global Site Tag (gtag.js) - Google Analytics 
       https://blog.jarrodwatts.com/track-user-behaviour-on-your-website-with-google-analytics-and-nextjs
       https://nextjs.org/docs/basic-features/script
       */}
+
       {/* <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
