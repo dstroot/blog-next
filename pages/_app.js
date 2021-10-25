@@ -6,13 +6,10 @@ import { Layout } from '../components/Layout';
 // https://jools.dev/nextjs-_appjs-example
 export default function MyApp({ Component, pageProps }) {
   return (
-    <>
-      {/* <DefaultSeo {...SEO} /> */}
-      <ThemeProvider attribute='class'>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
-    </>
+    <ThemeProvider attribute='class'>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
