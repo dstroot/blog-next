@@ -1,6 +1,12 @@
 module.exports = {
   poweredByHeader: false,
+  swcMinify: true,
+  experimental: {
+    concurrentFeatures: true,
+    serverComponents: true,
+  },
   images: {
+    formats: ['image/avif', 'image/webp'],
     // domains: ["assets.vercel.com"],
     // These widths are used when the next/image component uses layout="responsive"
     // or layout="fill" so that the correct image is served for the device visiting your website.
