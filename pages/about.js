@@ -9,7 +9,7 @@ import { CMS_NAME } from '../lib/constants';
 import maker from '../public/assets/blog/img/maker.jpg';
 import me from '../public/assets/blog/authors/dan.jpeg';
 
-export default function About() {
+export default function Index() {
   return (
     <>
       <Head>

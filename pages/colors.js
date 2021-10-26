@@ -39,7 +39,7 @@ const lightTextMuted = {
   color: '#86868b',
 };
 
-export default function About() {
+export default function Index() {
   return (
     <>
       <Head>

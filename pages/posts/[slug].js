@@ -10,11 +10,28 @@ import { PostHeader } from '../../components/PostHeader';
 import { getPostBySlug, getAllPosts } from '../../lib/api';
 import { PostTitle } from '../../components/PostTitle';
 import { CMS_NAME, BASE_URL, REPO } from '../../lib/constants';
+import { SEO } from '../../lib/seo';
 
-// TODO: more posts at bottom
-export default function Post({ post, morePosts, preview }) {
+// TODO: add section for "more posts" at bottom of page
+export default function Post({ post }) {
   const router = useRouter();
   const githubPath = REPO + '/blob/master/_posts/' + post.fileName;
+  const seo = {
+    common: {
+      title: `${CMS_NAME} · ${post.title}`,
+      url: `${BASE_URL}/posts/${post.slug}`,
+      description: post.excerpt,
+      image: `${BASE_URL}${post.coverImage}`,
+      publishedDate: post.date,
+      author: post.author.name,
+    },
+    openGraph: {
+      type: 'article',
+    },
+    twitter: {
+      handle: '@danstroot',
+    },
+  };
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -27,51 +44,7 @@ export default function Post({ post, morePosts, preview }) {
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
-          <Head>
-            <title>
-              {CMS_NAME} · {post.title}
-            </title>
-            {/*
-              https://ahrefs.com/blog/open-graph-meta-tags/ 
-
-            */}
-            <meta property='og:title' content={post.title} key='title' />
-            {/*
-              Add it to all “shareable” pages.
-              Focus on accuracy, value, and clickability.
-              Keep it short to prevent overflow. There’s no official guidance 
-              on this, but 40 characters for mobile and 60 for desktop is roughly the sweet spot.
-              Use the raw title. Don’t include branding (e.g., your site name). 
-            */}
-            <meta
-              property='og:description'
-              content={post.excerpt}
-              key='description'
-            />
-            {/*
-              Complement the title to make the snippet as appealing and click-worthy as possible.
-              Copy your meta description here if it makes sense. 
-              Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates.
-             */}
-            <meta
-              property='og:url'
-              content={`${BASE_URL}/posts/${post.slug}`}
-              key='url'
-            />
-            <meta
-              property='og:image'
-              content={`${BASE_URL}${post.coverImage}`}
-              key='image'
-            />
-            {/**
-             Use custom images for “shareable” pages (e.g., homepage, articles, etc.)
-             Use your logo or any other branded image for the rest of your pages.
-             Use images with a 1.91:1 ratio and minimum recommended dimensions of 
-             1200x630 for optimal clarity across all devices.
-             */}
-            <meta property='og:type' content='article' key='type' />
-          </Head>
-
+          <SEO {...seo} />
           <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
             <PostHeader
               title={post.title}
