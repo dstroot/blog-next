@@ -11,20 +11,14 @@ export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   const seo = {
-    common: {
-      title: CMS_NAME + ' · Blog',
-      url: BASE_URL,
-      description: 'Dan Stroot · The most obscure blog in the world.',
-      image: HOME_OG_IMAGE_URL,
-      publishedDate: '',
-      author: CMS_NAME,
-    },
-    openGraph: {
-      type: 'website',
-    },
-    twitter: {
-      handle: '@danstroot',
-    },
+    title: CMS_NAME + ' · Blog',
+    url: BASE_URL,
+    description: 'Dan Stroot · The most obscure blog in the world.',
+    image: HOME_OG_IMAGE_URL,
+    publishedDate: '',
+    author: CMS_NAME,
+    ogType: 'website',
+    twHandle: '@danstroot',
   };
 
   return (

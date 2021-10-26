@@ -17,20 +17,14 @@ export default function Post({ post }) {
   const router = useRouter();
   const githubPath = REPO + '/blob/master/_posts/' + post.fileName;
   const seo = {
-    common: {
-      title: `${CMS_NAME} · ${post.title}`,
-      url: `${BASE_URL}/posts/${post.slug}`,
-      description: post.excerpt,
-      image: `${BASE_URL}${post.coverImage}`,
-      publishedDate: post.date,
-      author: post.author.name,
-    },
-    openGraph: {
-      type: 'article',
-    },
-    twitter: {
-      handle: '@danstroot',
-    },
+    title: `${CMS_NAME} · ${post.title}`,
+    url: `${BASE_URL}/posts/${post.slug}`,
+    description: post.excerpt,
+    image: `${BASE_URL}${post.coverImage}`,
+    publishedDate: post.date,
+    author: post.author.name,
+    ogType: 'article',
+    twHandle: '@danstroot',
   };
 
   if (!router.isFallback && !post?.slug) {
