@@ -1,5 +1,5 @@
+import { useEffect } from 'react';
 import ErrorPage from 'next/error';
-import Head from 'next/head';
 import markdownToHtml from '../../lib/markdownToHtml';
 
 import { useRouter } from 'next/router';
@@ -26,6 +26,20 @@ export default function Post({ post }) {
     ogType: 'article',
     twHandle: '@danstroot',
   };
+
+  // register view for the blog after 5s
+  useEffect(() => {
+    setTimeout(() => {
+      fetch('/api/views', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ slug: post.slug }),
+      });
+    }, 5000);
+  }, [post.slug]);
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
