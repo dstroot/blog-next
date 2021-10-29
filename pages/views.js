@@ -1,26 +1,25 @@
 import useSWR, { SWRConfig } from 'swr';
-// import { BASE_URL } from '../lib/constants';
+import { BASE_URL } from '../lib/constants';
 
-const BASE_URL = 'http://localhost:3000';
+// const BASE_URL = 'http://localhost:3000';
 const slug = '2021-10-08-human-denial-of-service-attack';
 const path = `${BASE_URL}/api/views/${slug}`;
 
 export default function Page(props) {
-  return (
-    <SWRConfig value={props}>
-      <Views />
-    </SWRConfig>
-  );
+  return <p>hi</p>;
+  // <SWRConfig value={props}>
+  //   <Views />
+  // </SWRConfig>
 }
 
-export async function getStaticProps() {
-  const { viewCount } = await fetch(path).then((res) => res.json());
-  return {
-    props: {
-      data: viewCount,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const { viewCount } = await fetch(path).then((res) => res.json());
+//   return {
+//     props: {
+//       data: viewCount,
+//     },
+//   };
+// }
 
 function Views(props) {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
