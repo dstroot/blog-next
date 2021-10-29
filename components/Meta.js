@@ -6,7 +6,7 @@ export const Meta = () => {
       <meta name='robots' content='follow, index' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
 
-      <link rel='manifest' href='site.webmanifest' />
+      <link rel='manifest' href='/site.webmanifest' />
       <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
 
       {/* ICONS */}
