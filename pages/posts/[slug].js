@@ -27,17 +27,10 @@ export default function Post({ post }) {
     twHandle: '@danstroot',
   };
 
-  // register view for the blog after 5s
+  // register page view for the blog after 5s
   useEffect(() => {
     setTimeout(() => {
-      fetch('/api/views', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ slug: post.slug }),
-      });
+      fetch(`/api/views/${encodeURIComponent(post.slug)}`, { method: 'POST' });
     }, 5000);
   }, [post.slug]);
 
