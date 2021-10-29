@@ -1,4 +1,4 @@
-import { get, upd } from '../../lib/dynamodb';
+import { get, upd } from '../../../lib/dynamodb';
 
 export default async function handler(req, res) {
   let params = { TableName: process.env.TABLE_NAME };
