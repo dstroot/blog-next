@@ -2,7 +2,7 @@ import { get, upd } from '../../../lib/dynamodb';
 
 export default async function handler(req, res) {
   let params = { TableName: process.env.TABLE_NAME };
-  const { slug } = req.body;
+  const { slug } = req.query;
 
   if (!slug) {
     return res.status(400).json({
