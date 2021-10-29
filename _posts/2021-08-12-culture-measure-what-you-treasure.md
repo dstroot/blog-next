@@ -17,13 +17,13 @@ seoURL:
 
 How do you measure culture? How do you change culture? What do we even mean by the word "culture"?
 
-Many organizations attempt to measure culture using employee engagement surveys, unplanned turnover metrics, employee burnout measurement, and even Glassdoor comments. Do these actually measure your culture? No, they measure the **outcomes** of your culture. 
+Many organizations attempt to measure culture using employee engagement surveys, unplanned turnover metrics, employee burnout measurement, and even Glassdoor comments. Do these measure your culture? No, they measure the **outcomes** of your culture. 
 
-What if you aren't achieving the outcomes you desire? If you want to change or improve your culture you have to focus on the **ingredients** of a great culture, not the outcomes. The "inputs", or "drivers" of culture are those that will lead to the cultural outcome you desire. What do those ingredients look like?  
+What if you aren't achieving the outcomes you desire? If you want to change or improve your culture you must focus on the **ingredients** of a great culture, not the outcomes. The "inputs", or "drivers" of culture are those that will lead to the cultural outcome you desire. What do those ingredients look like?  
 
 ![Culture Diagram](/assets/blog/img/culture2.jpg)
 
-Side Note: One of the values in my family was following the rules. So we had a defined bedtime as children, and we were expected to adhere to it. In my view my family just "followed the rules". My friends interpreted that as my parents being strict. Interestingly, My friends had the exact same bedtime, but their parents just didn't enforce it. They had the same "rules" but a different cultural outcome. Another way to say this is one aspect of culture is not the slogan on the wall but rather how you allow people to behave. What you _actually_ allow vs. what you _say_ you allow. It's why metrics are important - you have to measure the ingredients, not just the outcomes. 
+Side Note: One of the values in my family was following the rules. We had a defined bedtime as children, and we were expected to adhere to it. In my view my family just "followed the rules". My friends interpreted that as my parents being strict. Interestingly, my friends had the exact same bedtime, but their parents just didn't enforce it. They had the same "rules" but a different cultural outcome. Another way to say this is one aspect of culture is not the slogan on the wall but rather how you allow people to behave. What you _actually_ allow vs. what you _say_ you allow. Its why metrics are important - you have to measure the ingredients, not just the outcomes. 
 
 ## Cultural Ingredients
 
@@ -44,8 +44,8 @@ Are our current channels of communication effective at helping everyone in the c
 
 Innovation is one of my favorite subjects. It is closely related to communication, because it comes down to whether employees:
 
-1. Are really clear about what the company is trying to accomplish - the priorities and goals.
-2. Have the ability to move ideas through the organization (and how much your company is open to new ideas).
+1. Are crystal clear about what the company is trying to accomplish - the priorities and goals.
+2. Can move ideas through the organization (and how much your company is open to new ideas).
 3. Feel like innovating is just "part of job", it is expected and encouraged.
 
 When measuring innovation, remember that it comes in many forms, such as resources, processes, behaviors and the product itself.
@@ -71,9 +71,9 @@ Agility can be enabled by:
 2. There can be no overlap between teams (which creates internal politics that will slow down agility).
 3. Autonomy is enabled by creating cross-functional teams with full end-to-end accountability for specific goals and/or products.
 4. Rapid decisions, short learning cycles in each team.
-5. Dynamic people, who have a shared passion for what they do. If someone on the team is not performing the team needs to ability to "vote them off the island". Put another way, if the team does not the ability to directly choose its members it must at least have the ability to chose who is _not_ on the team.
+5. Dynamic people, who have a shared passion for what they do. If someone on the team is not performing the team needs to ability to "vote them off the island". Put another way, if the team does not the ability to directly choose its members it must at least have the ability to choose who is _not_ on the team.
 
-> "Without purpose and autonomy you’re in a world where people come in to work, they do their little bit, and they go home. They aren't engaged because they are not sure where that fits into the big scheme of things, and they are focused internally, not on the customer. Teams need direct ownership and real-time accountability, plus absolute clarity about how thier mission fits into the company's mission. That’s where engagement comes from — employee engagement goes off the chart because people have richer jobs, they’ve got a broader perspective, and they’re focused on solving problems. They don’t feel like hamsters — they feel like they’re part of a squad that’s on a mission."
+> "Without purpose and autonomy, you’re in a world where people come in to work, they do their little bit, and they go home. They aren't engaged because they are not sure where that fits into the big scheme of things, and they are focused internally, not on the customer. Teams need direct ownership and real-time accountability, plus absolute clarity about how their mission fits into the company's mission. That’s where engagement comes from — employee engagement goes off the chart because people have richer jobs, they’ve got a broader perspective, and they’re focused on solving problems. They don’t feel like hamsters — they feel like they’re part of a squad that’s on a mission."
 
 Finally, studies show that it's truly a blessing to have long tenured, experienced employees. You just don't want to allow them to become stale and bored. They should have a new role/opportunity on a new team every 18-36 months to keep them engaged and fresh.
 
@@ -81,7 +81,7 @@ Finally, studies show that it's truly a blessing to have long tenured, experienc
 
 - Ask employees to rate agility, what is slowing them down?
 - Ask employees what is their team's "north star"?
-- Do they have the skills and reasources to achieve their mission?
+- Do they have the skills and resources to achieve their mission?
 - Do they feel they get to decide "how" they achieve their mission?
 - How do they handle teammates who are not engaged?
 - Number of projects deferred or canceled in favor of newer projects/priorities? If no programs/projects are ever deprioritized it's nearly impossible to be agile as we add new projects to respond to market conditions. Teams become overwhelmed and may burn out.
@@ -90,7 +90,7 @@ Finally, studies show that it's truly a blessing to have long tenured, experienc
 
 Wellness encompasses the mental and physical health of employees. Not only does wellness lead to happier and more productive employees but this metric also has an important ripple effect. According to [a study in Health Affairs](http://content.healthaffairs.org/content/29/2/304.full), medical costs and absentee costs fall about $3.27 and $2.73 respectively for every dollar spent on wellness programs.
 
-However, this metric is _not_ about reducing healthcare costs (athough it may be an outcome) - it is about making sure employees know the company cares about them and is helping them with their personal wellness journey. This journey can take many forms, both physical and spiritual. It also means the company accepts them for who they are, so it touches on diversity and inclusion for all employees.
+However, this metric is _not_ about reducing healthcare costs (although it may be an outcome) - it is about making sure employees know the company cares about them and is helping them with their personal wellness journey. This journey can take many forms, both physical and spiritual. It also means the company accepts them for who they are, so it touches on diversity and inclusion for all employees.
 
 Since we are social animals, wellness also stems from feeling connected - a sense of social connectedness to the organization.
 
@@ -106,7 +106,7 @@ Since we are social animals, wellness also stems from feeling connected - a sens
 
 You don’t need a trendy office to have an effective work environment. What is most important is that the workplace provides for comfortable, productive employees. For instance, small details, such as the temperature of the office, or ambient noise, could be resulting in big losses in productivity. Focus on employee comments related to the workplace, and you will find some of the easiest and fastest ways to improve the work environment.
 
-Some office environments are noisy, lack privacy, or are simply to stimulating for deep thought. Employees may "self select" by working away from the office when they "just need to get something done". Pay attention because that may indicate issues with the environment. Just like in a hotel, the "occupancy rate" is an important metric to watch as it can indicate how changes affect employees desire to be in the office.
+Some office environments are noisy, lack privacy, or are simply to stimulating for deep thought. Employees may "self-select" by working away from the office when they "just need to get something done". Pay attention because that may indicate issues with the environment. Just like in a hotel, the "occupancy rate" is an important metric to watch as it can indicate how changes affect employees desire to be in the office.
 
 **Possible metrics:**
 
@@ -126,9 +126,9 @@ Collaborative behaviors include:
 
 2. **Communicating** — leaders need to model open and effective communication, and appropriate delegation to foster collaboration within and across teams. Collaboration cannot thrive where people are simply told what to do.
 
-3. **Delegating** — Decisions are one area where collaboration can either help or detract from progress. Companies with highly collaborative cultures make slow decisons, and evidence suggests they are not better decisions. Even worse is when companies try to make decisions unanimous - employees who disagree feel stifled. An essential component of good collaboration is clarity about who is authorized to make decisions.
+3. **Delegating** — Decisions are one area where collaboration can either help or detract from progress. Companies with highly collaborative cultures make slow decisions, and evidence suggests they are not better decisions. Even worse is when companies try to make decisions unanimous - employees who disagree feel stifled. An essential component of good collaboration is clarity about who is authorized to make decisions.
 
-4. **Managing meetings** — Collaborate with the right people! Only invite those with the needed skills and knowledge to meetings and assign a stated purpose/goal to each meeting. Avoid "meeting tourists", and for those who desire to know what happened in the meeting update them asyncronously after.
+4. **Managing meetings** — Collaborate with the right people! Only invite those with the needed skills and knowledge to meetings and assign a stated purpose/goal to each meeting. Avoid "meeting tourists", and for those who desire to know what happened in the meeting update them asynchronously after.
 
 **Possible metrics:**
 
@@ -151,7 +151,7 @@ According to a study in Harvard Business Review, [middle managers are the most d
 - Ask employees!
 - Think positive - are we encouraging success or correcting mistakes? Encouraging success makes people feel valued.
 - Are we celebrating success? Are we recognizing and rewarding employees? (How's our DVIP pool?)
-- Are we celebratiing milestones in years of employment? Do we value tenure? Do we celebrate careers? Careers are different than job titles. Valuing employees in the workplace means also valuing all the experience, insight, and advice they’ve gained that helps them be their best in their current role and helps your team. Celebrate the years of service they give to you, and the years of experience they’ve gained throughout their career.
+- Are we celebrating milestones in years of employment? Do we value tenure? Do we celebrate careers? Careers are different than job titles. Valuing employees in the workplace means also valuing all the experience, insight, and advice they’ve gained that helps them be their best in their current role and helps your team. Celebrate the years of service they give to you, and the years of experience they’ve gained throughout their career.
 - Do we have solid training and skills development opportunities?
 
 ### 8. Responsibility
@@ -163,13 +163,13 @@ Good people thrive under clear responsibility and accountability. They seek it o
 **Possible metrics:**
 
 - Define Accountable Behavior.
-- Create SMART Goals And Measure Results.
+- Create SMART Goals and Measure Results.
 - Do employees have clear performance metrics?
-- Are employee reviews and checkins conducted in a timely manner?
+- Are employee reviews and check-ins conducted in a timely manner?
 
 ### 9. Mission and Value Alignment
 
-The first step is having a mission statement and company values. Vision and mission statements must be real and relevant, not an insipid product of forced strategic planning theater. If they aren't "real" they won't unite and inspire employees, and could imbue more cynicism into the workforce.
+The first step is having a mission statement and company values. Vision and mission statements must be real and relevant, not an insipid product of forced strategic planning theater. If they aren't "real" they won't unite and inspire employees and could imbue more cynicism into the workforce.
 
 Ironically, the main reason that companies will refuse to measure their vision or mission is the claim that they are deliberately broad for aspirational purposes and deliberately vague so everyone can find their own meaning in them. Being broad and vague means they cannot/will not drive employee energy and focus.
 
@@ -191,15 +191,15 @@ This makes how you should act clear and unambiguous.
 
 **Possible metrics:**
 
-- Do employees know the Mission, Vision and Values of the company?  Does it actually inspire them?
+- Do employees know the Mission, Vision and Values of the company?  Does it inspire them?
 - Do employees understand how their role is aligned to the company's mission?
 - Do employees like the mission and values of the company? Does it align with their personal values?
-- Does it provide enough clarity to drive daily decisons and priorities within the organization?
+- Does it provide enough clarity to drive daily decisions and priorities within the organization?
 - Is it measurable? A company can't claim that it is excelling if it doesn't have an objective measure of how well it’s fulfilling its mission and employees won't care.
 
 ## Culture Outcomes
 
-If you get the ingredients right you should achieve the culture you desire. The results should be visible in the "outcome" metrics we are familiar with:
+If you get the ingredients right, you should achieve the culture you desire. The results should be visible in the "outcome" metrics we are familiar with:
 
 ### Employee Engagement
 
