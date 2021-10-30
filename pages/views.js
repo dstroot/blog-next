@@ -1,8 +1,10 @@
 import useSWR, { SWRConfig } from 'swr';
 import { BASE_URL } from '../lib/constants';
 
+const URL =
+  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : BASE_URL;
 const slug = '2021-10-08-human-denial-of-service-attack';
-const path = `${BASE_URL}/api/views/${slug}`;
+const path = `${URL}/api/views/${slug}`;
 
 export default function Page(props) {
   return (
@@ -13,18 +15,20 @@ export default function Page(props) {
 }
 
 export async function getStaticProps() {
-  const { viewCount } = await fetch(path).then((res) => res.json());
+  const views = await fetch(path).then((res) => res.json());
   return {
     props: {
-      data: viewCount,
+      fallback: {
+        [path]: views,
+      },
     },
   };
 }
 
-function Views(props) {
+function Views({ fallback }) {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data } = useSWR(path, fetcher, {
-    fallbackData: props,
+    fallbackData: fallback,
     refreshInterval: 30000,
   });
 
