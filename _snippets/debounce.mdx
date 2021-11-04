@@ -1,0 +1,150 @@
+---
+title: "Debounce"
+publishedAt: "2021-10-23"
+summary: "Debouncing is a strategy that lets us improve performance by waiting until a certain amount of time has passed before triggering an event."
+tags:
+  - Javascript
+  - React Hook
+  - React Component
+  - CSS
+  - HTML
+---
+
+<CodeBlock>
+
+```JavaScript:debounce.js
+const debounce = (callback, wait) => {
+    let timeoutId = null;
+
+    return (...args) => {
+        window.clearTimeout(timeoutId);
+
+        timeoutId = window.setTimeout(() => {
+            callback.apply(null, args);
+        }, wait);
+    };
+
+};
+```
+
+</CodeBlock>
+
+### Context
+
+There are many events in JS that trigger super quickly.
+When you scroll the page, or resize the window, or move your mouse, the browser captures dozens and dozens of events per second.
+
+In many cases, you don't need to capture every single intermediate step; you're only interested in capturing the end state (when the user finishes scrolling, or finishes resizing the window).
+Debouncing is a strategy that lets us improve performance by waiting until a certain amount of time has passed before triggering an event. When the user stops triggering the event, our code will run.
+
+In some cases, this isn't necessary. But, if any network requests are involved, or if the DOM changes (eg. re-rendering a component), this technique can drastically improve the smoothness of your application.
+
+#### Just use lodash?
+
+> For a long time, it was standard practice to include a utility library like Underscore or lodash. These libraries provide a bunch of handy general methods that fill in the gaps of the JavaScript standard library. They include a \_.debounce function, that works just like the one shared above.
+>
+> As JS has gotten better and better over the years, these tools have become somewhat redundant. Aside from debouncing and throttling, pretty much everything else I'd want to do is now possible with vanilla JS!
+>
+> Now, you can install lodash and only use the debounce utility, but it'll make your bundle a bit heavier; the debounce utility weights ~2kb, even though the method is only a couple lines, because there's a minimum amount of "utility glue" that ships with all lodash utilities.
+>
+> 2kb isn't going to break your budget, but there's another benefit: you're reducing your reliance on third-party code. This debounce function is yours. It lives in your codebase, not in some node_modules folder, and you can modify it as-needed. Feel a sense of ownership over it. You won't have to worry about whether lodash will continue to be maintained.
+
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+
+### Usage
+
+<CodeBlock>
+
+```JavaScript:debounceExample.js
+const handleMouseMove = debounce((ev) => {
+  // Do stuff with the event!
+}, 250);
+
+window.addEventListener('mousemove', handleMouseMove);
+```
+
+</CodeBlock>
+
+In this example, nothing will happen until the user starts moving the mouse, and then stops moving it for at least 250ms.
+
+Note that this example is focused on vanilla JS. If you're using React, you'll want to wrap your handler in useMemo, so that it doesn't get re-generated on every render. Here's an example that debounces the capturing of the mouse's X coordinate:
+
+<CodeBlock>
+
+```jsx:debounceExample.js
+function App() {
+    const [mouseX, setMouseX] = React.useState(null);
+
+    const handleMouseMove = React.useMemo(
+        debounce((ev) => {
+            setMouseX(ev.clientX);
+        }, 250),[]);
+
+    return (
+        <div onMouseMove={handleMouseMove}>
+            Mouse position: {mouseX}
+        </div>
+    );
+}
+```
+
+</CodeBlock>
+
+This function isn't super easy to digest, especially if you're not used to functional programming! It's 100% OK to use this function without understanding it, but if you're curious, let's pop the hood and see if we can sort it out.
+
+Here's the code again:
+
+<CodeBlock>
+
+```jsx:debounceExample.js
+const debounce = (callback, wait) => {
+    let timeoutId = null;
+
+    return (...args) => {
+        window.clearTimeout(timeoutId);
+
+        timeoutId = window.setTimeout(() => {
+            callback.apply(null, args);
+        }, wait);
+    };
+}
+```
+
+</CodeBlock>
+
+Our debounce function takes two arguments: a callback function and a duration in milliseconds.
+We want the debounce function to itself return a function. Functions returning functions always hurts my brain, but it helps when we think about the practical aspects of how it's used:
+
+<CodeBlock>
+
+```jsx:debounceExample.js
+const debouncedFunction = debounce(function() { ... }, 250)
+
+console.log(typeof debouncedFunction); // `function`
+```
+
+</CodeBlock>
+
+Here's how I like to think about it:
+
+Your initial function, the stuff you're actually trying to do, is a piece of hard candy.The debounce function is a piece of factory machinery that wraps that candy in a shiny plastic wrapperThe function that gets returned is your wrapped piece of candy. We've augmented that piece of candy with a wrapper.
+
+Notice that the first line in that function initializes a variable, "timeoutId". This line is only executed once. We plan to call our wrapped function many times, but we only call debounce() at the beginning.
+
+Whenever the wrapped function is triggered, two things happen:
+
+1. We cancel any pre-existing timeout
+2. We schedule a new timeout, based on the amount of time indicated by the wait argument. When the timeout expires, we call our callback function with apply, and feed it whatever arguments we have.
+
+The very first time the user moves the mouse, that first step has no effect; nothing has been scheduled yet! Happily, window.clearTimeout is a very forgiving function; even if there is no timeout, it doesn't complain. It's a “no-op” — it does nothing.
+
+setTimeout returns a number, a reference to the specific timeout in question. We store that in our timeoutId variable. Because this variable is held outside our wrapped function's scope, it persists.
+
+Let's say the user hasn't finished moving the mouse. A few milliseconds pass, and our wrapper is called again. This time around, timeoutId points to a currently-scheduled timeout, so the first line cancels it. And then we schedule a new one.
+
+If the user moves the mouse for 1 second, this cycle will repeat dozens of times. Lots of scheduled-and-immediately-cancelled timeouts. But once they stop moving, the cycle stops. The moment 250ms elapses, our timeout fires back, and the code is ultimately run.
+
+This is a complex sequence! But it works like a charm. Scheduling and cleaning up timeouts is a very quick, low-memory operation, so we don't have to worry much about its cost.
