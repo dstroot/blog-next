@@ -1,11 +1,11 @@
 ---
-title: 'Parsing MDX files with mdx-bundler'
+title: 'Parsing MDX files'
 publishedAt: '2021-10-23'
 summary: 'Compile and bundler MDX files with mdx-bundler'
 icon: mdx
 ---
 
-<Step number={1} title={"Install the dependencies for mdx-bundler"} />
+<Step number={1} title={'Install the dependencies for mdx-bundler'} />
 
 <CodeBlock>
 ```bash:Terminal
@@ -13,8 +13,10 @@ icon: mdx
 npm install mdx-bundler esbuild
 
 # If you're using yarn
+
 yarn add mdx-bundler esbuild
-```
+
+````
 </CodeBlock>
 
 <Step number={2} title={"Create a directory with MDX files"} />
@@ -25,10 +27,11 @@ yarn add mdx-bundler esbuild
   \file-1.mdx
   \file-2.mdx
   \file-3.mdx
-```
+````
+
 </CodeBlock>
 
-<Step number={3} title="Install necessary Plugins" />
+<Step number={3} title='Install necessary Plugins' />
 
 <CodeBlock>
 ```bash:Terminal
@@ -36,8 +39,10 @@ yarn add mdx-bundler esbuild
 npm install reading-time gray-matter rehype-slug rehype-code-titles rehype-autolink-headings rehype-prism-plus
 
 # If you're using yarn
+
 yarn add reading-time gray-matter rehype-slug rehype-code-titles rehype-autolink-headings rehype-prism-plus
-```
+
+````
 </CodeBlock>
 
 - [reading-time](https://www.npmjs.com/package/reading-time) Estimate an article's reading time
@@ -127,5 +132,6 @@ export async function getAllFilesFrontMatter() {
   }, []);
 }
 
-```
+````
+
 </CodeBlock>
