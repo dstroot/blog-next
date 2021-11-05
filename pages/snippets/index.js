@@ -8,7 +8,7 @@ function Snippets({ snippets }) {
     <Container>
       <Header />
       <h2 className='flex items-center space-x-2'>
-        <h2 class='mb-4 text-6xl md:text-7xl font-bold tracking-tighter leading-tight'>
+        <h2 className='mb-4 text-6xl md:text-7xl font-bold tracking-tighter leading-tight'>
           Snippets
         </h2>
       </h2>
