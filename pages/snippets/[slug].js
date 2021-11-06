@@ -11,7 +11,7 @@ export default function BlogSlug({ code, frontMatter }) {
 
   return (
     <Container>
-      <article className='mx-auto max-w-2xl my-6 md:my-10'>
+      <article className='mx-auto max-w-3xl my-6 md:my-10'>
         <PostTitle>{frontMatter.title}</PostTitle>
         <p className='text-xl text-gray-500 mb-4'>{frontMatter.summary}</p>
         <div className='flex space-x-2 text-xs mb-8'>
@@ -20,8 +20,10 @@ export default function BlogSlug({ code, frontMatter }) {
           </p>
         </div>
 
-        <div className='prose max-w-prose'>
-          <Component components={{ ...MDXComponent }} />
+        <div className='max-w-3xl mx-auto'>
+          <div className='prose prose-lg dark:prose-dark max-w-none break-words'>
+            <Component components={{ ...MDXComponent }} />
+          </div>
         </div>
       </article>
     </Container>

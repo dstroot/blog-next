@@ -1,0 +1,46 @@
+---
+title: 'useHasMounted'
+publishedAt: '2021-10-23'
+summary: 'When dealing with a server-side rendered application it can
+be useful to know when you are rendering on the client.'
+icon: js
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+When dealing with a server-side rendered application (through
+frameworks like Gatsby or Next, or any sort of SSR setup), it can
+be useful to know whether you're rendering on the server or the client.
+
+The trick here is that "useEffect" only triggers on the client side _inside_ the browser. Smart right?"
+
+Usage:
+
+```js
+const hasMounted = useHasMounted();
+
+if (hasMounted) {
+  // do stuff
+}
+```
+
+<CodeBlock>
+
+```JavaScript:useHasMounted.js
+import { useState, useEffect } from 'react';
+
+export const useHasMounted = () => {
+  const [hasMounted, setHasMounted] = useState(false);
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  return hasMounted;
+};
+```
+
+</CodeBlock>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Gist, Tweet } from 'mdx-embed';
@@ -40,7 +41,7 @@ const CodeBlock = ({ children }) => {
         <span className='w-3 h-3 rounded-full bg-mac-min' />
         <span className='w-3 h-3 rounded-full bg-mac-max' />
       </div>
-      <div className=''>{children}</div>
+      <div>{children}</div>
     </div>
   );
 };
@@ -70,6 +71,30 @@ const Step = (props) => {
   );
 };
 
+const GitGist = ({ gistURL }) => {
+  let [gist, setGist] = useState(null);
+  const divStyle = {
+    whiteSpace: 'pre-wrap',
+  };
+
+  // 3. Create out useEffect function
+  useEffect(() => {
+    fetch(gistURL)
+      .then((response) => response.text())
+      // 4. Setting *dogImage* to the image url that we received from the response above
+      .then((data) => setGist(data));
+  }, [gistURL]);
+
+  return (
+    <div
+      style={divStyle}
+      dangerouslySetInnerHTML={{
+        __html: gist,
+      }}
+    />
+  );
+};
+
 const MDXComponent = {
   Image,
   a: CustomLink,
@@ -79,6 +104,22 @@ const MDXComponent = {
   YouTube,
   Tweet,
   Gist,
+  GitGist,
 };
 
 export default MDXComponent;
+
+/* <div className='flex overflow-hidden relative flex-col p-5 mx-auto my-5 space-y-5 w-full font-mono text-sm rounded-lg bg-gray-700'>
+  <div className='flex space-x-2 w-full'>
+    <span className='w-3 h-3 rounded-full bg-mac-cls' />
+    <span className='w-3 h-3 rounded-full bg-mac-min' />
+    <span className='w-3 h-3 rounded-full bg-mac-max' />
+  </div>
+  <div
+    style={divStyle}
+    // className=''
+    dangerouslySetInnerHTML={{
+      __html: '```Javascript:useIntersectionObserver.js\n' + gist + '\n```',
+    }}
+  ></div>
+</div>; */
