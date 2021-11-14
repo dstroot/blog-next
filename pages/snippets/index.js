@@ -7,11 +7,11 @@ function Snippets({ snippets }) {
   return (
     <Container>
       <Header />
-      <h2 className='flex items-center space-x-2'>
+      <div className='flex items-center space-x-2'>
         <h2 className='mb-4 text-6xl md:text-7xl font-bold tracking-tighter leading-tight'>
           Snippets
         </h2>
-      </h2>
+      </div>
       <p className='text-xl text-gray-500 mb-6'>
         Short solutions to discrete problems which can be copied and pasted.
       </p>
