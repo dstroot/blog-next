@@ -1,0 +1,88 @@
+---
+title: 'usePrefersReducedMotion'
+publishedAt: '2021-10-23'
+summary: 'Some people do not prefer animations, and for some motion can be harmful. The prefers-reduced-motion CSS media query allows us to disable animations.'
+icon: react
+tags:
+  #   - Javascript
+  - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+<CodeBlock>
+
+```JavaScript:usePrefersReducedMotion.js
+const QUERY = '(prefers-reduced-motion: no-preference)';
+const isRenderingOnServer = typeof window === 'undefined';
+
+const getInitialState = () => {
+  // For our initial server render, we won't know if the user
+  // prefers reduced motion, but it doesn't matter. This value
+  // will be overwritten on the client, before any animations
+  // occur.
+  return isRenderingOnServer ? true : !window.matchMedia(QUERY).matches;
+};
+
+function usePrefersReducedMotion() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = React.useState(
+    getInitialState
+  );
+
+  React.useEffect(() => {
+    const mediaQueryList = window.matchMedia(QUERY);
+    const listener = (event) => {
+      setPrefersReducedMotion(!event.matches);
+    };
+
+    if (mediaQueryList.addEventListener) {
+      mediaQueryList.addEventListener('change', listener);
+    } else {
+      mediaQueryList.addListener(listener);
+    }
+
+    return () => {
+      if (mediaQueryList.removeEventListener) {
+        mediaQueryList.removeEventListener('change', listener);
+      } else {
+        mediaQueryList.removeListener(listener);
+      }
+    };
+  }, []);
+
+  return prefersReducedMotion;
+}
+```
+
+</CodeBlock>
+
+### Context
+
+Some people don't prefer animations, and for some motion can be harmful. The prefers-reduced-motion CSS media query allows us to disable animations. For animations that are entirely in CSS (eg. CSS transitions, CSS keyframe animations), this is all you need.
+
+What about for our animations in JavaScript, though? For example, when we use a library like React Spring or Framer Motion? We need to manage it ourselves, and this hook helps.
+
+### Usage
+
+<CodeBlock>
+
+```jsx:prefersReducedMotionExample.jsx
+import { useSpring, animated } from 'react-spring';
+
+const Box = ({ isBig }) => {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  const styles = useSpring({
+    width: 100,
+    height: 100,
+    background: 'rebeccapurple',
+    transform: isBig ? 'scale(2)' : 'scale(1)',
+    immediate: prefersReducedMotion,
+  });
+
+  return <animated.div style={styles}>Box!</animated.div>;
+};
+```
+
+</CodeBlock>
