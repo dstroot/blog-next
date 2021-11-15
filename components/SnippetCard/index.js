@@ -12,7 +12,7 @@ function SnippetCard(props) {
             </h1>
           </a>
         </Link>
-        <span className='grid place-items-center p-1 w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-600 text-blue-800 dark:text-blue-300 snip'>
+        <span className='grid place-items-center p-1 w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xl snip'>
           {icons[props.icon]}
         </span>
       </div>
@@ -22,7 +22,7 @@ function SnippetCard(props) {
         {props.tags
           ? props.tags.map((tag) => (
               <span
-                className='px-2 py-1 bg-gray-200 dark:bg-gray-500 text-gray-800 dark:text-gray-100 rounded-full'
+                className='px-2 py-1 bg-gray-200 dark:bg-gray-300 text-gray-900 dark:text-gray-800 rounded-full'
                 key={tag}
               >
                 #{tag}
