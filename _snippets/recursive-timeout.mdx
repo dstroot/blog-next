@@ -1,8 +1,15 @@
 ---
 title: 'Recursive Timeout'
+published: true
 publishedAt: '2021-10-23'
 summary: 'Recursive timeout function that can be used for timed events.'
 icon: timeout
+tags:
+  # - Javascript
+  - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
 ---
 
 Useful for things like Auto-scrolling carousel's if you're curious about how to implement one
@@ -18,13 +25,13 @@ export default function RecursiveTimeout(callback, delay) {
   const play = useCallback(() => setIsRunning(true), [setIsRunning]);
   const savedCallback = useRef(callback);
 
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
+useEffect(() => {
+savedCallback.current = callback;
+}, [callback]);
 
-  useEffect(() => {
-    if (!isRunning) return;
-    let id = 0;
+useEffect(() => {
+if (!isRunning) return;
+let id = 0;
 
     const tick = () => {
       if (!isRunning) return clearTimeout(id);
@@ -37,9 +44,12 @@ export default function RecursiveTimeout(callback, delay) {
       if (id) clearTimeout(id);
       stop();
     };
-  }, [isRunning, delay, stop]);
 
-  return { play, stop };
+}, [isRunning, delay, stop]);
+
+return { play, stop };
 }
+
 ```
 </CodeBlock>
+```

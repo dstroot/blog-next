@@ -1,11 +1,18 @@
 ---
-title: "Google Analytics API"
-publishedAt: "2021-10-21"
-summary: "Using Google Analytics API to get page data."
+title: 'Google Analytics API'
+published: true
+publishedAt: '2021-10-21'
+summary: 'Using Google Analytics API to get page data.'
 icon: ganalytics
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
 ---
 
-<Step number={1} title="Create a Google Service Account" />
+<Step number={1} title='Create a Google Service Account' />
 
 - Go to Google Developer Console and create a new project if you haven't already.
 - On the sidebar click on **Credentials** and then **Create Credentials**
@@ -14,14 +21,14 @@ icon: ganalytics
 - Select **Keys** tab and then **Add Key** then create a **JSON key**
 - Download and keep this **JSON key** safe.
 
-<Step number={2} title="Enable Google Analytics Data API" />
+<Step number={2} title='Enable Google Analytics Data API' />
 
 - On the sidebar click on **APIs & Services** and **ENABLE APIS AND SERVICES**
 - Search for **Google Analytics Data API** and enable it
 - Go to Analytics dashboard and click on **Admin** -> **Property User Management** -> **Add Users**
 - Add your service account email address (look in the JSON key for the email) and give it **Read and Analyze** access.
 
-<Step number={3} title="Install the @google-analytics/data package" />
+<Step number={3} title='Install the @google-analytics/data package' />
 
 <CodeBlock>
 ```bash:Terminal
