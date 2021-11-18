@@ -1,8 +1,14 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+  reactStrictMode: true,
+  experimental: {
+    concurrentFeatures: false,
+    serverComponents: false,
+    optimizeCss: true,
+    esmExternals: true,
+  },
   mode: 'jit',
-  experimental: { optimizeCss: true, esmExternals: true },
   // https://purgecss.com/
   purge: {
     content: ['./components/**/*.js', './pages/**/*.js'],
@@ -168,6 +174,16 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
+  // webpack: (config, { isServer }) => {
+  //   // Fixes npm packages that depend on `fs` module
+  //   if (!isServer) {
+  //     config.node = {
+  //       fs: 'empty',
+  //     };
+  //   }
+
+  //   return config;
+  // },
 };
 
 /*
