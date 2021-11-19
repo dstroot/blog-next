@@ -12,7 +12,7 @@ ogImage:
 seoURL:
 ---
 
-One of the worst cognitive biases which humans suffer from is the belief that observations about individuals can be generalized. How much faulty thinking, including racism and sexism, stems from this simple error? An extension of this common mistakes is thinking of people as interchangeable, or fungible, when planning work - as if “who” does the work doesn’t matter.
+One of the worst cognitive biases which humans suffer from is the belief that observations about individuals can be generalized. How much faulty thinking, including racism and sexism, stems from this simple error? An extension of this common mistake is thinking of people as interchangeable, or fungible, when planning work - as if “who” does the work doesn’t matter.
 
 _Individuals matter._
 
