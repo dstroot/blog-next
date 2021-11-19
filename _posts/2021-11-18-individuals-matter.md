@@ -24,7 +24,7 @@ When work starts on a specific project, the first questions asked are "**Who** i
 
 One of the primary jobs of managers at all levels is to plan and then execute in accordance with the plan. Some managers are good at it, many aren’t, but the good ones know which people get stuff done and how long something should take. Good managers can even adjust estimates based on individual productivity. Only a direct line manager can do this, anyone else won’t have the knowledge of each person’s capabilities.
 
-This is how you build highly accurate plans – you must plan the work with the people in mind who will be specifically doing the work.
+This is how you build highly accurate plans – you must plan with the specific people in mind who will be doing the work.
 
 ### An Early Lesson Why Individuals Matter
 
