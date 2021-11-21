@@ -7,7 +7,8 @@ import { Container } from '../../components/Container';
 import { PostBody } from '../../components/PostBody';
 import { Header } from '../../components/Header';
 import { PostHeader } from '../../components/PostHeader';
-import { getPostBySlug, getAllPosts } from '../../lib/api';
+import { getFilesByExtension } from '../../lib/getAllFiles';
+import { getPostBySlug } from '../../lib/api';
 import { PostTitle } from '../../components/PostTitle';
 import { CMS_NAME, BASE_URL, REPO } from '../../lib/constants';
 import { SEO } from '../../lib/seo';
@@ -67,6 +68,24 @@ export default function Post({ post }) {
   );
 }
 
+// https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation
+// Next.js will statically pre-render all the paths specified
+// for each path the params will be fed into "getStaticProps"
+export async function getStaticPaths() {
+  const posts = getFilesByExtension('data/_snippets', '.md');
+
+  const paths = posts.map((p) => ({
+    params: {
+      slug: p.replace(/\.md/, ''),
+    },
+  }));
+
+  return {
+    paths: paths,
+    fallback: false,
+  };
+}
+
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
     'title',
@@ -90,23 +109,5 @@ export async function getStaticProps({ params }) {
         content,
       },
     },
-  };
-}
-
-// https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation
-// Next.js will statically pre-render all the paths specified
-// for each path the params will be fed into "getStaticProps"
-export async function getStaticPaths() {
-  const posts = getAllPosts(['slug']);
-
-  return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
-    }),
-    fallback: false,
   };
 }

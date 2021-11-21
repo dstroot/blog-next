@@ -1,9 +1,10 @@
 import { useMemo } from 'react';
-import { getFiles, getFileBySlug } from '../../lib/mdx';
-import MDXComponent from '../../components/MDXComponent';
+import { getMDXFileBySlug } from '../lib/processMDX';
+import { getFilesByExtension } from '../lib/getAllFiles';
+import MDXComponent from '../components/MDXComponent';
 import { getMDXComponent } from 'mdx-bundler/client';
-import { Container } from '../../components/Container';
-import { icons } from '../../icons';
+import { Container } from '../components/Container';
+import { icons } from '../icons';
 
 export default function BlogSlug({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -41,20 +42,22 @@ export default function BlogSlug({ code, frontMatter }) {
 }
 
 export async function getStaticPaths() {
-  const posts = await getFiles('_snippets');
+  const posts = getFilesByExtension('data/_snippets', '.mdx');
+
+  const paths = posts.map((p) => ({
+    params: {
+      slug: p.replace(/\.mdx/, ''),
+    },
+  }));
 
   return {
-    paths: posts.map((p) => ({
-      params: {
-        slug: p.replace(/\.mdx/, ''),
-      },
-    })),
+    paths: paths,
     fallback: false,
   };
 }
 
 export async function getStaticProps({ params }) {
-  const post = await getFileBySlug(params.slug, '_snippets');
+  const post = await getMDXFileBySlug(params.slug, 'data/_snippets');
 
   return { props: { ...post } };
 }

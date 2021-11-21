@@ -1,7 +1,8 @@
-import SnippetCard from '../../components/SnippetCard';
-import { getAllFilesFrontMatter } from '../../lib/mdx';
-import { Container } from '../../components/Container';
-import { Header } from '../../components/Header';
+import SnippetCard from '../components/SnippetCard';
+import { getAllFilesFrontMatter } from '../lib/getAllFiles';
+import { Container } from '../components/Container';
+import { Header } from '../components/Header';
+import { SortByDate } from '../lib/sortPosts';
 
 function Snippets({ snippets }) {
   return (
@@ -29,10 +30,13 @@ function Snippets({ snippets }) {
 }
 
 export async function getStaticProps() {
-  let snippets = await getAllFilesFrontMatter('_snippets');
+  let snippets = await getAllFilesFrontMatter('data/_snippets', '.mdx');
 
-  // remove unpublished snippets
-  snippets = snippets.filter((snippet) => snippet.published);
+  // remove any unpublished snippets
+  snippets = snippets.filter((snippets) => snippets.published);
+
+  // Sort list by published date
+  snippets = SortByDate(snippets);
 
   return { props: { snippets } };
 }
