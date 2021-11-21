@@ -36,7 +36,7 @@ export function Sharable({ title, slug }) {
 
   return (
     <div className='flex flex-col'>
-      <h4 className='text-lg font-bold mb-2'>Sharing is Caring</h4>
+      <h4 className='text-lg font-bold mb-4'>Sharing is Caring</h4>
       <div className='flex space-x-5 text-xl'>
         <span
           onClick={fbShare}
