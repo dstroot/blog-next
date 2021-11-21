@@ -54,7 +54,12 @@ export default function Post({ post }) {
               author={post.author}
               time={post.stats.text}
             />
-            <PostBody content={post.content} path={githubPath} />
+            <PostBody
+              content={post.content}
+              title={post.title}
+              slug={post.slug}
+              path={githubPath}
+            />
           </article>
         </>
       )}

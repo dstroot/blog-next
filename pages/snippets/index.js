@@ -30,7 +30,9 @@ function Snippets({ snippets }) {
 
 export async function getStaticProps() {
   let snippets = await getAllFilesFrontMatter('_snippets');
-  snippets = snippets.filter((snippet) => snippet.published); // remove unpublished snippets
+
+  // remove unpublished snippets
+  snippets = snippets.filter((snippet) => snippet.published);
 
   return { props: { snippets } };
 }
