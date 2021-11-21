@@ -140,6 +140,9 @@ export default function Index() {
                 <a>[ Post Archive ]</a>
               </Link>
               <a href='https://dstroot.github.io/readme/'> [ My Readme ]</a>
+              <Link href='/snippets'>
+                <a>[ Code Snippets ]</a>
+              </Link>
             </div>
             <p className='mt-10 leading-none'>
               <small>
