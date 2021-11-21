@@ -72,7 +72,7 @@ export default function Post({ post }) {
 // Next.js will statically pre-render all the paths specified
 // for each path the params will be fed into "getStaticProps"
 export async function getStaticPaths() {
-  const posts = getFilesByExtension('data/_snippets', '.md');
+  const posts = getFilesByExtension('data/_posts', '.md');
 
   const paths = posts.map((p) => ({
     params: {
