@@ -3,8 +3,8 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   reactStrictMode: true,
   experimental: {
-    concurrentFeatures: false,
-    serverComponents: false,
+    concurrentFeatures: true,
+    serverComponents: true,
     optimizeCss: true,
     esmExternals: true,
   },

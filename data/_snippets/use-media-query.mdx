@@ -1,0 +1,75 @@
+---
+title: 'useMediaQuery'
+published: true
+publishedAt: '2021-10-23'
+summary: 'useMediaQuery is a react hook that makes testing for media query matches in your code easier and simpler. '
+icon: js
+tags:
+  #   - Javascript
+  - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+### Code
+
+<CodeBlock>
+
+```JavaScript:useMediaQuery.js
+import { useState, useEffect } from 'react';
+
+export const useMediaQuery = query => {
+  const [state, setState] = useState(false);
+
+  useEffect(
+    () => {
+      let mounted = true;
+
+      // Returns a MediaQueryList object
+      const mql = window.matchMedia(query);
+      const onChange = () => {
+        if (!mounted) return;
+        setState(!!mql.matches);
+      };
+
+      mql.addListener(onChange);
+      setState(mql.matches);
+
+      // clean up
+      return () => {
+        mounted = false;
+        mql.removeListener(onChange);
+      };
+    },
+    [query]
+  );
+
+  return state;
+};
+```
+
+</CodeBlock>
+
+### Context
+
+If you have a special case, when you need to get media query result inside you react app (for example, you want to show different components on mobile and desktop) this is the way to do so.
+
+### Usage
+
+<CodeBlock>
+
+```jsx:useMediaQueryExample.jsx
+const EffecfulComponent = () => {
+  const result = useMediaQuery(`screen and (max-width: 400px)`);
+  return <span>{result.toString()}</span>;
+};
+
+const biggerThan400 = useMediaQuery(`(min-width: 400px)`);
+
+return <div>
+    {biggerThan400 && <button>SomeButton</button>}
+</div>
+```
+
+</CodeBlock>
