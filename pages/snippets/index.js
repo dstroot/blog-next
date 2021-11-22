@@ -1,8 +1,8 @@
-import SnippetCard from '../components/SnippetCard';
-import { getAllFilesFrontMatter } from '../lib/getAllFiles';
-import { Container } from '../components/Container';
-import { Header } from '../components/Header';
-import { SortByDate } from '../lib/sortPosts';
+import { SnippetCard } from '../../components/SnippetCard';
+import { Container } from '../../components/Container';
+import { Header } from '../../components/Header';
+import { getAllFilesFrontMatter } from '../../lib/getAllFiles';
+import { SortByDate } from '../../lib/sortPosts';
 
 function Snippets({ snippets }) {
   return (

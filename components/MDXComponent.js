@@ -95,7 +95,7 @@ const GitGist = ({ gistURL }) => {
   );
 };
 
-const MDXComponent = {
+export const MDXComponent = {
   Image,
   a: CustomLink,
   BlogImg,
@@ -106,8 +106,6 @@ const MDXComponent = {
   Gist,
   GitGist,
 };
-
-export default MDXComponent;
 
 /* <div className='flex overflow-hidden relative flex-col p-5 mx-auto my-5 space-y-5 w-full font-mono text-sm rounded-lg bg-gray-700'>
   <div className='flex space-x-2 w-full'>

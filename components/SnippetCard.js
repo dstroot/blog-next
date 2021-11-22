@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { icons } from '../icons';
 
-function SnippetCard(props) {
+export const SnippetCard = (props) => {
   return (
     <div className='flex flex-col p-5 space-y-3 w-full rounded shadow-md bg-gray-100 dark:bg-gray-700'>
       <div className='flex justify-between items-center'>
@@ -32,6 +32,4 @@ function SnippetCard(props) {
       </div>
     </div>
   );
-}
-
-export default SnippetCard;
+};

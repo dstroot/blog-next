@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
-import { getMDXFileBySlug } from '../lib/processMDX';
-import { getFilesByExtension } from '../lib/getAllFiles';
-import { MDXComponent } from '../components/MDXComponent';
+import { getMDXFileBySlug } from '../../lib/processMDX';
+import { getFilesByExtension } from '../../lib/getAllFiles';
+import { MDXComponent } from '../../components/MDXComponent';
 import { getMDXComponent } from 'mdx-bundler/client';
-import { Container } from '../components/Container';
-import { icons } from '../icons';
+import { Container } from '../../components/Container';
+import { icons } from '../../components/Icons';
 
 export default function BlogSlug({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
