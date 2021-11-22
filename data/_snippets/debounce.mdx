@@ -1,6 +1,6 @@
 ---
 title: 'Debounce'
-published: false
+published: true
 publishedAt: '2021-10-23'
 summary: 'Debouncing is a strategy that lets us improve performance by waiting until a certain amount of time has passed before triggering an event.'
 icon: js
@@ -50,11 +50,6 @@ In some cases, this isn't necessary. But, if any network requests are involved, 
 > Now, you can install lodash and only use the debounce utility, but it'll make your bundle a bit heavier; the debounce utility weights ~2kb, even though the method is only a couple lines, because there's a minimum amount of "utility glue" that ships with all lodash utilities.
 >
 > 2kb isn't going to break your budget, but there's another benefit: you're reducing your reliance on third-party code. This debounce function is yours. It lives in your codebase, not in some node_modules folder, and you can modify it as-needed. Feel a sense of ownership over it. You won't have to worry about whether lodash will continue to be maintained.
-
-<details>
-  <summary>Details</summary>
-  Something small enough to escape casual notice.
-</details>
 
 ### Usage
 

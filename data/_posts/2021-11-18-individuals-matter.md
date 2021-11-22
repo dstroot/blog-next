@@ -52,7 +52,7 @@ The more complexity there is in your business, and the more unique your business
 
 ### The Type of Work Matters Too
 
-Motivation is a big one. Some tasks (or projects) just don't motivate me at all, and they turn into an awful slog. Others are enthralling and I have a hard time logging out at the end of the day. I think there's easily a 5x difference in my own personal performance between those. Could be more.  What is your productivity difference when you work on something you are excited about and believe in vs. something you think is a waste of your time?
+Motivation is a big one. Some tasks (or projects) just don't motivate me at all, and they turn into an awful slog. Others are enthralling and I have a hard time logging out at the end of the day. I think there's easily a 5x difference in my own personal performance between those. Could be more. What is your productivity difference when you work on something you are excited about and believe in vs. something you think is a waste of your time?
 
 In addition to motivation is skills alignment – this leads to the concept of the “10x” engineer – the rock star who is ten times as productive as the average engineer. Whether you believe in this idea or not, we probably can agree that some people are significantly more productive - and hiring for that trait is nearly impossible.
 
@@ -83,3 +83,7 @@ Individuals matter.
 > “Insist on yourself; never imitate. Your own gift you can offer with the cumulative force of a whole life's cultivation, but of the adopted talent of another, you have only an extemporaneous, half possession.”
 >
 > <cite>&mdash; Ralph Waldo Emerson</cite>
+
+#### References
+
+- [Harrison Bergeron - Kurt Vonnegut, Jr.](http://www.tnellen.com/cybereng/harrison.html)
