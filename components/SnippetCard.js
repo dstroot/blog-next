@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { icons } from '../icons';
+import { icons } from './Icons';
 
 export const SnippetCard = (props) => {
   return (
