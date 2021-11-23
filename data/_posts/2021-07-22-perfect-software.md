@@ -3,7 +3,7 @@ title: Engineering Software is Nothing Like Engineering a Bridge
 excerpt: When an engineer designs a bridge, they begin with the load the bridge is intended to bear, and they calculate the various stresses caused by wind, earthquakes, etc. They then apply a safety factor to the calculations. Software meanwhile is discrete, a small error can result in a disproportionately large failure.
 coverImage: /assets/blog/img/bridge.jpg
 date: '2021-07-22'
-published: true
+published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg

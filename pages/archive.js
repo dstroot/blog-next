@@ -3,7 +3,7 @@ import { Container } from '../components/Container';
 import { Archive } from '../components/Archive';
 import { Header } from '../components/Header';
 import { PostTitle } from '../components/PostTitle';
-import { getAllPosts } from '../lib/api';
+import { getAllFilesFrontMatter } from '../lib/getAllFiles';
 import { CMS_NAME } from '../lib/constants';
 
 export default function Index({ allPosts }) {
@@ -27,7 +27,7 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['title', 'date', 'published', 'slug']);
+  const allPosts = await getAllFilesFrontMatter('data/_posts', '.md');
 
   return {
     props: { allPosts },

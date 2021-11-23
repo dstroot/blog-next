@@ -27,7 +27,13 @@ export default function BlogSlug({ code, frontMatter }) {
 
         <div className='flex space-x-2 text-xs mb-8'>
           <p className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full'>
-            Date : {frontMatter.publishedAt}
+            Date: {frontMatter.publishedAt}
+          </p>
+          <p className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full'>
+            Words: {frontMatter.stats.words}
+          </p>
+          <p className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full'>
+            Time: {frontMatter.stats.text}
           </p>
         </div>
 
@@ -42,7 +48,7 @@ export default function BlogSlug({ code, frontMatter }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getFilesByExtension('data/_snippets', '.mdx');
+  const posts = getFilesByExtension('data/_snippets', '.mdx'); // urls/slugs should not have file extension
 
   const paths = posts.map((p) => ({
     params: {

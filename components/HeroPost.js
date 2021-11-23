@@ -11,6 +11,7 @@ export const HeroPost = ({
   author,
   slug,
   stats,
+  views,
 }) => {
   return (
     <section>
@@ -32,6 +33,7 @@ export const HeroPost = ({
             <Link as={`/posts/${slug}`} href='/posts/[slug]'>
               <a className='hover:underline'>{title}</a>
             </Link>
+            {/* <p>views: {views}</p> */}
           </h3>
           <div className='mb-4 md:mb-0'>
             <Avatar

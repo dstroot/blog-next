@@ -2,14 +2,15 @@ import { Container } from '../components/Container';
 import { MoreStories } from '../components/MoreStories';
 import { HeroPost } from '../components/HeroPost';
 import { Intro } from '../components/Intro';
-import { getAllPosts } from '../lib/api';
 import { generateRSSFeed } from '../lib/feed';
 import { CMS_NAME, BASE_URL, HOME_OG_IMAGE_URL } from '../lib/constants';
 import { SEO } from '../lib/seo';
+import { getAllFilesFrontMatter } from '../lib/getAllFiles';
+import { SortByDate } from '../lib/sortPosts';
 
-export default function Index({ allPosts }) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+export default function Index({ posts }) {
+  const heroPost = posts[0];
+  const morePosts = posts.slice(1);
   const seo = {
     title: CMS_NAME + ' · Blog',
     url: BASE_URL,
@@ -35,6 +36,7 @@ export default function Index({ allPosts }) {
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
             stats={heroPost.stats}
+            views={heroPost.views}
           />
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
@@ -44,22 +46,16 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    'title',
-    'excerpt',
-    'date',
-    'published',
-    'slug',
-    'author',
-    'coverImage',
-    'fileName',
-    'stats',
-  ]).filter((post) => post.published); // don't publish drafts
+  let posts = await getAllFilesFrontMatter('data/_posts', '.md');
 
-  // build rss feed when site builds
-  await generateRSSFeed(allPosts);
+  // Remove any unpublished posts
+  posts = posts.filter((posts) => posts.published);
 
-  return {
-    props: { allPosts },
-  };
+  // Sort list by published date
+  posts = SortByDate(posts);
+
+  // Build rss feed when site builds
+  await generateRSSFeed(posts);
+
+  return { props: { posts } };
 }
