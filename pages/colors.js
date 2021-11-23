@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import card from '../public/assets/blog/img/black_card.jpg';
 import { Container } from '../components/Container';
 import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
@@ -192,18 +193,7 @@ export default function Index() {
 
         <div className='flex flex-row space-x-4'>
           <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
-            <img
-              className='w-full'
-              src='/assets/blog/img/black_card.jpg'
-              alt='Mountain'
-            />
-            {/* <Image
-            src='/assets/blog/img/black_card.jpg'
-            alt='Black Card'
-            layout='fill'
-            // width={width}
-            // height={height}
-          /> */}
+            <Image src={card} alt='Black Card' layout='responsive' />
             <div className='px-6 py-4'>
               <div className='font-bold text-xl mb-2 text-gray-700 dark:text-gray-300'>
                 Mountain
@@ -228,18 +218,7 @@ export default function Index() {
           </div>
 
           <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
-            <img
-              className='w-full'
-              src='/assets/blog/img/black_card.jpg'
-              alt='Mountain'
-            />
-            {/* <Image
-            src='/assets/blog/img/black_card.jpg'
-            alt='Black Card'
-            layout='fill'
-            // width={width}
-            // height={height}
-          /> */}
+            <Image src={card} alt='Black Card' layout='responsive' />
             <div className='px-6 py-4'>
               <div className='font-bold text-xl mb-2 blue7 dark:blue4'>
                 Mountain
@@ -264,18 +243,7 @@ export default function Index() {
           </div>
 
           <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
-            <img
-              className='w-full'
-              src='/assets/blog/img/black_card.jpg'
-              alt='Mountain'
-            />
-            {/* <Image
-            src='/assets/blog/img/black_card.jpg'
-            alt='Black Card'
-            layout='fill'
-            // width={width}
-            // height={height}
-          /> */}
+            <Image src={card} alt='Black Card' layout='responsive' />
             <div className='px-6 py-4'>
               <div className='font-bold text-xl mb-2 text-gray-700 dark:text-gray-300'>
                 <span className='error-text'>Mountain </span>

@@ -35,6 +35,7 @@ export default function Post({ post }) {
     }, 5000);
   }, [post.slug]);
 
+  // if there is no slug then present a 404
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
