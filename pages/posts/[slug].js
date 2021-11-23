@@ -5,7 +5,6 @@ import { Header } from '../../components/Header';
 import { PostHeader } from '../../components/PostHeader';
 import { getFilesByExtension } from '../../lib/getAllFiles';
 import { getMDFileBySlug } from '../../lib/processMD';
-import { PostTitle } from '../../components/PostTitle';
 import { CMS_NAME, BASE_URL } from '../../lib/constants';
 import { SEO } from '../../lib/seo';
 

@@ -9,6 +9,9 @@ import { icons } from '../../components/Icons';
 export default function BlogSlug({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
 
+  // TODO add SEO capability
+  // TODO add GitHub Link
+
   return (
     <Container>
       <article className='mx-auto max-w-3xl my-6 md:my-10'>
@@ -64,6 +67,5 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const post = await getMDXFileBySlug(params.slug, 'data/_snippets');
-
   return { props: { ...post } };
 }

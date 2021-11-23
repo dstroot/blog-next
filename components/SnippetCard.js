@@ -7,14 +7,14 @@ export const SnippetCard = (props) => {
       <div className='flex justify-between items-center'>
         <Link href={`/snippets/${props.slug}`}>
           <a>
-            <h1 className='text-2xl font-bold text-slate-light'>
+            <h1 className='text-2xl font-bold truncate overflow-hidden max-w-xs'>
               {props.title}
             </h1>
           </a>
         </Link>
-        <span className='grid place-items-center p-1 w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xl snip'>
+        <div className='grid place-items-center p-1 w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xl snip'>
           {icons[props.icon]}
-        </span>
+        </div>
       </div>
 
       <p className='text-slate'>{props.summary}</p>
