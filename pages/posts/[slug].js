@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-import ErrorPage from 'next/error';
-import { useRouter } from 'next/router';
 import { Container } from '../../components/Container';
 import { PostBody } from '../../components/PostBody';
 import { Header } from '../../components/Header';
@@ -24,7 +22,6 @@ export default function Post({
   html,
   github,
 }) {
-  const router = useRouter();
   const seo = {
     title: `${CMS_NAME} · ${title}`,
     url: `${BASE_URL}/posts/${slug}`,
@@ -42,11 +39,6 @@ export default function Post({
       fetch(`/api/views/${encodeURIComponent(slug)}`, { method: 'POST' });
     }, 5000);
   }, [slug]);
-
-  // if there is no slug then present a 404
-  if (!router.isFallback && !slug) {
-    return <ErrorPage statusCode={404} />;
-  }
 
   return (
     <Container>
