@@ -12,15 +12,26 @@ import { CMS_NAME, BASE_URL } from '../../lib/constants';
 import { SEO } from '../../lib/seo';
 
 // TODO: add section for "more posts" at bottom of page
-export default function Post({ post }) {
+
+export default function Post({
+  title,
+  slug,
+  excerpt,
+  coverImage,
+  date,
+  author,
+  stats,
+  html,
+  github,
+}) {
   const router = useRouter();
   const seo = {
-    title: `${CMS_NAME} · ${post.title}`,
-    url: `${BASE_URL}/posts/${post.slug}`,
-    description: post.excerpt,
-    image: `${BASE_URL}${post.coverImage}`,
-    publishedDate: post.date,
-    author: post.author.name,
+    title: `${CMS_NAME} · ${title}`,
+    url: `${BASE_URL}/posts/${slug}`,
+    description: excerpt,
+    image: `${BASE_URL}${coverImage}`,
+    publishedDate: date,
+    author: author.name,
     ogType: 'article',
     twHandle: '@danstroot',
   };
@@ -28,12 +39,12 @@ export default function Post({ post }) {
   // register page view for the blog after 5s
   useEffect(() => {
     setTimeout(() => {
-      fetch(`/api/views/${encodeURIComponent(post.slug)}`, { method: 'POST' });
+      fetch(`/api/views/${encodeURIComponent(slug)}`, { method: 'POST' });
     }, 5000);
-  }, [post.slug]);
+  }, [slug]);
 
   // if there is no slug then present a 404
-  if (!router.isFallback && !post?.slug) {
+  if (!router.isFallback && !slug) {
     return <ErrorPage statusCode={404} />;
   }
 
@@ -47,18 +58,13 @@ export default function Post({ post }) {
           <SEO {...seo} />
           <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
             <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
-              time={post.stats.text}
+              title={title}
+              coverImage={coverImage}
+              date={date}
+              author={author}
+              time={stats.text}
             />
-            <PostBody
-              html={post.html}
-              title={post.title}
-              slug={post.slug}
-              path={post.github}
-            />
+            <PostBody html={html} title={title} slug={slug} path={github} />
           </article>
         </>
       )}
@@ -88,10 +94,6 @@ export async function getStaticProps({ params }) {
   const post = await getMDFileBySlug(params.slug, 'data/_posts');
 
   return {
-    props: {
-      post: {
-        ...post,
-      },
-    },
+    props: { ...post },
   };
 }
