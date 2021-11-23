@@ -5,6 +5,7 @@ import { MDXComponent } from '../../components/MDXComponent';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { Container } from '../../components/Container';
 import { icons } from '../../components/Icons';
+import { GitHubLink } from '../../components/GitHubLink';
 
 export default function BlogSlug({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -41,9 +42,10 @@ export default function BlogSlug({ code, frontMatter }) {
         </div>
 
         <div className='max-w-3xl mx-auto'>
-          <div className='prose prose-lg dark:prose-dark max-w-none break-words'>
+          <div className='prose prose-lg dark:prose-dark max-w-none break-words mb-8'>
             <Component components={{ ...MDXComponent }} />
           </div>
+          <GitHubLink path={frontMatter.github} />
         </div>
       </article>
     </Container>
