@@ -41,26 +41,22 @@ export default function Post({
   }, [slug]);
 
   return (
-    <Container>
-      <Header />
-      {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
-      ) : (
-        <>
-          <SEO {...seo} />
-          <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
-            <PostHeader
-              title={title}
-              coverImage={coverImage}
-              date={date}
-              author={author}
-              time={stats.text}
-            />
-            <PostBody html={html} title={title} slug={slug} path={github} />
-          </article>
-        </>
-      )}
-    </Container>
+    <>
+      <SEO {...seo} />
+      <Container>
+        <Header />
+        <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
+          <PostHeader
+            title={title}
+            coverImage={coverImage}
+            date={date}
+            author={author}
+            time={stats.text}
+          />
+          <PostBody html={html} title={title} slug={slug} path={github} />
+        </article>
+      </Container>
+    </>
   );
 }
 
