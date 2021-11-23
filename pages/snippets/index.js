@@ -4,6 +4,7 @@ import { Header } from '../../components/Header';
 import { getAllFilesFrontMatter } from '../../lib/getAllFiles';
 import { SortByDate } from '../../lib/sortPosts';
 
+// TODO add SEO
 function Snippets({ snippets }) {
   return (
     <Container>
