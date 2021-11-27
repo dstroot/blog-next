@@ -65,22 +65,25 @@ export default function Post({
 export async function getStaticPaths() {
   const posts = getFilesByExtension('data/_posts', '.md');
 
+  // urls/slugs should not have a file extension
   const paths = posts.map((p) => ({
     params: {
-      slug: p.replace(/\.md/, ''), // urls/slugs should not have file extension
+      slug: p.replace(/\.md/, ''),
     },
   }));
 
   return {
     paths: paths,
+    // fallback: false is what we want to use if we plan on generating ALL of our
+    // dynamic paths during build time. The fallback property can have 3
+    // values: false, true, blocking.
     fallback: false,
   };
 }
 
+// for each path in "getStaticPaths" the params will be fed into "getStaticProps"
+// to render each page.
 export async function getStaticProps({ params }) {
   const post = await getMDFileBySlug(params.slug, 'data/_posts');
-
-  return {
-    props: { ...post },
-  };
+  return { props: { ...post } };
 }

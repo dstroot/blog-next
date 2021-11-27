@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Gist, Tweet } from 'mdx-embed';
+// import { Gist, Tweet } from 'mdx-embed';
 // https://www.mdx-embed.com/?path=/docs/introduction--page
 
 const CustomLink = (props) => {
@@ -19,18 +19,18 @@ const CustomLink = (props) => {
   return <a target='_blank' rel='noopener noreferrer' {...props} />;
 };
 
-const BlogImg = (props) => {
-  return (
-    <div className='my-3'>
-      <Image
-        src={props.src}
-        alt={props.alt}
-        layout='responsive'
-        {...props}
-        className='rounded-xl'
-      />
-    </div>
-  );
+const CustomImage = (props) => {
+  const src = props.src;
+  const isInternalImage = src && src.startsWith('/');
+  if (isInternalImage) {
+    return (
+      // height and width are part of the props, from rehype-ing-size
+      // so they get automatically passed here with {...props}
+      <Image {...props} layout='responsive' loading='lazy' />
+    );
+  }
+
+  return <img {...props} />;
 };
 
 const CodeBlock = ({ children }) => {
@@ -96,15 +96,15 @@ const GitGist = ({ gistURL }) => {
 };
 
 export const MDXComponent = {
-  Image,
+  // Image,
   a: CustomLink,
-  BlogImg,
+  img: CustomImage,
   CodeBlock,
   Step,
-  YouTube,
-  Tweet,
-  Gist,
-  GitGist,
+  // YouTube,
+  // Tweet,
+  // Gist,
+  // GitGist,
 };
 
 /* <div className='flex overflow-hidden relative flex-col p-5 mx-auto my-5 space-y-5 w-full font-mono text-sm rounded-lg bg-gray-700'>

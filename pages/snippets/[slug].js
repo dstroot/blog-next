@@ -28,11 +28,11 @@ export default function BlogSlug({ code, frontMatter }) {
       <Container>
         <article className='mx-auto max-w-3xl my-6 md:my-10'>
           <div className='flex flex-col justify-between items-center md:flex-row mb-8'>
-            <h2 className='order-2 my-3  text-3xl md:text-4xl lg:text-5xl tracking-tighter leading-tight md:leading-none font-black text-center md:order-1 text-slate-light md:my-0'>
+            <h2 className='order-2 md:order-1 text-2xl md:text-4xl lg:text-5xl tracking-tighter leading-tight md:leading-none font-black text-center my-3 md:my-0'>
               {frontMatter.title}
             </h2>
-            <div className='order-1 md:order-2 my-3 md:my-0 w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700'>
-              <span className='grid place-items-center w-full h-full text-gray-700 dark:text-gray-300 text-3xl'>
+            <div className='flex-none border-1 md:order-2 my-3 md:my-0 w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700'>
+              <span className='grid place-items-center w-full h-full text-gray-700 dark:text-gray-300 text-4xl'>
                 {icons[frontMatter.icon]}
               </span>
             </div>
@@ -65,8 +65,9 @@ export default function BlogSlug({ code, frontMatter }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getFilesByExtension('data/_snippets', '.mdx'); // urls/slugs should not have file extension
+  const posts = getFilesByExtension('data/_snippets', '.mdx');
 
+  // urls/slugs should not have a file extension
   const paths = posts.map((p) => ({
     params: {
       slug: p.replace(/\.mdx/, ''),
