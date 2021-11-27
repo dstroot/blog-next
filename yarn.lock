@@ -3595,7 +3595,7 @@ image-size@1.0.0:
   dependencies:
     queue "6.0.2"
 
-image-size@^0.9.3, image-size@^0.9.7:
+image-size@^0.9.7:
   version "0.9.7"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.9.7.tgz#43b4ead4b1310d5ae310a559d52935a347e47c09"
   integrity sha512-KRVgLNZkr00YGN0qn9MlIrmlxbRhsCcEb1Byq3WKGnIV4M48iD185cprRtaoK4t5iC+ym2Q5qlArxZ/V1yzDgA==
@@ -5647,7 +5647,7 @@ postcss@8.2.15:
     nanoid "^3.1.23"
     source-map "^0.6.1"
 
-postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.4:
+postcss@^8.1.6, postcss@^8.2.1:
   version "8.3.11"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.11.tgz#c3beca7ea811cd5e1c4a3ec6d2e7599ef1f8f858"
   integrity sha512-hCmlUAIlUiav8Xdqw3Io4LcpA1DOt7h3LSTAC4G6JGHFFaWzI6qvFt9oilvl8BmkbBRX1IhM90ZAmpk68zccQA==
@@ -5655,6 +5655,15 @@ postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.4:
     nanoid "^3.1.30"
     picocolors "^1.0.0"
     source-map-js "^0.6.2"
+
+postcss@^8.2.4:
+  version "8.4.4"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.4.tgz#d53d4ec6a75fd62557a66bb41978bf47ff0c2869"
+  integrity sha512-joU6fBsN6EIer28Lj6GDFoC/5yOZzLCfn0zHAn/MYXI7aPt4m4hK5KC5ovEZXy+lnCjmYIbQWngvju2ddyEr8Q==
+  dependencies:
+    nanoid "^3.1.30"
+    picocolors "^1.0.0"
+    source-map-js "^1.0.1"
 
 prebuild-install@^7.0.0:
   version "7.0.0"
@@ -5686,9 +5695,9 @@ prelude-ls@~1.1.2:
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
 prettier@^2.3.2:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
-  integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.0.tgz#a6370e2d4594e093270419d9cc47f7670488f893"
+  integrity sha512-FM/zAKgWTxj40rH03VxzIPdXmj39SwSjwG0heUcNFwI+EMZJnY93yAiKXM3dObIKAM5TA88werc8T/EwhB45eg==
 
 pretty-hrtime@^1.0.3:
   version "1.0.3"
@@ -5847,13 +5856,13 @@ rc@^1.2.7:
     strip-json-comments "~2.0.1"
 
 react-dom@^18.0.0-beta-149b420f6-20211119:
-  version "18.0.0-beta-149b420f6-20211119"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-beta-149b420f6-20211119.tgz#dcf05faf52c6206db642dd50ae13a6647ee39fac"
-  integrity sha512-r8olPiJVDGRLHjF+LMzLBPUWSbG6OXuNInaC/kcJkDwBW8rX2gkOypGvylP5i3VqtpiPX6CHyD599aypa3wpPA==
+  version "18.0.0-beta-fdc1d617a-20211118"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-beta-fdc1d617a-20211118.tgz#0d2ddaa962fae1bbcf17c0eac5e3879d30793753"
+  integrity sha512-BlA0NdAKE+Ibe5orAfHphf76ltL9+PiWsexrjVjtRcumrra3WH3rDYT+evXfLFBzxpbZDjhkL1oQ1/zCjKyWBA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    scheduler "0.21.0-beta-149b420f6-20211119"
+    scheduler "0.21.0-beta-fdc1d617a-20211118"
 
 react-icons@^4.3.1:
   version "4.3.1"
@@ -5876,9 +5885,9 @@ react-refresh@0.8.3:
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
 react@^18.0.0-beta-149b420f6-20211119:
-  version "18.0.0-beta-149b420f6-20211119"
-  resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-beta-149b420f6-20211119.tgz#4acc03dddb74a93aec83a8d6aadeb6b503061f4b"
-  integrity sha512-cxLRM4Yqhe5fYAeYyMEGphtDnSJmKrvrsQyXskcVViGN/EmONHbFfwt1lRUCiZyXX44+/NOgIJ1OjGX2rHmpdQ==
+  version "18.0.0-beta-fdc1d617a-20211118"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-beta-fdc1d617a-20211118.tgz#ed8dd1674ddcab02bfff88ba368ad4d44db79fa7"
+  integrity sha512-+02tXs7Wc5az4Aw+dWp7Vwmd68POpiJF0pD20dVCwS+W8xxQ9GFEJrd5VE4Nal+HWDkGzSb6dApxoahULK/8ZA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -5979,14 +5988,6 @@ rehype-code-titles@^1.0.3:
   integrity sha512-VBLHA1egC8smTGQ0X2oEPO6kuq+CKHkSBanjKHhW5AhOL9V7qsbiB4GSRGDUHI4gwCWSdM4A4R5aoRZ4UExw6A==
   dependencies:
     unist-util-visit "^3.0.0"
-
-rehype-image-size@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-image-size/-/rehype-image-size-1.0.0.tgz#8b227e340c9777c900282102e311b4dfa171046d"
-  integrity sha512-g85hkmxTc3RCXCMloCk5Xx4gPV7h4p53KOhz+3oBQ/0kVsvfaB/eLqKIOu1zSp9ghhcuqMam6aBKDaJoZZU74w==
-  dependencies:
-    image-size "^0.9.3"
-    unist-util-visit "^2.0.3"
 
 rehype-img-size@^0.0.1:
   version "0.0.1"
@@ -6457,10 +6458,10 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@0.21.0-beta-149b420f6-20211119:
-  version "0.21.0-beta-149b420f6-20211119"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-beta-149b420f6-20211119.tgz#066b24dc2df762a6197c725930dcc7013de40ad2"
-  integrity sha512-IShAO9AhLkyiHY5wujThaUypxGHJj8IBdTTlerl040NzV/edrGeFTeTEpn4EjEhQzV0hVW9Oo58Fps3p5wtnww==
+scheduler@0.21.0-beta-fdc1d617a-20211118:
+  version "0.21.0-beta-fdc1d617a-20211118"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-beta-fdc1d617a-20211118.tgz#1f5e075e81b48af4a50d8f602a7a636731f0b8d4"
+  integrity sha512-fagjljhO7tVIGdT3rtYjjbHve/XfMubdY3Yna799WMK/rfYZtsGvX3GPu3IsjwOIs3IrcGjlxVRm6u3PFO+lwA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -6619,6 +6620,11 @@ source-map-js@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-0.6.2.tgz#0bb5de631b41cfbda6cfba8bd05a80efdfd2385e"
   integrity sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==
+
+source-map-js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.1.tgz#a1741c131e3c77d048252adfa24e23b908670caf"
+  integrity sha512-4+TN2b3tqOCd/kaGRJ/sTYA0tR0mdXx26ipdolxcwtJVqEnqNYvlCAt1q3ypy4QMlYus+Zh34RNtYLoq2oQ4IA==
 
 source-map@0.7.3, source-map@^0.7.0:
   version "0.7.3"
