@@ -31,7 +31,7 @@ export default function BlogSlug({ code, frontMatter }) {
             <h2 className='order-2 md:order-1 text-2xl md:text-4xl lg:text-5xl tracking-tighter leading-tight md:leading-none font-black text-center my-3 md:my-0'>
               {frontMatter.title}
             </h2>
-            <div className='flex-none border-1 md:order-2 my-3 md:my-0 w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700'>
+            <div className='flex-none border-1 md:ml-4 md:order-2 my-3 w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700'>
               <span className='grid place-items-center w-full h-full text-gray-700 dark:text-gray-300 text-4xl'>
                 {icons[frontMatter.icon]}
               </span>

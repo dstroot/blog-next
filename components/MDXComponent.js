@@ -10,8 +10,8 @@ const CustomLink = (props) => {
 
   if (isInternalLink) {
     return (
-      <Link href={href}>
-        <a {...props}>{props.children}</a>
+      <Link href={props.href}>
+        <a>{props.children}</a>
       </Link>
     );
   }
@@ -22,10 +22,11 @@ const CustomLink = (props) => {
 const CustomImage = (props) => {
   const src = props.src;
   const isInternalImage = src && src.startsWith('/');
+
   if (isInternalImage) {
     return (
-      // height and width are part of the props, from rehype-ing-size
-      // so they get automatically passed here with {...props}
+      // height and width are part of the props, from rehype-img-size
+      // so they are automatically passed here with {...props}
       <Image {...props} layout='responsive' loading='lazy' />
     );
   }
@@ -71,19 +72,20 @@ const Step = (props) => {
   );
 };
 
-const GitGist = ({ gistURL }) => {
+const GitGist = ({ url }) => {
   let [gist, setGist] = useState(null);
   const divStyle = {
-    whiteSpace: 'pre-wrap',
+    whiteSpace: 'pre',
+    color: '#e5e5e5',
+    backgroundColor: '#262626',
   };
 
   // 3. Create out useEffect function
   useEffect(() => {
-    fetch(gistURL)
+    fetch(url)
       .then((response) => response.text())
-      // 4. Setting *dogImage* to the image url that we received from the response above
-      .then((data) => setGist(data));
-  }, [gistURL]);
+      .then((text) => setGist(text));
+  }, [url]);
 
   return (
     <div
@@ -104,7 +106,7 @@ export const MDXComponent = {
   // YouTube,
   // Tweet,
   // Gist,
-  // GitGist,
+  GitGist,
 };
 
 /* <div className='flex overflow-hidden relative flex-col p-5 mx-auto my-5 space-y-5 w-full font-mono text-sm rounded-lg bg-gray-700'>
