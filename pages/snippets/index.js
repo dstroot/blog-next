@@ -16,9 +16,7 @@ function Snippets({ snippets }) {
           Snippets
         </h2>
       </div>
-      <p className='text-xl text-gray-500 mb-6'>
-        Short solutions to discrete problems.
-      </p>
+      <p className='text-xl text-gray-500 mb-6'>Short solutions to discrete problems.</p>
 
       {/* Grid */}
       <div className='grid grid-cols-1 gap-4 w-full lg:grid-cols-2 xl:grid-cols-3 mb-6'>

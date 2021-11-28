@@ -106,7 +106,7 @@ export const MDXComponent = {
   CodeBlock,
   Step,
   YouTube,
-  // Tweet,
+  // Tweet,  // https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/
   // Gist,
   GitGist,
 };
