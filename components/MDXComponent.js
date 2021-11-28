@@ -27,10 +27,12 @@ const CustomImage = (props) => {
     return (
       // height and width are part of the props, from rehype-img-size
       // so they are automatically passed here with {...props}
+      // eslint-disable-next-line jsx-a11y/alt-text
       <Image {...props} layout='responsive' loading='lazy' />
     );
   }
 
+  // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
   return <img {...props} />;
 };
 
@@ -47,11 +49,12 @@ const CodeBlock = ({ children }) => {
   );
 };
 
-const YouTube = ({ youTubeId }) => {
+const YouTube = ({ link }) => {
+  const url = new URL(link);
   return (
     <div className='aspect-w-16 aspect-h-9'>
       <iframe
-        src={'https://www.youtube.com/embed/' + youTubeId}
+        src={'https://www.youtube.com/embed/' + url.pathname}
         frameBorder='0'
         allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
         allowFullScreen
@@ -80,7 +83,6 @@ const GitGist = ({ url }) => {
     backgroundColor: '#262626',
   };
 
-  // 3. Create out useEffect function
   useEffect(() => {
     fetch(url)
       .then((response) => response.text())
@@ -98,28 +100,12 @@ const GitGist = ({ url }) => {
 };
 
 export const MDXComponent = {
-  // Image,
   a: CustomLink,
   img: CustomImage,
   CodeBlock,
   Step,
-  // YouTube,
+  YouTube,
   // Tweet,
   // Gist,
   GitGist,
 };
-
-/* <div className='flex overflow-hidden relative flex-col p-5 mx-auto my-5 space-y-5 w-full font-mono text-sm rounded-lg bg-gray-700'>
-  <div className='flex space-x-2 w-full'>
-    <span className='w-3 h-3 rounded-full bg-mac-cls' />
-    <span className='w-3 h-3 rounded-full bg-mac-min' />
-    <span className='w-3 h-3 rounded-full bg-mac-max' />
-  </div>
-  <div
-    style={divStyle}
-    // className=''
-    dangerouslySetInnerHTML={{
-      __html: '```Javascript:useIntersectionObserver.js\n' + gist + '\n```',
-    }}
-  ></div>
-</div>; */
