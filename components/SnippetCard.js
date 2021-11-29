@@ -12,7 +12,7 @@ export const SnippetCard = (props) => {
             </h1>
           </a>
         </Link>
-        <div className='flex-none border-1 md:order-2 my-3 md:my-0 w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-700'>
+        <div className='flex-none border-1 md:order-2 my-3 md:my-0 w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-800'>
           <span className='grid place-items-center w-full h-full text-gray-700 dark:text-gray-300 text-3xl'>
             {icons[props.icon]}
           </span>
