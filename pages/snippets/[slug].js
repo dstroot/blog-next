@@ -44,10 +44,10 @@ export default function BlogSlug({ code, frontMatter }) {
             <p className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full'>
               Date: {frontMatter.publishedAt}
             </p>
-            <p className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full'>
+            <p className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hidden md:block'>
               Words: {frontMatter.stats.words}
             </p>
-            <p className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full'>
+            <p className='px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full hidden md:block'>
               Time: {frontMatter.stats.text}
             </p>
           </div>
