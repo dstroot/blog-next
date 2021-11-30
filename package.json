@@ -10,6 +10,7 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.38.0",
     "@aws-sdk/lib-dynamodb": "^3.38.0",
+    "@google-analytics/data": "^2.8.0",
     "@mdx-js/react": "^1.6.22",
     "@remark-embedder/core": "^1.4.2",
     "@remark-embedder/transformer-oembed": "^1.0.2",
@@ -21,6 +22,7 @@
     "gray-matter": "4.0.2",
     "mdx-bundler": "^6.0.2",
     "mdx-embed": "^0.0.22",
+    "millify": "^4.0.0",
     "next": "12.0.0",
     "next-seo": "^4.28.1",
     "next-themes": "^0.0.14",

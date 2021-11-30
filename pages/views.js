@@ -1,8 +1,8 @@
 import useSWR, { SWRConfig } from 'swr';
 import { BASE_URL } from '../lib/constants';
+import { Stats } from '../components/Stats';
 
-const URL =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : BASE_URL;
+const URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : BASE_URL;
 const slug = '2021-10-08-human-denial-of-service-attack';
 const path = `${URL}/api/views/${slug}`;
 
@@ -10,6 +10,7 @@ export default function Page(props) {
   return (
     <SWRConfig value={props}>
       <Views />
+      <Stats />
     </SWRConfig>
   );
 }
