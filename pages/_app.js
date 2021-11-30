@@ -1,7 +1,10 @@
-// import { useEffect } from 'react';
-import '../styles/index.css';
+import { useEffect } from 'react';
 import { ThemeProvider } from 'next-themes';
 import { Layout } from '../components/Layout';
+import Router from 'next/router';
+import { pageview } from '../lib/gtag';
+
+import '../styles/index.css';
 
 // https://nextjs.org/docs/advanced-features/custom-app
 // https://jools.dev/nextjs-_appjs-example
@@ -22,6 +25,18 @@ export default function MyApp({ Component, pageProps }) {
   //     );
   //   }
   // }, []);
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      pageview(url);
+    };
+
+    Router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      Router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, []);
 
   return (
     <ThemeProvider attribute='class'>
