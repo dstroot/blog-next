@@ -51,28 +51,6 @@ export const Meta = () => {
       */}
       <meta name='color-scheme' content='light dark' />
       <meta name='theme-color' content='#000' />
-
-      {/*
-      Global Site Tag (gtag.js) - Google Analytics
-      https://blog.jarrodwatts.com/track-user-behaviour-on-your-website-with-google-analytics-and-nextjs
-      https://nextjs.org/docs/basic-features/script
-      */}
-
-      {/* <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
-      />
-
-      <Script strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'XXXXXXXXXX', {
-            page_path: window.location.pathname,
-          });
-        `}
-      </Script> */}
     </Head>
   );
 };

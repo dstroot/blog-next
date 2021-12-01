@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { ThemeProvider } from 'next-themes';
 import { Layout } from '../components/Layout';
-import Router from 'next/router';
-import { pageview } from '../lib/gtag';
 
 import '../styles/index.css';
 
@@ -26,17 +24,17 @@ export default function MyApp({ Component, pageProps }) {
   //   }
   // }, []);
 
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      pageview(url);
-    };
+  // useEffect(() => {
+  //   const handleRouteChange = (url) => {
+  //     pageview(url);
+  //   };
 
-    Router.events.on('routeChangeComplete', handleRouteChange);
+  //   Router.events.on('routeChangeComplete', handleRouteChange);
 
-    return () => {
-      Router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, []);
+  //   return () => {
+  //     Router.events.off('routeChangeComplete', handleRouteChange);
+  //   };
+  // }, []);
 
   return (
     <ThemeProvider attribute='class'>
