@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { getMDXFileBySlug } from '../../lib/processMDX';
 import { getFilesByExtension } from '../../lib/getAllFiles';
 import { MDXComponent } from '../../components/MDXComponent';
@@ -11,6 +11,7 @@ import { SEO } from '../../lib/seo';
 
 export default function BlogSlug({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
+
   // TODO add SEO capability with image
   const seo = {
     title: `${CMS_NAME} · ${frontMatter.title}`,
@@ -21,6 +22,13 @@ export default function BlogSlug({ code, frontMatter }) {
     ogType: 'article',
     twHandle: '@danstroot',
   };
+
+  // register page view after 5s
+  useEffect(() => {
+    setTimeout(() => {
+      fetch(`/api/views/${encodeURIComponent(frontMatter.slug)}`, { method: 'POST' });
+    }, 5000);
+  }, [frontMatter.slug]);
 
   return (
     <>

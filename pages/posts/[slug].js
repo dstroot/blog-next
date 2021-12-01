@@ -32,7 +32,7 @@ export default function Post({
     twHandle: '@danstroot',
   };
 
-  // register page view for the blog after 5s
+  // register page view after 5s
   useEffect(() => {
     setTimeout(() => {
       fetch(`/api/views/${encodeURIComponent(slug)}`, { method: 'POST' });
