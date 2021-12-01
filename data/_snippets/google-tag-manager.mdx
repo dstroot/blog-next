@@ -1,0 +1,33 @@
+---
+title: 'Google Tag Manager'
+published: true
+publishedAt: '2021-10-21'
+summary: 'Using Google Tag Manager in Nextjs.'
+icon: ganalytics
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+Google Tag Manager is Google's product that manages tagging and events from your web pages or application and it can feed Google Analytics as one of it's tagging targets.  In other words Google Tag Manager and Google Analytics work together! Here's the basics of how to get it setup.
+
+<Step number={1} title='Create a Google Tag Manager Account' />
+
+- Go to [Google Developer Console](https://console.cloud.google.com) and create a new project if you haven't already.
+- On the sidebar click on **Credentials** and then **Create Credentials**
+- Select **Service Account** as type of credential.
+- Go back to the **Credentials** page and select **Service Accounts**
+- Select **Keys** tab and then **Add Key** then create a **JSON key**
+- Download and keep this **JSON key** safe.
+
+<Step number={2} title='Enable Google Analytics Data API' />
+
+- On the sidebar click on **APIs & Services** and **ENABLE APIS AND SERVICES**
+- Search for **Google Analytics Data API** and enable it
+- Go to Analytics dashboard and click on **Admin** -> **Property User Management** -> **Add Users**
+- Add your service account email address (look in the JSON key for the email) and give it **Read and Analyze** access.
+
+<Step number={3} title='Install the @google-analytics/data package' />
