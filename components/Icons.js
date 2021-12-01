@@ -1,18 +1,14 @@
-import {
-  IoLogoJavascript,
-  IoLogoReact,
-  IoLogoHtml5,
-  IoLogoCss3,
-} from 'react-icons/io5';
+import { IoLogoJavascript, IoLogoReact, IoLogoHtml5, IoLogoCss3 } from 'react-icons/io5';
 import { VscTerminalBash } from 'react-icons/vsc';
 import { GiEarthAfricaEurope } from 'react-icons/gi';
-import { SiGoogleanalytics, SiTailwindcss } from 'react-icons/si';
+import { SiGoogleanalytics, SiGoogletagmanager, SiTailwindcss } from 'react-icons/si';
 import { BsMarkdownFill } from 'react-icons/bs';
 import { CgTimelapse, CgFramer } from 'react-icons/cg';
 
 export const icons = {
   opgp: <GiEarthAfricaEurope />,
-  ganalytics: <SiGoogleanalytics />,
+  ga: <SiGoogleanalytics />,
+  gtm: <SiGoogletagmanager />,
   mdx: <BsMarkdownFill />,
   timeout: <CgTimelapse />,
   fm: <CgFramer />,

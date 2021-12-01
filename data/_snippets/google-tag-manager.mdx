@@ -1,9 +1,9 @@
 ---
 title: 'Google Tag Manager'
 published: true
-publishedAt: '2021-10-21'
-summary: 'Using Google Tag Manager in Nextjs.'
-icon: ganalytics
+publishedAt: '2021-12-01'
+summary: 'Implementing Google Tag Manager in Nextjs.'
+icon: gtm
 tags:
   - Javascript
 #   - React Hook
@@ -12,22 +12,99 @@ tags:
 #   - HTML
 ---
 
-Google Tag Manager is Google's product that manages tagging and events from your web pages or application and it can feed Google Analytics as one of it's tagging targets.  In other words Google Tag Manager and Google Analytics work together! Here's the basics of how to get it setup.
+In this blog post, we'll go through how to set up Next.JS with Google Analytics using the latest versions (Next.JS 12, Google Tag Manager, and Google Analytics 4).
+
+## Background
+
+[Google Tag Manager](https://tagmanager.google.com) software from Google that allows you to deploy various types of code (tags) to your website. Some good examples of tags would be Google Analytics tracking codes, Google Analytics event codes, Google Ads conversion script and remarketing tags. There are many more types of code that can be added to your website using GTM, including custom codes.
+
+Google Tag Manager and Google Analytics explanation:
+
+<YouTube link='https://youtu.be/qm28tjEqZXA' />
+
+Google Tag Manager does not replace [Google Analytics](https://analytics.google.com). Instead, it helps you easily add Google Analytics tracking to a website and define rules when each tag fires. In other words Google Tag Manager and Google Analytics work together!
+
+Prior to GTM, GA tracking codes had to be hard-coded by a web developer on each individual page. Having hundreds of events is very difficult when it comes to maintaining/updating them. But Google Tag Manager solves this problem because all your tags are stored in one place – your GTM account.
+
+Google Tag Manager also lets you test your tags to make sure they are triggered when you load the right page or click a particular button. Another great benefit: you can change your tags and the way they work without actually changing the source code of your website – instead you just edit tags in GTM user interface and publish changes with a click of a button.
+
+Note in order the setup GTM and GA you will need _both_ a GTM Container ID from your Tag Manager Account (which looks like "GTM-XXXXXXX") _and_ a Google Analytics account and property and a measurement ID. A Google Analytics GA4 ID will look like "G-XXXXXXXXXX". To add GTM to your Nextjs site you will only need the GTM Container ID - the rest of the configuration is done via the GTM UI.
+
+Here we go:
 
 <Step number={1} title='Create a Google Tag Manager Account' />
 
-- Go to [Google Developer Console](https://console.cloud.google.com) and create a new project if you haven't already.
-- On the sidebar click on **Credentials** and then **Create Credentials**
-- Select **Service Account** as type of credential.
-- Go back to the **Credentials** page and select **Service Accounts**
-- Select **Keys** tab and then **Add Key** then create a **JSON key**
-- Download and keep this **JSON key** safe.
+Create an account, or use an existing account, at [Google Tag Manager](tagmanager.google.com). (A new container is created by default, and you can create additional containers within each account.)
 
-<Step number={2} title='Enable Google Analytics Data API' />
+> A Tag Manager account represents the topmost level of organization. Typically, only one account is needed per company. A Tag Manager account contains _one or more containers_, and there are specific container types that may be used for websites, AMP pages, Android apps, and iOS apps.
 
-- On the sidebar click on **APIs & Services** and **ENABLE APIS AND SERVICES**
-- Search for **Google Analytics Data API** and enable it
-- Go to Analytics dashboard and click on **Admin** -> **Property User Management** -> **Add Users**
-- Add your service account email address (look in the JSON key for the email) and give it **Read and Analyze** access.
+<Step number={2} title='Create an Account/Container inside Tag Manager' />
 
-<Step number={3} title='Install the @google-analytics/data package' />
+In Tag Manager, click Accounts and then Create account.
+
+- Enter an account name and indicate whether you'd like to share data anonymously with Google and others.
+- Enter a descriptive container name and select the type of content: Web, AMP, Android, or iOS. For our purposes choose web..
+- Click Create.
+- Review the Terms of Service and click Yes.
+
+When your new container first loads, you will be prompted with the web container installation code snippet. All you need here is the **GTM Container ID**.
+
+<Step number={3} title='Install the container in your Nextjs app' />
+
+This is surprisingly the simplest step. All you have to do is inject the GTM script in your `pages\_document.js` file. This is the best place to do it and it ensures GTM will be loaded at the top of your `head`.
+
+NOTE: A [Nextjs Custom Document](https://nextjs.org/docs/advanced-features/custom-document) is commonly used to augment your application's `html`, `head` and `body` tags.
+
+<CodeBlock>
+
+```js:_document.js {4-18, 24}
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+export default class CustomDocument extends Document {
+  renderGTMSnippet() {
+    return (
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer', '${process.env.GTM_KEY}');
+        `,
+        }}
+      />
+    );
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          {this.renderGTMSnippet()}
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+```
+
+</CodeBlock>
+
+That's it! Google Tag Manager is installed in your Nextjs app assuming you have set your envronment variable to your GTM Container ID.
+
+<Step number={4} title='Add and publish your tags' />
+
+The rest of the work is done by configuring Google Tag Manager. That is the power of GTM - your coding is done - the rest is all configuration. Most Tag Manager implementations start with a Google Analytics page view tag deployment. Here are step by step instructions for [how to deploy a Google Analytics tag](https://support.google.com/tagmanager/answer/6107124).
+
+There is a significant "gotcha" for Nextjs apps - actually all "Single Page Apps" (SPAs). That's because of how SPA's work, and not related to Nextjs per se - when you navigate pages in Nextjs the **page view doesn't fire** because the page didn't change! If you'd like to fire GTM correctly on each page navigation, be sure to enable the "History Change" trigger, as described [here](https://support.google.com/tagmanager/answer/7679322?hl=en).
+
+Your configuration in GTM should look like this as a bare minumum:
+
+![GTM Setup](/assets/snippets/img/gtm-setup.png)
+
+That's it!
