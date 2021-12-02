@@ -7,28 +7,28 @@ export const Stats = () => {
 
   return (
     <div className='flex flex-col mx-5'>
-      <h2 className='flex items-center py-5 space-x-2 text-2xl font-bold'>
+      <h2 className='flex items-center py-5 space-x-2'>
         {/* <span className='font-mono text-base'>01.</span> */}
-        <span className=''>Google Analytics Stats</span>
-        <span className='w-20 h-[1px] bg-black dark:bg-white'></span>
+        <span className='text-3xl font-bold'>Google Analytics Stats</span>
+        <span className='w-20 h-[2px] bg-black dark:bg-white'></span>
       </h2>
 
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6'>
-        {/* Items */}
+        {/* Views */}
         <div className='flex relative flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
-          <h1 className='text-2xl font-black tracking-wide'>Page Views</h1>
+          <h1 className='text-2xl font-black'>Page Views</h1>
           <span className='text-5xl font-black'>{!stats ? '-' : millify(stats.pageViews)}</span>
         </div>
-        {/* Items */}
+        {/* Engagement */}
         <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
-          <h1 className='text-2xl font-black tracking-wide'>Engagement Rate</h1>
+          <h1 className='text-2xl font-black'>Engagement Rate</h1>
           <span className='text-5xl font-black'>
             {!stats ? '-' : (stats.engagmentRate * 100).toFixed(0) + '%'}
           </span>
         </div>
-        {/* Items */}
+        {/* Users */}
         <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
-          <h1 className='text-2xl font-black tracking-wide'>Total Users</h1>
+          <h1 className='text-2xl font-black'>Total Users</h1>
           <span className='text-5xl font-black'>{!stats ? '-' : millify(stats.totalUsers)}</span>
         </div>
       </div>
