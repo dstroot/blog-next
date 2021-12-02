@@ -1,46 +1,33 @@
-// import { useEffect } from 'react';
+import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 import { Layout } from '../components/Layout';
-
 import '../styles/index.css';
 
 // https://nextjs.org/docs/advanced-features/custom-app
 // https://jools.dev/nextjs-_appjs-example
 export default function MyApp({ Component, pageProps }) {
-  // load simple service worker
-  // useEffect(() => {
-  //   if ('serviceWorker' in navigator) {
-  //     navigator.serviceWorker.register('/serviceWorker.js').then(
-  //       function (registration) {
-  //         console.log(
-  //           'Service Worker registration successful with scope: ',
-  //           registration.scope
-  //         );
-  //       },
-  //       function (err) {
-  //         console.log('Service Worker registration failed: ', err);
-  //       }
-  //     );
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   const handleRouteChange = (url) => {
-  //     pageview(url);
-  //   };
-
-  //   Router.events.on('routeChangeComplete', handleRouteChange);
-
-  //   return () => {
-  //     Router.events.off('routeChangeComplete', handleRouteChange);
-  //   };
-  // }, []);
-
+  const gtm = process.env.NEXT_PUBLIC_GTM_ACCOUNT;
   return (
-    <ThemeProvider attribute='class'>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <>
+      {/* Google Tag Manager */}
+      <Script
+        id='gtm'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer', '${gtm}');
+          `,
+        }}
+      />
+      <ThemeProvider attribute='class'>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </>
   );
 }

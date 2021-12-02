@@ -1,10 +1,9 @@
 import useSWR from 'swr';
 import millify from 'millify';
 
-import { Fetcher } from '../lib/fetcher';
-
 export const Stats = () => {
-  const { data: stats } = useSWR('/api/stats', Fetcher);
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const { data: stats } = useSWR('/api/stats', fetcher);
 
   return (
     <div className='flex flex-col mx-5'>
