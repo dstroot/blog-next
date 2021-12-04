@@ -10,11 +10,11 @@ export const Footer = () => {
   return (
     <footer className='bg-gray-100 text-gray-600 dark:bg-dark-4 dark:text-gray-300 transition-colors'>
       <Container>
-        <div className='flex flex-col md:flex-row items-center mb-2'>
+        <div className='flex flex-col md:flex-row items-center content-center gap-x-1 my-2 md:my-4'>
           {/* 
             IMAGE & TAGLINE 
           */}
-          <div className='mb-4 md:mr-8 md:mb-0'>
+          <div className='flex-none mb-4 md:mr-8 md:mb-0'>
             <Image
               src='/assets/blog/authors/dan.jpeg'
               alt={CMS_NAME}
@@ -24,7 +24,7 @@ export const Footer = () => {
               className='rounded-full'
             />
           </div>
-          <div className='text-center md:text-left text-xl md:text-2xl'>
+          <div className='flex-1 text-center md:text-left text-xl md:text-2xl'>
             I love building things. Family man, technologist and Hacker News aficionado. Eternally
             curious.
           </div>
@@ -32,20 +32,29 @@ export const Footer = () => {
           {/* 
             LINKS 
           */}
-          {/* <div className='flex flex-col mb-4 text-sm md:ml-4'>
-            <span className='font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-1 min-w-max'>
-              More Stuff
-            </span>
-            <Link href='/about'>
-              <a className='hover:text-gray-500 font-medium'>About</a>
-            </Link>
-            <Link href='/archive'>
-              <a className='hover:text-gray-500 font-medium'>Archive</a>
-            </Link>
-            <Link href='/stats'>
-              <a className='hover:text-gray-500 font-medium'>Stats</a>
-            </Link>
-          </div> */}
+          <div className='flex-none'>
+            <div className='flex flex-col text-sm'>
+              <span className='font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-1 min-w-max'>
+                More Stuff
+              </span>
+
+              <Link href='/archive'>
+                <a className='hover:text-gray-500 font-medium'>Post Archive</a>
+              </Link>
+              <Link href='/snippets'>
+                <a className='hover:text-gray-500 font-medium'>Code Snippets</a>
+              </Link>
+              {/* <Link href='/about'>
+                <a className='hover:text-gray-500 font-medium'>About Me</a>
+              </Link> */}
+              <a
+                href='https://dstroot.github.io/readme/'
+                className='hover:text-gray-500 font-medium'
+              >
+                My Readme
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* 
@@ -56,12 +65,20 @@ export const Footer = () => {
             Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
             {year.getFullYear()}
             {','}&nbsp;
-            <Link href='/about'>
+            <Link href='/stats'>
               <a className='font-medium'>Dan Stroot</a>
             </Link>
             {'.'}
           </div>
-          <div className='flex items-center space-x-4 order-1 md:order-2 mb-3 md:mb-0 text-2xl'>
+          {/* <div className='flex items-center text-xs font-medium dark:text-gray-400 hover:underline'>
+            <Link
+              href='/archive'
+              className='font-medium dark:text-gray-400 hover:underline hover:text-gray-500'
+            >
+              <a>Post Archive</a>
+            </Link>
+          </div> */}
+          <div className='flex items-center space-x-4 order-1 md:order-2 my-3 md:my-0 text-2xl'>
             <SocialLinks />
           </div>
         </div>

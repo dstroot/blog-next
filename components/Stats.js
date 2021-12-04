@@ -7,11 +7,9 @@ export const Stats = () => {
 
   return (
     <div className='flex flex-col mx-5'>
-      <h2 className='flex items-center py-5 space-x-2'>
-        {/* <span className='font-mono text-base'>01.</span> */}
-        <span className='text-3xl font-bold'>Google Analytics Stats</span>
-        <span className='w-20 h-[2px] bg-black dark:bg-white'></span>
-      </h2>
+      <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left my-8'>
+        Analytics
+      </h1>
 
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6'>
         {/* Views */}
