@@ -1,5 +1,6 @@
 import useSWR, { SWRConfig } from 'swr';
 import { BASE_URL } from '../lib/constants';
+import { Newsletter } from '../components/Newsletter';
 
 const URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : BASE_URL;
 const slug = '2021-10-08-human-denial-of-service-attack';
@@ -9,6 +10,7 @@ export default function Page(props) {
   return (
     <SWRConfig value={props}>
       <Views />
+      <Newsletter />
     </SWRConfig>
   );
 }
