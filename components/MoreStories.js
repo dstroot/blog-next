@@ -42,7 +42,7 @@ export const MoreStories = ({ posts }) => {
       <h2 className='mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight'>
         More Stories
       </h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20'>
         {postList.map((post, index) => {
           return (
             <div key={`${post.id}-${index}`}>
@@ -63,9 +63,7 @@ export const MoreStories = ({ posts }) => {
         })}
       </div>
       {endList && (
-        <div className='my-12 text-xl md:text-3xl text-center'>
-          Wow! You made it to the end!
-        </div>
+        <div className='my-12 text-xl md:text-3xl text-center'>Wow! You made it to the end!</div>
       )}
     </section>
   );
