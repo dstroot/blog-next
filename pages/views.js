@@ -8,10 +8,12 @@ const path = `${URL}/api/views/${slug}`;
 
 export default function Page(props) {
   return (
-    <SWRConfig value={props}>
-      <Views />
+    <>
+      <SWRConfig value={props}>
+        <Views />
+      </SWRConfig>
       <GitHub />
-    </SWRConfig>
+    </>
   );
 }
 
