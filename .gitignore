@@ -35,4 +35,6 @@ yarn-error.log*
 
 # misc
 feed.xml
+robots.txt
+sitemap.xml
 .google.*
