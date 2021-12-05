@@ -1,6 +1,8 @@
 import useSWR, { SWRConfig } from 'swr';
 import { BASE_URL } from '../lib/constants';
 import { GitHub } from '../components/GitHub';
+import { Newsletter } from '../components/Newsletter';
+// import { Views } from '../components/Views';
 
 const URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : BASE_URL;
 const slug = '2021-10-08-human-denial-of-service-attack';
@@ -13,6 +15,7 @@ export default function Page(props) {
         <Views />
       </SWRConfig>
       <GitHub />
+      <Newsletter />
     </>
   );
 }
