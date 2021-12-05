@@ -22,9 +22,10 @@ Made With:
 - [React](https://reactjs.org/)
 - [Hero Icons](https://heroicons.com/)
 - [Remark](https://github.com/remarkjs) Markdown processing
-- [Gray Matter](https://github.com/jonschlinkert/gray-matter) YAML Front Matter
+- [Gray Matter](https://github.com/jonschlinkert/gray-matter) YAML Front Matter processing
 - [Megatags](https://megatags.co/)
 - [Web Code Tools](https://webcode.tools)
+- [Next Sitemap](https://github.com/iamvishnusankar/next-sitemap) sitemap.xml and robots.txt
 
 TODO
 
@@ -48,3 +49,4 @@ TODO
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
 - [x] Add ability to lint markdown files using https://github.com/remarkjs/remark-lint.
 - [ ] Add all the open graph seo meta tags. See megatags or web code tools above. https://ahrefs.com/blog/open-graph-meta-tags/
+- [x] Add robots.txt and sitemap.xml using https://github.com/iamvishnusankar/next-sitemap
