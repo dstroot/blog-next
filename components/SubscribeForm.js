@@ -62,7 +62,7 @@ export default function SubscribeForm({ status, message, onValidated }) {
         </button>
       </div>
       {status === 'success' && status !== 'error' && !error && (
-        <div className='mt-2 font-mono text-sm text-navy-green'>{decode(message)}</div>
+        <div className='mt-2 font-mono text-sm'>{decode(message)}</div>
       )}
       {status === 'error' || error ? (
         <div className='mt-2 font-mono text-sm text-red-500'>{error || Sanitize(message)}</div>
