@@ -29,7 +29,7 @@ Made With:
 
 TODO: Checklist
 
-- [x] Add "Edit on GitHub" Link
+- [x] Add "Edit on GitHub" Link to pages
 - [x] Add Syntax Highlighting
 - [x] Add emoji support (https://github.com/rhysd/remark-emoji)
 - [x] Add "GitHub Flavored Markdown" support (mainly for tables)
@@ -42,12 +42,12 @@ TODO: Checklist
 - [x] Custom 404 page
 - [x] Custom Error page
 - [x] Add RSS feed
-- [ ] Add analytics (Vercel, Plausible, GA, or?)
+- [ ] Add analytics (Vercel, Plausible, GA, or?) - Added Google Tag Manager and Google Analytics
 - [x] Add Archive page
 - [ ] Add Search?
 - [ ] Add Privacy and Terms
 - [x] 100 Lighthouse Scores
-- [x] Pseudo infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
+- [x] Infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
 - [x] Add ability to lint markdown files using https://github.com/remarkjs/remark-lint.
 - [ ] Add all the open graph seo meta tags. See megatags or web code tools above. https://ahrefs.com/blog/open-graph-meta-tags/
