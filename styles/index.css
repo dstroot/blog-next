@@ -82,6 +82,10 @@ pre[class*='language-'] {
   --lum: 30%;
 }
 
+/* // 204 nice blue  // 27 nice orange */
+/* // Orange (goes with Grays) */
+/* hsl(27, 100%, 50%) */
+
 .bg-blue0 {
   --lum: 10%;
   background: hsl(var(--hue), var(--sat), var(--lum));

@@ -27,7 +27,7 @@ Made With:
 - [Web Code Tools](https://webcode.tools)
 - [Next Sitemap](https://github.com/iamvishnusankar/next-sitemap) sitemap.xml and robots.txt
 
-TODO
+TODO: Checklist
 
 - [x] Add "Edit on GitHub" Link
 - [x] Add Syntax Highlighting
@@ -40,10 +40,12 @@ TODO
 - [x] Favicon
 - [x] Manifest and other images/icons (test with lighthouse)
 - [x] Custom 404 page
+- [x] Custom Error page
 - [x] Add RSS feed
 - [ ] Add analytics (Vercel, Plausible, GA, or?)
 - [x] Add Archive page
 - [ ] Add Search?
+- [ ] Add Privacy and Terms
 - [x] 100 Lighthouse Scores
 - [x] Pseudo infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
