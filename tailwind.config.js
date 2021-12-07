@@ -1,15 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  poweredByHeader: false,
-  reactStrictMode: true,
-  mode: 'jit',
-  experimental: {
-    concurrentFeatures: true,
-    serverComponents: true,
-    optimizeCss: true,
-    esmExternals: true,
-  },
+ mode: 'jit',
   // https://purgecss.com/
   purge: {
     content: ['./components/**/*.js', './pages/**/*.js'],
