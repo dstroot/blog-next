@@ -46,6 +46,7 @@ TODO: Checklist
 - [x] Add Archive page
 - [ ] Add Search?
 - [ ] Add Privacy and Terms
+- [ ] Add security and CSP headers (next.config.js)
 - [x] 100 Lighthouse Scores
 - [x] Infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
