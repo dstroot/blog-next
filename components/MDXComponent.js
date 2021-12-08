@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-// import { Gist, Tweet } from 'mdx-embed';
-// https://www.mdx-embed.com/?path=/docs/introduction--page
+import Prism from 'prismjs';
+import { Tweet } from 'mdx-embed'; 
+// https://www.mdx-embed.com/?path=/docs/mdx-embed--page
+// There are lot's of components available via mdx-embed
+// Import them above and export them below
 
 const CustomLink = (props) => {
   const href = props.href;
@@ -78,25 +81,26 @@ const Step = (props) => {
 
 const GitGist = ({ url }) => {
   let [gist, setGist] = useState(null);
-  const divStyle = {
-    whiteSpace: 'pre',
-    color: '#e5e5e5',
-    backgroundColor: '#262626',
-  };
+  const getName = (url) => url.substring(url.lastIndexOf('/') + 1);
 
   useEffect(() => {
     fetch(url)
       .then((response) => response.text())
-      .then((text) => setGist(text));
+      .then((text) => setGist(Prism.highlight(text, Prism.languages.javascript, 'javascript')));
   }, [url]);
 
   return (
-    <div
-      style={divStyle}
-      dangerouslySetInnerHTML={{
-        __html: gist,
-      }}
-    />
+    <>
+      <div className='rehype-code-title'>{getName(url)}</div>
+      <pre className='language-javascript'>
+        <code
+          className='language-javascript code-highlight'
+          dangerouslySetInnerHTML={{
+            __html: gist,
+          }}
+        />
+      </pre>
+    </>
   );
 };
 
@@ -106,7 +110,7 @@ export const MDXComponent = {
   CodeBlock,
   Step,
   YouTube,
-  // Tweet,  // https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/
+  Tweet, // https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/
   // Gist,
   GitGist,
 };
