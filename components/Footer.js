@@ -34,7 +34,7 @@ export const Footer = () => {
           */}
           <div className='flex-none'>
             <div className='flex flex-col text-sm'>
-              <span className='font-bold text-gray-700 uppercase mt-4 md:mt-0 mb-1 min-w-max'>
+              <span className='font-bold text-gray-700 dark:text-gray-100 uppercase mt-4 md:mt-0 mb-1 min-w-max'>
                 More Stuff
               </span>
 
