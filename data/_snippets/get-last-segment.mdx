@@ -1,0 +1,42 @@
+---
+title: 'Get the last segment of a URL'
+published: true
+publishedAt: '2021-10-23'
+summary: 'How to get the last segment of a path or URL using JavaScript.'
+icon: js
+tags:
+  - Javascript
+# - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+Here's how to get the last segment of a path or URL:
+
+`const lastSegment = path.substring(path.lastIndexOf('/') + 1)`
+
+### How does this work?
+
+The `path` string contains a path. Like '/Users/Steve/Desktop', for example.
+
+First, we identify the index of the last '/' in the path, calling lastIndexOf('/') on the `path` string.
+
+Next, we pass that to the substring() method we call on the same `path` string. This will return a new string that starts from the position of the last '/', + 1 (otherwise we’d also get the '/' back).
+
+You can make a simple function:
+
+<CodeBlock>
+
+```JavaScript:getLastSegment.js
+const getLastSegment = (path) => {
+  path.substring(path.lastIndexOf('/') + 1)
+}
+
+getLastSegment('/Users') // "users"
+getLastSegment('/Users/Flavio') // "Flavio"
+getLastSegment('/Users/Flavio/test.jpg') // "test.jpg"
+getLastSegment('https://flavicopes.com/test') // "test"
+```
+
+</CodeBlock>
