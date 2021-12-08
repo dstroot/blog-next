@@ -51,7 +51,7 @@ export const Footer = () => {
                 href='https://dstroot.github.io/readme/'
                 className='hover:text-gray-500 font-medium'
               >
-                My Readme
+                User Guide
               </a>
             </div>
           </div>
