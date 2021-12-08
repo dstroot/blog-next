@@ -1,7 +1,6 @@
 ---
 title: Human Denial of Service Attacks
-excerpt:
-  Can companies create human "denial of service" attacks against their own employees?
+excerpt: Can companies create human "denial of service" attacks against their own employees?
   They can and they do - all in the name of collaboration and 'making the business better'. If you work
   in a large organization you will recognize the pattern. Here's how it works...
 coverImage: /assets/blog/img/ddos-attack.jpg

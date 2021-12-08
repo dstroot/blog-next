@@ -33,7 +33,7 @@ pre[class*='language-'],
 pre[class*='language-'] {
   padding: 15px;
   border-radius: 4px;
-  border: 1px solid #e1e1e8;
+  /* border: 1px solid #e1e1e8; */
   overflow: auto;
   position: relative;
 }
