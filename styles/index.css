@@ -15,7 +15,7 @@ pre[class*='language-'] {
  */
 
 .rehype-code-title {
-  @apply absolute top-5 right-5 font-mono font-bold text-white;
+  @apply absolute top-4 right-5 font-mono font-bold text-white;
 }
 
 .rehype-code-title + pre {

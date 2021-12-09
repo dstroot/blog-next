@@ -1,15 +1,11 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
- mode: 'jit',
+  // mode: 'jit',
   // https://purgecss.com/
-  purge: {
-    content: ['./components/**/*.js', './pages/**/*.js'],
-    options: {
-      keyframes: true,
-    },
-    safelist: ['aspect-w-16', 'aspect-h-9'],
-  },
+
+  content: ['./components/**/*.js', './pages/**/*.js'],
+  safelist: ['aspect-w-16', 'aspect-h-9'],
   darkMode: 'class', // true, false, 'media' or 'class'
   /*
   The theme section is where you define your color palette, fonts, type scale, border sizes, breakpoints — anything related to the visual design of your site.
@@ -20,7 +16,7 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.trueGray,
+      gray: colors.neutral,
       blue: colors.blue,
     },
     extend: {

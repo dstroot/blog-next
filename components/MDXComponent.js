@@ -74,7 +74,7 @@ const Step = (props) => {
         {/* bg-gradient-to-r from-purple-400 to-pink-500 */}
         {props.number}
       </div>
-      <h3 className='text-2xl font-bold text-gray-100'>{props.title}</h3>
+      <h3 className='text-2xl font-bold text-gray-800 dark:text-gray-100'>{props.title}</h3>
     </div>
   );
 };
