@@ -2,19 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* pre::-webkit-scrollbar {
-  display: none;
-}
-
-pre {
-  @apply overflow-x-scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+/**
+ * Fixes the bottom of the 'Terminal'
+ */
 
 pre[class*='language-'] {
   @apply mb-0;
-} */
+}
 
 /**
  * rehype-code-titles
@@ -23,6 +17,7 @@ pre[class*='language-'] {
 .rehype-code-title {
   @apply absolute top-5 right-5 font-mono font-bold text-white;
 }
+
 .rehype-code-title + pre {
   @apply mt-0 rounded-t-none;
 }

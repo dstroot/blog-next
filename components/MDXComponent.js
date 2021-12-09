@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Prism from 'prismjs';
-import { Tweet } from 'mdx-embed'; 
+import { Tweet } from 'mdx-embed';
 // https://www.mdx-embed.com/?path=/docs/mdx-embed--page
 // There are lot's of components available via mdx-embed
 // Import them above and export them below
