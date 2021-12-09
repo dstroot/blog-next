@@ -7,7 +7,7 @@
  */
 
 pre[class*='language-'] {
-  @apply mb-0;
+  @apply mb-0 overflow-x-hidden; 
 }
 
 /**
