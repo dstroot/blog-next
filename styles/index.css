@@ -3,11 +3,11 @@
 @import 'tailwindcss/utilities';
 
 /**
- * Fixes the bottom of the 'Terminal'
+ * Fixes the bottom of the 'Terminal' CodeBlock component
  */
 
 pre[class*='language-'] {
-  @apply mb-0 overflow-x-hidden; 
+  @apply mb-0 overflow-x-hidden;
 }
 
 /**

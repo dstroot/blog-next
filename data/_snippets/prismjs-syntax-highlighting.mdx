@@ -1,0 +1,124 @@
+---
+title: Adding Syntax Highlighting in Nextjs
+summary: If you want to show example code on a page in Nextjs you will help your readers by
+  implemeting some form of syntax highlighting. Here's how.
+publishedAt: '2021-12-03'
+published: false
+icon: js
+tags:
+  - Javascript
+  # - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+## Adding highlighting in a markdown-based blog
+
+<Step number={1} title='Add syntax highlights to markdown code' />
+
+If you are using something like Remark you can simply add remark-prism to your markdown processing as follows.
+
+<CodeBlock>
+
+```JavaScript:markdownToHTML.js {4, 18} showLineNumbers
+import { remark } from 'remark';
+import html from 'remark-html';
+import gfm from 'remark-gfm';
+import prism from 'remark-prism';
+import emoji from 'remark-emoji';
+
+/*
+Using remark to convert markdown to HTML:
+  - prism for code syntax highlighting
+  - gfm for tables
+  - emoji
+*/
+
+export async function markdownToHTML(markdown) {
+  const result = await remark()
+    .use(html, { sanitize: false })
+    .use(gfm)
+    .use(prism)
+    .use(emoji)
+    .process(markdown);
+  return result.toString();
+}
+```
+
+</CodeBlock>
+
+<Step number={2} title='Add css' />
+
+Then, make sure you load a prism css theme to actually colorize your code.
+
+<CodeBlock>
+
+```JavaScript:/pages/_app.js {1} showLineNumbers
+import 'prismjs/themes/prism-tomorrow.css';
+import '../styles/index.css';
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <Component {...pageProps} />
+  );
+}
+
+```
+
+</CodeBlock>
+
+### Adding highlighting to HTML directly
+
+In this case we will be moving some of the work from the server to the client
+
+<Step number={1} title='Install prism js using npm / yarn' />
+
+```Shell
+npm i prismjs
+yarn add prismjs
+```
+
+Prismjs also provides TypeScript support, `npm i @types/prismjs` or yarn add `@types/prismjs`
+
+<Step number={1} title='Use prismjs on your page' />
+
+Import prismjs into your blog page and highlight all.
+The next step is just import prismjs into your codes and call the highlightAll function in your useEffect / componentDidMount.
+
+<CodeBlock>
+
+```Javascript:/pages/page.js
+import Prism from 'prismjs';
+import "prismjs/components/prism-java"; // if you need a specific language
+import 'prismjs/themes/prism-tomorrow.css'; // css theme
+
+export default function Index() {
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') { // don't run on server
+        Prism.highlightAll();
+    }
+  }, []);
+
+  return (
+    <pre class="language-javascript" >
+      <code>
+        function getFullName (user) {
+          const fullName = user.firstName + user.lastName;
+
+          return fullName;
+        }
+      </code>
+    </pre>
+  );
+}
+```
+
+</CodeBlock>
+
+It will automatically select the code blocks and will highlight them all. Note, you must have your code in the format above.
+
+#### References
+
+- [Prismjs](https://prismjs.com/)
