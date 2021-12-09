@@ -2,7 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-pre::-webkit-scrollbar {
+/* pre::-webkit-scrollbar {
   display: none;
 }
 
@@ -14,7 +14,7 @@ pre {
 
 pre[class*='language-'] {
   @apply mb-0;
-}
+} */
 
 /**
  * rehype-code-titles

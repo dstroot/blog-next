@@ -1,7 +1,8 @@
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 import { Layout } from '../components/Layout';
-import '../styles/prismjs/tomorrow.css';
+// /Users/Dan/Code/blog-next/node_modules/prismjs/themes
+import 'prismjs/themes/prism-tomorrow.css';
 import '../styles/index.css';
 
 // https://nextjs.org/docs/advanced-features/custom-app
