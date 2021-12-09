@@ -51,45 +51,43 @@ When your new container first loads, you will be prompted with the web container
 
 <Step number={3} title='Install the container in your Nextjs app' />
 
-This is surprisingly the simplest step. All you have to do is inject the GTM script in your `pages\_document.js` file. This is the best place to do it and it ensures GTM will be loaded at the top of your `head`.
+This is surprisingly the simplest step. Next has an example [here](https://github.com/vercel/next.js/tree/canary/examples/with-google-tag-manager). All you have to do is inject the GTM script in your `pages\_app.js` file using the next/script component.
 
-NOTE: A [Nextjs Custom Document](https://nextjs.org/docs/advanced-features/custom-document) is commonly used to augment your application's `html`, `head` and `body` tags.
+The Next example also shows that you can manually fire a page view based on a route change event but that is unnecessary - you should just configure GTM to trigger on a history change event as outlined in step 4 below. All you have to do is configure the code below.
 
 <CodeBlock>
 
-```js:_document.js {4-18, 24}
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+```js:_app.js {1, 7, 10-23} showLineNumbers
+import Script from 'next/script';
+import { ThemeProvider } from 'next-themes';
+import { Layout } from '../components/Layout';
+import '../styles/index.css';
 
-export default class CustomDocument extends Document {
-  renderGTMSnippet() {
-    return (
-      <script
+export default function MyApp({ Component, pageProps }) {
+  const gtm = process.env.NEXT_PUBLIC_GTM_ACCOUNT;
+  return (
+    <>
+      {/* Google Tag Manager */}
+      <Script
+        id='gtm'
+        strategy='afterInteractive'
         dangerouslySetInnerHTML={{
           __html: `
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer', '${process.env.GTM_KEY}');
-        `,
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer', '${gtm}');
+          `,
         }}
       />
-    );
-  }
-
-  render() {
-    return (
-      <Html lang="en">
-        <Head>
-          {this.renderGTMSnippet()}
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+      <ThemeProvider attribute='class'>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </>
+  );
 }
 ```
 
@@ -107,4 +105,4 @@ Your configuration in GTM should look like this as a bare minumum:
 
 ![GTM Setup](/assets/snippets/img/gtm-setup.png)
 
-That's it!
+That's it! Now if you want to get fancy and show your Google Analytics stats inside your site [check this out!](/snippets/google-analytics-api)

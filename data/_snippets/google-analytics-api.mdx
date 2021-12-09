@@ -12,26 +12,31 @@ tags:
 #   - HTML
 ---
 
+Let's assume you have Google Analytics setup for your account and you want to display your analytics in your application. Check out the link [here](/stats). Well Google has an API you can use. You can call this API from a Next API as follows:
+
 <Step number={1} title='Create a Google Service Account' />
 
 - Go to [Google Developer Console](https://console.cloud.google.com) and create a new project if you haven't already.
 - On the sidebar click on **Credentials** and then **Create Credentials**
-- Select **Service Account** as type of credential.
+- Select **Service Account** as the credential type.
 - Go back to the **Credentials** page and select **Service Accounts**
 - Select **Keys** tab and then **Add Key** then create a **JSON key**
 - Download and keep this **JSON key** safe.
 
-<Step number={2} title='Enable Google Analytics Data API' />
+<Step number={2} title='Enable the Google Analytics Data API' />
 
 - On the sidebar click on **APIs & Services** and **ENABLE APIS AND SERVICES**
 - Search for **Google Analytics Data API** and enable it
 - Go to Analytics dashboard and click on **Admin** -> **Property User Management** -> **Add Users**
 - Add your service account email address (look in the JSON key for the email) and give it **Read and Analyze** access.
 
+This may be a little confusing but you are just granting the service account you just created access to the Google Analytics Data API so you can use it in your Next app.
+
 <Step number={3} title='Install the @google-analytics/data package' />
 
 <CodeBlock>
-```bash:Terminal
+  
+```bash:shell
 # If you're using npm
 npm install @google-analytics/data
 
@@ -40,15 +45,16 @@ npm install @google-analytics/data
 yarn add @google-analytics/data
 
 ````
+
 </CodeBlock>
 
 - Set the **client_email**, **client_id** and **private_key** as env variables in your _.env.local_ file
 
-<Step number={4} title="Get the Data" />
+<Step number={4} title="Get the Data (create a Next API)" />
 
 <CodeBlock>
-```Javascript:api/stats/index.js
 
+```Javascript:api/stats/index.js
 import { BetaAnalyticsDataClient } from '@google-analytics/data';
 
 export default async function handler(req, res) {
@@ -98,5 +104,51 @@ export default async function handler(req, res) {
   });
 }
 ````
+
+</CodeBlock>
+
+<Step number={5} title='Show the Data' />
+
+Here's the exact React component I used as linked above. The markup is styled using [Tailwindcss](https://tailwindcss.com/) so that may look unfamiliar, but we just call the Next API using useSWR (which calls the Google Analytics API) and then we show Page Views, Engagement and Users.
+
+<CodeBlock>
+
+```Javascript:components/stats/index.js
+import useSWR from 'swr';
+import millify from 'millify';
+
+export const Stats = () => {
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const { data: stats } = useSWR('/api/stats', fetcher);
+
+  return (
+    <div className='flex flex-col mx-5'>
+      <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left my-8'>
+        Analytics
+      </h1>
+
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6'>
+        {/* Views */}
+        <div className='flex relative flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
+          <h1 className='text-2xl font-black'>Page Views</h1>
+          <span className='text-5xl font-black'>{!stats ? '-' : millify(stats.pageViews)}</span>
+        </div>
+        {/* Engagement */}
+        <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
+          <h1 className='text-2xl font-black'>Engagement Rate</h1>
+          <span className='text-5xl font-black'>
+            {!stats ? '-' : (stats.engagmentRate * 100).toFixed(0) + '%'}
+          </span>
+        </div>
+        {/* Users */}
+        <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
+          <h1 className='text-2xl font-black'>Total Users</h1>
+          <span className='text-5xl font-black'>{!stats ? '-' : millify(stats.totalUsers)}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+```
 
 </CodeBlock>
