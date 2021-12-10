@@ -2,23 +2,23 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    concurrentFeatures: false, // react 18 needed
-    serverComponents: false, // react 18 needed
-  },
+  // experimental: {
+  //   concurrentFeatures: false, // react 18 needed
+  //   serverComponents: false, // react 18 needed
+  // },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
     // domains: [],
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: '/(.*)',
-  //       headers: securityHeaders,
-  //     },
-  //   ];
-  // },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
   // async headers() {
   //   return [
   //     {
@@ -54,13 +54,13 @@ module.exports = {
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' fonts.googleapis.com https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com;
   child-src *.youtube.com *.google.com *.twitter.com;
-  style-src 'self' 'unsafe-inline' *.googleapis.com;
+  style-src 'self' 'unsafe-inline';
   img-src * blob: data: ;
   media-src 'none';
   connect-src *;
-  font-src 'self' fonts.gstatic.com;
+  font-src 'self';
 `;
 
 const securityHeaders = [

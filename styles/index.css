@@ -7,7 +7,7 @@
  */
 
 pre[class*='language-'] {
-  @apply mb-0 overflow-x-hidden;
+  @apply mb-0 overflow-x-auto text-sm;
 }
 
 /**
