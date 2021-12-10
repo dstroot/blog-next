@@ -136,7 +136,7 @@ export default function Index() {
                 </em>
               </small>
             </p>
-            <p className='mt-10 leading-none'>
+            <p className='leading-none'>
               <small>
                 <em>
                   Opinions expressed here are solely my own. They do not reflect the views of my
