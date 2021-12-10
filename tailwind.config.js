@@ -1,9 +1,6 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  // mode: 'jit',
-  // https://purgecss.com/
-
   content: ['./components/**/*.js', './pages/**/*.js'],
   safelist: ['aspect-w-16', 'aspect-h-9'],
   darkMode: 'class', // true, false, 'media' or 'class'
@@ -77,13 +74,6 @@ module.exports = {
                   marginTop: '0',
                   marginBottom: '0',
                 },
-                code: {
-                  fontSize: '0.875rem',
-                },
-                pre: {
-                  fontSize: '0.875rem',
-                  lineHeight: '1.3',
-                },
                 cite: {
                   fontSize: '1.0rem',
                 },
@@ -156,27 +146,8 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: { typography: ['dark'] },
-  },
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
-  // webpack: (config, { isServer }) => {
-  //   // Fixes npm packages that depend on `fs` module
-  //   if (!isServer) {
-  //     config.node = {
-  //       fs: 'empty',
-  //     };
-  //   }
-
-  //   return config;
-  // },
 };
-
-/*
-By adding darkmode: 'class' to the config, you've instructed TailwindCSS to include all of the CSS utility classes for dark mode. This enables a dark variant that you can now add as classes to your React elements like className="bg-white dark:bg-gray-900" and the correct class will be provided when dark is active on your html element.
-
-By default, the dark variant is enabled for backgroundColor, borderColor, gradientColorStops, placeholderColor, and textColor.
-*/
 
 /*
 module.exports: {

@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <ThemeProvider attribute='class'>
+      <ThemeProvider attribute='class' enableColorScheme={false}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

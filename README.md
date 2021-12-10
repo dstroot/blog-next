@@ -25,6 +25,7 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [Megatags](https://megatags.co/) Create and test Open Graph and other Meta Tags
 - [Web Code Tools](https://webcode.tools) Meta Tags tools
 - [Next Sitemap](https://github.com/iamvishnusankar/next-sitemap) sitemap.xml and robots.txt
+- [Dark Mode](https://github.com/pacocoursey/next-themes) Easy Dark Mode
 
 TODO: Checklist
 
@@ -32,7 +33,7 @@ TODO: Checklist
 - [x] Add Syntax Highlighting
 - [x] Add emoji support (https://github.com/rhysd/remark-emoji)
 - [x] Add "GitHub Flavored Markdown" support (mainly for tables)
-- [x] Add Dark/Light Mode
+- [x] Add Dark/Light Mode (https://github.com/pacocoursey/next-themes)
 - [x] Add About Me Page
 - [x] Create a nice footer
 - [x] Add a "Read More" link
