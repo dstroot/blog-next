@@ -71,15 +71,14 @@ pre[class*='language-'] {
  *  Colors
  */
 
+/* 
 :root {
   --hue: 204;
   --sat: 100%;
   --lum: 30%;
 }
 
-/* // 204 nice blue  // 27 nice orange */
-/* // Orange (goes with Grays) */
-/* hsl(27, 100%, 50%) */
+// 204 nice blue  // 27 nice orange
 
 .bg-blue0 {
   --lum: 10%;
@@ -242,40 +241,27 @@ pre[class*='language-'] {
 }
 
 .warning-light {
-  /* --lum: 80%;
-  background: hsl(var(--hue), var(--sat), var(--lum)); */
   background: hsl(34, 100%, 50%);
 }
 
 .warning-dark {
-  /* --lum: 85%; */
   background: hsl(34, 100%, 65%);
 }
 
 .error-light {
-  /* --lum: 80%;
-  background: hsl(var(--hue), var(--sat), var(--lum)); */
   background: hsl(0, 66%, 47%);
 }
 
 .error-dark {
-  /* --lum: 85%; */
   background: hsl(0, 66%, 62%);
 }
 
 .success-light {
-  /* --lum: 80%;
-  background: hsl(var(--hue), var(--sat), var(--lum)); */
   background: hsl(174, 100%, 27%);
 }
 
 .success-dark {
-  /* --lum: 85%; */
   background: hsl(174, 100%, 42%);
-}
-
-.overlay {
-  background: rgba(255, 255, 255, 0.07);
 }
 
 .error-text {
@@ -289,3 +275,7 @@ pre[class*='language-'] {
 .success-text {
   color: hsl(174, 100%, 27%);
 }
+
+.overlay {
+  background: rgba(255, 255, 255, 0.07);
+} */

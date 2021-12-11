@@ -27,7 +27,7 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [Next Sitemap](https://github.com/iamvishnusankar/next-sitemap) sitemap.xml and robots.txt
 - [Dark Mode](https://github.com/pacocoursey/next-themes) Easy Dark Mode
 
-TODO: Checklist
+### Checklist
 
 - [x] Add "Edit on GitHub" Link to pages
 - [x] Add Syntax Highlighting
