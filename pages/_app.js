@@ -1,7 +1,8 @@
 import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 import { Layout } from '../components/Layout';
-// /Users/Dan/Code/blog-next/node_modules/prismjs/themes
+
+/* -- Styles -- */
 import 'prismjs/themes/prism-tomorrow.css';
 import '../styles/index.css';
 

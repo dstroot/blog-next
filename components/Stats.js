@@ -12,24 +12,39 @@ export const Stats = () => {
       </h1>
 
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6'>
+        {/* Total Users */}
+        <StatsCard name={'Total Users'}>{!stats ? '-' : millify(stats.totalUsers)}</StatsCard>
+
+        {/* Active Users */}
+        <StatsCard name={'Active Users'}>{!stats ? '-' : millify(stats.activeUsers)}</StatsCard>
+
         {/* Views */}
-        <div className='flex relative flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
-          <h1 className='text-2xl font-black'>Page Views</h1>
-          <span className='text-5xl font-black'>{!stats ? '-' : millify(stats.pageViews)}</span>
-        </div>
-        {/* Engagement */}
-        <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
-          <h1 className='text-2xl font-black'>Engagement Rate</h1>
-          <span className='text-5xl font-black'>
-            {!stats ? '-' : (stats.engagmentRate * 100).toFixed(0) + '%'}
-          </span>
-        </div>
-        {/* Users */}
-        <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
-          <h1 className='text-2xl font-black'>Total Users</h1>
-          <span className='text-5xl font-black'>{!stats ? '-' : millify(stats.totalUsers)}</span>
-        </div>
+        <StatsCard name={'Page Views'}>{!stats ? '-' : millify(stats.pageViews)}</StatsCard>
+
+        {/* Engaged Sessions */}
+        <StatsCard name={'Engaged Sessions'}>
+          {!stats ? '-' : millify(stats.engagedSessions)}
+        </StatsCard>
+
+        {/* Engagement Duration */}
+        <StatsCard name={'Engagement Duration'}>
+          {!stats ? '-' : millify(stats.engagementDuration / stats.totalUsers / 60) + ' Min'}
+        </StatsCard>
+
+        {/* Engagement Rate */}
+        <StatsCard name={'Engagement Rate'}>
+          {!stats ? '-' : (stats.engagementRate * 100).toFixed(0) + '%'}
+        </StatsCard>
       </div>
+    </div>
+  );
+};
+
+const StatsCard = ({ name, children }) => {
+  return (
+    <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
+      <h1 className='text-2xl font-black text-gray-500 dark:text-gray-500'>{name}</h1>
+      <span className='text-4xl font-black text-gray-700 dark:text-gray-300'>{children}</span>
     </div>
   );
 };

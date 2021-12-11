@@ -25,23 +25,35 @@ export default async function handler(req, res) {
         endDate: 'today',
       },
     ],
-
+    // https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema
     metrics: [
+      {
+        name: 'totalUsers',
+      },
+      {
+        name: 'activeUsers',
+      },
       {
         name: 'screenpageViews',
       },
       {
-        name: 'engagementRate',
+        name: 'engagedSessions',
       },
       {
-        name: 'totalUsers',
+        name: 'userEngagementDuration',
+      },
+      {
+        name: 'engagementRate',
       },
     ],
   });
 
   return res.status(200).json({
-    pageViews: totalReport[0]?.rows[0]?.metricValues[0]?.value || 0,
-    engagmentRate: totalReport[0]?.rows[0]?.metricValues[1]?.value || 0,
-    totalUsers: totalReport[0]?.rows[0]?.metricValues[2]?.value || 0,
+    totalUsers: totalReport[0]?.rows[0]?.metricValues[0]?.value || 0,
+    activeUsers: totalReport[0]?.rows[0]?.metricValues[1]?.value || 0,
+    pageViews: totalReport[0]?.rows[0]?.metricValues[2]?.value || 0,
+    engagedSessions: totalReport[0]?.rows[0]?.metricValues[3]?.value || 0,
+    engagementDuration: totalReport[0]?.rows[0]?.metricValues[4]?.value || 0,
+    engagementRate: totalReport[0]?.rows[0]?.metricValues[5]?.value || 0,
   });
 }
