@@ -54,7 +54,7 @@ module.exports = {
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com;
   child-src *.youtube.com *.google.com *.twitter.com;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data: ;
@@ -70,7 +70,7 @@ const securityHeaders = [
   },
   {
     key: 'Referrer-Policy',
-    value: 'origin-when-cross-origin',
+    value: 'strict-origin-when-cross-origin',
   },
   {
     key: 'X-Frame-Options',
@@ -90,6 +90,6 @@ const securityHeaders = [
   },
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+    value: 'camera=(), microphone=(), geolocation=()',
   },
 ];

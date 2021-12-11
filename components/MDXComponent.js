@@ -58,7 +58,7 @@ const YouTube = ({ link }) => {
   return (
     <div className='aspect-w-16 aspect-h-9'>
       <iframe
-        src={'https://www.youtube.com/embed/' + url.pathname}
+        src={'https://www.youtube-nocookie.com/embed/' + url.pathname}
         frameBorder='0'
         allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
         allowFullScreen
