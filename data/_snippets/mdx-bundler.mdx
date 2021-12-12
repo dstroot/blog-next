@@ -12,35 +12,47 @@ tags:
 #   - HTML
 ---
 
+MDX is an extension of Markdown that allows you to import and write JSX in your markdown documents.
+
+Markdown can be used for creating web pages, documents or any text that needs to be transformed into other formats like For web applications, Markdown needs to be transformed into HTML. But, Using Markdown you can only use HTML elements.
+
+MDX is an extension of Markdown that allows you to import and write JSX in your markdown documents. So, MDX takes the format a step further and allows us to include our own custom React components!
+
+Today, MDX Bundler is arguably the best option for processing MDX in a Nextjs applicattion. mdx-bundler uses [esbuild](https://esbuild.github.io/), so it's VERY fast and supports TypeScript files (for the dependencies of your MDX files). It also uses [xdm](https://wooorm.com/xdm/) which is a more modern and powerful MDX compiler with no extra runtime requirements.
+
+Here we go -
+
 <Step number={1} title={'Install the dependencies for mdx-bundler'} />
 
 <CodeBlock>
+
 ```bash:Terminal
 # If you're using npm
 npm install mdx-bundler esbuild
 
 # If you're using yarn
-
 yarn add mdx-bundler esbuild
+```
 
-````
 </CodeBlock>
 
-<Step number={2} title={"Create a directory with MDX files"} />
+<Step number={2} title={'Create a directory with MDX files'} />
 
 <CodeBlock>
+
 ```bash:Terminal
 \posts
   \file-1.mdx
   \file-2.mdx
   \file-3.mdx
-````
+```
 
 </CodeBlock>
 
 <Step number={3} title='Install necessary Plugins' />
 
 <CodeBlock>
+
 ```bash:Terminal
 # If you're using npm
 npm install reading-time gray-matter rehype-slug rehype-code-titles rehype-autolink-headings rehype-prism-plus
@@ -49,7 +61,8 @@ npm install reading-time gray-matter rehype-slug rehype-code-titles rehype-autol
 
 yarn add reading-time gray-matter rehype-slug rehype-code-titles rehype-autolink-headings rehype-prism-plus
 
-````
+```
+
 </CodeBlock>
 
 - [reading-time](https://www.npmjs.com/package/reading-time) Estimate an article's reading time
@@ -59,17 +72,18 @@ yarn add reading-time gray-matter rehype-slug rehype-code-titles rehype-autolink
 - [rehype-prism-plus](https://www.npmjs.com/package/rehype-prism-plus/v/1.0.0) Plugin to add code highlighting
 - [rehype-autolink-headings](https://www.npmjs.com/package/rehype-autolink-headings) Plugin to automatically add link to headings
 
-<Step number={4} title="Parse all MDX files" />
+<Step number={4} title='Parse all MDX files' />
 
 <CodeBlock>
+
 ```Javascript:mdx.js
 import matter from 'gray-matter';
-import { join } from 'path';
 import readingTime from 'reading-time';
+import { join } from 'path';
+import { bundleMDX } from 'mdx-bundler';
 import { readdirSync, readFileSync } from 'fs';
 
-import { bundleMDX } from 'mdx-bundler';
-
+/* Rehype Plugins */
 import rehypeSlug from 'rehype-slug';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -138,7 +152,12 @@ export async function getAllFilesFrontMatter() {
     ];
   }, []);
 }
-
-````
+```
 
 </CodeBlock>
+
+### Resources
+
+- [Comparison of MDX integration strategies](https://dev.to/tylerlwsmith/quick-comparison-of-mdx-integration-strategies-with-next-js-1kcm)
+- [Use MDX Bundler with Nextjs](https://dipeshwagle.com/blog/use-mdx-bundler-next-js)
+- [MDX Bundler and Nextjs](https://www.iamyadav.com/blogs/use-mdx-bundler-with-next-js)
