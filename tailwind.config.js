@@ -14,7 +14,7 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.neutral,
-      // blue: colors.blue,
+      blue: colors.blue,
     },
     extend: {
       colors: {
@@ -132,7 +132,7 @@ module.exports = {
                   color: theme('colors.gray.200'),
                   backgroundColor: theme('colors.gray.800'),
                 },
-                thead: {
+                'thead th': {
                   color: theme('colors.white'),
                   borderBottomColor: theme('colors.gray.400'),
                 },

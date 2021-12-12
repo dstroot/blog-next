@@ -1,6 +1,15 @@
 import useSWR from 'swr';
 import millify from 'millify';
 
+const StatsCard = ({ name, children }) => {
+  return (
+    <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
+      <h1 className='text-2xl font-black text-gray-500 dark:text-gray-500'>{name}</h1>
+      <span className='text-4xl font-black text-gray-700 dark:text-gray-300'>{children}</span>
+    </div>
+  );
+};
+
 export const Stats = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data: stats } = useSWR('/api/stats', fetcher);
@@ -36,15 +45,6 @@ export const Stats = () => {
           {!stats ? '-' : (stats.engagementRate * 100).toFixed(0) + '%'}
         </StatsCard>
       </div>
-    </div>
-  );
-};
-
-const StatsCard = ({ name, children }) => {
-  return (
-    <div className='flex flex-col items-center p-5 space-y-5 w-full rounded shadow-lg bg-gray-100 dark:bg-gray-800'>
-      <h1 className='text-2xl font-black text-gray-500 dark:text-gray-500'>{name}</h1>
-      <span className='text-4xl font-black text-gray-700 dark:text-gray-300'>{children}</span>
     </div>
   );
 };
