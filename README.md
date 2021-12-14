@@ -16,7 +16,8 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [Next.js](https://nextjs.org/) "The React Framework for Production"
 - [Vercel](https://vercel.com/home) Hosting & Analytics
 - [React](https://reactjs.org/) For UI components
-- [Hero Icons](https://heroicons.com/) Easy Icons in React
+- [Hero Icons](https://heroicons.com/) Icons in React from the makers of Tailwindcss
+- [React Icons](https://react-icons.github.io/react-icons/) More React icons
 - [Remark](https://github.com/remarkjs) Markdown processing
 - [MDX Bundler](https://github.com/kentcdodds/mdx-bundler) MDX processing
 - [Gray Matter](https://github.com/jonschlinkert/gray-matter) Front Matter processing
