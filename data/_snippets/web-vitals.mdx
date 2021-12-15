@@ -1,0 +1,75 @@
+---
+title: 'Web Vitals'
+published: true
+publishedAt: '2021-10-23'
+summary: 'Web Vitals is an initiative by Google to provide unified
+  guidance for quality signals that are essential to delivering a
+  great user experience on the web.'
+icon: js
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+Web Vitals is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web. The Web Vitals initiative aims to simplify the landscape, and help sites focus on the metrics that matter most, the Core Web Vitals.
+
+Core Web Vitals are the subset of Web Vitals that apply to **all web pages**, should be measured by all site owners, and will be surfaced across all Google tools.
+
+Each of the Core Web Vitals metrics represents a distinct facet of the user experience, is measurable in the field, and reflects the real-world experience of a critical user-centric outcome.
+
+### The Metrics
+
+- **Largest Contentful Paint (LCP)** : measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds of when the page first starts loading.
+
+- **First Input Delay (FID)**: measures interactivity. To provide a good user experience, pages should have a FID of 100 milliseconds or less.
+
+- **Cumulative Layout Shift (CLS)**: measures visual stability. To provide a good user experience, pages should maintain a CLS of 0.1. or less.
+
+- **First Contentful Paint (FCP)**: measures perceived load speed because it marks the first point in the page load timeline where the user can see anything on the screen. a fast FCP helps reassure the user that something is happening.
+
+- **Time to First Byte (TTFB)**: a foundational metric for measuring connection setup time and web server responsiveness in both the lab and the field. It helps identify when a web server is too slow to respond to requests. When a user requests an HTML document it precedes every other meaningful loading performance metric.
+
+<CodeBlock>
+
+```javascript
+export const reportWebVitals = (onPerfEntry) => {
+  if (onPerfEntry && onPerfEntry instanceof Function) {
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(onPerfEntry);
+      getFID(onPerfEntry);
+      getFCP(onPerfEntry);
+      getLCP(onPerfEntry);
+      getTTFB(onPerfEntry);
+    });
+  }
+};
+```
+
+</CodeBlock>
+
+<CodeBlock>
+
+```javascript
+import { reportWebVitals } from './reportWebVitals';
+
+function sendToAnalytics(metric) {
+  const body = JSON.stringify(metric);
+  // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+  (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
+    fetch('/analytics', { body, method: 'POST', keepalive: true });
+}
+
+reportWebVitals(sendToAnalytics);
+```
+
+</CodeBlock>
+
+Once you've configured your site to use the web-vitals library to measure and send your Core Web Vitals data to an analytics endpoint, the next step is to aggregate and report on that data to see if your pages are meeting the recommended thresholds for at least 75% of page visits.
+
+### References
+
+- [Web Vitals](https://web.dev/learn-web-vitals/)
+- [Send Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)

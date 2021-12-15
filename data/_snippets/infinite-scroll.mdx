@@ -14,6 +14,8 @@ tags:
 
 This is a simple example of how to implement an infinite scrolling application in React. What we are doing is tracking if an image is visible in the viewport (actually the image **before** the last image ). When it is visible, increment the page count - which in turn will kick off another API call and get more images.
 
+A fully working codebase is [here](https://github.com/dstroot/react-infinite-scroll), and deployed on Netlify [here](). In this example we are using images from
+
 <Step number={1} title='The "driver" function' />
 
 This simple function drives our "infinite scroll". If the visible image in the viewport is the next to last image, then increment the page (which kicks off another API call as you will see in the next step).
