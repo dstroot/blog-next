@@ -16,15 +16,13 @@ One of the worst cognitive biases which humans suffer from is the belief that ob
 
 _Individuals matter._
 
-A pattern I've repeatedly seen is companies will plan out the next few quarters of work and then assign some number of people to it, one person for one quarter to a project, two people for three quarters to another, etc. This process enables executives to make decisions about costs, priorities and project funding, and teams to understand what other teams are doing and plan appropriately. However, I've never worked in an organization where this level of planning enabled teams to effectively execute work.
+A pattern I've repeatedly seen is companies will plan out the next few quarters of work and then assign some number of people, one person for one quarter to a project, two people for three quarters to another, etc. This process enables executives to make decisions about costs, priorities and project funding. However, I've never worked in an organization where this level of planning enabled teams to effectively execute work.
 
 The roadmap creation and review process perpetuates the polite fiction that people are interchangeable, that people can be generically abstracted over. However, when the rubber meets the road, and a critical project simply must be completed on time what happens? Suddenly the people who are assigned to the project become very, very important.
 
 When work starts on a specific project, the first questions asked are "**Who** is going to lead it? **Who** is going work on it?". We all know intuitively that the people who ultimately get staffed on the project make an enormous difference on how long it will take, and the odds of success.
 
-One of the primary jobs of managers at all levels is to plan and then execute in accordance with the plan. Some managers are good at it, many aren’t, but the good ones know which people get stuff done and how long something should take. Good managers can even adjust estimates based on individual productivity. Only a direct line manager can do this, anyone else won’t have the knowledge of each person’s capabilities.
-
-This is how you build highly accurate plans – you must plan with the specific people in mind who will be doing the work.
+One of the primary jobs of managers at all levels is to plan and then execute in accordance with the plan. Good managers know which people get stuff done and how long something should take. Good managers can even adjust estimates based on individual productivity. This is how you build highly accurate plans – you must plan with the specific people in mind who will be doing the work. Only a direct line manager can do this, anyone else won’t have the knowledge of each person’s capabilities.
 
 ### An Early Lesson Why Individuals Matter
 
@@ -42,21 +40,21 @@ Individuals matter.
 
 ### Job Complexity Matters
 
-If I have a job that only requires picking up rocks and placing them in a bucket, one could argue that “anyone could do it”, which is generally true. However even with unskilled labor there are considerable differences in output. How strong am I? How much stamina do I have? Do I have good eyesight to see rocks from far away? Do I pick up “good” rocks? Even in this absurd example individual performance matters.
+If I have a job that only requires picking up rocks and placing them in a bucket, one could argue that “anyone could do it”, which is generally true. However even with unskilled labor there are considerable differences in output. How strong am I? How much stamina do I have? Even in this absurd example individual performance matters.
 
-As we progress from “lifts rocks” to “performs brain surgery” the capability, knowledge, and skill of the specific individual matters more and more. None of us would choose a doctor by random selection using the mental model that they are “all the same”. My mental model is 50% of doctors graduated at the bottom half of their class.
+As we progress from “lifts rocks” to “performs brain surgery” the capability, knowledge, and skill of the specific individual matters more and more. Hopefully none of us would choose a doctor by random selection using the mental model that they are “all the same”. My mental model is 50% of doctors graduated at the bottom half of their class.
 
 Technology jobs have progressed much like medicine – as technology has become more and more complex, jobs have become increasingly specialized. Increasing specialization, coupled with business knowledge tends to make individuals highly specialized (and really matter to your company).
 
 The more complexity there is in your business, and the more unique your business is, the more individuals matter.
 
-### The Type of Work Matters Too
+### The Type of Work Matters
 
-Motivation is a big one. Some tasks (or projects) just don't motivate me at all, and they turn into an awful slog. Others are enthralling and I have a hard time logging out at the end of the day. I think there's easily a 5x difference in my own personal performance between those. Could be more. What is your productivity difference when you work on something you are excited about and believe in vs. something you think is a waste of your time?
+Motivation is a big one. Some tasks (or projects) just don't motivate me at all, and they turn into an awful slog. Others are enthralling and I have a hard time logging out at the end of the day. I think there's easily a 3x difference in my own personal performance between those. Could be more. What is your productivity difference when you work on something you are excited about and believe in vs. something you think is a waste of your time?
 
 In addition to motivation is skills alignment – this leads to the concept of the “10x” engineer – the rock star who is ten times as productive as the average engineer. Whether you believe in this idea or not, we probably can agree that some people are significantly more productive - and hiring for that trait is nearly impossible.
 
-Why? Because they are only productive _after_ they learn your systems, technology, business practices. In other words, _no one comes in the door as a 10x engineer_. On the other hand, you can develop people into 10x engineers. This suggests that taking steps to _retain_ highly effective engineers (and highly effective teams) by not ignoring the evidence that they are not fungible is what is most important.
+Why? Because they are only productive _after_ they learn your systems, technology, and business practices. In other words, _no one comes in the door as a 10x engineer_. On the other hand, you can develop people into 10x engineers. This suggests that taking steps to _retain_ highly effective engineers (by not ignoring the evidence that they are not fungible) is what is most important.
 
 The other factor is engineers are usually only “10x” in narrow, specialized technology areas that they know well. If you move them to another team, using different technology and supporting a different business process they quickly revert to being average (at least until they come up to speed again, which may or may not happen). In other words, if we asked Lebron James to play soccer (play with his feet and not his hands) he might be far below average – and remain there.
 

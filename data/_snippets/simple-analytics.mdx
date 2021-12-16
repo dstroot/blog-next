@@ -1,6 +1,6 @@
 ---
 title: 'Simple Analytics'
-published: true
+published: false
 publishedAt: '2021-10-19'
 summary: Sometimes you want to roll your own analytics and track something
   simple like page views without adding any trackers to your site. Many people
@@ -112,3 +112,26 @@ export default async function handler(req, res) {
 ```
 
 </CodeBlock>
+
+```javascript
+import { useEffect } from 'react'
+import Script from 'next/script'
+import { useRouter } from 'next/router'
+import { GTM_ID, pageview } from '../lib/gtm'
+
+export const pageview = (url) => {
+  window.dataLayer.push({
+    event: 'pageview',
+    page: url,
+  })
+}
+
+function MyApp({ Component, pageProps }) {
+  const router = useRouter()
+  useEffect(() => {
+    router.events.on('routeChangeComplete', pageview)
+    return () => {
+      router.events.off('routeChangeComplete', pageview)
+    }
+  }, [router.events])
+```

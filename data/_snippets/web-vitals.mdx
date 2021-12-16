@@ -1,6 +1,6 @@
 ---
 title: 'Web Vitals'
-published: true
+published: false
 publishedAt: '2021-10-23'
 summary: 'Web Vitals is an initiative by Google to provide unified
   guidance for quality signals that are essential to delivering a
@@ -16,7 +16,7 @@ tags:
 
 Web Vitals is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web. The Web Vitals initiative aims to simplify the landscape, and help sites focus on the metrics that matter most, the Core Web Vitals.
 
-Core Web Vitals are the subset of Web Vitals that apply to **all web pages**, should be measured by all site owners, and will be surfaced across all Google tools.
+**Core Web Vitals** are the subset of Web Vitals that apply to **all web pages**, should be measured by all site owners, and will be surfaced across all Google tools.
 
 Each of the Core Web Vitals metrics represents a distinct facet of the user experience, is measurable in the field, and reflects the real-world experience of a critical user-centric outcome.
 
@@ -31,6 +31,8 @@ Each of the Core Web Vitals metrics represents a distinct facet of the user expe
 - **First Contentful Paint (FCP)**: measures perceived load speed because it marks the first point in the page load timeline where the user can see anything on the screen. a fast FCP helps reassure the user that something is happening.
 
 - **Time to First Byte (TTFB)**: a foundational metric for measuring connection setup time and web server responsiveness in both the lab and the field. It helps identify when a web server is too slow to respond to requests. When a user requests an HTML document it precedes every other meaningful loading performance metric.
+
+### Implementing Web Vitals Metrics
 
 <CodeBlock>
 
@@ -57,11 +59,10 @@ import { reportWebVitals } from './reportWebVitals';
 
 function sendToAnalytics(metric) {
   const body = JSON.stringify(metric);
-  
+
   // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
   (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
     fetch('/analytics', { body, method: 'POST', keepalive: true });
-    
 }
 
 reportWebVitals(sendToAnalytics);
@@ -75,3 +76,5 @@ Once you've configured your site to use the web-vitals library to measure and se
 
 - [Web Vitals](https://web.dev/learn-web-vitals/)
 - [Send Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)
+- [Track Web Vitals in Google Analytics GA4](https://www.simoahava.com/analytics/track-core-web-vitals-in-ga4-with-google-tag-manager/)
+- [Web Vitals Report](https://github.com/GoogleChromeLabs/web-vitals-report)
