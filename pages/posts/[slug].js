@@ -35,7 +35,13 @@ export default function Post({
   // register page view after 5s
   useEffect(() => {
     setTimeout(() => {
-      fetch(`/api/views/${encodeURIComponent(slug)}`, { method: 'POST' });
+      // Note: StrictMode renders components twice (dev, not production) in order to
+      // detect problems with your code. If you are running in dev and seeing this trigger
+      // twice that could be the reason.
+
+      // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+      (navigator.sendBeacon && navigator.sendBeacon(`/api/views/${encodeURIComponent(slug)}`)) ||
+        fetch(`/api/views/${encodeURIComponent(slug)}`, { method: 'POST' });
     }, 5000);
   }, [slug]);
 

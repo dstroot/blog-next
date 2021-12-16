@@ -1,0 +1,114 @@
+---
+title: 'Simple Analytics'
+published: true
+publishedAt: '2021-10-19'
+summary: Sometimes you want to roll your own analytics and track something
+  simple like page views without adding any trackers to your site. Many people
+  block trackers and this allows you to collect simple stats without them.
+icon: react
+tags:
+  # - Javascript
+  - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+<Step number={1} title='How to increment a page view counter' />
+
+Let's assume you have a blog with different blog pages. Ideally you want to call an API each time a specific page is viewed to increment a page counter. For example, the useEffect function below will call an API. The API will read the slug in in the URL and increment a page view counter with a key of that slug. In this case it waits 5 seconds before firing so if people don't really read the page it won't fire. One of the nice things about building your own metrics is you have full control. In addition, your users that block trackers like Google analytics will still be recorded.
+
+<CodeBlock>
+
+```javascript
+// Note: StrictMode renders components twice (in dev, not production) in order to
+// detect problems with your code. If you are running in dev and seeing this trigger
+// twice that could be the reason.
+
+useEffect(() => {
+  setTimeout(() => {
+    // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+    (navigator.sendBeacon && navigator.sendBeacon(`/api/views/${encodeURIComponent(slug)}`)) ||
+      fetch(`/api/views/${encodeURIComponent(slug)}`, { method: 'POST' });
+  }, 5000); // register a page view after 5s
+}, [slug]);
+```
+
+</CodeBlock>
+
+<Step number={2} title='Create the API' />
+
+In this example we are using Next.js so creating an API is pretty simple. We can use the same endpoint to increment stats (via the POST method) and to retrieve stats (via the GET method).
+
+<CodeBlock>
+
+```javascript
+import { get, upd } from '../../../lib/dynamodb';
+let params = { TableName: process.env.TABLE_NAME };
+
+export default async function handler(req, res) {
+  const { slug } = req.query;
+
+  if (!slug) {
+    return res.status(400).json({
+      error: "Please provide a value for 'slug'",
+    });
+  }
+
+  // METHOD SWITCH
+  switch (req.method) {
+    case 'GET':
+      return getSlugCount(slug);
+    case 'POST':
+      return IncrementSlugCount(slug);
+    default:
+      return res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
+
+  // GET
+  async function getSlugCount(slug) {
+    params = {
+      ...params,
+      Key: {
+        slug: slug,
+      },
+    };
+
+    try {
+      const data = await get(params);
+      if (data.Item) {
+        return res.status(200).json(data.Item);
+      } else {
+        return res.status(404).json({ result: 'not found' });
+      }
+    } catch (err) {
+      return res.status(400).json(err);
+    }
+  }
+
+  // POST
+  async function IncrementSlugCount(slug) {
+    params = {
+      ...params,
+      Key: {
+        slug: slug,
+      },
+      UpdateExpression: 'SET viewCount = if_not_exists(viewCount, :initial) + :incr',
+      ExpressionAttributeValues: {
+        ':initial': 0,
+        ':incr': 1,
+      },
+      ReturnValues: 'UPDATED_NEW',
+    };
+
+    try {
+      const data = await upd(params);
+      return res.status(201).json({ result: 'success', data: data.Attributes });
+    } catch (err) {
+      return res.status(400).json(err);
+    }
+  }
+}
+```
+
+</CodeBlock>

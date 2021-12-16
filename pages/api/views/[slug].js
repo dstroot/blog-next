@@ -1,9 +1,11 @@
 import { get, upd } from '../../../lib/dynamodb';
 let params = { TableName: process.env.TABLE_NAME };
 
+// debug node warnings
+process.on('warning', (e) => console.warn(e.stack));
+
 export default async function handler(req, res) {
   const { slug } = req.query;
-  req.setMaxListeners(100); // TODO Why?
 
   if (!slug) {
     return res.status(400).json({
@@ -49,8 +51,7 @@ export default async function handler(req, res) {
       Key: {
         slug: slug,
       },
-      UpdateExpression:
-        'SET viewCount = if_not_exists(viewCount, :initial) + :incr',
+      UpdateExpression: 'SET viewCount = if_not_exists(viewCount, :initial) + :incr',
       ExpressionAttributeValues: {
         ':initial': 0,
         ':incr': 1,
