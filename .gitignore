@@ -38,3 +38,5 @@ feed.xml
 robots.txt
 sitemap.xml
 .google.*
+sw.js
+workbox*.js
