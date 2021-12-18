@@ -56,14 +56,13 @@ const CodeBlock = ({ children }) => {
 const YouTube = ({ link }) => {
   const url = new URL(link);
   return (
-    <div className='aspect-w-16 aspect-h-9'>
-      <iframe
-        src={'https://www.youtube-nocookie.com/embed/' + url.pathname}
-        frameBorder='0'
-        allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
-      ></iframe>
-    </div>
+    <iframe
+      className='w-full aspect-[16/9]'
+      src={'https://www.youtube-nocookie.com/embed/' + url.pathname}
+      frameBorder='0'
+      allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+      allowFullScreen
+    ></iframe>
   );
 };
 
