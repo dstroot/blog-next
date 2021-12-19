@@ -88,7 +88,7 @@ We can't have the people who actually "do the work" attend dozens or hundreds of
 
 The worse the DDoS attack the deeper the hierarchy must be. The hierarchy is the "buffer" or "rate limiter" of the system.
 
-In the middle of the hierarchy stack are the "professional meeting attenders". The middle managers who everyone wonders "what is their job?" and "why don't they accomplish anything?". Their job is simply to absorb the DDoS attacks so the people below them can work normally and respond to service requests.
+In the middle of the hierarchy stack are the "professional meeting attenders". The middle managers who everyone wonders "what is their job?" and "why don't they accomplish anything?". Their job is simply to absorb the DDoS attacks so the people below them can work normally and respond to service requests. According to a study in Harvard Business Review, [middle managers are the most disgruntled group in the workforce](https://hbr.org/2014/11/why-middle-managers-are-so-unhappy), do you wonder why?
 
 Those at the top of the organization see their roles as 'agents of change' and they launch initiatives in their areas to 'make the business better' but of course this is the primary source of the DDoS attacks. These programs generate hundreds (thousands?) of hours of meetings each across the organization.
 
@@ -107,3 +107,4 @@ _If you think this looks sensationalized, or you think there is no person or dep
 #### References
 
 - [This Weekly Meeting Took Up 300,000 Hours a Year](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year)
+- [Why Middle Managers Are So Unhappy](https://hbr.org/2014/11/why-middle-managers-are-so-unhappy)

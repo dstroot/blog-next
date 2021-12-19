@@ -3,9 +3,10 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   content: ['./components/**/*.js', './pages/**/*.js'],
   safelist: ['aspect-w-16', 'aspect-h-9'],
-  darkMode: 'class', // true, false, 'media' or 'class'
+  darkMode: 'class',
   /*
-  The theme section is where you define your color palette, fonts, type scale, border sizes, breakpoints, etc. — anything related to the visual design of your site.
+    The theme section is where you define your color palette, fonts, type scale, border sizes, 
+    breakpoints, etc. — anything related to the visual design of your site.
   */
   theme: {
     colors: {
