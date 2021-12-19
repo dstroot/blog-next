@@ -52,7 +52,7 @@ Training machine learning models on publicly available data is generally conside
 
 3. Microsoft offers a very extensible Integrated Development Environment (IDE) called Visual Studio Code, or VSCode that many programmers already use. GitHub Copilot is available today only as a Visual Studio Code extension.
 
-> For now, we’re focused on delivering the best experience in Visual Studio Code only.
+> "For now, we’re focused on delivering the best experience in Visual Studio Code only."
 
 Copilot will create a virtuous circle because **drive programmers to use VSCode** they will be more productive. The code suggestions they choose from Copilot will further train Copilot so it will make even better suggestions. Programmers save their code on GitHub because eventually it will improve Copilot, which further improves their productivity and code quality.
 
@@ -70,7 +70,7 @@ Today, a human still must review and accept the code suggestions, which provider
 
 The clear legal issue for users of Copilot discussed by IP lawyer [Kate Downing](https://fossa.com/blog/analyzing-legal-implications-github-copilot/) is that in some cases using Copilot’s suggestions may be a breach of license (or require relicensing your own work under a GPL-compatible license):
 
-> “The more complex and lengthy the suggestion, the more likely it has some sort of copyrightable expression.”
+> "The more complex and lengthy the suggestion, the more likely it has some sort of copyrightable expression."
 
 ### See Copilot Answer Leetcode Code Interview Questions
 
@@ -95,4 +95,4 @@ However, **software engineering is not the same thing as writing code**. Softwar
 - [GitHub Copilot](https://copilot.github.com/)
 - [GitHub’s Commercial AI Tool Was Built From Open Source Code](https://www.wired.com/story/github-commercial-ai-tool-built-open-source-code/)
 - [Is GitHub Copilot a blessing, or a curse?](https://www.fast.ai/2021/07/19/copilot/)
-- [Free Software Foundation: Call for white papers on philosophical and legal questions around Copilot](https://www.fsf.org/blogs/licensing/fsf-funded-call-for-white-papers-on-philosophical-and-legal-questions-around-copilot)
+- [FSF: Call for white papers on philosophical and legal questions around Copilot](https://www.fsf.org/blogs/licensing/fsf-funded-call-for-white-papers-on-philosophical-and-legal-questions-around-copilot)

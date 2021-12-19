@@ -71,6 +71,16 @@ pre[class*='language-'] {
  *  Colors
  */
 
+.mac-cls {
+  background-color: #ff605c;
+}
+.mac-min {
+  background-color: #ffbd44;
+}
+.mac-max {
+  background-color: #00ca4e;
+}
+
 /* 
 :root {
   --hue: 204;

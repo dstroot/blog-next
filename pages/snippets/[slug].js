@@ -68,7 +68,11 @@ export default function BlogSlug({ code, frontMatter }) {
           </div>
 
           <div className='max-w-3xl mx-auto'>
-            <div className='prose prose-lg dark:prose-dark max-w-none break-words mb-8'>
+            <div
+              className='prose prose-lg dark:prose-invert prose-a:no-underline max-w-none break-words mb-8 
+              prose-a:text-blue-500 hover:prose-a:text-blue-700
+              dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-400'
+            >
               <Component components={{ ...MDXComponent }} />
             </div>
             <GitHubLink path={frontMatter.github} />
