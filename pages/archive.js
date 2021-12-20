@@ -27,7 +27,7 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = await getAllFilesFrontMatter('data/_posts', '.md');
+  const allPosts = await getAllFilesFrontMatter('data/_posts', '.mdx');
 
   return {
     props: { allPosts },
