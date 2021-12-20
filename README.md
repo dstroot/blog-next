@@ -57,7 +57,9 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [x] Infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
 - [x] Add ability to lint markdown files using https://github.com/remarkjs/remark-lint.
-- [ ] Add all the open graph seo meta tags. See megatags or web code tools above. https://ahrefs.com/blog/open-graph-meta-tags/
+- [ ] Add all the open graph seo meta tags. See megatags or web code tools above. https://ahrefs.com/blog/open-graph-meta-tags/  next-seo 
 - [x] Add robots.txt and sitemap.xml using https://github.com/iamvishnusankar/next-sitemap
 - [ ] Add production logging (Logtail?)
 - [ ] Add production error handling - e.g. Sentry
+- [ ] Add testing https://nextjs.org/docs/testing
+- [ ] Convert markdown to MDX - simplify site

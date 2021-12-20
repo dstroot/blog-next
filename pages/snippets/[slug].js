@@ -1,4 +1,4 @@
-import { useMemo, useEffect } from 'react';
+import { useMemo } from 'react';
 import { getMDXFileBySlug } from '../../lib/processMDX';
 import { getFilesByExtension } from '../../lib/getAllFiles';
 import { MDXComponent } from '../../components/MDXComponent';
@@ -8,6 +8,7 @@ import { icons } from '../../components/Icons';
 import { GitHubLink } from '../../components/GitHubLink';
 import { CMS_NAME, BASE_URL } from '../../lib/constants';
 import { SEO } from '../../lib/seo';
+import { usePageView } from '../../hooks/usePageView';
 
 export default function BlogSlug({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -23,19 +24,7 @@ export default function BlogSlug({ code, frontMatter }) {
     twHandle: '@danstroot',
   };
 
-  // register page view after 5s
-  useEffect(() => {
-    setTimeout(() => {
-      // Note: StrictMode renders components twice (dev, not production) in order to
-      // detect problems with your code. If you are running in dev and seeing this trigger
-      // twice that could be the reason.
-
-      // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-      (navigator.sendBeacon &&
-        navigator.sendBeacon(`/api/views/${encodeURIComponent(frontMatter.slug)}`)) ||
-        fetch(`/api/views/${encodeURIComponent(frontMatter.slug)}`, { method: 'POST' });
-    }, 5000);
-  }, [frontMatter.slug]);
+  usePageView(frontMatter.slug);
 
   return (
     <>

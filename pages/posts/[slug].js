@@ -1,49 +1,28 @@
-import { useEffect } from 'react';
 import { Container } from '../../components/Container';
 import { PostBody } from '../../components/PostBody';
 import { Header } from '../../components/Header';
 import { PostHeader } from '../../components/PostHeader';
 import { getFilesByExtension } from '../../lib/getAllFiles';
-import { getMDFileBySlug } from '../../lib/processMD';
+import { getMDXFileBySlug } from '../../lib/processMDX';
 import { CMS_NAME, BASE_URL } from '../../lib/constants';
 import { SEO } from '../../lib/seo';
+import { usePageView } from '../../hooks/usePageView';
 
 // TODO: add section for "more posts" at bottom of page
 
-export default function Post({
-  title,
-  slug,
-  excerpt,
-  coverImage,
-  date,
-  author,
-  stats,
-  html,
-  github,
-}) {
+export default function Post({ code, frontMatter }) {
   const seo = {
-    title: `${CMS_NAME} · ${title}`,
-    url: `${BASE_URL}/posts/${slug}`,
-    description: excerpt,
-    image: `${BASE_URL}${coverImage}`,
-    publishedDate: date,
-    author: author.name,
+    title: `${CMS_NAME} · ${frontMatter.title}`,
+    url: `${BASE_URL}/posts/${frontMatter.slug}`,
+    description: frontMatter.excerpt,
+    image: `${BASE_URL}${frontMatter.coverImage}`,
+    publishedDate: frontMatter.date,
+    author: frontMatter.author.name,
     ogType: 'article',
     twHandle: '@danstroot',
   };
 
-  // register page view after 5s
-  useEffect(() => {
-    setTimeout(() => {
-      // Note: StrictMode renders components twice (dev, not production) in order to
-      // detect problems with your code. If you are running in dev and seeing this trigger
-      // twice that could be the reason.
-
-      // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-      (navigator.sendBeacon && navigator.sendBeacon(`/api/views/${encodeURIComponent(slug)}`)) ||
-        fetch(`/api/views/${encodeURIComponent(slug)}`, { method: 'POST' });
-    }, 5000);
-  }, [slug]);
+  usePageView(frontMatter.slug);
 
   return (
     <>
@@ -52,13 +31,18 @@ export default function Post({
         <Header />
         <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
           <PostHeader
-            title={title}
-            coverImage={coverImage}
-            date={date}
-            author={author}
-            time={stats.text}
+            title={frontMatter.title}
+            coverImage={frontMatter.coverImage}
+            date={frontMatter.date}
+            author={frontMatter.author}
+            time={frontMatter.stats.text}
           />
-          <PostBody html={html} title={title} slug={slug} path={github} />
+          <PostBody
+            code={code}
+            title={frontMatter.title}
+            slug={frontMatter.slug}
+            path={frontMatter.github}
+          />
         </article>
       </Container>
     </>
@@ -69,27 +53,24 @@ export default function Post({
 // Next.js will statically pre-render all the paths specified
 // for each path the params will be fed into "getStaticProps"
 export async function getStaticPaths() {
-  const posts = getFilesByExtension('data/_posts', '.md');
+  const posts = getFilesByExtension('data/_posts', '.mdx');
 
   // urls/slugs should not have a file extension
   const paths = posts.map((p) => ({
     params: {
-      slug: p.replace(/\.md/, ''),
+      slug: p.replace(/\.mdx/, ''),
     },
   }));
 
   return {
     paths: paths,
-    // fallback: false is what we want to use if we plan on generating ALL of our
-    // dynamic paths during build time. The fallback property can have 3
-    // values: false, true, blocking.
     fallback: false,
   };
 }
 
-// for each path in "getStaticPaths" the params will be fed into "getStaticProps"
-// to render each page.
+// for each path in "getStaticPaths" the params will be fed into
+// "getStaticProps" to render each page.
 export async function getStaticProps({ params }) {
-  const post = await getMDFileBySlug(params.slug, 'data/_posts');
+  const post = await getMDXFileBySlug(params.slug, 'data/_posts');
   return { props: { ...post } };
 }

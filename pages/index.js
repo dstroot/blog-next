@@ -46,7 +46,7 @@ export default function Index({ posts }) {
 }
 
 export async function getStaticProps() {
-  let posts = await getAllFilesFrontMatter('data/_posts', '.md');
+  let posts = await getAllFilesFrontMatter('data/_posts', '.mdx');
 
   // Remove any unpublished posts
   posts = posts.filter((posts) => posts.published);
