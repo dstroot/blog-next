@@ -2,10 +2,10 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
-  // experimental: {
-  //   concurrentFeatures: false, // react 18 needed
-  //   serverComponents: false, // react 18 needed
-  // },
+  experimental: {
+    concurrentFeatures: false, // react 18 needed
+    serverComponents: false, // react 18 needed
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,

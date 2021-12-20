@@ -11,6 +11,14 @@ pre[class*='language-'] {
 }
 
 /**
+ * Prose
+ */
+
+.converted-html {
+  @apply prose prose-lg dark:prose-invert prose-a:no-underline max-w-none break-words mb-8 prose-a:text-blue-500 hover:prose-a:text-blue-700 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-400;
+}
+
+/**
  * rehype-code-titles
  */
 
@@ -74,9 +82,11 @@ pre[class*='language-'] {
 .mac-cls {
   background-color: #ff605c;
 }
+
 .mac-min {
   background-color: #ffbd44;
 }
+
 .mac-max {
   background-color: #00ca4e;
 }
