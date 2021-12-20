@@ -5,8 +5,8 @@ module.exports = {
   safelist: ['aspect-w-16', 'aspect-h-9'],
   darkMode: 'class',
   /*
-    The theme section is where you define your color palette, fonts, type scale, border sizes, 
-    breakpoints, etc. — anything related to the visual design of your site.
+    The theme section is where you define your color palette, fonts, type scale, border 
+    sizes, breakpoints, etc. — anything related to the visual design of your site.
   */
   theme: {
     colors: {
