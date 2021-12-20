@@ -55,7 +55,7 @@ Clustering works across platforms, meaning there is no cloud vendor lock-in. For
 
 So now we have a hive of self-updating Linux hosts with a single, distributed init system (systemd and fleet) and a single shared brain (etcd). It looks something like this:
 
-![CoreOS in Action](/img/coreos-action.png)
+![CoreOS in Action](/assets/blog/img/coreos-action.png)
 
 This depicts eight containers (two load balancers and six api servers) being managed by "fleet" to run in various CoreOS hosts in the cluster, with shared access to etcd.
 
