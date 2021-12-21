@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { Container } from '../components/Container';
 import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
+import { Container } from '../components/Container';
 
 // https://nextjs.org/docs/advanced-features/custom-error-page
 export default function InternalServerError() {

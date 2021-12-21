@@ -1,16 +1,16 @@
+import { SEO } from '../../lib/seo';
+import { icons } from '../../components/Icons';
 import { useMemo } from 'react';
-import { getMDXFileBySlug } from '../../lib/processMDX';
-import { getFilesByExtension } from '../../lib/getAllFiles';
+import { Container } from '../../components/Container';
+import { GitHubLink } from '../../components/GitHubLink';
+import { usePageView } from '../../hooks/usePageView';
 import { MDXComponent } from '../../components/MDXComponent';
 import { getMDXComponent } from 'mdx-bundler/client';
-import { Container } from '../../components/Container';
-import { icons } from '../../components/Icons';
-import { GitHubLink } from '../../components/GitHubLink';
+import { getMDXFileBySlug } from '../../lib/processMDX';
 import { CMS_NAME, BASE_URL } from '../../lib/constants';
-import { SEO } from '../../lib/seo';
-import { usePageView } from '../../hooks/usePageView';
+import { getFilesByExtension } from '../../lib/getAllFiles';
 
-export default function BlogSlug({ code, frontMatter }) {
+export default function Index({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
 
   // TODO add SEO capability with image

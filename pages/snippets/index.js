@@ -1,11 +1,11 @@
-import { SnippetCard } from '../../components/SnippetCard';
-import { Container } from '../../components/Container';
 import { Header } from '../../components/Header';
-import { getAllFilesFrontMatter } from '../../lib/getAllFiles';
+import { Container } from '../../components/Container';
 import { SortByDate } from '../../lib/sortPosts';
+import { SnippetCard } from '../../components/SnippetCard';
+import { getAllFilesFrontMatter } from '../../lib/getAllFiles';
 
 // TODO add SEO
-function Snippets({ snippets }) {
+export default function Index({ snippets }) {
   return (
     <Container>
       <Header />
@@ -39,5 +39,3 @@ export async function getStaticProps() {
 
   return { props: { snippets } };
 }
-
-export default Snippets;

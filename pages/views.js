@@ -8,7 +8,7 @@ const URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : B
 const slug = '2021-10-08-human-denial-of-service-attack';
 const path = `${URL}/api/views/${slug}`;
 
-export default function Page(props) {
+export default function Index(props) {
   return (
     <>
       <SWRConfig value={props}>

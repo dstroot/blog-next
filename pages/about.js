@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Container } from '../components/Container';
 import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
+import { Container } from '../components/Container';
 
 // images
 import maker from '../public/assets/blog/img/maker.jpg';

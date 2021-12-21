@@ -1,16 +1,16 @@
-import { Container } from '../../components/Container';
-import { PostBody } from '../../components/PostBody';
+import { SEO } from '../../lib/seo';
 import { Header } from '../../components/Header';
+import { PostBody } from '../../components/PostBody';
+import { Container } from '../../components/Container';
 import { PostHeader } from '../../components/PostHeader';
-import { getFilesByExtension } from '../../lib/getAllFiles';
+import { usePageView } from '../../hooks/usePageView';
 import { getMDXFileBySlug } from '../../lib/processMDX';
 import { CMS_NAME, BASE_URL } from '../../lib/constants';
-import { SEO } from '../../lib/seo';
-import { usePageView } from '../../hooks/usePageView';
+import { getFilesByExtension } from '../../lib/getAllFiles';
 
 // TODO: add section for "more posts" at bottom of page
 
-export default function Post({ code, frontMatter }) {
+export default function Index({ code, frontMatter }) {
   const seo = {
     title: `${CMS_NAME} · ${frontMatter.title}`,
     url: `${BASE_URL}/posts/${frontMatter.slug}`,
@@ -68,8 +68,8 @@ export async function getStaticPaths() {
   };
 }
 
-// for each path in "getStaticPaths" the params will be fed into
-// "getStaticProps" to render each page.
+// for each path in "getStaticPaths" the params will be
+// fed into "getStaticProps" to render each page.
 export async function getStaticProps({ params }) {
   const post = await getMDXFileBySlug(params.slug, 'data/_posts');
   return { props: { ...post } };

@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { Container } from '../components/Container';
-import { Archive } from '../components/Archive';
 import { Header } from '../components/Header';
-import { PostTitle } from '../components/PostTitle';
-import { getAllFilesFrontMatter } from '../lib/getAllFiles';
+import { Archive } from '../components/Archive';
 import { CMS_NAME } from '../lib/constants';
+import { PostTitle } from '../components/PostTitle';
+import { Container } from '../components/Container';
 import { SortByDate } from '../lib/sortPosts';
+import { getAllFilesFrontMatter } from '../lib/getAllFiles';
 
 export default function Index({ posts }) {
   return (

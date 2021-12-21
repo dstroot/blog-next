@@ -1,12 +1,12 @@
-import { Container } from '../components/Container';
-import { MoreStories } from '../components/MoreStories';
-import { HeroPost } from '../components/HeroPost';
-import { Intro } from '../components/Intro';
-import { generateRSSFeed } from '../lib/feed';
-import { CMS_NAME, BASE_URL, HOME_OG_IMAGE_URL } from '../lib/constants';
 import { SEO } from '../lib/seo';
-import { getAllFilesFrontMatter } from '../lib/getAllFiles';
+import { Intro } from '../components/Intro';
+import { HeroPost } from '../components/HeroPost';
+import { Container } from '../components/Container';
 import { SortByDate } from '../lib/sortPosts';
+import { MoreStories } from '../components/MoreStories';
+import { generateRSSFeed } from '../lib/feed';
+import { getAllFilesFrontMatter } from '../lib/getAllFiles';
+import { CMS_NAME, BASE_URL, HOME_OG_IMAGE_URL } from '../lib/constants';
 
 export default function Index({ posts }) {
   const heroPost = posts[0];
