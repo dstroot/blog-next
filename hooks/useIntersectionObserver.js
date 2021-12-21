@@ -30,6 +30,7 @@ export const useIntersectionObserver = ({
 
     // clean up our observer
     return () => {
+      observer.disconnect(current);
       observer.unobserve(current);
     };
   });

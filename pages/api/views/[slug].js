@@ -1,9 +1,6 @@
 import { get, upd } from '../../../lib/dynamodb';
 let params = { TableName: process.env.TABLE_NAME };
 
-// debug node warnings
-process.on('warning', (e) => console.warn(e.stack));
-
 export default async function handler(req, res) {
   const { slug } = req.query;
 

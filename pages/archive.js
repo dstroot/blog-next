@@ -5,10 +5,9 @@ import { Header } from '../components/Header';
 import { PostTitle } from '../components/PostTitle';
 import { getAllFilesFrontMatter } from '../lib/getAllFiles';
 import { CMS_NAME } from '../lib/constants';
+import { SortByDate } from '../lib/sortPosts';
 
-export default function Index({ allPosts }) {
-  const posts = allPosts.filter((post) => post.published);
-
+export default function Index({ posts }) {
   return (
     <>
       <Head>
@@ -27,9 +26,15 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = await getAllFilesFrontMatter('data/_posts', '.mdx');
+  let posts = await getAllFilesFrontMatter('data/_posts', '.mdx');
+
+  // Remove any unpublished posts
+  posts = posts.filter((posts) => posts.published);
+
+  // Sort list by published date
+  posts = SortByDate(posts);
 
   return {
-    props: { allPosts },
+    props: { posts },
   };
 }
