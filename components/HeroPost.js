@@ -3,7 +3,7 @@ import { Avatar } from './Avatar';
 import { CoverImage } from './CoverImage';
 import { ReadMore } from './ReadMore';
 
-export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats, views }) => {
+export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats }) => {
   return (
     <section>
       <div className='mb-8 md:mb-10'>
