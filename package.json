@@ -17,7 +17,7 @@
     "@tailwindcss/typography": "^0.5.0",
     "cssnano": "^5.0.14",
     "date-fns": "2.27.0",
-    "esbuild": "^0.14.6",
+    "esbuild": "^0.14.7",
     "feed": "^4.2.2",
     "grey-matter": "^0.0.0",
     "html-entities": "^2.3.2",
