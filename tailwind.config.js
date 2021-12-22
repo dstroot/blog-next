@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  content: ['./components/**/*.js', './pages/**/*.js'],
+  content: ['./components/**/*.{js,jsx}', './pages/**/*.{js,jsx}'],
   darkMode: 'class',
   /*
     The theme section is where you define your color palette, fonts, type scale, border 

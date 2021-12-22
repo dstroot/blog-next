@@ -1,4 +1,4 @@
-import { SEO } from '../../lib/seo';
+import { SEO } from '../../components/Seo';
 import { icons } from '../../components/Icons';
 import { useMemo } from 'react';
 import { Container } from '../../components/Container';

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { truncateString } from '../lib/utils';
 
 // const seo = {
 //   siteName: '',
@@ -11,25 +12,8 @@ import Head from 'next/head';
 //   twHandle: '@danstroot',
 // };
 
-function truncateString(str, n) {
-  if (str.length > n) {
-    return str.substring(0, n) + '...';
-  } else {
-    return str;
-  }
-}
-
 export const SEO = (props) => {
-  const {
-    siteName,
-    title,
-    description,
-    image,
-    publishedDate,
-    author,
-    ogType,
-    twHandle,
-  } = props;
+  const { siteName, title, description, image, publishedDate, author, ogType, twHandle } = props;
 
   return (
     <Head>
@@ -40,9 +24,7 @@ export const SEO = (props) => {
 
       {/* OPEN GRAPH */}
       <meta property='og:type' content={ogType} key='ogtype' />
-      {siteName && (
-        <meta property='og:site_name' content={siteName} key='ogname' />
-      )}
+      {siteName && <meta property='og:site_name' content={siteName} key='ogname' />}
 
       <meta property='og:title' content={title} key='ogtitle' />
       {/*
@@ -52,11 +34,7 @@ export const SEO = (props) => {
         Use the raw title. Don’t include branding (e.g., your site name).
       */}
 
-      <meta
-        property='og:description'
-        content={description}
-        key='ogdescription'
-      />
+      <meta property='og:description' content={description} key='ogdescription' />
       {/*
         DESCRIPTION: Complement the title to make the snippet as appealing and click-worthy as possible. Copy your meta description here if it makes sense.
         Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates.
@@ -96,11 +74,7 @@ export const SEO = (props) => {
       />
       <meta name='twitter:image' content={image} key='twimage' />
       {publishedDate && (
-        <meta
-          property='article:published_time'
-          content={publishedDate}
-          key='twdate'
-        />
+        <meta property='article:published_time' content={publishedDate} key='twdate' />
       )}
     </Head>
   );

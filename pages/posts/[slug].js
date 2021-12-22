@@ -1,4 +1,4 @@
-import { SEO } from '../../lib/seo';
+import { SEO } from '../../components/Seo';
 import { Header } from '../../components/Header';
 import { PostBody } from '../../components/PostBody';
 import { Container } from '../../components/Container';
