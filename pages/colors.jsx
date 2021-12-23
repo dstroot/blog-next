@@ -1,10 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import card from '../public/assets/blog/img/black_card.jpg';
-import { Container } from '../components/Container';
 import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
 import { DarkMode } from '../components/DarkMode';
+import { Container } from '../components/Container';
+
+// images
+import card from '../public/assets/blog/img/black_card.jpg';
 
 const darkBackground = {
   backgroundColor: '#1D1E20', // 2A2B2D  1D1E20
@@ -50,12 +52,8 @@ export default function Index() {
       <Container>
         <Header />
         <div className='grid grid-flow-row grid-cols-4 grid-rows-3 gap-4 text-center'>
-          <div className='col-span-2 bg-white text-gray-900 p-10 text-2xl'>
-            Light
-          </div>
-          <div className='col-span-2 bg-dark-1 text-gray-100 text-2xl p-10'>
-            Dark
-          </div>
+          <div className='col-span-2 bg-white text-gray-900 p-10 text-2xl'>Light</div>
+          <div className='col-span-2 bg-dark-1 text-gray-100 text-2xl p-10'>Dark</div>
           {/*
             Basic Styles
             */}
@@ -74,18 +72,10 @@ export default function Index() {
           {/*
             Basic Styles
             */}
-          <div className='bg-gray-100 text-gray-700 text-xs font-light p-10'>
-            Text
-          </div>
-          <div className='bg-gray-100 text-gray-800 text-xs font-semibold p-10'>
-            Header
-          </div>
-          <div className='bg-dark-4 text-gray-100 text-xs font-semibold p-10'>
-            Header
-          </div>
-          <div className='bg-dark-4 text-gray-300 text-xs font-light p-10'>
-            Text
-          </div>
+          <div className='bg-gray-100 text-gray-700 text-xs font-light p-10'>Text</div>
+          <div className='bg-gray-100 text-gray-800 text-xs font-semibold p-10'>Header</div>
+          <div className='bg-dark-4 text-gray-100 text-xs font-semibold p-10'>Header</div>
+          <div className='bg-dark-4 text-gray-300 text-xs font-light p-10'>Text</div>
           {/*
             Links
             */}
@@ -134,44 +124,26 @@ export default function Index() {
             */}
           <div style={lightBackground} className='text-xs font-light text-left'>
             <span style={lightTextMuted}>Copyright © 2021 </span>
-            <a
-              style={lightText}
-              className='hover:underline font-semibold'
-              href='#'
-            >
+            <a style={lightText} className='hover:underline font-semibold' href='#'>
               Apple Inc.
             </a>{' '}
             <span style={lightTextMuted}>All rights reserved.</span>
           </div>
-          <a
-            style={lightBackground}
-            className='text-xs font-semibold hover:underline'
-            href='#'
-          >
+          <a style={lightBackground} className='text-xs font-semibold hover:underline' href='#'>
             <span style={lightTextHeader}>Apple Inc.</span>
           </a>
-          <a
-            style={darkBackground}
-            className='text-xs font-semibold hover:underline'
-            href='#'
-          >
+          <a style={darkBackground} className='text-xs font-semibold hover:underline' href='#'>
             <span style={darkTextHeader}>Apple Inc.</span>
           </a>
           <div style={darkBackground} className='text-xs font-light text-left'>
             <span style={darkTextMuted}>Copyright © 2021 </span>
-            <a
-              style={darkText}
-              className='hover:underline font-semibold'
-              href='#'
-            >
+            <a style={darkText} className='hover:underline font-semibold' href='#'>
               Apple Inc.
             </a>{' '}
             <span style={darkTextMuted}>All rights reserved.</span>
           </div>
 
-          <a href='https://developer.apple.com/'>
-            https://developer.apple.com/
-          </a>
+          <a href='https://developer.apple.com/'>https://developer.apple.com/</a>
           <DarkMode />
         </div>
         <div className='flex flex-row w-full'>
@@ -199,9 +171,8 @@ export default function Index() {
                 Mountain
               </div>
               <p className='text-gray-600 dark:text-gray-400 text-base'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
             </div>
             <div className='px-6 pt-4 pb-2'>
@@ -220,13 +191,10 @@ export default function Index() {
           <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
             <Image src={card} alt='Black Card' layout='responsive' />
             <div className='px-6 py-4'>
-              <div className='font-bold text-xl mb-2 blue7 dark:blue4'>
-                Mountain
-              </div>
+              <div className='font-bold text-xl mb-2 blue7 dark:blue4'>Mountain</div>
               <p className='text-gray-600 dark:text-gray-400 text-base'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
             </div>
             <div className='px-6 pt-4 pb-2'>
@@ -251,9 +219,8 @@ export default function Index() {
                 <span className='success-text'>Mountain </span>
               </div>
               <p className='text-gray-600 dark:text-gray-400 text-base'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
             </div>
             <div className='px-6 pt-4 pb-2'>
