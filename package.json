@@ -6,7 +6,7 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "remark ./data/_posts/"
+    "lint": "eslint ./data --ext mdx"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.38.0",

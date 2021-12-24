@@ -6118,13 +6118,13 @@ rc@^1.2.7:
     strip-json-comments "~2.0.1"
 
 react-dom@^18.0.0-rc.0:
-  version "18.0.0-rc.0-next-f2a59df48-20211208"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-rc.0-next-f2a59df48-20211208.tgz#96b4e0f0d15ba5cbad24de2c852742f5ef9a6991"
-  integrity sha512-9v9UGcJRoPtPrKOxtfuZDy5ZQKat8Mz1crciGuyFOphxgtN5jShRj8KB2TTTfeEysyheKyaJ1dZG4Uj6+cRNGg==
+  version "18.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-rc.0.tgz#aa07044bdd6399ff94c664b2985e2e25948fbf3e"
+  integrity sha512-tdD1n0svTndHBQvVAq/f2Kx7FgQ30CpSLp87/neQKAHPW5WtdgW1sBSwmFAcMQOrmstTuP0M+zRlH86f9kMX/A==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    scheduler "0.21.0-rc.0-next-f2a59df48-20211208"
+    scheduler "^0.21.0-rc.0"
 
 react-icons@^4.3.1:
   version "4.3.1"
@@ -6156,9 +6156,9 @@ react-refresh@0.8.3:
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
 react@^18.0.0-rc.0:
-  version "18.0.0-rc.0-next-f2a59df48-20211208"
-  resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-rc.0-next-f2a59df48-20211208.tgz#d53a505c35ad7cd416b6dcef81bc2fe7dc4cb554"
-  integrity sha512-7C9NnHiOJl/qYhP8POXy53+3C4M6MGs7DIEYbL5jHnYZ0VTk/+dZGFJYiGx+Zn+HKXk7hW+mMTWjvJr2EVD16A==
+  version "18.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.0.0-rc.0.tgz#60bfcf1edd0b35fbeeeca852515c6cc2ce06a6eb"
+  integrity sha512-PawosMBgF8k5Nlc3++ibzjFqPvo1XKv80MNtVYqz3abHHB2w3IpU65sSdSmBd2ooCwVhcp9b1vkx/twqhakNtA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -6720,7 +6720,7 @@ sax@^1.2.4:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-scheduler@0.21.0-rc.0-next-f2a59df48-20211208:
+scheduler@^0.21.0-rc.0:
   version "0.21.0-rc.0-next-f2a59df48-20211208"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0-rc.0-next-f2a59df48-20211208.tgz#54e18e1d360194fd54b47a00616e46403fcabdf1"
   integrity sha512-x0oLd3YIih9GHqWTaFYejVe6Au+4TadOWZciAq8m4+Fuo5qCi4/3M35a9irVSIP3+qcg/fCqHKJETT9G0ejD1A==

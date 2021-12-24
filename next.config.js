@@ -3,22 +3,22 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-    concurrentFeatures: false, // react 18 needed
-    serverComponents: false, // react 18 needed
+    concurrentFeatures: true, // react 18 needed
+    serverComponents: true, // react 18 needed
   },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
     // domains: [],
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: '/(.*)',
-  //       headers: securityHeaders,
-  //     },
-  //   ];
-  // },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
   // async headers() {
   //   return [
   //     {
