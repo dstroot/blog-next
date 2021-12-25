@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { GitHubLink } from './GitHubLink';
 import { Sharable } from './Sharable';
-import { MDXComponent } from './MDXComponent';
+import { MDXComponents } from './MDXComponents';
 import { getMDXComponent } from 'mdx-bundler/client';
 
 export const PostBody = ({ title, slug, code, path }) => {
@@ -11,7 +11,7 @@ export const PostBody = ({ title, slug, code, path }) => {
     <>
       <div className='max-w-3xl mx-auto'>
         <div className='converted-html'>
-          <Component components={{ ...MDXComponent }} />
+          <Component components={{ ...MDXComponents }} />
         </div>
         <Sharable slug={slug} title={title} />
       </div>

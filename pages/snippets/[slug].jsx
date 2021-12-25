@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { Container } from '../../components/Container';
 import { GitHubLink } from '../../components/GitHubLink';
 import { usePageView } from '../../hooks/usePageView';
-import { MDXComponent } from '../../components/MDXComponent';
+import { MDXComponents } from '../../components/MDXComponents';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { getMDXFileBySlug } from '../../lib/processMDX';
 import { CMS_NAME, BASE_URL } from '../../lib/constants';
@@ -58,7 +58,7 @@ export default function Index({ code, frontMatter }) {
 
           <div className='max-w-3xl mx-auto'>
             <div className='converted-html'>
-              <Component components={{ ...MDXComponent }} />
+              <Component components={{ ...MDXComponents }} />
             </div>
             <GitHubLink path={frontMatter.github} />
           </div>

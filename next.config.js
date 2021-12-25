@@ -19,20 +19,6 @@ module.exports = {
       },
     ];
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: '/:all*(svg|jpg|jpeg|png|webp|avif)',
-  //       locale: false,
-  //       headers: [
-  //         {
-  //           key: 'Cache-Control',
-  //           value: 'public, max-age=86400',
-  //         },
-  //       ],
-  //     },
-  //   ];
-  // },
   // https://nextjs.org/docs/api-reference/next.config.js/redirects
   async redirects() {
     return [
