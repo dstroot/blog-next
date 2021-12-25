@@ -22,3 +22,8 @@ export const MDXComponents = {
   Tweet, // https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/
   Step,
 };
+
+/* 
+  MDX Bundler will "bundle" these components along with any other directly imported 
+  components for the MDX files to use. 
+*/
