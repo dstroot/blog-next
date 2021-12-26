@@ -15,7 +15,7 @@ tags:
 Use this wrapper _Container_ component in the HOC
 
 <CodeBlock>
-  
+
 ```Javascript:Container.jsx
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -54,9 +54,7 @@ return (
     <meta name='twitter:title' content={meta.title} />
     <meta name='twitter.description' content={meta.description} />
     <meta name='twitter:image' content={meta.image} />
-    {meta.data && (
-      <meta property='article:published_time' content={meta.date} />
-    )}
+    {meta.data && <meta property='article:published_time' content={meta.date} />}
   </Head>
   <Navbar />
   <main>{children}</main>
@@ -66,7 +64,7 @@ return (
 
 export default Container;
 ```
-  
+
 </CodeBlock>
 
 Usage in a Dynamic route
@@ -83,22 +81,22 @@ import { getMDXComponent } from 'mdx-bundler/client';
 export default function BlogSlug({ code, frontMatter }) {
   const Component = useMemo(() => getMDXComponent(code), [code]);
 
-  return (
-    <BlogLayout matter={frontMatter}>
-      <Component components={{ ...MDXComponent }} />
-    </BlogLayout>
-  ); 
-}
+return (
+
+<BlogLayout matter={frontMatter}>
+  <Component components={{ ...MDXComponent }} />
+</BlogLayout>
+); }
 
 export async function getStaticPaths() {
   const posts = await getFiles('posts');
 
-  return {
-    paths: posts.map((p) => ({
-      params: {slug: p.replace(/\.mdx/, '')}
-    })),
-    fallback: false
-  };
+return {
+paths: posts.map((p) => ({
+params: {slug: p.replace(/\.mdx/, '')}
+})),
+fallback: false
+};
 }
 
 export async function getStaticProps({ params }) {
@@ -106,6 +104,8 @@ export async function getStaticProps({ params }) {
 
 return { props: { ...post } };
 }
+
 ```
-  
+
 </CodeBlock>
+```
