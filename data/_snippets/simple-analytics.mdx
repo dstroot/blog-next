@@ -20,7 +20,7 @@ Let's assume you have a blog with different blog pages. Ideally you want to call
 
 <CodeBlock>
 
-```javascript
+```js
 // Note: StrictMode renders components twice (in dev, not production) in order to
 // detect problems with your code. If you are running in dev and seeing this trigger
 // twice that could be the reason.
@@ -42,7 +42,7 @@ In this example we are using Next.js so creating an API is pretty simple. We can
 
 <CodeBlock>
 
-```javascript
+```js
 import { get, upd } from '../../../lib/dynamodb';
 let params = { TableName: process.env.TABLE_NAME };
 
@@ -113,25 +113,26 @@ export default async function handler(req, res) {
 
 </CodeBlock>
 
-```javascript
-import { useEffect } from 'react'
-import Script from 'next/script'
-import { useRouter } from 'next/router'
-import { GTM_ID, pageview } from '../lib/gtm'
+```jsx
+import { useEffect } from 'react';
+import Script from 'next/script';
+import { useRouter } from 'next/router';
+import { GTM_ID, pageview } from '../lib/gtm';
 
 export const pageview = (url) => {
   window.dataLayer.push({
     event: 'pageview',
     page: url,
-  })
-}
+  });
+};
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
-    router.events.on('routeChangeComplete', pageview)
+    router.events.on('routeChangeComplete', pageview);
     return () => {
-      router.events.off('routeChangeComplete', pageview)
-    }
-  }, [router.events])
+      router.events.off('routeChangeComplete', pageview);
+    };
+  }, [router.events]);
+}
 ```

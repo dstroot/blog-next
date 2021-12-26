@@ -19,20 +19,19 @@ The Intersection Observer API allows you to configure a callback that is called 
 
 <CodeBlock>
 
-```Javascript:useIntersectionObserver.js
+```js
 import { useEffect } from 'react';
 
 const useIntersectionObserver = ({
-target,
-onIntersect, // callback
-threshold = 0.2, // when 20% visible
-rootMargin = "0px", // don't adjust viewport margin
+  target,
+  onIntersect, // callback
+  threshold = 0.2, // when 20% visible
+  rootMargin = '0px', // don't adjust viewport margin
 }) => {
-
-useEffect(() => {
-if (!target) {
-return;
-}
+  useEffect(() => {
+    if (!target) {
+      return;
+    }
 
     const observer = new IntersectionObserver(onIntersect, {
       rootMargin,
@@ -47,8 +46,7 @@ return;
     return () => {
       observer.unobserve(current);
     };
-
-});
+  });
 };
 
 export default useIntersectionObserver;
@@ -58,7 +56,7 @@ export default useIntersectionObserver;
 
 <CodeBlock>
 
-```Javascript:useIntersectionObserver.js
+```jsx
 <GitGist
   gistURL={
     'https://gist.githubusercontent.com/dstroot/94c152da31201f41ee8b550442ddbc0b/raw/3a23e00f7c861fe9d36d9e12289a6904ce2ad15e/useIntersectionObserver.js'

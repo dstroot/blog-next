@@ -13,9 +13,9 @@ tags:
 ---
 
 <CodeBlock>
-  
-```Javascript:recursiveTimeout.js
-import { useState, useRef, useEffect, useCallback } from "react";
+
+```js:snippet.js
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 export default function RecursiveTimeout(callback, delay) {
   const [isRunning, setIsRunning] = useState(false);
@@ -23,13 +23,13 @@ export default function RecursiveTimeout(callback, delay) {
   const play = useCallback(() => setIsRunning(true), [setIsRunning]);
   const savedCallback = useRef(callback);
 
-useEffect(() => {
-savedCallback.current = callback;
-}, [callback]);
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
 
-useEffect(() => {
-if (!isRunning) return;
-let id = 0;
+  useEffect(() => {
+    if (!isRunning) return;
+    let id = 0;
 
     const tick = () => {
       if (!isRunning) return clearTimeout(id);
@@ -42,11 +42,10 @@ let id = 0;
       if (id) clearTimeout(id);
       stop();
     };
+  }, [isRunning, delay, stop]);
 
-}, [isRunning, delay, stop]);
-
-return { play, stop };
+  return { play, stop };
 }
 ```
-  
+
 </CodeBlock>

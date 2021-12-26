@@ -36,7 +36,7 @@ Each of the Core Web Vitals metrics represents a distinct facet of the user expe
 
 <CodeBlock>
 
-```javascript
+```js
 export const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -54,7 +54,7 @@ export const reportWebVitals = (onPerfEntry) => {
 
 <CodeBlock>
 
-```javascript
+```js
 import { reportWebVitals } from './reportWebVitals';
 
 function sendToAnalytics(metric) {

@@ -36,9 +36,9 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 
 - [x] Add "Edit on GitHub" Link to pages
 - [x] Add Syntax Highlighting
-- [x] Add emoji support (https://github.com/rhysd/remark-emoji)
+- [x] Add emoji support ([https://github.com/rhysd/remark-emoji](https://github.com/rhysd/remark-emoji))
 - [x] Add "GitHub Flavored Markdown" support (mainly for tables)
-- [x] Add Dark/Light Mode (https://github.com/pacocoursey/next-themes)
+- [x] Add Dark/Light Mode ([https://github.com/pacocoursey/next-themes](https://github.com/pacocoursey/next-themes))
 - [x] Add About Me Page
 - [x] Create a nice footer
 - [x] Add a "Read More" link
@@ -56,11 +56,105 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [ ] 100 Lighthouse Scores - add service worker?
 - [x] Infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
-- [x] Add ability to lint markdown files using https://github.com/remarkjs/remark-lint.
+- [x] Add ability to lint markdown files using [https://github.com/remarkjs/remark-lint](https://github.com/remarkjs/remark-lint).
 - [ ] How to lint .MDX files?
-- [ ] Add all the open graph seo meta tags. See megatags or web code tools above. https://ahrefs.com/blog/open-graph-meta-tags/ next-seo
-- [x] Add robots.txt and sitemap.xml using https://github.com/iamvishnusankar/next-sitemap
+- [ ] Add all the open graph seo meta tags. See megatags or web code tools above. [https://ahrefs.com/blog/open-graph-meta-tags/](https://ahrefs.com/blog/open-graph-meta-tags/) next-seo
+- [x] Add robots.txt and sitemap.xml using [https://github.com/iamvishnusankar/next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
 - [ ] Add production logging (Logtail?)
 - [ ] Add production error handling - e.g. Sentry
-- [ ] Add testing https://nextjs.org/docs/testing
+- [ ] Add testing [https://nextjs.org/docs/testing](https://nextjs.org/docs/testing)
 - [x] Convert markdown to MDX - simplify site
+
+### Packages
+
+{
+"name": "dan-blog",
+"version": "1.0.0",
+"scripts": {
+"dev": "next",
+"build": "next build",
+"postbuild": "next-sitemap",
+"start": "next start",
+"lint": "eslint -c .eslintrc.js ./data --ext mdx"
+},
+"dependencies": {
+
+    "@aws-sdk/client-dynamodb": "^3.38.0",
+    "@aws-sdk/lib-dynamodb": "^3.38.0",
+
+
+    "@google-analytics/data": "^2.8.0",
+
+Mailchimp Newsletter and Metrics:
+
+    "@mailchimp/mailchimp_marketing": "^3.0.72",
+    "react-mailchimp-subscribe": "^2.1.3",
+
+    "@mdx-js/react": "^1.6.22",
+    "date-fns": "2.27.0",
+
+MDX Related Functionality
+
+    "esbuild": "^0.14.8",
+    "mdx-bundler": "^8.0.1",
+    "mdx-embed": "^0.0.22",
+
+
+    "feed": "^4.2.2",
+    "grey-matter": "^0.0.0",
+    "html-entities": "^2.3.2",
+
+    "millify": "^4.0.0",
+    "next": "12.0.7",
+    "next-themes": "^0.0.15",
+    "prismjs": "^1.25.0",
+
+React
+
+    "react": "^18.0.0-rc.0",
+    "react-dom": "^18.0.0-rc.0",
+
+
+
+    "react-icons": "^4.3.1",
+
+    "reading-time": "^1.3.0",
+    "rehype-code-titles": "^1.0.3",
+    "rehype-img-size": "^0.0.1",
+    "rehype-prism-plus": "^1.1.1",
+    "remark-cli": "^10.0.1",
+    "remark-emoji": "^3.0.2",
+    "remark-gfm": "^3.0.1",
+
+
+    "sharp": "^0.29.2",  // Image processing
+    "swr": "^1.1.1",     // Stale while revalidate data fetching library
+
+
+    "yarn.lock": "^0.0.1-security"
+
+},
+"devDependencies": {
+"autoprefixer": "^10.4.0",
+
+    "eslint": "^8.5.0",
+    "eslint-config-next": "^12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-mdx": "^1.16.0",
+
+
+    "next-sitemap": "^1.6.203",
+
+
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+
+
+    "prettier": "^2.3.2",
+    "tailwindcss": "^3.0.7",
+    "@tailwindcss/typography": "^0.5.0",
+    "cssnano": "^5.0.14"
+
+},
+"license": "MIT"
+}
