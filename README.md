@@ -51,12 +51,13 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [x] Add view tracking (using Dynamodb)
 - [x] Add Archive page
 - [ ] Add Search?
-- [ ] Add Privacy and Terms
+- [ ] Add Privacy and Terms (currently drafted)
 - [x] Add security and CSP headers (using next.config.js)
 - [ ] 100 Lighthouse Scores - add service worker?
 - [x] Infinite scrolling - scroll in chunks to end of list - greatly speeds initial page load
 - [x] Add easy way to embed YouTube, Twitter, etc. by just putting link in Markdown
 - [x] Add ability to lint markdown files using https://github.com/remarkjs/remark-lint.
+- [ ] How to lint .MDX files?
 - [ ] Add all the open graph seo meta tags. See megatags or web code tools above. https://ahrefs.com/blog/open-graph-meta-tags/ next-seo
 - [x] Add robots.txt and sitemap.xml using https://github.com/iamvishnusankar/next-sitemap
 - [ ] Add production logging (Logtail?)
