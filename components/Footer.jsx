@@ -65,7 +65,7 @@ export const Footer = () => {
             Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
             {year.getFullYear()}
             {','}&nbsp;
-            <Link href='/stats'>
+            <Link href='/analytics'>
               <a className='font-medium'>Dan Stroot</a>
             </Link>
             {'.'}
