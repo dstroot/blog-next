@@ -10,3 +10,7 @@ export const CodeBlock = ({ children }) => {
     </div>
   );
 };
+
+// https://ped.ro/blog/code-blocks-but-better
+// https://github.com/wooorm/xdm#syntax-highlighting-with-the-meta-field
+// https://www.alaycock.co.uk/

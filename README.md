@@ -63,7 +63,7 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [ ] Add production logging (Logtail?)
 - [ ] Add production error handling - e.g. Sentry
 - [ ] Add testing [https://nextjs.org/docs/testing](https://nextjs.org/docs/testing)
-- [x] Convert markdown to MDX - simplify site
+- [x] Convert markdown to MDX - simplify site. NOTE: This (.MDX) breaks fast refresh ([issue](https://github.com/kentcdodds/mdx-bundler/issues/49))
 
 ### Packages
 
