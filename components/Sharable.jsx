@@ -62,10 +62,10 @@ export function Sharable({ title, slug }) {
       </div>
 
       {showAlert ? (
-        <div className='flex fixed top-5 right-5 items-center px-5 py-3 space-x-2 rounded shadow bg-gray-200'>
+        <div className='flex fixed top-5 right-5 items-center px-5 py-3 space-x-2 rounded shadow bg-gray-200 dark:bg-gray-700'>
           <p className='text-slate'>Link copied succesfully</p>
           <span className='p-1 rounded-full bg-gray-800 dark:bg-gray-200'>
-            <FaCheck className='text-white' />
+            <FaCheck className='text-gray-200 dark:text-gray-800' />
           </span>
         </div>
       ) : (
