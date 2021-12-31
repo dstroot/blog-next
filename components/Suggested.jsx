@@ -1,11 +1,12 @@
-import { SortByViews } from '../lib/sortPosts';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
-import { randomizeArray } from '../lib/randomizeArray';
 import { Views } from './Views';
+import { useRouter } from 'next/router';
+import { SortByViews } from '../lib/sortPosts';
+import { randomizeArray } from '../lib/randomizeArray';
+import { MdOutlineAutoAwesome } from 'react-icons/md';
+import Link from 'next/link';
+import useSWR from 'swr';
 
-export function Suggested() {
+export const Suggested = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   let { data } = useSWR('/api/views', fetcher);
   const posts = data === undefined ? (data = []) : SortByViews(data);
@@ -18,8 +19,6 @@ export function Suggested() {
     })
   ).splice(0, 2);
 
-  console.log(sortedAndExcludedPosts);
-
   return (
     <div className='flex flex-col'>
       {sortedAndExcludedPosts ? <h3 className=''>Suggested</h3> : null}
@@ -30,14 +29,17 @@ export function Suggested() {
       </div>
     </div>
   );
-}
+};
 
 const SuggestedCard = ({ post }) => {
   console.log(post.slug);
   return (
     <Link href={`/posts/${post.slug}`}>
       <a className='flex flex-col justify-between px-4 w-full rounded bg-gray-700'>
-        <h3 className='!mt-4 !capitalize'>{post.slug.replaceAll('-', ' ').slice(11)}</h3>
+        <h4 className='mt-4 capitalize'>
+          <MdOutlineAutoAwesome className='inline mr-2' />
+          {post.slug.replaceAll('-', ' ').slice(11)}
+        </h4>
         <Views viewCount={post.viewCount} />
       </a>
     </Link>

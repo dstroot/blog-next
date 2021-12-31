@@ -15,12 +15,10 @@ export default async function handler(req, res) {
   async function getViews() {
     params = {
       ...params,
-      // prettier-ignore
-      FilterExpression: "begins_with(slug, :slug) and viewCount > :viewCount",
-      // prettier-ignore
+      FilterExpression: 'begins_with(slug, :slug) and viewCount > :viewCount',
       ExpressionAttributeValues: {
-        ":viewCount": 50,
-        ":slug": "20",
+        ':viewCount': 10,
+        ':slug': '20',
       },
     };
 
