@@ -9,7 +9,7 @@ import useSWR from 'swr';
 export const Suggested = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   let { data } = useSWR('/api/views', fetcher);
-  const posts = data === undefined ? (data = []) : SortByViews(data);
+  const posts = data === undefined ? (data = []) : data;
   const router = useRouter();
 
   // remove current post from suggested list and take the first two
@@ -21,7 +21,7 @@ export const Suggested = () => {
 
   return (
     <div className='flex flex-col'>
-      {sortedAndExcludedPosts ? <h3 className=''>Suggested</h3> : null}
+      {sortedAndExcludedPosts ? <h4 className='!mb-4'>Suggested</h4> : null}
       <div className='grid grid-cols-1 gap-4 w-full sm:grid-cols-2'>
         {sortedAndExcludedPosts.map((post, _idx) => (
           <SuggestedCard post={post} key={_idx} />
@@ -35,8 +35,8 @@ const SuggestedCard = ({ post }) => {
   console.log(post.slug);
   return (
     <Link href={`/posts/${post.slug}`}>
-      <a className='flex flex-col justify-between px-4 w-full rounded bg-gray-700'>
-        <h4 className='mt-4 capitalize'>
+      <a className='flex flex-col justify-between px-4 w-full rounded bg-gray-200 dark:bg-gray-700'>
+        <h4 className='capitalize'>
           <MdOutlineAutoAwesome className='inline mr-2' />
           {post.slug.replaceAll('-', ' ').slice(11)}
         </h4>
