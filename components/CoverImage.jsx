@@ -12,16 +12,19 @@ export const CoverImage = ({
   blurDataURL,
 }) => {
   const image = (
-    <Image
-      src={src}
-      alt={`Cover Image for ${title}`}
-      layout='responsive'
-      width={width}
-      height={height}
-      priority={priority}
-      placeholder={placeholder}
-      blurDataURL={blurDataURL}
-    />
+    <div className='block'>
+      <Image
+        src={src}
+        alt={`Cover Image for ${title}`}
+        layout='intrinsic' // intrinsic, fill, responsive
+        width={width}
+        height={height}
+        // sizes={[335, 460, 546, 600, 728, 984, 1240, 1496]}
+        priority={priority ? priority : false}
+        placeholder={placeholder ? placeholder : 'empty'}
+        blurDataURL={blurDataURL ? blurDataURL : ''}
+      />
+    </div>
   );
   return (
     <div className='sm:mx-0'>

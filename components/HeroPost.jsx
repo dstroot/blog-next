@@ -11,11 +11,11 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
           title={title}
           src={coverImage}
           slug={slug}
-          height={620}
-          width={1240}
+          width={1496}
+          height={748}
           priority={true}
-          placeholder='empty'
-          blurDataURL=''
+          placeholder='blur' // empty | blur
+          blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII='
         />
       </div>
       {/* Title and Avatar */}

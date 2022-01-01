@@ -13,8 +13,6 @@ export const PostHeader = ({ title, coverImage, date, author }) => {
           width={1496}
           height={748}
           priority={true}
-          placeholder='blur' // empty | blur
-          blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII='
         />
       </div>
       <div className='max-w-3xl mx-auto'>

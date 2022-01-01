@@ -35,16 +35,7 @@ export const PostPreview = ({
   return (
     <div ref={ref}>
       <div className='mb-5'>
-        <CoverImage
-          slug={slug}
-          title={title}
-          src={coverImage}
-          height={278}
-          width={556}
-          priority={false}
-          // placeholder="blur"
-          // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk4AcAABUAET9MVpIAAAAASUVORK5CYII="
-        />
+        <CoverImage slug={slug} title={title} src={coverImage} width={556} height={278} />
       </div>
       <h3 className='text-3xl mb-3 leading-snug'>
         <Link as={`/posts/${slug}`} href='/posts/[slug]'>
@@ -52,12 +43,7 @@ export const PostPreview = ({
         </Link>
       </h3>
       <div className='mb-4'>
-        <Avatar
-          name={author.name}
-          picture={author.picture}
-          size={50}
-          date={date}
-        />
+        <Avatar name={author.name} picture={author.picture} size={50} date={date} />
       </div>
       <p className='text-lg leading-relaxed mb-4'>{excerpt}</p>
       {isVisible && <ReadMore slug={slug} stats={stats} />}
