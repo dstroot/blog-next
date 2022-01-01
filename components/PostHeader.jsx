@@ -10,21 +10,16 @@ export const PostHeader = ({ title, coverImage, date, author }) => {
         <CoverImage
           title={title}
           src={coverImage}
-          width={1240}
-          height={620}
+          width={1496}
+          height={748}
           priority={true}
-          placeholder='empty'
-          blurDataURL=''
+          placeholder='blur' // empty | blur
+          blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+ip1sAAAAASUVORK5CYII='
         />
       </div>
       <div className='max-w-3xl mx-auto'>
         <div className='mb-6'>
-          <Avatar
-            name={author.name}
-            picture={author.picture}
-            size={55}
-            date={date}
-          />
+          <Avatar name={author.name} picture={author.picture} size={55} date={date} />
         </div>
       </div>
     </>
