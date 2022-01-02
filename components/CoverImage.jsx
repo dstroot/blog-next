@@ -16,10 +16,10 @@ export const CoverImage = ({
       <Image
         src={src}
         alt={`Cover Image for ${title}`}
-        layout='intrinsic' // intrinsic, fill, responsive
+        layout='responsive' // intrinsic, fill, responsive
         width={width}
         height={height}
-        // sizes={[335, 460, 546, 600, 728, 984, 1240, 1496]}
+        sizes='70vw'
         priority={priority ? priority : false}
         placeholder={placeholder ? placeholder : 'empty'}
         blurDataURL={blurDataURL ? blurDataURL : ''}
