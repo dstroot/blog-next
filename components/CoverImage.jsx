@@ -1,22 +1,23 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { toBase64 } from '../lib/utils';
+// import { toBase64 } from '../lib/utils';
+// import useDimensions from 'react-cool-dimensions';
 
-const shimmer = (
-  w,
-  h
-) => `<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-      <linearGradient id="g">
-        <stop stop-color="#a1a1a1" offset="20%" />
-        <stop stop-color="#828282" offset="50%" />
-        <stop stop-color="#a1a1a1" offset="70%" />
-      </linearGradient>
-    </defs>
-    <rect width="${w}" height="${h}" fill="#333" />
-    <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
-    <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="500ms" repeatCount="indefinite"  />
-  </svg>`;
+// const shimmer = (
+//   w,
+//   h
+// ) => `<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+//     <defs>
+//       <linearGradient id="g">
+//         <stop stop-color="#a1a1a1" offset="20%" />
+//         <stop stop-color="#828282" offset="50%" />
+//         <stop stop-color="#a1a1a1" offset="70%" />
+//       </linearGradient>
+//     </defs>
+//     <rect width="${w}" height="${h}" fill="#333" />
+//     <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+//     <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="500ms" repeatCount="indefinite"  />
+//   </svg>`;
 
 export const CoverImage = ({
   title,
@@ -28,22 +29,23 @@ export const CoverImage = ({
   // placeholder,
   // blurDataURL,
 }) => {
+  // const { observe, width } = useDimensions();
   const image = (
-    <div className='block'>
-      <Image
-        src={src}
-        alt={`Cover Image for ${title}`}
-        layout='responsive' // intrinsic, fill, responsive
-        width={width}
-        height={height}
-        sizes='70vw'
-        priority={priority ? priority : false}
-        // placeholder={placeholder ? placeholder : 'empty'}
-        // blurDataURL={blurDataURL ? blurDataURL : ''}
-        placeholder='blur'
-        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(width, height))}`}
-      />
-    </div>
+    // <div ref={observe}>
+    <Image
+      src={src}
+      alt={`Cover Image for ${title}`}
+      layout='responsive' // intrinsic, fill, responsive
+      width={width}
+      height={height}
+      priority={priority ? priority : false}
+      // sizes={width !== undefined ? `${Math.round(width)}px` : '100vw'}
+      // placeholder={placeholder ? placeholder : 'empty'}
+      // blurDataURL={blurDataURL ? blurDataURL : ''}
+      // placeholder='blur'
+      // blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(width, width / 2))}`}
+    />
+    // </div>
   );
   return (
     <div className='sm:mx-0'>

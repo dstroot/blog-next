@@ -24,7 +24,7 @@ export default function Index() {
             height={662}
             width={200}
             layout='intrinsic'
-            placeholder='blur'
+            // placeholder='blur'
           />
         </div>
         <div className='flex flex-row items-center mb-8 md:mb-12'>
@@ -34,7 +34,8 @@ export default function Index() {
               alt={CMS_NAME}
               className='rounded-full image'
               layout='fill'
-              placeholder='blur'
+              objectFit='contain'
+              // placeholder='blur'
             />
           </div>
           <div className='flex-initial'>
