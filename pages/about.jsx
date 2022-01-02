@@ -17,7 +17,7 @@ export default function Index() {
 
       <Container>
         <Header />
-        <div className='invisible xl:visible fixed left-top mt-36 ml-10'>
+        <div className='invisible xl:visible absolute left-top mt-36 ml-10'>
           <Image
             src={maker}
             alt={CMS_NAME}
