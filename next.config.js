@@ -43,6 +43,7 @@ module.exports = {
 // https://developers.google.com/tag-platform/tag-manager/web/csp
 const ContentSecurityPolicy = `
   default-src 'self';
+  frame-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline' https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com data: ;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
