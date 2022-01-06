@@ -82,4 +82,22 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
+  {
+    key: 'Expect-CT',
+    value: 'enforce, max-age=30',
+  },
+  {
+    key: 'Cross-Origin-Embedder-Policy',
+    value: 'require-corp',
+  },
+  {
+    key: 'Cross-Origin-Opener-Policy',
+    value: 'same-origin',
+  },
+  {
+    key: 'Cross-Origin-Resource-Policy',
+    value: 'same-origin',
+  },
+  { key: 'Access-Control-Allow-Origin', value: 'https://www.danstroot.com' },
+  { key: 'Vary', value: 'Origin' },
 ];
