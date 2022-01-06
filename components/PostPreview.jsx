@@ -13,7 +13,6 @@ export const PostPreview = ({
   author,
   slug,
   stats,
-  // fileName,
   onIsVisible,
 }) => {
   const ref = useRef();
@@ -41,7 +40,8 @@ export const PostPreview = ({
           src={coverImage}
           width={708}
           height={354}
-          // placeholder='blur'
+          placeholder='blur'
+          blurDataURL={coverImage}
           // blurDataURL={`data:image/svg+xml;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkSAMAAGwAaKJgE8oAAAAASUVORK5CYII=`}
         />
       </div>
