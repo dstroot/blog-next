@@ -51,7 +51,7 @@ const ContentSecurityPolicy = `
   frame-ancestors 'self';
   script-src ${
     process.env.NODE_ENV === 'production'
-      ? "'self' 'unsafe-inline'"
+      ? "'self' 'unsafe-eval' 'unsafe-inline'"
       : "'self' 'unsafe-eval' 'unsafe-inline'"
   } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
@@ -129,16 +129,16 @@ const securityHeaders = [
   //   Cross-Origin-Opener-Policy: same-origin
   // You can determine whether a web page is in a cross-origin isolated state
   // by examining "self.crossOriginIsolated" in the console.
-  // {
-  //   key: 'Cross-Origin-Embedder-Policy',
-  //   value: 'require-corp',
-  // },
-  // {
-  //   key: 'Cross-Origin-Opener-Policy',
-  //   value: 'same-origin',
-  // },
-  // {
-  //   key: 'Cross-Origin-Resource-Policy',
-  //   value: 'cross-origin',
-  // },
+  {
+    key: 'Cross-Origin-Embedder-Policy',
+    value: 'require-corp',
+  },
+  {
+    key: 'Cross-Origin-Opener-Policy',
+    value: 'same-origin',
+  },
+  {
+    key: 'Cross-Origin-Resource-Policy',
+    value: 'cross-origin',
+  },
 ];
