@@ -43,6 +43,8 @@ module.exports = {
 // https://developers.google.com/tag-platform/tag-manager/web/csp
 const ContentSecurityPolicy = `
   default-src 'self';
+  base-uri 'self';
+  object-src 'none';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com;
   script-src ${
     process.env.NODE_ENV === 'production'
@@ -52,11 +54,14 @@ const ContentSecurityPolicy = `
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
     process.env.NODE_ENV === 'production' ? "'self' 'unsafe-inline'" : "'self' 'unsafe-inline'"
-  } *.googleapis.com;
-  img-src * blob: data: ;
+  } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
+  img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com;
   media-src 'none';
   connect-src *;
-  font-src 'self' fonts.gstatic.com data: ;
+  font-src 'self' https://fonts.gstatic.com data: ;
+  ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
+  report-uri /api/csp;
+  report-to csp-endpoint;
 `;
 
 const securityHeaders = [
@@ -93,6 +98,16 @@ const securityHeaders = [
   {
     key: 'Expect-CT',
     value: 'enforce, max-age=30',
+  },
+  {
+    key: 'Report-To',
+    value: `{
+             "group": "csp-endpoint",
+             "max_age": 10886400,
+             "endpoints": [
+               { "url": "/api/csp" }
+             ] 
+            }`.replace(/[\n\s]/g, ''),
   },
   // To opt in to a cross-origin isolated state, you need to send the following
   // HTTP headers on the main document:
