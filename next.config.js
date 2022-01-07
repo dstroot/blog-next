@@ -56,7 +56,9 @@ const ContentSecurityPolicy = `
   } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com data: ;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
-    process.env.NODE_ENV === 'production' ? "'self' 'unsafe-inline'" : "'self' 'unsafe-inline'"
+    process.env.NODE_ENV === 'production'
+      ? "'self' 'unsafe-inline' 'report-sample'"
+      : "'self' 'unsafe-inline'"
   } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
   img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com;
   media-src 'none';
@@ -65,12 +67,20 @@ const ContentSecurityPolicy = `
   ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
   report-uri /api/csp;
   report-to csp-endpoint;
-`;
+`.replace(/[\n\s]/g, '');
+
+const group = `{
+                "group": "csp-endpoint",
+                "max_age": 10886400,
+                "endpoints": [
+                  { "url": "/api/csp" }
+                ] 
+               }`.replace(/[\n\s]/g, '');
 
 const securityHeaders = [
   {
     key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\n/g, ''),
+    value: ContentSecurityPolicy,
   },
   {
     key: 'Referrer-Policy',
@@ -104,13 +114,7 @@ const securityHeaders = [
   },
   {
     key: 'Report-To',
-    value: `{
-             "group": "csp-endpoint",
-             "max_age": 10886400,
-             "endpoints": [
-               { "url": "/api/csp" }
-             ] 
-            }`.replace(/[\n\s]/g, ''),
+    value: group,
   },
   // To opt in to a cross-origin isolated state, you need to send the following
   // HTTP headers on the main document:
