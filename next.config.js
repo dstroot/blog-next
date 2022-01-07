@@ -45,11 +45,13 @@ const ContentSecurityPolicy = `
   default-src 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com;
   script-src ${
-    process.env.NODE_ENV === 'production' ? 'self' : "'self' 'unsafe-inline' 'unsafe-eval'"
+    process.env.NODE_ENV === 'production'
+      ? "'self' 'unsafe-inline' 'unsafe-eval'"
+      : "'self' 'unsafe-inline' 'unsafe-eval'"
   } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com data: ;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
-    process.env.NODE_ENV === 'production' ? 'self' : "'self' 'unsafe-inline'"
+    process.env.NODE_ENV === 'production' ? "'self' 'unsafe-inline'" : "'self' 'unsafe-inline'"
   } *.googleapis.com;
   img-src * blob: data: ;
   media-src 'none';
