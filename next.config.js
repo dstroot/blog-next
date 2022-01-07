@@ -43,7 +43,7 @@ module.exports = {
 // https://developers.google.com/tag-platform/tag-manager/web/csp
 const ContentSecurityPolicy = `
   default-src 'self';
-  frame-src 'self';
+  frame-src 'self' *.youtube-nocookie.com *.twitter.com;
   script-src 'self' 'unsafe-eval' 'unsafe-inline' https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com data: ;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
@@ -82,10 +82,18 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
+  { key: 'Access-Control-Allow-Origin', value: 'https://www.danstroot.com' },
+  { key: 'Vary', value: 'Origin' },
   {
     key: 'Expect-CT',
     value: 'enforce, max-age=30',
   },
+  // To opt in to a cross-origin isolated state, you need to send the following
+  // HTTP headers on the main document:
+  //   Cross-Origin-Embedder-Policy: require-corp
+  //   Cross-Origin-Opener-Policy: same-origin
+  // You can determine whether a web page is in a cross-origin isolated state
+  // by examining "self.crossOriginIsolated" in the console.
   {
     key: 'Cross-Origin-Embedder-Policy',
     value: 'require-corp',
@@ -96,8 +104,6 @@ const securityHeaders = [
   },
   {
     key: 'Cross-Origin-Resource-Policy',
-    value: 'same-origin',
+    value: 'cross-origin',
   },
-  { key: 'Access-Control-Allow-Origin', value: 'https://www.danstroot.com' },
-  { key: 'Vary', value: 'Origin' },
 ];
