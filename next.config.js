@@ -64,7 +64,7 @@ const ContentSecurityPolicy = `
   media-src 'none';
   connect-src *;
   font-src 'self' https://fonts.gstatic.com data: ;
-  report-uri https://www.danstroot.com/api/csp;
+  report-uri /api/csp;
   report-to csp-endpoint;
 `.replace(/\n/g, '');
 
@@ -75,7 +75,7 @@ const group = `{
                 "group": "csp-endpoint",
                 "max_age": 30,
                 "endpoints": [
-                  { "url": "https://www.danstroot.com/api/csp" }
+                  { "url": "/api/csp" }
                 ] 
                }`.replace(/[\n\s]/g, '');
 
