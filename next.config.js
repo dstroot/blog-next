@@ -51,7 +51,7 @@ const ContentSecurityPolicy = `
   frame-ancestors 'self';
   script-src ${
     process.env.NODE_ENV === 'production'
-      ? "'self' 'unsafe-eval'"
+      ? "'self' 'unsafe-eval' 'unsafe-inline'"
       : "'self' 'unsafe-eval' 'unsafe-inline'"
   } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
@@ -66,10 +66,8 @@ const ContentSecurityPolicy = `
   font-src 'self' https://fonts.gstatic.com data: ;
   report-uri /api/csp;
   report-to csp-endpoint;
+  ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
 `.replace(/\n/g, '');
-
-// add to CSP once we are not report-only
-// ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
 
 const group = `{
                 "group": "csp-endpoint",
@@ -144,17 +142,3 @@ const securityHeaders = [
   //   value: 'cross-origin',
   // },
 ];
-
-// default-src https://localhost:8123/;
-//  child-src https://localhost:8123/;
-//  connect-src https://localhost:8123/;
-//  font-src https://localhost:8123/;
-//  img-src https://localhost:8123/;
-//  media-src https://localhost:8123/;
-//  object-src https://localhost:8123/;
-//  script-src https://localhost:8123/;
-//  style-src https://localhost:8123/;
-//  form-action https://localhost:8123/;
-//  frame-ancestors 'none';
-//  plugin-types 'none';
-//  report-uri http://localhost:8123/csp-report
