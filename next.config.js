@@ -45,7 +45,10 @@ const ContentSecurityPolicy = `
   default-src 'self';
   base-uri 'self';
   object-src 'none';
+  worker-src 'none';
+  form-action 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com;
+  frame-ancestors 'self';
   script-src ${
     process.env.NODE_ENV === 'production'
       ? "'self' 'unsafe-inline' 'unsafe-eval'"
