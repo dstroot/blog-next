@@ -3,7 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default async function handler(req, res) {
   let params = { TableName: 'csp_reports' };
-  var reqJson = req.body;
+  console.log(req.body);
+
+  var reqJson = JSON.parse(req.body);
 
   // validate we have a report
   if (!reqJson.hasOwnProperty('csp-report')) {

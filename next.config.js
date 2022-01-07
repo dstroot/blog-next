@@ -52,7 +52,7 @@ const ContentSecurityPolicy = `
   script-src ${
     process.env.NODE_ENV === 'production'
       ? "'self' 'unsafe-inline' 'unsafe-eval'"
-      : "'self' 'unsafe-inline' 'unsafe-eval'"
+      : "'self' 'unsafe-eval'"
   } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
@@ -64,22 +64,25 @@ const ContentSecurityPolicy = `
   media-src 'none';
   connect-src *;
   font-src 'self' https://fonts.gstatic.com data: ;
-  ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
-  report-uri /api/csp;
+  report-uri http://localhost:3000/api/csp;
   report-to csp-endpoint;
 `.replace(/\n/g, '');
+
+// add to CSP once we are not report-only
+// ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
 
 const group = `{
                 "group": "csp-endpoint",
                 "max_age": 10886400,
                 "endpoints": [
-                  { "url": "/api/csp" }
+                  { "url": "http://localhost:3000/api/csp" }
                 ] 
                }`.replace(/[\n\s]/g, '');
 
 const securityHeaders = [
   {
-    key: 'Content-Security-Policy-Report-Only',
+    // key: 'Content-Security-Policy-Report-Only',
+    key: 'Content-Security-Policy',
     value: ContentSecurityPolicy,
   },
   {
