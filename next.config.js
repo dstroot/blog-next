@@ -64,7 +64,7 @@ const ContentSecurityPolicy = `
   media-src 'none';
   connect-src *;
   font-src 'self' https://fonts.gstatic.com data: ;
-  report-uri http://www.danstroot.com/api/csp;
+  report-uri https://www.danstroot.com/api/csp;
   report-to csp-endpoint;
 `.replace(/\n/g, '');
 
@@ -75,7 +75,7 @@ const group = `{
                 "group": "csp-endpoint",
                 "max_age": 30,
                 "endpoints": [
-                  { "url": "http://www.danstroot.com/api/csp" }
+                  { "url": "https://www.danstroot.com/api/csp" }
                 ] 
                }`.replace(/[\n\s]/g, '');
 
@@ -144,3 +144,17 @@ const securityHeaders = [
   //   value: 'cross-origin',
   // },
 ];
+
+// default-src https://localhost:8123/;
+//  child-src https://localhost:8123/;
+//  connect-src https://localhost:8123/;
+//  font-src https://localhost:8123/;
+//  img-src https://localhost:8123/;
+//  media-src https://localhost:8123/;
+//  object-src https://localhost:8123/;
+//  script-src https://localhost:8123/;
+//  style-src https://localhost:8123/;
+//  form-action https://localhost:8123/;
+//  frame-ancestors 'none';
+//  plugin-types 'none';
+//  report-uri http://localhost:8123/csp-report
