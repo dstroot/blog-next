@@ -2,7 +2,7 @@ import { upd } from '../../../lib/dynamodb';
 import { v4 as uuidv4 } from 'uuid';
 
 export default async function handler(req, res) {
-  let params = { TableName: csp_reports };
+  let params = { TableName: 'csp_reports' };
   var reqJson = JSON.parse(req.body);
   // var reqJson = JSON.parse(req.body, (value) => {
   //   if (value === null || value === '') {
