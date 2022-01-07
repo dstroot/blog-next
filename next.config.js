@@ -51,8 +51,8 @@ const ContentSecurityPolicy = `
   frame-ancestors 'self';
   script-src ${
     process.env.NODE_ENV === 'production'
-      ? "'self' 'unsafe-inline' 'unsafe-eval'"
-      : "'self' 'unsafe-eval'"
+      ? "'self' 'unsafe-eval'"
+      : "'self' 'unsafe-eval' 'unsafe-inline'"
   } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
@@ -64,7 +64,7 @@ const ContentSecurityPolicy = `
   media-src 'none';
   connect-src *;
   font-src 'self' https://fonts.gstatic.com data: ;
-  report-uri http://localhost:3000/api/csp;
+  report-uri http://www.danstroot.com/api/csp;
   report-to csp-endpoint;
 `.replace(/\n/g, '');
 
@@ -73,9 +73,9 @@ const ContentSecurityPolicy = `
 
 const group = `{
                 "group": "csp-endpoint",
-                "max_age": 10886400,
+                "max_age": 30,
                 "endpoints": [
-                  { "url": "http://localhost:3000/api/csp" }
+                  { "url": "http://www.danstroot.com/api/csp" }
                 ] 
                }`.replace(/[\n\s]/g, '');
 
@@ -109,7 +109,13 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
-  { key: 'Access-Control-Allow-Origin', value: 'https://www.danstroot.com' },
+  {
+    key: 'Access-Control-Allow-Origin',
+    value:
+      process.env.NODE_ENV === 'production'
+        ? "'https://www.danstroot.com'"
+        : "'http://localhost:3000/'",
+  },
   { key: 'Vary', value: 'Origin' },
   {
     key: 'Expect-CT',
