@@ -53,7 +53,7 @@ const ContentSecurityPolicy = `
     process.env.NODE_ENV === 'production'
       ? "'self' 'unsafe-inline' 'unsafe-eval'"
       : "'self' 'unsafe-inline' 'unsafe-eval'"
-  } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com data: ;
+  } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
     process.env.NODE_ENV === 'production'
@@ -67,7 +67,7 @@ const ContentSecurityPolicy = `
   ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
   report-uri /api/csp;
   report-to csp-endpoint;
-`.replace(/[\n\s]/g, '');
+`.replace(/\n/g, '');
 
 const group = `{
                 "group": "csp-endpoint",
