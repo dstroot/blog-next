@@ -3,7 +3,7 @@ import { connectSearchBox } from 'react-instantsearch-dom';
 function SearchBox({ refine }) {
   return (
     <form action='' role='search' className='flex justify-center'>
-      <div className='pt-2 relative mx-auto text-gray-600'>
+      <div className='pt-2 pb-6 relative mx-auto text-gray-600'>
         <input
           id='algolia_search'
           type='search'
