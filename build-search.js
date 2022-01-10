@@ -1,10 +1,11 @@
 // build-search.js
 const dotenv = require('dotenv');
-const algoliasearch = require('algoliasearch/lite');
-const { readdirSync, readFileSync } = require('fs');
-const { join } = require('path');
 const matter = require('gray-matter');
 const readingTime = require('reading-time');
+const algoliasearch = require('algoliasearch/lite');
+
+const { join } = require('path');
+const { readdirSync, readFileSync } = require('fs');
 
 const getPath = (location, fileName) => {
   if (!location) {
@@ -43,9 +44,17 @@ const getAllFilesFrontMatter = async (location, fileExtension) => {
   );
 };
 
+// hash a string
+function hashString(s) {
+  let h;
+  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  return h;
+}
+
 function transformPostsToSearchObjects(posts) {
   const transformed = posts.map((post) => {
     return {
+      objectID: hashString(post.date + post.slug),
       title: post.title,
       excerpt: post.excerpt,
       slug: post.slug,
@@ -61,7 +70,7 @@ function transformPostsToSearchObjects(posts) {
 
 (async function () {
   // initialize environment variables
-  dotenv.config();
+  dotenv.config({ path: './.env.local' });
 
   try {
     // get all posts
@@ -70,32 +79,26 @@ function transformPostsToSearchObjects(posts) {
     // Remove any unpublished posts
     posts = posts.filter((posts) => posts.published);
 
-    const transformed = transformPostsToSearchObjects(posts);
+    // Initialize Algolia client
+    const client = algoliasearch(
+      process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+      process.env.ALGOLIA_SEARCH_ADMIN_KEY
+    );
 
-    // we have data ready for Algolia!
-    // console.log(transformed);
-
-    // initialize the client with your environment variables
-    const client = algoliasearch('RX6PR7I4PD', '6e10ba7ae5281ee83a1accff7e97aa79');
-
-    //     NEXT_PUBLIC_ALGOLIA_APP_ID=RX6PR7I4PD
-    // NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY=16ab493133ac371bb46d6812e5754d19
-    // ALGOLIA_SEARCH_ADMIN_KEY=6e10ba7ae5281ee83a1accff7e97aa79
-
-    // initialize the index with your index name
+    // Add your index name
     const index = client.initIndex('blog');
 
-    // save the objects!
+    // Save the objects
+    const transformed = transformPostsToSearchObjects(posts);
     const algoliaResponse = await index.saveObjects(transformed, {
       autoGenerateObjectIDIfNotExist: true,
     });
 
     // check the output of the response in the console
     console.log(
-      `🎉 Sucessfully added ${
-        algoliaResponse.objectIDs.length
-      } records to Algolia search. Object IDs:\n${algoliaResponse.objectIDs.join('\n')}`
+      `🎉 Sucessfully added ${algoliaResponse.objectIDs.length} records to Algolia search.`
     );
+    // console.log(`Object IDs:\n${algoliaResponse.objectIDs.join('\n')}`);
   } catch (error) {
     console.log(error);
   }
