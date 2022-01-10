@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap && node ./build-search.js",
     "start": "next start",
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
@@ -14,6 +14,7 @@
     "@google-analytics/data": "^2.8.0",
     "@mailchimp/mailchimp_marketing": "^3.0.72",
     "@mdx-js/react": "^1.6.22",
+    "algoliasearch": "^4.12.0",
     "date-fns": "2.28.0",
     "esbuild": "^0.14.8",
     "feed": "^4.2.2",
