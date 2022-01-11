@@ -13,10 +13,7 @@ const Hits = ({ searchState, searchResults }) => {
       {searchResults?.hits.length > 0 && validQuery && (
         <div className='grid grid-cols-1 gap-4 w-full lg:grid-cols-2 xl:grid-cols-3 mb-6'>
           {searchResults.hits.map((hit) => (
-            <>
-              {/* <p>{JSON.stringify(hit)}</p> */}
-              <PostCard key={hit.objectID} hit={hit}></PostCard>
-            </>
+            <PostCard key={hit.objectID} hit={hit}></PostCard>
           ))}
         </div>
       )}
@@ -26,6 +23,7 @@ const Hits = ({ searchState, searchResults }) => {
 
 export const SearchHits = connectStateResults(Hits);
 
+// TODO - whole card should be the link
 const PostCard = ({ hit }) => {
   return (
     <div className='flex flex-col p-5 space-y-3 w-full rounded shadow-md bg-gray-100 dark:bg-gray-700'>
