@@ -12,6 +12,8 @@ pre[class*='language-'] {
 
 /**
  * Removes clear "X" from Algolia search box
+ * https://codesandbox.io/s/no-submit-no-reset-zihtl?file=/src/App.css:504-670
+ * https://discourse.algolia.com/t/not-have-button-on-search-bar/8963
  */
 
 input[type='search']::-webkit-search-decoration,
