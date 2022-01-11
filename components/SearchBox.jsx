@@ -1,6 +1,6 @@
 import { connectSearchBox } from 'react-instantsearch-dom';
 
-function SearchBox({ refine }) {
+const Search = ({ refine }) => {
   return (
     <form action='' role='search' className='flex justify-center'>
       <div className='pt-2 pb-6 relative mx-auto text-gray-600'>
@@ -69,9 +69,9 @@ function SearchBox({ refine }) {
     //   </div>
     // </form>
   );
-}
+};
 
-export default connectSearchBox(SearchBox);
+export const SearchBox = connectSearchBox(Search);
 
 // https://reactjs.org/docs/forms.html
 
@@ -102,4 +102,98 @@ export default connectSearchBox(SearchBox);
     </svg>
   </button>
 </div>; */
+}
+
+{
+  /* <div className='bg-white dark:bg-gray-900 relative pointer-events-auto'>
+  <button
+    type='button'
+    className='hidden w-full lg:flex items-center text-sm leading-6 text-gray-400 rounded-md ring-1 ring-gray-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-gray-300 dark:bg-gray-800 dark:highlight-white/5 dark:hover:bg-gray-700'
+  >
+    <svg width='24' height='24' fill='none' aria-hidden='true' className='mr-3 flex-none'>
+      <path
+        d='m19 19-3.5-3.5'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      ></path>
+      <circle
+        cx='11'
+        cy='11'
+        r='6'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      ></circle>
+    </svg>
+    Quick search...<span className='ml-auto pl-3 flex-none text-xs font-semibold'>⌘K</span>
+  </button>
+</div>; */
+}
+
+{
+  /* <header className='DocSearch-SearchBar'>
+  <form action='' role='search' noValidate='' className='DocSearch-Form'>
+    <label className='DocSearch-MagnifierLabel' htmlFor='docsearch-input' id='docsearch-label'>
+      <svg width='20' height='20' className='DocSearch-Search-Icon' viewBox='0 0 20 20'>
+        <path
+          d='M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z'
+          stroke='currentColor'
+          fill='none'
+          fillRule='evenodd'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        ></path>
+      </svg>
+    </label>
+    <div className='DocSearch-LoadingIndicator'>
+      <svg viewBox='0 0 38 38' stroke='currentColor' stroke-Opacity='.5'>
+        <g fill='none' fillRule='evenodd'>
+          <g transform='translate(1 1)' strokeWidth='2'>
+            <circle stroke-Opacity='.3' cx='18' cy='18' r='18'></circle>
+            <path d='M36 18c0-9.94-8.06-18-18-18'>
+              <animateTransform
+                attributeName='transform'
+                type='rotate'
+                from='0 18 18'
+                to='360 18 18'
+                dur='1s'
+                repeatCount='indefinite'
+              ></animateTransform>
+            </path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <input
+      className='DocSearch-Input'
+      aria-autocomplete='list'
+      aria-labelledby='docsearch-label'
+      id='docsearch-input'
+      autoComplete='off'
+      autoCorrect='off'
+      autoCapitalize='off'
+      spellCheck='false'
+      placeholder='Search documentation'
+      maxLength='64'
+      type='search'
+      value=''
+    />
+    <button type='reset' title='Clear the query' className='DocSearch-Reset' hidden=''>
+      <svg width='20' height='20' viewBox='0 0 20 20'>
+        <path
+          d='M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z'
+          stroke='currentColor'
+          fill='none'
+          fillRule='evenodd'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        ></path>
+      </svg>
+    </button>
+  </form>
+  <button className='DocSearch-Cancel'>Cancel</button>
+</header>; */
 }
