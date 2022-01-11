@@ -12,7 +12,21 @@ export const Search = () => {
   return (
     <>
       <InstantSearch searchClient={searchClient} indexName='blog'>
-        <SearchBox />
+        <SearchBox
+          // Optional parameters
+          // defaultRefinement={string}
+          autoFocus={true}
+          searchAsYouType={false}
+          // showLoadingIndicator={boolean}
+          // submit={React.Node}
+          // reset={React.Node}
+          // loadingIndicator={React.Node}
+          // focusShortcuts={string[]}
+          // onSubmit={function}
+          // onReset={function}
+          // on*={function}
+          // translations={object}
+        />
         <SearchHits />
       </InstantSearch>
     </>

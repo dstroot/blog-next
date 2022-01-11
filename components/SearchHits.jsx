@@ -53,3 +53,17 @@ const PostCard = ({ hit }) => {
     </div>
   );
 };
+
+//https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/react/
+
+// const Results = connectStateResults(({ searchState, searchResults, children }) =>
+//   searchResults && searchResults.nbHits !== 0 ? (
+//     children
+//   ) : (
+//     <div>No results have been found for {searchState.query}.</div>
+//   )
+// );
+
+// <Results>
+//   <Hits />
+// </Results>;
