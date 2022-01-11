@@ -37,6 +37,7 @@ const getAllFilesFrontMatter = async (location, fileExtension) => {
 
       return {
         ...data, // frontmatter
+        content: content, // markdown content
         slug: slug,
         stats: readingTime(content), // word count, reading time, etc.
       };
@@ -57,11 +58,12 @@ function transformPostsToSearchObjects(posts) {
       objectID: hashString(post.date + post.slug),
       title: post.title,
       excerpt: post.excerpt,
+      content: post.content,
       slug: post.slug,
       image: post.coverImage,
-      // topicsCollection: { items: post.tags },
       date: post.date,
       readingTime: post.stats.text,
+      // TODO - how do I get views in here for ranking?
     };
   });
 
@@ -90,9 +92,7 @@ function transformPostsToSearchObjects(posts) {
 
     // Save the objects
     const transformed = transformPostsToSearchObjects(posts);
-    const algoliaResponse = await index.saveObjects(transformed, {
-      autoGenerateObjectIDIfNotExist: true,
-    });
+    const algoliaResponse = await index.saveObjects(transformed, {});
 
     // check the output of the response in the console
     console.log(

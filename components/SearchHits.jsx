@@ -39,17 +39,17 @@ const PostCard = ({ hit }) => {
         />
         <Link href={`/posts/${hit.slug}`}>
           <a className=''>
-            <h1 className='mt-4 text-lg font-bold'>{hit.title}</h1>
+            <h1 className='mt-4 text-lg font-bold line-clamp-1'>{hit.title}</h1>
           </a>
         </Link>
       </div>
-      <p className='text-sm'>{hit.excerpt}</p>
+      <p className='text-sm line-clamp-3'>{hit.excerpt}</p>
       <div className='flex space-x-2 text-xs'>
         <span className='px-2 py-1 bg-gray-200 dark:bg-gray-300 text-gray-900 dark:text-gray-800 rounded-full'>
-          {hit.readingTime}
+          Published: {hit.date}
         </span>
         <span className='px-2 py-1 bg-gray-200 dark:bg-gray-300 text-gray-900 dark:text-gray-800 rounded-full'>
-          Published: {hit.date}
+          {hit.readingTime}
         </span>
       </div>
     </div>
