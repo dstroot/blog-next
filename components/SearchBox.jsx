@@ -12,17 +12,17 @@ const Search = ({ refine }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     refine(search);
-    setSearch('');
+    // setSearch('');
   };
 
   return (
     <form noValidate action='' role='search' className='flex justify-center my-6'>
-      <div className=' relative mx-auto text-gray-600'>
+      <div className=' relative mx-auto text-gray-600 dark:text-gray-400 w-full md:w-3/4'>
         <input
           type='search'
-          className='border-2 border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-700 h-12 text-gray-600 dark:text-gray-400 px-5 pr-16 w-96 rounded-lg focus:outline-none'
-          placeholder='Search'
-          aria-label='Search'
+          className='border-2 border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-700 h-12 px-5 pr-16 w-full rounded-full focus:outline-none'
+          placeholder='Search...'
+          aria-label='Search...'
           autoComplete='off'
           autoCorrect='off'
           autoCapitalize='off'
@@ -33,7 +33,7 @@ const Search = ({ refine }) => {
         />
         <button onClick={handleSubmit} className='absolute right-0 top-0 mt-4 mr-4'>
           <svg
-            className='text-gray-600 dark:text-gray-400 h-5 w-4 fill-current'
+            className=' h-5 w-4 fill-current'
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 56.966 56.966'
             style={{ enableBackground: 'new 0 0 56.966 56.966' }}

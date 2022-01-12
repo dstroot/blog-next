@@ -12,9 +12,11 @@ export default function Index() {
       </Head>
 
       <Container>
+        <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-center md:text-left before:tracking-tighter leading-tight md:leading-none mb-8 md:mb-12'>
+          Search
+        </h1>
         <Search />
       </Container>
     </>
   );
 }
-

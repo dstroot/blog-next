@@ -18,12 +18,10 @@ pre[class*='language-'] {
 
 input[type='search']::-webkit-search-decoration,
 input[type='search']::-webkit-search-cancel-button {
-  /* -webkit-appearance: none; */
   @apply hidden invisible;
 }
 
 ::-ms-clear {
-  /* display: none; */
   @apply hidden invisible;
 }
 

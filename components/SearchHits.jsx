@@ -11,7 +11,7 @@ const Hits = ({ searchState, searchResults }) => {
         <p>Aw snap! No search results were found.</p>
       )}
       {searchResults?.hits.length > 0 && validQuery && (
-        <div className='grid grid-cols-1 gap-4 w-full lg:grid-cols-2 xl:grid-cols-3 mb-6'>
+        <div className='grid grid-cols-1 gap-4 w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-6'>
           {searchResults.hits.map((hit) => (
             <PostCard key={hit.objectID} hit={hit}></PostCard>
           ))}
@@ -28,13 +28,15 @@ const PostCard = ({ hit }) => {
   return (
     <div className='flex flex-col p-5 space-y-3 w-full rounded shadow-md bg-gray-100 dark:bg-gray-700'>
       <div className='flex flex-col'>
-        <Image
-          src={hit.image}
-          width={708}
-          height={354}
-          alt={`Cover Image for ${hit.title}`}
-          layout='responsive'
-        />
+        <div className='w-100'>
+          <Image
+            src={hit.image}
+            width={708}
+            height={354}
+            alt={`Cover Image for ${hit.title}`}
+            layout='responsive'
+          />
+        </div>
         <Link href={`/posts/${hit.slug}`}>
           <a className=''>
             <h1 className='mt-4 text-lg font-bold line-clamp-1'>{hit.title}</h1>

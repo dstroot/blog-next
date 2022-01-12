@@ -19,7 +19,7 @@ export const Search = () => {
           searchAsYouType={false}
           // showLoadingIndicator={boolean}
           // submit={React.Node}
-          // reset={React.Node}
+          // reset={React.Node}  // can also pass "reset ={null}" to remove the reset button
           // loadingIndicator={React.Node}
           // focusShortcuts={string[]}
           // onSubmit={function}
