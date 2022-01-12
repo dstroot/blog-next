@@ -1,9 +1,9 @@
 import { SEO } from '../../components/Seo';
 import { icons } from '../../components/Icons';
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import { Container } from '../../components/Container';
 import { GitHubLink } from '../../components/GitHubLink';
-import { usePageView } from '../../hooks/usePageView';
+// import { usePageView } from '../../hooks/usePageView';
 import { MDXComponents } from '../../components/MDXComponents';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { getMDXFileBySlug } from '../../lib/processMDX';
@@ -18,13 +18,20 @@ export default function Index({ code, frontMatter }) {
     title: `${CMS_NAME} · ${frontMatter.title}`,
     url: `${BASE_URL}/snippets/${frontMatter.slug}`,
     description: frontMatter.summary,
-    // image: `${BASE_URL}${frontMatter.icon}`,
+    // image: `${BASE_URL}${frontMatter.icon}`,  // TODO: FIXME
     publishedDate: frontMatter.date,
     ogType: 'article',
     twHandle: '@danstroot',
   };
 
-  usePageView(frontMatter.slug);
+  useEffect(() => {
+    setTimeout(() => {
+      let path = encodeURIComponent(frontMatter.slug);
+      // Use `navigator.sendBeacon()` if available, fall back to `fetch()`.
+      (navigator.sendBeacon && navigator.sendBeacon(`/api/views/${path}`)) ||
+        fetch(`/api/views/${path}`, { method: 'POST' });
+    }, 5000); // register page view after 5s
+  }, [frontMatter.slug]);
 
   return (
     <>

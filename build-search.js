@@ -3,8 +3,10 @@ const dotenv = require('dotenv');
 const matter = require('gray-matter');
 const readingTime = require('reading-time');
 const algoliasearch = require('algoliasearch/lite');
-
+const fetch = require('node-fetch');
 const { join } = require('path');
+// const { BASE_URL } = require('./lib/constants');
+const BASE_URL = 'https://www.danstroot.com';
 const { readdirSync, readFileSync } = require('fs');
 
 const getPath = (location, fileName) => {
@@ -32,14 +34,17 @@ const getAllFilesFrontMatter = async (location, fileExtension) => {
   return await Promise.all(
     getFilesByExtension(location, fileExtension).map(async (fileName) => {
       const slug = fileName.replace(fileExtension, '');
+      const path = `${BASE_URL}/api/views/${slug}`;
       const source = readFileSync(getPath(location, fileName), 'utf8');
       const { data, content } = matter(source);
+      const results = await fetch(path).then((res) => res.json());
 
       return {
         ...data, // frontmatter
         content: content, // markdown content
         slug: slug,
         stats: readingTime(content), // word count, reading time, etc.
+        views: results.viewCount,
       };
     })
   );
@@ -63,6 +68,7 @@ function transformPostsToSearchObjects(posts) {
       image: post.coverImage,
       date: post.date,
       readingTime: post.stats.text,
+      views: post.views,
       // TODO - how do I get views in here for ranking?
     };
   });

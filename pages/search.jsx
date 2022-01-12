@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import { Search } from '../components/Search';
 import { CMS_NAME } from '../lib/constants';
 import { Container } from '../components/Container';

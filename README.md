@@ -48,9 +48,12 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [x] Custom Error page
 - [x] Add RSS feed
 - [x] Add analytics (Vercel, Plausible, GA, or?) - Added Google Tag Manager and Google Analytics
+  - [ ] Added Views tracking as well - but getting undefined. 
 - [x] Add view tracking (using Dynamodb)
 - [x] Add Archive page
 - [ ] Add Search?
+  - [ ] Added Algolia Index and Search Page
+  - [ ] How to add views count to drive ranking?
 - [ ] Add Privacy and Terms (currently drafted)
 - [x] Add security and CSP headers (using next.config.js)
 - [ ] 100 Lighthouse Scores - add service worker?

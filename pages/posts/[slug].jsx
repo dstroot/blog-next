@@ -2,8 +2,9 @@ import { SEO } from '../../components/Seo';
 import { Header } from '../../components/Header';
 import { PostBody } from '../../components/PostBody';
 import { Container } from '../../components/Container';
+import { useEffect } from 'react';
 import { PostHeader } from '../../components/PostHeader';
-import { usePageView } from '../../hooks/usePageView';
+// import { usePageView } from '../../hooks/usePageView';
 import { getMDXFileBySlug } from '../../lib/processMDX';
 import { CMS_NAME, BASE_URL } from '../../lib/constants';
 import { getFilesByExtension } from '../../lib/getAllFiles';
@@ -22,7 +23,19 @@ export default function Index({ code, frontMatter }) {
     twHandle: '@danstroot',
   };
 
-  usePageView(frontMatter.slug);
+  useEffect(() => {
+    setTimeout(() => {
+      let path = encodeURIComponent(frontMatter.slug);
+
+      if (typeof path === 'undefined') {
+        console.log('usePageView: path undefined');
+      }
+
+      // Use `navigator.sendBeacon()` if available, fall back to `fetch()`.
+      (navigator.sendBeacon && navigator.sendBeacon(`/api/views/${path}`)) ||
+        fetch(`/api/views/${path}`, { method: 'POST' });
+    }, 5000); // register page view after 5s
+  }, [frontMatter.slug]);
 
   return (
     <>
