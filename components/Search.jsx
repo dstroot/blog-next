@@ -12,21 +12,7 @@ export const Search = () => {
   return (
     <>
       <InstantSearch searchClient={searchClient} indexName='blog'>
-        <SearchBox
-          // Optional parameters
-          // defaultRefinement={string}
-          autoFocus={true}
-          searchAsYouType={false}
-          // showLoadingIndicator={boolean}
-          // submit={React.Node}
-          // reset={React.Node}  // can also pass "reset ={null}" to remove the reset button
-          // loadingIndicator={React.Node}
-          // focusShortcuts={string[]}
-          // onSubmit={function}
-          // onReset={function}
-          // on*={function}
-          // translations={object}
-        />
+        <SearchBox />
         <SearchHits />
       </InstantSearch>
     </>
@@ -34,3 +20,19 @@ export const Search = () => {
 };
 
 // https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/react/
+
+// <SearchBox
+// Optional parameters
+// defaultRefinement={string}
+// autoFocus={true}
+// searchAsYouType={false}
+// showLoadingIndicator={boolean}
+// submit={React.Node}
+// reset={React.Node}  // can also pass "reset={null}" to remove the reset button
+// loadingIndicator={React.Node}
+// focusShortcuts={string[]}
+// onSubmit={function}
+// onReset={function}
+// on*={function}
+// translations={object}
+// />;
