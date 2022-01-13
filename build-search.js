@@ -5,9 +5,9 @@ const readingTime = require('reading-time');
 const algoliasearch = require('algoliasearch/lite');
 const fetch = require('node-fetch');
 const { join } = require('path');
-// const { BASE_URL } = require('./lib/constants');
-const BASE_URL = 'https://www.danstroot.com';
 const { readdirSync, readFileSync } = require('fs');
+
+const BASE_URL = 'https://www.danstroot.com';
 
 const getPath = (location, fileName) => {
   if (!location) {
@@ -57,6 +57,7 @@ function hashString(s) {
   return h;
 }
 
+// format search index data
 function transformPostsToSearchObjects(posts) {
   const transformed = posts.map((post) => {
     return {
@@ -69,7 +70,6 @@ function transformPostsToSearchObjects(posts) {
       date: post.date,
       readingTime: post.stats.text,
       views: post.views,
-      // TODO - how do I get views in here for ranking?
     };
   });
 
