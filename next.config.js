@@ -62,7 +62,7 @@ const ContentSecurityPolicy = `
   } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
   img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com;
   media-src 'none';
-  connect-src * https://*.algolia.net https://*.algolianet.com;
+  connect-src 'self' https://www.google-analytics.com https://*.algolia.net https://*.algolianet.com;
   font-src 'self' https://fonts.gstatic.com data: ;
   report-uri /api/csp;
   report-to csp-endpoint;
