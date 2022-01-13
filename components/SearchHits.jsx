@@ -8,7 +8,9 @@ const Hits = ({ searchState, searchResults }) => {
   return (
     <>
       {searchResults?.hits.length === 0 && validQuery && (
-        <p>Aw snap! No search results were found.</p>
+        <div className='text-center'>
+          No results have been found for search &quot;{searchState.query}&quot;.{'  '};(
+        </div>
       )}
       {searchResults?.hits.length > 0 && validQuery && (
         <div className='grid grid-cols-1 gap-4 w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-6'>
@@ -61,17 +63,3 @@ const PostCard = ({ hit }) => {
 };
 
 //https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/react/
-
-// TODO use code below
-
-// const Results = connectStateResults(({ searchState, searchResults, children }) =>
-//   searchResults && searchResults.nbHits !== 0 ? (
-//     children
-//   ) : (
-//     <div>No results have been found for {searchState.query}.</div>
-//   )
-// );
-
-// <Results>
-//   <Hits />
-// </Results>;

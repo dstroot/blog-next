@@ -44,7 +44,7 @@ const getAllFilesFrontMatter = async (location, fileExtension) => {
         content: content, // markdown content
         slug: slug,
         stats: readingTime(content), // word count, reading time, etc.
-        views: results.viewCount,
+        views: results.viewCount, // page views
       };
     })
   );
