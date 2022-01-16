@@ -1,4 +1,7 @@
-module.exports = {
+const withPWA = require('next-pwa');
+
+// module.exports = {
+module.exports = withPWA({
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
@@ -12,6 +15,13 @@ module.exports = {
     deviceSizes: [335, 460, 546, 600, 728, 984, 1240, 1496],
     // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // domains: [],
+  },
+  pwa: {
+    dest: 'public',
+    disable: process.env.NODE_ENV === 'development',
+    register: true,
+    publicExcludes: ['!assets/**/*', '!fonts/**/*', '!sitemap.xml', '!robots.txt', '!feed.xml'],
+    scope: '/',
   },
   async headers() {
     return [
@@ -38,14 +48,14 @@ module.exports = {
       },
     ];
   },
-};
+});
 
 // https://developers.google.com/tag-platform/tag-manager/web/csp
 const ContentSecurityPolicy = `
   default-src 'self';
   base-uri 'self';
   object-src 'none';
-  worker-src 'none';
+  worker-src 'self';
   form-action 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com;
   frame-ancestors 'self';
