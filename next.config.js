@@ -1,7 +1,14 @@
-const withPWA = require('next-pwa');
+// const withPWA = require('next-pwa');
 
-// module.exports = {
-module.exports = withPWA({
+/**
+ * "withPWA" generates a working PWA but the actual pages on the live
+ * site will not scroll all the way to the bottom of the page.
+ * Really strange and no time to debug so removed PWA for now.
+ * TODO FIXME
+ */
+
+module.exports = {
+  // module.exports = withPWA({
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
@@ -16,13 +23,13 @@ module.exports = withPWA({
     // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // domains: [],
   },
-  pwa: {
-    dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
-    register: true,
-    publicExcludes: ['!assets/**/*', '!fonts/**/*', '!sitemap.xml', '!robots.txt', '!feed.xml'],
-    scope: '/',
-  },
+  // pwa: {
+  //   dest: 'public',
+  //   disable: process.env.NODE_ENV === 'development',
+  //   register: true,
+  //   publicExcludes: ['!assets/**/*', '!fonts/**/*', '!sitemap.xml', '!robots.txt', '!feed.xml'],
+  //   scope: '/',
+  // },
   async headers() {
     return [
       {
@@ -48,7 +55,7 @@ module.exports = withPWA({
       },
     ];
   },
-});
+};
 
 // https://developers.google.com/tag-platform/tag-manager/web/csp
 const ContentSecurityPolicy = `
