@@ -43,6 +43,7 @@ const lightTextMuted = {
 };
 
 export default function Index() {
+
   return (
     <>
       <Head>
