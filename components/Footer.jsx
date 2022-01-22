@@ -36,24 +36,25 @@ export const Footer = () => {
           <div className='flex-none'>
             <div className='flex flex-col text-sm'>
               <span className='font-bold text-gray-700 dark:text-gray-100 uppercase mt-4 md:mt-0 mb-1 min-w-max'>
-                More Stuff
+                Tools
               </span>
 
+              <Link href='/search'>
+                <a className='hover:text-gray-500 font-medium'>Search</a>
+              </Link>
               <Link href='/archive'>
                 <a className='hover:text-gray-500 font-medium'>Post Archive</a>
               </Link>
               <Link href='/snippets'>
                 <a className='hover:text-gray-500 font-medium'>Code Snippets</a>
               </Link>
-              {/* <Link href='/about'>
-                <a className='hover:text-gray-500 font-medium'>About Me</a>
-              </Link> */}
-              <a
+
+              {/* <a
                 href='https://dstroot.github.io/readme/'
                 className='hover:text-gray-500 font-medium'
               >
                 User Guide
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

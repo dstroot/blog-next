@@ -73,6 +73,10 @@ export default function Index() {
               spanning many different languages and technologies. I actually still miss my days as a
               programmer where I could focus on a single problem domain.
             </p>
+            <p>
+              I also have a <a href='https://dstroot.github.io/readme/'>User Guide</a> if you really
+              want to know more about me and how I work.
+            </p>
             <h3>Where I’ve Worked</h3>
             <ul>
               <li>
