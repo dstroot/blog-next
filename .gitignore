@@ -36,7 +36,7 @@ yarn-error.log*
 # misc
 feed.xml
 robots.txt
-sitemap.xml
+sitemap*.xml
 .google.*
 sw.js
 workbox*.js
