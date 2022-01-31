@@ -17,7 +17,7 @@ export default function Index() {
 
       <Container>
         <Header />
-        <div className='invisible xl:visible absolute left-top mt-36 ml-10'>
+        <div className='absolute invisible ml-10 xl:visible left-top mt-36'>
           <Image
             src={maker}
             alt={CMS_NAME}
@@ -28,7 +28,7 @@ export default function Index() {
           />
         </div>
         <div className='flex flex-row items-center mb-8 md:mb-12'>
-          <div className='flex-initial mr-4 image-container w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 relative'>
+          <div className='relative flex-initial w-10 h-10 mr-4 image-container md:w-16 md:h-16 lg:w-20 lg:h-20'>
             <Image
               src={me}
               alt={CMS_NAME}
@@ -39,7 +39,7 @@ export default function Index() {
             />
           </div>
           <div className='flex-initial'>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none text-center md:text-left'>
+            <h1 className='text-4xl font-bold leading-tight tracking-tighter text-center md:text-6xl lg:text-7xl md:leading-none md:text-left'>
               About Me
             </h1>
           </div>
@@ -123,7 +123,7 @@ export default function Index() {
                 <a href='https://helmetjs.github.io/'>Helmet</a> (contributor)
               </li>
             </ul>
-            {/* <div className='mt-8 mb-8 text-xl block'>
+            {/* <div className='block mt-8 mb-8 text-xl'>
               <Link href='/archive'>
                 <a>[ Post Archive ]</a>
               </Link>

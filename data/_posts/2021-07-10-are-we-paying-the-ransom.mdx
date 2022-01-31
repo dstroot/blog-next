@@ -36,7 +36,7 @@ Reasons ransomware targets still pay (even when they have reliable backups) are:
 
 4. Finally, **many companies don’t know their systems dependencies**, and so they don’t know in which order they should build/restore systems. Nor do they have a clear repeatable process to configure systems - they find they have been cloning a build image Larry created before he left last year.
 
-If you haven't thought about these things then **yes, you are paying the ransom**.
+If you haven't thought about these things then **yes, you are paying the ransom**. 
 
 ### Ransomware Protection
 
@@ -90,6 +90,8 @@ No one should have write access on the server itself (unless explicitly given in
 Automated configuration means it's repeatable, can be tested, and can be done in the event of an emergency (**as long as your tools and scripts were not encrypted by the ransomware!**).
 
 #### 4. Immutable Backups
+
+Your backup strategy is one of the first things you should review. It's quite likely it was designed for a failure scenario (hardware failure, accidental deletion), not for an attack scenario. But attackers, once they get access to your systems, will delete or encrypt all backup sets they can access.
 
 Mirroring and data replication are great for availability but bad for backup purposes - if the files being replicated become encrypted via ransomware it is possible the mirroring will just copy the freshly encrypted file(s) or data to the other location.
 
