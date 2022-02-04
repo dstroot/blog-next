@@ -1,4 +1,4 @@
-import { Tweet } from 'mdx-embed';
+// import { Tweet } from 'mdx-embed';
 // https://www.mdx-embed.com/?path=/docs/mdx-embed--page
 // https://github.com/PaulieScanlon/mdx-embed
 // There are lot's of components available via mdx-embed
@@ -7,6 +7,7 @@ import { Tweet } from 'mdx-embed';
 import { CustomImage } from './CustomImage';
 import { CustomLink } from './CustomLink';
 import { CodeBlock } from './CodeBlock';
+import { Tweet } from './TweetTest';
 import { YouTube } from './YouTube';
 import { GitGist } from './GitGist';
 import { Step } from './Step';
