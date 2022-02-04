@@ -9,14 +9,16 @@ export const Newsletter = () => {
   const { data: subs, error } = useSWR('/api/subscribers', fetcher);
 
   return (
-    <div className='flex py-12 mx-auto max-w-6xl'>
-      <div className='mx-5 w-full rounded bg-gray-100 dark:bg-gray-600'>
+    <div className='flex max-w-6xl py-12 mx-auto'>
+      <div className='w-full mx-5 bg-gray-100 rounded dark:bg-gray-600'>
         <div className='grid grid-cols-1 gap-4 p-5 md:grid-cols-2'>
-          <div className='flex flex-col justify-center space-y-3 w-full'>
-            <h2 className='text-3xl font-black'>Subscribe to the Newsletter</h2>
-            <p className='text-sm'>Interesting stuff sent with discretion.</p>
+          <div className='flex flex-col justify-center w-full space-y-3'>
+            <h2 className='text-2xl font-black md:text-3xl'>Subscribe to the Newsletter</h2>
+            <h3 className='text-xl text-gray-700 dark:text-gray-300'>
+              Interesting stuff sent with discretion.
+            </h3>
           </div>
-          <div className='flex flex-col justify-center space-y-3 w-full'>
+          <div className='flex flex-col justify-center w-full space-y-3'>
             <MailchimpSubscribe
               url={MAILCHIMP_URL}
               render={({ subscribe, status, message }) => (
@@ -28,7 +30,9 @@ export const Newsletter = () => {
               )}
             />
 
-            <span className='text-sm'>{!subs ? '' : subs + ' Subscribers.'}</span>
+            <span className='text-sm text-gray-500 dark:text-gray-400'>
+              {!subs ? 'Loading...' : subs + ' Subscribers.'}
+            </span>
           </div>
         </div>
       </div>
