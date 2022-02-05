@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { format } from 'date-fns';
+// import { getTweets } from '../../lib/getTweets';
 
 /**
  * Supports plain text, images, quote tweets.
@@ -9,7 +10,7 @@ import { format } from 'date-fns';
  * https://github.com/leerob/leerob.io/blob/main/lib/twitter.ts
  *
  */
-export default function Tweet({
+export const Tweet = ({
   text,
   id,
   author,
@@ -17,7 +18,7 @@ export default function Tweet({
   created_at,
   public_metrics,
   referenced_tweets,
-}) {
+}) => {
   const authorUrl = `https://twitter.com/${author.username}`;
   const likeUrl = `https://twitter.com/intent/like?tweet_id=${id}`;
   const retweetUrl = `https://twitter.com/intent/retweet?tweet_id=${id}`;
@@ -29,7 +30,7 @@ export default function Tweet({
   const quoteTweet = referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted');
 
   return (
-    <div className='w-full px-6 py-4 my-4 border border-gray-300 rounded tweet dark:border-gray-800'>
+    <div className='w-full px-6 py-4 my-4 border-2 border-gray-300 rounded-lg tweet dark:border-gray-700'>
       <div className='flex items-center'>
         <a className='flex w-12 h-12' href={authorUrl} target='_blank' rel='noopener noreferrer'>
           <Image
@@ -76,7 +77,7 @@ export default function Tweet({
           </svg>
         </a>
       </div>
-      <div className='mt-4 mb-1 leading-normal whitespace-pre-wrap text-lg !text-gray-700 dark:!text-gray-300'>
+      <div className='mt-4 mb-1 leading-normal whitespace-pre-wrap !text-gray-700 dark:!text-gray-300'>
         {formattedText}
       </div>
       {media && media.length ? (
@@ -156,4 +157,4 @@ export default function Tweet({
       </div>
     </div>
   );
-}
+};
