@@ -47,7 +47,7 @@ export default function Index(props) {
 
 export async function getStaticProps() {
   const views = await fetch(path).then((res) => res.json());
-  const tweets = await getTweets(['1201514996838141952']);
+  const tweets = await getTweets(['1489988943093379073']); //1201514996838141952
   return {
     props: {
       fallback: {
