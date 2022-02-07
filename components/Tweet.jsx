@@ -35,7 +35,7 @@ export const Tweet = ({ tweet }) => {
 
   // make hashtags blue
   const highlightHashTags = (string) => {
-    const tags = string.match(/#[a-z0-9_]+/g);
+    const tags = string.match(/(#+[a-zA-Z0-9(_)]{1,})/g);
 
     if (tags) {
       tags.forEach(function (tag) {
