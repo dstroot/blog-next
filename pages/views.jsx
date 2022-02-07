@@ -2,8 +2,6 @@ import useSWR, { SWRConfig } from 'swr';
 import { BASE_URL } from '../lib/constants';
 import { GitHub } from '../components/GitHub';
 import { Newsletter } from '../components/Newsletter';
-import { getTweets } from '../lib/getTweets';
-import { Tweet } from '../components/MDXComponents/Tweet';
 // import { Views } from '../components/Views';
 
 const URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : BASE_URL;
@@ -30,30 +28,17 @@ export default function Index(props) {
       </SWRConfig>
       <GitHub />
       <Newsletter />
-      <div className='w-1/3 mx-auto'>
-        <Tweet
-          text={props.tweets[0].text}
-          id={props.tweets[0].id}
-          author={props.tweets[0].author}
-          media={props.tweets[0].media}
-          created_at={props.tweets[0].created_at}
-          public_metrics={props.tweets[0].public_metrics}
-          referenced_tweets={props.tweets[0].reference_tweets}
-        ></Tweet>
-      </div>
     </>
   );
 }
 
 export async function getStaticProps() {
   const views = await fetch(path).then((res) => res.json());
-  const tweets = await getTweets(['1489988943093379073']); //1201514996838141952
   return {
     props: {
       fallback: {
         [path]: views,
       },
-      tweets,
     },
   };
 }

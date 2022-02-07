@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { format } from 'date-fns';
-// import { getTweets } from '../../lib/getTweets';
 
 /**
  * Supports plain text, images, quote tweets.
@@ -8,17 +7,11 @@ import { format } from 'date-fns';
  * Needs support for images, GIFs, and replies maybe?
  * Styles use !important to override Tailwind .prose inside MDX.
  * https://github.com/leerob/leerob.io/blob/main/lib/twitter.ts
- *
  */
-export const Tweet = ({
-  text,
-  id,
-  author,
-  media,
-  created_at,
-  public_metrics,
-  referenced_tweets,
-}) => {
+
+export const Tweet = ({ tweet }) => {
+  const { text, id, author, media, created_at, public_metrics, referenced_tweets } = tweet;
+
   const authorUrl = `https://twitter.com/${author.username}`;
   const likeUrl = `https://twitter.com/intent/like?tweet_id=${id}`;
   const retweetUrl = `https://twitter.com/intent/retweet?tweet_id=${id}`;
@@ -111,7 +104,7 @@ export const Tweet = ({
           {format(createdAt, 'h:mm a - MMM d, y')}
         </time>
       </a>
-      <hr className='!mt-2' />
+      <hr className='!mt-2 !mb-2' />
       <div className='flex !text-gray-700 dark:!text-gray-300 mt-2'>
         <a
           className='flex items-center mr-4 !text-gray-500 hover:!text-blue-600 transition hover:!underline'

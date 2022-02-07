@@ -5,9 +5,9 @@
 
 /* ---  Custom MDX Components --- */
 import { CustomImage } from './CustomImage';
+import { CustomTweet } from './CustomTweet';
 import { CustomLink } from './CustomLink';
 import { CodeBlock } from './CodeBlock';
-import { Tweet } from './TweetTest';
 import { YouTube } from './YouTube';
 import { GitGist } from './GitGist';
 import { Step } from './Step';
@@ -21,7 +21,8 @@ export const MDXComponents = {
   CodeBlock,
   YouTube,
   GitGist,
-  Tweet, // https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/
+  // Tweet, // https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/
+  CustomTweet,
   Step,
 };
 
