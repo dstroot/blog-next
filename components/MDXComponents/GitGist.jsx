@@ -16,7 +16,7 @@ export const GitGist = ({ url }) => {
       <div className='rehype-code-title'>{getName(url)}</div>
       <pre className='language-javascript'>
         <code
-          className='language-javascript code-highlight'
+          className='code-highlight language-javascript'
           dangerouslySetInnerHTML={{
             __html: gist,
           }}

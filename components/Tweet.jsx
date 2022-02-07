@@ -19,7 +19,34 @@ export const Tweet = ({ tweet }) => {
   const tweetUrl = `https://twitter.com/${author.username}/status/${id}`;
   const createdAt = new Date(created_at);
 
-  const formattedText = text.replace(/https:\/\/[\n\S]+/g, '');
+  // make urls clickable
+  const URLify = (string) => {
+    const urls = string.match(/((((https?):\/\/)|(w{3}\.))[\-\w@:%_\+.~#?,&\/\/=]+)/g);
+
+    if (urls) {
+      urls.forEach(function (url) {
+        string = string.replace(url, '<a target="_blank" href="' + url + '">' + url + '</a>');
+      });
+    }
+
+    return string;
+  };
+  const urlified = URLify(text);
+
+  // make hashtags blue
+  const highlightHashTags = (string) => {
+    const tags = string.match(/#[a-z0-9_]+/g);
+
+    if (tags) {
+      tags.forEach(function (tag) {
+        string = string.replace(tag, '<span class="text-blue-500">' + tag + '</span>');
+      });
+    }
+
+    return string;
+  };
+  const tagified = highlightHashTags(urlified);
+
   const quoteTweet = referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted');
 
   return (
@@ -70,9 +97,10 @@ export const Tweet = ({ tweet }) => {
           </svg>
         </a>
       </div>
-      <div className='mt-4 mb-1 text-lg leading-normal whitespace-pre-wrap !text-gray-700 dark:!text-gray-300'>
-        {formattedText}
-      </div>
+      <div
+        className='mt-4 mb-1 text-lg leading-normal whitespace-pre-wrap !text-gray-700 dark:!text-gray-300'
+        dangerouslySetInnerHTML={{ __html: tagified }}
+      />
       {media && media.length ? (
         <div
           className={
