@@ -9,6 +9,7 @@ const slug = '2021-10-08-human-denial-of-service-attack';
 const path = `${URL}/api/views/${slug}`;
 
 /**
+ *
  * TODO: Goal is to create an MDX component that can be "fed" a tweet id and have it
  * display the tweet without all the twitter javascript stuff. The component is fed
  * the tweet id, then it uses the twitter API to retrieve the tweet. Then it uses a
