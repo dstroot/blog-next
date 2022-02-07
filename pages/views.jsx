@@ -8,6 +8,18 @@ const URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : B
 const slug = '2021-10-08-human-denial-of-service-attack';
 const path = `${URL}/api/views/${slug}`;
 
+/**
+ * TODO: Goal is to create an MDX component that can be "fed" a tweet id and have it
+ * display the tweet without all the twitter javascript stuff. The component is fed
+ * the tweet id, then it uses the twitter API to retrieve the tweet. Then it uses a
+ * standard react component, styled with tailwind, to display the tweet.
+ *
+ * We have all the basics already working below. We already have a component that
+ * renders the tweet. We need to create a component that can be fed the tweet id.
+ * Checkout how GitGist is built in MDXComponents.
+ *
+ */
+
 export default function Index(props) {
   return (
     <>
@@ -44,7 +56,7 @@ function Views({ fallback }) {
         xmlns='http://www.w3.org/2000/svg'
         fillRule='evenodd'
         clipRule='evenodd'
-        className='h-4 w-4 inline-block -mt-1'
+        className='inline-block w-4 h-4 -mt-1'
         fill='none'
         viewBox='0 0 24 24'
         stroke='currentColor'

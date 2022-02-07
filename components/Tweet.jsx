@@ -7,17 +7,11 @@ import { format } from 'date-fns';
  * Needs support for images, GIFs, and replies maybe?
  * Styles use !important to override Tailwind .prose inside MDX.
  * https://github.com/leerob/leerob.io/blob/main/lib/twitter.ts
- *
  */
-export default function Tweet({
-  text,
-  id,
-  author,
-  media,
-  created_at,
-  public_metrics,
-  referenced_tweets,
-}) {
+
+export const Tweet = ({ tweet }) => {
+  const { text, id, author, media, created_at, public_metrics, referenced_tweets } = tweet;
+
   const authorUrl = `https://twitter.com/${author.username}`;
   const likeUrl = `https://twitter.com/intent/like?tweet_id=${id}`;
   const retweetUrl = `https://twitter.com/intent/retweet?tweet_id=${id}`;
@@ -29,8 +23,8 @@ export default function Tweet({
   const quoteTweet = referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted');
 
   return (
-    <div className='w-full px-6 py-4 my-4 border border-gray-300 rounded tweet dark:border-gray-800'>
-      <div className='flex items-center'>
+    <div className='w-full p-4 my-4 border-2 border-gray-300 rounded-lg tweet dark:border-gray-700'>
+      <div className='flex'>
         <a className='flex w-12 h-12' href={authorUrl} target='_blank' rel='noopener noreferrer'>
           <Image
             alt={author.username}
@@ -44,7 +38,7 @@ export default function Tweet({
           href={authorUrl}
           target='_blank'
           rel='noopener noreferrer'
-          className='author flex flex-col ml-4 !no-underline'
+          className='author flex flex-col ml-2 !no-underline'
         >
           <span
             className='flex items-center font-bold !text-gray-900 dark:!text-gray-100 leading-5'
@@ -76,7 +70,7 @@ export default function Tweet({
           </svg>
         </a>
       </div>
-      <div className='mt-4 mb-1 leading-normal whitespace-pre-wrap text-lg !text-gray-700 dark:!text-gray-300'>
+      <div className='mt-4 mb-1 text-lg leading-normal whitespace-pre-wrap !text-gray-700 dark:!text-gray-300'>
         {formattedText}
       </div>
       {media && media.length ? (
@@ -110,7 +104,22 @@ export default function Tweet({
           {format(createdAt, 'h:mm a - MMM d, y')}
         </time>
       </a>
+      <hr className='!mt-2 !mb-2' />
       <div className='flex !text-gray-700 dark:!text-gray-300 mt-2'>
+        <a
+          className='flex items-center mr-4 !text-gray-500 hover:!text-blue-600 transition hover:!underline'
+          href={likeUrl}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <svg className='mr-2' width='24' height='24' viewBox='0 0 24 24'>
+            <path
+              className='fill-current'
+              d='M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.813-1.148 2.353-2.73 4.644-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.375-7.454 13.11-10.037 13.156H12zM7.354 4.225c-2.08 0-3.903 1.988-3.903 4.255 0 5.74 7.035 11.596 8.55 11.658 1.52-.062 8.55-5.917 8.55-11.658 0-2.267-1.822-4.255-3.902-4.255-2.528 0-3.94 2.936-3.952 2.965-.23.562-1.156.562-1.387 0-.015-.03-1.426-2.965-3.955-2.965z'
+            />
+          </svg>
+          <span>{new Number(public_metrics.like_count).toLocaleString()}</span>
+        </a>
         <a
           className='flex items-center mr-4 !text-gray-500 hover:!text-blue-600 transition hover:!underline'
           href={replyUrl}
@@ -126,7 +135,7 @@ export default function Tweet({
           <span>{new Number(public_metrics.reply_count).toLocaleString()}</span>
         </a>
         <a
-          className='flex items-center mr-4 !text-gray-500 hover:!text-green-600 transition hover:!underline'
+          className='flex items-center mr-4 !text-gray-500 hover:!text-blue-600 transition hover:!underline'
           href={retweetUrl}
           target='_blank'
           rel='noopener noreferrer'
@@ -139,21 +148,21 @@ export default function Tweet({
           </svg>
           <span>{new Number(public_metrics.retweet_count).toLocaleString()}</span>
         </a>
-        <a
-          className='flex items-center !text-gray-500 hover:!text-red-600 transition hover:!underline'
-          href={likeUrl}
+        {/* <a
+          className='flex items-center mr-4 !text-gray-500 hover:!text-blue-600 transition hover:!underline'
+          href={retweetUrl}
           target='_blank'
           rel='noopener noreferrer'
         >
           <svg className='mr-2' width='24' height='24' viewBox='0 0 24 24'>
-            <path
-              className='fill-current'
-              d='M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.813-1.148 2.353-2.73 4.644-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.375-7.454 13.11-10.037 13.156H12zM7.354 4.225c-2.08 0-3.903 1.988-3.903 4.255 0 5.74 7.035 11.596 8.55 11.658 1.52-.062 8.55-5.917 8.55-11.658 0-2.267-1.822-4.255-3.902-4.255-2.528 0-3.94 2.936-3.952 2.965-.23.562-1.156.562-1.387 0-.015-.03-1.426-2.965-3.955-2.965z'
-            />
+            <g className='fill-current'>
+              <path d='M11.96 14.945c-.067 0-.136-.01-.203-.027-1.13-.318-2.097-.986-2.795-1.932-.832-1.125-1.176-2.508-.968-3.893s.942-2.605 2.068-3.438l3.53-2.608c2.322-1.716 5.61-1.224 7.33 1.1.83 1.127 1.175 2.51.967 3.895s-.943 2.605-2.07 3.438l-1.48 1.094c-.333.246-.804.175-1.05-.158-.246-.334-.176-.804.158-1.05l1.48-1.095c.803-.592 1.327-1.463 1.476-2.45.148-.988-.098-1.975-.69-2.778-1.225-1.656-3.572-2.01-5.23-.784l-3.53 2.608c-.802.593-1.326 1.464-1.475 2.45-.15.99.097 1.975.69 2.778.498.675 1.187 1.15 1.992 1.377.4.114.633.528.52.928-.092.33-.394.547-.722.547z'></path>
+              <path d='M7.27 22.054c-1.61 0-3.197-.735-4.225-2.125-.832-1.127-1.176-2.51-.968-3.894s.943-2.605 2.07-3.438l1.478-1.094c.334-.245.805-.175 1.05.158s.177.804-.157 1.05l-1.48 1.095c-.803.593-1.326 1.464-1.475 2.45-.148.99.097 1.975.69 2.778 1.225 1.657 3.57 2.01 5.23.785l3.528-2.608c1.658-1.225 2.01-3.57.785-5.23-.498-.674-1.187-1.15-1.992-1.376-.4-.113-.633-.527-.52-.927.112-.4.528-.63.926-.522 1.13.318 2.096.986 2.794 1.932 1.717 2.324 1.224 5.612-1.1 7.33l-3.53 2.608c-.933.693-2.023 1.026-3.105 1.026z'></path>
+            </g>
           </svg>
-          <span>{new Number(public_metrics.like_count).toLocaleString()}</span>
-        </a>
+          <span>{new Number(public_metrics.retweet_count).toLocaleString()}</span>
+        </a> */}
       </div>
     </div>
   );
-}
+};

@@ -21,7 +21,9 @@ module.exports = {
     minimumCacheTTL: 86400,
     deviceSizes: [335, 460, 546, 600, 728, 984, 1240, 1496],
     // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // domains: [],
+    domains: [
+      'pbs.twimg.com', // Twitter Profile Picture
+    ],
   },
   // pwa: {
   //   dest: 'public',
