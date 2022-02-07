@@ -12,7 +12,7 @@ export const CustomTweet = ({ tweetID }) => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(URL).then((res) => res.json());
-      setTweet(data[0]);
+      setTweet(data);
     };
 
     fetchData();

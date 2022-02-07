@@ -75,7 +75,7 @@ export const Tweet = ({ tweet }) => {
             {author.verified ? (
               <svg
                 aria-label='Verified Account'
-                className='inline w-4 h-4 ml-1 text-blue-500 dark:text-white'
+                className='inline w-4 h-4 ml-1 text-blue-500'
                 viewBox='0 0 24 24'
               >
                 <g fill='currentColor'>

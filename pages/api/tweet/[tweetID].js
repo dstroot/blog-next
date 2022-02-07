@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   // GET
   async function getTweet(tweetID) {
     const queryParams = new URLSearchParams({
-      ids: [tweetID],
+      ids: [tweetID], // comma separated list of tweet IDs, we use just one here
       expansions:
         'author_id,attachments.media_keys,referenced_tweets.id,referenced_tweets.id.author_id',
       'tweet.fields':
@@ -28,13 +28,16 @@ export default async function handler(req, res) {
         'duration_ms,height,media_key,preview_image_url,type,url,width,public_metrics',
     });
 
-    const response = await fetch(`https://api.twitter.com/2/tweets?${queryParams}`, {
-      headers: {
-        Authorization: `Bearer ${process.env.TWITTER_BEARER_TOKEN}`,
-      },
-    });
-
-    const tweets = await response.json();
+    let tweets = {};
+    try {
+      tweets = await fetch(`https://api.twitter.com/2/tweets?${queryParams}`, {
+        headers: {
+          Authorization: `Bearer ${process.env.TWITTER_BEARER_TOKEN}`,
+        },
+      }).then((res) => res.json());
+    } catch (err) {
+      return res.status(400).json(err);
+    }
 
     const getAuthorInfo = (author_id) => {
       return tweets.includes.users.find((user) => user.id === author_id);
@@ -66,7 +69,7 @@ export default async function handler(req, res) {
         referenced_tweets: getReferencedTweets(tweet),
         author: getAuthorInfo(tweet.author_id),
       };
-      return res.status(200).json([tweetWithAuthor, ...allTweets]);
+      return res.status(200).json(tweetWithAuthor, ...allTweets);
     }, []);
   }
 }
