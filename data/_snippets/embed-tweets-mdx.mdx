@@ -3,16 +3,17 @@ title: 'Embed a Tweet in your .mdx blog'
 published: true
 date: '2022-02-07'
 summary: Sometimes you just want to add a Tweet to a post. Should be simple, right?
-icon: react
+icon: mdx
 tags:
-  # - Javascript
+  - Javascript
   # - React Hook
   - React Component
 #   - CSS
 #   - HTML
 ---
+import { Tweet } from '../node_modules/mdx-embed/dist/components/twitter/tweet';
 
-So, you have a .mdx file and you want to embed a tweet? 
+So, you are using Next.js with .mdx to render static pages? You have a .mdx file and you want to embed a tweet? 
 
 <Step number={1} title='Simply paste the twitter embed code' />
 
@@ -20,36 +21,52 @@ If you simply paste the twitter embed code into your .mdx file, you will get a t
 
 <Step number={2} title='Clean up the twitter embed code' />
 
-First off the "class" attribute needs to be changed to "className". Then "charset" needs to be changed to "charSet". Then you you need to make sure no browser add-ins are blocking social media trackers otherwise you will get errors. You also need to ake sure your CSP policy allows the twitter script to be loaded.
+Since .mdx is a combination of Markdown and JSX we have to follow JSX standards for embedded HTML. So the "class" attribute needs to be changed to "className". Then "charset" needs to be changed to "charSet". Then you you need to make sure no browser add-ins are blocking social media trackers otherwise you will get errors. You also need to make sure your CSP policy allows the twitter script to be loaded.
 
-I also still see console warnings:
+When it works I still see console warnings:
 
 * "Warning: Did not expect server HTML to contain a &lt;div&gt; in &lt;div&gt;."
 * "Warning: validateDOMNesting(...): &lt;a&gt; cannot appear as a descendant of &lt;a&gt;."
 
 In any case, here it is:
 
-<blockquote className="twitter-tweet"><p lang="en" dir="ltr">MDX Embed is now finally stable and i&#39;ve released v1.0.0 🥳 -- Complete with <a href="https://twitter.com/GatsbyJS?ref_src=twsrc%5Etfw">@GatsbyJS</a> 4 support! <a href="https://twitter.com/hashtag/MDX?src=hash&amp;ref_src=twsrc%5Etfw">#MDX</a> 2 compatibility coming soon -- i hope! 🥵<a href="https://t.co/1pudBFe4MV">https://t.co/1pudBFe4MV</a></p>&mdash; Paul Scanlon (@PaulieScanlon) <a href="https://twitter.com/PaulieScanlon/status/1490453997953630208?ref_src=twsrc%5Etfw">February 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+<blockquote className="twitter-tweet"><p lang="en" dir="ltr">MDX Embed is now finally stable and i&#39;ve released v1.0.0 🥳 -- Complete with <a href="https://twitter.com/GatsbyJS?ref_src=twsrc%5Etfw">@GatsbyJS</a> 4 support! <a href="https://twitter.com/hashtag/MDX?src=hash&amp;ref_src=twsrc%5Etfw">#MDX</a> 2 compatibility coming soon -- i hope! 🥵<a href="https://t.co/1pudBFe4MV">https://t.co/1pudBFe4MV</a></p>&mdash; Paul Scanlon (@PaulieScanlon) <a href="https://twitter.com/PaulieScanlon/status/1201514996838141952">February 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
 
-If that works for you then you are done!
+If that works for you then you are done. However, With Core Web Vitals becoming one of the biggest factors in search ranking using the classic Twitter embed iframe is not the best solution; it is slow to load and triggers a lot of Content Layout Shift (CLS) which hurts your Core Web Vitals score. 
 
 <Step number={3} title='Use a React component in .mdx' />
 
-For me, for some reason, I could never get the "just paste in the embed code" to work very well. I'd have to refresh the page to get the Tweet to format properly. I believe it's because Next serves a pre-rendered page and then hydrates the page. Initially the Tweet will not render properly. But after the page is refreshed, the Tweet will render as you would expect.
+I could not get the "just paste in the embed code" to work very well. I'd have to refresh the page to get the Tweet to format properly. I believe it's because Next serves a pre-rendered page, and then hydrates the page. Initially the Tweet will not render properly. But after the page is refreshed, the Tweet will render as you would expect.
 
-For me, it just had lots of ways to break. Plus I could not figure out how to make it work with Next dark mode. Sigh.
+For me, this approach just had lots of ways to break. Plus I could not figure out how to make it work with Next dark mode. Sigh.
 
-The best and easiest option I found is [MDX Embed](https://www.mdx-embed.com/?path=/docs/introduction--page) which also gives you the capability of adding LOTS of different embeds in addition to Twitter. It's pretty awesome. 
+Enter [MDX Embed](https://www.mdx-embed.com/?path=/docs/introduction--page) which also gives you the capability of adding LOTS of different embeds in addition to Twitter. It's pretty awesome. 
 
-https://github.com/PaulieScanlon/mdx-embed 
+You just import the component and then use it in your .mdx file.  Here is an example:
+
+<CodeBlock>
+
+```JSX
+import { Tweet } from '../node_modules/mdx-embed/dist/components/twitter/tweet';
+
+<Tweet tweetLink="PaulieScanlon/status/1201514996838141952" />
+```
+
+</CodeBlock>
+
+This is the result:
+
+<Tweet tweetLink="PaulieScanlon/status/1201514996838141952" />
 
 <Step number={4} title='Roll your own custom React tweet component and API' />
 
-If you are a "full control" kind of person this is your route and where I ended up. First, let's check out what Lee Robinson, Director of Developer Relations at Vercel, does on his personal blog. He has a Tweets page that is really fast [here](https://leerob.io/tweets). The secret is he is pre-rendering the tweets and then embedding them in the page. Wait, what!?
+If you are a "full control" kind of person read on. First, let's check out what Lee Robinson, Director of Developer Relations at Vercel, does on his personal blog. He has a Tweets page that is really fast [here](https://leerob.io/tweets). His secret is pre-rendering the tweets and then embedding them in the page. Wait, what!? He explains all here:
+
+<YouTube link='https://youtu.be/xZ9OzPQORtw' />
 
 Let's check out his [repo](https://github.com/leerob/leerob.io) and see the magic.
 
-<CustomTweet tweetID="1490453997953630208" />
+<CustomTweet tweetID="1201514996838141952" />
 
 <CodeBlock>
 

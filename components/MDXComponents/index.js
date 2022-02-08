@@ -17,7 +17,7 @@ export const MDXComponents = {
   a: CustomLink,
   img: CustomImage,
 
-  // MDX components
+  // add MDX components
   CodeBlock,
   YouTube,
   GitGist,

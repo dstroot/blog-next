@@ -13,7 +13,7 @@
     "@aws-sdk/lib-dynamodb": "^3.49.0",
     "@google-analytics/data": "^2.8.0",
     "@mailchimp/mailchimp_marketing": "^3.0.74",
-    "@mdx-js/react": "^2.0.0",
+    "@mdx-js/react": "^1.6.0",
     "@tailwindcss/line-clamp": "^0.3.1",
     "algoliasearch": "^4.12.1",
     "date-fns": "2.28.0",

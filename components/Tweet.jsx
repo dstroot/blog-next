@@ -2,24 +2,23 @@ import Image from 'next/image';
 import { format } from 'date-fns';
 
 /**
- * Supports plain text, images, quote tweets.
- *
- * Needs support for images, GIFs, and replies maybe?
+ * Supports plain text, images, and quote tweets.
  * Styles use !important to override Tailwind .prose inside MDX.
- * https://github.com/leerob/leerob.io/blob/main/lib/twitter.ts
+ * Inspiration: https://github.com/leerob/leerob.io/blob/main/lib/twitter.ts
  */
 
 export const Tweet = ({ tweet }) => {
   const { text, id, author, media, created_at, public_metrics, referenced_tweets } = tweet;
+  const createdAt = new Date(created_at);
 
+  // construct our tweet URLs to use later
   const authorUrl = `https://twitter.com/${author.username}`;
   const likeUrl = `https://twitter.com/intent/like?tweet_id=${id}`;
   const retweetUrl = `https://twitter.com/intent/retweet?tweet_id=${id}`;
   const replyUrl = `https://twitter.com/intent/tweet?in_reply_to=${id}`;
   const tweetUrl = `https://twitter.com/${author.username}/status/${id}`;
-  const createdAt = new Date(created_at);
 
-  // make urls clickable
+  // make embedded URLs clickable
   const URLify = (string) => {
     const urls = string.match(/((((https?):\/\/)|(w{3}\.))[\-\w@:%_\+.~#?,&\/\/=]+)/g);
 
@@ -45,6 +44,7 @@ export const Tweet = ({ tweet }) => {
 
     return string;
   };
+
   const tagified = highlightHashTags(urlified);
 
   const quoteTweet = referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted');
