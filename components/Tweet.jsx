@@ -10,6 +10,7 @@ import { format } from 'date-fns';
 export const Tweet = ({ tweet }) => {
   const { text, id, author, media, created_at, public_metrics, referenced_tweets } = tweet;
   const createdAt = new Date(created_at);
+  const image = author.profile_image_url.replace('_normal', '_200x200'); // higher res
 
   // construct our tweet URLs to use later
   const authorUrl = `https://twitter.com/${author.username}`;
@@ -50,14 +51,14 @@ export const Tweet = ({ tweet }) => {
   const quoteTweet = referenced_tweets && referenced_tweets.find((t) => t.type === 'quoted');
 
   return (
-    <div className='w-full p-4 my-4 border-2 border-gray-300 rounded-lg tweet dark:border-gray-700'>
+    <div className='w-full p-4 my-4 border-2 border-gray-300 rounded-xl tweet dark:border-gray-700'>
       <div className='flex'>
         <a className='flex w-12 h-12' href={authorUrl} target='_blank' rel='noopener noreferrer'>
           <Image
             alt={author.username}
             height={48}
             width={48}
-            src={author.profile_image_url}
+            src={image}
             className='rounded-full'
           />
         </a>
