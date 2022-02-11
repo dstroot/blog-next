@@ -21,7 +21,7 @@ export const CustomTweet = ({ id }) => {
   return (
     <>
       {tweet && (
-        <div className='md:w-4/5'>
+        <div className='md:w-[550px]'>
           <Tweet tweet={tweet} />
         </div>
       )}
