@@ -89,10 +89,10 @@ export const Tweet = ({ tweet }) => {
           href={authorUrl}
           target='_blank'
           rel='noopener noreferrer'
-          className='author flex flex-col ml-2 !no-underline text-base'
+          className='author flex flex-col ml-2 mt-1 !no-underline'
         >
           <span
-            className='flex items-center font-bold !text-gray-900 dark:!text-gray-100 leading-5'
+            className='flex text-base font-bold !text-gray-900 dark:!text-gray-100 leading-5'
             title={author.name}
           >
             {author.name}
@@ -108,7 +108,7 @@ export const Tweet = ({ tweet }) => {
               </svg>
             ) : null}
           </span>
-          <span className='!text-gray-500' title={`@${author.username}`}>
+          <span className='!text-gray-500 text-sm' title={`@${author.username}`}>
             @{author.username}
           </span>
         </a>
@@ -228,7 +228,7 @@ export const Tweet = ({ tweet }) => {
         </a>
       </div>
       <a className='' href={tweetUrl} target='_blank' rel='noopener noreferrer'>
-        <button className='w-full mt-3 text-sm text-[#1d9bf0] font-bold p-1 border rounded-full hover:bg-blue-50 hover:no-underline border-gray-300 dark:border-gray-700 hover:dark:bg-gray-700'>
+        <button className='w-full mt-3 text-sm text-[#1d9bf0] font-bold p-1 border rounded-full hover:no-underline border-gray-300 dark:border-gray-700 hover:[background-color:rgba(29,155,240,0.1)]'>
           Read{' '}
           {millify(new Number(public_metrics.reply_count), {
             precision: 1,
