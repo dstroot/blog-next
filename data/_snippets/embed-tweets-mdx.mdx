@@ -12,7 +12,6 @@ tags:
 #   - HTML
 ---
 import { Tweet } from '../node_modules/mdx-embed/dist/components/twitter/tweet';
-import { ThemeChanger } from './ThemeChanger';
 
 So, you are using Next.js with .mdx to render static pages? You have a .mdx file and you want to embed a tweet? 
 
@@ -33,15 +32,15 @@ In any case, here it is:
 
 <blockquote className="twitter-tweet"><p lang="en" dir="ltr">MDX Embed is now finally stable and i&#39;ve released v1.0.0 🥳 -- Complete with <a href="https://twitter.com/GatsbyJS?ref_src=twsrc%5Etfw">@GatsbyJS</a> 4 support! <a href="https://twitter.com/hashtag/MDX?src=hash&amp;ref_src=twsrc%5Etfw">#MDX</a> 2 compatibility coming soon -- i hope! 🥵<a href="https://t.co/1pudBFe4MV">https://t.co/1pudBFe4MV</a></p>&mdash; Paul Scanlon (@PaulieScanlon) <a href="https://twitter.com/PaulieScanlon/status/1201514996838141952">February 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
 
-If that works for you then you are done. However, With Core Web Vitals becoming one of the biggest factors in search ranking using the classic Twitter embed iframe is not the best solution; it is slow to load and triggers a lot of Content Layout Shift (CLS) which hurts your Core Web Vitals score. 
+If that works for you then you are done. However, With Core Web Vitals becoming one of the biggest factors in search ranking using the classic Twitter embed iframe is not the best solution; it is slow to load and triggers Content Layout Shift (CLS) which hurts your Core Web Vitals score. 
 
 For me, the "just paste in the embed code" approach didn't work as well as I hoped. It was fiddly, slow, and sometimes I'd have to refresh the page to get the Tweet to format properly. Plus I could not figure out how to make it work with Next dark mode dynamically. Sigh.
 
 <Step number={3} title='Use a React component in .mdx' />
 
-Enter [MDX Embed](https://www.mdx-embed.com/?path=/docs/introduction--page) which also gives you the capability of adding LOTS of different embeds in addition to Twitter. It's pretty awesome. 
+Enter [MDX Embed](https://www.mdx-embed.com/?path=/docs/introduction--page) which also gives you the capability of adding LOTS of different embeds in addition to Twitter. It's awesome. 
 
-You just import the pre-built component and then use it in your .mdx file. The Tweet component also supports light and dark themes. Here is an example:
+You just import the pre-built component you need and then use it in your .mdx file. The Tweet component also supports light and dark themes. Here is an example:
 
 <CodeBlock>
 
@@ -57,7 +56,7 @@ This is the result:
 
 <Tweet tweetLink="PaulieScanlon/status/1201514996838141952" theme="dark" />
 
-However, I could not figure out how to change the Tweet's light/dark themes dynamically, and I still had to deal with layout shift. Hmm... what to do?
+However, I could not figure out how to change the Tweet's light/dark themes dynamically, and I still had to deal with content layout shift. Hmm... what to do?
 
 <Step number={4} title='Roll your own custom React tweet component and API' />
 
@@ -67,8 +66,11 @@ If you are a "full control" kind of person read on. First, let's check out what 
 
 Let's check out his [repo](https://github.com/leerob/leerob.io) and see the magic.
 
-<ThemeChanger />
-<CustomTweet tweetID="1201514996838141952" />
+<CustomTweet id="1201514996838141952" />
+
+<CustomTweet id='531834493922189313' />
+
+<Tweet tweetLink="SenTedCruz/status/531834493922189313" />
 
 <CodeBlock>
 
@@ -146,12 +148,12 @@ import { useState, useEffect } from 'react';
 import { BASE_URL } from '../../lib/constants';
 import { Tweet } from '../Tweet';
 
-export const CustomTweet = ({ tweetID }) => {
+export const CustomTweet = ({ id }) => {
   let [tweet, setTweet] = useState(null);
   const URL =
     process.env.NODE_ENV === 'development'
-      ? `http://localhost:3000/api/tweet/${tweetID}`
-      : `${BASE_URL}/api/tweet/${tweetID}`;
+      ? `http://localhost:3000/api/tweet/${id}`
+      : `${BASE_URL}/api/tweet/${id}`;
 
   useEffect(() => {
     const fetchData = async () => {
