@@ -64,13 +64,25 @@ If you are a "full control" kind of person read on. First, let's check out what 
 
 <YouTube link='https://youtu.be/xZ9OzPQORtw' />
 
-Let's check out his [repo](https://github.com/leerob/leerob.io) and see the magic.
+There is one big drawback to using the approach Lee used - all your tweets need to be "known" ahead of time to be pre-rendered. Imagine you have a CMS and people are creating content in the CMS using Markdown/MDX and they wish to add embedded YouTube videos, Tweets, etc. to their posts. You can't really use the same approach as Lee did.
 
-<CustomTweet id="1201514996838141952" />
+Maxime Heckel figured out a way and documented it on [his blog](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/), but it seemed sketchy. 
+
+### My Plan
+
+1. Since MDX files can use/import React components I will create the following component: <CustomTweet id="abcdef123"/> where the id prop contains the id of the tweet I want to render. I want to be able to simply drop a Tweet into any of my .mdx files at any time by simply coding <CustomTweet id="abcdef123"/> and "Boom!", done. I want this component to render a beautiful Tweet, with dynamic light/dark modes. To make this work we need a `<CustomTweet>` component that will be rendered in the browser.  This component will take the Tweet id, go get the tweet, and then render it.
+3. I will also create a custom API to fetch the tweet. For the component above to retrieve a tweet we can re-use Lee's code and turn it into a Next.js API. This will return the Tweet data in JSON format.
+4. Finally we will use a tailwind styled component to render the tweet. In this case it's our `<Tweet>` component. This is also based off Lee's code.
+
+Let me show you the results first. Here is my version:
 
 <CustomTweet id='531834493922189313' />
 
+And Twitters native version:
+
 <Tweet tweetLink="SenTedCruz/status/531834493922189313" />
+
+### The Code
 
 The first thing we want to do is create our own custom Tweet API. We will leverage Twitter's v2 REST API and return the Tweet in JSON format based on the Tweet ID. This is directly based on Lee Robinson's code.  Here's more info: [Twitter API v2 REST API](https://developer.twitter.com/en/docs/twitter-api/tweets/lookup/quick-start).
 
@@ -156,7 +168,7 @@ export default async function handler(req, res) {
 
 </CodeBlock>
 
-The next thing we want to do is create our own custom Tweet MDX Component. It will call our API and render a Tweet. It's a pretty basic component. This is what we will need to pass or import into our .mdx file:
+The next thing we want to do is create our own custom Tweet MDX Component. It will call our API and render a Tweet. It's a pretty basic component. This is what we will to pass or import into our .mdx file:
 
 <CodeBlock>
 
