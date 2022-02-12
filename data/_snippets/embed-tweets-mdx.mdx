@@ -1,8 +1,8 @@
 ---
-title: 'Embed a Tweet in your .mdx blog'
+title: 'Embed a Tweet in .mdx'
 published: true
 date: '2022-02-07'
-summary: Sometimes you just want to add a Tweet to a post. Should be simple, right?
+summary: Sometimes you just want to add a Tweet to a post. Should be simple, right? With .mdx you have some different choices that are worth considering.
 icon: mdx
 tags:
   - Javascript
@@ -13,17 +13,17 @@ tags:
 ---
 import { Tweet } from '../node_modules/mdx-embed/dist/components/twitter/tweet';
 
-So, you are using Next.js with .mdx to render static pages? You have a .mdx file and you want to embed a tweet? 
+So, you are using Next.js with .mdx to render static pages and you want to embed a Tweet? What if you simply paste in Twitter's "embed code" - all done? You can also use the Tweet component from mdx-embed, which is a React component that you can use in your .mdx files. Or, you can roll you own for an even better solution. 
+
+Let's explore the options.
 
 <Step number={1} title='Simply paste the twitter embed code' />
 
-If you simply paste the twitter embed code into your .mdx file, you will get a tweet.  But it may not look great, and it will throw errors.  Let's fix that.
+If you simply paste the twitter embed code into your .mdx file, you will get a Tweet. It may not look great, and it will throw errors. Let's fix that.
 
-<Step number={2} title='Clean up the twitter embed code' />
+Since .mdx is a combination of Markdown and JSX we have to follow JSX standards for embedded HTML. So the "class" attribute needs to be changed to "className". Then "charset" needs to be changed to "charSet". Then you you need to make sure no browser add-ins are blocking social media trackers, otherwise you will get errors. You also need to make sure your CSP policy allows the Twitter script(s) and other content to be loaded.
 
-Since .mdx is a combination of Markdown and JSX we have to follow JSX standards for embedded HTML. So the "class" attribute needs to be changed to "className". Then "charset" needs to be changed to "charSet". Then you you need to make sure no browser add-ins are blocking social media trackers otherwise you will get errors. You also need to make sure your CSP policy allows the twitter script to be loaded.
-
-When it works I still see console warnings:
+Unfortunately, When it works I still see console warnings:
 
 * "Warning: Did not expect server HTML to contain a &lt;div&gt; in &lt;div&gt;."
 * "Warning: validateDOMNesting(...): &lt;a&gt; cannot appear as a descendant of &lt;a&gt;."
@@ -34,17 +34,17 @@ In any case, here it is:
 
 If that works for you then you are done. However, With Core Web Vitals becoming one of the biggest factors in search ranking using the classic Twitter embed iframe is not the best solution; it is slow to load and triggers Content Layout Shift (CLS) which hurts your Core Web Vitals score. 
 
-For me, the "just paste in the embed code" approach didn't work as well as I hoped. It was fiddly, slow, and sometimes I'd have to refresh the page to get the Tweet to format properly. Plus I could not figure out how to make it work with Next dark mode dynamically. Sigh.
+The "just paste in the embed code" approach didn't work as well as I hoped. It did not work consistently, it was slow, and I could not figure out how to make it work with Next.js dark mode dynamically. 
 
-<Step number={3} title='Use a React component in .mdx' />
+<Step number={2} title='Use a React component in .mdx' />
 
-Enter [MDX Embed](https://www.mdx-embed.com/?path=/docs/introduction--page) which also gives you the capability of adding LOTS of different embeds in addition to Twitter. It's awesome. 
+Enter [MDX Embed](https://www.mdx-embed.com/?path=/docs/introduction--page) which also gives you the capability of adding **lots** of different embeds in addition to Twitter. It's pretty awesome. 
 
-You just import the pre-built component you need and then use it in your .mdx file. The Tweet component also supports light and dark themes. Here is an example:
+You just import the pre-built component you need and then use it in your .mdx file. The Tweet component also supports light and dark themes. Here is an example of the dark theme:
 
 <CodeBlock>
 
-```jsx:example.mdx
+```js:example.mdx
 import { Tweet } from '../node_modules/mdx-embed/dist/components/twitter/tweet';
 
 <Tweet tweetLink="PaulieScanlon/status/1201514996838141952" theme="dark" />
@@ -56,29 +56,31 @@ This is the result:
 
 <Tweet tweetLink="PaulieScanlon/status/1201514996838141952" theme="dark" />
 
-However, I could not figure out how to change the Tweet's light/dark themes dynamically, and I still had to deal with content layout shift. Hmm... what to do?
+This seems to work more consistently, and if you don't have light *and* dark modes it's great. I could not figure out how to change the Tweet's light/dark themes dynamically, and I still had to deal with content layout shift. Hmm... what to do?  Would there be a way to get the Tweet and pre-render it to eliminate CLS and make my page load faster?
 
-<Step number={4} title='Roll your own custom React tweet component and API' />
+<Step number={3} title='Roll your own custom React tweet component and API' />
 
-If you are a "full control" kind of person read on. First, let's check out what Lee Robinson, Director of Developer Relations at Vercel, does on his personal blog. He has a Tweets page that is really fast [here](https://leerob.io/tweets). His secret is pre-rendering the tweets and then embedding them in the page. Wait, what!? He explains all here:
+If you are a "full control" kind of person read on. First, let's check out what Lee Robinson, Director of Developer Relations at Vercel, does on his personal blog. He has a Tweets page that is really fast [here](https://leerob.io/tweets). His secret is pre-rendering the tweets and then embedding them in the page. Wait, what!? 
+
+He explains all here:
 
 <YouTube link='https://youtu.be/xZ9OzPQORtw' />
 
-There is one big drawback to using the approach Lee used - all your tweets need to be "known" ahead of time to be pre-rendered. Imagine you have a CMS and people are creating content in the CMS using Markdown/MDX and they wish to add embedded YouTube videos, Tweets, etc. to their posts. You can't really use the same approach as Lee did.
-
-Maxime Heckel figured out a way and documented it on [his blog](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/), but it seemed sketchy. 
+There is one big drawback to using the approach Lee used - all your tweets need to be "known" ahead of time to be pre-rendered. Imagine you have a CMS and people are creating content in the CMS using Markdown/MDX and they wish to add embedded YouTube videos, Tweets, etc. to their posts. You can't really use the same approach as Lee did. Maxime Heckel figured out a way and documented it on [his blog](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/).  It seemed promising, but did seem a bit "hacky" to implement.
 
 ### My Plan
 
-1. Since MDX files can use/import React components I will create the following component: <CustomTweet id="abcdef123"/> where the id prop contains the id of the tweet I want to render. I want to be able to simply drop a Tweet into any of my .mdx files at any time by simply coding <CustomTweet id="abcdef123"/> and "Boom!", done. I want this component to render a beautiful Tweet, with dynamic light/dark modes. To make this work we need a `<CustomTweet>` component that will be rendered in the browser.  This component will take the Tweet id, go get the tweet, and then render it.
-3. I will also create a custom API to fetch the tweet. For the component above to retrieve a tweet we can re-use Lee's code and turn it into a Next.js API. This will return the Tweet data in JSON format.
-4. Finally we will use a tailwind styled component to render the tweet. In this case it's our `<Tweet>` component. This is also based off Lee's code.
+I decided to try a middle ground. I will create a component that renders itself on page load - it's **much** faster and works consistently. However I still have CLS to contend with.  
+
+1. Since MDX files can use/import React components let's use a custom component. To make this work we need a `<CustomTweet>` component that will be rendered in the browser. This component will accept the Tweet id as a prop, go get the tweet, and then render it. Like this: `<CustomTweet id="abcdef123"/>`
+3. Let's create a custom Next.js API to fetch the tweet. For the component above to retrieve a tweet we can re-use Lee's code and turn it into an API. This will return the Tweet data in JSON format.
+4. Finally we will use a tailwind styled component to render the tweet. I want this component to render a beautiful Tweet, with dynamic light/dark modes. In this case it's our `<Tweet>` component. This is also based off Lee's code.
 
 Let me show you the results first. Here is my version:
 
 <CustomTweet id='531834493922189313' />
 
-And Twitters native version:
+And Twitter's native version:
 
 <Tweet tweetLink="SenTedCruz/status/531834493922189313" />
 
@@ -177,7 +179,7 @@ import { useState, useEffect } from 'react';
 import { BASE_URL } from '../../lib/constants';
 import { Tweet } from '../Tweet';
 
-export const CustomTweet = ({ id }) => {
+export const CustomTweet = ({ id }) => {y developer
   let [tweet, setTweet] = useState(null);
   const URL =
     process.env.NODE_ENV === 'development'

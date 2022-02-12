@@ -212,7 +212,7 @@ export const Tweet = ({ tweet }) => {
             })}
           </span>
         </a>
-        <a
+        {/* <a
           className='flex items-center mr-5 !text-gray-500 hover:!text-blue-600 transition hover:!underline'
           href={tweetUrl}
           target='_blank'
@@ -225,7 +225,7 @@ export const Tweet = ({ tweet }) => {
             </g>
           </svg>
           <span>Copy Link</span>
-        </a>
+        </a> */}
       </div>
       <a className='' href={tweetUrl} target='_blank' rel='noopener noreferrer'>
         <button className='w-full mt-3 text-sm text-[#1d9bf0] font-bold p-1 border rounded-full hover:no-underline border-gray-300 dark:border-gray-700 hover:[background-color:rgba(29,155,240,0.1)]'>
