@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import { CMS_NAME } from '../lib/constants';
 import { Header } from '../../components/Header';
 import { Container } from '../../components/Container';
 import { SortByDate } from '../../lib/sortPosts';
@@ -7,24 +9,30 @@ import { getAllFilesFrontMatter } from '../../lib/getAllFiles';
 // TODO add SEO
 export default function Index({ snippets }) {
   return (
-    <Container>
-      <Header />
+    <>
+      <Head>
+        <title>{CMS_NAME} · Snippets</title>
+      </Head>
 
-      {/* Head */}
-      <div className='flex items-center space-x-2'>
-        <h2 className='mb-4 text-6xl md:text-7xl font-bold tracking-tighter leading-tight'>
-          Snippets
-        </h2>
-      </div>
-      <p className='text-xl text-gray-500 mb-6'>Short solutions to discrete problems.</p>
+      <Container>
+        <Header />
 
-      {/* Grid */}
-      <div className='grid grid-cols-1 gap-4 w-full lg:grid-cols-2 xl:grid-cols-3 mb-6'>
-        {snippets.map((item, _idx) => (
-          <SnippetCard {...snippets[_idx]} key={item.slug} />
-        ))}
-      </div>
-    </Container>
+        {/* Head */}
+        <div className='flex items-center space-x-2'>
+          <h2 className='mb-4 text-6xl font-bold leading-tight tracking-tighter md:text-7xl'>
+            Snippets
+          </h2>
+        </div>
+        <p className='mb-6 text-xl text-gray-500'>Short solutions to discrete problems.</p>
+
+        {/* Grid */}
+        <div className='grid w-full grid-cols-1 gap-4 mb-6 lg:grid-cols-2 xl:grid-cols-3'>
+          {snippets.map((item, _idx) => (
+            <SnippetCard {...snippets[_idx]} key={item.slug} />
+          ))}
+        </div>
+      </Container>
+    </>
   );
 }
 
