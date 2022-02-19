@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { CMS_NAME } from '../lib/constants';
 import { Header } from '../../components/Header';
+import { CMS_NAME } from '../../lib/constants';
 import { Container } from '../../components/Container';
 import { SortByDate } from '../../lib/sortPosts';
 import { SnippetCard } from '../../components/SnippetCard';
