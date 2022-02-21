@@ -13,24 +13,28 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Google Tag Manager */}
-      <Script
-        id='gtm'
-        strategy='afterInteractive'
-        dangerouslySetInnerHTML={{
-          __html: `
+      {process.env.NEXT_PUBLIC_GTM_ACCOUNT && (
+        <Script
+          id='gtm'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer', '${process.env.NEXT_PUBLIC_GTM_ACCOUNT}');
           `,
-        }}
-      />
+          }}
+        />
+      )}
+      {/* Umami */}
       {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
         <Script
+          id='umami'
+          strategy='lazyOnload'
           src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-          strategy='lazyOnload'
         />
       )}
       <ThemeProvider attribute='class' enableColorScheme={false}>
