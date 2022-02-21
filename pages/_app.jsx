@@ -26,6 +26,13 @@ export default function MyApp({ Component, pageProps }) {
           `,
         }}
       />
+      {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+        <Script
+          src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          strategy='lazyOnload'
+        />
+      )}
       <ThemeProvider attribute='class' enableColorScheme={false}>
         <Layout>
           <Component {...pageProps} />

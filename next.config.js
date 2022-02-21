@@ -72,7 +72,7 @@ const ContentSecurityPolicy = `
     process.env.NODE_ENV === 'production'
       ? "'self' 'unsafe-eval' 'unsafe-inline'"
       : "'self' 'unsafe-eval' 'unsafe-inline'"
-  } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com;
+  } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com https://umami-production-3f4a.up.railway.app;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
     process.env.NODE_ENV === 'production'
@@ -81,7 +81,7 @@ const ContentSecurityPolicy = `
   } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
   img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com;
   media-src 'none';
-  connect-src 'self' https://vitals.vercel-insights.com https://www.google-analytics.com https://*.algolia.net https://*.algolianet.com https://gist.githubusercontent.com;
+  connect-src 'self' https://vitals.vercel-insights.com https://www.google-analytics.com https://*.algolia.net https://*.algolianet.com https://gist.githubusercontent.com https://umami-production-3f4a.up.railway.app;
   font-src 'self' https://fonts.gstatic.com data: ;
   report-uri /api/csp;
   report-to csp-endpoint;
