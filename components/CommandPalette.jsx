@@ -1,26 +1,28 @@
 // https://headlessui.dev/
+// https://www.youtube.com/watch?v=-jix4KyxLuQ
+import { useRouter } from 'next/router';
 import { Dialog, Transition, Combobox } from '@headlessui/react';
 import { Fragment, useEffect, useState } from 'react';
 
-const people = [
-  { id: 1, name: 'Durward Reynolds', unavailable: false },
-  { id: 2, name: 'Kenton Towne', unavailable: false },
-  { id: 3, name: 'Therese Wunsch', unavailable: false },
-  { id: 4, name: 'Benedict Kessler', unavailable: true },
-  { id: 5, name: 'Katelyn Rohan', unavailable: false },
+const posts = [
+  { id: 1, title: 'Values or Beliefs?', slug: '2022-02-20-values-or-beliefs' },
+  {
+    id: 2,
+    title: 'Vision and Talent or Planning?',
+    slug: '2022-02-13-vision-and-talent-or-planning',
+  },
 ];
 
 export const CommandPalette = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedPerson, setSelectedPerson] = useState([]);
   const [query, setQuery] = useState('');
 
-  const filteredPeople =
-    query === ''
-      ? people
-      : people.filter((person) => {
-          return person.name.toLowerCase().includes(query.toLowerCase());
-        });
+  const filteredPosts = query
+    ? posts.filter((post) => {
+        return post.title.toLowerCase().includes(query.toLowerCase());
+      })
+    : [];
 
   useEffect(() => {
     function handleKeyDown(event) {
@@ -38,7 +40,7 @@ export const CommandPalette = () => {
   }, []);
 
   return (
-    <Transition.Root show={isOpen} as={Fragment}>
+    <Transition.Root show={isOpen} as={Fragment} afterLeave={() => setQuery('')}>
       <Dialog onClose={setIsOpen} className='fixed inset-0 p-4 pt-[15vh] overflow-y-auto'>
         <Transition.Child
           enter='ease-out duration-300'
@@ -59,8 +61,12 @@ export const CommandPalette = () => {
           leaveTo='opacity-0 scale-95'
         >
           <Combobox
-            value={selectedPerson}
-            onChange={setSelectedPerson}
+            // value={selectedPost}
+            // onChange={setSelectedPost}
+            onChange={(post) => {
+              router.push(`/posts/${post.slug}`);
+              setIsOpen(false);
+            }}
             as='div'
             className='relative max-w-xl mx-auto overflow-hidden bg-white divide-y-2 divide-gray-100 shadow-2xl rounded-xl ring-1 ring-black/5'
           >
@@ -77,27 +83,29 @@ export const CommandPalette = () => {
                 className='w-full h-12 ml-2 text-gray-800 placeholder-gray-400 bg-transparent border-0 focus:ring-0'
                 placeholder='Search...'
                 onChange={(event) => setQuery(event.target.value)}
-                displayValue={(person) => person.name}
+                // displayValue={(post) => post.title}
               />
             </div>
-            <Combobox.Options static className='py-4 overflow-y-auto text-sm max-h-96'>
-              {filteredPeople.map((person) => (
-                /* Use the `active` state to conditionally style the active option. */
-                /* Use the `selected` state to conditionally style the selected option. */
-                <Combobox.Option key={person.id} value={person} as={Fragment}>
-                  {({ active, selected }) => (
-                    <li
-                      className={`px-4 py-2 ${
-                        active ? 'bg-blue-500 text-white' : 'bg-white text-black'
-                      }`}
-                    >
-                      {/*selected && <CheckIcon />*/}
-                      {person.name}
-                    </li>
-                  )}
-                </Combobox.Option>
-              ))}
-            </Combobox.Options>
+            {filteredPosts.length > 0 && query.length > 1 && (
+              <Combobox.Options static className='py-4 overflow-y-auto text-sm max-h-96'>
+                {filteredPosts.map((post) => (
+                  /* Use the `active` state to conditionally style the active option. */
+                  /* Use the `selected` state to conditionally style the selected option. */
+                  <Combobox.Option key={post.id} value={post} as={Fragment}>
+                    {({ active, selected }) => (
+                      <li
+                        className={`px-4 py-2 ${
+                          active ? 'bg-blue-500 text-white' : 'bg-white text-black'
+                        }`}
+                      >
+                        {/*selected && <CheckIcon />*/}
+                        {post.title}
+                      </li>
+                    )}
+                  </Combobox.Option>
+                ))}
+              </Combobox.Options>
+            )}
           </Combobox>
         </Transition.Child>
       </Dialog>
