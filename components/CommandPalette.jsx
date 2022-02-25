@@ -3,27 +3,21 @@
 import { useRouter } from 'next/router';
 import { Dialog, Transition, Combobox } from '@headlessui/react';
 import { Fragment, useEffect, useState } from 'react';
-
-const posts = [
-  { id: 1, title: 'Values or Beliefs?', slug: '2022-02-20-values-or-beliefs' },
-  {
-    id: 2,
-    title: 'Vision and Talent or Planning?',
-    slug: '2022-02-13-vision-and-talent-or-planning',
-  },
-];
+import posts from '../data/posts.json';
 
 export const CommandPalette = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
 
+  /* Filter posts based on search query */
   const filteredPosts = query
     ? posts.filter((post) => {
         return post.title.toLowerCase().includes(query.toLowerCase());
       })
     : [];
 
+  /* Handle Keyboard Input */
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === 'k' && (event.ctrlKey || event.metaKey)) {
@@ -61,8 +55,6 @@ export const CommandPalette = () => {
           leaveTo='opacity-0 scale-95'
         >
           <Combobox
-            // value={selectedPost}
-            // onChange={setSelectedPost}
             onChange={(post) => {
               router.push(`/posts/${post.slug}`);
               setIsOpen(false);
@@ -83,7 +75,6 @@ export const CommandPalette = () => {
                 className='w-full h-12 ml-2 text-gray-800 placeholder-gray-400 bg-transparent border-0 focus:ring-0'
                 placeholder='Search...'
                 onChange={(event) => setQuery(event.target.value)}
-                // displayValue={(post) => post.title}
               />
             </div>
             {filteredPosts.length > 0 && query.length > 1 && (

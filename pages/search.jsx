@@ -19,8 +19,8 @@ export default function Index() {
       </Head>
 
       <Container>
-        <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-center md:text-left before:tracking-tighter leading-tight md:leading-none mb-8 md:mb-12'>
-          Search
+        <h1 className='mb-8 text-4xl font-bold leading-tight text-center md:text-6xl lg:text-7xl md:text-left before:tracking-tighter md:leading-none md:mb-12'>
+          Full-Text Search
         </h1>
         <InstantSearch searchClient={searchClient} indexName='blog'>
           <SearchBox />

@@ -5,7 +5,7 @@ const readingTime = require('reading-time');
 const algoliasearch = require('algoliasearch/lite');
 const fetch = require('node-fetch');
 const { join } = require('path');
-const { readdirSync, readFileSync } = require('fs');
+const { readdirSync, readFileSync, writeFile } = require('fs');
 
 const BASE_URL = 'https://www.danstroot.com';
 
@@ -61,7 +61,7 @@ function hashString(s) {
 function transformPostsToSearchObjects(posts) {
   const transformed = posts.map((post) => {
     return {
-      objectID: hashString(post.date + post.slug),
+      objectID: Math.abs(hashString(post.date + post.slug)),
       title: post.title,
       excerpt: post.excerpt,
       content: post.content,
@@ -99,6 +99,23 @@ function transformPostsToSearchObjects(posts) {
     // Save the objects
     const transformed = transformPostsToSearchObjects(posts);
     const algoliaResponse = await index.saveObjects(transformed, {});
+
+    // write JSON copy
+    const trimmed = transformed.map((post) => {
+      return {
+        objectID: post.objectID,
+        title: post.title,
+        slug: post.slug,
+      };
+    });
+    writeFile('./data/posts.json', JSON.stringify(trimmed), 'utf8', function (err) {
+      if (err) {
+        console.log('An error occured while writing JSON Object to File.');
+        return console.log(err);
+      }
+
+      console.log('🎉 Successfully saved JSON file.');
+    });
 
     // check the output of the response in the console
     console.log(
