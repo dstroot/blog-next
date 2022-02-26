@@ -16,10 +16,12 @@ export const Layout = ({ children }) => {
   );
 };
 
-/* sticky footer pattern used above */
+/* Sticky footer pattern used above:
 
-// <div className='flex flex-col min-h-screen'>
-//   <header></header>
-//   <main className='flex-grow'>{children}</main>
-//   <footer></footer>
-// </div>
+<div className='flex flex-col min-h-screen'>
+  <header></header>
+  <main className='flex-grow'>{children}</main>
+  <footer></footer>
+</div>
+
+*/
