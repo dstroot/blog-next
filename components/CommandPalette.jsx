@@ -44,7 +44,7 @@ export const CommandPalette = () => {
           leaveFrom='opacity-100'
           leaveTo='opacity-0'
         >
-          <Dialog.Overlay className='fixed inset-0 bg-gray-300/75 dark:bg-gray-800/75 backdrop-blur-sm' />
+          <Dialog.Overlay className='fixed inset-0 bg-gray-300/75 dark:bg-gray-800/75' />
         </Transition.Child>
         <Transition.Child
           enter=' ease-out duration-200'
