@@ -34,8 +34,14 @@ export const CommandPalette = () => {
   }, []);
 
   return (
-    <Transition.Root show={isOpen} as={Fragment} afterLeave={() => setQuery('')}>
-      <Dialog onClose={setIsOpen} className='fixed inset-0 p-4 pt-[15vh] overflow-y-auto'>
+    <Transition.Root
+      show={isOpen}
+      as={Fragment}
+      afterLeave={() => {
+        setQuery('');
+      }}
+    >
+      <Dialog onClose={setIsOpen} className='fixed inset-0 z-10 p-4 pt-[15vh] overflow-y-auto'>
         <Transition.Child
           enter='ease-out duration-200'
           enterFrom='opacity-0'

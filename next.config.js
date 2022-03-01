@@ -81,7 +81,7 @@ const ContentSecurityPolicy = `
   } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
   img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com;
   media-src 'none';
-  connect-src 'self' https://vitals.vercel-insights.com https://www.google-analytics.com https://*.algolia.net https://*.algolianet.com https://gist.githubusercontent.com https://umami-production-3f4a.up.railway.app;
+  connect-src 'self' ws://localhost:3000 https://vitals.vercel-insights.com https://www.google-analytics.com https://*.algolia.net https://*.algolianet.com https://gist.githubusercontent.com https://umami-production-3f4a.up.railway.app;
   font-src 'self' https://fonts.gstatic.com data: ;
   report-uri /api/csp;
   report-to csp-endpoint;
