@@ -22,6 +22,7 @@ export const CommandPalette = () => {
     function handleKeyDown(event) {
       if (event.key === 'k' && (event.ctrlKey || event.metaKey)) {
         event.preventDefault();
+        event.stopPropagation();
         setIsOpen((value) => !value);
       }
     }
@@ -41,7 +42,11 @@ export const CommandPalette = () => {
         setQuery('');
       }}
     >
-      <Dialog onClose={setIsOpen} className='fixed inset-0 z-10 p-4 pt-[15vh] overflow-y-auto'>
+      <Dialog
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        className='fixed inset-0 z-10 pt-[15vh] overflow-y-auto'
+      >
         <Transition.Child
           enter='ease-out duration-200'
           enterFrom='opacity-0'
@@ -50,7 +55,7 @@ export const CommandPalette = () => {
           leaveFrom='opacity-100'
           leaveTo='opacity-0'
         >
-          <Dialog.Overlay className='fixed inset-0 bg-gray-300/75 dark:bg-gray-800/75' />
+          <Dialog.Overlay className='fixed inset-0 bg-gray-200/75 dark:bg-gray-800/75' />
         </Transition.Child>
         <Transition.Child
           enter=' ease-out duration-200'
@@ -93,7 +98,7 @@ export const CommandPalette = () => {
                       <li
                         className={`px-4 py-2 ${
                           active
-                            ? 'bg-blue-500 dark:bg-blue-800 text-white'
+                            ? 'bg-gray-500 dark:bg-gray-700 text-white'
                             : 'bg-white text-black dark:bg-black dark:text-gray-200'
                         }`}
                       >

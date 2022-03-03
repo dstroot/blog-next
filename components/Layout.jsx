@@ -1,12 +1,14 @@
 import { Footer } from './Footer';
 import { Meta } from './Meta';
 import { CommandPalette } from './CommandPalette';
+import { Test } from './Test';
 
 export const Layout = ({ children }) => {
   return (
     <>
       <Meta />
       <CommandPalette />
+      <Test />
       <div className='flex flex-col min-h-screen'>
         {/* <Header /> */}
         <main className='flex-grow'>{children}</main>
