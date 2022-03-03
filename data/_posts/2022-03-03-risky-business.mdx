@@ -3,7 +3,7 @@ title: Risky Business
 excerpt: 'A week never goes by when someone doesn’t want to talk about technology risk. I want to share what I believe creates real risk for companies - and why their internal technology risk management programs may not be working. As a CIO for over 20 years I have "seen some things"...'
 coverImage: /assets/blog/img/risky.jpeg
 date: '2022-03-03'
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -12,17 +12,15 @@ ogImage:
 seoURL:
 ---
 
-A week never goes by when someone doesn't want to talk about technology risk. I want to share what I believe creates real risk for companies - and why internal technology risk management programs may not be working. As a CIO for over 20 years I have "seen some things" and personally wrestled with key risks outlined below. 
+Lately, everyone seems to want to talk about technology risk. I am not referring to cyber-security risks, I am referring to the big operational types of risks (outside your Information Security program) that could cause a sizable impact to your business. As a CIO for over 20 years, I want to share what keeps me up at night, what I believe creates real risk for companies - and how internal technology risk management programs could be improved.
 
-First, many companies address major technology risks indirectly, via a side-channel: controls. Controls are certainly important, and when the Sarbanes-Oxley Act was passed in 2002, it was a major change in the way companies handle technology controls (at least related to financial systems).
+First, many companies address major technology risks indirectly, via controls. Controls are certainly important, and when the Sarbanes-Oxley Act was passed in 2002, it was a major change in the way companies handled technology controls (at least related to financial systems).
 
-Control frameworks are a boon for consultants. I wonder how many consulting partners made their targets, for how many years, selling SOX compliance help and advice? It's easy to compare a company's processes and controls against a prescribed framework and a write a report on the results. But those same consultants never actually ran a technology organization themselves. They can tell you if your processes don't match the framework, but they can't tell you about risk. They aren't woken up in the middle of the night when a critical system fails, and they wouldn't know what the impact of the failure is on the company.
-
-Does anyone believe that with all the new SOX controls in place that technology risk went down overall? It may have slightly, but really I didn't see it in practice. When I think of technology risk I don’t immediately think about “controls”, instead I think in terms of costs (or, how can a CIO have an even shorter career?). What are the things that I have seen personally that directly relate to risk _and manifest in significant costs_? 
+Controls are necessary, and are very beneficial at reducing some types of technology risk, but they may not be directly addressing some of your biggest risks. With all the new SOX controls in place did technology risk decrease overall? It may have slightly, but I didn't see it in practice.
 
 ## Controls indirectly reduce technology risk
 
-Controls are part of how we think of technology “management” or “governance”. Good governance and good management are essential of course. However, control & management frameworks such as COBIT[^fn1], or service management frameworks such as ITIL[^fn2], don’t reduce risk significantly because they are focused on “management of the technology function”, not directly on reducing technology risk.  For example, COBIT’s design is based on the following principles:
+Controls are part of how we think of technology “management” and/or “governance”. Good governance, and good management, are essential. However, control & management frameworks such as COBIT[^fn1], or service management frameworks such as ITIL[^fn2], don’t reduce all technology risks because they are focused on “management of the technology function”, not directly on reducing technology risk.  For example, COBIT’s design is based on the following principles:
 
 * Principle 1: Meeting Stakeholder Needs
 * Principle 2: Covering the Enterprise End-to-End
@@ -30,49 +28,48 @@ Controls are part of how we think of technology “management” or “governanc
 * Principle 4: Enabling a Holistic Approach
 * Principle 5: Separating Governance from Management
  
-Do any of these principles speak directly to managing technology risk? In addition, technology controls may add to costs without getting an offsetting benefit.  Sometimes controls are ineffective, implemented poorly, or poorly designed, adding to cost and taking away from higher value work.
+Do any of these principles speak directly to managing technology risk? 
 
-ITIL on the other hand does a better job addressing technology risks because a large portion is focused on service delivery, which includes reliability and availability. However, ITIL doesn't really address overall complexity in your technology environment, overall technology investment, sourcing strategy, culture, etc., which all impact technology risk. 
+ITIL may do a better job addressing traditional technology risks because a large portion is focused on service delivery, which includes reliability and availability. However, ITIL doesn't really address overall complexity in your technology environment, overall technology investment levels, sourcing strategy, culture, etc., all of which impact overall technology risk. 
+
+I also want to point out that controls do not automatically reduce risk. Some technology controls may add cost, or time, without an offsetting benefit.  Sometimes controls are ineffective, poorly designed, or implemented poorly, adding cost and taking away from higher value work.
+
+When I think of technology risk, and what keeps me up at night, I don’t immediately jump to “controls”. Instead, I think in terms of unexpected costs, or loss of revenue. What are the technology risks that _manifest with direct impact to your bottom line_? 
 
 ## What directly drives technology risk?
 
-I am referring the things that either really impact your bottom line (and hence the stock price), or could kill your company.  Those things your cyber insurance isn't going to cover.  
+I am referring the things that either impact your bottom line (and hence the stock price), or could kill your company.  Those things your cyber insurance isn't going to cover.  
 
-* **Culture**: Companies with a strong culture of accountability and ownership experience less technology risk. [needs more content]
+* **Culture**: Companies with a strong culture of accountability and ownership experience less technology risk - that's a bit obvious. But how do you measure and foster that type of culture? Culture is so multi-faceted that it requires whole [post of it's own](/posts/2021-08-12-culture-measure-what-you-treasure). In this context we are mainly speaking to those people in an organization that see thier mission as keeping a specific system or set of technologies operational and secure at all times. Can you name the "system owners" of all your key systems? When you name them would they agree with you? Do they have the support and resources they require? If not, your systems will be less reliable and secure - simple as that. 
 
-* **Complexity**: Imagine having a system comprised of one single component that works 99% of the time. System availability = 99%.  Now imagine the system is made up of 100 components that all work with 99% reliability. If we raise 0.99 to the hundredth power (0.99 x 0.99 x  0.99 x 0.99 …) we end up with .366, or _37% overall availability_.  Complexity is also the enemy of security. Hackers “attack the seams.” A properly managed, patched, and configured server is very difficult to attack. Professional hackers look for the seams -- the places where people and processes are not perfect and something is left exposed. The more complex your infrastructure and systems, the more likely it is to have seams with exposed vulnerabilities. Anti-complexity is the main driver of security, reliability and availability. How do we measure our complexity? Is it increasing or decreasing?
+* **Complexity**: Imagine having a system comprised of one single component that works 99% of the time. System availability = 99%.  Now imagine the system is made up of 100 components, all working with 99% reliability. If we raise 0.99 to the hundredth power (0.99 x 0.99 x  0.99 x 0.99 …) we end up with .366, or just _37% overall availability_.  Complexity is also the enemy of security. Hackers “attack the seams.” A properly managed, patched, and configured server is very difficult to attack. Professional hackers look for the seams -- the places where people and processes are imperfect and something is left exposed. The more complex your infrastructure and systems, the more likely it is to have "seams" with exposed vulnerabilities. Anti-complexity is the main driver of security, reliability and availability. How do we measure our complexity? Is it increasing or decreasing?
 
-* **Change**: Not “change control” but rather the _overall amount and magnitude of change_ occurring in your technology environment in any given period.  This can be measured by the number and magnitude of projects, plus the volume of items sent through the change management process.  What is our “change vector”? Most day-to-day outages are "self inflicted wounds". One company I am familiar with let the majority of their network engineers go during a re-organization. That meant no one was making any changes to the network, and for a while it was more stable than it had ever been. Can your people cope with all the change? Have you ever heard the saying that technology changes at the speed of Moore’s law? Well, humans change at the speed of Darwin’s law. 
+* **Black Swans**: Nearly all major outages I have seen in my career have been due to some “unique confluence of factors”. The post incident review always says something to the effect of “we never thought about or anticipated this ever occurring”. AWS "[Post-Event Summaries](https://aws.amazon.com/premiumsupport/technology/pes/)" are fun to read because they are masterful at implying that without ever directly stating it. Nearly all risk management programs focus on reducing the risks we know, or have experienced before. They simply can't anticipate black swans. The main thing that reduces black swans is **reducing complexity** (above).  
+
+* **Change**: Not “change control” but rather the _overall amount and magnitude of change_ occurring in your technology environment in any given period.  This can be measured by the number and magnitude of projects, plus the volume of items sent through the change management process.  What is our “change vector”? Most day-to-day outages are "self inflicted wounds". One company I am familiar with let the majority of their network engineers go during a re-organization. That meant no one was making any changes to the network, and for a while it was more stable than it had ever been. Have you ever heard the saying that technology changes at the speed of Moore’s law? Well, humans change at the speed of Darwin’s law. Can your people cope with all the change? 
 
 * **Zombie Projects**: You know what really puts an organization at risk?  The zombie projects that live in plain sight. Zombies are projects that, for any number of reasons, fail to fulfill their promise and yet keep shuffling along, sucking up resources without any real hope of having a meaningful impact on the company’s strategy or revenue prospects. Most companies reward systems carry strong penalties for failing to meet commitments, so naturally people hesitate to raise their hands and say “Our project is one of those.” It just looks smarter to find ways to stay alive. I have seen _single zombie projects cost between 10 and 40 million dollars_. If you brought in an outside, objective party to find zombies I can almost guarantee a 10x return on investment.
 
-* **Technology Supply Chain**: Supply	chain	risks	covers	a	lot	of	territory.	Couldn't get toner to print client statements! Some	of	the	concerns	include risks	
-from:	
-• Third	party	service	providers	or	vendors – from	janitorial	services	to	software	engineering	-- with	physical	
-or virtual	access	to	information	systems,	software	code, or	IP.
-• Poor	information	security	practices	by	lower-tier suppliers.
-• Compromised	software	or	hardware	purchased	from	suppliers.
-• Software	security	vulnerabilities in	supply	chain	management	or	supplier	systems.
-• Counterfeit	hardware	or	hardware with	embedded malware.
-• Third	party	data	storage	or	data	aggregators.
+* **Technology Supply Chain**: Supply	chain	risk covers a lot of territory. Recently, during the pandemic companies couldn't procure basic items like laptops and monitors, or even printer toner, due to supply chain issues. Something we handn't considered before. Typically we think of things like these, any of which could be a major source of disruption:
+  - Third party service providers – from janitorial services to software engineering -- with physical 
+or virtual access to information systems, software code, or IP.
+  - Poor information security practices by suppliers.
+  - Compromised software or hardware purchased from suppliers.
+  - Counterfeit hardware or hardware with embedded malware.
 
-* **End-of-Life Technology**:  Companies are much better at introducing new technologies than retiring them. The cost of running unsupported technology is higher than you think. Costs of IT outages and data breaches run into the millions. At the end-of-life of technology, IT management has to deal with challenges such as integration issues, limited functionality, low service levels, lack of available skills, and missing support from vendors.  What is the count of systems that you retired in 2021?
+* **End-of-Life Technology**: Companies are much better at introducing new technologies than retiring them. The cost of running unsupported technology is higher than you think. Companies that don’t pay attention to deployed technology reaching obsolescence face a higher number of security risks and vulnerabilities than companies that keep a close eye on the life-cycle of elements in their IT landscape. At the end-of-life of technology, IT management has to deal with challenges such as integration issues, limited functionality, low service levels, lack of available skills, and missing support from vendors. Often, I see internally supported software that uses outdated technology and programming languages, which mean the people supporting the system no longer have market-appropriate skills -- and you can’t hire for those skills. What is the count of systems that you retired in 2021?
 
-* **Weak business continuity practices**: E.g. weak business engagement, design, architecture, testing …. Strong business continuity programs reduce risk in obvious ways but also in non-obvious ways.  The non-obvious ways include the need to _catalog the most critical systems_ actually are, consider what new threats exist (such as ransomware), and educate employees how to react. With on-premise, cloud, SaaS, etc. the complexity keeps increasing, along with the difficulty of validation.  With SaaS, availability is specified in a contract and is managed outside of a company’s direct control – if one of you critical systems is SaaS-based how do you really know well the vendor has addressed business continuity?
+* **Orphan technologies**: Companies today have way more systems and software titles than they have technology employees. That means ensuring that the technology is being managed properly is a challenge. Does every piece of software or hardware in your environment have a clear owner? Does the owner have the time, focus and resources to maintain what they own?  If not, they are orphans. Orphans that eventually expose you to a lot of risks.
+
+* **Business continuity**: Strong business continuity programs reduce risk in obvious ways, but also in non-obvious ways. One way is that a great business cotinuity program can help insulate your from some of the risks listed here. Other non-obvious ways include the need to understand and catalog _your most critical systems_, understand how they operate, and consider what new threats exist (such as ransomware). Complexity keeps increasing, along with the difficulty of validation.  With SaaS, availability is specified in a contract -- if one of you critical systems is SaaS-based how do you really know how well the vendor has addressed business continuity?
 
 * **Sourcing**.  Sourcing can save you money (reduced labor costs), or cost you money (longer time to deliver, errors, omissions, etc.). As long as your savings and costs are all internal eventually the right balance will be achieved. However, if an error in your software _exposes your organization to liability then you must consider reputational damage as well_. Cybersecurity reputational damage has decreased because many now see it as almost outside an organization’s control, but sourcing is seen purely as a management decision. See: [Boeing's 737 Max Software Outsourced to $9-an-Hour Engineers](https://www.industryweek.com/supply-chain/article/22027840/boeings-737-max-software-outsourced-to-9anhour-engineers).
 
-* **Adequate funding**: Organizations that do not view technology as strategic, an/or seek to minimize cost in the technology function will suffer less reliable technology. This is clear and unambiguous, the inverse is not clear unfortunately – organizations that are adequately funded can also experience less reliable technology depending on _how the money is spent_.   
-
-* **Orphan technologies**:  We have way more systems and software titles in our organization than we have people.  That means individuals are responsible for many software titles and vendors ensuring that the software is not being managed properly, not being patched and upgraded regularly, etc.  Companies that don’t pay attention to deployed technology reaching obsolescence face a higher number of security risks and vulnerabilities than companies that keep a close eye on the life-cycle of elements in their IT landscape. Also, continuing to use hardware or software that is no longer supported makes it easier for cybercriminals to gain access to systems and data.
-
-* **DIY/“Home Grown” infrastructure and systems driving critical business processes**:  Often, systems were built internally to scratch a specific itch decades ago and these systems gradually became part of absolutely critical business processes.  Now you have internally supported software that was not architected or designed for a critical process and often uses outdated technology and programming languages, which mean the people supporting the system no longer have market-appropriate skills and you can’t hire for those skills either. How many home systems do we have running critical business processes?
-
-* **Black Swans**: Nearly all major outages I have seen in my career have been due to some “unique confluence of factors”. The post incident review always says something to the effect of “we never thought about or anticipated this ever occurring”. AWS "[Post-Event Summaries](https://aws.amazon.com/premiumsupport/technology/pes/)" are fun to read because they are masterful at implying that without directly stating it. Nearly all risk management programs focus on reducing the risks we know, or have experienced before. The main thing that reduces black swans is reducing complexity.  
+* **Adequate funding**: Organizations that do not view technology as strategic, an/or seek to minimize cost in the technology function will suffer less reliable technology. This is clear and unambiguous. However, the inverse is not as clear -- organizations that are adequately funded can also experience less reliable technology depending on _how the money is spent_. If it's not spent addressing the list of items above then you probably will spend it on "realized risks".
  
 ## Summary
 
-If you want to reduce technology risk you have to be able to measure and reason about the factors that actually drive your key risks. Or, eventually those risks will manifest as costs. Then it's too late.
+If you want to reduce technology risk you have to be able to measure and reason about the factors that actually drive your largest, critical technology risks. Or eventually those risks will manifest as costs or loss of revenue. I could even be too late. 
 
 #### References
 
