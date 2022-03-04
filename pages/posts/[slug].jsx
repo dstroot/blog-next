@@ -4,7 +4,6 @@ import { PostBody } from '../../components/PostBody';
 import { Container } from '../../components/Container';
 import { useEffect } from 'react';
 import { PostHeader } from '../../components/PostHeader';
-// import { usePageView } from '../../hooks/usePageView';
 import { getMDXFileBySlug } from '../../lib/processMDX';
 import { CMS_NAME, BASE_URL } from '../../lib/constants';
 import { getFilesByExtension } from '../../lib/getAllFiles';
@@ -42,7 +41,7 @@ export default function Index({ code, frontMatter }) {
       <SEO {...seo} />
       <Container>
         <Header />
-        <article className='mb-6 mt-6 md:mb-10 md:mt-10'>
+        <article className='mt-6 mb-6 md:mb-10 md:mt-10'>
           <PostHeader
             title={frontMatter.title}
             coverImage={frontMatter.coverImage}

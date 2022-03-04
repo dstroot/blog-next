@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import algoliasearch from 'algoliasearch/lite';
+import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
 import { Container } from '../components/Container';
 import { SearchBox } from '../components/SearchBox';
@@ -19,6 +20,7 @@ export default function Index() {
       </Head>
 
       <Container>
+        <Header />
         <h1 className='mb-8 text-4xl font-bold leading-tight text-center md:text-6xl lg:text-7xl md:text-left before:tracking-tighter md:leading-none md:mb-12'>
           Full-Text Search
         </h1>
