@@ -38,13 +38,14 @@ export function Test() {
       onClose={() => setIsOpen(false)}
       className='fixed inset-0 z-10 overflow-y-auto'
     >
+      <Dialog.Overlay className='fixed inset-0 bg-gray-200/75 dark:bg-gray-800/75' />
       <div className='flex items-center justify-center min-h-screen'>
-        <Dialog.Overlay className='fixed inset-0 bg-gray-200/75 dark:bg-gray-800/75' />
-        <div className='relative mx-auto bg-white rounded min-w-md'>
-          <InstantSearch searchClient={searchClient} indexName='blog'>
+        <div className='relative mx-auto bg-white'>
+          <input />
+          {/* <InstantSearch searchClient={searchClient} indexName='blog'>
             <SearchBox />
             <SearchHits />
-          </InstantSearch>
+          </InstantSearch> */}
         </div>
       </div>
     </Dialog>

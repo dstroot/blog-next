@@ -8,6 +8,7 @@ import '../styles/index.css';
 
 // https://nextjs.org/docs/advanced-features/custom-app
 // https://jools.dev/nextjs-_appjs-example
+// https://medium.com/geekculture/privacy-friendly-website-analytics-with-umami-and-nextjs-8b587aecc916
 
 export default function MyApp({ Component, pageProps }) {
   return (
