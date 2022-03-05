@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
 import { Meta } from './Meta';
 import { Footer } from './Footer';
 // import { CommandPalette } from './CommandPalette';
@@ -22,7 +22,7 @@ export const Layout = ({ children }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [router]);
 
   return (
     <>
