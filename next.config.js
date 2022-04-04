@@ -13,9 +13,9 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-    // reactRoot: true,  // react 18
+    reactRoot: true, // react 18
     // runtime: 'edge',
-    // concurrentFeatures: true, // react 18 needed
+    concurrentFeatures: true, // react 18 needed
     // serverComponents: true, // react 18 needed
   },
   images: {
