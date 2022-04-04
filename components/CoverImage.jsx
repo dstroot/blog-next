@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
+// import { useState } from 'react';
+// import { cn } from '../lib/utils';
 
 export const CoverImage = ({
   title,
@@ -22,6 +24,7 @@ export const CoverImage = ({
       // sizes={width !== undefined ? `${Math.round(width)}px` : '100vw'}
       placeholder={placeholder ? placeholder : 'empty'}
       blurDataURL={blurDataURL ? blurDataURL : ''}
+      className='duration-500 ease-in-out group-hover:opacity-75'
     />
   );
 
@@ -29,14 +32,45 @@ export const CoverImage = ({
     <div className='sm:mx-0'>
       {slug ? (
         <Link as={`/posts/${slug}`} href='/posts/[slug]'>
-          <a aria-label={title}>{image}</a>
+          <a aria-label={title} className='group'>
+            {image}
+          </a>
         </Link>
       ) : (
         image
       )}
     </div>
+    // <BlurImage src={src} slug={slug} title={title} width={width} height={height} />
   );
 };
+
+// function BlurImage({ src, slug, title, width, height }) {
+//   const [isLoading, setIsLoading] = useState(true);
+
+//   return (
+//     <Link as={`/posts/${slug}`} href={`/posts/${slug}`}>
+//       <a aria-label={title} className='group'>
+//         <div className=''>
+//           <Image
+//             src={src}
+//             alt={`Cover Image for ${title}`}
+//             layout='responsive' // intrinsic, fill, responsive
+//             width={width}
+//             height={height}
+//             // objectFit='cover'
+//             className={cn(
+//               'group-hover:opacity-75 duration-500 ease-in-out',
+//               isLoading ? 'grayscale, blur-2xl scale-110' : 'grayscale-0 blur-0 scale-100'
+//             )}
+//             onLoadingComplete={() => setIsLoading(false)}
+//           />
+//         </div>
+//       </a>
+//     </Link>
+//   );
+// }
+
+// https://www.youtube.com/watch?v=BSoRXk1FIw8
 
 /*
 The layout behavior of the image as the viewport changes size. Defaults to intrinsic.
