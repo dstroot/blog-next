@@ -24,7 +24,7 @@ module.exports = {
     deviceSizes: [335, 460, 546, 600, 728, 984, 1240, 1496],
     // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     domains: [
-      'pbs.twimg.com', // Twitter Profile Picture
+      'pbs.twimg.com', // Twitter Profile Pictures
     ],
   },
   // pwa: {
