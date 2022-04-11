@@ -26,6 +26,7 @@ const Search = ({ refine }) => {
           autoComplete='off'
           autoCorrect='off'
           autoCapitalize='off'
+          autoFocus
           spellCheck='false'
           value={search}
           // onChange={(e) => refine(e.currentTarget.value)}
