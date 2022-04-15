@@ -5,7 +5,8 @@ import { DateFormatter } from './DateFormatter';
 export const Avatar = ({ name, picture, size, date }) => {
   return (
     <Link href='/about'>
-      <a>
+      {/* You can use the class "group" to group behavior */}
+      <a aria-label={name} className='duration-500 ease-in-out group'>
         <div className='flex items-center space-x-5'>
           <Image
             src={picture}
@@ -15,10 +16,10 @@ export const Avatar = ({ name, picture, size, date }) => {
             className='flex-initial rounded-full'
           />
           <div className='flex-auto'>
-            <p className='transition-colors text-gray-900 dark:text-gray-100 text-xl font-semibold mb-0 hover:underline'>
+            <p className='mb-0 text-xl font-semibold text-gray-900 transition-colors dark:text-gray-100 group-hover:underline'>
               Dan Stroot
             </p>
-            <p className='transition-colors text-gray-600 dark:text-gray-300 text-sm'>
+            <p className='text-sm text-gray-600 transition-colors dark:text-gray-300'>
               <DateFormatter dateString={date} />
             </p>
           </div>
