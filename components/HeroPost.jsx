@@ -14,8 +14,8 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
           width={1496}
           height={748}
           priority={true}
-          placeholder='blur'
-          blurDataURL={`data:image/svg+xml;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkSAMAAGwAaKJgE8oAAAAASUVORK5CYII=`}
+          // placeholder='blur'
+          // blurDataURL={`data:image/svg+xml;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkSAMAAGwAaKJgE8oAAAAASUVORK5CYII=`}
         />
       </div>
       {/* Title and Avatar */}
