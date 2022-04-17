@@ -22,15 +22,19 @@ export const CoverImage = ({
       // sizes={width !== undefined ? `${Math.round(width)}px` : '100vw'}
       placeholder={placeholder ? placeholder : 'empty'}
       blurDataURL={blurDataURL ? blurDataURL : ''}
-      className='duration-500 ease-in-out group-hover:opacity-75'
+      className=''
     />
   );
 
   return (
-    <div className='sm:mx-0'>
+    <div className='sm:mx-0 group'>
       {slug ? (
-        <Link as={`/posts/${slug}`} href='/posts/[slug]'>
-          <a aria-label={title} className='group'>
+        <Link
+          as={`/posts/${slug}`}
+          href='/posts/[slug]'
+          className='duration-500 ease-in-out group-hover:scale-105'
+        >
+          <a aria-label={title} className=''>
             {image}
           </a>
         </Link>

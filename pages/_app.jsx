@@ -30,14 +30,14 @@ export default function MyApp({ Component, pageProps }) {
         />
       )}
       {/* Umami */}
-      {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+      {/*process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
         <Script
           id='umami'
           strategy='lazyOnload'
           src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
         />
-      )}
+      )*/}
       <ThemeProvider attribute='class' enableColorScheme={false}>
         <Layout>
           <Component {...pageProps} />
