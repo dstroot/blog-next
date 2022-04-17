@@ -1,0 +1,99 @@
+---
+title: 'Microservices: A Technical Solution to a People Problem?'
+excerpt: 'Microservices exist because teams want to make their own choices, dislike code review or overbearing ‘architects’ above them, and to a lesser extent want to try different and newer languages. This feels good, but...'
+coverImage: /assets/blog/img/switchboard.jpg
+date: '2022-04-22'
+published: true
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/switchboard.png
+seoURL:
+---
+
+### A Simple Microservice Definition
+
+A microservice is a small, loosely coupled, distributed service. Each service is part of a broader microservices ecosystem/architecture, comprising a set of loosely coupled microservices that operate together to solve a common goal. A collection of microservices can be regarded as a system.
+
+To operate microservices some type of additional infrastructure is required. Kubernetes is a popular choice to orchestrate and operate all of the various microservices in a system. To complete a task like booking a ride on Uber, one service must request data from potentially dozens of other services — a complex and often problem-prone process, especially as microservices scale. A service mesh becomes necessary for service discovery and securely routing requests from one service to the next. It acts like a switchboard -- it routes requests to the right service.
+
+The service mesh is a dedicated, configurable infrastructure layer that can document how different parts of a microservices-base system interact. There are a couple of ways of implementing a service mesh, but most often, a sidecar proxy is applied to each microservice as a contact point. (The interactions among the sidecars put the mesh in the service mesh term.) It tends to look like this:
+
+![Mesh](/assets/blog/img/service-mesh-1680.png)
+
+### Why use Microservices?
+
+Microservices architectures were adopted for very specific reasons/needs such as scalability, modularity, or separation of concerns. It shifted the complexity "up the stack" by making the services themsleves [potentially] simpler and easier to maintain and scale.  
+
+Teams were given the freedom [in some cases] to choose their own micro-architecture for each service. Teams wanted be able to pick whatever language, database, and library they wanted, and so on. For some, this kind of autonmony was a energizing. It led to faster development time, and shorter release cycles - for a while. 
+
+Another tenent of microservices is that the team that built the service supports the service. That is a big win early on as the service is being built because support is non-existent. The team can "move fast and break things". As the service goes into production and matures, the team slows down because now they have to support the service.  
+
+### Challenges with Microservices
+
+Sometimes microservices exist because teams want to make their own choices, dislike code review or overbearing ‘architects’ above them, and to a lesser extent want to use different/newer languages. While some people may realize there is nothing smart about this architecture choice for the whole system, many developers are content to care only about their team -- and not the company or application stack as a whole. For them autonomy is more important.
+
+So people wanted choice, to be able to pick whatever language, database, and library they wanted, and so on. 
+Some organizations say that microservices allow them to release inter-team friction and break inertia by letting each team operate independently, and keep their service small and elegant. This is an illusion, of course, as the _overall_ architecture is quite the opposite. It felt like minimalism - but it wasn’t. 
+
+"Doing microservices" became validation for organizations that lack conviction, or a thesis, about how their architecture _should_ be. This ecology of interacting parties, each acting in their own interest for the common good not only sounds utopian, but speaks to an underlying, tacit belief that the emergent mesh of services will approximate the latent natural architecture of the domain. The backlash against microservices is partly because that simply isn't true - instead microservices approximate the natural contours of the technology organization's **organizational model**, not the domain.
+
+Clearly one of the reasons why we got here as an industry was we didn’t want to (or couldn't) communicate as people. Transitioning our computer architectures from well-architected, simpler things into a spider web of organic servces that "just happened" is not something we would do on purpose. Right?
+
+### The Problems in More Detail
+
+Microservices add complexity and leave us with inefficient communications, less error detection in development, easier ways to introduce errors, a worse debugging experience (e.g. relying on searching further through distributed log analysis tools), systems that crash more often, and require more and more management-software to deploy. It is a lot easier to debug the interactions between components of a system when they communicate within the same process, especially when one component simply calls a method on another. This is usually just a matter of attaching a debugger to the process, stepping through the method calls and watching variables. There is no straightforward equivalent of this in microservices. Service communications are notoriously difficult to trace and piece together, requiring additional tooling, infrastructure and complexity.
+
+>“We adopted microservices so every outage could be like a murder mystery.”
+
+I get it though. Frankly, centralized architecture and standards, when put in the hands of the _wrong_ few could be very counterproductive and feel unfair to everyone else that enjoys software design and doesn’t get to play in the sandbox. This is undeniable. However, isn’t this an argument for smaller teams and less engineering bloat, and better hiring instead? Good architects and technical leaders can keep code maintainable and ensure it remains modular, enabling efficient future developments. These are **not** things we want to give up.
+
+- If we think about resilient systems, the most resilient systems are the ones with the least number of moving parts. The same is true for the fastest systems.
+
+- If we think about deployment and management and upgrades, the simplest systems to deploy and maintain also have the least number of moving parts.
+
+On the communications front, internal web services are often doubly inefficient by using REST (and having to convert to JSON and back) rather than binary transmissions. If multiple microservices hops are used, this all adds up and slows down the system. A conversion to JSON and back is a wasted effort, more so if done dozens of times.
+
+### An Elegant Architecture For A More Civilized Age
+
+Coming from a world of 200 microservices, instead imagine that there are only maybe a few. Organize your teams into the way you want your system boundaries to be. This is a natural way to build a system.
+
+- Web requests can be managed by one type of instance, that results in one EC2 image or whatever. Anything that can be handled within the lifecycle of one request can be handled there, and these instances are horizontally scaled behind a load balancer.
+
+- Asynchronous tasks are managed by a service tier, often connected to a message bus. There may be one of these for each programming language, or maybe a few more, and that would be ok. But because these are horizontally scaled and only ask for new jobs when they have free compute resources, one type of instance can contain code for any manner of asynchronous jobs.
+
+- Code that needs to be shared between the asynchronous services and the web tier should be kept in libraries used by both of them and is not a service call.
+
+#### Benefits
+
+1. Errors are eliminated because they can be caught better at compile time and with unit tests.
+
+2. When changes are made, they can be made in a library, and if the API of a function changes, it is impossible to build/deploy the code until it is fixed.
+
+3. Do we have to release often? No, we do not, because the release process almost never changes and there are so few components.
+
+4. Do we need to keep up to date with the latest in container wrangling software, upgrading it and using various service discovery, ingress solutions, service meshes, or otherwise? Also, we do not. These are problems created by overcomplicated architectures. The service tiers can communicate over a message bus and there is no need to know the address of any server.
+
+### Designing Service Boundaries
+
+>“Finding service boundaries is really damn hard…”
+>
+> <cite>&mdash; All microservices architects, ever</cite>
+
+Hence, it is safer to start with wider boundaries - probably the boundaries of proper bounded contexts. This is especially relevant to services encompassing core business domains.
+
+
+#### References
+
+- [This Weekly Meeting Took Up 300,000 Hours a Year](https://hbr.org/2014/04/how-a-weekly-meeting-took-up-300000-hours-a-year)
+- [How to Avoid Collaboration Fatigue](https://hbr.org/2014/07/how-to-avoid-collaboration-fatigue)
+
+---
+
+Image Credit: **Long Distance Operators, Omaha, 1959**
+
+<span className="text-sm">
+Switchboard operators were expected to be courteous, quick-thinking and patient under pressure. They handled all kinds of requests, from providing the time of day to more delicate matters. Reliability engineers who manage microservices are a bit like switchboard operators -- they have to be able to understand all the connections across all the services and what happens if a connection goes down. 
+</span>
+

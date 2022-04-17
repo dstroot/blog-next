@@ -19,10 +19,10 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
         />
       </div>
       {/* Title and Avatar */}
-      <div className='flex flex-col md:flex-row gap-x-16 mb-12 md:mb-16'>
+      <div className='flex flex-col mb-12 md:flex-row gap-x-16 md:mb-16'>
         {/* Title and Avatar */}
-        <div className='flex-none'>
-          <h3 className='mb-4 text-3xl md:text-4xl leading-tight'>
+        <div className='flex-none max-w-[50%]'>
+          <h3 className='mb-4 text-3xl leading-tight md:text-4xl'>
             <Link as={`/posts/${slug}`} href='/posts/[slug]'>
               <a className='hover:underline'>{title}</a>
             </Link>
@@ -35,7 +35,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
 
         {/* Excerpt */}
         <div className='flex-1'>
-          <p className='text-lg leading-relaxed mb-4'>{excerpt}</p>
+          <p className='mb-4 text-lg leading-relaxed'>{excerpt}</p>
           <ReadMore slug={slug} stats={stats} />
         </div>
       </div>

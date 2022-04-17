@@ -5,7 +5,10 @@ import { DateFormatter } from './DateFormatter';
 export const Avatar = ({ name, picture, size, date }) => {
   return (
     <Link href='/about'>
-      {/* You can use the class "group" to group behavior */}
+      {/* 
+        You can use the class "group" to group behavior 
+        https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
+      */}
       <a aria-label={name} className='duration-500 ease-in-out group'>
         <div className='flex items-center space-x-5'>
           <Image
