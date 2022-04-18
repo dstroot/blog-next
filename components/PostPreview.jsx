@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Avatar } from './Avatar';
-import { CoverImage } from './CoverImage';
 import { BlurImage } from './BlurImage';
 import { ReadMore } from './ReadMore';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
