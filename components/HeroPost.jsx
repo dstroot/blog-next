@@ -26,7 +26,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
       </Link>
       <div className='flex flex-col mb-12 md:flex-row gap-x-16 md:mb-16'>
         {/* Title and Avatar */}
-        <div className='flex-none max-w-[50%]'>
+        <div className='flex-none md:max-w-[45%]'>
           <h3 className='mb-4 text-3xl leading-tight md:text-4xl group-hover:underline'>
             <Link as={`/posts/${slug}`} href='/posts/[slug]'>
               <a className='hover:underline'>{title}</a>

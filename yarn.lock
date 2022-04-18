@@ -4533,11 +4533,6 @@ gray-matter@^4.0.3:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-grey-matter@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/grey-matter/-/grey-matter-0.0.0.tgz#08ecf3a1ab470cff4702cca19029eb7f7517f837"
-  integrity sha512-gSz+zNvngEaQaMYUsOuU2dt8lXfkIEkbzVOSWt4ru0/jjTLK27VCXhNdHwwQFHflbcNR8rkNsJ9Dcz6k0imMaA==
-
 gtoken@^5.0.4:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/gtoken/-/gtoken-5.3.1.tgz#c1c2598a826f2b5df7c6bb53d7be6cf6d50c3c78"
