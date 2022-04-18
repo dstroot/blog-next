@@ -33,7 +33,7 @@ export default function MyApp({ Component, pageProps }) {
       {/*process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL && process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
         <Script
           id='umami'
-          strategy='lazyOnload'
+          strategy='afterInteractive'
           src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
         />
