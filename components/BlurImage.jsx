@@ -17,7 +17,7 @@ export function BlurImage({ src, slug, title, width, height }) {
             width={width}
             height={height}
             className={cn(
-              'group-hover:scale-105 duration-500 ease-in-out',
+              'group-hover:scale-105 duration-300 ease-in-out',
               isLoading ? 'grayscale, blur-2xl scale-110' : 'grayscale-0 blur-0 scale-100'
             )}
             onLoadingComplete={() => setIsLoading(false)}

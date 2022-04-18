@@ -1,28 +1,33 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Avatar } from './Avatar';
-import { CoverImage } from './CoverImage';
+// import { CoverImage } from './CoverImage';
 import { ReadMore } from './ReadMore';
 
 export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats }) => {
   return (
     <section>
-      <div className='mb-8 md:mb-10'>
-        <CoverImage
-          title={title}
-          src={coverImage}
-          slug={slug}
-          width={1496}
-          height={748}
-          priority={true}
-          // placeholder='blur'
-          // blurDataURL={`data:image/svg+xml;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkSAMAAGwAaKJgE8oAAAAASUVORK5CYII=`}
-        />
-      </div>
-      {/* Title and Avatar */}
+      <Link as={`/posts/${slug}`} href='/posts/[slug]'>
+        <a aria-label={title} className='group'>
+          <div className='mb-8 md:mb-10'>
+            <Image
+              src={coverImage}
+              alt={`Hero image for ${title}`}
+              layout='responsive' // intrinsic, fill, responsive
+              width={1496}
+              height={748}
+              priority={true}
+              className='duration-300 ease-in-out group-hover:scale-105'
+              // placeholder='blur'
+              // blurDataURL={`data:image/svg+xml;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkSAMAAGwAaKJgE8oAAAAASUVORK5CYII=`}
+            />
+          </div>
+        </a>
+      </Link>
       <div className='flex flex-col mb-12 md:flex-row gap-x-16 md:mb-16'>
         {/* Title and Avatar */}
         <div className='flex-none max-w-[50%]'>
-          <h3 className='mb-4 text-3xl leading-tight md:text-4xl'>
+          <h3 className='mb-4 text-3xl leading-tight md:text-4xl group-hover:underline'>
             <Link as={`/posts/${slug}`} href='/posts/[slug]'>
               <a className='hover:underline'>{title}</a>
             </Link>

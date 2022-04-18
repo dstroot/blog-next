@@ -1,5 +1,6 @@
 import { Avatar } from './Avatar';
-import { CoverImage } from './CoverImage';
+// import { CoverImage } from './CoverImage';
+import Image from 'next/image';
 import { PostTitle } from './PostTitle';
 
 export const PostHeader = ({ title, coverImage, date, author }) => {
@@ -7,8 +8,9 @@ export const PostHeader = ({ title, coverImage, date, author }) => {
     <>
       <PostTitle>{title}</PostTitle>
       <div className='mb-8 md:mb-10 sm:mx-0'>
-        <CoverImage
+        <Image
           title={title}
+          alt={`Hero image for ${title}`}
           src={coverImage}
           width={1496}
           height={748}
