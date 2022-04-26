@@ -26,6 +26,8 @@ module.exports = {
     domains: [
       'pbs.twimg.com', // Twitter Profile Pictures
     ],
+    loader: 'imgix',
+    path: 'https://danstroot.imgix.net',
   },
   // pwa: {
   //   dest: 'public',
