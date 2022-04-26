@@ -16,7 +16,7 @@ export const Footer = () => {
           */}
           <div className='flex-none mb-4 md:mr-8 md:mb-0'>
             <Image
-              src='/assets/blog/authors/dan.jpeg'
+              src='/assets/blog/authors/dan.jpeg?auto=format'
               alt={CMS_NAME}
               width={85}
               height={85}
