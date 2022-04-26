@@ -12,7 +12,7 @@ export const Avatar = ({ name, picture, size, date }) => {
       <a aria-label={name} className='duration-500 ease-in-out group'>
         <div className='flex items-center space-x-5'>
           <Image
-            src={picture}
+            src={picture + '?auto=format'}
             alt={name}
             width={size}
             height={size}
