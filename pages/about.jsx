@@ -5,8 +5,8 @@ import { CMS_NAME } from '../lib/constants';
 import { Container } from '../components/Container';
 
 // images
-import maker from '../public/assets/blog/img/maker.jpg';
-import me from '../public/assets/blog/authors/dan.jpeg';
+// import maker from '../public/assets/blog/img/maker.jpg';
+// import me from '../public/assets/blog/authors/dan.jpeg';
 
 export default function Index() {
   return (
@@ -19,7 +19,7 @@ export default function Index() {
         <Header />
         <div className='absolute invisible ml-10 xl:visible left-top mt-36'>
           <Image
-            src={maker}
+            src='/assets/blog/img/maker.jpg?auto=format'
             alt={CMS_NAME}
             height={662}
             width={200}
@@ -30,7 +30,7 @@ export default function Index() {
         <div className='flex flex-row items-center mb-8 md:mb-12'>
           <div className='relative flex-initial w-10 h-10 mr-4 image-container md:w-16 md:h-16 lg:w-20 lg:h-20'>
             <Image
-              src={me}
+              src='/assets/blog/authors/dan.jpeg?auto=format'
               alt={CMS_NAME}
               className='rounded-full image'
               layout='fill'

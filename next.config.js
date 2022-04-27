@@ -17,17 +17,20 @@ module.exports = {
     // runtime: 'edge',
     concurrentFeatures: true, // react 18 needed
     // serverComponents: true, // react 18 needed
+    // images: {
+    //   layoutRaw: true,
+    // },
   },
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
     deviceSizes: [335, 460, 546, 600, 728, 984, 1240, 1496],
     // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // loader: 'imgix',
+    // path: 'https://danstroot.imgix.net',
     domains: [
       'pbs.twimg.com', // Twitter Profile Pictures
     ],
-    loader: 'imgix',
-    path: 'https://danstroot.imgix.net',
   },
   // pwa: {
   //   dest: 'public',
