@@ -13,11 +13,11 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
             <Image
               src={coverImage}
               alt={`Hero image for ${title}`}
-              layout='responsive' // intrinsic, fill, responsive
+              layout='raw' // intrinsic, fill, responsive, raw
               width={1496}
               height={748}
               priority={true}
-              className='duration-300 ease-in-out group-hover:scale-105'
+              className='duration-300 ease-in-out group-hover:scale-[102%]'
               // placeholder='blur'
               // blurDataURL={`data:image/svg+xml;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkSAMAAGwAaKJgE8oAAAAASUVORK5CYII=`}
             />

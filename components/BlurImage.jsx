@@ -13,11 +13,11 @@ export function BlurImage({ src, slug, title, width, height }) {
         <Image
           src={src}
           alt={`Cover Image for ${title}`}
-          layout='responsive'
+          layout='raw' // raw, responsive, fill
           width={width}
           height={height}
           className={cn(
-            'hover:scale-105 duration-300 ease-in-out',
+            'hover:scale-[102%] duration-300 ease-in-out',
             isLoading ? 'grayscale, blur-2xl scale-110' : 'grayscale-0 blur-0 scale-100'
           )}
           onLoadingComplete={() => setIsLoading(false)}
