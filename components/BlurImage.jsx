@@ -16,10 +16,11 @@ export function BlurImage({ src, slug, title, width, height }) {
           layout='raw' // raw, responsive, fill
           width={width}
           height={height}
-          className={cn(
-            'hover:scale-[102%] duration-300 ease-in-out',
-            isLoading ? 'grayscale, blur-2xl scale-110' : 'grayscale-0 blur-0 scale-100'
-          )}
+          // className={cn(
+          //   'hover:scale-[102%] duration-300 ease-in-out',
+          //   isLoading ? 'grayscale, blur-2xl scale-110' : 'grayscale-0 blur-0 scale-100'
+          // )}
+          className={'hover:scale-[102%] duration-300 ease-in-out'}
           onLoadingComplete={() => setIsLoading(false)}
         />
         {/* </div> */}
