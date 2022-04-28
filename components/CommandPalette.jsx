@@ -1,9 +1,10 @@
-// https://headlessui.dev/
-// https://www.youtube.com/watch?v=-jix4KyxLuQ
 import { useRouter } from 'next/router';
 import { Dialog, Transition, Combobox } from '@headlessui/react';
 import { Fragment, useEffect, useState } from 'react';
 import posts from '../data/posts.json';
+
+// https://headlessui.dev/
+// https://www.youtube.com/watch?v=-jix4KyxLuQ
 
 export const CommandPalette = () => {
   const router = useRouter();

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Avatar } from './Avatar';
 // import { CoverImage } from './CoverImage';
 import { ReadMore } from './ReadMore';
+import { imgixLoader } from '../lib/imgixLoader';
 
 export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats }) => {
   return (
@@ -11,6 +12,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
         <a aria-label={title} className='group'>
           <div className='mb-8 md:mb-10'>
             <Image
+              loader={imgixLoader}
               src={coverImage}
               alt={`Hero image for ${title}`}
               layout='raw' // intrinsic, fill, responsive, raw
