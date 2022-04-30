@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { cn } from '../lib/utils';
-import { useState } from 'react';
+// import { cn } from '../lib/utils';
+// import { useState } from 'react';
 import { motion } from 'framer-motion';
 // import { imgixLoader } from '../lib/imgixLoader';
 
 export function BlurImage({ src, slug, title, width, height }) {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   return (
     <Link as={`/posts/${slug}`} href={`/posts/${slug}`}>
@@ -20,12 +20,12 @@ export function BlurImage({ src, slug, title, width, height }) {
             layout='raw' // raw, responsive, fill
             width={width}
             height={height}
-            className={cn(
-              'hover:scale-[102%] duration-300 ease-in-out',
-              isLoading ? 'grayscale blur-lg' : ''
-            )}
-            // className={'hover:scale-[102%] duration-300 ease-in-out'}
-            onLoadingComplete={() => setIsLoading(false)}
+            // className={cn(
+            //   'hover:scale-[102%] duration-300 ease-in-out',
+            //   isLoading ? 'grayscale blur-lg' : ''
+            // )}
+            className={'hover:scale-[102%] duration-300 ease-in-out'}
+            // onLoadingComplete={() => setIsLoading(false)}
           />
         </motion.div>
         {/* </div> */}
