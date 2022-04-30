@@ -3,22 +3,22 @@ import { icons } from './Icons';
 
 export const SnippetCard = (props) => {
   return (
-    <div className='flex flex-col p-5 space-y-3 w-full rounded shadow-md bg-gray-100 dark:bg-gray-700'>
-      <div className='flex justify-between items-center'>
+    <div className='flex flex-col w-full p-5 space-y-3 bg-gray-100 rounded shadow-md dark:bg-gray-700'>
+      <div className='flex items-center justify-between'>
         <Link href={`/snippets/${props.slug}`}>
           <a className='w-3/4'>
-            <h1 className='text-xl md:text-2xl font-bold truncate overflow-hidden'>
+            <h1 className='overflow-hidden text-xl font-bold truncate md:text-2xl'>
               {props.title}
             </h1>
           </a>
         </Link>
-        <div className='flex-none border-1 md:order-2 my-3 md:my-0 w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-800'>
-          <span className='grid place-items-center w-full h-full text-gray-700 dark:text-gray-300 text-3xl'>
+        <div className='flex-none w-12 h-12 my-3 bg-gray-300 rounded-full border-1 md:order-2 md:my-0 dark:bg-gray-800'>
+          <span className='grid w-full h-full text-3xl text-gray-700 place-items-center dark:text-gray-300'>
             {icons[props.icon]}
           </span>
         </div>
 
-        {/* <div className='grid place-items-center p-1 w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xl snip'>
+        {/* <div className='grid w-12 h-12 p-1 text-xl text-gray-700 bg-gray-300 rounded-full place-items-center dark:bg-gray-800 dark:text-gray-300 snip'>
           {icons[props.icon]}
         </div> */}
       </div>
@@ -28,7 +28,7 @@ export const SnippetCard = (props) => {
         {props.tags
           ? props.tags.map((tag) => (
               <span
-                className='px-2 py-1 bg-gray-200 dark:bg-gray-300 text-gray-900 dark:text-gray-800 rounded-full'
+                className='px-2 py-1 text-gray-900 bg-gray-200 rounded-full dark:bg-gray-300 dark:text-gray-800'
                 key={tag}
               >
                 #{tag}

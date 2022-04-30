@@ -2,17 +2,17 @@ import Link from 'next/link';
 
 export const ReadMore = ({ slug, stats }) => {
   return (
-    <Link as={`/posts/${slug}`} href='/posts/[slug]'>
+    <Link href='/posts/[slug]'>
       <a>
         <div className='flex items-center space-x-3'>
           <div className='flex-initial'>
-            <p className='transition-colors text-gray-900 dark:text-gray-100 font-semibold hover:underline'>
+            <p className='font-semibold text-gray-900 transition-colors dark:text-gray-100 hover:underline'>
               Read More
             </p>
-            <p className='transition-colors text-gray-600 dark:text-gray-300 text-sm'>
+            <p className='text-sm text-gray-600 transition-colors dark:text-gray-300'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='h-4 w-4 inline-block -mt-1'
+                className='inline-block w-4 h-4 -mt-1'
                 fill='none'
                 viewBox='0 0 24 24'
                 stroke='currentColor'
@@ -29,7 +29,7 @@ export const ReadMore = ({ slug, stats }) => {
           </div>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-8 w-8'
+            className='w-8 h-8'
             viewBox='0 0 20 20'
             fill='currentColor'
           >
@@ -52,7 +52,7 @@ export const ReadMore = ({ slug, stats }) => {
 };
 
 /* <svg
-            className="h-8 w-8 flex-initial justify-self-start"
+            className="flex-initial w-8 h-8 justify-self-start"
             aria-hidden="true"
             fill="currentColor"
             viewBox="0 0 16 16"
@@ -66,7 +66,7 @@ export const ReadMore = ({ slug, stats }) => {
 
 /* <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
+            className="w-8 h-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -81,7 +81,7 @@ export const ReadMore = ({ slug, stats }) => {
 
 /* <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
+            className="w-8 h-8"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

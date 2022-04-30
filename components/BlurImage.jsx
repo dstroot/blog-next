@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { cn } from '../lib/utils';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { imgixLoader } from '../lib/imgixLoader';
+// import { imgixLoader } from '../lib/imgixLoader';
 
 export function BlurImage({ src, slug, title, width, height }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,17 +14,17 @@ export function BlurImage({ src, slug, title, width, height }) {
         {/* <div className='sm:mx-0'> */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='sm:mx-0'>
           <Image
-            loader={imgixLoader}
+            // loader={imgixLoader}
             src={src}
             alt={`Cover Image for ${title}`}
             layout='raw' // raw, responsive, fill
             width={width}
             height={height}
-            // className={cn(
-            //   'hover:scale-[102%] duration-300 ease-in-out',
-            //   isLoading ? 'grayscale, blur-2xl scale-110' : 'grayscale-0 blur-0 scale-100'
-            // )}
-            className={'hover:scale-[102%] duration-300 ease-in-out'}
+            className={cn(
+              'hover:scale-[102%] duration-300 ease-in-out',
+              isLoading ? 'grayscale blur-lg' : ''
+            )}
+            // className={'hover:scale-[102%] duration-300 ease-in-out'}
             onLoadingComplete={() => setIsLoading(false)}
           />
         </motion.div>

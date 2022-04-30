@@ -36,35 +36,35 @@ export function Sharable({ title, slug }) {
 
   return (
     <div className='flex flex-col'>
-      <h4 className='text-lg font-bold mb-4'>Sharing is Caring</h4>
+      <h4 className='mb-4 text-lg font-bold'>Sharing is Caring</h4>
       <div className='flex space-x-5 text-xl'>
         <span
           onClick={fbShare}
           className='hover:text-gray-500'
-          aria-label='Share this blog on Facebook.'
+          // aria-label='Share this blog on Facebook.'
         >
           <FaFacebookF />
         </span>
         <span
           onClick={twShare}
           className='hover:text-gray-500'
-          aria-label='Share this blog on Twitter.'
+          // aria-label='Share this blog on Twitter.'
         >
           <FaTwitter />
         </span>
         <span
           onClick={CopiedLinkMsg}
           className='hover:text-gray-500'
-          aria-label='Share this blog on Twitter.'
+          // aria-label='Share this blog on Twitter.'
         >
           <FaShareAlt />
         </span>
       </div>
 
       {showAlert ? (
-        <div className='flex fixed top-5 right-5 items-center px-5 py-3 space-x-2 rounded shadow bg-gray-200 dark:bg-gray-700'>
+        <div className='fixed flex items-center px-5 py-3 space-x-2 bg-gray-200 rounded shadow top-5 right-5 dark:bg-gray-700'>
           <p className='text-slate'>Link copied succesfully</p>
-          <span className='p-1 rounded-full bg-gray-800 dark:bg-gray-200'>
+          <span className='p-1 bg-gray-800 rounded-full dark:bg-gray-200'>
             <FaCheck className='text-gray-200 dark:text-gray-800' />
           </span>
         </div>

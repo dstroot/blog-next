@@ -17,7 +17,7 @@ export const ThemeChanger = () => {
 
   return (
     <div
-      className='cursor-pointer block ml-auto mr-0'
+      className='block ml-auto mr-0 cursor-pointer'
       onClick={() => {
         setTheme(
           theme === 'light' || resolvedTheme === 'light' ? 'dark' : 'light'
