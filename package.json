@@ -9,8 +9,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.79.0",
-    "@aws-sdk/lib-dynamodb": "^3.79.0",
+    "@aws-sdk/client-dynamodb": "^3.81.0",
+    "@aws-sdk/lib-dynamodb": "^3.81.0",
     "@google-analytics/data": "^2.8.0",
     "@headlessui/react": "^1.6.0",
     "@mailchimp/mailchimp_marketing": "^3.0.75",
