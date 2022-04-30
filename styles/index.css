@@ -30,7 +30,7 @@ input[type='search']::-webkit-search-cancel-button {
  */
 
 .converted-html {
-  @apply prose prose-lg dark:prose-invert prose-a:no-underline max-w-none break-words mb-8 prose-a:text-blue-500 hover:prose-a:text-blue-700 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-400;
+  @apply prose prose-lg dark:prose-invert prose-a:no-underline max-w-none break-words mb-8 prose-a:text-blue-700 hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500;
 }
 
 .footnotes {
