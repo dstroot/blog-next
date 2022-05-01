@@ -16,12 +16,6 @@ seoURL:
 
 A microservice is generally defined as a small, loosely coupled, distributed service. Each service is part of a broader microservices ecosystem/architecture, comprising a set of microservices that operate together to solve a common goal. A collection of microservices can be regarded as a system.
 
-To operate microservices some type of additional infrastructure is required. Kubernetes is a popular choice to orchestrate and operate all the various microservices in a system. To complete a task like booking a ride on Uber, one service must request data from potentially dozens of other services — a complex and often problem-prone process, especially as microservices scale. A service mesh becomes necessary for service discovery and securely routing requests from one service to the next. It acts like a switchboard -- it routes requests to the right service.
-
-The service mesh is a dedicated, configurable infrastructure layer that can document how different parts of a microservices-base system interact. There are a couple of ways of implementing a service mesh, but most often, a sidecar proxy is applied to each microservice as a contact point. (The interactions among the sidecars put the mesh in the service mesh term.) It tends to look like this:
-
-![Mesh](/assets/blog/img/service-mesh-1680.png)
-
 ### Why use Microservices?
 
 Microservices architectures were adopted for very specific reasons/needs such as scalability, modularity, or separation of concerns. It shifted the complexity "up the stack" by making the services themselves [potentially] simpler and easier to maintain and scale for the price of more complexity overall.
@@ -32,20 +26,25 @@ Another principle of microservices is that the team that built the service suppo
 
 ### Challenges with Microservices
 
-Teams wanted choice, to be able to pick whatever language, database, and library they wanted, and so on. 
-Some organizations say that microservices allow them to release inter-team friction and break inertia by letting each team operate independently and keep their microservices small and elegant. This is true, but the _overall_ architecture is quite the opposite. 
+Some organizations say microservices allow them to release inter-team friction and break inertia by letting each team operate independently and keep their microservices small and elegant. This is true, but the _overall_ architecture is quite the opposite. 
 
 Sometimes microservices exist because teams dislike code review, or overbearing ‘architects’ above them telling them what to do. While some people may realize there is nothing smart about this architecture choice for the whole system, many developers are content to care only about their team -- and not the company or application stack as a whole. For them autonomy is more important.
 
-"Doing microservices" became validation for organizations that lack conviction, or a thesis, about how their architecture _should_ be. <mark>This ecology of interacting parties, each acting in their own interest for the common good not only sounds utopian, but speaks to an underlying, tacit belief that the emergent mesh of services will approximate the latent natural architecture of the domain. The backlash against microservices is partly because that simply isn't true - instead microservices approximate the natural contours of the technology organization's **organizational model**, not the domain.</mark>
+"Doing microservices" became validation for organizations that lack conviction, or a thesis, about how their architecture _should_ be. This ecology of interacting parties, each acting in their own interest for the common good not only sounds utopian, but speaks to an underlying, tacit belief that the emergent mesh of services will approximate the latent natural architecture of the domain. The backlash against microservices is partly because that simply isn't true - instead microservices approximate the natural contours of the technology organization's **organizational model**, not the domain.
 
 Clearly one of the reasons why we got here as an industry is we didn’t want to (or couldn't) communicate well across teams and organizational structures. Transitioning our computer architectures from well-architected, simpler things into a complex spider web of organic services is not something we would do on purpose, right?
 
+The extra complexity to operate microservices requires additional infrastructure. Kubernetes is a popular choice to orchestrate and operate all the various microservices in a system. To complete a task like booking a ride on Uber, one service must request data from potentially dozens of other services — a complex and often problem-prone process, especially as microservices scale. A service mesh becomes necessary for service discovery and securely routing requests from one service to the next. It acts like a switchboard -- it routes requests to the right service.
+
+The service mesh is a dedicated, configurable infrastructure layer that can document how different parts of a microservices-base system interact. There are a couple of ways of implementing a service mesh, but most often, a sidecar proxy is applied to each microservice as a contact point. (The interactions among the sidecars put the mesh in the service mesh term.) It tends to look like this:
+
+![Mesh](/assets/blog/img/service-mesh-1680.png)
+
 ### The Problems in More Detail
 
-It is a lot easier to debug the interactions between components of a system when they communicate within the same process, especially when one component simply calls a method on another. This is usually just a matter of attaching a debugger to the process, stepping through the method calls and watching variables. There is no straightforward equivalent of this in microservices. Service communications are notoriously difficult to trace and piece together, requiring additional tooling, infrastructure, and complexity.
+In addition to being harder to operate, microservices are more dfficult to debug. It is a lot easier to debug the interactions between components of a system when they communicate within the same process, especially when one component simply calls a method on another. This is usually just a matter of attaching a debugger to the process, stepping through the method calls and watching variables. There is no straightforward equivalent of this in microservices. Service communications are notoriously difficult to trace and piece together, requiring additional tooling, infrastructure, and complexity.
 
-Microservices add complexity and leave us with inefficient communications, less error detection in development, easier ways to introduce errors, a worse debugging experience (e.g., relying on searching further through distributed log analysis tools), systems that crash more often, and require more and more management software to deploy. 
+Microservices add complexity and leave us with inefficient communications, less error detection in development, easier ways to introduce errors, a worse debugging experience (e.g., relying on searching further through distributed log analysis tools), and require more and more management software to deploy. 
 
 Internal web services/APIs are often doubly inefficient by using REST (and having to convert to JSON and back) rather than binary transmissions. If multiple microservices hops are used, this all adds up and slows down the system. A conversion to JSON and back is a wasted effort, more so if done dozens of times.
 
