@@ -9,7 +9,7 @@ export const Intro = () => {
         <div className='flex flex-col items-center md:flex-row md:justify-between'>
           <p className='text-6xl font-bold leading-tight tracking-tighter md:text-7xl'>
             {/* Blog */}
-            {CMS_NAME}
+            {CMS_NAME + ' · Blog'}
           </p>
           <p className='mt-2 text-xl italic font-semibold md:text-2xl'>{TAGLINE}.</p>
         </div>
