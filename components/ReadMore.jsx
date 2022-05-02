@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const ReadMore = ({ slug, stats }) => {
   return (
-    <Link href='/posts/[slug]'>
+    <Link as={`/posts/${slug}`} href='/posts/[slug]'>
       <a>
         <div className='flex items-center space-x-3'>
           <div className='flex-initial'>
