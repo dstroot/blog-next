@@ -7,14 +7,14 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head />
-        <body className='transition-colors bg-white text-gray-800 dark:bg-dark-1 dark:text-gray-100'>
+        <body className='antialiased text-gray-800 transition-colors bg-white dark:bg-dark-1 dark:text-gray-100'>
           {/* Google Tag Manager */}
           <noscript>
             <iframe
               src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ACCOUNT}`}
               height='0'
               width='0'
-              className='hidden invisible'
+              className='invisible hidden'
             />
           </noscript>
           <Main />
