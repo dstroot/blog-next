@@ -29,7 +29,7 @@ module.exports = {
         'dark-4': '#252628', // 2A2B2D  1D1E20  252628
       },
       letterSpacing: {
-        tighter: '-.04em',
+        tighter: '-.05em',
       },
       lineHeight: {
         tight: 1.2,
