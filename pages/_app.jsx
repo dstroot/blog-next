@@ -2,7 +2,7 @@ import Script from 'next/script';
 import { Layout } from '../components/Layout';
 import { ThemeProvider } from 'next-themes';
 
-/* -- Styles -- */
+/* -- Global Styles -- */
 import 'prismjs/themes/prism-tomorrow.css';
 import '../styles/index.css';
 
@@ -38,6 +38,7 @@ export default function MyApp({ Component, pageProps }) {
           data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
         />
       )*/}
+      {/* Wrap with ThemeProvider and Layout */}
       <ThemeProvider attribute='class' enableColorScheme={false}>
         <Layout>
           <Component {...pageProps} />
