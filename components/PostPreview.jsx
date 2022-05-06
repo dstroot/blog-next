@@ -47,7 +47,7 @@ export const PostPreview = ({
         <BlurImage src={coverImage} slug={slug} title={title} width={708} height={354} />
       </div>
       <h3 className='mb-3 text-3xl leading-snug'>
-        <Link as={`/posts/${slug}`} href='/posts/[slug]'>
+        <Link href={`/posts/${slug}`}>
           <a className='hover:underline'>{title}</a>
         </Link>
       </h3>

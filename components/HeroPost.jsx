@@ -7,7 +7,7 @@ import { ReadMore } from './ReadMore';
 export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats }) => {
   return (
     <section>
-      <Link as={`/posts/${slug}`} href='/posts/[slug]'>
+      <Link href={`/posts/${slug}`}>
         <a aria-label={title} className='group'>
           <div className='mb-8 md:mb-10'>
             <Image
@@ -27,7 +27,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
         {/* Title and Avatar */}
         <div className='flex-none md:max-w-[45%]'>
           <h3 className='mb-4 text-3xl leading-tight md:text-4xl group-hover:underline'>
-            <Link as={`/posts/${slug}`} href='/posts/[slug]'>
+            <Link href={`/posts/${slug}`}>
               <a className='hover:underline'>{title}</a>
             </Link>
             {/* <p>views: {views}</p> */}

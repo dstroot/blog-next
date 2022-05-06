@@ -20,17 +20,17 @@ export const Archive = ({ posts }) => {
         return (
           <div key={`${post.id}-${index}`}>
             {changed && (
-              <h3 className='mb-2 mt-4 text-xl md:text-2xl font-bold tracking-tighter leading-tight'>
+              <h3 className='mt-4 mb-2 text-xl font-bold leading-tight tracking-tighter md:text-2xl'>
                 {year}
               </h3>
             )}
-            <div className='grid grid-flow-col gap-6 ml-8 items-center text-gray-800 dark:text-gray-200'>
+            <div className='grid items-center grid-flow-col gap-6 ml-8 text-gray-800 dark:text-gray-200'>
               <div className='truncate'>
-                <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
+                <Link href={`/posts/${post.slug}`}>
                   <a className='hover:underline'>{post.title}</a>
                 </Link>
               </div>
-              <div className='text-right text-sm'>
+              <div className='text-sm text-right'>
                 <DateFormatter dateString={post.date} />
               </div>
             </div>

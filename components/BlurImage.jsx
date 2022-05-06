@@ -9,7 +9,7 @@ export function BlurImage({ src, slug, title, width, height }) {
   // const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <Link as={`/posts/${slug}`} href={`/posts/${slug}`}>
+    <Link href={`/posts/${slug}`}>
       <a aria-label={title} className='sm:mx-0'>
         {/* <div className='sm:mx-0'> */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='sm:mx-0'>
