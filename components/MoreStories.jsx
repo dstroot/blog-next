@@ -39,7 +39,7 @@ export const MoreStories = ({ posts }) => {
 
   return (
     <section>
-      <h2 className='mb-8 text-5xl font-bold leading-tight tracking-tighter md:text-7xl'>
+      <h2 className='mb-8 text-5xl font-bold leading-tight tracking-tighter md:text-6xl lg:text-7xl'>
         More Stories
       </h2>
       <div className='grid min-h-screen grid-cols-1 gap-16 md:grid-cols-2 lg:gap-20'>
