@@ -54,7 +54,7 @@
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.7",
-    "eslint": "^8.14.0",
+    "eslint": "^8.15.0",
     "eslint-config-next": "^12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-mdx": "^1.17.0",

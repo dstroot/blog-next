@@ -10,7 +10,7 @@ export const MoreStories = ({ posts }) => {
   const chunkSize = 6;
 
   // This is our "infinite scroll".  If the visible post is the next
-  // to last post, then increment the page, which kicks off another chunk
+  // to last post, then increment the page, which loads another chunk
   const onIsVisible = (index) => {
     if (index === postList.length - 1 && !endList) {
       setPage((page) => page + 1);
@@ -55,7 +55,6 @@ export const MoreStories = ({ posts }) => {
                 slug={post.slug}
                 excerpt={post.excerpt}
                 stats={post.stats}
-                // fileName={post.fileName}
                 onIsVisible={() => onIsVisible(index)}
               />
             </div>
