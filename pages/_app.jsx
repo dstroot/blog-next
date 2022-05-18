@@ -10,6 +10,26 @@ import '../styles/index.css';
 // https://jools.dev/nextjs-_appjs-example
 // https://medium.com/geekculture/privacy-friendly-website-analytics-with-umami-and-nextjs-8b587aecc916
 
+//https://www.axiom.co/docs/integrations/vercel
+export function reportWebVitals(metric) {
+  const url = process.env.NEXT_PUBLIC_AXIOM_INGEST_ENDPOINT;
+
+  if (!url) {
+    return;
+  }
+
+  const body = JSON.stringify({
+    route: window.__NEXT_DATA__.page,
+    ...metric,
+  });
+
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(url, body);
+  } else {
+    fetch(url, { body, method: 'POST', keepalive: true });
+  }
+}
+
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
