@@ -28,6 +28,7 @@ export default function Index({ code, frontMatter }) {
 
       if (typeof path === 'undefined') {
         console.log('usePageView: path undefined');
+        return;
       }
 
       // Use `navigator.sendBeacon()` if available, fall back to `fetch()`.

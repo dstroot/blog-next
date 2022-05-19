@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { Meta } from './Meta';
 import { Footer } from './Footer';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export const Layout = ({ children }) => {
   const router = useRouter();

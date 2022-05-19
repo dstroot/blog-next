@@ -46,7 +46,7 @@ export default function SubscribeForm({ status, message, onValidated }) {
     <>
       <div className='flex items-center w-full px-3 space-x-2 bg-white rounded dark:bg-gray-200'>
         <input
-          className='w-2/3 p-5 bg-white rounded focus:outline-none dark:bg-gray-200'
+          className='w-2/3 p-5 bg-white border-none rounded focus:border-none focus:outline-none dark:bg-gray-200'
           type='email'
           value={email}
           placeholder='Enter your email'
@@ -55,7 +55,7 @@ export default function SubscribeForm({ status, message, onValidated }) {
         />
         <button
           aria-label='Subscribe to our Newsletter'
-          className='w-1/3 p-2 font-bold bg-gray-300 rounded dark:bg-gray-800'
+          className='w-1/3 p-2 font-bold bg-gray-300 rounded dark:bg-gray-800 hover:bg-gray-400 hover:dark:bg-gray-700'
           onClick={handleSubmit}
         >
           SUBSCRIBE
