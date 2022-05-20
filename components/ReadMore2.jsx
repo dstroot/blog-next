@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ReadStats } from './ReadStats';
 import { Views } from './Views';
 import { useViewCount } from '../hooks/useViewCount';
 
@@ -38,21 +39,7 @@ export const ReadMore2 = ({ slug, stats }) => {
         </div>
         <div className='flex items-center space-x-3'>
           <div className='text-xs text-gray-600 transition-colors dark:text-gray-300'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='inline-block w-4 h-4 -mt-1'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'
-              />
-            </svg>{' '}
-            {stats.text}
+            <ReadStats stats={stats} />
           </div>
           <div className='text-xs text-gray-600 transition-colors dark:text-gray-300'>
             {isLoading ? null : <Views viewCount={views} />}
