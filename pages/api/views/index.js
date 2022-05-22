@@ -24,6 +24,7 @@ export default async function handler(req, res) {
 
     try {
       const data = await scan(params);
+
       if (data) {
         return res.status(200).json(data.Items);
       } else {

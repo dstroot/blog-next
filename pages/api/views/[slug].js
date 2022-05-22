@@ -34,7 +34,7 @@ export default async function handler(req, res) {
       if (data.Item) {
         return res.status(200).json(data.Item);
       } else {
-        return res.status(404).json({ result: 'not found' });
+        return res.status(200).json({ slug: 'not found', viewCount: 0 });
       }
     } catch (err) {
       return res.status(400).json(err);
