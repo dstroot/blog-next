@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Avatar } from './Avatar';
-import { ReadMore2 } from './ReadMore2';
+import { ReadMore } from './ReadMore';
+import { MoreStats } from './MoreStats';
 // import { imgixLoader } from '../lib/imgixLoader';
 
 export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats }) => {
@@ -18,8 +19,9 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
               width={1496}
               height={748}
               priority={true}
-              className='duration-300 ease-in-out group-hover:scale-[102%]'
+              className='duration-300 ease-in-out group-hover:scale-[101%]'
             />
+            <MoreStats stats={stats} slug={slug} />
           </div>
         </a>
       </Link>
@@ -40,7 +42,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
         {/* Excerpt */}
         <div className='flex-1'>
           <p className='mb-4 text-lg leading-relaxed'>{excerpt}</p>
-          <ReadMore2 slug={slug} stats={stats} />
+          <ReadMore slug={slug} />
         </div>
       </div>
     </section>

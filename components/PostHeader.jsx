@@ -1,9 +1,10 @@
-import { Avatar } from './Avatar';
 import Image from 'next/image';
+import { Avatar } from './Avatar';
+import { MoreStats } from './MoreStats';
 import { PostTitle } from './PostTitle';
 // import { imgixLoader } from '../lib/imgixLoader';
 
-export const PostHeader = ({ title, coverImage, date, author }) => {
+export const PostHeader = ({ title, coverImage, date, author, slug, stats }) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -18,6 +19,7 @@ export const PostHeader = ({ title, coverImage, date, author }) => {
           height={748}
           priority={true}
         />
+        <MoreStats stats={stats} slug={slug} />
       </div>
       <div className='max-w-3xl mx-auto'>
         <div className='mb-6'>

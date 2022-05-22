@@ -3,7 +3,7 @@ export const ReadStats = ({ stats }) => {
     <>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        className='inline-block w-3 h-3 -mt-[3px]'
+        className='inline-block w-4 -mt-[3px]'
         fill='none'
         viewBox='0 0 24 24'
         stroke='currentColor'

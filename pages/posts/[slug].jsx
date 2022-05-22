@@ -31,7 +31,7 @@ export default function Index({ code, frontMatter }) {
         return;
       }
 
-      // Use `navigator.sendBeacon()` if available, fall back to `fetch()`.
+      // Use `navigator.sendBeacon()` if available, otherwise fall back to `fetch()`.
       (navigator.sendBeacon && navigator.sendBeacon(`/api/views/${path}`)) ||
         fetch(`/api/views/${path}`, { method: 'POST' });
     }, 5000); // register page view after 5s
@@ -48,7 +48,8 @@ export default function Index({ code, frontMatter }) {
             coverImage={frontMatter.coverImage}
             date={frontMatter.date}
             author={frontMatter.author}
-            time={frontMatter.stats.text}
+            slug={frontMatter.slug}
+            stats={frontMatter.stats}
           />
           <PostBody
             code={code}

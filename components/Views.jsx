@@ -5,7 +5,7 @@ export const Views = ({ viewCount }) => {
         xmlns='http://www.w3.org/2000/svg'
         fillRule='evenodd'
         clipRule='evenodd'
-        className='inline-block w-3 h-3 -mt-[2px]' // -mt-2 is to align with the title
+        className='inline-block w-4 -mt-[2px]' // -mt-2 is to align with the title
         fill='none'
         viewBox='0 0 24 24'
         stroke='currentColor'
