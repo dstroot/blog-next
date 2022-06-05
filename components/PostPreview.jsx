@@ -47,14 +47,14 @@ export const PostPreview = ({
               layout='responsive' // raw, responsive, fill
               width={708}
               height={354}
-              // className={cn(
-              //   'hover:scale-[101%] duration-300 ease-in-out',
-              //   isLoading ? 'grayscale blur-lg' : ''
-              // )}
               className={cn(
-                'hover:scale-[101%] opacity-1 duration-150 ease-in-out',
-                isLoading ? 'grayscale opacity-0' : ''
+                'duration-500 ease-in-out group-hover:opacity-75',
+                isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
               )}
+              // className={cn(
+              //   'hover:scale-[101%] opacity-1 duration-150 ease-in-out',
+              //   isLoading ? 'grayscale opacity-0' : ''
+              // )}
               onLoadingComplete={() => setIsLoading(false)}
             />
             <MoreStats stats={stats} slug={slug} />
