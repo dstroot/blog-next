@@ -12,6 +12,18 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
+  // webpack: (config, { dev }) => {
+  //   // Replace React with Preact only in client production build
+  //   if (!dev) {
+  //     Object.assign(config.resolve.alias, {
+  //       react: 'preact/compat',
+  //       'react-dom/test-utils': 'preact/test-utils',
+  //       'react-dom': 'preact/compat',
+  //     });
+  //   }
+
+  //   return config;
+  // },
   experimental: {
     reactRoot: true, // react 18
     // runtime: 'edge',
