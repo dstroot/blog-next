@@ -5,10 +5,12 @@ import { CMS_NAME, BASE_URL } from '../lib/constants';
 import { Container } from '../components/Container';
 
 export default function Index() {
+  const title = `${CMS_NAME} · Terms`;
+
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · Terms</title>
+        <title>{title}</title>
       </Head>
 
       <Container>

@@ -5,10 +5,12 @@ import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
 
 export default function Index() {
+  const title = `${CMS_NAME} · Analytics`;
+
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · Analytics</title>
+        <title>{title}</title>
       </Head>
 
       <Container>

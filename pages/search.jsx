@@ -12,11 +12,12 @@ export default function Index() {
     process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
   );
+  const title = `${CMS_NAME} · Search`;
 
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · Search</title>
+        <title>{title}</title>
       </Head>
 
       <Container>

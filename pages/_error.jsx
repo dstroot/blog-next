@@ -5,19 +5,21 @@ import { Container } from '../components/Container';
 
 // https://nextjs.org/docs/advanced-features/custom-error-page
 export default function InternalServerError() {
+  const title = `${CMS_NAME} · 500`;
+
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · 500</title>
+        <title>{title}</title>
       </Head>
 
       <Container>
         <Header />
-        <div className='mt-20 flex flex-col md:flex-row justify-center items-center'>
-          <div className='text-8xl font-bold tracking-tighter leading-tight border-b-4 md:border-r-4 md:border-b-0 pb-3 md:pr-6'>
+        <div className='flex flex-col items-center justify-center mt-20 md:flex-row'>
+          <div className='pb-3 font-bold leading-tight tracking-tighter border-b-4 text-8xl md:border-r-4 md:border-b-0 md:pr-6'>
             500
           </div>
-          <div className='font-semibold italic text-xl md:text-2xl pt-3 md:pl-6'>
+          <div className='pt-3 text-xl italic font-semibold md:text-2xl md:pl-6'>
             Oops look&apos;s like something broke on our side.
           </div>
         </div>

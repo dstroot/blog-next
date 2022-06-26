@@ -43,18 +43,19 @@ const lightTextMuted = {
 };
 
 export default function Index() {
+  const title = `${CMS_NAME} · Colors`;
 
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · Colors</title>
+        <title>{title}</title>
       </Head>
 
       <Container>
         <Header />
         <div className='grid grid-flow-row grid-cols-4 grid-rows-3 gap-4 text-center'>
-          <div className='col-span-2 bg-white text-gray-900 p-10 text-2xl'>Light</div>
-          <div className='col-span-2 bg-dark-1 text-gray-100 text-2xl p-10'>Dark</div>
+          <div className='col-span-2 p-10 text-2xl text-gray-900 bg-white'>Light</div>
+          <div className='col-span-2 p-10 text-2xl text-gray-100 bg-dark-1'>Dark</div>
           {/*
             Basic Styles
             */}
@@ -73,10 +74,10 @@ export default function Index() {
           {/*
             Basic Styles
             */}
-          <div className='bg-gray-100 text-gray-700 text-xs font-light p-10'>Text</div>
-          <div className='bg-gray-100 text-gray-800 text-xs font-semibold p-10'>Header</div>
-          <div className='bg-dark-4 text-gray-100 text-xs font-semibold p-10'>Header</div>
-          <div className='bg-dark-4 text-gray-300 text-xs font-light p-10'>Text</div>
+          <div className='p-10 text-xs font-light text-gray-700 bg-gray-100'>Text</div>
+          <div className='p-10 text-xs font-semibold text-gray-800 bg-gray-100'>Header</div>
+          <div className='p-10 text-xs font-semibold text-gray-100 bg-dark-4'>Header</div>
+          <div className='p-10 text-xs font-light text-gray-300 bg-dark-4'>Text</div>
           {/*
             Links
             */}
@@ -103,29 +104,29 @@ export default function Index() {
           {/*
             Links
             */}
-          <div className='text-xs font-light bg-blue0 p-12'>text</div>
-          <div className='text-xs font-semibold bg-blue1 p-12'>text</div>
-          <div className='text-xs font-semibold bg-blue2 p-12'>text</div>
-          <div className='text-xs font-light bg-blue3 p-12'>text</div>
-          <div className='text-xs font-light bg-blue4 p-12'>text</div>
-          <div className='text-xs font-semibold bg-blue5 p-12'>text</div>
-          <div className='text-xs font-semibold bg-blue6 p-12'>text</div>
-          <div className='text-xs font-light bg-blue7 p-12'>text</div>
-          <div className='text-xs font-light bg-blue8 p-12'>text</div>
-          <div className='text-xs font-semibold bg-blue9 p-12'>text</div>
-          <div className='text-xs font-semibold bg-blue10 p-12'>text</div>
-          <div className='text-xs font-light bg-blue11 p-12'>text</div>
-          <div className='text-xs font-light bg-blue12 p-12'>text</div>
-          <div className='text-xs font-semibold bg-blue13 p-12'>text</div>
-          <div className='text-xs font-semibold bg-blue14 p-12'>text</div>
-          <div className='text-xs font-light bg-blue15 p-12'>text</div>
+          <div className='p-12 text-xs font-light bg-blue0'>text</div>
+          <div className='p-12 text-xs font-semibold bg-blue1'>text</div>
+          <div className='p-12 text-xs font-semibold bg-blue2'>text</div>
+          <div className='p-12 text-xs font-light bg-blue3'>text</div>
+          <div className='p-12 text-xs font-light bg-blue4'>text</div>
+          <div className='p-12 text-xs font-semibold bg-blue5'>text</div>
+          <div className='p-12 text-xs font-semibold bg-blue6'>text</div>
+          <div className='p-12 text-xs font-light bg-blue7'>text</div>
+          <div className='p-12 text-xs font-light bg-blue8'>text</div>
+          <div className='p-12 text-xs font-semibold bg-blue9'>text</div>
+          <div className='p-12 text-xs font-semibold bg-blue10'>text</div>
+          <div className='p-12 text-xs font-light bg-blue11'>text</div>
+          <div className='p-12 text-xs font-light bg-blue12'>text</div>
+          <div className='p-12 text-xs font-semibold bg-blue13'>text</div>
+          <div className='p-12 text-xs font-semibold bg-blue14'>text</div>
+          <div className='p-12 text-xs font-light bg-blue15'>text</div>
           {/* https://www.youtube.com/watch?v=IHaT_rjC2gM */}
           {/*
             Links
             */}
           <div style={lightBackground} className='text-xs font-light text-left'>
             <span style={lightTextMuted}>Copyright © 2021 </span>
-            <a style={lightText} className='hover:underline font-semibold' href='#'>
+            <a style={lightText} className='font-semibold hover:underline' href='#'>
               Apple Inc.
             </a>{' '}
             <span style={lightTextMuted}>All rights reserved.</span>
@@ -138,7 +139,7 @@ export default function Index() {
           </a>
           <div style={darkBackground} className='text-xs font-light text-left'>
             <span style={darkTextMuted}>Copyright © 2021 </span>
-            <a style={darkText} className='hover:underline font-semibold' href='#'>
+            <a style={darkText} className='font-semibold hover:underline' href='#'>
               Apple Inc.
             </a>{' '}
             <span style={darkTextMuted}>All rights reserved.</span>
@@ -150,88 +151,88 @@ export default function Index() {
         <div className='flex flex-row w-full'>
           <div style={lightBackground} className='w-1/2 h-48'></div>
           <div style={darkBackground} className='w-1/2 h-48'>
-            <div className='overlay p-8 rounded'></div>
-            <div className='warning-light p-2 rounded'></div>
-            <div className='error-light p-2 rounded'></div>
-            <div className='success-light p-2 rounded'></div>
+            <div className='p-8 rounded overlay'></div>
+            <div className='p-2 rounded warning-light'></div>
+            <div className='p-2 rounded error-light'></div>
+            <div className='p-2 rounded success-light'></div>
           </div>
-          <div className='warning-light p-12'></div>
-          <div className='warning-dark p-12'></div>
-          <div className='error-light p-12'></div>
-          <div className='error-dark p-12'></div>
-          <div className='success-light p-12'></div>
-          <div className='success-dark p-12'></div>
+          <div className='p-12 warning-light'></div>
+          <div className='p-12 warning-dark'></div>
+          <div className='p-12 error-light'></div>
+          <div className='p-12 error-dark'></div>
+          <div className='p-12 success-light'></div>
+          <div className='p-12 success-dark'></div>
         </div>
         <DarkMode />
 
         <div className='flex flex-row space-x-4'>
-          <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
+          <div className='max-w-sm overflow-hidden rounded shadow-lg overlay'>
             <Image src={card} alt='Black Card' layout='responsive' />
             <div className='px-6 py-4'>
-              <div className='font-bold text-xl mb-2 text-gray-700 dark:text-gray-300'>
+              <div className='mb-2 text-xl font-bold text-gray-700 dark:text-gray-300'>
                 Mountain
               </div>
-              <p className='text-gray-600 dark:text-gray-400 text-base'>
+              <p className='text-base text-gray-600 dark:text-gray-400'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
                 Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
             </div>
             <div className='px-6 pt-4 pb-2'>
-              <span className='inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 dark:text-gray-400 mr-2 mb-2'>
+              <span className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-600 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-400'>
                 #photography
               </span>
-              <span className='inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 dark:text-gray-400 mr-2 mb-2'>
+              <span className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-600 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-400'>
                 #travel
               </span>
-              <span className='inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 dark:text-gray-400 mr-2 mb-2'>
+              <span className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-600 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-400'>
                 #winter
               </span>
             </div>
           </div>
 
-          <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
+          <div className='max-w-sm overflow-hidden rounded shadow-lg overlay'>
             <Image src={card} alt='Black Card' layout='responsive' />
             <div className='px-6 py-4'>
-              <div className='font-bold text-xl mb-2 blue7 dark:blue4'>Mountain</div>
-              <p className='text-gray-600 dark:text-gray-400 text-base'>
+              <div className='mb-2 text-xl font-bold blue7 dark:blue4'>Mountain</div>
+              <p className='text-base text-gray-600 dark:text-gray-400'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
                 Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
             </div>
             <div className='px-6 pt-4 pb-2'>
-              <span className='inline-block error-dark dark:error-light rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+              <span className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-white rounded-full error-dark dark:error-light dark:text-gray-100'>
                 #photography
               </span>
-              <span className='inline-block success-dark dark:success-light rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+              <span className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-white rounded-full success-dark dark:success-light dark:text-gray-100'>
                 #travel
               </span>
-              <span className='inline-block warning-dark dark:warning-light rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+              <span className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-white rounded-full warning-dark dark:warning-light dark:text-gray-100'>
                 #winter
               </span>
             </div>
           </div>
 
-          <div className='max-w-sm rounded overflow-hidden shadow-lg overlay'>
+          <div className='max-w-sm overflow-hidden rounded shadow-lg overlay'>
             <Image src={card} alt='Black Card' layout='responsive' />
             <div className='px-6 py-4'>
-              <div className='font-bold text-xl mb-2 text-gray-700 dark:text-gray-300'>
+              <div className='mb-2 text-xl font-bold text-gray-700 dark:text-gray-300'>
                 <span className='error-text'>Mountain </span>
                 <span className='warning-text'>Mountain </span>
                 <span className='success-text'>Mountain </span>
               </div>
-              <p className='text-gray-600 dark:text-gray-400 text-base'>
+              <p className='text-base text-gray-600 dark:text-gray-400'>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
                 Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
             </div>
             <div className='px-6 pt-4 pb-2'>
-              <div className='inline-block error-light dark:error-dark rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+              <div className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-white rounded-full error-light dark:error-dark dark:text-gray-100'>
                 #photography
               </div>
-              <div className='inline-block success-light dark:success-dark rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+              <div className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-white rounded-full success-light dark:success-dark dark:text-gray-100'>
                 #travel
               </div>
-              <div className='inline-block warning-light dark:warning-dark rounded-full px-3 py-1 text-sm font-semibold text-white dark:text-gray-100 mr-2 mb-2'>
+              <div className='inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-white rounded-full warning-light dark:warning-dark dark:text-gray-100'>
                 #winter
               </div>
             </div>

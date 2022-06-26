@@ -5,10 +5,12 @@ import { Container } from '../components/Container';
 
 // https://nextjs.org/docs/advanced-features/custom-error-page
 export default function Custom404() {
+  const title = `${CMS_NAME} · 404`;
+
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · 404</title>
+        <title>{title}</title>
       </Head>
 
       <Container>

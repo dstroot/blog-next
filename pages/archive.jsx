@@ -8,10 +8,12 @@ import { SortByDate } from '../lib/sortPosts';
 import { getAllFilesFrontMatter } from '../lib/getAllFiles';
 
 export default function Index({ posts }) {
+  const title = `${CMS_NAME} · Archive`;
+
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · Archive</title>
+        <title>{title}</title>
       </Head>
 
       <Container>

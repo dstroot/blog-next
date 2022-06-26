@@ -12,8 +12,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.113.0",
-    "@aws-sdk/lib-dynamodb": "^3.113.0",
+    "@aws-sdk/client-dynamodb": "^3.118.0",
+    "@aws-sdk/lib-dynamodb": "^3.118.0",
     "@google-analytics/data": "^2.8.0",
     "@headlessui/react": "^1.6.5",
     "@mailchimp/mailchimp_marketing": "^3.0.75",
@@ -45,7 +45,7 @@
     "rehype-code-titles": "^1.1.0",
     "rehype-img-size": "^1.0.1",
     "rehype-prism-plus": "^1.4.1",
-    "remark-cli": "^10.0.1",
+    "remark-cli": "^11.0.0",
     "remark-emoji": "^3.0.2",
     "remark-gfm": "^3.0.1",
     "sharp": "^0.30.7",

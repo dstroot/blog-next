@@ -8,10 +8,12 @@ import { getAllFilesFrontMatter } from '../../lib/getAllFiles';
 
 // TODO add SEO
 export default function Index({ snippets }) {
+  const title = `${CMS_NAME} · Snippets`;
+
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · Snippets</title>
+        <title>{title}</title>
       </Head>
 
       <Container>

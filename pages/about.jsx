@@ -9,10 +9,12 @@ import { Container } from '../components/Container';
 // import me from '../public/assets/blog/authors/dan.jpeg';
 
 export default function Index() {
+  const title = `${CMS_NAME} · About`;
+
   return (
     <>
       <Head>
-        <title>{CMS_NAME} · About</title>
+        <title>{title}</title>
       </Head>
 
       <Container>
