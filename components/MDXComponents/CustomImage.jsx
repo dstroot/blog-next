@@ -18,7 +18,7 @@ export const CustomImage = (props) => {
         layout='responsive'
         loading='lazy'
         className={cn(
-          'duration-500 ease-in-out group-hover:opacity-75',
+          'duration-300 ease-in-out group-hover:opacity-75',
           isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
         )}
         onLoadingComplete={() => setLoading(false)}

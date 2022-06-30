@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const ReadMore = ({ slug }) => {
   return (
     <Link href={`/posts/${slug}`}>
-      <a className='duration-500 ease-in-out group'>
+      <a className='duration-300 ease-in-out group'>
         <div className='flex items-center space-x-2'>
           <div className='text-xl font-semibold text-gray-900 transition-colors dark:text-gray-100 group-hover:underline'>
             Read More
