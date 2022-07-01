@@ -12,16 +12,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
       <Link href={`/posts/${slug}`}>
         <a aria-label={title} className='group'>
           <div className='mb-8 md:mb-10'>
-            {/* <Image
-              // loader={imgixLoader}
-              src={coverImage}
-              alt={`Hero image for ${title}`}
-              layout='raw' // intrinsic, fill, responsive, raw
-              width={1496}
-              height={748}
-              priority={true}
-              className='duration-300 ease-in-out group-hover:scale-[101%]'
-            /> */}
+            {/* New Image component */}
             <Image
               // loader={imgixLoader}
               src={coverImage}
@@ -30,7 +21,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
               width={1496}
               height={748}
               priority={true}
-              className='duration-300 ease-in-out group-hover:scale-[101%]'
+              className='duration-300 ease-in-out group-hover:opacity-[85%]'
             />
             <MoreStats stats={stats} slug={slug} />
           </div>
@@ -43,7 +34,6 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
             <Link href={`/posts/${slug}`}>
               <a className='hover:underline'>{title}</a>
             </Link>
-            {/* <p>views: {views}</p> */}
           </h3>
           <div className='mb-4 md:mb-0'>
             <Avatar name={author.name} picture={author.picture} size={65} date={date} />

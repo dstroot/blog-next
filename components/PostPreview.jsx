@@ -50,7 +50,7 @@ export const PostPreview = ({
               width={708}
               height={354}
               className={cn(
-                'duration-300 ease-in-out group-hover:opacity-75',
+                'duration-300 ease-in-out hover:opacity-[85%]',
                 isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
               )}
               // className={cn(
