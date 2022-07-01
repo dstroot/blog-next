@@ -25,12 +25,8 @@ module.exports = {
   //   return config;
   // },
   experimental: {
-    reactRoot: true, // react 18
-    // runtime: 'edge',
-    concurrentFeatures: true, // react 18 needed
-    serverComponents: true, // react 18 needed
     images: {
-      layoutRaw: true,
+      allowFutureImage: true,
     },
   },
   images: {

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/future/image';
+// import Image from 'next/image';
 import { Avatar } from './Avatar';
 import { ReadMore } from './ReadMore';
 import { MoreStats } from './MoreStats';
@@ -11,11 +12,21 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
       <Link href={`/posts/${slug}`}>
         <a aria-label={title} className='group'>
           <div className='mb-8 md:mb-10'>
-            <Image
+            {/* <Image
               // loader={imgixLoader}
               src={coverImage}
               alt={`Hero image for ${title}`}
               layout='raw' // intrinsic, fill, responsive, raw
+              width={1496}
+              height={748}
+              priority={true}
+              className='duration-300 ease-in-out group-hover:scale-[101%]'
+            /> */}
+            <Image
+              // loader={imgixLoader}
+              src={coverImage}
+              alt={`Hero image for ${title}`}
+              // layout='raw' // intrinsic, fill, responsive, raw
               width={1496}
               height={748}
               priority={true}

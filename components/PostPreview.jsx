@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
+import Image from 'next/future/image';
+
 import { cn } from '../lib/utils';
 import { Avatar } from './Avatar';
 import { ReadMore } from './ReadMore';
@@ -44,7 +46,7 @@ export const PostPreview = ({
               // loader={imgixLoader}
               src={coverImage}
               alt={`Cover Image for ${title}`}
-              layout='responsive' // raw, responsive, fill
+              // layout='responsive' // raw, responsive, fill
               width={708}
               height={354}
               className={cn(
