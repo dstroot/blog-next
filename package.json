@@ -31,7 +31,6 @@
     "mdx-embed": "^1.0.0",
     "millify": "^5.0.0",
     "next": "12.2.3",
-    "next-pwa": "^5.5.4",
     "next-themes": "0.0.15",
     "prismjs": "^1.28.0",
     "react": "18.2.0",
@@ -55,7 +54,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.8",
     "cssnano": "^5.1.12",
     "eslint": "^8.20.0",
     "eslint-config-next": "^12.2.3",
