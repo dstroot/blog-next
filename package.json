@@ -31,7 +31,7 @@
     "mdx-embed": "^1.0.0",
     "millify": "^5.0.0",
     "next": "12.2.4",
-    "next-themes": "0.0.15",
+    "next-themes": "0.2.0",
     "prismjs": "^1.28.0",
     "react": "18.2.0",
     "react-cool-dimensions": "^2.0.7",
