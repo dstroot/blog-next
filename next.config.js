@@ -1,29 +1,7 @@
-// const withPWA = require('next-pwa');
-
-/**
- * "withPWA" generates a working PWA but the actual pages on the live
- * site will not scroll all the way to the bottom of the page.
- * Really strange and no time to debug so removed PWA for now.
- * TODO FIXME
- */
-
 module.exports = {
-  // module.exports = withPWA({
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
-  // webpack: (config, { dev }) => {
-  //   // Replace React with Preact only in client production build
-  //   if (!dev) {
-  //     Object.assign(config.resolve.alias, {
-  //       react: 'preact/compat',
-  //       'react-dom/test-utils': 'preact/test-utils',
-  //       'react-dom': 'preact/compat',
-  //     });
-  //   }
-
-  //   return config;
-  // },
   experimental: {
     images: {
       allowFutureImage: true,
@@ -41,13 +19,6 @@ module.exports = {
       'pbs.twimg.com', // Twitter Profile Pictures
     ],
   },
-  // pwa: {
-  //   dest: 'public',
-  //   disable: process.env.NODE_ENV === 'development',
-  //   register: true,
-  //   publicExcludes: ['!assets/**/*', '!fonts/**/*', '!sitemap.xml', '!robots.txt', '!feed.xml'],
-  //   scope: '/',
-  // },
   async headers() {
     return [
       {
