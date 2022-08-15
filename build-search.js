@@ -7,7 +7,7 @@ const fetch = require('node-fetch');
 const { join } = require('path');
 const { readdirSync, readFileSync, writeFile } = require('fs');
 
-const BASE_URL = process.env.SITE_URL || 'https://example.com';
+const BASE_URL = process.env.SITE_URL || 'https://danstroot.com';
 
 const getPath = (location, fileName) => {
   if (!location) {
