@@ -10,7 +10,7 @@ module.exports = {
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
-    deviceSizes: [335, 460, 546, 600, 728, 984, 1240, 1496],
+    // deviceSizes: [335, 460, 546, 600, 728, 984, 1240, 1496],
     // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // !When loader is set to an external image service, the domains config is ignored!
     // loader: 'imgix',

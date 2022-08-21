@@ -42,7 +42,28 @@ export const PostPreview = ({
       <div className='mb-5'>
         <Link href={`/posts/${slug}`}>
           <a aria-label={title} className='sm:mx-0'>
-            <Image
+            {/*
+            It usually is best practice to wrap images in a div and set height and width with it. HTML treats images as foreign objects so they don't follow the same rules as everything else. A simple div is the best way to work with an img as a normal block level element.
+             */}
+            <div className='relative aspect-[2/1]'>
+              {/* New Image component */}
+              <Image
+                // loader={imgixLoader}
+                src={coverImage}
+                alt={`Cover image for ${title}`}
+                // layout='raw' // intrinsic, fill, responsive, raw
+                // width={1496}
+                // height={748}
+                fill
+                sizes='(min-width: 768px) 40vw, 100vw'
+                className={cn(
+                  'duration-300 ease-in-out hover:opacity-[85%]',
+                  isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
+                )}
+                onLoadingComplete={() => setIsLoading(false)}
+              />
+            </div>
+            {/* <Image
               // loader={imgixLoader}
               src={coverImage}
               alt={`Cover Image for ${title}`}
@@ -58,7 +79,7 @@ export const PostPreview = ({
               //   isLoading ? 'grayscale opacity-0' : ''
               // )}
               onLoadingComplete={() => setIsLoading(false)}
-            />
+            /> */}
             <MoreStats stats={stats} slug={slug} />
           </a>
         </Link>

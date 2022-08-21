@@ -12,17 +12,27 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
       <Link href={`/posts/${slug}`}>
         <a aria-label={title} className='group'>
           <div className='mb-8 md:mb-10'>
-            {/* New Image component */}
-            <Image
-              // loader={imgixLoader}
-              src={coverImage}
-              alt={`Hero image for ${title}`}
-              // layout='raw' // intrinsic, fill, responsive, raw
-              width={1496}
-              height={748}
-              priority={true}
-              className='duration-300 ease-in-out group-hover:opacity-[85%]'
-            />
+            {/*
+            It usually is best practice to wrap images in a div and set height and width with it. HTML treats images as foreign objects so they don't follow the same rules as everything else. A simple div is the best way to work with an img as a normal block level element.
+             */}
+            <div className='relative aspect-[2/1]'>
+              {/* New Image component */}
+              <Image
+                // loader={imgixLoader}
+                src={coverImage}
+                alt={`Hero image for ${title}`}
+                // layout='raw' // intrinsic, fill, responsive, raw
+                // width={1496}
+                // height={748}
+                fill
+                // sizes='(min-width: 640px) 460px,
+                //        (min-width: 768px) 600px,
+                //        (min-width: 1024px) 728px,
+                //        1496px'
+                priority={true}
+                className='duration-300 ease-in-out group-hover:opacity-[85%]'
+              />
+            </div>
             <MoreStats stats={stats} slug={slug} />
           </div>
         </a>
