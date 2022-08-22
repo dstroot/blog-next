@@ -22,9 +22,9 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
                 src={coverImage}
                 alt={`Hero image for ${title}`}
                 // layout='raw' // intrinsic, fill, responsive, raw
-                // width={1496}
-                // height={748}
-                fill
+                width={1496}
+                height={748}
+                // fill
                 // sizes='(min-width: 640px) 460px,
                 //        (min-width: 768px) 600px,
                 //        (min-width: 1024px) 728px,
