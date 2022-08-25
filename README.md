@@ -51,9 +51,9 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
   - [ ] Added Views tracking as well - but getting undefined. 
 - [x] Add view tracking (using Dynamodb)
 - [x] Add Archive page
-- [ ] Add Search?
-  - [ ] Added Algolia Index and Search Page
-  - [ ] How to add views count to drive ranking?
+- [x] Add Search?
+  - [x] Added Algolia Index and Search Page
+  - [x] How to add views count to drive ranking?
 - [ ] Add Privacy and Terms (currently drafted)
 - [x] Add security and CSP headers (using next.config.js)
 - [ ] 100 Lighthouse Scores - add service worker?
@@ -63,7 +63,7 @@ This blog is deployed on [Vercel](https://vercel.com/new?utm_source=github&utm_m
 - [ ] How to lint .MDX files?
 - [ ] Add all the open graph seo meta tags. See megatags or web code tools above. [https://ahrefs.com/blog/open-graph-meta-tags/](https://ahrefs.com/blog/open-graph-meta-tags/) next-seo
 - [x] Add robots.txt and sitemap.xml using [https://github.com/iamvishnusankar/next-sitemap](https://github.com/iamvishnusankar/next-sitemap)
-- [ ] Add production logging (Logtail?)
+- [x] Add production logging (Logtail?)
 - [ ] Add production error handling - e.g. Sentry
 - [ ] Add testing [https://nextjs.org/docs/testing](https://nextjs.org/docs/testing)
 - [x] Convert markdown to MDX - simplify site. NOTE: This (.MDX) breaks fast refresh ([issue](https://github.com/kentcdodds/mdx-bundler/issues/49))
