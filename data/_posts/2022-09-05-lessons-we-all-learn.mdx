@@ -1,0 +1,122 @@
+---
+title: Lessons We All Learn
+excerpt: Anyone who has ever been responsible for supporting production systems learns some things along the way. For example...
+coverImage: /assets/blog/img/sre.jpg
+date: '2022-09-05'
+published: false
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/sre.jpg
+seoURL: https://danstroot.com/2021/07/11/github-copilot/
+---
+
+1. Email is the worst monitoring and alerting mechanism except for all the others.
+
+1. Some of your most critical services are kept alive by a handful of people whose job description does not mention those services at all.
+
+1. Most of your actual work is not covered by your OKRs.
+
+1. Absence of a signal is itself a signal.
+
+1. The severity of an incident is measured by the number of rules broken in resolving it.
+
+1. If a post-mortem follow-up task is not picked up within a week, it's unlikely to be completed at all.
+
+1. There is no cloud, it's just someone else's computer.
+
+1. Serverless isn't.
+
+1. If you determine "human error" as the root cause, then you're doing it wrong.
+
+1. If you break it, you own it - for now... but if you fix it you own it _forever_.
+
+1. "Obsolete" doesn't mean it's not in use and relied on heavily.
+
+1. Management will much rather invest in inventing a new, square wheel than fixing an old round one.
+
+1. "Prod" is just another name for "staging". In other words [you test in Prod](https://increment.com/testing/i-test-in-production/). 
+
+![Testing in Prod](/assets/blog/img/prod_testing.jpg)
+
+1. Your infrastructure uses a lot more self-signed certificates than you think. A lot more. In places that make you weep.
+
+1. Self-signed certificates beget long lived certs, which beget lack of certificate validity monitoring, which begets curl -k, which begets a lack of certificate deployment automation, which begets self-signed certificates.
+
+1. Containers create at least as many problems as they solve. 
+
+1. Kubernetes creates problems that aren't even invented yet. 
+
+1. The source you're looking at is not the code running in production.
+
+1. [One in a million is next Tuesday](https://docs.microsoft.com/en-us/archive/blogs/larryosterman/one-in-a-million-is-next-tuesday).
+
+1. Two is one, and one is none.
+
+1. Very few operations are truly idempotent.
+
+1. "Asserting state" beats "monitoring for compliance" any day.
+
+1. Your network team has a way into the network that your security team doesn't know about.
+
+1. Blocking TCP port 53 traffic leads to very strange failures. Don't.
+
+1. Somewhere in your infrastructure a service you didn't know uses DNS for endpoint discovery in a very surprising way.
+
+1. Do. Not. Monkey. Around. With. `/etc/hosts`.
+
+1. A search for a document you know exists will only turn up links to documents referencing but not actually linking to the one you're looking for.
+
+1. Nobody knows how git works; everybody simply does `rm -fr && git checkout` periodically.
+
+1. There are very few network restrictions creative and determined use of ssh port forwarding can't overcome.
+
+1. It is tempting to jump right into implementing a solution when the right thing may well be to not do the thing that requires the solution in the first place.
+
+1. Turning things off permanently is surprisingly difficult.
+
+1. That "completely automated" solution you set up requires at least three manual steps you didn't document.
+
+1. Schrödinger's Backup -- "The condition of any backup is unknown until a restore is attempted." -- is overly optimistic.
+
+1. There's an [xkcd](https://xkcd.com/) for the precise situation you find yourself in. 
+
+1. The sets of systems online before and after a data center power outage only intersect. Some of the old systems coming online will immediately cause a different outage.
+
+1. You're bound by the CAP theorem much more often than you may think. Halting Problem's a bitch, too.
+
+1. Eventual consistency doesn't help when the system you're debugging hasn't converged yet.
+
+1. Real change can only be implemented above [layer 7](https://en.wikipedia.org/wiki/OSI_model).
+
+![Layer 8](/assets/blog/img/layer8.jpg)
+
+1. Any sufficiently successful product launch is indistinguishable from a DDoS; any sufficiently advanced user indistinguishable from an attacker.
+
+1. Your herculean efforts to upgrade the OS across your entire fleet completed just in time for the EOL announcement of the version you upgraded to.
+
+1. Doubling your time estimate in the hopes of beating expectations won't work because your manager takes your estimate, has a hardy laugh, and then resets it back to what they already promised upchain.
+
+1. Management will always happily spend $$$ on outside consultants to tell them what you've been saying for years.
+
+1. In any organization practicing continuous integration, half of all commits are to fake out CI tests.
+
+1. Every new paradigm tends to mostly add layers of abstractions; cutting through them and identifying what basic principles continue to apply is half the battle.
+
+1. Multithreading is rarely worth the added complexity.
+
+1. Parallelism is not Concurrency.
+
+### References
+
+- [How Buildings Learn](https://www.amazon.com/How-Buildings-Learn-Stewart-Brand/dp/0140139966)
+- [The Technium: Construction is Life](https://kk.org/thetechnium/construction-is-life/)
+
+---
+
+Image Credit: **Google’s New Bjarke Ingels and Thomas Heatherwick Designed Headquarters**
+
+<span className="text-sm">
+Google's new Bay View campus, spanning 1.1 million square feet of space at NASA’s Ames Research Center in Silicon Valley. Designed with ideas of innovation, nature, and community in mind, the end result is a uniquely open space capable of furthering Google’s ambition to operate entirely on carbon-free energy for 24 hours a day, seven days a week by 2030.
+</span>
