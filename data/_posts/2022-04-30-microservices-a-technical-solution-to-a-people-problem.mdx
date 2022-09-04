@@ -30,9 +30,13 @@ Some organizations say microservices allow them to release inter-team friction a
 
 Sometimes microservices exist because teams dislike code review, or overbearing ‘architects’ above them telling them what to do. While some people may realize there is nothing smart about this architecture choice for the whole system, many developers are content to care only about their team -- and not the company or application stack as a whole. For them autonomy is more important.
 
-"Doing microservices" became validation for organizations that lack conviction, or a thesis, about how their architecture _should_ be. This ecology of interacting parties, each acting in their own interest for the common good not only sounds utopian, but speaks to an underlying, tacit belief that the emergent mesh of services will approximate the latent natural architecture of the domain. The backlash against microservices is partly because that simply isn't true - instead microservices approximate the natural contours of the technology organization's **organizational model**, not the domain.
+"Doing microservices" became validation for organizations that lack conviction, or a thesis, about how their architecture _should_ be. This ecology of interacting parties, each acting in their own interest for the common good not only sounds utopian, but speaks to an underlying, tacit belief that the emergent mesh of services will approximate the latent natural architecture of the domain. The backlash against microservices is partly because that simply isn't true - instead microservices approximate the natural contours of the technology organization's **organizational model**, not the domain.  This is known as "[Conway's law](https://en.m.wikipedia.org/wiki/Conway's_law)":
 
-Clearly one of the reasons why we got here as an industry is we didn’t want to (or couldn't) communicate well across teams and organizational structures. Transitioning our computer architectures from well-architected, simpler things into a complex spider web of organic services is not something we would do on purpose, right?
+>Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
+>
+><cite>&mdash; Melvin E. Conway</cite>
+
+Clearly one of the reasons why we got here as an industry is we didn’t want to (or couldn't) communicate well across teams and organizational structures. Transitioning our computer architectures from well-architected, simpler things into a complex spider web of services is not something we would do intentionally, right?
 
 The extra complexity to operate microservices requires additional infrastructure. Kubernetes is a popular choice to orchestrate and operate all the various microservices in a system. To complete a task like booking a ride on Uber, one service must request data from potentially dozens of other services — a complex and often problem-prone process, especially as microservices scale. A service mesh becomes necessary for service discovery and securely routing requests from one service to the next. It acts like a switchboard -- it routes requests to the right service.
 
@@ -62,7 +66,7 @@ Good architects and technical leaders can keep code maintainable and ensure it r
 
 >“Finding service boundaries is really damn hard…”
 >
-> <cite>&mdash; All microservices architects, ever</cite>
+><cite>&mdash; All microservices architects, ever</cite>
 
 Hence, it is safer to start with larger/wider boundaries - probably the boundaries of proper bounded contexts. This is especially relevant to services encompassing core business domains. Design your architecture layers properly. Organize your teams into the way you want your architectural boundaries to be. Allow for both transactions and events. 
 
