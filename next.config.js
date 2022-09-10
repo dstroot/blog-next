@@ -2,11 +2,7 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    images: {
-      allowFutureImage: true,
-    },
-  },
+  experimental: {},
   images: {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
