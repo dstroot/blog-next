@@ -8,9 +8,9 @@ export const Footer = () => {
   const year = new Date(); // evergreen copyright year
 
   return (
-    <footer className='bg-gray-100 text-gray-600 dark:bg-dark-4 dark:text-gray-300 transition-colors'>
+    <footer className='text-gray-600 transition-colors bg-gray-100 dark:bg-dark-4 dark:text-gray-300'>
       <Container>
-        <div className='flex flex-col md:flex-row items-center content-center gap-x-1 my-2 md:my-4'>
+        <div className='flex flex-col items-center content-center my-2 md:flex-row gap-x-1 md:my-4'>
           {/* 
             IMAGE & TAGLINE 
           */}
@@ -25,7 +25,7 @@ export const Footer = () => {
               className='rounded-full'
             />
           </div>
-          <div className='flex-1 text-center md:text-left text-xl md:text-2xl'>
+          <div className='flex-1 text-xl text-center md:text-left md:text-2xl'>
             I love building things. Family man, technologist and Hacker News aficionado. Eternally
             curious.
           </div>
@@ -35,23 +35,23 @@ export const Footer = () => {
           */}
           <div className='flex-none'>
             <div className='flex flex-col text-sm'>
-              <span className='font-bold text-gray-700 dark:text-gray-100 uppercase mt-4 md:mt-0 mb-1 min-w-max'>
+              <span className='mt-4 mb-1 font-bold text-gray-700 uppercase dark:text-gray-100 md:mt-0 min-w-max'>
                 Tools
               </span>
 
               <Link href='/search'>
-                <a className='hover:text-gray-500 font-medium'>Search</a>
+                <a className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Search</a>
               </Link>
               <Link href='/archive'>
-                <a className='hover:text-gray-500 font-medium'>Post Archive</a>
+                <a className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Post Archive</a>
               </Link>
               <Link href='/snippets'>
-                <a className='hover:text-gray-500 font-medium'>Code Snippets</a>
+                <a className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Code Snippets</a>
               </Link>
 
               {/* <a
                 href='https://dstroot.github.io/readme/'
-                className='hover:text-gray-500 font-medium'
+                className='font-medium hover:text-gray-500'
               >
                 User Guide
               </a> */}
@@ -62,8 +62,8 @@ export const Footer = () => {
         {/* 
             Bottom Section
         */}
-        <div className='flex flex-col md:flex-row items-center md:items-end justify-between'>
-          <div className='flex items-center order-2 md:order-1 dark:text-gray-400 text-xs tracking-wide'>
+        <div className='flex flex-col items-center justify-between md:flex-row md:items-end'>
+          <div className='flex items-center order-2 text-xs tracking-wide md:order-1 dark:text-gray-400'>
             Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
             {year.getFullYear()}
             {','}&nbsp;
@@ -80,7 +80,7 @@ export const Footer = () => {
               <a>Post Archive</a>
             </Link>
           </div> */}
-          <div className='flex items-center space-x-4 order-1 md:order-2 my-3 md:my-0 text-2xl'>
+          <div className='flex items-center order-1 my-3 space-x-4 text-2xl md:order-2 md:my-0'>
             <SocialLinks />
           </div>
         </div>
