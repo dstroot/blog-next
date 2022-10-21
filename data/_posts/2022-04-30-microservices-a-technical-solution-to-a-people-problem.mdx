@@ -48,6 +48,8 @@ The service mesh is a dedicated, configurable infrastructure layer that can docu
 
 In addition to being harder to operate, microservices are more dfficult to debug. It is a lot easier to debug the interactions between components of a system when they communicate within the same process, especially when one component simply calls a method on another. This is usually just a matter of attaching a debugger to the process, stepping through the method calls and watching variables. There is no straightforward equivalent of this in microservices. Service communications are notoriously difficult to trace and piece together, requiring additional tooling, infrastructure, and complexity.
 
+<YouTube link='https://youtu.be/y8OnoxKotPQ' />
+
 Microservices add complexity and leave us with inefficient communications, less error detection in development, easier ways to introduce errors, a worse debugging experience (e.g., relying on searching further through distributed log analysis tools), and require more and more management software to deploy. 
 
 Internal web services/APIs are often doubly inefficient by using REST (and having to convert to JSON and back) rather than binary transmissions. If multiple microservices hops are used, this all adds up and slows down the system. A conversion to JSON and back is a wasted effort, more so if done dozens of times.
