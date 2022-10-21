@@ -12,8 +12,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.192.0",
-    "@aws-sdk/lib-dynamodb": "^3.192.0",
+    "@aws-sdk/client-dynamodb": "^3.193.0",
+    "@aws-sdk/lib-dynamodb": "^3.193.0",
     "@google-analytics/data": "^3.1.0",
     "@headlessui/react": "^1.7.3",
     "@mailchimp/mailchimp_marketing": "^3.0.78",
