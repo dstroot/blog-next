@@ -22,29 +22,24 @@ export default async function ogimage() {
             width: '100%',
             height: '100%',
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
           }}
         >
-          <div tw='flex'>
-            <img
-              width='200'
-              height='200'
-              src={`https://www.danstroot.com/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fdan.jpeg&w=640&q=90`}
-              style={{
-                borderRadius: 128,
-                marginRight: 0,
-                padding: 20,
-              }}
-            />
-            <img
-              width='640'
-              height='200'
-              src={`https://www.danstroot.com/_next/image?url=%2Fassets%2Fblog%2Ftheme%2Fdjs_logo.jpg&w=640&q=90`}
-              style={{}}
-            />
-          </div>
+          <img
+            width='200'
+            height='200'
+            src={`https://www.danstroot.com/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fdan.jpeg&w=640&q=90`}
+            style={{
+              borderRadius: 128,
+              padding: 20,
+            }}
+          />
+          <img
+            width='640'
+            height='200'
+            src={`https://www.danstroot.com/_next/image?url=%2Fassets%2Fblog%2Ftheme%2Fdjs_logo.jpg&w=640&q=90`}
+          />
         </div>
       ),
       {
