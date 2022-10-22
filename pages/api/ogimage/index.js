@@ -21,31 +21,25 @@ export default async function ogimage() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            fontFamily:
-              'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
           }}
         >
           <div tw='flex'>
             <img
-              width='256'
-              height='256'
+              width='200'
+              height='200'
               src={`https://www.danstroot.com/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fdan.jpeg&w=640&q=90`}
               style={{
                 borderRadius: 128,
-                marginRight: 75,
+                marginRight: 0,
+                padding: 20,
               }}
             />
             <img
-              width='808'
-              height='258'
-              src={`https://www.danstroot.com/_next/image?url=%2Fassets%2Fblog%2Ftheme%2Fdjs_logo.png&w=640&q=90`}
+              width='640'
+              height='200'
+              src={`http://localhost:3000/_next/image?url=%2Fassets%2Fblog%2Ftheme%2Fdjs_logo.jpg&w=640&q=90`}
               style={{}}
             />
-
-            <div tw='flex flex-col'>
-              <p tw='font-bold leading-tight tracking-tighter text-7xl'>{CMS_NAME + ' · Blog'}</p>
-              <p tw='mt-2 ml-2 italic font-semibold text-3xl'>{TAGLINE}.</p>
-            </div>
           </div>
         </div>
       ),
