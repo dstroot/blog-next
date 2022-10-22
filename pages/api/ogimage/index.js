@@ -1,8 +1,9 @@
 import { ImageResponse } from '@vercel/og';
-import { CMS_NAME, TAGLINE } from '../../../lib/constants';
-// import author from '../assets/blog/authors/dan.jpeg';
+// import { CMS_NAME, TAGLINE } from '../../../lib/constants';
+
 // see: https://og-playground.vercel.app/ to test images
 // docs: https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation
+// test: https://www.opengraph.xyz/url/https%3A%2F%2Fwww.danstroot.com
 
 export const config = {
   runtime: 'experimental-edge',
@@ -37,7 +38,7 @@ export default async function ogimage() {
             <img
               width='640'
               height='200'
-              src={`http://localhost:3000/_next/image?url=%2Fassets%2Fblog%2Ftheme%2Fdjs_logo.jpg&w=640&q=90`}
+              src={`https://www.danstroot.com/_next/image?url=%2Fassets%2Fblog%2Ftheme%2Fdjs_logo.jpg&w=640&q=90`}
               style={{}}
             />
           </div>
