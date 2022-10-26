@@ -37,9 +37,6 @@ export default function Index() {
               className='rounded-full image'
               height={200}
               width={200}
-              // layout='fill'
-              // objectFit='contain'
-              // placeholder='blur'
             />
           </div>
           <div className='flex-initial'>
@@ -115,16 +112,16 @@ export default function Index() {
             <h3>Example Open Source Contributions</h3>
             <ul>
               <li>
-                <div href='https://github.com/dstroot/skeleton'>Skeleton</div> (maintainer)
+                <a href='https://github.com/dstroot/skeleton'>Skeleton</a> (maintainer)
               </li>
               <li>
-                <div href='https://getbootstrap.com/'>Bootstrap</div> (contributor)
+                <a href='https://getbootstrap.com/'>Bootstrap</a> (contributor)
               </li>
               <li>
-                <div href='https://kubernetes.io/'>Kubernetes</div> (contributor)
+                <a href='https://kubernetes.io/'>Kubernetes</a> (contributor)
               </li>
               <li>
-                <div href='https://helmetjs.github.io/'>Helmet</div> (contributor)
+                <a href='https://helmetjs.github.io/'>Helmet</a> (contributor)
               </li>
             </ul>
             {/* <div className='block mt-8 mb-8 text-xl'>

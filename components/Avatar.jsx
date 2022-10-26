@@ -17,8 +17,6 @@ export const Avatar = ({ name, picture, size, date }) => {
             width={size}
             height={size}
             priority={true}
-            // layout='fixed'
-            // objectFit='contain'
             className='flex-initial rounded-full'
           />
           <div className='flex-auto'>

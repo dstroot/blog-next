@@ -21,7 +21,6 @@ export const Footer = () => {
               width={85}
               height={85}
               layout='fixed'
-              objectFit='contain'
               className='rounded-full'
             />
           </div>
