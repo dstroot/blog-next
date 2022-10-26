@@ -1,5 +1,5 @@
 // import Image from 'next/image';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { Avatar } from './Avatar';
 import { MoreStats } from './MoreStats';
 import { PostTitle } from './PostTitle';

@@ -1,7 +1,7 @@
 import { cn } from '../../lib/utils';
 import { useState } from 'react';
 // import Image from 'next/image';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 export const CustomImage = (props) => {
   const src = props.src;
