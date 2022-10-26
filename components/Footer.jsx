@@ -40,13 +40,13 @@ export const Footer = () => {
               </span>
 
               <Link href='/search'>
-                <a className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Search</a>
+                <div className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Search</div>
               </Link>
               <Link href='/archive'>
-                <a className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Post Archive</a>
+                <div className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Post Archive</div>
               </Link>
               <Link href='/snippets'>
-                <a className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Code Snippets</a>
+                <div className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Code Snippets</div>
               </Link>
 
               {/* <a
@@ -68,7 +68,7 @@ export const Footer = () => {
             {year.getFullYear()}
             {','}&nbsp;
             <Link href='/analytics'>
-              <a className='font-medium'>Dan Stroot</a>
+              <div className='font-medium'>Dan Stroot</div>
             </Link>
             {'.'}
           </div>

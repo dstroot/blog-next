@@ -41,7 +41,7 @@ export const PostPreview = ({
     <div ref={ref}>
       <div className='mb-5'>
         <Link href={`/posts/${slug}`}>
-          <a aria-label={title} className='sm:mx-0'>
+          <div aria-label={title} className='sm:mx-0'>
             {/*
             It usually is best practice to wrap images in a div and set height and width with it. HTML treats images as foreign objects so they don't follow the same rules as everything else. A simple div is the best way to work with an img as a normal block level element.
              */}
@@ -81,12 +81,12 @@ export const PostPreview = ({
               onLoadingComplete={() => setIsLoading(false)}
             /> */}
             <MoreStats stats={stats} slug={slug} />
-          </a>
+          </div>
         </Link>
       </div>
       <h3 className='mb-3 text-3xl leading-snug'>
         <Link href={`/posts/${slug}`}>
-          <a className='hover:underline'>{title}</a>
+          <div className='hover:underline'>{title}</div>
         </Link>
       </h3>
       <div className='mb-4'>

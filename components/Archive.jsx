@@ -26,8 +26,11 @@ export const Archive = ({ posts }) => {
             )}
             <div className='grid items-center grid-flow-col gap-6 ml-8 text-gray-800 dark:text-gray-200'>
               <div className='truncate'>
-                <Link href={`/posts/${post.slug}`}>
+                {/* <Link href={`/posts/${post.slug}`}>
                   <a className='hover:underline'>{post.title}</a>
+                </Link> */}
+                <Link className='hover:underline' href={`/posts/${post.slug}`}>
+                  {post.title}
                 </Link>
               </div>
               <div className='text-sm text-right'>

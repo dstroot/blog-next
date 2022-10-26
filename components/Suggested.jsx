@@ -22,7 +22,7 @@ export const Suggested = () => {
   return (
     <div className='flex flex-col'>
       {sortedAndExcludedPosts ? <h4 className='!mb-4'>Suggested</h4> : null}
-      <div className='grid grid-cols-1 gap-4 w-full sm:grid-cols-2'>
+      <div className='grid w-full grid-cols-1 gap-4 sm:grid-cols-2'>
         {sortedAndExcludedPosts.map((post, _idx) => (
           <SuggestedCard post={post} key={_idx} />
         ))}
@@ -35,13 +35,13 @@ const SuggestedCard = ({ post }) => {
   console.log(post.slug);
   return (
     <Link href={`/posts/${post.slug}`}>
-      <a className='flex flex-col justify-between px-4 w-full rounded bg-gray-200 dark:bg-gray-700'>
+      <div className='flex flex-col justify-between w-full px-4 bg-gray-200 rounded dark:bg-gray-700'>
         <h4 className='capitalize'>
           <MdOutlineAutoAwesome className='inline mr-2' />
           {post.slug.replaceAll('-', ' ').slice(11)}
         </h4>
         <Views viewCount={post.viewCount} />
-      </a>
+      </div>
     </Link>
   );
 };

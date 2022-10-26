@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <h2 className='text-2xl md:text-3xl font-bold tracking-tight md:tracking-tighter leading-tight mb-8 md:mb-12'>
+    <h2 className='mb-8 text-2xl font-bold leading-tight tracking-tight md:text-3xl md:tracking-tighter md:mb-12'>
       <Link href='/'>
-        <a className='hover:underline'>{'< Blog'}</a>
+        <div className='hover:underline'>{'< Blog'}</div>
       </Link>
     </h2>
   );

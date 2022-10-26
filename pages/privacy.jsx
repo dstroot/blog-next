@@ -19,13 +19,9 @@ export default function Index() {
         <div className='max-w-2xl mx-auto converted-html'>
           <h1>Privacy Policy</h1>
           <p>
-            At {CMS_NAME}, accessible from{' '}
-            <Link href={BASE_URL}>
-              <a>{BASE_URL}</a>
-            </Link>
-            , one of our main priorities is the privacy of our visitors. This Privacy Policy
-            document contains types of information that is collected and recorded by {CMS_NAME} and
-            how we use it.
+            At {CMS_NAME}, accessible from <Link href={BASE_URL}>{BASE_URL}</Link>, one of our main
+            priorities is the privacy of our visitors. This Privacy Policy document contains types
+            of information that is collected and recorded by {CMS_NAME} and how we use it.
           </p>
           <p>
             If you have additional questions or require more information about our Privacy Policy,

@@ -20,11 +20,7 @@ export default function Index() {
           <p>Welcome to {CMS_NAME}</p>
           <p>
             These terms and conditions outline the rules and regulations for the use of {CMS_NAME}
-            &apos;s Website, located at{' '}
-            <Link href={BASE_URL}>
-              <a>{BASE_URL}</a>
-            </Link>
-            .
+            &apos;s Website, located at <Link href={BASE_URL}>{BASE_URL}</Link>.
           </p>
           <p>
             By accessing this website we assume you accept these terms and conditions. Do not

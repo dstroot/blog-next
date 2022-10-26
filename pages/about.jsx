@@ -115,16 +115,16 @@ export default function Index() {
             <h3>Example Open Source Contributions</h3>
             <ul>
               <li>
-                <a href='https://github.com/dstroot/skeleton'>Skeleton</a> (maintainer)
+                <div href='https://github.com/dstroot/skeleton'>Skeleton</div> (maintainer)
               </li>
               <li>
-                <a href='https://getbootstrap.com/'>Bootstrap</a> (contributor)
+                <div href='https://getbootstrap.com/'>Bootstrap</div> (contributor)
               </li>
               <li>
-                <a href='https://kubernetes.io/'>Kubernetes</a> (contributor)
+                <div href='https://kubernetes.io/'>Kubernetes</div> (contributor)
               </li>
               <li>
-                <a href='https://helmetjs.github.io/'>Helmet</a> (contributor)
+                <div href='https://helmetjs.github.io/'>Helmet</div> (contributor)
               </li>
             </ul>
             {/* <div className='block mt-8 mb-8 text-xl'>
