@@ -20,14 +20,7 @@ export default function Index() {
       <Container>
         <Header />
         <div className='absolute invisible ml-10 xl:visible left-top mt-36'>
-          <Image
-            src='/assets/blog/img/maker.jpg'
-            alt={CMS_NAME}
-            height={662}
-            width={200}
-            // layout='intrinsic'
-            // placeholder='blur'
-          />
+          <Image src='/assets/blog/img/maker.jpg' alt={CMS_NAME} height={662} width={200} />
         </div>
         <div className='flex flex-row items-center mb-8 md:mb-12'>
           <div className='relative flex-initial w-10 h-10 mr-4 image-container md:w-16 md:h-16 lg:w-20 lg:h-20'>
