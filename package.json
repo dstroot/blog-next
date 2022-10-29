@@ -12,8 +12,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.196.0",
-    "@aws-sdk/lib-dynamodb": "^3.196.0",
+    "@aws-sdk/client-dynamodb": "^3.199.0",
+    "@aws-sdk/lib-dynamodb": "^3.199.0",
     "@google-analytics/data": "^3.1.0",
     "@headlessui/react": "^1.7.3",
     "@mailchimp/mailchimp_marketing": "^3.0.78",
@@ -25,7 +25,7 @@
     "date-fns": "2.29.3",
     "esbuild": "^0.15.12",
     "feed": "^4.2.2",
-    "framer-motion": "^7.6.1",
+    "framer-motion": "^7.6.2",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.3",
     "mdx-bundler": "^9.0.1",
@@ -55,8 +55,8 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",
-    "autoprefixer": "^10.4.12",
-    "cssnano": "^5.1.13",
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
     "eslint": "^8.26.0",
     "eslint-config-next": "^13.0.0",
     "eslint-config-prettier": "^8.5.0",
