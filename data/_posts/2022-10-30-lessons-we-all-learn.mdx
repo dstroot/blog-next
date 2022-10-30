@@ -1,9 +1,9 @@
 ---
 title: Lessons We All Learn
-excerpt: Anyone who has ever been responsible for supporting production systems learns some things along the way. For example...
+excerpt: Anyone who has ever been responsible for supporting production systems learns many valuable things along the way. For example...
 coverImage: /assets/blog/img/sre.jpg
-date: '2022-09-05'
-published: false
+date: '2022-10-30'
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -14,7 +14,7 @@ seoURL:
 
 1. Email is the worst monitoring and alerting mechanism except for all the others.
 
-1. Some of your most critical services are kept alive by a handful of people whose job description does not mention those services at all.
+1. Your most critical services are kept alive by a handful of people whose job description does not mention those services at all.
 
 1. Most of your actual work is not covered by your OKRs.
 
@@ -28,13 +28,11 @@ seoURL:
 
 1. Serverless isn't.
 
-1. If you determine "human error" as the root cause, then you're doing it wrong.
+1. When you determine "human error" as the root cause, then you're doing it wrong.
 
-1. If you break it, you own it - for now... but if you fix it you own it _forever_.
+1. If you break it, you own it - for now. If you fix it you own it _forever_.
 
 1. "Obsolete" doesn't mean it's not in use and relied on heavily.
-
-1. Management will much rather invest in inventing a new, square wheel than fixing an old round one.
 
 1. If you see a big name company give a talk at a conference about some cool thing they made, it's probably already been abandoned by that company.
 
@@ -62,10 +60,6 @@ seoURL:
 
 1. Your network team has a way into the network that your security team doesn't know about.
 
-1. Blocking TCP port 53 traffic leads to very strange failures. Don't.
-
-1. Somewhere in your infrastructure a service you didn't know uses DNS for endpoint discovery in a very surprising way.
-
 1. There are very few network restrictions creative and determined use of ssh port forwarding can't overcome.
 
 1. It is tempting to jump right into implementing a solution when the right thing may well be to not do the thing that requires the solution in the first place.
@@ -79,6 +73,8 @@ seoURL:
 1. If you’ve never failed over to another region, you don’t actually have failovers. 
 
 1. If you’ve never rolled back a deploy, you don’t have a mature deploy pipeline. 
+
+1. In any organization practicing continuous integration, half of all commits are to fake out CI tests.
 
 1. There's an [xkcd](https://xkcd.com/) for the precise situation you find yourself in. 
 
@@ -96,26 +92,8 @@ seoURL:
 
 1. Management will always happily spend $$$ on outside consultants to tell them what you've been saying for years.
 
-1. In any organization practicing continuous integration, half of all commits are to fake out CI tests.
+1. Management will much rather invest in inventing a new, square wheel than fixing an old round one.
 
-1. Every new paradigm tends to mostly add layers of abstractions; cutting through them and identifying what basic principles continue to apply is half the battle.
+1. A: However well you understand concurrency, you only need one coworker who doesn't understand concurrency to make your life an unending hell. B: You always have at least one coworker who doesn't completely understand concurrency.
 
-1. Multithreading is rarely worth the added complexity.
-
-1. A: However well you understand multithreading, you only need one coworker who doesn't understand multithreading to make your life an unending hell. B: You always have at least one coworker who doesn't completely understand multithreading.
-
-1. Parallelism is not concurrency.
-
-### References
-
-- [How Buildings Learn](https://www.amazon.com/How-Buildings-Learn-Stewart-Brand/dp/0140139966)
-- [The Technium: Construction is Life](https://kk.org/thetechnium/construction-is-life/)
-- [Ops Lessons We All Learn The Hard Way](https://www.netmeister.org/blog/ops-lessons.html)
-
----
-
-Image Credit: **Google’s New Bjarke Ingels and Thomas Heatherwick Designed Headquarters**
-
-<span className="text-sm">
-Google's new Bay View campus, spanning 1.1 million square feet of space at NASA’s Ames Research Center in Silicon Valley. Designed with ideas of innovation, nature, and community in mind, the end result is a uniquely open space capable of furthering Google’s ambition to operate entirely on carbon-free energy for 24 hours a day, seven days a week by 2030.
-</span>
+<span className="text-sm">Note: Many of these came from [Jan Schaumann's](https://twitter.com/jschauma/status/1220902743482814467?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1220903052145778688%7Ctwgr%5E6c538ed5d741ce6cba744aa9970224fbf48cdfcb%7Ctwcon%5Es2_&ref_url=http%3A%2F%2Fentangled.systems%2Ffragments%2F20200126-1-email-is-the-worst-monitoring-and-alerting-mechanism-except-for-all-the-others-2-absence-of-a-signal-is-itself-a-signal-3.html) Tweets[.](https://www.netmeister.org/blog/ops-lessons.html)</span>
