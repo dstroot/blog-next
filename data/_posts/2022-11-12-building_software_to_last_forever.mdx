@@ -2,7 +2,7 @@
 title: Building Software to Last Forever
 excerpt: "Engineering teams love full rewrites because they incorrectly think of old systems as specs. They assume that since the old system works, all functional aspects have been settled. Design risks have been eliminated! They can focus purely on the technical side, add more features to the new system, or make changes to the underlying architecture without worry. However, the belief that new code is better than old is patently absurd. Old code has been used. It has been tested. Lots of bugs have been found, and more importantly fixed. So what path to take?"
 coverImage: /assets/blog/img/billg.jpeg
-date: '2022-11-05'
+date: '2022-11-12'
 published: false
 author:
   name: Dan Stroot
@@ -12,51 +12,51 @@ ogImage:
 seoURL: 
 ---
 
-How many of us would build a new home and move because our existing home is not quite meeting our needs? Maybe we need an extra bedroom, or want a bigger backyard? Many of us have made this choice.
+How many of us would buy a new home and move because our existing home is not quite meeting our needs? Maybe we need an extra bedroom, or want a bigger backyard? Now assume you _can't sell your existing home_, you'd have to abandon it (and your investment in it). That changes your thinking doesn't it?
 
-Now assume you _can't sell your existing home_, you'd have to abandon it and all your investment in it. That changes your thinking doesn't it?
+Further, imagine you had a team of ten people constantly working on your home, building it out and keeping it updated for the last fifteen years. You'd have an investment of 150 person/years in your existing home (10 people x 15 years). If each person was paid the equivalent of a software developer (we'll use $200k to include benefits, office space, leadership, etc.) you'd have an investment of **$30 million dollars** (150 person/years x $200,000). Would you walk away from that investment?
 
-Further, imagine you had a team of ten people constantly working on your home, keeping it updated for the last fifteen years. You'd have an investment of 150 person/years in your existing home (10 people x 15 years). If each person was paid the equivalent of a software developer (we'll use $200k to include benefits, office space, leadership, etc.) you'd have an investment of **$30 million dollars** (150 person/years x $200,000). Would you walk away from that investment?
+When companies decide to re-write or replace an existing software application because it is no longer meeting their needs, they are making a similar decision. Existing software must be abandoned (along with the cumulative investment in that software) for "something new and better". Yet the belief that new code is better than old is patently absurd. Old code has been used. It has been tested. Lots of bugs have been found, and more importantly fixed. It has weathered and withstood the test of time.
 
-When companies decide to re-write or replace an existing software application because it is no longer meeting some of their needs, they are making a similar decision. Existing software must be abandoned (along with the cumulative investment in that software) for "something new and better". Yet the belief that new code is better than old is patently absurd. Old code has been used. It has been tested. Lots of bugs have been found, and more importantly fixed. It has weathered the test of time.
-
-Joel Spolsky of Fog Creek Software and Stack Overflow described system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.” Why throw away a working system? 
+Joel Spolsky of Fog Creek Software and Stack Overflow describes system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.” Why throw away a working system? 
 
 Why can't software last forever? It's not made of wood, concrete or steel. It doesn't rot, weather, or rust. A working algorithm is a working algorithm. Technology doesn’t need to be beautiful or to impress other people to be effective, and all technologists are ultimately in the business of producing effective technology.
 
 ## Maintenance vs. Repair
 
-New York subway trains, nicknamed the Brightliners for their shiny unpainted exteriors, were built to last 35 years. When they were finally retired from service in January 2022, they had been riding the rails of New York City for no less than 58 years and were the oldest operating subway cars in the world. That’s 23 unplanned, extra years of use. 
+New York subway trains, nicknamed the Brightliners for their shiny unpainted exteriors, were built to last 35 years. When they were finally retired from service in January 2022, they had been riding the rails of New York City for 58 years and were the oldest operating subway cars in the world. That’s 23 unplanned, extra years of use. 
 
 Replacement parts were impossible to find; the firms that made them — the Budd Company, Pullman-Standard and Westinghouse — long gone. Components were well past their design life, mechanics plucked similar parts from retired vehicles or engineered substitutes. Maintenance is an improvisational process that relies on the know-how that long-time employees built up over years. 
 
 In a way, it was a small miracle that they lasted so long, an “anomaly,” as one mechanic put it. Except it wasn’t. It took committment and a lot of work from a lot of people, day after day, year after year. 
 
-Back in the 1980s MTA president David L. Gunn kicked off an ambitious overhaul of the crumbling, graffiti-covered subway. In 1990, this approach solidified as the "scheduled maintenance system". Every two to three months, more than 7,000 railcars are taken in for inspection with the goal of **catching problems before they happen.** That’s the difference between _maintenance_ and _repair_. Repair is when you fix something that’s already broken. **Maintenance is about making something last.**
+Back in the 1980s MTA president David L. Gunn kicked off an ambitious overhaul of the crumbling, graffiti-covered subway. In 1990, this approach became the "scheduled maintenance system". Every two to three months, more than 7,000 railcars are taken in for inspection with the goal of **catching problems before they happen.** That’s the difference between _maintenance_ and _repair_. Repair is when you fix something that’s already broken. **Maintenance is about making something last.**
 
 ## Proper Maintenance = Exceptional Lifespan
 
-Inca rope bridges are simple suspension bridges constructed by the Inca Empire. The bridges were an integral part of the Inca road system and exemplify Inca innovation in engineering. 
-
-The bridges were constructed using ichu grass. The grass deteriorated rapidly, the bridge's strength and reliability came from the fact that each cable was replaced every June by local villagers as part of their mit'a public service or obligation. Repairing these bridges was necessary but dangerous work, with those performing repairs often facing death.
+Inca rope bridges are simple suspension bridges constructed by the Inca Empire. The bridges were an integral part of the Inca road system were constructed using ichu grass. The grass deteriorated rapidly, the bridge's strength and reliability came from the fact that _each cable was replaced every June_ by local villagers as part of their mit'a public service or obligation. Repairing these bridges was necessary but dangerous work, with those performing repairs often facing death.
 
 Even though they were made of grass, because these bridges were maintained with such regularity and attention **they lasted centuries**, with some examples surviving today. 
 
 ![Inca Rope Bridge](/assets/blog/img/inca_bridge.jpg)
 
-More robust maintenance practices could help preserve modernity’s finest achievements, from artwork to public transit systems to power grids. But first maintenance must be valued, funded, and applied. Do we value maintenance enough to fund it properly?
+More robust maintenance practices could help preserve modernity’s finest achievements, from artwork to public transit systems to power grids while at the same time saving money. But first maintenance must be valued, funded, and applied. Do we value maintenance enough to fund it properly?
+
+>"Management will much rather invest in inventing a new, square wheel than fixing an old round one."
+>
+> <cite>&mdash; unknown software engineer</cite>
 
 ## Maintenance is Chronically Undervalued
 
 There is a Chinese proverb about a discussion between a king and a famous doctor. The well-known doctor explains to the king that his brother (who is also a doctor) is superior at medicine, but no one knows about him because he always treats small illnesses and sucessfully prevents them from evolving into terminal ones. So, people say "Oh he is a fine doctor, but he only treats minor illnesses".
 
-Maintenance chronically undervalued. It's one of the easiest things to cut when budgets get tight. Some legacy software systems have decades of underinvestment. This leads up to the inevitable "we have to replace it" discussion which somehow always goes better (even though its much more expensive and risky) than saying we have to invest in rehabilition and catch-up maintenance. 
+Maintenance is one of the easiest things to cut when budgets get tight. Some legacy software systems have _decades_ of underinvestment. This leads up to the inevitable "we have to replace it" discussion which somehow always goes better (even though its much more expensive and risky) than arguing that we have to invest in rehabilition and catch-up system maintenance. 
 
-Executives generally can't refuse "repair" - the system is broken and must be fixed. However, maintenance is a tough sell politically. It’s not strictly necessary — or at least it doesn’t seem to be until things start falling apart. It is so easy to divert maintenance budget into a halo project that gets an executive noticed and promoted before the long-term effects of underinvestment in maintenance become visible. Even worse the executive is also admired for reducing the costs of maintenance, or switching costs from "run" to "grow" while they are torpedoing the company under the waterline. 
-
->"Management will much rather invest in inventing a new, square wheel than fixing an old round one."
+Executives generally can't refuse "repair" - the system is broken and must be fixed. However, maintenance is a tough sell politically. It’s not strictly necessary — or at least it doesn’t seem to be until things start falling apart. It is so easy to divert maintenance budget into a halo project that gets an executive noticed (and possibly promoted) before the long-term effects of underinvestment in maintenance become visible. Even worse, the executive is also admired for reducing the costs of maintenance, or switching costs from "run" to "grow" while they are torpedoing the company under the waterline. 
 
 >"Most of the systems I work on rescuing are not badly built. They are badly maintained."
+>
+> <cite>&mdash; Marianne Bellotti, Kill it With Fire</cite>
 
 Maintenance is a process. It requires work, and work of a certain type. Whatever its ultimate goal — improved scalability, reliability, or speed — practical know-how and unheralded labor are required. 
 
@@ -70,14 +70,29 @@ Under capitalism, maintenance is an ambiguous proposition. There are plenty of c
 
 The work of maintenance is ultimately a way of parsing and knowing a thing and deciding, over and over, what it’s worth. “Maintenance should be seen as a noble craft.”
 
+## Risks of Replacing Software 
+
+Engineers prefer to replace or re-write a system rather than maintain it. It is usually much easier to convince a senior executive to fund a project to replace a problematic system by describing all the new features and capabilities that could be added. As discussed earlier, maintenance is not rewarded, incentivized, or praised.
+
+The incentives of individual praise aside, engineering teams tend to gravitate toward system rewrites because they incorrectly think of old systems as specs. They assume that since an old system works, all technical challenges and possible problems have been settled. The risks have been eliminated. They can focus on adding more features to the new system or make changes to the underlying architecture without worry. Either they do not perceive the ambiguity these changes introduce or they see such ambiguity positively, imagining only gains in performance and the potential for greater innovation.
+
+Rewrite or replacement plans do not take the form of redesigning the system using the same language or merely fixing a well-defined structural issue. The goal of full rewrites is to restore ambiguity and, therefore, engineering enthusiasm. They fail because the assumption that the old system can be used as a spec and be trusted to have diagnosed accurately and eliminated every risk is wrong.
+
+Even so, eventually the "replacement" project is funded (at a much higher expenditure than maintaining and rehabilitating the existing system). Everyone is excited about the the new system that will do "all the things". But what do you do with the old system while you’re building the new one? Some organizations choose to put the old system on “life support” and give it only the resources for patches and fixes necessary to keep the lights on. 
+
+Who gets to work on the new system, and who takes on the maintenance tasks of the old system? If the old system is written in older technology that the company is actively abandoning, the team maintaining the old system is essentially sitting around waiting to be fired. And don’t kid yourself, they know it. So if the people maintaining the old system are not participating in the creation of the new system, you should expect that they are also looking for new jobs. If they leave before your new system is operational, you lose both their expertise and their institutional knowledge.
+
+If the new project falls behind schedule (and it almost certainly will), the old system continues to degrade and knowledge continues to walk out the door. If the new project fails and is subsequently canceled, the gap between the old system and operational excellence has widened _significantly_ in the meantime.
+
+This explains why executives are loathe to cancel system replacement projects even when they are obviously years behind schedule and failing. Stopping the replacement project seems impossible because the legacy system is now so degraded that restoring it to operational excellence seems impossible. Plus, politically canceling a marquee project can be career suicide for the sponsoring executive. Much better to do "deep dives" and "assessments" why the project is failing and soldier on then cancel it. 
+
+The end state is not pretty.  The company now has two systems to operate. The new system will have limited functionality, unique errors and issues, and lower volumes so the "per unit cost" of the new system will be quite high. The older system, having lost it's best engineers and subject matter experts will still be running most of the volume, yet its maintenance budget will have been whittled down to nothing to redirect spending to implement (save?) the new system. Neither system will exhibit operational excellence, and both put the organization at significant risk in addition to the higher costs of running two systems.
 
 
 
 ---
 
-
-
-The trouble with this approach is what do you do with the old system while you’re building the new one? Some organizations choose to put the old system on “maintenance mode” and give it only the resources for patches and fixes necessary to keep the lights on. If the new project falls behind schedule (and it almost certainly will), the old system continues to degrade. If the new project fails and is subsequently canceled, the gap between the old system and operational excellence has widened significantly in the meantime.
+## Building Software to Last Forever
 
 Stewart Brand, the editor of the Whole Earth Catalog, helped popularize the concept that buildings have architectural "layers":
 
@@ -86,10 +101,15 @@ Stewart Brand, the editor of the Whole Earth Catalog, helped popularize the conc
   * SERVICES: Plumbing, electrical, etc. - changes every 7-15 years
   * SPACE PLAN: interior layout, walls, ceilings, floors, doors. changes every 3-10 years
 
-This concept also applies to software systems.  
+This concept also applies to software systems in a similar way.
+
+## Maintaining Software to Last Forever
+
+We know, for example, that iterating on existing solutions is much more likely to improve software than a full rewrite. The dangers of full rewrites have been documented.
 
 
 
+=====
 
 The articles describe three significant steps to replacing legacy systems successfully: understanding the desired outcomes, breaking the problem down, and delivering incrementally. Available design and process mapping patterns support these steps. This first installment focuses on the organisational structure and details the Extract Product Lines and Feature Parity patterns for problem decomposition.
 
@@ -106,15 +126,15 @@ Aiming for feature parity is often an underestimated goal and is not recommended
 ===
 
 - We know, for example, that iterating on existing solutions is more likely to improve software than a full rewrite. The dangers of full rewrites have been documented. Joel Spolsky of Fog Creek Software and Stack Overflow described them as “the single worst strategic mistake that any software company can make.” ([Location 955](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=955))
-- Initiatives to repair and restore operational excellence gradually, much the way one would fix up an old house, tend to have few volunteers among engineering teams. ([Location 971](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=971))
-- The incentives of individual praise aside, engineering teams tend to gravitate toward full rewrites because they incorrectly think of old systems as specs. They assume that since an old system works, all technical challenges and possible problems have been settled. The risks have been eliminated! They can add more features to the new system or make changes to the underlying architecture without worry. Either they do not perceive the ambiguity these changes introduce or they see such ambiguity positively, imagining only gains in performance and the potential for greater innovation. ([Location 980](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=980))
+-
+
 - Very few rewrite plans take the form of redesigning the system using the same language or merely fixing a well-defined structural issue. The goal of full rewrites is to restore ambiguity and, therefore, enthusiasm. They fail because the assumption that the old system can be used as a spec and be trusted to have diagnosed accurately and eliminated every risk is wrong. ([Location 990](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=990))
 - A big red flag is raised for me when people talk about the phases of their modernization plans in terms of which technologies they are going to use rather than what value they will add. ([Location 1067](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=1067))
 - For all that people talk about COBOL dying off, it is good at certain tasks. The problem with most old COBOL systems is that they were designed at a time when COBOL was the only option. If the goal is to get rid of COBOL, I start by sorting which parts of the system are in COBOL because COBOL is good at performing that task, and which parts are in COBOL because there were no other tools available. Once we have that mapping, we start by pulling the latter off into separate services that are written and designed using the technology we would choose for that task today. ([Location 1109](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=1109))
 - In 1983, Charles Perrow coined the term normal accidents to describe systems that were so prone to failure, no amount of safety procedures could eliminate accidents entirely. According to Perrow, normal accidents are not the product of bad technology or incompetent staff. Systems that experience normal accidents display two important characteristics. They are tightly coupled. When two separate components are dependent on each other, they are said to be coupled. In tightly coupled situations, there’s a high probability that changes with one component will affect the other. For example, if a change to one code base requires a corresponding change to another code base, the two repositories are tightly coupled. Loosely coupled components, on the other hand, are ones where changes made to one component don’t necessarily affect the other. Tightly coupled systems produce cascading effects. One change creates a response in another part of the system, which creates a response in another part of the system. Like a domino effect, parts of the system start executing without a human operator telling them to do so. If the system is simple, it is possible to anticipate how failure will happen and prevent it, which leads to the second characteristic of systems that experience normal accidents. They are complex. Big systems are often complex, but not all complex systems are big. Signs of complexity in software include the number of direct dependencies and the depth of the dependency tree, the number of integrations, the hierarchy of users and ability to delegate, the number of edge cases the system must control for, the amount of input from untrusted sources, the amount of legal variety in that input, and so on, and so forth. Computer systems naturally grow more complex as they age, because as they age, we tend to add more and more features to them, which increases at least a few of these characteristics. Computer systems also tend to start off tightly coupled and may in fact stay that way if priority is not given to refactoring the code occasionally. Tightly coupled and complex systems are prone to failure because the coupling produces cascading effects, and the complexity makes the direction and course of those cascades impossible to predict. ([Location 1210](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=1210))
 - When both observability and testing are lacking on your legacy system, observability comes first. Tests tell you only what won’t fail; monitoring tells you what is failing. ([Location 1311](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=1311))
 -  ([Location 1336](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=1336))
-- Who gets to work on the new system, and who takes on the maintenance tasks of the old system? If the old system is written in an obsolete technology relevant only to that particular system, the team maintaining the old system is essentially sitting around waiting to be fired. And don’t kid yourself, they know it. So if the people maintaining the old system are not participating in the creation of the new system, you should expect that they are also looking for new jobs. If they leave before your new system is operational, you lose both their expertise and their institutional knowledge. ([Location 1345](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=1345))
+-
 
 
 
