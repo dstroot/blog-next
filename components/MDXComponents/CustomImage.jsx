@@ -1,6 +1,5 @@
 import { cn } from '../../lib/utils';
 import { useState } from 'react';
-// import Image from 'next/image';
 import Image from 'next/image';
 
 export const CustomImage = (props) => {
@@ -16,7 +15,6 @@ export const CustomImage = (props) => {
       // eslint-disable-next-line jsx-a11y/alt-text
       <Image
         {...props}
-        layout='responsive'
         loading='lazy'
         className={cn(
           'duration-300 ease-in-out group-hover:opacity-75',
