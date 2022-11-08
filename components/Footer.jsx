@@ -38,22 +38,15 @@ export const Footer = () => {
                 Tools
               </span>
 
-              <Link href='/search'>
-                <div className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Search</div>
+              <Link className='mt-2 font-medium md:mt-0 hover:text-gray-500' href='/search'>
+                Search
               </Link>
-              <Link href='/archive'>
-                <div className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Post Archive</div>
+              <Link className='mt-2 font-medium md:mt-0 hover:text-gray-500' href='/archive'>
+                Post Archive
               </Link>
-              <Link href='/snippets'>
-                <div className='mt-2 font-medium md:mt-0 hover:text-gray-500'>Code Snippets</div>
+              <Link className='mt-2 font-medium md:mt-0 hover:text-gray-500' href='/snippets'>
+                Code Snippets
               </Link>
-
-              {/* <a
-                href='https://dstroot.github.io/readme/'
-                className='font-medium hover:text-gray-500'
-              >
-                User Guide
-              </a> */}
             </div>
           </div>
         </div>
@@ -66,19 +59,10 @@ export const Footer = () => {
             Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
             {year.getFullYear()}
             {','}&nbsp;
-            <Link href='/analytics'>
-              <div className='font-medium'>Dan Stroot</div>
+            <Link className='font-medium' href='/analytics'>
+              Dan Stroot
             </Link>
-            {'.'}
           </div>
-          {/* <div className='flex items-center text-xs font-medium dark:text-gray-400 hover:underline'>
-            <Link
-              href='/archive'
-              className='font-medium dark:text-gray-400 hover:underline hover:text-gray-500'
-            >
-              <a>Post Archive</a>
-            </Link>
-          </div> */}
           <div className='flex items-center order-1 my-3 space-x-4 text-2xl md:order-2 md:my-0'>
             <SocialLinks />
           </div>
