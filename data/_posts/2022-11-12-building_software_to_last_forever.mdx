@@ -3,7 +3,7 @@ title: Making Software Last Forever
 excerpt: "Engineering teams love full rewrites because they incorrectly think of old systems as specs. They assume that since the old system works, all functional aspects have been settled. Design risks have been eliminated! They can focus purely on the technical side, add more features to the new system, or make changes to the underlying architecture without worry. However, the belief that new code is better than old is patently absurd. Old code has been used. It has been tested. Lots of bugs have been found, and more importantly fixed. So what path to take?"
 coverImage: /assets/blog/img/billg.jpeg
 date: '2022-11-12'
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
@@ -14,9 +14,8 @@ seoURL:
 
 Outline
 
-Why can't software last forever?
-Maintenance vs Repair
-Proper maintenance needed to make software last
+- Why can't software last forever?
+- Maintenance vs Repair/Proper maintenance needed to make software last
 
 
 
@@ -26,9 +25,9 @@ How many of us have bought a new home and moved because our prior home was not q
 
 Further, imagine you had a team of ten people constantly working on your home, improving it and keeping it updated, for the last fifteen years. You'd have an investment of 150 person/years in your existing home (10 people x 15 years). If each person was paid the equivalent of a software developer (we'll use $200k to include benefits, office space, leadership, etc.) you'd have an investment of **$30 million dollars** (150 person/years x $200,000). What would make you walk away from that investment?
 
-When companies decide to re-write or replace an existing software application because it is no longer meeting their needs, they are making a similar decision. Existing software must be abandoned (along with its cumulative investment) for "something new and better". Yet the belief that new code is better than old is patently absurd. Old code has been used. It has been battle-tested. Lots of bugs have been found, and more importantly fixed. It has weathered and withstood the test of time.
+When companies decide to re-write or replace an existing software application because it is no longer meeting their needs, they are making a similar decision. Existing software must be abandoned (along with its cumulative investment) for "something new and better". Yet the belief that new code is better than old is patently absurd. Old code has been used. It has been battle-tested. Bugs have been found (lots), and more importantly fixed. It has weathered and withstood the test of time.
 
-Joel Spolsky of Fog Creek Software and Stack Overflow describes system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.” Why throw away a working system? We know from both research and experience that iterating and maintaining existing solutions is much more likely, and less expensive way to improve software.
+Joel Spolsky of Fog Creek Software and Stack Overflow describes system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.” Why throw away a working system? We know from both research and experience that iterating and maintaining existing solutions is a less risky, and less expensive, way to improve software.
 
 Why can't software last forever? It's not made of wood, concrete or steel. It doesn't rot, weather, or rust. A working algorithm is a working algorithm. Technology doesn’t need to be beautiful or to impress other people to be effective, and all technologists are ultimately in the business of producing effective technology.
 
@@ -40,7 +39,7 @@ Replacement parts were impossible to find; the firms that made them — the Budd
 
 Back in the 1980s MTA president David L. Gunn kicked off an ambitious overhaul of the crumbling, graffiti-covered subway. In 1990, this approach became the "scheduled maintenance system". Every two to three months, more than 7,000 railcars are taken in for inspection with the goal of **catching problems before they happen.** That’s the difference between _maintenance_ and _repair_. Repair is fixing something that’s already broken. **Maintenance is about making something last.**
 
-There is a reason that aircraft don’t regularly fail, despite there being millions of flights per year on aircraft many years old with thousands of moving parts: _maintenance_. Airlines recognize that the value of addressing problems _before they happen_. Much like the New York MTA's scheduled maintenance system, Airlines have spent years (and millions of dollars) creating a system called "progressive maintenance" that works, very, very well. 
+Airlines recognize that the value of addressing problems _before they happen_. Much like the New York MTA's scheduled maintenance system, Airlines have spent years (and millions of dollars) creating a system called "progressive maintenance" that works, very, very well. 
 
 Commercial aircraft are inspected **at least once every two days**. Engines, hydraulics, environmental, and electrical systems all have additional maintenance schedules. A "heavy" maintenance inspection occurs once every few years. This process maintains the aircraft's service life over decades. 
 
@@ -66,9 +65,9 @@ Executives generally can't refuse "repair" work because the system is broken and
 
 Maintenance is a process. It requires work, and work of a certain type. Whatever its ultimate goal — improved scalability, reliability, or performance — practical know-how, business knowledge, and skilled labor are required. 
 
-Once a system degrades it is an even bigger challenge to invest in deferred maintenance (or "technical debt"). No one wants to pay for it and initiatives to repair and restore operational excellence gradually, much the way one would fix up an old house, tend to have few volunteers among engineering teams. No one gets noticed doing maintenance. No one gets promoted because of maintenance. Instead, these are the jobs that are either eliminated or offshored to less skilled, less knowledgeable, and of course cheaper labor. 
+Once a system degrades it is an even bigger challenge to fund deferred maintenance (or "technical debt"). No one wants to pay for it. Initiatives to repair and restore operational excellence gradually, much the way one would fix up an old house, tend to have few volunteers among engineering teams. No one gets noticed doing maintenance. No one gets promoted because of maintenance. Instead, these are the jobs that are either eliminated or offshored to less skilled, less knowledgeable, and of course cheaper labor. 
 
-Recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, force us to treat our homes more dearly. Similarly, price increases for software engineers should force companies to treat software more dearly. This kind of pragmatism is sorely needed by companies that are trying to be frugal.
+Recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, force us to treat our homes more dearly. Similarly, price increases for software engineers should force companies to treat existing software more dearly. This kind of pragmatism is sorely needed by companies that are trying to be frugal.
 
 Maintenance mostly happens out of sight, mysteriously. If we notice it, it’s a nuisance. When road crews block off sections of highway to fix cracks or potholes, we treat it as an obstruction, not a vital and necessary process. When your refrigerator needs maintenance you defer it, hoping maybe you can just buy a new one later. If you wait long enough and your refrigerator breaks down, you get upset at the cost of the repair bill - not at yourself for deferring the maintenance. 
 
@@ -80,11 +79,13 @@ Engineers strongly prefer to replace or re-write a system rather than maintain i
 
 The incentives of individual praise aside, engineering teams tend to gravitate toward system rewrites because they incorrectly think of old systems as specs. They assume that since an old system works, all technical challenges and possible problems have been settled. The risks have been eliminated. They can focus on adding more features to the new system or make changes to the underlying architecture without worry. Either they do not perceive the ambiguity these changes introduce, or they see such ambiguity positively, imagining only gains in performance and the potential for greater innovation.
 
-We are swapping a system that works and needs to be adjusted for an expensive and difficult migration to something unproven. It’s the minor adjustments to systems that have not been actively developed in a while that create the impression that failure is inevitable and push otherwise rational engineers toward doing rewrites when rewrites are not necessary.
+We are swapping a system that works and needs to be adjusted for an expensive and difficult migration to something unproven. It’s the minor adjustments to systems that have not been actively developed in a while that create the impression that failure is inevitable and push otherwise rational engineers toward doing rewrites when rewrites are not necessary. 
 
 Rewrite or replacement plans do not take the form of redesigning the system using the same language or merely fixing a well-defined structural issue. The goal of full replacements is to restore ambiguity and, therefore, engineering enthusiasm. They fail because the assumption that the old system can be used as a spec and be trusted to have diagnosed accurately and eliminated every risk is wrong.
 
-Even so, eventually the "replacement" project will be funded (at a much higher expenditure than maintaining and rehabilitating the existing system). Even if the executives are not listening to the engineers they will be listening to external consultants telling them they have a "burning platform" and they are falling behind. Everyone is excited about the new system that will do "all the things". But what do you do with the old system while you’re building the new one? Most organizations choose to put the old system on “life support” and give it only the resources for patches and fixes necessary to keep the lights on. 
+Even so, eventually the "replacement" project will be funded (at a much higher expenditure than maintaining and rehabilitating the existing system). Why not authorize that multimillion-dollar rewrite if the engineers  convince management the existing system is doomed? Even if the executives are not listening to the engineers they will be listening to external consultants telling them they have a "burning platform" and they are falling behind. 
+
+Everyone is excited about the new system that will do "all the things". But what do you do with the old system while you’re building the new one? Most organizations choose to put the old system on “life support” and give it only the resources for patches and fixes necessary to keep the lights on. 
 
 Who gets to work on the new system, and who takes on the maintenance tasks of the old system? If the old system is written in older technology that the company is actively abandoning, the team maintaining the old system is essentially sitting around waiting to be fired. And don’t kid yourself, they know it. So if the people maintaining the old system are not participating in the creation of the new system, you should expect that they are also looking for new jobs. If they leave before your new system is operational, you lose both their expertise and their institutional knowledge.
 
@@ -112,17 +113,17 @@ Many times I have found the technology team and the business users arguing over 
 
 ### Legacy System Modernization
 
-Due to factors discussed above, software does not always receive the proper amount of maintance to remain healthy. Bad software is unmaintained software. Eventually a larger modernization effort becomes necessary to restore a system to operational and functional excellence.
+Bad software is unmaintained software. Due to factors discussed above, software does not always receive the proper amount of maintance to remain healthy. Eventually a larger modernization effort (or replacement) becomes necessary to restore a system to operational and functional excellence.
 
-On the surface, each legacy modernization project starts off feeling easy. The organization put a system into production once, and kept it running for years. All the modernizing team should need to do is simply repeat that process using better technology, the benefit of hindsight, and improved tooling. It should be simple. But, because people do not see the hidden technical challenges they are about to uncover, they also assume the work will be boring. There’s little glory to be had re=implementing a solved problem. 
+Legacy modernization projects start off feeling easy. The organization once had a reliable working system, and kept it running for years. All the modernizing team should need to do is simply rebuild it using better technology, the benefit of hindsight, and improved tooling. It should be simple. But, because people do not see the hidden technical challenges they are about to uncover, they also assume the work will be boring. There’s little glory to be had re-implementing a solved problem. 
 
-The really hard part about legacy modernization is the "system around the system". The organization, its communication structures, its politics, and its incentives are all intertwined with the technical product in such a way that to improve the product, you must do it by turning the gears of this other, complex, undocumented system. Pay attention to politics. Technology is at most only 50% of the legacy problem, ways of working, organization structure and leadership are just as important to success.
+Modernization projects take months, if not years of work. Keeping a team of engineers focused, inspired, and motivated from beginning to end is difficult. Keeping their senior leadership prepared to invest in what is, in effect, something they already have is a huge challenge. Creating momentum and sustaining it are where most modernization projects fail. 
+
+The hard part about legacy modernization is the "system around the system". The organization, its communication structures, its politics, and its incentives are all intertwined with the technical product in such a way that to improve the product, you must do it by turning the gears of this other, complex, undocumented system. Pay attention to politics and culture. Technology is at most only 50% of the legacy problem, ways of working, organization structure and leadership are just as important to success.
 
 An organization about to embark on such an undertaking craves new features, new functionality, and new benefits. Modernization projects are typically the ones organizations just want to get out of the way, so they usually launch into them unprepared for the time and resource commitments they require. 
 
-Engineers must be told that the biggest problems we have to solve are people problems. Modernization projects take months, if not years of work. Keeping a team of engineers focused, inspired, and motivated from beginning to end is difficult. Keeping their senior leadership prepared to invest in what is, in effect, something they already have is a huge challenge. Creating momentum and sustaining it are where most modernization projects fail. 
-
-To do this, you need to provide significant value right away, as soon as possible, so that you overcome people’s natural skepticism and get them to buy in. The important word in the phrase "proof of concept" is _proof_. You need to prove to people that success is possible and worth doing. It can't be just an MVP, as [MVPs are dangerous.](/posts/2021-12-27-dangerous-mvps)
+To do this, you need to provide significant value right away, as soon as possible, so that you overcome people’s natural skepticism and get them to buy in. The important word in the phrase "proof of concept" is _proof_. You need to prove to people that success is possible and worth doing. It can't be just an MVP, because [MVPs are dangerous.](/posts/2021-12-27-dangerous-mvps)
 
 Large, expensive projects kicked off to fix things that are not obviously broken break trust with the nontechnical parts of the organization. It inconveniences colleagues, frustrates them, and sometimes confuses them. A modernization effort needs buy-in beyond engineering to be successful. Spending time and money on changes that will have no immediate visible impact on the business or mission side of operations makes it hard to secure that buy-in in the future.
 
