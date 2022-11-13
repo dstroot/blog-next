@@ -12,8 +12,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.208.0",
-    "@aws-sdk/lib-dynamodb": "^3.208.0",
+    "@aws-sdk/client-dynamodb": "^3.209.0",
+    "@aws-sdk/lib-dynamodb": "^3.209.0",
     "@google-analytics/data": "^3.1.1",
     "@headlessui/react": "^1.7.4",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
@@ -61,7 +61,7 @@
     "eslint-config-next": "^13.0.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-mdx": "^2.0.5",
-    "next-sitemap": "^3.1.30",
+    "next-sitemap": "^3.1.31",
     "postcss": "^8.4.19",
     "postcss-import": "^15.0.0",
     "prettier": "^2.7.1",
