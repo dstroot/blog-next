@@ -7,6 +7,7 @@ import { CMS_NAME, TAGLINE } from '../../../lib/constants';
 // see: https://og-playground.vercel.app/ to test images
 // docs: https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation
 // test: https://www.opengraph.xyz/url/https%3A%2F%2Fwww.danstroot.com
+// test: https://opengraph.dev/panel?url=https%3A%2F%2Fwww.danstroot.com
 // example repo: https://github.com/scastiel/github-business-card
 
 export const config = {

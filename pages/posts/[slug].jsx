@@ -15,7 +15,7 @@ export default function Index({ code, frontMatter }) {
     title: `${CMS_NAME} · ${frontMatter.title}`,
     url: `${BASE_URL}/posts/${frontMatter.slug}`,
     description: frontMatter.excerpt,
-    image: `${BASE_URL}${frontMatter.coverImage}`,
+    image: `${BASE_URL}${frontMatter.ogImage.url}`,
     publishedDate: frontMatter.date,
     author: frontMatter.author.name,
     ogType: 'article',
