@@ -16,11 +16,10 @@ export const Footer = () => {
           */}
           <div className='flex-none mb-4 md:mr-8 md:mb-0'>
             <Image
-              src='/assets/blog/authors/dan.jpeg?auto=format'
+              src='/assets/blog/authors/dan.jpeg'
               alt={CMS_NAME}
               width={85}
               height={85}
-              layout='fixed'
               className='rounded-full'
             />
           </div>
