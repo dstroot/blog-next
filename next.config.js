@@ -11,8 +11,15 @@ module.exports = {
     // !When loader is set to an external image service, the domains config is ignored!
     // loader: 'imgix',
     // path: 'https://danstroot.imgix.net',
-    domains: [
-      'pbs.twimg.com', // Twitter Profile Pictures
+    // domains: [
+    //   'pbs.twimg.com/', // Twitter Profile Pictures
+    // ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        pathname: '/profile_images/**',
+      },
     ],
   },
   async headers() {
