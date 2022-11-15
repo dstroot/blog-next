@@ -12,8 +12,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.210.0",
-    "@aws-sdk/lib-dynamodb": "^3.210.0",
+    "@aws-sdk/client-dynamodb": "^3.211.0",
+    "@aws-sdk/lib-dynamodb": "^3.211.0",
     "@google-analytics/data": "^3.1.1",
     "@headlessui/react": "^1.7.4",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
@@ -25,7 +25,7 @@
     "date-fns": "2.29.3",
     "esbuild": "^0.15.14",
     "feed": "^4.2.2",
-    "framer-motion": "^7.6.6",
+    "framer-motion": "^7.6.7",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.3",
     "mdx-bundler": "^9.0.1",
