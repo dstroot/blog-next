@@ -19,6 +19,7 @@ export const Tweet = ({ tweet }) => {
   const retweetUrl = `https://twitter.com/intent/retweet?tweet_id=${id}`;
   const replyUrl = `https://twitter.com/intent/tweet?in_reply_to=${id}`;
   const tweetUrl = `https://twitter.com/${author.username}/status/${id}`;
+  const followUrl = `https://twitter.com/intent/follow?screen_name=${author.username}`;
 
   // make embedded URLs clickable
   const URLify = (string) => {
@@ -78,11 +79,12 @@ export const Tweet = ({ tweet }) => {
       <div className='flex'>
         <a className='flex w-12 h-12' href={authorUrl} target='_blank' rel='noopener noreferrer'>
           <Image
-            alt={author.username}
-            height={48}
-            width={48}
             src={image}
-            className='rounded-full'
+            alt={author.username}
+            width={48}
+            height={48}
+            // fill
+            className='w-12 h-12 !m-0 rounded-full'
           />
         </a>
         <a
@@ -110,6 +112,15 @@ export const Tweet = ({ tweet }) => {
           </span>
           <span className='!text-gray-500 text-sm' title={`@${author.username}`}>
             @{author.username}
+            {' · '}
+            <a
+              className='text-sm !text-[#1d9bf0] !font-bold'
+              href={followUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Follow
+            </a>
           </span>
         </a>
         <a className='ml-auto' href={authorUrl} target='_blank' rel='noopener noreferrer'>
