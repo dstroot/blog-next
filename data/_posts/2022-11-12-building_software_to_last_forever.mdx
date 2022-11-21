@@ -64,11 +64,33 @@ Finally, maintenance work is typically an operational cost, yet building a new n
 
 Once a system degrades it is an even bigger challenge to fund deferred maintenance (or "technical debt"). No one plans for it, no one wants to pay for it, and no one even wants to do it. Initiatives to repair and restore operational excellence gradually, much the way one would fix up an old house, tend to have few volunteers among engineering teams. No one gets noticed doing maintenance. No one gets promoted because of maintenance. Instead, these are the jobs that are either eliminated or offshored to less skilled, less knowledgeable, and of course cheaper labor. 
 
-Recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, force us to treat our homes more dearly. Similarly, price increases for software engineers should force companies to treat existing software more dearly. This kind of pragmatism is sorely needed by companies that are trying to be frugal.
-
 Maintenance mostly happens out of sight, mysteriously. If we notice it, it’s a nuisance. When road crews block off sections of highway to fix cracks or potholes, we treat it as an obstruction, not a vital and necessary process. When your refrigerator needs maintenance you defer it, hoping maybe you can just buy a new one later. If you wait long enough and your refrigerator breaks down, you get upset at the cost of the repair bill - not at yourself for deferring the maintenance. 
 
 This is especially true in the public sector: it’s almost impossible to get governmental action on, or voter interest in, spending on preventive maintenance, yet governments make seemly unlimited funds available once we have a disaster. We are okay spending a massive amount of money to fix a problem, but consistently resist spending a much smaller amount of money to prevent it; as a strategy this makes no sense. 
+
+Recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, force us to treat our homes more dearly. Similarly, price increases for software engineers should force companies to treat existing software more dearly. This kind of pragmatism is sorely needed by companies that are trying to be frugal.
+
+## Risks of Replacing Software Systems
+
+Engineers tend to prefer to replace or re-write a system rather than maintain it. They get to write a new story rather than edit someone else's. They will attempt to convince a senior executive to fund a project to replace a problematic system by describing all the new features and capabilities that could be added. As discussed earlier, maintenance is not rewarded, incentivized, or praised.
+
+The incentives of individual praise aside, engineering teams tend to gravitate toward system rewrites because they incorrectly think of old systems as specs. They assume that since an old system works, all technical challenges and possible problems have been settled. The risks have been eliminated. They can focus on adding more features to the new system or make changes to the underlying architecture without worry. Either they do not perceive the ambiguity these changes introduce, or they see such ambiguity positively, imagining only gains in performance and the potential for greater innovation.
+
+We are swapping a system that works and needs to be adjusted for an expensive and difficult migration to something unproven. It’s the minor adjustments to systems that have not been actively developed in a while that create the impression that failure is inevitable and push otherwise rational engineers toward doing rewrites when rewrites are not necessary. 
+
+Rewrite or replacement plans do not take the form of redesigning the system using the same language or merely fixing a well-defined structural issue. The goal of full replacements is to restore ambiguity and, therefore, engineering enthusiasm. They fail because the assumption that the old system can be used as a spec and be trusted to have diagnosed accurately and eliminated every risk is wrong.
+
+Even so, eventually the "replacement" project will be funded (at a much higher expenditure than rehabilitating the existing system). Why not authorize that multimillion-dollar rewrite if the engineers convince management the existing system is doomed? Even if the executives are not listening to the engineers, they will be listening to external consultants telling them they have a "burning platform" and they are falling behind. 
+
+Everyone is excited about the new system that will do "all the things". But what do you do with the old system while you’re building the new one? Most organizations choose to put the old system on “life support” and give it only the resources for patches and fixes necessary to keep the lights on. 
+
+Who gets to work on the new system, and who takes on the maintenance tasks of the old system? If the old system is written in older technology that the company is actively abandoning, the team maintaining the old system is essentially sitting around waiting to be fired. And don’t kid yourself, they know it. So, if the people maintaining the old system are not participating in the creation of the new system, you should expect that they are also looking for new jobs. If they leave before your new system is operational, you lose both their expertise and their institutional knowledge.
+
+If the new project falls behind schedule (and it almost certainly will), the existing system continues to degrade, and knowledge continues to walk out the door. If the new project fails and is subsequently canceled, the gap between the legacy system and operational excellence has widened _significantly_ in the meantime.
+
+This explains why executives are loathe to cancel system replacement projects even when they are obviously years behind schedule and failing to live up to expectations. Stopping the replacement project seems impossible because the legacy system is now so degraded that restoring it to operational excellence seems impossible. Plus, politically canceling a marquee project can be career suicide for the sponsoring executive(s). Much better to do "deep dives" and "assessments" on why the project is failing and soldier on than cancel it. 
+
+The interim state is not pretty.  The company now has two systems to operate. The new system will have high costs, limited functionality, new and unique errors and issues, and lower volumes (so the "per unit cost" of the new system will be quite high). The older system, having lost its best engineers and subject matter experts will still be running most of the business, yet its maintenance budget will have been whittled down to nothing to redirect spending to implement (save?) the new system. Neither system will exhibit operational excellence, and both put the organization at significant risk in addition to the higher costs and complexity of running two systems.
 
 ## How do you know when you aren't spending enough on maintenance?
 
@@ -95,27 +117,7 @@ What's the solution? Could it be possible to create some type of maintenance fun
 ### Third, how do you incent engineers to want to perform maintenance? 
 
 
-## Risks of Replacing Software 
 
-Engineers strongly prefer to replace or re-write a system rather than maintain it. It is usually much easier to convince a senior executive to fund a project to replace a problematic system by describing all the new features and capabilities that could be added. As discussed earlier, maintenance is not rewarded, incentivized, or praised.
-
-The incentives of individual praise aside, engineering teams tend to gravitate toward system rewrites because they incorrectly think of old systems as specs. They assume that since an old system works, all technical challenges and possible problems have been settled. The risks have been eliminated. They can focus on adding more features to the new system or make changes to the underlying architecture without worry. Either they do not perceive the ambiguity these changes introduce, or they see such ambiguity positively, imagining only gains in performance and the potential for greater innovation.
-
-We are swapping a system that works and needs to be adjusted for an expensive and difficult migration to something unproven. It’s the minor adjustments to systems that have not been actively developed in a while that create the impression that failure is inevitable and push otherwise rational engineers toward doing rewrites when rewrites are not necessary. 
-
-Rewrite or replacement plans do not take the form of redesigning the system using the same language or merely fixing a well-defined structural issue. The goal of full replacements is to restore ambiguity and, therefore, engineering enthusiasm. They fail because the assumption that the old system can be used as a spec and be trusted to have diagnosed accurately and eliminated every risk is wrong.
-
-Even so, eventually the "replacement" project will be funded (at a much higher expenditure than rehabilitating the existing system). Why not authorize that multimillion-dollar rewrite if the engineers convince management the existing system is doomed? Even if the executives are not listening to the engineers, they will be listening to external consultants telling them they have a "burning platform" and they are falling behind. 
-
-Everyone is excited about the new system that will do "all the things". But what do you do with the old system while you’re building the new one? Most organizations choose to put the old system on “life support” and give it only the resources for patches and fixes necessary to keep the lights on. 
-
-Who gets to work on the new system, and who takes on the maintenance tasks of the old system? If the old system is written in older technology that the company is actively abandoning, the team maintaining the old system is essentially sitting around waiting to be fired. And don’t kid yourself, they know it. So, if the people maintaining the old system are not participating in the creation of the new system, you should expect that they are also looking for new jobs. If they leave before your new system is operational, you lose both their expertise and their institutional knowledge.
-
-If the new project falls behind schedule (and it almost certainly will), the existing system continues to degrade, and knowledge continues to walk out the door. If the new project fails and is subsequently canceled, the gap between the legacy system and operational excellence has widened _significantly_ in the meantime.
-
-This explains why executives are loathe to cancel system replacement projects even when they are obviously years behind schedule and failing to live up to expectations. Stopping the replacement project seems impossible because the legacy system is now so degraded that restoring it to operational excellence seems impossible. Plus, politically canceling a marquee project can be career suicide for the sponsoring executive(s). Much better to do "deep dives" and "assessments" on why the project is failing and soldier on than cancel it. 
-
-The interim state is not pretty.  The company now has two systems to operate. The new system will have high costs, limited functionality, new and unique errors and issues, and lower volumes (so the "per unit cost" of the new system will be quite high). The older system, having lost its best engineers and subject matter experts will still be running most of the business, yet its maintenance budget will have been whittled down to nothing to redirect spending to implement (save?) the new system. Neither system will exhibit operational excellence, and both put the organization at significant risk in addition to the higher costs and complexity of running two systems.
 
 ## Maintaining Software to Last Forever
 
