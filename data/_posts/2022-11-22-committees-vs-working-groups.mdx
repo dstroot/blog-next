@@ -1,78 +1,93 @@
 ---
 title: Committees vs. Working Groups
-excerpt: "Engineering teams love full rewrites because they incorrectly think of old systems as specs. They assume that since the old system works, all functional aspects have been settled. Design risks have been eliminated! They can focus purely on the technical side, add more features to the new system, or make changes to the underlying architecture without worry. However, the belief that new code is better than old is patently absurd. Old code has been used. It has been tested. Lots of bugs have been found, and more importantly fixed. So what path to take?"
-coverImage: /assets/blog/img/committee2.jpg
+excerpt: "Working groups relax hierarchy to allow people to solve problems across organizational units, whereas committees both reflect and reinforce those organizational boundaries and hierarchies."
+coverImage: /assets/blog/img/committee3.jpg
 date: '2022-11-22'
 published: false
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/committee2.jpg
+  url: /assets/blog/img/committee3.jpg
 seoURL: 
 ---
 
-What are the differences between a working group and a committee? What is the correct way to apply these concepts to "getting things done"?
-
->"A camel is a horse, but designed by committee."
-
 _Committees of twenty<br/>Deliberate plenty;<br/>Committees of ten<br/>Act now and then;<br/>But most jobs are done<br/>By committees of one._
 
-Working groups relax hierarchy to allow people to solve problems across organizational units, whereas committees both reflect and reinforce those organizational boundaries and hierarchies.
+What are the differences between a committee and a working group? Working groups relax hierarchy to allow people to solve problems across organizational units, whereas committees both reflect and reinforce those organizational boundaries and hierarchies.
 
-Working groups are typically initiated and staffed by people on the implementation layer of the organization. A committee is formed to advise an audience external to the committee itself, typically someone in senior leadership. Whereas the working group is open to those who consider themselves operating in the same space as the working group’s topic area, committees are selected by the entity they will be advising, and typically closed off to everyone else.
+Working groups are typically initiated and staffed by people within the "implementation layer" of an organization. A committee is formed to advise an audience external to the committee itself, typically someone in senior leadership. Whereas the working group is open to those who consider themselves operating in the same space as the working group’s problem area, committees are selected by the person or entity they will be advising, and typically are closed off to everyone else.
 
 The important takeaway here is **working groups relax organizational boundaries** while **committees reinforce them**. 
+
+## Distinguishing Characteristics
 
 | Committee | Working Group |
 |-----------|---------------|
 | Closed Membership | Open to all who want to contribute |
-| Members are appointed | Members Volunteer (usually) |
-| Findings and feedback are played back to the sponsor(s) for action and decision-making | Team decides |
+| Members are appointed | Members volunteer (usually) |
+| Findings and feedback are relayed to the sponsor(s) for decision-making | Group collaborates, individuals decide and act |
 | Fact finding | Action/solution bias |
+| Responsible | Highly accountable |
+| Deliver a report | Deliver a fix |
+| May be political | Politics will stop progress |
+| Executives | Engineers |
+| Write meeting minutes | Wiki and Teams Channel |
+| Chairperson | Facilitator |
 
+## Effective Working Groups
 
->"Committees are where good ideas go to die."
+1. **Have a an exceptionally clear goal.** "Restore the payroll system" is clear. "Improve Innovation" is not - and deserves an eyeroll. "Design Excellence" is not - hand that one over to a committee. 
+
+    A working group is a defined set of people, usually coming from multiple teams or disciplines, with a clear problem to overcome. First and foremost, working groups are created to solve a _specific problem_ facing an organization. When the group is created, make sure the goal is clear and measurable. Or, put another way - what is the definition of "done" when the working group will disband?
+
+2. **Staffed with people who actually have the power to fix things.** 
+
+    If code is broken the group needs software engineers, if hardware has failed it needs infrastructure engineers. The working group needs all the skills to diagnose, fix, test and migrate a solution. You know what I mean - people who _get stuff done_.
+
+3. **Have a facilitator.**
+
+    The facilitator runs meetings and keeps the group moving forward. Without a clear facilitator, meetings will become ineffective. A facilitator’s job isn’t to say yes or no; the facilitator isn’t the “decider”. Facilitation is about making sure that progress toward goals is being made. 
+    
+    Oh, and the facilitator doesn’t have to be a manager; facilitation can be a great leadership opportunity for individual contributors. It gives them an opportunity to flex some organization and communication muscles in a different capacity than they might be used to in their day-to-day work.
+    
+    Meeting cadence is ideally "as needed". A working group tackling a critical outage will meet several times a day.
+
+5. **Operate transparently.**
+
+    Since the problem you’re solving can span your whole organization, chances are that other people outside of the group will be very invested in the work that the group does. The group has to find ways to broadly share progress, get feedback, and operate transparently. Some methods for creating transparency include:
+
+    - Creating a Teams or Slack channel
+    - Sending daily or weekly update emails
+    - Creating a wiki for the group to use to document ideas and progress
+
 
 ![Working Group](/assets/blog/img/working_group.jpg)
 
 ## When is a working group not a working group?
 
-When it's full of senior executives. Sometimes when a disaster has occurred, malware has penetrated your defenses, or worse, ransomware, the senior exectives get very involved. This has the unintended effect of slowing the engineers down who are attempting to resolve the issue. 
+1. **When it's just another meeting.**
 
-I have, from time to time, run war rooms filled with senior executives. It was a tactic I resorted to when the organization was in such a state of panic that senior leadership members were micromanaging their teams. Software engineers can’t fix problems if they spend all their time in meetings giving their managers updates about the problems. The boot has to be moved off their necks. 
+    Some "working groups" are a just a group of people meeting on a specific topic with no real accountability or urgency. Study the cadence, topics, and invite lists of meetings. Too often, meetings are maladapted attempts to solve problems. So, if you want to know what parts of a project or organization are suffering the most, pay attention to what the team is having meetings about, how often meetings are held, and who is being dragged into those meetings. 
+    
+    In particular, look for meetings with long invite lists. Large meetings are less effective than small meetings, but they do convincingly spread the blame around by giving everyone the impression that all parties were consulted, and all opinions were explored. 
 
-In that situation, my team would typically run two war rooms: one where the engineers were solving problems together (an actual working group) and one outfitted with lots of fancy dashboards where I was babysitting the senior executives (not an actual working group). One of the most valuable skills a leader can have is knowing when to get out of the way. 
+    Meetings with a regular cadence and with ever-expanding invite lists are _not_ working groups but do suggest something is wrong in that area of the project.
 
-## When do you have too many working groups?
+2. **When it's full of senior executives.** 
 
-Meetings slow down work, which almost always leads to more meetings. Some "working groups" are a just a group of people meeting on a specific topic with no real accountability or urgency. Maybe because they perceive the problem to be unsolvable at their level. 
+    Sometimes when something bad has occurred (e.g., malware has penetrated your defenses, or a key system is down) senior executives suddenly get very involved. This has the unintended effect of slowing the engineers down who are attempting to resolve the issue. 
 
-Study the cadence, topics, and invite lists of meetings. Too often, meetings are maladapted attempts to solve problems. So if you want to know what parts of the project or organization are suffering the most, pay attention to what the team is having meetings about, how often meetings are held, and who is being dragged into those meetings. In particular, look for meetings with long invite lists. Large meetings are less effective than small meetings, but they do convincingly spread the blame around by giving everyone the impression that all parties were consulted and all opinions were explored. Meetings with ever-expanding invite lists suggest something is wrong in that area of the project.
+    Sometimes the organization is in such a state of panic that senior leadership members are micromanaging their teams. Software engineers can’t fix problems if they spend all their time in meetings giving their managers updates about the problems. The boot must be moved off their necks. 
 
+    In that situation, I would run two war rooms: one where the engineers were solving problems together (an actual working group) and one where I was babysitting the senior executives (not an actual working group). Voila!
 
-
-The people in the war room of our project were a working group. The people in the war room of the failed project were a committee. 
-
-Remember that we tend to think of failure as bad luck and success as skill. We do postmortems on failure because we’re likely to see them as complex scenarios with a variety of contributing factors. We assume that success happens for simple, straightforward reasons. In reality, success is no more or less complex than failure. You should use the same methodology to learn from success that you use to learn from failure. 
-
-
-
-Meetings slow down work, which almost always leads to more meetings. 
-
-
-### References
-
-- [Enterprise modernization for insurers](https://www.thoughtworks.com/en-au/insights/blog/legacy-modernization/enterprise-modernization-insurers)
-- [For insurance companies - the day of digital reckoning](https://media.bain.com/Images/BAIN_BRIEF_For_insurance_companies_the_day_of_digital_reckoning.pdf)
-- [Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)
-- [Patterns of Legacy Displacement](https://martinfowler.com/articles/patterns-legacy-displacement/)
-- [Kill It with Fire: Manage Aging Computer Systems (and Future Proof Modern Ones)](https://www.amazon.com/Kill-Fire-Manage-Computer-Systems/dp/1718501188) by Marianne Bellotti
+3. **When the desired outcome is not _crystal_ clear.**
 
 ---
 
-Image Credit: **Bill Gates, CEO of Microsoft, holds Windows 1.0 floppy discs.**
+Image Credit: **The House select committee holding a public hearing on January 6th events.**
 
 <span className="text-sm">
-(Photo by Deborah Feingold/Corbis via Getty Images) Software evolves. The underlying hardware, CPU, memory and storage evolves. The operating system evolves. Of course the software we use must evolves as well. This was the release of Windows 1.0. The beginning. 
+(Photo by Jason Andrew for The New York Times) After spending nearly a year investigating the Jan. 6, 2021 attack on the U.S. Capitol, the House select committee that was tasked with scrutinizing the riot is holding a series of public hearings.
 </span>

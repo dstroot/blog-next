@@ -23,7 +23,7 @@
     "@vercel/og": "^0.0.20",
     "algoliasearch": "^4.14.2",
     "date-fns": "2.29.3",
-    "esbuild": "^0.15.14",
+    "esbuild": "^0.15.15",
     "feed": "^4.2.2",
     "framer-motion": "^7.6.7",
     "gray-matter": "^4.0.3",
