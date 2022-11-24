@@ -25,7 +25,7 @@
     "date-fns": "2.29.3",
     "esbuild": "^0.15.15",
     "feed": "^4.2.2",
-    "framer-motion": "^7.6.9",
+    "framer-motion": "^7.6.12",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.3",
     "mdx-bundler": "^9.0.1",
