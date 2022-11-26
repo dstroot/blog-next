@@ -22,6 +22,16 @@ Joel Spolsky of Fog Creek Software and Stack Overflow describes system re-writes
 
 Why can't software last forever? It's not made of wood, concrete, or steel. It doesn't rot, weather, or rust. A working algorithm is a working algorithm. Technology doesn’t need to be beautiful or to impress other people to be effective, and all technologists are ultimately in the business of producing effective technology.
 
+## The World's Oldest Software Systems
+
+According to the [Guiness Book of World Records](https://www.guinnessworldrecords.com/world-records/636196-oldest-software-system-in-continuous-use) the oldest software system in use is likely either the SABRE Airline Reservation System (introduced in 1960), or the IRS Individual Master File (IMF) and Business Master File (BMF) introduced in 1962–63. The uncertainty lies in proving continuity from the earliest versions of these programs to their present-day equivalents. 
+
+The IRS systems are the more probable candidates. As much as 20 million lines of the IMF's code is reportedly written in Assembler – a major obstacle to any modernization, as this code cannot be run on anything other than an IBM mainframe.
+
+On the other hand, in 2020 Sabre signed a [ten year deal with Google](https://www.sabre.com/insights/releases/sabre-forges-10-year-partnership-with-google-to-build-the-future-of-travel/) to migrate SABRE to Google's cloud infratstructure. So it appears the title will likely remain with the IRS systems.
+
+What is the secret to the long lifespan of these systems? Shouldn't companies with very long lifespan products (annuities, life insurance, etc.) study these cases? After all, they need systems that last most of a human lifespan. 
+
 ## Maintenance is About Making Something Last
 
 New York subway trains, nicknamed the Brightliners for their shiny unpainted exteriors, were introduced in 1964 and built to last 35 years. When they were finally retired from service in January 2022, they had been riding the rails of New York City for 58 years and were the oldest operating subway cars in the world. That’s 23 unplanned, extra years of use. 
@@ -44,7 +54,7 @@ The most amazing story of the power of maintenance shows that even stuctures mad
 
 Even though they were made of grass, these bridges were maintained with such regularity and attention **they lasted centuries**
 
-## Unforunately, Maintenance is Chronically Undervalued
+## Unfortunately, Maintenance is Chronically Undervalued
 
 There is a Chinese proverb about a discussion between a king and a famous doctor. The well-known doctor explains to the king that his brother (who is also a doctor) is superior at medicine, but he is unknown because he always successfully treats small illnesses, preventing them from evolving into terminal ones. So, people say "Oh he is a fine doctor, but he only treats minor illnesses". It's true: [Nobody Ever Gets Credit for Fixing Problems that Never Happened.](https://web.mit.edu/nelsonr/www/Repenning=Sterman_CMR_su01_.pdf)
 
@@ -56,7 +66,7 @@ The other more insidious problem is conflating enhancement work with maintenance
 
 When we speak about software the users can't even see "the bald tires" - they only thing they see, or experience (and value), are new features and capabilities. Can you imagine the pressure to add new features, compared to maintenance work, in an organization? Budget **always** swings away from maintenance work towards enhancements.
 
-Finally, maintenance work is typically an operational cost, yet building a new new system, or large feature, can often be capitalized and depreciated over many years. Thus making the future costs someone else's problem in many cases.
+Finally, maintenance work is typically an operational cost, yet building a new new system, or large new feature, can often be capitalized and depreciated over many years. Thus making the future costs someone else's problem in many cases.
 
 >"Most of the systems I work on rescuing are not badly built. They are badly maintained."
 >
@@ -252,7 +262,30 @@ In a simple example of coupling imagine software that tightly links three compon
 
 =====
 
+--
 
+The planning isn't the issue, it's the conviction, resolve, determination...whatever you want to call it.
+
+COBOL modernization is quite expensive and fraught with major risk. You're talking about multi-year efforts where the key players who initiate the effort are often not around to see it through. Limited legacy resources, poor-to-absent documentation, mission critical systems...it's a mess no one internally wants to touch or take the fall for. MicroFocus, Blu Age (now part of AWS), TSRI, and plenty of other companies are happy to take your money and tell you it can be done, and it certainly can be done technically.
+
+The reality is the cost benefit is often years down the line, so keeping the right people around to sustain the effort and see it through financially and technically is the tallest of enterprise orders. So it's the old two-step: 1) Pay IBM for another three years of support and licensing and 2) Go through the motions of migration planning then repeat Step 1.
+
+--
+
+It's funny how if you ask people about forward-looking systems today, they have either learned mistruths or haven't learned enough about the history of computing to picture much that's reasonable.
+"Java!" used to be talked about as a good way to create software that you could run in the future, but anyone who has had to keep around old laptops / old VMs to run ancient Java to handle KVMs or device management tools knows how ridiculous an expectation about the stability of Java can be.
+
+"Windows!" is funny, because I can't tell you the number of places that have an ancient Windows PC that has either been repaired or carefully replaced with new enough, yet old enough hardware to still run Windows 2000 or XP, because copy protection is stupid, and / or because drivers for specific hardware can't be updated or run on newer Windows, and / or because the software can't be compiled and run on newer Windows without tons of work.
+
+On the other hand, you can take large, complicated programs from the 1980s written in C and compile them on a modern Unix computer without issues, even when the modern computer is running architectures which hadn't even been dreamt of when the software was written...
+
+--
+
+But I think you're forgetting how much code is written to C89. How much of bash, for instance, is ancient, with updates that avoid newer toolchain features so that it can be as portable as possible?
+
+Yes, people don't often write stuff with portability as a goal at the beginning, but once something is relatively portable, it stays that way. Lots of code that wasn't poorly written made it from all-the-world's-a-VAX to i386, from i386 to amd64, and now ARM and aarch64, with a minimum of extra effort. There just had to be a little effort to NOT program like a jerk, which, as funny as it is, is still an issue now.
+
+I'm running Pine as my daily email program, which was written in 1989 and hasn't had any real updates since 2005. New architecture? Compile it. Lots of modern software started out as C software from the 1980s.
 
 - 
 
