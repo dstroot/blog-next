@@ -12,8 +12,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.222.0",
-    "@aws-sdk/lib-dynamodb": "^3.222.0",
+    "@aws-sdk/client-dynamodb": "^3.223.0",
+    "@aws-sdk/lib-dynamodb": "^3.223.0",
     "@google-analytics/data": "^3.1.1",
     "@headlessui/react": "^1.7.4",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
@@ -57,7 +57,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
-    "eslint": "^8.28.0",
+    "eslint": "^8.29.0",
     "eslint-config-next": "^13.0.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-mdx": "^2.0.5",
