@@ -1,8 +1,8 @@
 ---
-title: 'Nextjs NavLink Component'
+title: 'Next.js 13 NavLink Component'
 published: true
 date: '2022-12-23'
-summary: 'This shows how to create a custom NavLink component in Next.js that extends the built-in Link component to add CSS classNames when the href attribute matches the current URL.'
+summary: 'This snippet shows how to create a custom NavLink component in Next.js 13 that extends the built-in Link component to add CSS classNames when the href attribute matches the current URL.'
 icon: next
 tags:
   - Javascript
@@ -12,18 +12,21 @@ tags:
 #   - HTML
 ---
 
-http://www.js-craft.io/blog/active-link-for-navigation-menu-in-nextjs-13/
+I have been experimenting with Next.js 13, and the new `/app` folder for routing.  In order for a good user experience I wanted to highlight the active link in the navigation menu. Like so:
 
+![Active Menu Item](/assets/snippets/img/menu.jpg)
 
-This shows how to create a custom NavLink component in Next.js that extends the built-in Link component to add the CSS className "active" when the href attribute matches the current URL. 
+In order to make this work I extended the Next.js Link component to add specific CSS classNames to a menu item when the href attribute matches the current URL. 
 
-This is the NavLink component, by default the "active" class is added when the href matches the start of the URL pathname, use the exact property to change it to an exact match with the whole URL pathname.
+<Step number={1} title='Create a Custom NavLink Component' />
 
-### Implementing a Custom NavLink Component
+This is the NavLink component, by default the "active" classNames are added when the href matches the start of the URL pathname, use the `exact` property to change it to an exact match with the whole URL pathname.
+
+Note this code must run client side so we need to add the `"use client";` directive. Also note we are importing from `next/navigation`.
 
 <CodeBlock>
 
-```js
+```js 
 "use client";
 
 /*
@@ -56,9 +59,9 @@ export const NavLink = ({ href, exact, children, ...props }) => {
 
 </CodeBlock>
 
-### Example Usage of NavLink Component
+<Step number={2} title='Use the Custom NavLink Component' />
 
-Here are a couple of examples of how to use the custom nav link component in a Next.js app.
+Here is a quick example of how to use the custom NavLink component in a Next.js app.
 
 <CodeBlock>
 
@@ -75,10 +78,6 @@ Here are a couple of examples of how to use the custom nav link component in a N
 </CodeBlock>
 
 
-
 ### References
 
-- [Web Vitals](https://web.dev/learn-web-vitals/)
-- [Send Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)
-- [Track Web Vitals in Google Analytics GA4](https://www.simoahava.com/analytics/track-core-web-vitals-in-ga4-with-google-tag-manager/)
-- [Web Vitals Report](https://github.com/GoogleChromeLabs/web-vitals-report)
+- [Next.js 13 Upgrade Guide](https://beta.nextjs.org/docs/upgrade-guide)
