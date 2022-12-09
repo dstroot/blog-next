@@ -1,0 +1,84 @@
+---
+title: 'Nextjs NavLink Component'
+published: true
+date: '2022-12-23'
+summary: 'This shows how to create a custom NavLink component in Next.js that extends the built-in Link component to add CSS classNames when the href attribute matches the current URL.'
+icon: next
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+http://www.js-craft.io/blog/active-link-for-navigation-menu-in-nextjs-13/
+
+
+This shows how to create a custom NavLink component in Next.js that extends the built-in Link component to add the CSS className "active" when the href attribute matches the current URL. 
+
+This is the NavLink component, by default the "active" class is added when the href matches the start of the URL pathname, use the exact property to change it to an exact match with the whole URL pathname.
+
+### Implementing a Custom NavLink Component
+
+<CodeBlock>
+
+```js
+"use client";
+
+/*
+
+NavLink: by default the active class is added when the href matches the start of the URL pathname.
+Use the exact property to change it to an exact match with the whole URL pathname.
+
+*/
+
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+export const NavLink = ({ href, exact, children, ...props }) => {
+  const pathname = usePathname();
+  const active = " font-bold";
+  const isActive = exact ? pathname === href : pathname.startsWith(href);
+
+  if (isActive) {
+    props.className += active;
+  }
+
+  return (
+    <Link href={href} {...props}>
+      {children}
+    </Link>
+  );
+};
+
+```
+
+</CodeBlock>
+
+### Example Usage of NavLink Component
+
+Here are a couple of examples of how to use the custom nav link component in a Next.js app.
+
+<CodeBlock>
+
+```js
+<NavLink
+  href="/about"
+  exact
+  className="text-grey-darkest hover:text-grey-darker"
+>
+  About
+</NavLink>
+```
+
+</CodeBlock>
+
+
+
+### References
+
+- [Web Vitals](https://web.dev/learn-web-vitals/)
+- [Send Beacon](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)
+- [Track Web Vitals in Google Analytics GA4](https://www.simoahava.com/analytics/track-core-web-vitals-in-ga4-with-google-tag-manager/)
+- [Web Vitals Report](https://github.com/GoogleChromeLabs/web-vitals-report)

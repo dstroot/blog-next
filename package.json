@@ -12,10 +12,10 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.223.0",
-    "@aws-sdk/lib-dynamodb": "^3.223.0",
+    "@aws-sdk/client-dynamodb": "^3.226.0",
+    "@aws-sdk/lib-dynamodb": "^3.226.0",
     "@google-analytics/data": "^3.1.1",
-    "@headlessui/react": "^1.7.4",
+    "@headlessui/react": "^1.7.5",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@mdx-js/react": "^2.1.5",
     "@tailwindcss/forms": "^0.5.3",
@@ -23,9 +23,9 @@
     "@vercel/og": "^0.0.21",
     "algoliasearch": "^4.14.2",
     "date-fns": "2.29.3",
-    "esbuild": "^0.15.16",
+    "esbuild": "^0.16.3",
     "feed": "^4.2.2",
-    "framer-motion": "^7.6.18",
+    "framer-motion": "^7.6.19",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.3",
     "mdx-bundler": "^9.0.1",
@@ -63,8 +63,8 @@
     "eslint-plugin-mdx": "^2.0.5",
     "next-sitemap": "^3.1.32",
     "postcss": "^8.4.19",
-    "postcss-import": "^15.0.1",
-    "prettier": "^2.7.1",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.8.1",
     "tailwindcss": "^3.2.4"
   },
   "license": "MIT"
