@@ -61,17 +61,17 @@ export const NavLink = ({ href, exact, children, ...props }) => {
 
 <Step number={2} title='Use the Custom NavLink Component' />
 
-Here is a quick example of how to use the custom NavLink component in a Next.js app.
+Here is a quick example of how to use the custom NavLink component in a Next.js app. You basically use it as a direct replacement for the `next/link` component with the one addition of the `exact` parameter if you want to match to the _exact_ url when highlighting the active menu component. Cheers!
 
 <CodeBlock>
 
 ```js
 <NavLink
-  href="/about"
+  href="/"
   exact
-  className="text-grey-darkest hover:text-grey-darker"
+  className="text-grey-dark hover:text-grey-darker"
 >
-  About
+  Home
 </NavLink>
 ```
 
