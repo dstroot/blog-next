@@ -1,0 +1,44 @@
+---
+title: Analyze Your Dreams using AI
+excerpt: "The big news in 2022 has been the rise of “generative” AI models. Generative models generate things: text, code, images, and even music! What is a fun example of how we can use a generative AI model? Let's use AI to analyze your dreams!"
+coverImage: /assets/blog/img/dream.jpg
+date: '2022-12-18'
+published: true
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/dream.jpg
+seoURL: 
+---
+
+The big news in 2022 has been the rise of “generative” AI models. Generative AI models _generate_ things: text, code, images, and even music! Today we are going to check out a fun example of the technology that I built to showcase an example of how it could be used. 
+
+[OpenAI's](https://openai.com/) GPT-3 models generate text. GPT-3 refers to set of models that can understand and generate natural language. In case you are wondering "GPT" stands for “Generative Pre-trained Transformer”. This technology powers the new ChatGPT service offered by OpenAI. 
+
+None of the current generative models would have been possible without the Internet. The internet created a place where humanity could make publicly available millions (billions?) of documents representing billions of lines of text in digital format that could be collected and used to train a general-purpose text generating model. In order to have this technology available in 2022 we also needed to develop sufficiently powerful GPU's, massive storage, and a process to develop and train models. 
+
+According to OpenAI this is how the process works:
+
+![ChatGPT Process](/assets/blog/img/ChatGPT_Diagram.svg)
+
+What can a model like this do? Here is a quick video showing the power of the technology. The prompt I gave ChatGPT is "Generate an upbeat mission statement for a life insurance company". ChatGPT created the following response:
+
+<YouTube link='https://youtu.be/UnO-c9T5Dag' />
+
+Pretty amazing right? Here are the latest GPT-3 models as of this writing:
+
+| LATEST MODEL     | DESCRIPTION                                                                                                                                                                                    | MAX REQUEST  | TRAINING DATA  |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | -------------- |
+| text-davinci-003 | Most capable GPT-3 model. Can do any task the other models can do, often with higher quality, longer output and better instruction-following. Also supports inserting completions within text. | 4,000 tokens | Up to Jun 2021 |
+| text-curie-001   | Very capable, but faster and lower cost than Davinci.                                                                                                                                          | 2,048 tokens | Up to Oct 2019 |
+| text-babbage-001 | Capable of straightforward tasks, very fast, and lower cost.                                                                                                                                   | 2,048 tokens | Up to Oct 2019 |
+| text-ada-001     | Capable of very simple tasks, usually the fastest model in the GPT-3 series, and lowest cost.                                                                                                  | 2,048 tokens | Up to Oct 2019 |
+
+Let's create a website that will analyze dreams using AI. Sound fun? 
+
+I will use the most capable model (text-davinci-003) with a prompt of "analyze my dream". I will feed the model a dream entered on a webpage using the OpenAI API and then display its response. I will use [Next.js](https://nextjs.org/) as the web framework and [Vercel](https://vercel.com/home) hosting. I registered the domain "dreamaweso.me" last week and this weekend I built the site/service. You can try it at [DreamAweso.me](https://www.dreamaweso.me/). 
+
+Give it a try - it's fun and I don't save or track anything. Pretty amazing right? Anyone who has experimented with this technology comes away feeling like Aaron Levie, co-founder and CEO of the enterprise cloud company Box:
+
+<CustomTweet id="1599156293050433536"/>
