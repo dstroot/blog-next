@@ -14,15 +14,15 @@ seoURL:
 
 The big news in 2022 has been the rise of “generative” AI models. Generative AI models _generate_ things: text, code, images, and even music! Today we are going to check out a fun example of the technology that I created to showcase an example of how it could be used. 
 
-[OpenAI's](https://openai.com/) GPT-3 technology refers to set of models that can understand and generate natural language. In case you are wondering "GPT" stands for “Generative Pre-trained Transformer”. This technology powers the new ChatGPT service offered by OpenAI. 
+[OpenAI's](https://openai.com/) GPT-3 technology refers to set of models that can understand and generate natural language. In case you are wondering "GPT" stands for “Generative Pre-trained Transformer”. This technology powers the new [ChatGPT](https://chat.openai.com) service offered by OpenAI you may have heard about.
 
-None of the current generative models would have been possible without the Internet. The internet created the technology where humanity could make publicly available millions (billions?) of documents, images, and software code examples. The GPT-3 models are leveraging billions of lines of text in digital format that was collected and used to train the general-purpose text generating models. In order to have this technology available in 2022 we also needed to develop sufficiently powerful GPU's, huge storage, and a machine learning framework to develop and train massive models. 
+None of the current generative models would have been possible without the Internet. The internet created the technology where humanity could make publicly available millions (billions?) of documents, images, and software code examples. The GPT-3 models are leveraging billions of lines of text that was collected and used to train these general-purpose text generating models. In order to have this technology available in 2022 we also needed to develop sufficiently powerful GPU's, huge storage, and a machine learning framework to develop and train massive models. 
 
 The GPT-3 architecture is a standard transformer network (with a few engineering tweaks) with the unprecedented size of 2048-token-long context and **175 billion parameters** (requiring 800 GB of storage). It "writes" by predicting tokens, which aproximate words. According to OpenAI this is how the training process works:
 
 ![ChatGPT Process](/assets/blog/img/ChatGPT_Diagram.svg)
 
-What can a model like this do? It writes text that is indistinguishable from a human. Here is a quick video showing the power of the technology using ChatGPT. The prompt I gave ChatGPT is "Generate an upbeat mission statement for a life insurance company". ChatGPT created the following response:
+What can a model like this do? It writes text that is indistinguishable from a human. Here is a quick video showing the power of the technology using ChatGPT. The prompt I provided is "Generate an upbeat mission statement for a life insurance company". ChatGPT created the following response:
 
 <YouTube link='https://youtu.be/UnO-c9T5Dag' />
 
@@ -39,9 +39,9 @@ Here are the latest GPT-3 models as of this writing:
 
 Let's create a website that will analyze dreams using the most capable model (text-davinci-003) as our AI. Sound fun? 
 
-Here's how it works: I give "text-davinci-003" a prompt: "analyze my dream". The model is given a dream (a text string) entered on a webpage using the OpenAI API. Once the model finishes and returns it's generated text I display its response. I used [Next.js](https://nextjs.org/) as the web framework and [Vercel](https://vercel.com/home) for web hosting. I registered the domain "dreamaweso.me" last week and this weekend I built out the site/service. You can try it at [DreamAweso.me](https://www.dreamaweso.me/). 
+Here's how it works: I give "text-davinci-003" a prompt: "analyze my dream". The model is then given a dream (a text string) entered on a webpage using the OpenAI API. Once the model finishes processing and returns it's generated text I display its response. I used [Next.js](https://nextjs.org/) as the web framework and [Vercel](https://vercel.com/home) for web hosting. I registered the domain "dreamaweso.me" last week and this weekend I built out the site/service. You can try it at [DreamAweso.me](https://www.dreamaweso.me/). 
 
-The most incredible aspect of this experiment is that [GitHub Copilot](https://github.com/features/copilot) helped me write the code, and ChatGPT wrote the disclaimer in the website footer. In other words I used generative AI technology to build a website that uses generative text technology. Wrap your head around that!
+The most incredible aspect of this experiment is that [GitHub Copilot](https://github.com/features/copilot) helped me write the code, and ChatGPT wrote the disclaimer in the website footer. In other words I used generative AI technology to build a website that uses generative AI technology. Wrap your head around that!
 
 Give it a try - it's fun, and I don't save or track anything. Anyone who has experimented with this technology comes away feeling like Aaron Levie, co-founder and CEO of the enterprise cloud company Box:
 
