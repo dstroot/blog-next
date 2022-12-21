@@ -2,7 +2,7 @@
 title: Making Software Last Forever
 excerpt: "Engineering teams love full rewrites because they incorrectly think of old systems as specs. They assume that since the old system works, all functional aspects have been settled. Design risks have been eliminated! They can focus purely on adding more features to the new system, or making changes to the underlying architecture without worry. However, the belief that new code is better than old is patently absurd. Old code has been used. It has been tested. Lots of bugs have been found, and more importantly fixed."
 coverImage: /assets/blog/img/billg.jpeg
-date: '2022-11-12'
+date: '2023-01-05'
 published: false
 author:
   name: Dan Stroot
@@ -19,6 +19,8 @@ Further, imagine you had a team of ten people constantly working on your prior h
 When companies decide to re-write or replace an existing software application because it is no longer meeting their needs, they are making a similar decision. Existing software is abandoned (along with its cumulative investment) for "something new and better". Yet the belief that new code is always better than old is patently absurd. Old code has weathered and withstood the test of time. It has been battle-tested. Bugs have been found, and more importantly, fixed. New and better code means new and better bugs. 
 
 Why throw away a working system? Joel Spolsky (of Fog Creek Software and Stack Overflow) describes system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.” 
+
+Recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, force us to treat our homes more dearly. Similarly, price increases for software engineers should force companies to treat existing software more dearly. This kind of pragmatism is sorely needed by companies that are trying to be frugal.
 
 Why can't software last forever? It's not made of wood, concrete, or steel. It doesn't rot, weather, or rust. A working algorithm is a working algorithm. Technology doesn’t need to be beautiful, or to impress other people, to be effective. All technologists are ultimately in the business of producing effective technology.
 
@@ -96,23 +98,51 @@ When software systems are first developed, they are based on a prediction of the
 
 Futureproofing means constantly rethinking and iterating on the existing system. We know from both research and experience that iterating and maintaining existing solutions is much more likely, and less expensive way to improve software's lifespan and functionality. 
 
+More robust maintenance practices could preserve humanities finest achievements, from artwork to public transit systems. But first maintenance must be valued, funded, and applied. Do we value maintenance enough to fund it properly?
+
 To maintain software properly we have to consider:
 
 * How do you measure the overall health of a system?
-* How do you define maintenance? 
+* How do you define maintenance work? 
 * How do you define a reasonable maintenance budget?
 * How can you protect that budget?
 * How can you incent engineers to perform maintenance? 
 
+### How do you measure the overall health of a system?
+
+Objective measures
 
 
-- Dedicated team vs. integrated team
-- what is "Maintenance"?
-- Measuring the backlog - what is healthy? 
+Subjective measures
 
-## How do you know when you aren't spending enough on maintenance?
+### How do you define maintenance work?
 
-### First, can you even quantify the maintenance budget and resources? How do you separate it from feature requests? How do you even define maintenance? 
+| Is | Is Not |
+|---|---|
+| Preventing future issues | Adding new features |
+| Technical work to take advantage of new hardware | ? |
+
+
+What are the 4 types of software maintenance? 
+
+#### Corrective Software Maintenance (also called repair)
+
+Corrective software maintenance is the typical, classic form of maintenance (for software and anything else for that matter). Corrective software maintenance is necessary when something goes wrong in a piece of software including faults and errors. These can have a widespread impact on the functionality of the software in general and therefore must be addressed as quickly as possible. 
+
+#### Preventative Software Maintenance
+
+Preventative software maintenance is looking into the future so that your software can keep working as desired for as long as possible. This includes making necessary changes, upgrades, adaptations and more. Preventative software maintenance may address small issues which at the given time may lack significance but may turn into larger problems in the future. These are called latent faults which need to be detected and corrected to make sure that they won’t turn into effective faults. 
+
+#### Perfective Software Maintenance
+
+As with any product on the market, once the software is released to the public, new issues and ideas come to the surface. Users may see the need for new features or requirements that they would like to see in the software to make it the best tool available for their needs. This is when perfective software maintenance comes into play. 
+
+Perfective software maintenance aims to adjust software by adding new features as necessary and removing features that are irrelevant or not effective in the given software. This process keeps software relevant as the market, and user needs, change. 
+
+#### Adaptive Software Maintenance
+
+Adaptive software maintenance has to do with the changing technologies as well as policies and rules regarding your software. These include operating system changes, cloud storage, hardware, etc. When these changes are performed, your software must adapt in order to properly meet new requirements and continue to run well. 
+
 
 ### How do you define a "reasonable" maintenance budget? 
 
@@ -188,7 +218,7 @@ Outside the circle should be all the other teams. Experts not on the team should
 
 ### Incentives
 
-Engineering loves new technology. It gains the engineers attention and industry marketability. "[Boring technology](https://engineering.atspotify.com/2013/02/in-praise-of-boring-technology/}" on the other hand is great for the **company**. The engineering cost is lower, and the skills are stickier, because these engineers are not being pulled out of your organization for double their salary by Amazon or Google.  
+Engineering loves new technology. It gains the engineers attention and industry marketability. [Boring technology](https://engineering.atspotify.com/2013/02/in-praise-of-boring-technology/) on the other hand is great for the **company**. The engineering cost is lower, and the skills are stickier, because these engineers are not being pulled out of your organization for double their salary by Amazon or Google.  
 
 To most software engineers, legacy systems may seem like torturous dead-end work, but the reality is systems that are not used get turned off. Working on legacy systems means working on some of the most critical systems that exist — computers that govern millions of people’s lives in enumerable ways. This is not the work of technical janitors, but _battlefield surgeons_.
 
@@ -360,7 +390,7 @@ An organization’s size affects the flexibility and tolerance of its communicat
 - Designing a modernization effort is about iteration, and iteration is about feedback. Therefore, the real challenge of legacy modernization is not the technical tasks, but making sure the feedback loops are open in the critical places and communication is orderly everywhere else. 
 
 
-- More robust maintenance practices could help preserve modernity’s finest achievements, from artwork to public transit systems to power grids while at the same time saving money. But first maintenance must be valued, funded, and applied. Do we value maintenance enough to fund it properly?
+- More robust maintenance practices could preserve humanities finest achievements, from artwork to public transit systems. But first maintenance must be valued, funded, and applied. Do we value maintenance enough to fund it properly?
 
 
 ## Resilient Design
@@ -419,7 +449,7 @@ Maintenance mostly happens out of sight, mysteriously. If we notice it, it’s a
 
 This is especially true in the public sector: it’s almost impossible to get governmental action on, or voter interest in, spending on preventive maintenance, yet governments make seemly unlimited funds available once we have a disaster. We are okay spending a massive amount of money to fix a problem, but consistently resist spending a much smaller amount of money to prevent it; as a strategy this makes no sense. 
 
-Recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, force us to treat our homes more dearly. Similarly, price increases for software engineers should force companies to treat existing software more dearly. This kind of pragmatism is sorely needed by companies that are trying to be frugal.
+
 
 Many organizations say they want to be "data driven" but that requires critical thinking skills as well. In some places I see "being data driven" leading to poor decisions because data can be (and is) manipulated to support a desired outcome.
 
