@@ -12,8 +12,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.234.0",
-    "@aws-sdk/lib-dynamodb": "^3.234.0",
+    "@aws-sdk/client-dynamodb": "^3.235.0",
+    "@aws-sdk/lib-dynamodb": "^3.235.0",
     "@google-analytics/data": "^3.1.2",
     "@headlessui/react": "^1.7.7",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
@@ -25,7 +25,7 @@
     "date-fns": "2.29.3",
     "esbuild": "^0.16.10",
     "feed": "^4.2.2",
-    "framer-motion": "^7.10.2",
+    "framer-motion": "^8.0.1",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.3",
     "mdx-bundler": "^9.0.1",
@@ -48,7 +48,7 @@
     "remark-cli": "^11.0.0",
     "remark-emoji": "^3.0.2",
     "remark-gfm": "^3.0.1",
-    "sharp": "^0.31.2",
+    "sharp": "^0.31.3",
     "swr": "^2.0.0",
     "uuid": "^9.0.0",
     "yarn.lock": "^0.0.1-security"
