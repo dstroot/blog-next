@@ -1,0 +1,51 @@
+---
+title: 'Classnames'
+published: true
+date: '2022-12-31'
+summary: 'There is no need to import classnames from NPM - instead use this simple function.'
+icon: js
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+<CodeBlock>
+
+```JavaScript:cn.ts
+export function cn(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
+```
+
+</CodeBlock>
+
+### Context
+
+There is a highly used NPM package called [classnames](https://www.npmjs.com/package/classnames) - however I like to keep external dependencies low where possible and I like to know what my code is doing. There is no need to import classnames as you can duplicate the code with the simple function above. 
+
+#### What does .filter(Boolean) do on Arrays?
+
+In short, it's a bit of functional programming which is used to remove false, null and undefined values from an array.
+
+### Usage
+
+<CodeBlock>
+
+```JavaScript:cnExample.tsx
+import { cn } from "../lib/cn";
+
+export const Navbar = ({ fixed }: { fixed: boolean }) => {
+  return (
+    <nav className={cn("bg-white", fixed ? "fixed top-0 left-0 right-0" : "")}>
+      Item
+    </nav>
+  );
+};
+```
+
+</CodeBlock>
+
+

@@ -1,0 +1,39 @@
+---
+title: 'Wait'
+published: true
+date: '2022-12-31'
+summary: "Sometimes when you are testing, or playing around, you just want to simulate some delay. Here's a simple way to do just that."
+icon: js
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+<CodeBlock>
+
+```JavaScript:timeout.ts
+export function timeout(delay: number) {
+    return new Promise( res => setTimeout(res, delay) );
+}
+```
+
+</CodeBlock>
+
+### Context
+
+Sometimes when you are building something you want to see how it works with a little delay. I use this for playing with, or testing, React suspense. 
+
+### Usage
+
+<CodeBlock>
+
+```JavaScript:waitExample.ts
+import { timeout } from "../lib/timeout";
+
+await timeout(1000); //for 1 sec delay
+```
+
+</CodeBlock>
