@@ -1,3 +1,7 @@
+export const config = {
+  runtime: 'edge',
+};
+
 export default async function handler(req, res) {
   const results = await fetch(encodeURI(process.env.GITHUB_API)).then((res) => res.json());
 

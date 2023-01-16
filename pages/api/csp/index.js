@@ -1,6 +1,10 @@
 import { put } from '../../../lib/dynamodb';
 import { v4 as uuidv4 } from 'uuid';
 
+// export const config = {
+//   runtime: 'edge',
+// };
+
 export default async function handler(req, res) {
   let params = { TableName: 'csp_reports' };
   const cspReport = JSON.parse(req.body);

@@ -1,4 +1,3 @@
-// const client = require('@mailchimp/mailchimp_marketing');
 import client from '@mailchimp/mailchimp_marketing';
 // https://github.com/mailchimp/mailchimp-marketing-node
 

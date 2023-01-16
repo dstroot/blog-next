@@ -11,7 +11,7 @@ import { CMS_NAME, TAGLINE } from '../../../lib/constants';
 // example repo: https://github.com/scastiel/github-business-card
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 };
 
 const USERNAME = 'dstroot';
