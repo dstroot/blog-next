@@ -53,7 +53,7 @@ export const PostPreview = ({
                 src={coverImage}
                 alt={`Cover image for ${title}`}
                 fill
-                sizes='(max-width: 768px) 100vw, 45vw'
+                sizes='(max-width: 768px) 90vw, 45vw'
                 className={cn(
                   'duration-300 ease-in-out hover:opacity-[85%] object-cover overflow-hidden',
                   isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
