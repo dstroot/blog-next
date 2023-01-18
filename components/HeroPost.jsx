@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-// import Image from 'next/image';
 import { Avatar } from './Avatar';
 import { ReadMore } from './ReadMore';
 import { MoreStats } from './MoreStats';
