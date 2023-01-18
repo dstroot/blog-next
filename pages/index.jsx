@@ -1,12 +1,18 @@
 import { SEO } from '../components/Seo';
 import { Intro } from '../components/Intro';
+import { motion } from 'framer-motion';
 import { HeroPost } from '../components/HeroPost';
 import { Container } from '../components/Container';
 import { SortByDate } from '../lib/sortPosts';
 import { MoreStories } from '../components/MoreStories';
 import { generateRSSFeed } from '../lib/feed';
 import { getAllFilesFrontMatter } from '../lib/getAllFiles';
-import { CMS_NAME, BASE_URL, HOME_OG_IMAGE_URL } from '../lib/constants';
+import {
+  CMS_NAME,
+  BASE_URL,
+  HOME_OG_IMAGE_URL,
+  FADE_DOWN_ANIMATION_VARIANTS,
+} from '../lib/constants';
 
 export default function Index({ posts }) {
   const heroPost = posts[0];
@@ -25,21 +31,42 @@ export default function Index({ posts }) {
   return (
     <>
       <SEO {...seo} />
-      <Container>
-        <Intro />
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-            stats={heroPost.stats}
-          />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
+      <motion.div
+        initial='hidden'
+        whileInView='show'
+        animate='show'
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+      >
+        <Container>
+          <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
+            <Intro />
+          </motion.div>
+          {heroPost && (
+            <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
+              <HeroPost
+                title={heroPost.title}
+                coverImage={heroPost.coverImage}
+                date={heroPost.date}
+                author={heroPost.author}
+                slug={heroPost.slug}
+                excerpt={heroPost.excerpt}
+                stats={heroPost.stats}
+              />
+            </motion.div>
+          )}
+          <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          </motion.div>
+        </Container>
+      </motion.div>
     </>
   );
 }
