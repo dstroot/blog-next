@@ -24,7 +24,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
                 // height={748}
                 fill // use fill for responsive images (parent container must have position: relative, fixed, or absolute
                 sizes='(max-width: 1280px) 90vw, 1496px'
-                priority
+                priority={true}
                 className='duration-300 ease-in-out group-hover:opacity-[85%] object-cover overflow-hidden'
               />
             </div>
