@@ -41,14 +41,12 @@ export const PostPreview = ({
       <div className='mb-5'>
         <Link href={`/posts/${slug}`}>
           <div aria-label={title} className='sm:mx-0'>
-            {/*
-            It usually is best practice to wrap images in a div and set height and width with it. HTML treats images as foreign objects so they don't follow the same rules as everything else. A simple div is the best way to work with an img as a normal block level element.
-             */}
             <div className='relative aspect-[2/1]'>
               {/*
                 It usually is best practice to wrap images in a div and set height and width with it. 
                 HTML treats images as foreign objects so they don't follow the same rules as everything else. 
-                A simple div is the best way to work with an img as a normal block level element.
+                A simple div is the best way to work with an img as a normal block level element. Then set "fill"
+                on the Next Image componenet.
               */}
               <Image
                 // loader={imgixLoader}
