@@ -20,8 +20,8 @@ export const PostHeader = ({ title, coverImage, date, author, slug, stats }) => 
             src={coverImage} 
             alt={`Hero image for ${title}`} 
             fill 
-            sizes='(max-width: 768px) 100vw, 80vw' 
-            priority
+            sizes='(max-width: 1280px) 90vw, 1496px' 
+            priority={true}
             className='object-cover overflow-hidden'
           />
         </div>   
