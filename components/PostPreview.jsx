@@ -1,5 +1,4 @@
 import Link from 'next/link';
-// import Image from 'next/image';
 import Image from 'next/image';
 
 import { cn } from '../lib/utils';
@@ -46,40 +45,24 @@ export const PostPreview = ({
             It usually is best practice to wrap images in a div and set height and width with it. HTML treats images as foreign objects so they don't follow the same rules as everything else. A simple div is the best way to work with an img as a normal block level element.
              */}
             <div className='relative aspect-[2/1]'>
-              {/* New Image component */}
+              {/*
+                It usually is best practice to wrap images in a div and set height and width with it. 
+                HTML treats images as foreign objects so they don't follow the same rules as everything else. 
+                A simple div is the best way to work with an img as a normal block level element.
+              */}
               <Image
                 // loader={imgixLoader}
                 src={coverImage}
                 alt={`Cover image for ${title}`}
-                // layout='raw' // intrinsic, fill, responsive, raw
-                // width={1496}
-                // height={748}
                 fill
-                sizes='(min-width: 768px) 40vw, 100vw'
+                sizes='(max-width: 768px) 100vw, 45vw'
                 className={cn(
-                  'duration-300 ease-in-out hover:opacity-[85%]',
+                  'duration-300 ease-in-out hover:opacity-[85%] object-cover overflow-hidden',
                   isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
                 )}
                 onLoadingComplete={() => setIsLoading(false)}
               />
             </div>
-            {/* <Image
-              // loader={imgixLoader}
-              src={coverImage}
-              alt={`Cover Image for ${title}`}
-              // layout='responsive' // raw, responsive, fill
-              width={708}
-              height={354}
-              className={cn(
-                'duration-300 ease-in-out hover:opacity-[85%]',
-                isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
-              )}
-              // className={cn(
-              //   'hover:scale-[101%] opacity-1 duration-150 ease-in-out',
-              //   isLoading ? 'grayscale opacity-0' : ''
-              // )}
-              onLoadingComplete={() => setIsLoading(false)}
-            /> */}
             <MoreStats stats={stats} slug={slug} />
           </div>
         </Link>
