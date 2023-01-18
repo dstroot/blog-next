@@ -10,29 +10,21 @@ export const PostHeader = ({ title, coverImage, date, author, slug, stats }) => 
     <>
       <PostTitle>{title}</PostTitle>
       <div className='mb-8 md:mb-10 sm:mx-0'>
-        {/* <Image
-          // loader={imgixLoader}
-          title={title}
-          alt={`Hero image for ${title}`}
-          src={coverImage}
-          layout='raw' // intrinsic, fill, responsive, raw
-          width={1496}
-          height={748}
-          priority={true}
-        /> */}
-        {/* <Image
-          alt={`Hero image for ${title}`}
-          src={coverImage}
-          width={1496}
-          height={748}
-          priority={true}
-        /> */}
         {/*
-            It usually is best practice to wrap images in a div and set height and width with it. HTML treats images as foreign objects so they don't follow the same rules as everything else. A simple div is the best way to work with an img as a normal block level element.
-             */}
-        <div className='relative aspect-[2/1]'>
-          <Image src={coverImage} alt={`Hero image for ${title}`} fill priority={true} />
-        </div>
+          It usually is best practice to wrap images in a div and set height and width with it. 
+          HTML treats images as foreign objects so they don't follow the same rules as everything else. 
+          A simple div is the best way to work with an img as a normal block level element.
+        */}
+        <div className='relative aspect-[2/1] relative'>
+          <Image 
+            src={coverImage} 
+            alt={`Hero image for ${title}`} 
+            fill 
+            sizes='(max-width: 768px) 100vw, 80vw' 
+            priority
+            className='object-cover overflow-hidden'
+          />
+        </div>   
         <MoreStats stats={stats} slug={slug} />
       </div>
       <div className='max-w-3xl mx-auto'>
