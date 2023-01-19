@@ -15,16 +15,16 @@ export const PostHeader = ({ title, coverImage, date, author, slug, stats }) => 
           HTML treats images as foreign objects so they don't follow the same rules as everything else. 
           A simple div is the best way to work with an img as a normal block level element.
         */}
-        <div className='relative aspect-[2/1] relative'>
-          <Image 
-            src={coverImage} 
-            alt={`Hero image for ${title}`} 
-            fill 
-            sizes='(max-width: 1280px) 90vw, 1496px' 
+        <div className='aspect-[2/1] relative'>
+          <Image
+            src={coverImage}
+            alt={`Hero image for ${title}`}
+            fill
+            sizes='(max-width: 1280px) 90vw, 1496px'
             priority={true}
             className='object-cover overflow-hidden'
           />
-        </div>   
+        </div>
         <MoreStats stats={stats} slug={slug} />
       </div>
       <div className='max-w-3xl mx-auto'>
