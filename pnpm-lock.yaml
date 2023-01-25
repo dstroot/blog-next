@@ -19,6 +19,7 @@ specifiers:
   autoprefixer: ^10.4.13
   cssnano: ^5.1.14
   date-fns: 2.29.3
+  dotenv: ^16.0.3
   esbuild: ^0.17.4
   eslint: ^8.32.0
   eslint-config-next: ^13.1.5
@@ -33,6 +34,7 @@ specifiers:
   next: 13.1.5
   next-sitemap: ^3.1.47
   next-themes: 0.2.1
+  node-fetch: 2.6.1
   postcss: ^8.4.21
   postcss-import: ^15.1.0
   prettier: ^2.8.3
@@ -73,6 +75,7 @@ dependencies:
   '@vercel/og': 0.0.27
   algoliasearch: 4.14.3
   date-fns: 2.29.3
+  dotenv: 16.0.3
   esbuild: 0.17.4
   feed: 4.2.2
   framer-motion: 8.5.2_biqbaboplfbrettd7655fr4n2y
@@ -82,6 +85,7 @@ dependencies:
   millify: 5.0.1
   next: 13.1.5_biqbaboplfbrettd7655fr4n2y
   next-themes: 0.2.1_s6zlkfvllybxhmcq5pkr2zsuza
+  node-fetch: 2.6.1
   prismjs: 1.29.0
   react: 18.2.0
   react-cool-dimensions: 3.0.0_react@18.2.0
@@ -2774,6 +2778,11 @@ packages:
       domhandler: 4.3.1
     dev: true
 
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: false
+
   /dotenv/8.6.0:
     resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
     engines: {node: '>=10'}
@@ -5287,6 +5296,11 @@ packages:
     resolution: {integrity: sha512-wo2DpQkQp7Sjm2A0cq+sN7EHKO6Sl0ctXeBdFZrL9T9+UywORbufTcTZxom8YqpLQt/FqNMUkOpkZrJVYSKD3A==}
     dependencies:
       lodash: 4.17.21
+    dev: false
+
+  /node-fetch/2.6.1:
+    resolution: {integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==}
+    engines: {node: 4.x || >=6.0.0}
     dev: false
 
   /node-fetch/2.6.8:
