@@ -11,7 +11,6 @@ tags:
 #   - CSS
 #   - HTML
 ---
-import { Tweet } from '../node_modules/mdx-embed/dist/components/twitter/tweet';
 
 So, you are using Next.js with .mdx to render static pages and you want to embed a Tweet? What if you simply paste in Twitter's "embed code" - all done? You can also use the Tweet component from mdx-embed, which is a React component that you can use in your .mdx files. Or, you can roll you own for an even better solution. 
 
@@ -52,10 +51,6 @@ import { Tweet } from '../node_modules/mdx-embed/dist/components/twitter/tweet';
 
 </CodeBlock>
 
-This is the result:
-
-<Tweet tweetLink="PaulieScanlon/status/1201514996838141952" theme="dark" />
-
 This seems to work more consistently, and if you don't have light *and* dark modes it's great. I could not figure out how to change the Tweet's light/dark themes dynamically, and I still had to deal with content layout shift. Hmm... what to do?  Would there be a way to get the Tweet and pre-render it to eliminate CLS and make my page load faster?
 
 <Step number={3} title='Roll your own custom React tweet component and API' />
@@ -79,10 +74,6 @@ I decided to try a middle ground. I will create a component that renders itself 
 Let me show you the results first. Here is my version:
 
 <CustomTweet id='531834493922189313' />
-
-And Twitter's native version:
-
-<Tweet tweetLink="SenTedCruz/status/531834493922189313" />
 
 ### The Code
 
