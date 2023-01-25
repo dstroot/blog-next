@@ -34,7 +34,7 @@ specifiers:
   next: 13.1.5
   next-sitemap: ^3.1.47
   next-themes: 0.2.1
-  node-fetch: 2.6.1
+  node-fetch: 2.6.7
   postcss: ^8.4.21
   postcss-import: ^15.1.0
   prettier: ^2.8.3
@@ -85,7 +85,7 @@ dependencies:
   millify: 5.0.1
   next: 13.1.5_biqbaboplfbrettd7655fr4n2y
   next-themes: 0.2.1_s6zlkfvllybxhmcq5pkr2zsuza
-  node-fetch: 2.6.1
+  node-fetch: 2.6.7
   prismjs: 1.29.0
   react: 18.2.0
   react-cool-dimensions: 3.0.0_react@18.2.0
@@ -5298,9 +5298,16 @@ packages:
       lodash: 4.17.21
     dev: false
 
-  /node-fetch/2.6.1:
-    resolution: {integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==}
+  /node-fetch/2.6.7:
+    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
     engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+    dependencies:
+      whatwg-url: 5.0.0
     dev: false
 
   /node-fetch/2.6.8:
