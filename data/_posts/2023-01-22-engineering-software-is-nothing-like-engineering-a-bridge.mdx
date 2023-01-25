@@ -1,14 +1,14 @@
 ---
 title: Engineering Software is Nothing Like Engineering a Bridge
 excerpt: When an engineer designs a bridge, they begin with the load the bridge is intended to bear, and they calculate the various stresses caused by wind, earthquakes, etc. They then apply a safety factor to the calculations. Engineering software is nothing like this.
-coverImage: /assets/blog/img/bridge.jpg
+coverImage: /assets/blog/img/bridge2.jpg
 date: '2023-01-22'
-published: false
+published: true
 author:
   name: Dan Stroot
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
-  url: /assets/blog/img/bridge.jpg
+  url: /assets/blog/img/bridge2.jpg
 seoURL: https://danstroot.com/2021/07/11/github-copilot/
 ---
 
@@ -22,19 +22,23 @@ Bridges (all structures really) are intentionally built much stronger than neede
 
 ### Engineering software is completely different
 
-Software meanwhile is discrete; a single small error can result in a disproportionately large failure. A single typo in a 100,000-line program can cause it to fail catastrophically. Yes, even getting a thousandth of a percent of a program wrong can cause total failure. No bridge ever collapsed because the engineer got a thousandth of a percent of the building material’s properties wrong, or made a calculation a thousandth of a percent off.
+Software is discrete; a single small error can result in a disproportionately large failure. A single typo in a 100,000-line program can cause it to fail catastrophically. Yes, even getting a thousandth of a percent of a program wrong can cause total failure. 
 
 In software development the margin of error is literally undefined behavior.
 
-Software engineers also fly blind when it comes to materials. We can't consult a book that will tell us how "thick" our website must be to support 100,000 users. We also frequently design with no real concept what our loads will actually be. If we are creating a new website chances are the initial volumes will be an order of magnitude lower, or higher, than we were told to expect. If it becomes popular it will have another order of magnitude higher traffic than planned.
+No bridge ever collapsed because the engineer got a thousandth of a percent of the building material’s properties wrong, or made a calculation a thousandth of a percent off.
 
-On the positive side, the cost of changing a structure in virtual space is several orders of magnitude lower than in physical space. Larger software projects usually allow us to build reusable components that have tests that ensure certain behaviors - then we rerun them in various environments to make sure our assumptions still hold. We can also more reliably simulate behavior and load before we ship, which means we can load test our site before going live.
+Software engineers fly blind when it comes to materials. We can't consult a book that will tell us how "thick" our website must be to support 100,000 users. We also frequently design with no real concept what our loads will actually be. If we are creating a new website chances are the initial volumes will be an order of magnitude lower, or higher, than we were told to expect. If it becomes popular it will have further, higher orders of magnitude higher traffic than planned.
+
+On the positive side, the cost of changing a structure in virtual space is several orders of magnitude lower than changing a structure in physical space. In addition, software projects usually allow us to build reusable components that have tests that ensure certain behaviors - then we rerun them in various environments to make sure our assumptions still hold. We can also more reliably simulate behavior and load before we ship, which means we can load test our site before going live.
 
 ### Engineering safe and secure software
 
+In the physical world, attacking actual infrastructure like a bridge exposes the threat actors to risk - they have to be physically present (at some point). Terrorists and nation-states are willing to take that risk, whereas in the virtual space both nation states & private actors participate. 
+
 The nature of the Internet allows attackers to strike from anywhere and maintain anonymity. Attackers can replicate an attack easily without much additional effort/cost on their part. Attackers can even purchase "blueprints" for an attack that are basically the code for the attack itself. The financial motive is particularly important because it funds the ever growing arms race between offense & defense. 
 
-In the physical world, attacking actual infrastructure like a bridge is typically only visible in nation states whereas in the virtual space both nation states & private actors participate. Assessing the security of software via the question "is it secure?" is like assessing the structure of a bridge by asking the question "has it collapsed yet?" -- it is an important question, to be certain, but it also profoundly misses the point.
+Assessing the security of software via the question "is it secure?" is like assessing the structure of a bridge by asking the question "has it collapsed yet?" -- it is an important question, to be certain, but it also profoundly misses the point.
 
 As discussed, engineers design bridges with built-in safety margins to guard against unforeseen circumstances (unexpectedly high winds, corrosion causing joints to weaken, a traffic accident severing support cables, et cetera); secure and reliable software could (and should) likewise be designed to tolerate failures within individual components and limit the potential damage.
 
@@ -46,7 +50,7 @@ Engineers who design bridges also design for lifespan. It's not discussed often 
 
 > "We design these things to fail at some regularity because to do otherwise would require an over-investment of resources."
 
-Software engineers design for scalability and reliability and hope their software can stand the test of time. In reality, most software changes so rapidly that its lifespan ends up being lower than a physical structure. New software languages, engineering techniques, operational platforms (e.g. cloud) drive us towards the decision that sometimes it's easier to rebuild than to continue to maintain.
+Software engineers design for scalability and reliability and hope their software can stand the test of time. Software doesn't rot, weather, or rust. A working algorithm is a working algorithm. However, most software changes so rapidly that its lifespan ends up being lower than a physical structure.
 
 ### References
 
