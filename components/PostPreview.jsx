@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Balancer from 'react-wrap-balancer';
 
 import { cn } from '../lib/utils';
 import { Avatar } from './Avatar';
@@ -66,8 +67,8 @@ export const PostPreview = ({
         </Link>
       </div>
       <h3 className='mb-3 text-3xl leading-snug'>
-        <Link href={`/posts/${slug}`}>
-          <div className='hover:underline'>{title}</div>
+        <Link href={`/posts/${slug}`} className='hover:underline'>
+          <Balancer>{title}</Balancer>
         </Link>
       </h3>
       <div className='mb-4'>
