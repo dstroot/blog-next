@@ -125,10 +125,6 @@ const securityHeaders = [
   },
   { key: 'Vary', value: 'Origin' },
   {
-    key: 'Expect-CT',
-    value: 'enforce, max-age=30',
-  },
-  {
     key: 'Report-To',
     value: group,
   },
