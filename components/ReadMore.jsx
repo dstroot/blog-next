@@ -6,7 +6,8 @@ export const ReadMore = ({ slug }) => {
       <div className='duration-300 ease-in-out group'>
         <div className='flex items-center space-x-2'>
           <div className='text-xl font-semibold text-gray-900 transition-colors dark:text-gray-100 group-hover:underline'>
-            Read More
+            {/* Changed from "Read More" which was flagged by Lighthouse */}
+            Read Post
           </div>
           <div>
             <svg
