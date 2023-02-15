@@ -14,13 +14,15 @@ seoURL:
 
 How many of us have bought a new home and moved because our prior home was not quite meeting our needs? Maybe we needed an extra bedroom, or wanted a bigger backyard? Now, as a thought experiment, assume you _couldn't sell your existing home_. If you bought a new home, you'd have to abandon your prior home (and your investment in it). Does that change your thinking?
 
-Further, imagine you had a team of ten people maintaining your prior home, improving it, and keeping it updated, for the last fifteen years. You'd have a cumulative investment of 150 person/years in your existing home (10 people x 15 years) on top of the initial investment. If each person was paid the equivalent of a software developer (we'll use $200k to include benefits, office space, leadership, etc.) you'd have an investment just in labor of over **$30 million dollars** (150 person/years x $200,000). Would you walk away from that investment?
+Further, imagine you had a team of five people maintaining your prior home, improving it, and keeping it updated, for the last ten years. You'd have a cumulative investment of 50 person/years in your existing home (5 people x 10 years) on top of the initial investment. If each person was paid the equivalent of a software developer (we'll use $200k to include benefits, office space, leadership, etc.) you'd have an investment just in labor of **$10 million dollars** (50 person/years x $200,000). Would you walk away from that investment?
 
-When companies decide to re-write or replace an existing software application, they are making a similar decision. Existing software is abandoned (along with its cumulative investment) for "something new and better". Yet the belief that new code is always better than old is patently absurd. Old code has weathered and withstood the test of time. It has been battle-tested. Bugs have been found, and more importantly, fixed. New and better code means new and better bugs. 
+When companies decide to re-write or replace an existing software application, they are making a similar decision. Existing software is retired (along with its cumulative investment) for "something new and better". Yet the belief that new code is always better than old is patently absurd. Old code has weathered and withstood the test of time. It has been battle-tested. You know it's failure modes. Bugs have been found, and more importantly, fixed. New and better code means new and better bugs. 
 
-Why throw away a working system? Joel Spolsky (of Fog Creek Software and Stack Overflow) describes system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.” 
+Joel Spolsky (of Fog Creek Software and Stack Overflow) describes system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.” 
 
-Recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, cause us to treat our homes more dearly. Similarly, price increases for software engineers should force companies to treat existing software more dearly. 
+Continuing our construction analogy, recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, cause us to treat our homes more dearly. Similarly, price increases for quality software engineers should force companies to treat existing software more dearly. 
+
+Lots of modern software started out as C software from the 1980s. Engineers don't often write software with portability as a goal at the beginning, but once something is relatively portable, it tends to stay that way. Lots of code that was well designed and written made it from mini-computers to i386, from i386 to amd64, and now ARM and arch64, with a minimum of extra effort. You can take large, complicated programs from the 1980s written in C and compile them on a modern Linux computer, even when the modern computer is running architectures which hadn't even been dreamt of when the software was written.
 
 Why can't software last forever? It's not made of wood, concrete, or steel. It doesn't rot, weather, or rust. A working algorithm is a working algorithm. Technology doesn’t need to be beautiful, or to impress other people, to be effective. Aren't technologists ultimately in the business of producing cost effective technology?
 
@@ -62,19 +64,19 @@ With software users can't even see "the bald tires" - they only thing they see, 
 
 Finally, maintenance work is typically an operational cost, yet building a new system, or a significant new feature, can often be capitalized - making the future costs someone else's problem.
 
+## Risks of Replacing Software Systems
+
 >"Most of the systems I work on rescuing are not badly built. **They are badly maintained.**"
 >
 > <cite>&mdash; Marianne Bellotti, Kill it With Fire</cite>
-
-## Risks of Replacing Software Systems
 
 It's not the age of a system that causes it to fail but rather _neglect_. People fail to maintain software systems because they are _not given the time, incentives, or resources to maintain them_. 
 
 Once a system degrades it is an enormous challenge to fund deferred maintenance (or "technical debt"). No one plans for it, no one wants to pay for it, and no one even wants to do it. Initiatives restore operational excellence, much the way one would fix up an old house, tend to have few volunteers among engineering teams. No one gets noticed doing maintenance. No one ever gets promoted because of maintenance. 
 
-Thus, engineers prefer to replace or re-write a system rather than maintain it. They get to "write a new story" rather than edit someone else's. They will attempt to convince a senior executive to fund a project to replace a problematic system by describing all the new features and capabilities that could be added as well as how "bad" the existing, unmaintained, system has become.
+It should be clear why engineers prefer to re-write a system rather than maintain it. They get to "write a new story" rather than edit someone else's. They will attempt to convince a senior executive to fund a project to replace a problematic system by describing all the new features and capabilities that could be added as well as how "bad" the existing, unmaintained, system has become.
 
-Incentives aside, engineering teams tend to gravitate toward system rewrites because they incorrectly think of old systems as specs. They assume that since an old system works, the functional risks have been eliminated. They can focus on adding more features to the new system or make changes to the underlying architecture without worry. Either they do not perceive the ambiguity these changes introduce, or they see such ambiguity positively, imagining only gains in performance and the potential for greater innovation.
+Incentives aside, engineering teams tend to gravitate toward system rewrites because they incorrectly think of old systems as specs. They assume that since an old system works, the functional risks have been eliminated. They can focus on adding more features to the new system or make changes to the underlying architecture without worry. Either they do not perceive the ambiguity these changes introduce, or they see such ambiguity positively, imagining only gains in performance and the potential for innovation.
 
 Before choosing to replace a system that needs deferred maintenance remember _it’s the lack of maintenance that create the impression that failure is inevitable_, and push otherwise rational engineers and executives toward rewrites or replacements. Why not authorize that multimillion-dollar replacement if the engineers convince management the existing system is doomed? Eventually a "replacement" project will be funded (typically at a much higher expenditure than rehabilitating the existing system). Even if the executives are not listening to the engineers, they will be listening to external consultants telling them they are falling behind. 
 
@@ -90,16 +92,15 @@ The interim state is not pretty.  The company now has two systems to operate. Th
 
 ## Maintaining Software to Last Forever
 
-As I discussed in [How Software Learns](/posts/2022-06-05-how-software-learns), software adapts over time - as it is continually refined and reshaped by maintenance and enhancements. Maintenance is crucial to software's lifespan and business relevance/value. When software systems are first developed, they are based on a prediction of the future - a prediction of the future that we know is wrong. No set of requirements has ever been perfect. However, any new system becomes "less wrong" as time, experience, and knowledge are continually added (e.g., maintenance). 
+As I discussed in [How Software Learns](/posts/2022-06-05-how-software-learns), software adapts over time - as it is continually refined and reshaped by maintenance and enhancements. Maintenance is crucial to software's lifespan and business relevance/value. When software systems are first developed, they are based on a prediction of the future - a prediction of the future that we know is wrong as we make it. No set of requirements has ever been perfect. However, any new system becomes "less wrong" as time, experience, and knowledge are continually added (e.g., maintenance). 
 
-Futureproofing means constantly rethinking and iterating on the existing system. We know from both research and experience that iterating and maintaining existing solutions is much more likely, and less expensive way to improve software's lifespan and functionality. 
+Futureproofing means constantly rethinking and iterating on the existing system. We know from both research and experience that iterating and maintaining existing solutions is much more likely, and less expensive, to improve software's lifespan and functionality. 
 
 Robust maintenance practices could preserve software for decades, but first maintenance must be valued, funded, and applied. To maintain software properly we have to consider:
 
 1. How do you measure the overall health of a system?
-1. How do you define maintenance work? 
-1. How do you define a reasonable maintenance budget?
-1. How can you protect that budget?
+1. How do you define and manage maintenance work? 
+1. How do you define a reasonable maintenance budget? How can you protect that budget?
 1. How can you incent engineers to perform maintenance? 
 
 ### 1. How do you measure the overall health of a system?
@@ -116,9 +117,9 @@ Robust maintenance practices could preserve software for decades, but first main
 
 1. **User Satisfaction**: User satisfaction includes both how happy your employees are with the applications and/or how well those applications meet your customer's needs.
 
-1. **“Shadow IT” applications** — If you used applications in the past that didn’t meet employees’ needs and didn’t have a good governance plan to address problems, you may have noticed those employees found other solutions on their own. 
+1. **“Shadow IT”** — If you used applications in the past that didn’t meet employees’ needs, and didn’t have a good governance plan to address problems, you may have noticed employees found other solutions on their own. This is an indication of underfunded maintenance. 
 
-1. **Flexible Architecture?** — Mobile applications, the cloud, big data and the internet of things (IoT) are no longer “nice to haves.” They are now “must haves.” Your architecture needs to be ready to integrate these if it isn’t already.
+1. **Adaptable Architecture** — Mobile applications, the cloud, big data and the internet of things (IoT) are no longer “nice to haves.” They are now “must haves.” Your architecture needs to be ready to integrate these if it isn’t already.
 
 1. **Governance** — Healthy application architecture isn’t just about technology—it’s also about having well-documented and well-understood governance documents that guide technology investments for your organization. Good governance helps avoid “shadow IT” applications.
 
@@ -128,17 +129,17 @@ There are four general types of software maintenance. The first two types take u
 
 #### 1. Corrective Software Maintenance (more accurately called "repair")
 
-Corrective software maintenance is the typical, classic form of maintenance (for software and anything else for that matter). Corrective software maintenance is necessary when something goes wrong in a piece of software including faults and errors. These can have a widespread impact on the functionality of the software in general and therefore must be addressed as quickly as possible. However, it is important to consider repair work separate from the other types of maintenance because repair work must get done - this is generally the only type of work that happens when a system is put on "life support". 
+Corrective software maintenance is necessary when something goes wrong in a piece of software including faults and errors. These can have a widespread impact on the functionality of the software in general and therefore must be addressed as quickly as possible. However, it is important to consider repair work separate from the other types of maintenance because repair work must get done - this is generally the only type of work that happens when a system is put on "life support". 
 
 #### 2. Perfective Software Maintenance (more accurately called "enhancements")
 
-Once software is released and is being used new issues and ideas come to the surface. Users will think up new features or requirements that they would like to see in the software to make it the best tool available for their needs. Perfective software maintenance aims to adjust software by adding new features as necessary and removing features that are irrelevant or not effective in the given software. This process keeps software relevant as the market, and user needs, change. 
+Once software is released and is being used new issues and ideas come to the surface. Users will think up new features or requirements that they would like to see in the software to make it the best tool available for their needs. Perfective software maintenance aims to adjust software by adding new features as necessary (and removing features that are irrelevant or not effective). This process keeps software relevant as the market, and user needs, evolve. 
 
 #### 3. Preventative Software Maintenance (true maintenance is **catching problems before they happen.**)
 
-Preventative software maintenance is looking into the future so that your software can keep working as desired for as long as possible. This includes making necessary changes, upgrades, and adaptations. Preventative software maintenance may address small issues which at the given time may lack significance but may turn into larger problems in the future. These are called latent faults which need to be detected and corrected to make sure that they won’t turn into effective faults. This is the type of maintenance that is generally underfunded. 
+Preventative software maintenance is looking into the future so that your software can keep working as desired for as long as possible. This includes making necessary changes, upgrades, and adaptations. Preventative software maintenance may address small issues which at the given time may lack significance but may turn into larger problems in the future. These are called latent faults which need to be detected and corrected to make sure that they won’t turn into effective faults. This type of maintenance is generally underfunded. 
 
-#### 4. Adaptive Software Maintenance 
+#### 4. Adaptive Software Maintenance
 
 Adaptive software maintenance has to do with the changing technologies as well as policies and rules regarding your software. These include operating system changes, cloud storage, security policies, hardware, etc. When these changes are performed, your software must adapt in order to properly meet new requirements and continue to run well. 
 
@@ -146,13 +147,13 @@ Adaptive software maintenance has to do with the changing technologies as well a
 
 In the case of the Inca rope bridges what was the cost of maintenance annually? Let's assume some of the build work was site preparation and building the stone anchors on each side, but most of the work was constructing the bridge itself. Since the bridge was _entirely replaced_ each year, the maintenance costs could be as much as 80% of the initial build effort, _every year_. 
 
-In the case of a brand-new software system, that is well architected, well designed, well built, and meets all reliability, scalability, and performance needs (basically no software ever) it's conceivable that there is no maintenance necessary for some period of time. So, in the beginning the maintenance budget = $0. 
+In the case of a brand-new software system, that is well architected, well designed, well built, and meets all reliability, scalability, and performance needs (fantasy software) it's conceivable that there is no maintenance necessary for some period of time. So, in the beginning the maintenance budget = $0. 
 
-So, maintenance costs can have a very wide range. A general rule of thumb is 20-40% of the initial build cost will be required for ongoing maintenance work annually. However, maintenance costs usually start off lower and increase over time. They are also "spiky" costs that are often hard to predict. 
+So, maintenance costs can have a very wide range. A general rule of thumb is 20-30% of the initial build cost will be required for ongoing maintenance work annually. However, maintenance costs usually start off lower and increase over time. They are also "spiky" costs that are often hard to predict. 
 
 The challenges should be obvious. First, budgets in large organizations tend be last year's budget plus 2-3%. If you start with a maintenance budget of zero on a new system, how do you ever get to the point of a healthy maintenance budget in the future? Second, maintenance costs are unpredictable, and organizations _hate_ unpredictable costs. It's impossible to say when the next new hardware, or storage, or programming construct will occur, or when the existing system will hit a performance or scalability inflection point. 
 
-This is like buying a brand-new car.  The maintenance costs are negligible in the first couple years, until they start to creep up. Then things start to need maintenance, replacement, or repair. As the car ages the maintenance costs continue to increase until at some point it makes economic sense to buy another new car. _Except none of us wait that long._ Most of us buy new cars before our old one is completely worn out. Yet in Cuba cars have been maintained meticulously for 30-40 years and _some run better than new_. 
+This is like buying a brand-new car. The maintenance costs are negligible in the first couple years, until they start to creep up. Then things start to need maintenance, replacement, or repair. As the car ages the maintenance costs continue to increase until at some point it makes economic sense to buy another new car. _Except none of us wait that long._ Most of us buy new cars before our old one is completely worn out. Yet in Cuba cars have been maintained meticulously for 30-40 years and _some run better than new_. 
 
 ### 4. How can you protect the budget? Creating a Maintenance Fund.
 
@@ -209,6 +210,23 @@ Stewart Brand, the editor of the Whole Earth Catalog, described a concept that b
 
 This concept can be applied to software systems in a similar way.
 
+
+In 1983, Charles Perrow coined the term "[normal accidents](https://en.wikipedia.org/wiki/Normal_Accidents#:~:text=%22Normal%22%20accidents%2C%20or%20system,despite%20efforts%20to%20avoid%20them.)" to describe a situation where systems are prone to failure, and no amount of safety procedures could eliminate accidents entirely. According to Perrow, "normal accidents" are not the product of bad technology or incompetent staff. Rather, systems that experience normal accidents display two important characteristics:
+
+1. They are **tightly coupled**. When separate components are dependent on each other, they are said to be coupled. In tightly coupled situations, there’s a high probability that changes with one component will affect the other. Tightly coupled systems produce cascading effects.
+
+2. They are **complex**. Signs of complexity in software include the number of direct dependencies and the depth of the dependency tree. Computer systems naturally grow more complex as they age, because we tend to add more and more features to them over time.
+
+Tightly coupled and complex systems are prone to failure because the coupling produces cascading effects, and the complexity makes the direction and course of those failure cascades impossible to predict. 
+
+In a simple example of coupling imagine software that tightly links three components together. Each component is 99% reliable. The overall reliability of the system is 0.99 to the third power, or 0.99 x 0.99 x 0.99 = 0.97 (97% reliable). Now imagine instead of three tightly linked components it requires ten. The systems reliability would be 0.99 to the 10th power, or only 90% reliable. It would be out of service 10% of the time, despite being made of highly reliable components.  
+
+Resilient design is _decoupled_ and as _simple_ as possible. 
+
+
+
+
+
 In short, small organizations build monoliths because small organizations are monoliths. ([Location 2073](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=2073))
 
 Culturally, the engineering organization was flat, with teams formed on an ad hoc basis. Opportunities to work on interesting technical challenges were awarded based on personal relationships, so the organization’s regular hack days became critical networking events. Engineering wanted to build difficult and complex solutions to advertise their skills to the lead engineers who were assembling teams.
@@ -228,17 +246,7 @@ Well-designed, high-functioning software that is easy to understand usually blen
 
 
 
-In 1983, Charles Perrow coined the term "[normal accidents](https://en.wikipedia.org/wiki/Normal_Accidents#:~:text=%22Normal%22%20accidents%2C%20or%20system,despite%20efforts%20to%20avoid%20them.)" to describe a situation where systems are so prone to failure, no amount of safety procedures could eliminate accidents entirely. According to Perrow, normal accidents are not the product of bad technology or incompetent staff. Rather, systems that experience normal accidents display two important characteristics:
 
-1. They are **tightly coupled**. When two separate components are dependent on each other, they are said to be coupled. In tightly coupled situations, there’s a high probability that changes with one component will affect the other. Tightly coupled systems produce cascading effects.
-
-2. They are **complex**. Signs of complexity in software include the number of direct dependencies and the depth of the dependency tree. Computer systems naturally grow more complex as they age, because we tend to add more and more features to them over time.
-
-Tightly coupled and complex systems are prone to failure because the coupling produces cascading effects, and the complexity makes the direction and course of those cascades impossible to predict. 
-
-In a simple example of coupling imagine software that tightly links three components together. Each component is 99% reliable. The overall reliability of the system is 0.99 to the third power, or 0.99 x 0.99 x 0.99 = 0.97 (97% reliable). Now imagine instead of three tightly linked components it requires ten. The systems reliability would be 0.99 to the 10th power, or only 90% reliable. It would be out of service 10% of the time, despite being made of highly reliable components.  
-
-Resilient design is _decoupled_ and as _simple_ as possible. 
 
 
 =====
@@ -253,20 +261,6 @@ The reality is the cost benefit is often years down the line, so keeping the rig
 
 --
 
-It's funny how if you ask people about forward-looking systems today, they have either learned mistruths or haven't learned enough about the history of computing to picture much that's reasonable.
-"Java!" used to be talked about as a good way to create software that you could run in the future, but anyone who has had to keep around old laptops / old VMs to run ancient Java to handle KVMs or device management tools knows how ridiculous an expectation about the stability of Java can be.
-
-"Windows!" is funny, because I can't tell you the number of places that have an ancient Windows PC that has either been repaired or carefully replaced with new enough, yet old enough hardware to still run Windows 2000 or XP, because copy protection is stupid, and / or because drivers for specific hardware can't be updated or run on newer Windows, and / or because the software can't be compiled and run on newer Windows without tons of work.
-
-On the other hand, you can take large, complicated programs from the 1980s written in C and compile them on a modern Unix computer without issues, even when the modern computer is running architectures which hadn't even been dreamt of when the software was written...
-
---
-
-But I think you're forgetting how much code is written to C89. How much of bash, for instance, is ancient, with updates that avoid newer toolchain features so that it can be as portable as possible?
-
-Yes, people don't often write stuff with portability as a goal at the beginning, but once something is relatively portable, it stays that way. Lots of code that wasn't poorly written made it from all-the-world's-a-VAX to i386, from i386 to amd64, and now ARM and arch64, with a minimum of extra effort. There just had to be a little effort to NOT program like a jerk, which, as funny as it is, is still an issue now.
-
-I'm running Pine as my daily email program, which was written in 1989 and hasn't had any real updates since 2005. New architecture? Compile it. Lots of modern software started out as C software from the 1980s.
 
 - 
 
@@ -280,15 +274,6 @@ An organization’s size affects the flexibility and tolerance of its communicat
 
 
 
-- whether we are trying to ensure success or avoid failure. When success seems certain, we gravitate toward more conservative, risk-averse solutions. When failure seems more likely, we switch mentalities completely. We go bold, take more risks.11 If we are judging odds correctly, this behavior makes sense. Why not authorize that multimillion-dollar rewrite if the existing system is doomed? ([Location 2763](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=2763))
-- 
-]
-
-([Location 3134](https://readwise.io/to_kindle?action=open&asin=B08CTFY4JP&location=3134))
-## New highlights added September 20, 2022 at 12:07 PM
-- To summarize, people’s perception of risk is not static, and it’s often not connected to the probability of failure so much as it is the potential feeling of rejection and condemnation from their peers. Since social pressures and rewards are better incentives than money and promotions, you can improve your odds of success by learning how to manipulate an organization’s perception of risk. The first task is to understand what behaviors get individuals within an organization acknowledged. Those are the activities that people will ultimately prioritize. 
-
-
 
 
 
@@ -299,9 +284,9 @@ An organization’s size affects the flexibility and tolerance of its communicat
 Software that is resilient is generally infrastructure agnostic. 
 
 1. Use open standards, or widely adopted standards
-2. Avoid 
+2. Decouple as much as possible. 
 3. Be boring 
-4. When both observability and testing are lacking on your legacy system, observability comes first. Tests tell you only what won’t fail; monitoring tells you what is failing.
+4. "Bake in" observability and testing. When both are lacking on your legacy system, observability comes first. Tests tell you only what won’t fail; monitoring and observability tells you what _is failing_.
 
 
 
