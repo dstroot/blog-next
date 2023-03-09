@@ -1,9 +1,9 @@
 // build-search.js
+
 const dotenv = require('dotenv');
 const matter = require('gray-matter');
 const readingTime = require('reading-time');
 const algoliasearch = require('algoliasearch/lite');
-const fetch = require('node-fetch');
 const { join } = require('path');
 const { readdirSync, readFileSync, writeFile } = require('fs');
 
