@@ -13,10 +13,10 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.290.0",
-    "@aws-sdk/lib-dynamodb": "^3.290.0",
-    "@aws-sdk/smithy-client": "^3.290.0",
-    "@aws-sdk/types": "^3.290.0",
+    "@aws-sdk/client-dynamodb": "^3.293.0",
+    "@aws-sdk/lib-dynamodb": "^3.293.0",
+    "@aws-sdk/smithy-client": "^3.292.0",
+    "@aws-sdk/types": "^3.292.0",
     "@google-analytics/data": "^3.2.1",
     "@headlessui/react": "^1.7.13",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
@@ -29,9 +29,9 @@
     "algoliasearch": "^4.15.0",
     "date-fns": "2.29.3",
     "dotenv": "^16.0.3",
-    "esbuild": "^0.17.11",
+    "esbuild": "^0.17.12",
     "feed": "^4.2.2",
-    "framer-motion": "^10.3.1",
+    "framer-motion": "^10.6.0",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.3",
     "mdx-bundler": "^9.2.1",
@@ -56,7 +56,7 @@
     "remark-gfm": "^3.0.1",
     "sharp": "^0.31.3",
     "swr": "^2.1.0",
-    "typescript": "^4.9.5",
+    "typescript": "^5.0.2",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
