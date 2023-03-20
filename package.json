@@ -13,10 +13,10 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.294.0",
-    "@aws-sdk/lib-dynamodb": "^3.294.0",
-    "@aws-sdk/smithy-client": "^3.292.0",
-    "@aws-sdk/types": "^3.292.0",
+    "@aws-sdk/client-dynamodb": "^3.295.0",
+    "@aws-sdk/lib-dynamodb": "^3.295.0",
+    "@aws-sdk/smithy-client": "^3.295.0",
+    "@aws-sdk/types": "^3.295.0",
     "@google-analytics/data": "^3.2.1",
     "@headlessui/react": "^1.7.13",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
@@ -65,7 +65,7 @@
     "cssnano": "^5.1.15",
     "eslint": "^8.36.0",
     "eslint-config-next": "^13.2.4",
-    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-mdx": "^2.0.5",
     "next-sitemap": "^4.0.6",
     "postcss": "^8.4.21",
