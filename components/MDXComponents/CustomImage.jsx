@@ -12,6 +12,7 @@ export const CustomImage = (props) => {
       // height and width are part of the props, from rehype-img-size
       // so they are automatically passed here with {...props}
       // https://www.peterlunch.com/snippets/next-image-styling
+
       // eslint-disable-next-line jsx-a11y/alt-text
       <Image
         {...props}
