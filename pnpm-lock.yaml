@@ -25,7 +25,7 @@ specifiers:
   eslint-config-prettier: ^8.8.0
   eslint-plugin-mdx: ^2.0.5
   feed: ^4.2.2
-  framer-motion: ^10.6.1
+  framer-motion: ^10.8.3
   gray-matter: ^4.0.3
   html-entities: ^2.3.3
   mdx-bundler: ^9.2.1
@@ -35,14 +35,14 @@ specifiers:
   next-themes: 0.2.1
   postcss: ^8.4.21
   postcss-import: ^15.1.0
-  prettier: ^2.8.5
+  prettier: ^2.8.6
   prismjs: ^1.29.0
   react: 18.2.0
   react-cool-dimensions: ^3.0.1
   react-dom: 18.2.0
   react-icons: ^4.8.0
   react-imgix: ^9.7.0
-  react-instantsearch-dom: ^6.39.0
+  react-instantsearch-dom: ^6.39.1
   react-mailchimp-subscribe: ^2.1.3
   react-wrap-balancer: ^0.4.0
   reading-time: ^1.5.0
@@ -76,7 +76,7 @@ dependencies:
   dotenv: 16.0.3
   esbuild: 0.17.12
   feed: 4.2.2
-  framer-motion: 10.6.1_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 10.8.3_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
   html-entities: 2.3.3
   mdx-bundler: 9.2.1_esbuild@0.17.12
@@ -89,7 +89,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
   react-imgix: 9.7.0_biqbaboplfbrettd7655fr4n2y
-  react-instantsearch-dom: 6.39.0_jmf63fejdqsy6olssod66bzdge
+  react-instantsearch-dom: 6.39.1_jmf63fejdqsy6olssod66bzdge
   react-mailchimp-subscribe: 2.1.3_react@18.2.0
   react-wrap-balancer: 0.4.0_react@18.2.0
   reading-time: 1.5.0
@@ -115,7 +115,7 @@ devDependencies:
   next-sitemap: 4.0.6_jccvrrmb7rb3yyi3af3znueaea
   postcss: 8.4.21
   postcss-import: 15.1.0_postcss@8.4.21
-  prettier: 2.8.5
+  prettier: 2.8.6
   tailwindcss: 3.2.7_postcss@8.4.21
 
 packages:
@@ -1958,8 +1958,8 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /algoliasearch-helper/3.11.3_algoliasearch@4.15.0:
-    resolution: {integrity: sha512-TbaEvLwiuGygHQIB8y+OsJKQQ40+JKUua5B91X66tMUHyyhbNHvqyr0lqd3wCoyKx7WybyQrC0WJvzoIeh24Aw==}
+  /algoliasearch-helper/3.12.0_algoliasearch@4.15.0:
+    resolution: {integrity: sha512-/j1U3PEwdan0n6P/QqSnSpNSLC5+cEMvyljd5CnmNmUjDlGrys+vFEOwjVEnqELIiAGMHEA/Nl3CiKVFBUYqyQ==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
     dependencies:
@@ -3488,8 +3488,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion/10.6.1_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-e1o4JKJ98/pfUkYkze+23A+r5SW6JujDSAEzIKWq6jsrVIE+QSwpu4U7L8+maOXcTnfAZlI930MfpvA/+zaa5g==}
+  /framer-motion/10.8.3_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Nd6Fgi7KEArJUsWhS/95dKbAyC1S03mrWKG1rO4pNyDgg0k5+Y9UjJ18z5z6kouic2UxzE6u6mU0tNQ7mJCrdg==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -6016,8 +6016,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier/2.8.5:
-    resolution: {integrity: sha512-3gzuxrHbKUePRBB4ZeU08VNkUcqEHaUaouNt0m7LGP4Hti/NuB07C7PPTM/LkWqXoJYJn2McEo5+kxPNrtQkLQ==}
+  /prettier/2.8.6:
+    resolution: {integrity: sha512-mtuzdiBbHwPEgl7NxWlqOkithPyp4VN93V7VeHVWBF+ad3I5avc0RVDT4oImXQy9H/AqxA2NSQH8pSxHW6FYbQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
@@ -6141,8 +6141,8 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
-  /react-fast-compare/3.2.0:
-    resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
+  /react-fast-compare/3.2.1:
+    resolution: {integrity: sha512-xTYf9zFim2pEif/Fw16dBiXpe0hoy5PxcD8+OwBnTtNLfIm3g6WxhKNurY+6OmdH1u6Ta/W/Vl6vjbYP1MFnDg==}
     dev: false
 
   /react-icons/4.8.0_react@18.2.0:
@@ -6168,36 +6168,36 @@ packages:
       warning: 4.0.3
     dev: false
 
-  /react-instantsearch-core/6.39.0_mv43phymrj4gkblipfymzly3xe:
-    resolution: {integrity: sha512-UROe0jjXI56pu1uHuP5lDhyXMIrodkDBISBv5pLU9/1LIYMNF3o4C9FllTdfia3Jz3lDDsSEcPpc/77so2x3Ww==}
+  /react-instantsearch-core/6.39.1_mv43phymrj4gkblipfymzly3xe:
+    resolution: {integrity: sha512-rvzOoNGBT2O28mmcpXfcN4pVF+p07jlDMbEKB1TRdW3jE9dm8U6uCS/X6DWqigYLr8svVRcG/Ez+wzYK+yuPZw==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.3.0 < 19'
     dependencies:
-      '@babel/runtime': 7.20.13
+      '@babel/runtime': 7.21.0
       algoliasearch: 4.15.0
-      algoliasearch-helper: 3.11.3_algoliasearch@4.15.0
+      algoliasearch-helper: 3.12.0_algoliasearch@4.15.0
       prop-types: 15.8.1
       react: 18.2.0
-      react-fast-compare: 3.2.0
+      react-fast-compare: 3.2.1
     dev: false
 
-  /react-instantsearch-dom/6.39.0_jmf63fejdqsy6olssod66bzdge:
-    resolution: {integrity: sha512-wdFGDFugoCpO9buxjybyLTs7cblQ6g+NIiYIsZ9ua0FLUIdoeawXQYDV83dDzcNgbml5RTiKJsAFxlne8gguMg==}
+  /react-instantsearch-dom/6.39.1_jmf63fejdqsy6olssod66bzdge:
+    resolution: {integrity: sha512-lfTHQZ3ILwlQeDsd+GqvVCVLyOzK8FYMtICJvc0PXANhcXXMM+7WvqJGlDclcnujPPSDuQl6MmKTHcTNVapQoA==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.3.0 < 19'
       react-dom: '>= 16.3.0 < 19'
     dependencies:
-      '@babel/runtime': 7.20.13
+      '@babel/runtime': 7.21.0
       algoliasearch: 4.15.0
-      algoliasearch-helper: 3.11.3_algoliasearch@4.15.0
+      algoliasearch-helper: 3.12.0_algoliasearch@4.15.0
       classnames: 2.3.2
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-fast-compare: 3.2.0
-      react-instantsearch-core: 6.39.0_mv43phymrj4gkblipfymzly3xe
+      react-fast-compare: 3.2.1
+      react-instantsearch-core: 6.39.1_mv43phymrj4gkblipfymzly3xe
     dev: false
 
   /react-is/16.13.1:
