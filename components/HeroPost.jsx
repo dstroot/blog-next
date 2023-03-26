@@ -20,9 +20,7 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
                 // loader={imgixLoader}
                 src={coverImage}
                 alt={`Hero image for ${title}`}
-                // width={1496}
-                // height={748}
-                fill // use fill for responsive images (parent container must have position: relative, fixed, or absolute
+                fill
                 sizes='(max-width: 1280px) 90vw, 1496px'
                 priority={true}
                 className='duration-300 ease-in-out group-hover:opacity-[85%] object-cover overflow-hidden'

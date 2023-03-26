@@ -1,13 +1,13 @@
-// import { cn } from '../lib/utils';
+import { cn } from '../lib/utils';
 import Image from 'next/image';
-// import { useState } from 'react';
+import { useState } from 'react';
 import { Avatar } from './Avatar';
 import { MoreStats } from './MoreStats';
 import { PostTitle } from './PostTitle';
 // import { imgixLoader } from '../lib/imgixLoader';
 
 export const PostHeader = ({ title, coverImage, date, author, slug, stats }) => {
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <>
@@ -25,12 +25,11 @@ export const PostHeader = ({ title, coverImage, date, author, slug, stats }) => 
             fill
             sizes='(max-width: 1280px) 90vw, 1496px'
             priority={true}
-            className='object-cover overflow-hidden'
-            // className={cn(
-            //   'duration-300 object-cover overflow-hidden',
-            //   isLoading ? 'scale-105 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
-            // )}
-            // onLoadingComplete={() => setIsLoading(false)}
+            className={cn(
+              'object-cover overflow-hidden duration-500	transition-opacity',
+              isLoading ? 'opacity-0' : 'opacity-100'
+            )}
+            onLoadingComplete={() => setIsLoading(false)}
           />
         </div>
         <MoreStats stats={stats} slug={slug} />

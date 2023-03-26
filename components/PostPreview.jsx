@@ -44,20 +44,20 @@ export const PostPreview = ({
           <div aria-label={title} className='sm:mx-0'>
             <div className='relative aspect-[2/1]'>
               {/*
-                It usually is best practice to wrap images in a div and set height and width with it. 
-                HTML treats images as foreign objects so they don't follow the same rules as everything else. 
-                A simple div is the best way to work with an img as a normal block level element. Then set "fill"
-                on the Next Image componenet.
+                It usually is best practice to wrap images in a div and set height 
+                and width with it. HTML treats images as foreign objects so they 
+                don't follow the same rules as everything else. A simple div is the 
+                best way to work with an img as a normal block level element. Then 
+                set "fill" on the Next Image componenet.
               */}
               <Image
-                // loader={imgixLoader}
                 src={coverImage}
                 alt={`Cover image for ${title}`}
                 fill
                 sizes='(max-width: 768px) 90vw, 45vw'
                 className={cn(
-                  'duration-150 ease-in-out hover:opacity-[85%] object-cover overflow-hidden',
-                  isLoading ? 'scale-105 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
+                  'object-cover overflow-hidden duration-500	transition-opacity',
+                  isLoading ? 'opacity-0' : 'opacity-100'
                 )}
                 onLoadingComplete={() => setIsLoading(false)}
               />
