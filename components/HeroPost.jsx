@@ -15,7 +15,6 @@ export const HeroPost = ({ title, coverImage, date, excerpt, author, slug, stats
             It usually is best practice to wrap images in a div and set height and width with it. HTML treats images as foreign objects so they don't follow the same rules as everything else. A simple div is the best way to work with an img as a normal block level element.
              */}
             <div className='aspect-[2/1] relative'>
-              {/* New Image component */}
               <Image
                 // loader={imgixLoader}
                 src={coverImage}
