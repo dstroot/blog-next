@@ -13,6 +13,7 @@ export const Meta = () => {
       <link rel='apple-touch-icon' sizes='192x192' href='/maskable_icon_x192.png' />
       <link rel='icon' type='image/png' sizes='32x32' href='/favicon.png' />
       <link rel='shortcut icon' href='/favicon.png' />
+      <link rel='me' href='https://mastodon.social/@dstroot' />
 
       {/*
           COLOR: The page supports both dark and light color
