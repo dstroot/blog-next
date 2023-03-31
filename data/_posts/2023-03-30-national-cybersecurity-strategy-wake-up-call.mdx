@@ -1,0 +1,57 @@
+---
+title: The 2023 US National Cybersecurity Strategy is a wake-up call for software developers
+excerpt: “Companies that make software must have the freedom to innovate, but they must also be held liable when they fail to live up to the duty of care they owe consumers, businesses, or critical infrastructure providers. Responsibility must be placed on the stakeholders most capable of taking action to prevent bad outcomes, not on the end-users that often bear the consequences of insecure software…”
+coverImage: /assets/blog/img/2023cybersec.jpg
+date: '2023-03-30'
+published: true
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/2023cybersec.jpg
+seoURL: 
+---
+
+Our updated [National Cybersecurity Strategy](https://www.whitehouse.gov/wp-content/uploads/2023/03/National-Cybersecurity-Strategy-2023.pdf) was released on March 2, 2023. The strategy focuses on five key pillars designed to improve national and global cybersecurity for the public and private sectors:
+
+1.	**Defend Critical Infrastructure**
+2.	**Disrupt and Dismantle Threat Actors**
+3.	**Shape Market Forces to Drive Security and Resilience**
+    * This item shifts liability to software vendors: “We must rebalance the responsibility to defend cyberspace by shifting the burden for cybersecurity away from individuals, small businesses, and local governments, and onto the organizations that are most capable and best positioned to reduce risks for all of us.”
+4.	**Invest in a Resilient Future**
+5.	**Forge International Partnerships to Pursue Shared Goals**
+
+Item number three is a wake-up call to all organizations that develop software, whether for internal or external use. Developers who fail to take reasonable precautions to secure their software will be held liable - the White House plans to work with Congress to create legislation that establishes liability for software products and services. 
+
+The White House’s strategy is clearly designed to put the onus for developing, deploying, and maintaining secure software on software makers. It states that too many vendors “ignore best practices for secure development, ship products with insecure default configurations or known vulnerabilities, and integrate third-party software of unvetted or unknown provenance.”
+
+>“Companies that make software must have the freedom to innovate, but they must also be held liable when they fail to live up to the duty of care they owe consumers, businesses, or critical infrastructure providers. Responsibility must be placed on the stakeholders most capable of taking action to prevent bad outcomes, not on the end-users that often bear the consequences of insecure software…”
+>
+> &mdash; National Cybersecurity Strategy, 2023
+
+## Implications for the Software Industry
+
+* **Improved Software Development Lifecycle (SDLC) practices.** This is clearly a focus of this strategy. Software quality and security must be “baked in” to the design and development processes, not “inspected in” after the fact.  This will lead to improved processes, and more automation, specifically testing and deployment.
+
+* **Adoption of a comprehensive DevSecOps approach, integrating security and compliance into the developer experience.**  DevSecOps tools automate security workflows within the development and deployment processes. By embedding security into the software development lifecycle, you can more consistently secure fast-moving and iterative processes.
+  * Developers will need to secure their end-to-end software supply chain, including source, build, dependencies, and release artifacts - and demonstrate their software is trustworthy via [SLSA](https://slsa.dev/)
+  * New attack surfaces such as containers must be monitored and protected alongside the application itself.
+  * Developers will need a [software bill of materials (SBOM)](https://www.cisa.gov/sbom) to track the attack surface of the applications they create. 
+
+* **Improved identity management.** Management of digital identity, along with secure authentication and authorization are required for a robust digital ecosystem. Today identity theft is on the rise, and fraud florishes online. Effective, secure, digital identity will protect us as individuals, and help our digital economy thrive. Software developers will have to increase their experience and expertise with identity management to avoid liability. 
+
+* **Continued shift to "software as a service" business models.** The challenge with software that is locally installed has always been patching. It is impossible to write perfectly secure software, so patches are a normal, expected process. However, many companies are slow at deploying patches leaving themselves vulnerable. If vendors are going to be held more accountable (difficult for locally installed software) the natural response will be to migrate to software as a service that can be directly patched and maintained by the vendor. 
+
+* **More open source software, surrounded by services.** Currently it seems the target is software, not services. This may lead to more business models where core software is open source, and surrounding the open-source software with services and enterprise support, consulting, etc. With true open-source software will be very difficult to hold any single person or organization accountable.
+
+* **More security frameworks.** With more liability comes more lawyers. Lawyers focus on limiting liability and one way to do that is by following defensible “best practice” methods. Since the White House’s strategy proposes future legislation that will include safe harbor from liability for those that follow best practices like [NIST’s Secure Software Development Framework (SSDF)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf) then clearly more organizations will adopt these practices. 
+
+## Summary
+
+Software developers should know the spotlight is shifting in their direction. Prepare now for the shift of liability, and take active steps now to improve your overall security posture. DevOps makes build and deployment much more efficent, DevSecOps can provide the same benefits along with more automated testing and better security. Better digital identity managment will improve our digital economy. In the long run these are all net postives for us all.
+
+### References:
+
+* [National Cybersecurity Strategy](https://www.whitehouse.gov/wp-content/uploads/2023/03/National-Cybersecurity-Strategy-2023.pdf)
+* [NIST’s Secure Software Development Framework (SSDF)](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf)
+* [Supply chain Levels for Software Artifacts (SLSA)](https://slsa.dev/)

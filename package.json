@@ -13,17 +13,17 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.301.0",
-    "@aws-sdk/lib-dynamodb": "^3.301.0",
-    "@aws-sdk/smithy-client": "^3.296.0",
-    "@aws-sdk/types": "^3.296.0",
+    "@aws-sdk/client-dynamodb": "^3.303.0",
+    "@aws-sdk/lib-dynamodb": "^3.303.0",
+    "@aws-sdk/smithy-client": "^3.303.0",
+    "@aws-sdk/types": "^3.303.0",
     "@google-analytics/data": "^3.2.1",
     "@headlessui/react": "^1.7.13",
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/env": "^13.2.4",
     "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@vercel/og": "^0.5.0",
     "algoliasearch": "^4.16.0",
     "date-fns": "2.29.3",
@@ -55,7 +55,7 @@
     "remark-gfm": "^3.0.1",
     "sharp": "^0.32.0",
     "swr": "^2.1.1",
-    "typescript": "^5.0.2",
+    "typescript": "^5.0.3",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
@@ -70,7 +70,7 @@
     "postcss": "^8.4.21",
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.7",
-    "tailwindcss": "^3.3.0"
+    "tailwindcss": "^3.3.1"
   },
   "license": "MIT"
 }
