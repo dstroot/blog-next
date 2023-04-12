@@ -29,7 +29,7 @@
     "dotenv": "^16.0.3",
     "esbuild": "^0.17.16",
     "feed": "^4.2.2",
-    "framer-motion": "^10.11.5",
+    "framer-motion": "^10.11.6",
     "gray-matter": "^4.0.3",
     "html-entities": "^2.3.3",
     "mdx-bundler": "^9.2.1",
