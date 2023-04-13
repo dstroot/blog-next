@@ -2,11 +2,11 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@aws-sdk/client-dynamodb':
-    specifier: ^3.310.0
-    version: 3.310.0
+    specifier: ^3.312.0
+    version: 3.312.0
   '@aws-sdk/lib-dynamodb':
-    specifier: ^3.310.0
-    version: 3.310.0(@aws-sdk/client-dynamodb@3.310.0)(@aws-sdk/smithy-client@3.310.0)(@aws-sdk/types@3.310.0)
+    specifier: ^3.312.0
+    version: 3.312.0(@aws-sdk/client-dynamodb@3.312.0)(@aws-sdk/smithy-client@3.310.0)(@aws-sdk/types@3.310.0)
   '@aws-sdk/smithy-client':
     specifier: ^3.310.0
     version: 3.310.0
@@ -17,8 +17,8 @@ dependencies:
     specifier: ^3.2.1
     version: 3.2.1
   '@headlessui/react':
-    specifier: ^1.7.13
-    version: 1.7.13(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.7.14
+    version: 1.7.14(react-dom@18.2.0)(react@18.2.0)
   '@mdx-js/mdx':
     specifier: ^2.3.0
     version: 2.3.0
@@ -32,8 +32,8 @@ dependencies:
     specifier: ^0.5.3
     version: 0.5.3(tailwindcss@3.3.1)
   '@vercel/og':
-    specifier: ^0.5.1
-    version: 0.5.1
+    specifier: ^0.5.2
+    version: 0.5.2
   algoliasearch:
     specifier: ^4.17.0
     version: 4.17.0
@@ -314,13 +314,13 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@aws-sdk/client-dynamodb@3.310.0:
-    resolution: {integrity: sha512-UMl4Aqtbzrn240UkoIJDSvOjthCSfqWfd/MDzXOJTZkwzPyqXLpCtbpN5z4to3Z7k9mOYv2GuxfUdgbphnI+TA==}
+  /@aws-sdk/client-dynamodb@3.312.0:
+    resolution: {integrity: sha512-3R7vXifiQbuxfd6YqvOsea6C1R9NfKnJsrSfpXAFrCiANsj8fHeNKwAvXcIfI/uppg5JgRE65CNtGdbyLAUKqQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sts': 3.310.0
+      '@aws-sdk/client-sts': 3.312.0
       '@aws-sdk/config-resolver': 3.310.0
       '@aws-sdk/credential-provider-node': 3.310.0
       '@aws-sdk/fetch-http-handler': 3.310.0
@@ -440,8 +440,8 @@ packages:
       - aws-crt
     dev: false
 
-  /@aws-sdk/client-sts@3.310.0:
-    resolution: {integrity: sha512-V1LyJwmWuo0OaPIWrE/BDNr14FJdnBTVCmCnEnq1DKVQI/ihVr8HuDsSM4K8jaywWNJaQFNvAKOVuCY2BdmIyA==}
+  /@aws-sdk/client-sts@3.312.0:
+    resolution: {integrity: sha512-t0U7vRvWaMjrzBUo6tPrHe6HE97Blqx+b4GOjFbcbLtzxLlcRfhnWJik0Lp8hJtVqzNoN5mL4OeYgK7CRpL/Sw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
@@ -624,18 +624,18 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@aws-sdk/lib-dynamodb@3.310.0(@aws-sdk/client-dynamodb@3.310.0)(@aws-sdk/smithy-client@3.310.0)(@aws-sdk/types@3.310.0):
-    resolution: {integrity: sha512-tBRJBs90+x4ApvrQlXmPKMQYssHVEzm2Hs4XhHkxHI4N484JblinbJbKw4BSbeuuQ4Oyg38CUQBF+WojuqOuJw==}
+  /@aws-sdk/lib-dynamodb@3.312.0(@aws-sdk/client-dynamodb@3.312.0)(@aws-sdk/smithy-client@3.310.0)(@aws-sdk/types@3.310.0):
+    resolution: {integrity: sha512-+MfR1KwX36O8C9e+rPUb70k9qrtcuXjHe5zYu9dCalMpWf6r1rrTMyy7MkQrCvUr26+Yrc01Y1OgyLH5XfrURw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@aws-sdk/client-dynamodb': ^3.0.0
       '@aws-sdk/smithy-client': ^3.0.0
       '@aws-sdk/types': ^3.0.0
     dependencies:
-      '@aws-sdk/client-dynamodb': 3.310.0
+      '@aws-sdk/client-dynamodb': 3.312.0
       '@aws-sdk/smithy-client': 3.310.0
       '@aws-sdk/types': 3.310.0
-      '@aws-sdk/util-dynamodb': 3.310.0
+      '@aws-sdk/util-dynamodb': 3.312.0
       tslib: 2.5.0
     dev: false
 
@@ -929,8 +929,8 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@aws-sdk/util-dynamodb@3.310.0:
-    resolution: {integrity: sha512-i2aomsAVV2WFAQ2toa6rHQEj9oKlb1w8xEv1h6ZZepu+p2R/1BnpzIuFfyosU4FdFbtdShYGaeWYkdVw75NapA==}
+  /@aws-sdk/util-dynamodb@3.312.0:
+    resolution: {integrity: sha512-595aijJNNDzTyzrPP8DsIi3e7MedXP9dIq+0xZCdtG8Ktli8e1VwyHQHtHTow4PYAv8aYhnarg7BxxQsQPfYVw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       tslib: 2.5.0
@@ -1378,8 +1378,8 @@ packages:
       yargs: 16.2.0
     dev: false
 
-  /@headlessui/react@1.7.13(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-9n+EQKRtD9266xIHXdY5MfiXPDfYwl7zBM7KOx2Ae3Gdgxy8QML1FkCMjq6AsOf0l6N9uvI4HcFtuFlenaldKg==}
+  /@headlessui/react@1.7.14(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-znzdq9PG8rkwcu9oQ2FwIy0ZFtP9Z7ycS+BAqJ3R5EIqC/0bJGvhT7193rFf+45i9nnPsYvCQVW4V/bB9Xc+gA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
@@ -1894,12 +1894,12 @@ packages:
       eslint-visitor-keys: 3.4.0
     dev: true
 
-  /@vercel/og@0.5.1:
-    resolution: {integrity: sha512-54L69pLu2uBscGQh0/xYrgwOEcCT9ADJb4o0yzSTxoD3HEHNcS755oroO0K7inPO4Qrn/gYYRtUL0YwfKWNiKw==}
+  /@vercel/og@0.5.2:
+    resolution: {integrity: sha512-YnJT2rrNuD8YCkUaMUAG5ThGSmwMR39kWFzpqlfHUqNm08OjdZwoVR9d52dMD7nyhjOFb9hqctijmcv4Cev+iw==}
     engines: {node: '>=16'}
     dependencies:
       '@resvg/resvg-wasm': 2.4.1
-      satori: 0.4.7
+      satori: 0.4.8
       yoga-wasm-web: 0.3.3
     dev: false
 
@@ -6568,8 +6568,8 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /satori@0.4.7:
-    resolution: {integrity: sha512-angaQXTa5geGKxSD9+n85GlH71SfPJTMmrUJf76PZeV4gXWz8aOAxSEH0M1Ok/yUacrWxVto0WjV7iGkK0h3CQ==}
+  /satori@0.4.8:
+    resolution: {integrity: sha512-4ul7q4vgex8gfmu9yr9CIjatTBPVSGXEssd0wgIvjNL8S86USzR5IWUCO0xwgRJO5EFOPoHSzn41OSFn+op8dw==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
