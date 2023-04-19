@@ -14,6 +14,8 @@ module.exports = {
     // domains: [
     //   'pbs.twimg.com/', // Twitter Profile Pictures
     // ],
+    loader: 'custom',
+    loaderFile: './lib/imgixLoader.js',
     remotePatterns: [
       {
         protocol: 'https',
