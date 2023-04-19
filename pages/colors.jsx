@@ -5,9 +5,6 @@ import { CMS_NAME } from '../lib/constants';
 import { DarkMode } from '../components/DarkMode';
 import { Container } from '../components/Container';
 
-// images
-import card from '../public/assets/blog/img/black_card.jpg';
-
 const darkBackground = {
   backgroundColor: '#1D1E20', // 2A2B2D  1D1E20
   padding: '40px',
@@ -167,7 +164,14 @@ export default function Index() {
 
         <div className='flex flex-row space-x-4'>
           <div className='max-w-sm overflow-hidden rounded shadow-lg overlay'>
-            <Image src={card} alt='Black Card' layout='responsive' />
+            <div className='aspect-[2/1] relative'>
+              <Image
+                src='/assets/blog/img/black_card.jpg'
+                alt='Black Card'
+                fill
+                sizes='(max-width: 1280px) 90vw, 1496px'
+              />
+            </div>
             <div className='px-6 py-4'>
               <div className='mb-2 text-xl font-bold text-gray-700 dark:text-gray-300'>
                 Mountain
@@ -191,7 +195,14 @@ export default function Index() {
           </div>
 
           <div className='max-w-sm overflow-hidden rounded shadow-lg overlay'>
-            <Image src={card} alt='Black Card' layout='responsive' />
+            <div className='aspect-[2/1] relative'>
+              <Image
+                src='/assets/blog/img/black_card.jpg'
+                alt='Black Card'
+                fill
+                sizes='(max-width: 1280px) 90vw, 1496px'
+              />
+            </div>
             <div className='px-6 py-4'>
               <div className='mb-2 text-xl font-bold blue7 dark:blue4'>Mountain</div>
               <p className='text-base text-gray-600 dark:text-gray-400'>
@@ -213,7 +224,14 @@ export default function Index() {
           </div>
 
           <div className='max-w-sm overflow-hidden rounded shadow-lg overlay'>
-            <Image src={card} alt='Black Card' layout='responsive' />
+            <div className='aspect-[2/1] relative'>
+              <Image
+                src='/assets/blog/img/black_card.jpg'
+                alt='Black Card'
+                fill
+                sizes='(max-width: 1280px) 90vw, 1496px'
+              />
+            </div>
             <div className='px-6 py-4'>
               <div className='mb-2 text-xl font-bold text-gray-700 dark:text-gray-300'>
                 <span className='error-text'>Mountain </span>
