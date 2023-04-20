@@ -2,9 +2,9 @@
   "name": "dan-blog",
   "version": "1.0.0",
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
-  "packageManager": "pnpm@7.27.0",
+  "packageManager": "pnpm@8.2.0",
   "scripts": {
     "dev": "next",
     "build": "next build",

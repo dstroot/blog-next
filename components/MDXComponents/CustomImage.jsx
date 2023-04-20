@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 export const CustomImage = (props) => {
-  const src = props.src;
+  let src = props.src;
   const isInternalImage = src && src.startsWith('/');
   const [isLoading, setLoading] = useState(true);
 
@@ -13,20 +13,23 @@ export const CustomImage = (props) => {
       // so they are automatically passed here with {...props}
 
       // https://www.peterlunch.com/snippets/next-image-styling
-
-      // eslint-disable-next-line jsx-a11y/alt-text
-      <Image
-        {...props}
-        loading='lazy'
-        className={cn(
-          'duration-300 ease-in-out group-hover:opacity-75',
-          isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
-        )}
-        onLoadingComplete={() => setLoading(false)}
-      />
+      <div className='relative'>
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
+        <Image
+          {...props}
+          loading='lazy'
+          fill
+          sizes='(max-width: 1280px) 90vw, 1496px'
+          className={cn(
+            'duration-300 ease-in-out group-hover:opacity-75',
+            isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'
+          )}
+          onLoadingComplete={() => setLoading(false)}
+        />
+      </div>
     );
   }
 
   // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
-  return <img {...props} />;
+  return <img className='object-contain' {...props} loading='lazy' />;
 };

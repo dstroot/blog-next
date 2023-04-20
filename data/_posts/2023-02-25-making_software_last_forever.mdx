@@ -1,6 +1,6 @@
 ---
 title: Making Software Last Forever
-excerpt: "Joel Spolsky (of Fog Creek Software and Stack Overflow) describes system re-writes as “the single worst strategic mistake that any software company can make”. However, engineering teams love full rewrites because they incorrectly think of old systems as specs. They assume that since the old system works, all functional aspects have been settled. Design risks have been eliminated! They can focus on making changes to the underlying architecture without worry. This is a flawed assumption."
+excerpt: 'Joel Spolsky (of Fog Creek Software and Stack Overflow) describes system re-writes as “the single worst strategic mistake that any software company can make”. However, engineering teams love full rewrites because they incorrectly think of old systems as specs. They assume that since the old system works, all functional aspects have been settled. Design risks have been eliminated! They can focus on making changes to the underlying architecture without worry. This is a flawed assumption.'
 coverImage: /assets/blog/img/billg.jpeg
 date: '2023-02-25'
 published: false
@@ -9,7 +9,7 @@ author:
   picture: /assets/blog/authors/dan.jpeg
 ogImage:
   url: /assets/blog/img/billg.jpeg
-seoURL: 
+seoURL:
 ---
 
 How many of us have bought a new home and moved because our prior home was not quite meeting our needs? Maybe we needed an extra bedroom, or wanted a bigger backyard? Now, as a thought experiment, assume you _couldn't sell your existing home_. If you bought a new home, you'd have to "retire" or "decommission" your prior home (and your investment in it). Does that change your thinking?
@@ -18,9 +18,9 @@ Further, imagine you had a team of five people maintaining your prior home, impr
 
 When companies decide to re-write or replace an existing software application, they are making a similar decision. Existing software is "retired" or "decommissioned" (along with its cumulative investment) for something new. Yet the belief that new code is always better than old is patently absurd. Old code has weathered and withstood the test of time. It has been battle-tested. You know it's failure modes. Bugs have been found, and more importantly, fixed.
 
-Joel Spolsky (of Fog Creek Software and Stack Overflow) describes system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.” 
+Joel Spolsky (of Fog Creek Software and Stack Overflow) describes system re-writes in "[Things You Should Never Do, Part I](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)" as “the single worst strategic mistake that any software company can make.”
 
-Continuing our construction analogy, recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, cause us to treat our current homes more dearly. Similarly, price increases for quality software engineers should force companies to treat existing software more dearly. 
+Continuing our construction analogy, recent price increases for construction materials like lumber, drywall, and wiring (and frankly everything else) should, according to Economics 101, cause us to treat our current homes more dearly. Similarly, price increases for quality software engineers should force companies to treat existing software more dearly.
 
 Lots of current software started out as C software from the 1980s. Engineers don't often write software with portability as a goal at the beginning, but once something is relatively portable, it tends to stay that way. Code that was well designed and written migrated from mini-computers to i386, from i386 to amd64, and now ARM and arch64, with a minimum of redesign or effort. You can take large, complicated programs from the 1980s written in C, and compile them on a modern Linux computer, even when the modern computer is running architectures which hadn't even been dreamt of when the software was written.
 
@@ -30,35 +30,35 @@ Why can't software last forever? It's not made of wood, concrete, or steel. It d
 
 In 1958, the United States Department of Defense launched a new computer-based contract management system called "Mechanization of Contract Administration Services", or MOCAS (pronounced “MOH-cass”). In 2015, [MIT Technology Review](https://www.technologyreview.com/2015/08/06/166822/what-is-the-oldest-computer-program-still-in-use/) stated that MOCAS was the oldest computer program in continuous use they could verify. At that time MOCAS managed about $1.3 trillion in government obligations and 340,000 contracts.
 
-According to the [Guinness Book of World Records](https://www.guinnessworldrecords.com/world-records/636196-oldest-software-system-in-continuous-use), the oldest software system in use today is either the [SABRE](https://en.wikipedia.org/wiki/Sabre_(travel_reservation_system)) Airline Reservation System (introduced in 1960), or the IRS Individual Master File (IMF) and Business Master File (BMF) systems introduced in 1962–63. 
+According to the [Guinness Book of World Records](https://www.guinnessworldrecords.com/world-records/636196-oldest-software-system-in-continuous-use), the oldest software system in use today is either the [SABRE](<https://en.wikipedia.org/wiki/Sabre_(travel_reservation_system)>) Airline Reservation System (introduced in 1960), or the IRS Individual Master File (IMF) and Business Master File (BMF) systems introduced in 1962–63.
 
-SABRE went online in 1960. It had cost $40 million to develop and install (about $400 million in 2022 dollars). The system took over all American Airlines booking functions in 1964, and the system was expanded to provide access to external travel agents in 1976. 
+SABRE went online in 1960. It had cost $40 million to develop and install (about $400 million in 2022 dollars). The system took over all American Airlines booking functions in 1964, and the system was expanded to provide access to external travel agents in 1976.
 
-What is the secret to the long lifespan of these systems? Shouldn't companies with long-lived products (annuities, life insurance, etc.) study these examples? After all, they need systems to support products that _last most of a human lifespan_. 
+What is the secret to the long lifespan of these systems? Shouldn't companies with long-lived products (annuities, life insurance, etc.) study these examples? After all, they need systems to support products that _last most of a human lifespan_.
 
-Shouldn't _all companies_ want to their investments in software to last as long as possible? 
+Shouldn't _all companies_ want to their investments in software to last as long as possible?
 
 ## Maintenance is About Making Something Last
 
-We spoke of SABRE above, and we know that airlines recognize the value of maintenance. Commercial aircraft are inspected **at least once every two days**. Engines, hydraulics, environmental, and electrical systems all have additional maintenance schedules. A "heavy" maintenance inspection occurs once every few years. This process maintains the aircraft's service life over decades. 
+We spoke of SABRE above, and we know that airlines recognize the value of maintenance. Commercial aircraft are inspected **at least once every two days**. Engines, hydraulics, environmental, and electrical systems all have additional maintenance schedules. A "heavy" maintenance inspection occurs once every few years. This process maintains the aircraft's service life over decades.
 
-On average, an aircraft is operable for about 30 years before it must be retired. A Boeing 747 can endure 35,000 pressurization cycles — roughly 135,000 to 165,000 flight hours — before metal fatigue sets in. However, most older airframes are retired for fuel-efficiency reasons, not because they're worn out. 
+On average, an aircraft is operable for about 30 years before it must be retired. A Boeing 747 can endure 35,000 pressurization cycles — roughly 135,000 to 165,000 flight hours — before metal fatigue sets in. However, most older airframes are retired for fuel-efficiency reasons, not because they're worn out.
 
-An amazing story of the power of maintenance shows that even stuctures made of grass can last indefinitely. [Inca rope bridges](https://en.wikipedia.org/wiki/Inca_rope_bridge) were simple suspension bridges constructed by the Inca Empire. The bridges were an integral part of the Inca road system were constructed using ichu grass. The bridge's strength and reliability came from the fact that _each cable was replaced every June_. 
+An amazing story of the power of maintenance shows that even stuctures made of grass can last indefinitely. [Inca rope bridges](https://en.wikipedia.org/wiki/Inca_rope_bridge) were simple suspension bridges constructed by the Inca Empire. The bridges were an integral part of the Inca road system were constructed using ichu grass. The bridge's strength and reliability came from the fact that _each cable was replaced every June_.
 
-![Inca Rope Bridge](/assets/blog/img/inca_bridge.jpg)
+![Inca Rope Bridge](https://danstroot.imgix.net/assets/blog/img/inca_bridge.jpg)
 
 Even though they were made of grass, these bridges were maintained with such regularity and attention **they lasted centuries**
 
-The goal of maintenance is **catching problems before they happen.** That’s the difference between _maintenance_ and _repair_. Repair is about fixing something that’s already broken. **Maintenance is about making something last.** 
+The goal of maintenance is **catching problems before they happen.** That’s the difference between _maintenance_ and _repair_. Repair is about fixing something that’s already broken. **Maintenance is about making something last.**
 
 ## Unfortunately, Maintenance is Chronically Undervalued
 
-Maintenance is one of the easiest things to cut when budgets get tight. Some legacy software systems have _decades_ of underinvestment in maintenance. This leads up to the inevitable "we have to replace it" discussion - which somehow always sounds more persuasive (even though it’s more expensive and riskier) than arguing to invest in system rehabilitation and deferred system maintenance. 
+Maintenance is one of the easiest things to cut when budgets get tight. Some legacy software systems have _decades_ of underinvestment in maintenance. This leads up to the inevitable "we have to replace it" discussion - which somehow always sounds more persuasive (even though it’s more expensive and riskier) than arguing to invest in system rehabilitation and deferred system maintenance.
 
-Executives generally can't refuse "repair" work because the system is broken and must be fixed. However, maintenance is a tougher sell. It’s not strictly necessary — or at least it doesn’t seem to be until things start falling apart. It is so easy to divert maintenance budget into a halo project that gets an executive noticed (and possibly promoted) before the long-term effects of underinvestment in maintenance become visible. Even worse, the executive is also admired for reducing the costs of maintenance and switching costs from "run" to "grow" - while they are torpedoing the company under the waterline. 
+Executives generally can't refuse "repair" work because the system is broken and must be fixed. However, maintenance is a tougher sell. It’s not strictly necessary — or at least it doesn’t seem to be until things start falling apart. It is so easy to divert maintenance budget into a halo project that gets an executive noticed (and possibly promoted) before the long-term effects of underinvestment in maintenance become visible. Even worse, the executive is also admired for reducing the costs of maintenance and switching costs from "run" to "grow" - while they are torpedoing the company under the waterline.
 
-The other challenge is conflating enhancement work with maintenance work. Imagine you have $1,000 and you want to add a sunroof to your car, but you also need new tires (which coincidentally also cost $1,000). You have to replace the tires every so often, but a sunroof is "forever" right? If you spend the money on the sunroof the tires could get replaced next month, or maybe the month after - they'll last a couple more months, won't they? 
+The other challenge is conflating enhancement work with maintenance work. Imagine you have $1,000 and you want to add a sunroof to your car, but you also need new tires (which coincidentally also cost $1,000). You have to replace the tires every so often, but a sunroof is "forever" right? If you spend the money on the sunroof the tires could get replaced next month, or maybe the month after - they'll last a couple more months, won't they?
 
 With software, users can't see "the bald tires" - they only thing they see, or experience (and value), are new features and capabilities. Pressure is always present to cut costs _and_ to add new features. The result is budget **always** swings away from maintenance work towards enhancements.
 
@@ -66,49 +66,49 @@ Finally, maintenance work is typically an operational cost, yet building a new s
 
 ## Risks of Replacing Software Systems
 
-It's usually not the design or the age of a system that causes it to fail but rather _neglect_. People fail to maintain software systems because they are _not given the time, incentives, or resources to maintain them_. 
+It's usually not the design or the age of a system that causes it to fail but rather _neglect_. People fail to maintain software systems because they are _not given the time, incentives, or resources to maintain them_.
 
->"Most of the systems I work on rescuing are not badly built. **They are badly maintained.**"
+> "Most of the systems I work on rescuing are not badly built. **They are badly maintained.**"
 >
 > <cite>&mdash; Marianne Bellotti, Kill it With Fire</cite>
 
-Once a system degrades it is an enormous challenge to fund deferred maintenance (or "technical debt"). No one plans for it, no one wants to pay for it, and no engineer wants to do it. Initiatives to restore operational excellence, much the way one would fix up an old house, tend to have few volunteers among engineering teams. No one gets noticed doing maintenance. No one ever gets promoted because of maintenance. 
+Once a system degrades it is an enormous challenge to fund deferred maintenance (or "technical debt"). No one plans for it, no one wants to pay for it, and no engineer wants to do it. Initiatives to restore operational excellence, much the way one would fix up an old house, tend to have few volunteers among engineering teams. No one gets noticed doing maintenance. No one ever gets promoted because of maintenance.
 
-It should be clear why engineers prefer to re-write a system rather than maintain it. They get to "write a new story" rather than edit someone else's. They will attempt to convince a senior executive to fund a project to replace a problematic system by describing all the new features and capabilities that could be added as well as how "bad" the existing, unmaintained, system has become. Further, they will get to use modern technology that makes them much more valuable in the market. 
+It should be clear why engineers prefer to re-write a system rather than maintain it. They get to "write a new story" rather than edit someone else's. They will attempt to convince a senior executive to fund a project to replace a problematic system by describing all the new features and capabilities that could be added as well as how "bad" the existing, unmaintained, system has become. Further, they will get to use modern technology that makes them much more valuable in the market.
 
 Incentives aside, engineering teams tend to gravitate toward system rewrites because they incorrectly think of old systems as specs. They assume that since an old system works, the functional risks have been eliminated. They can focus on adding more features to the new system or make changes to the underlying architecture without worry. Either they do not perceive the ambiguity these changes introduce, or they see such ambiguity positively, imagining only gains in performance and the potential for innovation.
 
-Why not authorize that multimillion-dollar replacement if the engineers convince management the existing system is doomed? Eventually a "replacement" project will be funded (typically at a much higher expenditure than rehabilitating the existing system). Even if the executives are not listening to the engineers, they will be listening to external consultants telling them they are falling behind. 
+Why not authorize that multimillion-dollar replacement if the engineers convince management the existing system is doomed? Eventually a "replacement" project will be funded (typically at a much higher expenditure than rehabilitating the existing system). Even if the executives are not listening to the engineers, they will be listening to external consultants telling them they are falling behind.
 
-Everyone starts off excited about the new system that will do "all the things". But what do you do with the old system while you’re building the new one? Most organizations put the old system on “life support” and give it only the resources for patches and fixes necessary to keep it running. This reduces maintenance even further, and becomes a self-fulfilling prophecy that the existing system will eventually fail. 
+Everyone starts off excited about the new system that will do "all the things". But what do you do with the old system while you’re building the new one? Most organizations put the old system on “life support” and give it only the resources for patches and fixes necessary to keep it running. This reduces maintenance even further, and becomes a self-fulfilling prophecy that the existing system will eventually fail.
 
 Who gets to work on the new system, and who takes on the maintenance tasks of the old system? If the old system is written in older technology that the company is actively abandoning, the team maintaining the old system is essentially sitting around waiting to be fired. And don’t kid yourself, they know it. So, if the people maintaining the old system are not participating in the creation of the new system, you should expect that they are also looking for new jobs. If they leave before your new system is operational, you lose both their expertise and their institutional knowledge.
 
 If the new project falls behind schedule (and it almost certainly will), the existing system continues to degrade, and knowledge continues to walk out the door. If the new project fails and is subsequently canceled, the gap between the legacy system and operational excellence has widened _significantly_ in the meantime.
 
-This explains why executives are loathe to cancel system replacement projects even when they are obviously years behind schedule and failing to live up to expectations. Stopping the replacement project seems impossible because the legacy system is now so degraded that restoring it to operational excellence seems impossible. Plus, politically canceling a marquee project can be career suicide for the sponsoring executive(s). Much better to do "deep dives" and "assessments" on why the project is failing and soldier on than cancel it. 
+This explains why executives are loathe to cancel system replacement projects even when they are obviously years behind schedule and failing to live up to expectations. Stopping the replacement project seems impossible because the legacy system is now so degraded that restoring it to operational excellence seems impossible. Plus, politically canceling a marquee project can be career suicide for the sponsoring executive(s). Much better to do "deep dives" and "assessments" on why the project is failing and soldier on than cancel it.
 
-The interim state is not pretty.  The company now has two systems to operate, higher costs and new risks.
+The interim state is not pretty. The company now has two systems to operate, higher costs and new risks.
 
-* The new system will have high costs, limited functionality, new and unique errors/issues, and lower volumes (so the "per unit cost" of the new system will be quite high). 
-* The older system will still be running most of the business, and usually **all** of the complex business, having lost its best engineers and subject matter experts. It's maintenance budget will have been whittled down to nothing to redirect spending to implement (save?) the new system. This system will be in grave danger to significant system failure (which propents of the new system will use to justify the investment in the new system, not admitting to a self-fufilling prophecy).
+- The new system will have high costs, limited functionality, new and unique errors/issues, and lower volumes (so the "per unit cost" of the new system will be quite high).
+- The older system will still be running most of the business, and usually **all** of the complex business, having lost its best engineers and subject matter experts. It's maintenance budget will have been whittled down to nothing to redirect spending to implement (save?) the new system. This system will be in grave danger to significant system failure (which propents of the new system will use to justify the investment in the new system, not admitting to a self-fufilling prophecy).
 
 Neither system will exhibit operational excellence, and both put the organization at significant risk in addition to the higher costs and complexity of running two systems.
 
 ## Maintaining Software to Last Forever
 
-As I discussed in [How Software Learns](/posts/2022-06-05-how-software-learns), software adapts over time - as it is continually refined and reshaped by maintenance and enhancements. Maintenance is crucial to software's lifespan and business relevance/value. When software systems are first developed, they are based on a prediction of the future - a prediction of the future that we know is wrong even as we make it. No set of requirements have ever been perfect. However, all new systems become "less wrong" as time, experience, and knowledge are continually added (e.g., maintenance). 
+As I discussed in [How Software Learns](/posts/2022-06-05-how-software-learns), software adapts over time - as it is continually refined and reshaped by maintenance and enhancements. Maintenance is crucial to software's lifespan and business relevance/value. When software systems are first developed, they are based on a prediction of the future - a prediction of the future that we know is wrong even as we make it. No set of requirements have ever been perfect. However, all new systems become "less wrong" as time, experience, and knowledge are continually added (e.g., maintenance).
 
-Futureproofing means constantly rethinking and iterating on the existing system. We know from both research and experience that iterating and maintaining existing solutions is a much more likely, and less expensive, way to improve software's lifespan and functionality. 
+Futureproofing means constantly rethinking and iterating on the existing system. We know from both research and experience that iterating and maintaining existing solutions is a much more likely, and less expensive, way to improve software's lifespan and functionality.
 
 Before choosing to replace a system that needs deferred maintenance remember _it’s the lack of maintenance that create the impression that failure is inevitable_, and pushes otherwise rational engineers and executives toward rewrites or replacements. What mechanisms will prevent lack of maintenance from eventually dooming the brand new system? Has the true root problem been addressed?
 
 Robust maintenance practices could preserve software for decades, but first maintenance must be valued, funded, and applied. To maintain software properly we have to consider:
 
 1. How do you measure the overall health of a system?
-1. How do you define and manage maintenance work? 
+1. How do you define and manage maintenance work?
 1. How do you define a reasonable maintenance budget? How can you protect that budget?
-1. How do you motivate engineers to perform maintenance? 
+1. How do you motivate engineers to perform maintenance?
 
 ### 1. How do you measure the overall health of a system?
 
@@ -122,9 +122,9 @@ Robust maintenance practices could preserve software for decades, but first main
 
 #### Subjective measures
 
-1. **User Satisfaction**: User satisfaction includes both how happy your employees are with the applications and/or how well those applications meet your customer's needs. Many times I have found the technology team and the business users arguing over "bug" vs. "enhancement". It is a way of assigning blame. "Bug" means its engineering's fault, "enhancement" means it was a missed requirement. When emotions run hot it means that the maintenance budget is insufficient. I always tell everyone they are both just maintenance and the only important decision is which to prioritize and fix first. 
+1. **User Satisfaction**: User satisfaction includes both how happy your employees are with the applications and/or how well those applications meet your customer's needs. Many times I have found the technology team and the business users arguing over "bug" vs. "enhancement". It is a way of assigning blame. "Bug" means its engineering's fault, "enhancement" means it was a missed requirement. When emotions run hot it means that the maintenance budget is insufficient. I always tell everyone they are both just maintenance and the only important decision is which to prioritize and fix first.
 
-1. **“Shadow IT”** — If you used applications in the past that didn’t meet employees’ needs, and didn’t have a good governance plan to address problems, you may have noticed employees found other solutions on their own. This is an indication of underfunded maintenance. 
+1. **“Shadow IT”** — If you used applications in the past that didn’t meet employees’ needs, and didn’t have a good governance plan to address problems, you may have noticed employees found other solutions on their own. This is an indication of underfunded maintenance.
 
 1. **Adaptable Architecture** — "The cloud", API-based integration, and unlocking your data are no longer “nice to haves.” Your architecture needs to adapt. If these are challenges then the archtecture must be addressed.
 
@@ -136,7 +136,7 @@ There are four general types of software maintenance. The first two types take u
 
 #### 1. Corrective Software Maintenance (more accurately called "repair")
 
-Corrective software maintenance is necessary when something goes wrong in a piece of software including faults and errors. These can have a widespread impact on the functionality of the software in general and therefore must be addressed as quickly as possible. However, it is important to consider repair work separate from the other types of maintenance because repair work must get done. Note: this is generally the only type of work that happens when a system is put on "life support". 
+Corrective software maintenance is necessary when something goes wrong in a piece of software including faults and errors. These can have a widespread impact on the functionality of the software in general and therefore must be addressed as quickly as possible. However, it is important to consider repair work separate from the other types of maintenance because repair work must get done. Note: this is generally the only type of work that happens when a system is put on "life support".
 
 #### 2. Perfective Software Maintenance (more accurately called "enhancements")
 
@@ -144,45 +144,45 @@ Once software is released and is being used new issues and ideas come to the sur
 
 #### 3. Preventative Software Maintenance (true maintenance is **catching problems before they happen.**)
 
-Preventative software maintenance is looking into the future so that your software can keep working as desired for as long as possible. This includes making necessary changes, upgrades, and adaptations. Preventative software maintenance may address small issues which at the given time may lack significance but may turn into larger problems in the future. These are called latent faults which need to be detected and corrected to make sure that they won’t turn into effective faults. This type of maintenance is generally underfunded. 
+Preventative software maintenance is looking into the future so that your software can keep working as desired for as long as possible. This includes making necessary changes, upgrades, and adaptations. Preventative software maintenance may address small issues which at the given time may lack significance but may turn into larger problems in the future. These are called latent faults which need to be detected and corrected to make sure that they won’t turn into effective faults. This type of maintenance is generally underfunded.
 
 #### 4. Adaptive Software Maintenance (true maintenance **adapts to changes**)
 
-Adaptive software maintenance is responding to the changing technology landscape, as well as new company policies and rules regarding your software. These include operating system changes, using cloud technology, security policies, hardware changes, etc. When these changes are performed, your software (and possibly architecture) must adapt in order to properly meet new requirements and meet current security and other policies. 
+Adaptive software maintenance is responding to the changing technology landscape, as well as new company policies and rules regarding your software. These include operating system changes, using cloud technology, security policies, hardware changes, etc. When these changes are performed, your software (and possibly architecture) must adapt in order to properly meet new requirements and meet current security and other policies.
 
 ### 3. How do you define a reasonable maintenance budget? How can you protect that budget?
 
-In the case of the Inca rope bridges what was the cost of maintenance annually? Let's assume some of the build work was site preparation and building the stone anchors on each side, but most of the work was constructing the bridge itself. Since the bridge was _entirely replaced_ each year, the maintenance costs could be as much as 80% of the initial build effort, _every year_. 
+In the case of the Inca rope bridges what was the cost of maintenance annually? Let's assume some of the build work was site preparation and building the stone anchors on each side, but most of the work was constructing the bridge itself. Since the bridge was _entirely replaced_ each year, the maintenance costs could be as much as 80% of the initial build effort, _every year_.
 
-Comparing to "software as a service" (SaaS) vendors is difficult because thay have shifted to a subscription model that bundles infrastructure, enhancements, and ongoing maintenance. Prior to SaaS subscription-based pricing one would typically buy a perpetual license plus maintenance at ~20-30% annual cost of the license to obtain support and updates. 
+Comparing to "software as a service" (SaaS) vendors is difficult because thay have shifted to a subscription model that bundles infrastructure, enhancements, and ongoing maintenance. Prior to SaaS subscription-based pricing one would typically buy a perpetual license plus maintenance at ~20-30% annual cost of the license to obtain support and updates.
 
-Side note: Now that the SaaS annual costs are commingled, some enterprises fall into the trap that “building it is cheaper because we pay up front but then it will cost less in the long run” assuming the "long run" almost always underprices infrastructure and assumes near zero maintenance cost. In the case of a brand-new, internally designed and developed software system - one that is well architected, well designed, well built, and meets all reliability, scalability, and performance needs (i.e. fantasy software) it's conceivable that there is no maintenance necessary for some period of time. So, in the beginning it's conceivable the maintenance budget is near zero. 
+Side note: Now that the SaaS annual costs are commingled, some enterprises fall into the trap that “building it is cheaper because we pay up front but then it will cost less in the long run” assuming the "long run" almost always underprices infrastructure and assumes near zero maintenance cost. In the case of a brand-new, internally designed and developed software system - one that is well architected, well designed, well built, and meets all reliability, scalability, and performance needs (i.e. fantasy software) it's conceivable that there is no maintenance necessary for some period of time. So, in the beginning it's conceivable the maintenance budget is near zero.
 
-So, maintenance costs can have a very wide range. A general rule of thumb is 20-30% of the initial build cost will be required for ongoing maintenance work annually. However, maintenance costs usually start off lower and increase over time. They are also unpredictable costs that are hard to budget. 
+So, maintenance costs can have a very wide range. A general rule of thumb is 20-30% of the initial build cost will be required for ongoing maintenance work annually. However, maintenance costs usually start off lower and increase over time. They are also unpredictable costs that are hard to budget.
 
-The challenges should be obvious. First, budgets in large organizations tend be last year's budget plus 2-3%. If you start with a maintenance budget of zero on a new system, how do you ever get to the point of a healthy maintenance budget in the future? Second, maintenance costs are unpredictable, and organizations _hate_ unpredictable costs. It's impossible to say when the next new hardware, or storage, or programming construct will occur, or when the existing system will hit a performance or scalability inflection point. 
+The challenges should be obvious. First, budgets in large organizations tend be last year's budget plus 2-3%. If you start with a maintenance budget of zero on a new system, how do you ever get to the point of a healthy maintenance budget in the future? Second, maintenance costs are unpredictable, and organizations _hate_ unpredictable costs. It's impossible to say when the next new hardware, or storage, or programming construct will occur, or when the existing system will hit a performance or scalability inflection point.
 
-This is like buying a brand-new car. The maintenance costs are negligible in the first couple years, until they start to creep up. Then things start to need maintenance, replacement, or repair. As the car ages the maintenance costs continue to increase until at some point it makes economic sense to buy another new car. _Except none of us wait that long._ Most of us buy new cars before our old one is completely worn out. As a counter-example, in Cuba some cars have been maintained meticulously for 30-40 years and _run better than new_. 
+This is like buying a brand-new car. The maintenance costs are negligible in the first couple years, until they start to creep up. Then things start to need maintenance, replacement, or repair. As the car ages the maintenance costs continue to increase until at some point it makes economic sense to buy another new car. _Except none of us wait that long._ Most of us buy new cars before our old one is completely worn out. As a counter-example, in Cuba some cars have been maintained meticulously for 30-40 years and _run better than new_.
 
 #### Protecting your maintenance budget - creating a "maintenance fund"
 
-We know that maintenance cost increase over time, and the costs of proper maintenance are unpredictable. In addition, there is some amount of management discretion that can be applied. When your house needs a new roof it's reasonable to defer it through summer, but it probably needs to be done before winter.  
+We know that maintenance cost increase over time, and the costs of proper maintenance are unpredictable. In addition, there is some amount of management discretion that can be applied. When your house needs a new roof it's reasonable to defer it through summer, but it probably needs to be done before winter.
 
-Since business require predictability of costs, unpredictable maintenance costs are easy to defer. "We didn't budget for that; we'll have to put it in next year's budget." Except of course in the budget process it will compete with other projects and enhancement work, where it's again likely to be deprioritized. 
+Since business require predictability of costs, unpredictable maintenance costs are easy to defer. "We didn't budget for that; we'll have to put it in next year's budget." Except of course in the budget process it will compete with other projects and enhancement work, where it's again likely to be deprioritized.
 
 What's the solution? Could it be possible to create some type of maintenance fund where a predictable amount is budgeted each year, and then spent "unpredictably" when/as needed? Could this also be a solution to preventing executives from diverting maintenance budget into pet projects by protecting this maintenance fund in some fashion?
 
-### 4. How do you motivate software engineers to perform maintenance? 
+### 4. How do you motivate software engineers to perform maintenance?
 
 There is a Chinese proverb about a discussion between a king and a famous doctor. The well-known doctor explains to the king that his brother (who is also a doctor) is superior at medicine, but he is unknown because he always successfully treats small illnesses, preventing them from evolving into more serious or terminal ones. So, people say "Oh he is a fine doctor, but he only treats minor illnesses". It's true: [Nobody Ever Gets Credit for Fixing Problems that Never Happened.](https://web.mit.edu/nelsonr/www/Repenning=Sterman_CMR_su01_.pdf)
 
 To most software engineers, legacy systems seem like torturous dead-end work, but the reality is systems that are not important get turned off. Working on "estate" systems means working on some of the most critical systems that exist — computers that govern millions of people’s lives in enumerable ways. This is not the work of technical janitors, but _battlefield surgeons_.
 
-Engineering loves new technology. It gains the engineers attention and industry marketability. [Boring technology](https://engineering.atspotify.com/2013/02/in-praise-of-boring-technology/) on the other hand is great for the **company**. The engineering cost is lower, and the skills are easier to obtain and keep, because these engineers are not being pulled out of your organization for double their salary by Amazon or Google. 
+Engineering loves new technology. It gains the engineers attention and industry marketability. [Boring technology](https://engineering.atspotify.com/2013/02/in-praise-of-boring-technology/) on the other hand is great for the **company**. The engineering cost is lower, and the skills are easier to obtain and keep, because these engineers are not being pulled out of your organization for double their salary by Amazon or Google.
 
 Well-designed, high-functioning software that is easy to understand usually blends in. Simple solutions do not do much to enhance one’s personal brand. Therefore, when an organization provides limited pathways to promotion for software engineers, they tend to make technical decisions that emphasize their individual contribution and technical prowess. You have to be careful to reward what you want from your engineering team.
 
-What earns them the acknowledgment of their peers? What gets people seen is what they will ultimately prioritize, even if those behaviors are in open conflict with the official direction they receive from management. In most organizations shipping new code gets attention, while technical debt accrues silently in the background. 
+What earns them the acknowledgment of their peers? What gets people seen is what they will ultimately prioritize, even if those behaviors are in open conflict with the official direction they receive from management. In most organizations shipping new code gets attention, while technical debt accrues silently in the background.
 
 The specific form of acknowledgment also matters a lot. Positive reinforcement in the form of social recognition tends to be a more effective motivator than the traditional incentive structure of promotions, raises, and bonuses. Behavioral economist Dan Ariely attributes this to the difference between social markets and traditional monetary-based markets. Social markets are governed by social norms (read: peer pressure and social capital), and they often inspire people to work harder and longer than much more expensive incentives that represent the traditional work-for-pay exchange. In other words, _people will work really hard for positive reinforcement from their peers_.
 
@@ -190,33 +190,33 @@ The specific form of acknowledgment also matters a lot. Positive reinforcement i
 
 Unmaintained software will certainly die at some point. Due to factors discussed above, software does not always receive the proper amount of maintenance to remain healthy. Eventually a larger modernization effort may become necessary to restore a system to operational and functional excellence.
 
-Legacy modernization projects start off feeling easy. The organization once had a reliable working system and kept it running for years. All the modernizing team should need to do is simply reshape it using better technology, the benefit of hindsight, and improved tooling. It should be simple. But, because people do not see the hidden technical challenges they are about to uncover, they also assume the work will be boring. There’s little glory to be had re-implementing a solved problem. 
+Legacy modernization projects start off feeling easy. The organization once had a reliable working system and kept it running for years. All the modernizing team should need to do is simply reshape it using better technology, the benefit of hindsight, and improved tooling. It should be simple. But, because people do not see the hidden technical challenges they are about to uncover, they also assume the work will be boring. There’s little glory to be had re-implementing a solved problem.
 
-Modernization projects are typically the ones organizations just want to get out of the way, so they usually launch into them unprepared for the time and resource commitments they require. Modernization projects take months, if not years of work. Keeping a team of engineers focused, inspired, and motivated from beginning to end is difficult. Keeping their senior leadership prepared to invest in what is, in effect, something they already have is a huge challenge. Creating momentum and sustaining it are where most modernization projects fail. 
+Modernization projects are typically the ones organizations just want to get out of the way, so they usually launch into them unprepared for the time and resource commitments they require. Modernization projects take months, if not years of work. Keeping a team of engineers focused, inspired, and motivated from beginning to end is difficult. Keeping their senior leadership prepared to invest in what is, in effect, something they already have is a huge challenge. Creating momentum and sustaining it are where most modernization projects fail.
 
 The hard part about legacy modernization is the "system around the system". The organization, its communication structures, its politics, and its incentives are all intertwined with the technical product in such a way that to improve the product, you must do it by turning the gears of this other, complex, undocumented system. Pay attention to politics and culture. Technology is at most only 50% of the legacy problem, ways of working, organization structure and leadership are just as important to success.
 
-To do this, you need to provide significant value right away, as soon as possible, so that you overcome people’s natural skepticism and get them to buy in. The important word in the phrase "proof of concept" is _proof_. You need to prove to people that success is possible and worth doing. It can't be just an MVP, because [MVPs are dangerous.](/posts/2021-12-27-dangerous-mvps). A red flag is raised when companies talk about the phases of their modernization plans in terms of which technologies they are going to use _rather than what value they will add_. 
+To do this, you need to provide significant value right away, as soon as possible, so that you overcome people’s natural skepticism and get them to buy in. The important word in the phrase "proof of concept" is _proof_. You need to prove to people that success is possible and worth doing. It can't be just an MVP, because [MVPs are dangerous.](/posts/2021-12-27-dangerous-mvps). A red flag is raised when companies talk about the phases of their modernization plans in terms of which technologies they are going to use _rather than what value they will add_.
 
-For all that people talk about COBOL dying off, it is good at certain tasks. The problem with most old COBOL systems is that they were designed at a time when COBOL was the _only option_. Start by sorting which parts of the system are in COBOL because COBOL is good at performing that task, and which parts are in COBOL because there were no other technologies available. Once you have that mapping, start by pulling the latter off into separate services that are written and designed using the technology we would choose for that task today. 
+For all that people talk about COBOL dying off, it is good at certain tasks. The problem with most old COBOL systems is that they were designed at a time when COBOL was the _only option_. Start by sorting which parts of the system are in COBOL because COBOL is good at performing that task, and which parts are in COBOL because there were no other technologies available. Once you have that mapping, start by pulling the latter off into separate services that are written and designed using the technology we would choose for that task today.
 
 Going through the exercise of understanding what functionality is fit for use for particular languages/technologies not only gives engineers a way to keep building their skillsets but also is an opportunity to pair with other engineers who have different/complimentary skills. This exchange also has the benefit of diffusing the understanding of the system to a broader group of people without needing to solely rely on documentation (which never exists).
 
-Counterintuitively, SLAs/SLOs are valuable because they provide a "failure budget". When organizations stop aiming for perfection and accept that all systems will occasionally fail, they stop letting their technology rot for fear of change. Some organizations can’t be talked out of wanting five or six nines of availability. In most cases, mean time to recovery (MTTR) is a more useful statistic to push than reliability. MTTR tracks how long it takes the organization to recover from failure. Resilience in engineering is all about recovering stronger from failure. That means better monitoring, better documentation, and better processes for restoring services, but you can’t improve any of that if you don’t occasionally fail. 
+Counterintuitively, SLAs/SLOs are valuable because they provide a "failure budget". When organizations stop aiming for perfection and accept that all systems will occasionally fail, they stop letting their technology rot for fear of change. Some organizations can’t be talked out of wanting five or six nines of availability. In most cases, mean time to recovery (MTTR) is a more useful statistic to push than reliability. MTTR tracks how long it takes the organization to recover from failure. Resilience in engineering is all about recovering stronger from failure. That means better monitoring, better documentation, and better processes for restoring services, but you can’t improve any of that if you don’t occasionally fail.
 
-Although a system that constantly breaks, or that breaks in unexpected ways without warning, will lose its users’ trust, the reverse isn’t necessarily true. A system that never breaks doesn’t necessarily inspire high degrees of trust - and it's maintence budget is even easier to cut. 
+Although a system that constantly breaks, or that breaks in unexpected ways without warning, will lose its users’ trust, the reverse isn’t necessarily true. A system that never breaks doesn’t necessarily inspire high degrees of trust - and it's maintence budget is even easier to cut.
 
-People take systems that are too reliable for granted. Italian researchers Cristiano Castelfranchi and Rino Falcone have been advancing a general model of trust that postulates trust naturally degrades over time, regardless of whether any action has been taken to violate that trust. Under Castelfranchi and Falcone’s model, maintaining trust doesn’t mean establishing a perfect record; it means continuing to rack up observations of resilience. If a piece of technology is so reliable it has been completely forgotten, it is not creating those regular observations. Through no fault of the technology, the user’s trust in it slowly deteriorates. 
+People take systems that are too reliable for granted. Italian researchers Cristiano Castelfranchi and Rino Falcone have been advancing a general model of trust that postulates trust naturally degrades over time, regardless of whether any action has been taken to violate that trust. Under Castelfranchi and Falcone’s model, maintaining trust doesn’t mean establishing a perfect record; it means continuing to rack up observations of resilience. If a piece of technology is so reliable it has been completely forgotten, it is not creating those regular observations. Through no fault of the technology, the user’s trust in it slowly deteriorates.
 
 When both observability and testing are lacking on your legacy system, observability comes first. Tests tell you only what shouldn’t fail; monitoring tells you what _is failing_. Don’t forget: a perfect record will always be broken, but resilience is an accomplishment that lasts. Modern engineering teams use stats like service level objectives, error budgets, and mean time to recovery to move the emphasis away from avoiding failure and toward recovering quickly.
 
 ## Summary
 
-Maintenance mostly happens out of sight, mysteriously. If we notice it, it’s a nuisance. When road crews block off sections of highway to fix cracks or potholes, we treat it as an obstruction, not a vital and necessary process. This is especially true in the public sector: it’s almost impossible to get governmental action on, or voter interest in, spending on preventive maintenance, yet governments make seemly unlimited funds available once we have a disaster. We are okay spending a massive amount of money to fix a problem, but consistently resist spending a much smaller amount of money to prevent it; as a strategy this makes no sense. 
+Maintenance mostly happens out of sight, mysteriously. If we notice it, it’s a nuisance. When road crews block off sections of highway to fix cracks or potholes, we treat it as an obstruction, not a vital and necessary process. This is especially true in the public sector: it’s almost impossible to get governmental action on, or voter interest in, spending on preventive maintenance, yet governments make seemly unlimited funds available once we have a disaster. We are okay spending a massive amount of money to fix a problem, but consistently resist spending a much smaller amount of money to prevent it; as a strategy this makes no sense.
 
-The [Open Mainframe Project](https://www.openmainframeproject.org) estimates that there about 250 billion lines of COBOL code running today in the world economy, and nearly all COBOL code contains critical business logic. 
+The [Open Mainframe Project](https://www.openmainframeproject.org) estimates that there about 250 billion lines of COBOL code running today in the world economy, and nearly all COBOL code contains critical business logic.
 
-Why aren't companies trying to figure out how to maintain that software and make it last?  
+Why aren't companies trying to figure out how to maintain that software and make it last?
 
 ### References
 
@@ -236,6 +236,8 @@ Why aren't companies trying to figure out how to maintain that software and make
 
 Image Credit: **Bill Gates, CEO of Microsoft, holds Windows 1.0 floppy discs.**
 
-<span className="text-sm">
-(Photo by Deborah Feingold/Corbis via Getty Images) Computers evolve. The underlying hardware, CPU, memory and storage evolves. The operating system evolves. Of course the software we use must evolve as well. This was the release of Windows 1.0. The beginning. 
+<span className='text-sm'>
+  (Photo by Deborah Feingold/Corbis via Getty Images) Computers evolve. The underlying hardware,
+  CPU, memory and storage evolves. The operating system evolves. Of course the software we use must
+  evolve as well. This was the release of Windows 1.0. The beginning.
 </span>
