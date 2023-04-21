@@ -33,6 +33,12 @@ export const CustomImage = (props) => {
   // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img className='object-contain' src={props.src + '?w=768'} alt={props.alt} loading='lazy' />
+    <img
+      // className='object-contain max-h-max'
+      className='max-h-[384px]'
+      src={props.src + '?w=768'}
+      alt={props.alt}
+      loading='lazy'
+    />
   );
 };
