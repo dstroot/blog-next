@@ -13,8 +13,8 @@
     "lint": "eslint -c ./data/.eslintrc.json ./data --ext mdx --no-eslintrc"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.319.0",
-    "@aws-sdk/lib-dynamodb": "^3.319.0",
+    "@aws-sdk/client-dynamodb": "^3.321.1",
+    "@aws-sdk/lib-dynamodb": "^3.321.1",
     "@aws-sdk/smithy-client": "^3.316.0",
     "@aws-sdk/types": "^3.310.0",
     "@google-analytics/data": "^3.2.2",
@@ -23,7 +23,7 @@
     "@mdx-js/react": "^2.3.0",
     "@next/env": "^13.3.1",
     "@tailwindcss/forms": "^0.5.3",
-    "@vercel/og": "^0.5.3",
+    "@vercel/og": "^0.5.4",
     "algoliasearch": "^4.17.0",
     "date-fns": "2.29.3",
     "dotenv": "^16.0.3",
@@ -52,7 +52,7 @@
     "remark-cli": "^11.0.0",
     "remark-emoji": "^3.1.1",
     "remark-gfm": "^3.0.1",
-    "sharp": "^0.32.0",
+    "sharp": "^0.32.1",
     "swr": "^2.1.5",
     "typescript": "^5.0.4",
     "uuid": "^9.0.0"
