@@ -77,6 +77,9 @@ export async function getStaticProps() {
   // Remove any unpublished posts
   posts = posts.filter((posts) => posts.published);
 
+  // Remove any future posts
+  posts = posts.filter((posts) => Date.parse(posts.date) <= Date.now());
+
   // Sort list by published date
   posts = SortByDate(posts);
 
