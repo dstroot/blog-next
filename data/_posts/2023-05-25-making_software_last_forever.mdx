@@ -26,7 +26,7 @@ Lots of current software started out as C software from the 1980s. Engineers don
 
 Why can't software last forever? It's not made of wood, concrete, or steel. It doesn't "wear out", rot, weather, or rust. A working algorithm is a working algorithm. Technology doesn’t need to be beautiful, or impress other people, to be effective. Aren't technologists ultimately in the business of producing cost effective technology?
 
-I am going to attempt to convince you that keeping your existing systems, and maintaining then well, is the most cost effective technology investment you can make. 
+I am going to attempt to convince you that _maintaining_ your existing systems is one the most cost-effective technology investments you can make. 
 
 ## The World's Oldest Software Systems
 
@@ -36,9 +36,7 @@ According to the [Guinness Book of World Records](https://www.guinnessworldrecor
 
 SABRE went online in 1960. It had cost $40 million to develop and install (about **$400 million** in 2022 dollars). The system took over all American Airlines booking functions in 1964, and the system was expanded to provide access to external travel agents in 1976.
 
-What is the secret to the long lifespan of these systems? Shouldn't companies with long-lived products (annuities, life insurance, etc.) study these examples? After all, they need systems to support products that _last most of a human lifespan_.
-
-Shouldn't _all companies_ want to their investments in software to last as long as possible?
+What is the secret to the long lifespan of these systems? Shouldn't companies with long-lived products (annuities, life insurance, etc.) study these examples? After all, they need systems to support products that _last most of a human lifespan_. However, shouldn't _all companies_ want to their investments in software to last as long as possible?
 
 ## Maintenance is About Making Something Last
 
@@ -46,11 +44,11 @@ We spoke of SABRE above, and we know that airlines recognize the value of mainte
 
 On average, an aircraft is operable for about 30 years before it must be retired. A Boeing 747 can endure 35,000 pressurization cycles — roughly 135,000 to 165,000 flight hours — before metal fatigue sets in. However, most older airframes are retired for fuel-efficiency reasons, not because they're worn out.
 
-An amazing story of the power of maintenance shows that even stuctures made of grass can last indefinitely. [Inca rope bridges](https://en.wikipedia.org/wiki/Inca_rope_bridge) were simple suspension bridges constructed by the Inca Empire. The bridges were an integral part of the Inca road system were constructed using ichu grass. The bridge's strength and reliability came from the fact that _each cable was replaced every June_.
+Even stuctures made of grass can last indefinitely. [Inca rope bridges](https://en.wikipedia.org/wiki/Inca_rope_bridge) were simple suspension bridges constructed by the Inca Empire. The bridges were an integral part of the Inca road system were constructed using ichu grass. 
 
 ![Inca Rope Bridge](https://danstroot.imgix.net/assets/blog/img/inca_bridge.jpg)
 
-Even though they were made of grass, these bridges were maintained with such regularity and attention **they lasted centuries**
+Even though they were made of grass, these bridges were maintained with such regularity and attention **they lasted centuries**. The bridge's strength and reliability came from the fact that _each cable was replaced every June_.
 
 The goal of maintenance is **catching problems before they happen.** That’s the difference between _maintenance_ and _repair_. Repair is about fixing something that’s already broken. **Maintenance is about making something last.**
 
@@ -82,7 +80,7 @@ Incentives aside, engineering teams tend to gravitate toward system rewrites bec
 
 Why not authorize that multimillion-dollar replacement if the engineers convince management the existing system is doomed? Eventually a "replacement" project will be funded (typically at a much higher expenditure than rehabilitating the existing system). Even if the executives are not listening to the engineers, they will be listening to external consultants telling them they are falling behind.
 
-What do you do with the old system while you’re building the new one? Most organizations put the old system on “life support” and give it only the resources for patches and fixes necessary to keep it running. This reduces maintenance even further, and becomes a self-fulfilling prophecy that the existing system will eventually fail.
+What do you do with the old system while you’re building the new one? Most organizations put the old system on “life support” and give it only the resources for patches and fixes necessary to keep it running. This reduces maintenance even further and becomes a self-fulfilling prophecy that the existing system will eventually fail.
 
 Who gets to work on the new system, and who takes on the maintenance tasks of the old system? If the old system is written in older technology that the company is actively abandoning, the team maintaining the old system is essentially sitting around waiting to be fired. And don’t kid yourself, they know it. If the people maintaining the old system are not participating in the creation of the new system, you should expect that they are also looking for new jobs. If they leave before your new system is operational, you lose both their expertise and their institutional knowledge.
 
@@ -93,7 +91,7 @@ This explains why executives are loathe to cancel system replacement projects ev
 The interim state is not pretty. The company now has two systems to operate, much higher costs and new risks.
 
 - The new system will have high costs, limited functionality, new and unique errors/issues, and lower volumes (so the "per unit cost" of the new system will be quite high).
-- The older system will still be running most of the business, and usually **all** of the complex business, while having lost its best engineers and subject matter experts. It's maintenance budget will have been whittled down to nothing to redirect spending to implement (save?) the new system. This system will be in grave danger to significant system failure (which proponents of the new system will use to justify the investment in the new system, not admitting to a self-fufilling prophecy).
+- The older system will still be running most of the business, and usually **all** of the complex business, while having lost its best engineers and subject matter experts. Its maintenance budget will have been whittled down to nothing to redirect spending to implement (save?) the new system. This system will be in grave danger to significant system failure (which proponents of the new system will use to justify the investment in the new system, not admitting to a self-fulfilling prophecy).
 
 Neither system will exhibit operational excellence, and both put the organization at significant risk in addition to the higher costs and complexity of running two systems.
 
@@ -103,7 +101,7 @@ As I discussed in [How Software Learns](/posts/2022-06-05-how-software-learns), 
 
 Futureproofing means constantly rethinking and iterating on the existing system. We know from both research and experience that iterating and maintaining existing solutions is a much more likely, and less expensive, way to improve software's lifespan and functionality.
 
-Before choosing to replace a system that needs deferred maintenance remember _it’s the lack of maintenance that create the impression that failure is inevitable_, and pushes otherwise rational engineers and executives toward rewrites or replacements. What mechanisms will prevent lack of maintenance from eventually dooming the brand new system? Has the true root problem been addressed?
+Before choosing to replace a system that needs deferred maintenance remember _it’s the lack of maintenance that create the impression that failure is inevitable_, and pushes otherwise rational engineers and executives toward rewrites or replacements. What mechanisms will prevent lack of maintenance from eventually dooming the brand-new system? Has the true root problem been addressed?
 
 Robust maintenance practices could preserve software for decades, but first maintenance must be valued, funded, and applied. To maintain software properly we have to consider:
 
@@ -118,7 +116,7 @@ Robust maintenance practices could preserve software for decades, but first main
 
 1. **Maintenance Backlog** — If you added up **all** the open work requests, including work the software engineers deem necessary to eliminate technical debt, what is the total amount of effort? Now, divide that by the team capacity. For example, imagine you have a total amount of work of 560 days, and you have one person assigned to support the system - they work approximately 200 days annually. The backlog in days in 560, but in time it is 2.8 years (560 days / 200 days/year = 2.8 years). What is a reasonable amount of backlog time?
 
-1. **System Reliability/Downtime** — If you added up **all** the time the system is down in a given period, what is the total amount? What is the user or customer impact of that downtime? Conversely, what would reducing that downtime be worth? What is the relationship of maintenance and downtime? In other words does the system need to be taken down to maintain it (planned maintenance)? Does planned maintenance reduce unplanned downtime?
+1. **System Reliability/Downtime** — If you added up **all** the time the system is down in a given period, what is the total amount? What is the user or customer impact of that downtime? Conversely, what would reducing that downtime be worth? What is the relationship of maintenance and downtime? In other words, does the system need to be taken down to maintain it (planned maintenance)? Does planned maintenance reduce unplanned downtime?
 
 1. **Capacity/Performance Constraints** — Is the existing hitting capacity constraints that will prevent future growth of the business? How unpredictable are the system capacity demands? What is the customer experience when the system capacity is breached? What is relationship between hardware and software that constrains the system? Is the software performant? Can hardware solve the problem?
 
@@ -128,13 +126,13 @@ Robust maintenance practices could preserve software for decades, but first main
 
 1. **“Shadow IT”** — If you used applications in the past that didn’t meet employees’ needs, and didn’t have a good governance plan to address problems, you may have noticed employees found other solutions on their own. This is an indication of underfunded maintenance.
 
-1. **Adaptable Architecture** — "The cloud", API-based integration, and unlocking your data are no longer “nice to haves.” Your architecture needs to adapt. If these are challenges then the archtecture must be addressed.
+1. **Adaptable Architecture** — "The cloud", API-based integration, and unlocking your data are no longer “nice to haves.” Your architecture needs to adapt. If these are challenges, then the architecture must be addressed.
 
 1. **Governance** — Healthy application architecture isn’t just about technology—it’s also about having well-documented and well-understood governance documents that guide technology investments for your organization. Good governance helps create adaptable architecture and avoid “shadow IT” applications.
 
 ### 2. How do you define maintenance work?
 
-There are four general types of software maintenance. The first two types take up the majority of most organizations' maintenance budget, and _may not even be considered maintenance_ - however, all four types must be funded adequately for software to remain healthy. If you aren't able to address types three and four your maintenance budget is inadequate.
+There are four general types of software maintenance. The first two types take up the majority of most organizations' maintenance budget, and _may not even be considered maintenance_ - however, all four types must be funded adequately for software to remain healthy. If you can't fully address types three and four your maintenance budget is inadequate.
 
 #### 1. Corrective Software Maintenance (more accurately called "repair")
 
@@ -150,15 +148,15 @@ Preventative software maintenance is looking into the future so that your softwa
 
 #### 4. Adaptive Software Maintenance (true maintenance **adapts to changes**)
 
-Adaptive software maintenance is responding to the changing technology landscape, as well as new company policies and rules regarding your software. These include operating system changes, using cloud technology, security policies, hardware changes, etc. When these changes are performed, your software (and possibly architecture) must adapt in order to properly meet new requirements and meet current security and other policies.
+Adaptive software maintenance is responding to the changing technology landscape, as well as new company policies and rules regarding your software. These include operating system changes, using cloud technology, security policies, hardware changes, etc. When these changes are performed, your software (and possibly architecture) must adapt to properly meet new requirements and meet current security and other policies.
 
 ### 3. How do you define a reasonable maintenance budget? How can you protect that budget?
 
 In the case of the Inca rope bridges what was the cost of maintenance annually? Let's assume some of the build work was site preparation and building the stone anchors on each side, but most of the work was constructing the bridge itself. Since the bridge was _entirely replaced_ each year, the maintenance costs could be as much as 80% of the initial build effort, _every year_.
 
-Comparing to "software as a service" (SaaS) vendors is difficult because thay have shifted to a subscription model that bundles infrastructure, enhancements, and ongoing maintenance. Prior to SaaS subscription-based pricing one would typically buy a perpetual license plus maintenance at ~20-30% annual cost of the license to obtain support and updates.
+Comparing to "software as a service" (SaaS) vendors is difficult because they have shifted to a subscription model that bundles infrastructure, enhancements, and ongoing maintenance. Prior to SaaS subscription-based pricing one would typically buy a perpetual license plus maintenance at ~20-30% annual cost of the license to obtain support and updates.
 
-Side note: Now that the SaaS annual costs are commingled, some enterprises fall into the trap that “building it is cheaper because we pay up front but then it will cost less in the long run” assuming the "long run" almost always underprices infrastructure and assumes near zero maintenance cost. In the case of a brand-new, internally designed and developed software system - one that is well architected, well designed, well built, and meets all reliability, scalability, and performance needs (i.e. fantasy software) it's conceivable that there is no maintenance necessary for some period of time - but **very** unlikely.
+Side note: Now that the SaaS annual costs are commingled, some enterprises fall into the trap that “building it is cheaper because we pay up front but then it will cost less in the long run” assuming the "long run" almost always underprices infrastructure and assumes near zero maintenance cost. In the case of a brand-new, internally designed and developed software system - one that is well architected, well designed, well built, and meets all reliability, scalability, and performance needs (i.e., fantasy software) it's conceivable that there is no maintenance necessary for some period of time - but **very** unlikely.
 
 So, maintenance costs can have a very wide range. A general rule of thumb is 20-30% of the initial build cost will be required for ongoing maintenance work annually. However, maintenance costs usually start off lower and increase over time. They are also unpredictable costs that are hard to budget.
 
@@ -202,11 +200,11 @@ To do this, you need to overcome people’s natural skepticism and get them to b
 
 For all that people talk about COBOL dying off, it is good at certain tasks. The problem with most old COBOL systems is that they were designed at a time when COBOL was the _only option_. Start by sorting which parts of the system are in COBOL because COBOL is good at performing that task, and which parts are in COBOL because there were no other technologies available. Once you have that mapping, start by pulling the latter off into separate services that are written and designed using the technology we would choose for that task today.
 
-Going through the exercise of understanding what functionality is fit for use for particular languages/technologies not only gives engineers a way to keep building their skillsets but also is an opportunity to pair with other engineers who have different/complimentary skills. This exchange also has the benefit of diffusing the understanding of the system to a broader group of people without needing to solely rely on documentation (which never exists).
+Going through the exercise of understanding what functionality is fit for use for specific languages/technologies not only gives engineers a way to keep building their skillsets but also is an opportunity to pair with other engineers who have different/complimentary skills. This exchange also has the benefit of diffusing the understanding of the system to a broader group of people without needing to solely rely on documentation (which never exists).
 
 Counterintuitively, SLAs/SLOs are valuable because they provide a "failure budget". When organizations stop aiming for perfection and accept that all systems will occasionally fail, they stop letting their technology rot for fear of change. In most cases, mean time to recovery (MTTR) is a more useful statistic to push than reliability. MTTR tracks how long it takes the organization to recover from failure. Resilience in engineering is all about recovering stronger from failure. That means better monitoring, better documentation, and better processes for restoring services, but you can’t improve any of that if you don’t occasionally fail.
 
-Although a system that constantly breaks, or that breaks in unexpected ways without warning, will lose its users’ trust, the reverse isn’t necessarily true. A system that never breaks doesn’t necessarily inspire high degrees of trust - and it's maintence budget _is even easier to cut_.
+Although a system that constantly breaks, or that breaks in unexpected ways without warning, will lose its users’ trust, the reverse isn’t necessarily true. A system that never breaks doesn’t necessarily inspire high degrees of trust - and its maintenance budget _is even easier to cut_.
 
 People take systems that are too reliable for granted. Italian researchers Cristiano Castelfranchi and Rino Falcone have been advancing a general model of trust that postulates trust naturally degrades over time, regardless of whether any action has been taken to violate that trust. Under Castelfranchi and Falcone’s model, maintaining trust doesn’t mean establishing a perfect record; it means continuing to rack up observations of resilience. If a piece of technology is so reliable it has been completely forgotten, it is not creating those regular observations. Through no fault of the technology, the user’s trust in it slowly deteriorates.
 
@@ -237,7 +235,5 @@ The [Open Mainframe Project](https://www.openmainframeproject.org) estimates tha
 Image Credit: **Bill Gates, CEO of Microsoft, holds Windows 1.0 floppy discs.**
 
 <span className='text-sm'>
-  (Photo by Deborah Feingold/Corbis via Getty Images) Computers evolve. The underlying hardware,
-  CPU, memory and storage evolves. The operating system evolves. Of course the software we use must
-  evolve as well. This was the release of Windows 1.0. The beginning.
+  (Photo by Deborah Feingold/Corbis via Getty Images) This was the release of Windows 1.0. The beginning.Computers evolve. The underlying hardware, CPU, memory, and storage evolves. The operating system evolves. Of course, the software we use must evolve as well. 
 </span>
