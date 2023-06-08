@@ -64,11 +64,22 @@ It's far better to begin migrations with the harder parts of the system. It’s 
 
 Conquering a hard part of the system also tends to inspire stakeholders, especially if other modernization efforts have failed in the past. Sometimes this enthusiasm takes the form of increased moral support for the team, but it can also lead to more resources and more favorable prioritization.
 
+### MVP's also need to prove architectural principles
+
+All too often MVP's ignore basic architectural requirements in the interest of "low cost" and "speed". If the list below isn't addressed during the MVP development and learning process will have issues in the future. 
+
+* **Security** — basic security requirements need to be taken into account for the MVP. These requirements must be able to support a "production-quality" app in the future. Today, security is a core part of the user experience.
+* **Monitoring** — every application should provide monitoring capabilities to monitor performance and system issues. This is tablestakes for a production app, but also super important to learn about the operating qualities and failure states of the MVP.
+* **Platform** — The MVP should run an the same platform that would be used production. It's a mistake to build something "in house" and then try to move it to a commercial cloud platform (or vice versa).
+* **Latency and responsiveness** — we shouldn't have immediate concerns about latency and responsiveness, since the MVP deployment will be limited to a small user base, but we do need to learn what is acceptable to the users. Latency/responsivness metrics must be included as part of the basic monitoring capabilities.
+* **Scalability** — not usually a concern at first but the architecture of the MVP must provide a scalability path to maintain the latency and responsiveness defined above. 
+* **Data Persistency** — some MVPs start with a "toy" database, or data persistency model that must be completely replaced for the "real" application to be properly developed. In some cases this makes sense but if possible build the MVP on the right data persistency platform from the start. 
+
 ### The Takeaway
 
-MVPs are useful because they validate that a project is worth doing before we've wasted too much time and money. A system modernization project hasn't proven its value until it has successfully migrated the important (read: hard) parts. For that reason, the right MVP for a modernization effort is often a complex part of the system.
+MVPs are useful because they validate that a project is worth doing before we've wasted too much time and money. A system modernization project hasn't proven its value until it has successfully migrated the important (read: _hard_) parts. For that reason, the right MVP for a modernization effort is often a complex part of the system.
 
-If you pick an easier part, you will waste time, money, and maybe political capital doing work that does not prove that this new technology can be trusted with your most critical business functions. This turns deadly if the project fails months or years later, after millions of dollars have been spent, all because the "MVP" didn't prove the right hypothesis at the start.
+If you pick an easier part, or don't address basic architectural requirements, you will waste time, money, and maybe political capital doing work that _does not prove that this new technology can be trusted with your most critical business functions_. This turns deadly if the project fails months or years later, after millions of dollars have been spent, all because the "MVP" didn't prove the right hypothesis at the start.
 
 #### References
 
