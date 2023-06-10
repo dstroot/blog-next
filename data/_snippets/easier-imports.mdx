@@ -1,0 +1,85 @@
+---
+title: 'Easier Imports'
+published: true
+date: '2023-06-10'
+summary: 'Import from folders like /components, /utils or /hooks from @/anywhere in your codebase.'
+icon: js
+tags:
+  - Javascript
+# - React Hook
+# - React Component
+  - Typescript
+# - CSS
+# - HTML
+---
+
+Let's assume you have a folder structure like this in your project:
+
+<CodeBlock>
+
+```sh
+my-app /
+── pages /
+│   ├── about.jsx
+│   ├── analytics.jsx
+│   ├── index.jsx
+── hooks /
+│   ├── useHasMounted.js
+│   ├── useIntersectionObserver.js
+│   ├── useMediaQuery.js
+│   ├── usePageView.js
+│   └── useViewCount.js
+├── lib /
+│   ├── constants.js
+│   ├── sortPosts.js
+│   └── utils.js
+```
+
+</CodeBlock>
+
+This is how your imports will typically look:
+
+<CodeBlock>
+
+```JavaScript:cn.ts
+import { SortByDate } from '../lib/sortPosts';
+```
+
+</CodeBlock>
+
+And it's gonna be even worse if you are importing in a file that is nested deeply.
+
+<CodeBlock>
+
+```JavaScript:cn.ts
+import { SortByDate } from '../../../lib/sortPosts';
+```
+
+</CodeBlock>
+
+To solve this, you can add a jsconfig.json (or tsconfig.json if you have a TypeScript project) and then add the following to it.
+
+<CodeBlock>
+
+```JavaScript:cn.ts
+{
+    "baseUrl": ".",
+    "paths": {
+        "@/*": ["./*"]
+    }
+}
+```
+
+</CodeBlock>
+
+This configuration will now essentially allow you to import folders like @/components, @/utils or @/hooks etc from anywhere in the codebase.
+
+Now your imports will look like this:
+
+<CodeBlock>
+
+```JavaScript:cn.ts
+import { SortByDate } from '@/lib/sortPosts';
+```
+
+</CodeBlock>
