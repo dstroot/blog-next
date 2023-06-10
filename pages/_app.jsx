@@ -1,6 +1,7 @@
 import Script from 'next/script';
 import { Layout } from '../components/Layout';
 import { ThemeProvider } from 'next-themes';
+import { Analytics } from '@vercel/analytics/react';
 
 /* -- Global Styles -- */
 import 'prismjs/themes/prism-tomorrow.css';
@@ -64,6 +65,7 @@ export default function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>
+      <Analytics />
     </>
   );
 }
