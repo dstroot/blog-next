@@ -1,0 +1,95 @@
+---
+title: 'Async/await functions in parallel'
+published: true
+date: '2023-07-07'
+summary: 'To speed up our code lets look at some ways to run promises in parallel. This can be useful when performing multiple database queries to render a web page and you want to run the queries in parallel rather than seqentially.'
+icon: js
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+### Context
+
+Multiple `await` calls will execute one after the other rather than in parallel. For example:
+
+<CodeBlock>
+
+```JavaScript:await.js
+const someResult = await someCall();
+const anotherResult = await anotherCall();
+```
+
+</CodeBlock>
+
+Here `anotherCall()` will be called only when `someCall()` is completed. What if you want to execute them in parallel? 
+
+Here's the simplest approach:
+
+<CodeBlock>
+
+```JavaScript:parallel.js
+const [someResult, anotherResult] = await Promise.all([someCall(), anotherCall()]);
+```
+
+</CodeBlock>
+
+Note that `Promise.all` fails fast, which means that as soon as one of the promises supplied to it rejects, then the entire thing rejects. On the other hand, it will allow all the promises in it to run without blocking each other, but will prevent the execution to continue until ALL are resolved successfully.
+
+For extra credit - here is a way to run many tasks in parallel and process the results individually as the tasks complete. I think it's pretty elegant.
+
+<CodeBlock>
+
+```JavaScript:tasks.js
+function wait(ms, data) {
+    console.log('Starting task:', data, ms);
+    return new Promise(resolve => setTimeout(resolve, ms, data));
+}
+
+// run these in parallel, process results individually
+var tasks = [
+    async () => {
+        var result = await wait(1000, 'burrito');
+        // do something with result
+        console.log(result);
+    },
+    async () => {
+        var result = await wait(500, 'taco');
+        // do something with result
+        console.log(result);
+    },
+    async () => {
+        var result = await wait(5000, 'tostada');
+        // do something with result
+        console.log(result);
+    }
+]
+
+await Promise.all(tasks.map(p => p()));
+console.log('done');
+```
+
+</CodeBlock>
+
+There results should look as follows:
+
+<CodeBlock>
+
+```JavaScript:results.js
+Starting task: burrito 1000
+Starting task: taco 500
+Starting task: tostada 5000
+taco
+burrito
+tostada
+done
+```
+
+</CodeBlock>
+
+## References
+
+[Understanding Node.js Async Flows: Parallel, Serial, Waterfall and Queues](https://medium.com/velotio-perspectives/understanding-node-js-async-flows-parallel-serial-waterfall-and-queues-6f9c4badbc17)
