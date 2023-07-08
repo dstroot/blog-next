@@ -46,6 +46,9 @@ export const Footer = () => {
               <Link className='mt-2 font-medium md:mt-0 hover:text-gray-500' href='/snippets'>
                 Code Snippets
               </Link>
+              <Link className='mt-2 font-medium md:mt-0 hover:text-gray-500' href='/uses'>
+                Uses
+              </Link>
             </div>
           </div>
         </div>
