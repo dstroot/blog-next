@@ -1,6 +1,10 @@
+# Uses
+
+I regularly get questions about the specifics of some piece of software or hardware I use. When I do, I send them this page. This is all stuff I regularly use, like and endorse (otherwise it would not be here).
+
 > Full disclosure, some links on this list are affiliate links. If you are interested in buying any of these products please use the link below and support this site. Thank you!
 
----
+--- 
 
 ### Services
 
