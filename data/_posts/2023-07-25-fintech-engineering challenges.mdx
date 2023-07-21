@@ -26,26 +26,55 @@ Currency math is actually more closely related to integer math than it is to flo
 
 - For accounting applications it's very common to store values as integers (actually BigInt) in the database. For example, take the amount of the transaction (let's suppose $100.23) and multiple by 100, 1000, 10000, etc. to get the accuracy you need. So if you only need to store cents and can safely round up or down, just multiply by 100. In the example, you would store the integer 10023. You'll save space in the database and comparing two integers doesn't have the gotcha's of comparing two floats. Others recommend `Decimal(19,4)`. Some relational databases, such as Postgres, support a Money type but then you are wedded to your database. How you store monetary values is a key decision and has to align with your currency math library.
 
-- If you’re using JSON to pass around monetary quantities (eg. from the frontend to the backend), consider putting them in strings as opposed to the native number type. You never know what the serializers and deserializers across languages will do to your numbers. Otherwise use integers like Stripe [1] and Square [2].
+- If you’re using JSON to pass around monetary quantities (eg. from the frontend to the backend), consider putting them in strings as opposed to the native number type. You never know what the serializers and deserializers across languages will do to your numbers. Otherwise use integers like [Stripe](https://stripe.com/docs/api/prices/create#create_price-unit_amount) and [Square](https://developer.squareup.com/reference/square/objects/Money).
 
-- When processing currency values you need to strip currency formatting and standardize the decimal. Great Britain and the United States are two of the few places in the world that use a period to indicate the decimal place. Many other countries use a comma instead. The decimal separator is also called the _radix character_. Likewise, while the U.K. and U.S. use a comma to separate groups of thousands, many other countries use a period instead, and some countries separate thousands groups with a thin space. You need libraries that can encode and decode human-readable values for each currency. You also need to be able to convert currency codes to currency symbols.
+- When processing currency values you need to strip currency formatting and standardize the decimal. Great Britain and the United States are two of the few places in the world that use a period to indicate the decimal place. Many other countries use a comma instead - and three digits instead of two. The decimal separator is also called the _radix character_. Likewise, while the U.K. and U.S. use a comma to separate groups of thousands, many other countries use a period, and some countries separate thousands groups with a thin space. You need libraries that can encode and decode human-readable values for each currency. You also need to be able to convert currency codes to currency symbols.
 
 - This isn't specific to currency but sometimes what you think is a "number" isn't. You often need to use strings, for example if you need to store a bank account number “01234567789” will have the leading zero stripped if you use a numeric type.
 
-[1] https://stripe.com/docs/api/prices/create#create_price-unit_...
-[2] https://developer.squareup.com/reference/square/objects/Mone...
-
 ## Ledgers, Transactions and Periods
 
-Now that we can store, retrieve and manipulate monetary values we have to design how to keep track of them. The core concepts of most financial systems is some type "balance", which is changed via "transactions". The balance may also have the concept of a "close". 
+The core concepts of most financial systems is a "balance", which is changed via "transactions". We can model this as an "account" table and a "transaction" table. When an account is created it has a value of zero. The account value is then updated by each transaction and reflects the current state. The transactions are stored for the lifetime as the account, along with precise timestamps so we know the sequence they were applied.
 
-For example, in an accounting system there are the concepts of monthly, quarterly and annual closes. Once a period is closed new transactions cannot affect it - in a sense it should be immutable after being closed. If an "as of" transaction comes in for a date in the closed period, the period can either be re-opened and closed again after the transaction is posted, which is typically done for material transactions, thus restating the period, or the transaction could be posted to the first day of the open period instead if not material.  
+We should always be able to start at zero, apply the transactions in order and arrive at the same current account state. What happens we we have millions of accounts and billions of transactions? Can we easily and quickly validate our account values? This is where double entry accounting comes into play. “Use a double-entry ledger” is probably the most valuable advice I could have sent myself prior to getting into FinTech. 
+
+In fact, the term "balance" comes from double entry accounting - credits must always balance with debits. For example:
+
+<div className='leading-3'>
+```sh
+╭──────────────────────────────────────────────────┬───────┬────────╮
+│ Ledger account                                   │ Debit │ Credit │
+├──────────────────────────────────────────────────┼───────┼────────┤
+│ balance_sheet.current_assets.accounts_receivable │ 100.0 │    0.0 │
+│ profit_loss.revenue.general                      │   0.0 │  100.0 │
+├──────────────────────────────────────────────────┼───────┼────────┤
+│                                                  │ 100.0 │  100.0 │
+╰──────────────────────────────────────────────────┴───────┴────────╯
+```
+</div>
+
+Let's introduce some important terms:
+
+- **Ledger**: you can compare this to a database. Every business has one ledger for itself internally. You can also have external ledgers. A bank account is an example of an external ledger.
+
+- **Ledger account**: Ledger accounts categorize the money flowing through the ledger. It is modelled like a tree, with the top most levels pointing to the balance sheet or profit-loss statement. The second level points to items on the reports. The lower levels are customizable. Examples of common ledger accounts are revenue, bank accounts, accounts receivable, and accounts payable.
+
+- **Journal entry**: this is a single record in the ledger, comparable to a row in a table. It contains the actual money movement between ledger accounts.
+
+- **Financial fact**: although this is not a commonly used term, I like to use financial facts to make it easier to reason about the external world connected to the ledger. Financial facts are events in the world reflected in the ledger. Mainly they cause money movement, but also movements in assets or liabilities in a business are financial facts. The journal entries of a financial fact should always be balanced.
+
+
+
+> The fundamental idea of Event Sourcing is that of ensuring every change to the state of an application is captured in an event object, and that these event objects are themselves stored in the sequence they were applied for the same lifetime as the application state itself.
+>
+> <cite>&mdash; Martin Fowler, Event Sourcing</cite>
+
+The balance may also have the concept of a "close". For example, in an accounting system there are the concepts of monthly, quarterly and annual closes. Once a period is closed new transactions cannot affect it - in a sense it should be immutable after being closed. If an "as of" transaction comes in for a date in the closed period, the period can either be re-opened and closed again after the transaction is posted, which is typically done for material transactions, thus restating the period, or the transaction could be posted to the first day of the open period instead if not material.  
 
 Other considerations: 
 
 - When you report on closed periods it is imperative that the reporting is idempotent: Close your periods and generate reports, if/when you regenerate the report it must be identical.
-- “Use a double-entry ledger” is probably the most valuable advice I could have sent myself prior to getting into FinTech. 
-- “Updating transactions” would be better phrased as “use an append-only log / evented architecture” where possible. 
+- “Updating transactions” would be better phrased as “use an append-only log / event architecture” where possible. 
 - Transactions also have various states and it can be useful to use a state machine to manage how transactions are applied. Transactions like credit card payments have a lifecycle with many states: authorized, cleared, voided, returned, declined, etc. It can be tempting to query an existing transaction and update it. This is against fintech rules because of the financial requirement for audibility. Auditors looking at a ledger need to trust that every entry in the ledger was made at a specific time and has not been manipulated in any way. Fintechs need to build transaction tracking systems that add every transaction (even updates to existing transactions) as new records and to lock down databases so that no one, not even god, can change an existing transaction.
 
 ## Currency Codes
@@ -195,132 +224,13 @@ Engineering teams working outside of fintech may be used to getting product requ
 
 Doug says, “having your developers write their own requirements,” is a recipe for unexpected issues and slow feature velocity, because “the product dev interface is so crucial.” He went on to say that if you’re at a fintech where this is happening, take the extra time to document the detailed business rules around transaction state management, error handling and retry logic, and account configuration. Schedule time with the product team, even if they are understaffed, to communicate these rules back out to the business.
 
-I asked in a few places for other examples of tech mistakes that fintechs have made and I am sure that I’m leaving out some surprising and facepalm examples. Please reply to this message with some of your favorites, and I can include them in an update next week.
-
-Thanks for reading. Please consider hiring our team at Kelus to do software development for your company. It goes without saying that we don’t need to be trained on these particular mistakes.
-
-
----
----
----
-
-The skill of spotting false information - rubbish, hogwash, [trumpery](#ref) and, yes, even fake news — is so important these days that scientists have begun serious research on it. They’re attempting to quantify when and why people spread it, who is susceptible to it, how it affects them, and how people can confront it.
-
-According to the philosopher and Princeton emeritus professor Harry Frankfurt in his now-classic 2005 book [“On Bullshit”](https://press.princeton.edu/books/hardcover/9780691122946/on-bullshit), liars at least acknowledge truth exists, bullsh\*tters don't care. By virtue of this, Frankfurt writes, **bullshit is a greater enemy of the truth than lies**.
-
-### Corporate Bullsh\*t
-
-Corporate bullsh\*t can have a positive effect, for example when leaders communicate a vague but inspiring future and employees rally around the vision. This is known as a handy supply of manure for fertilizing new ideas and innovation.
-
-However, corporate bullsh\*t mainly has several negative effects:
-
-- Distrust in leadership,
-- Lower job satisfaction,
-- Reduction in productivity (slower to make decisions), and
-- Poorer quality decisions
-
-The most detrimental consequence of organizational bullsh\*t is likely the **corrosion of organizational decision-making**.
-
-### Defining Corporate Bullsh\*t
-
-Recent [reseach](https://www.researchgate.net/publication/347253147_This_Place_Is_Full_of_It_Towards_an_Organizational_Bullshit_Perception_Scale) created the **Organizational Bullshit Perception Scale (OBPS)**. The scale is designed to gauge perceptions of the extent of organizational bullsh\*t that exists in a workplace. The research revealed three key factors of organizational bullsh\*t:
-
-#### Factor 1. Bullsh\*t Tolerance
-
-The tolerance for bullsh\*t seems to be more pervasive and more accepted in some organizations than others. This variation is likely to be reflected in the extent to which an organization has a culture of **seeking and using evidence to support statements**, as opposed to it being more commonplace to rely on hunches, anecdotes, and personal experiences and opinions. Does the organization reward, accept, ignore, or challenge bullsh\*t statements?
-
-While organizational disregard for the truth may be accepted under certain circumstances, such disregard may lead to organizations making more questionable decisions that could alienate employees. Employees are exceptionally tuned to recognize bullsh\*t and this is a source of frustration for many of them. Worse, management could actually believe the bullsh\*t, and that could ultimately put everyone's jobs at risk by endangering the welfare of the company.
-
-We can measure factor 1 by measuring the extent to which employees believe their organization has a culture that expects workplace statements and discussions **to be grounded in truth** and be **supported by evidence and data**.
-
-#### Factor 2. Leadership Bullsh\*t
-
-The second factor concerns the communication behavior of high-status individuals in organizations. Since senior leaders are the most important and influential bullsh\*tters in organizations, we should measure subordinates’ perceptions of whether their bosses tend to engage in bullsh\*t-related practices.
-
-Employees believe that their superiors are key players in the dissemination of corporate bullsh\*t. Further, employees are likely to have to act based on any bullsh\*t communicated by their bosses. As a result, employees are acutely aware when their superiors use bullsh\*t to advance their own self-interests.
-
-> “We’re really excited about... (_the thing that no one in history has ever been excited about_)”
->
-> <cite>- Delivered in a joyless monotone</cite>
-
-Bullsh\*t flows both ways, however. There is a simple heuristic as a boss: Are you only hearing good news? That's bad news.
-
-Those at the bottom of an organization have a fairly accurate view of what’s going on. They’re close to the detail; they know what's what. Those at the top must rely on the bubbling-up of information from below, a process that creates layers of bullsh\*t. Individual contributors present a rosy picture of what they are working on to their line managers; who then bullsh\*t their bosses; and so on.
-
-By the time you are a senior leader you should know this pattern. It's your job to discover the truth **despite** this tendency. If your company puts more emphasis on reputation than truth; rewards good news and punishes bad; forces loyalty on its employees rather than a desire to do the right thing; then it's leadership's fault if they are being fed bullsh\*t.
-
-> “One of the most salient features of our culture is that there is so much bullshit. Everyone knows this. Each of us contributes his share. But we tend to take the situation for granted.”
->
-> <cite>- Harry Frankfurt, Professor of Philosophy Emeritus at Princeton University</cite>
-
-#### Factor 3. Bullsh\*t Language
-
-Bullsh\*t typically contains language that is meant to enhance the credibility of a bullsh\*tter, while at the same time trying to flummox others so they are unable or unwilling to try to penetrate to the lack of truth behind the bullsh\*t.
-
-Corporate jargon is one example of organizational bullsh\*t language, whereby words or expressions are used in an attempt to legitimize something, whilst at the same time using confusing language and thinking. We all know corporate bullsh\*t expressions when we hear them such as “architect plug-and-play functionalities”, “drive upstream convergence”, “exploit bricks-and-clicks channels”, or “disintermediate back-end communities”.
-
-<p className='text-sm'>
-  Expressions courtesy of the <a href='https://www.bullshitgenerator.com/'>Bullshit Generator.</a>
-</p>
-
-Corporate speak is littered with TLAs (three letter acronyms). Things have many different names that essentially mean the same thing but indicate status and inside knowledge. A new product for example may have a code name, a project name to launch it, an "insider reference" name, and an external name for public use. Which name is used internally can project either status (for those in know), or bullsh\*t.
-
-Employees who are bullsh\*t targets are less likely to ask questions, or challenge, when they find it difficult to understand what has been said. Bullsh\*t language therefore goes beyond what is said, but also incorporates **how it is said** – both components compound the actions of bullsh\*tters.
-
-Employees know that the excessive use of such language is a form of bullsh\*t. They sense if a statement is riddled with meaningless language, acronyms, buzzwords, and jargon, then it is very likely to be bullsh\*t. They also highly respect managers that protect them from bullsh\*t - describing a good manager as a "bullsh\*t umbrella", and a bad manager as a "bullsh\*t funnel".
-
-### Measuring Corporate Bullsh\*t
-
-Now we know the three key factors of organizational bullsh\*t (F1: bullsh\*t Tolerance, F2: Leadership bullsh\*t, and F3: bullsh\*t Language) we can attempt to measure those factors. The Organizational Bullshit Perception Scale (OBPS) has identified statements that can be used to measure each of the factors:
-
-| Scale item                                                                                                                     |   F1 |   F2 |   F3 |
-| ------------------------------------------------------------------------------------------------------------------------------ | ---: | ---: | ---: |
-| 1. Evidence must be presented to support decisions made. (1) (R)                                                               | 0.79 |      |      |
-| 2. People often make assertions that they cannot support. (1)                                                                  | 0.61 |      |      |
-| 3. It is easy to get access to the data I need to make good decisions. (1) (R)                                                 | 0.62 |      |      |
-| 4. When making decisions we place more emphasis on evidence than on personal opinions. (1) (R)                                 | 0.79 |      |      |
-| 5. You can persuade people to do things even if the evidence doesn’t support your arguments. (1)                               | 0.62 |      |      |
-| 6. People take the time to gather and analyze data before making decisions. (1) (R)                                            | 0.76 |      |      |
-| 7. If you want to get ahead just keep insisting that everything is going great, even if the evidence says something different. | 0.58 |      |      |
-| 8. My boss will say whatever it takes to pursue their agenda.                                                                  |      | 0.82 |      |
-| 9. When my boss speaks, they usually back up their opinions with logic.(R)                                                     |      | 0.73 |      |
-| 10. My boss often says things that may or may not be true.                                                                     |      | 0.83 |      |
-| 11. Even when people don’t know what they are talking about, my boss will often go along with their suggestions.               |      | 0.63 |      |
-| 12. My boss loves to use acronyms.                                                                                             |      |      | 0.70 |
-| 13. My boss loves to use jargon.                                                                                               |      |      | 0.64 |
-| 14. People use jargon far too often. (1)                                                                                       |      |      | 0.80 |
-| 15. People use acronyms far too often. (1)                                                                                     |      |      | 0.88 |
-
-<div className='text-sm italic'>
-  (1) indicates all these items were prefaced with “In our organization. . .”.<br></br>
-  (R) indicates that the item was reverse-coded.
-</div>
-
-### Responding to Corporate Bullsh\*t
-
-The OBPS provides a simple checklist to diagnose the extent to which employees **believe bullsh\*t is present in an organization**. The tool also enables the identification of specific factors so that these can then be addressed:
-
-- Does communication in the organization occur without regard for evidence?
-- Do senior executives purvey bullsh\*t in their communication?
-- Is there excessive use of acronyms (e.g. CPC, LBH, NBD) and jargon?
-
-In the workplace there are three responses from individuals that work to promote or hinder the prevalence of organizational bullsh\*t:
-
-1. **Disengage** (they try to escape the bullsh\*t, or simply disengage from the bullsh\*t),
-2. **Challenge** (they confront the bullsh\*t), or
-3. **Loyalty** (they embrace and spread the bullsh\*t)
-
-Employees can be coached to challenge and/or disengage with corporate bullsh\*t and strategies can be developed and employed for remedying corporate bullsh\*t. For example, Dr. Jevin West is a professor of information science at the University of Washington who co-created a class at the university, “Calling Bullshit”, that teaches students how to spot and refute the way data, such as statistics and charts, can be manipulated to make false arguments. More than 60 schools have requested permission to use the materials to set up classes of their own and the material was crafted into a [book](https://www.callingbullshit.org/) published in April of 2021.
 
 ### References
 
-- [On Bullshit](https://press.princeton.edu/books/hardcover/9780691122946/on-bullshit)
-- [This Place Is Full of It: Towards an Organizational Bullshit Perception Scale](https://www.researchgate.net/publication/347253147_This_Place_Is_Full_of_It_Towards_an_Organizational_Bullshit_Perception_Scale)
-- [Bullshit: a Lexicon](https://www.amazon.com/Bullshit-A-Lexicon-Mark-Peters-ebook/dp/B00TWEMGGQ?linkCode=ogi)
-- [Calling Bullshit](https://www.callingbullshit.org/)
-- [People who are receptive to bullshit tend to overestimate their creativity ability](https://www.psypost.org/2022/06/people-who-are-more-receptive-to-bullshit-also-tend-to-overestimate-their-creativity-ability-study-finds-63373)
-
----
+- [Double-entry accounting for software engineers](https://www.balanced.software/double-entry-bookkeeping-for-programmers/)
+- [Storing Money and Float Precision](https://lashewi.medium.com/storing-currency-values-and-float-precision-99029c1e8b71)
+- [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)
+- [Decimal and Thousands Separators](https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html)
 
 
 
@@ -342,5 +252,4 @@ yakshaving_jgt 22 days ago | root | parent | prev | next [–]
 Here's the implementation we use at work. You might find some interesting ideas there. It's nicely documented.
 https://hackage.haskell.org/package/safe-money-0.9.1/docs/Mo...
 
-https://lashewi.medium.com/storing-currency-values-and-float-precision-99029c1e8b71
-
+=
