@@ -1,0 +1,346 @@
+---
+title: Fintech Engineering Challenges
+excerpt: "Having worked in financial services for most of my career I started to reflect on the 
+software engineering challenges that are associated with fintech. Most of these have been 
+learned from hard experience. I hope they are useful to anyone moving into the fintech space."
+coverImage: /assets/blog/img/fintech.jpg
+date: '2023-07-19'
+published: false
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/fintech.jpg
+seoURL: 
+---
+
+Having worked in financial services for most of my career I started to reflect on the software engineering challenges that are associated with fintech. Most of these have been learned from hard experience. I hope they are useful to anyone moving into the fintech space. 
+
+## Significant Digits/Rounding
+
+I once wrote a whitepaper on this topic alone. Everything stored in computer memory is in binary. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example ten cents (0.10) in binary is a number that goes on forever like this: 0.000110011001100110011001100110011001100110011001100110011...
+
+If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will start to add up and become noticeable, even substantial. Start with $10 and divide equally into three payments and round back to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10. You made a penny disappear into thin air (0.1% of the total value).
+
+Currency math is actually more closely related to integer math than it is to floating point math. Rounding errors on addition and subtraction are not allowed and division/multiplication should never create more accuracy than the original values. All currency values should round to the closest cent or whatever the local equivalent should happen to be. This is best accomplished with a well tested currency math library in your chosen language.
+
+- For accounting applications it's very common to store values as integers (actually BigInt) in the database. For example, take the amount of the transaction (let's suppose $100.23) and multiple by 100, 1000, 10000, etc. to get the accuracy you need. So if you only need to store cents and can safely round up or down, just multiply by 100. In the example, you would store the integer 10023. You'll save space in the database and comparing two integers doesn't have the gotcha's of comparing two floats. Others recommend `Decimal(19,4)`. Some relational databases, such as Postgres, support a Money type but then you are wedded to your database. How you store monetary values is a key decision and has to align with your currency math library.
+
+- If you’re using JSON to pass around monetary quantities (eg. from the frontend to the backend), consider putting them in strings as opposed to the native number type. You never know what the serializers and deserializers across languages will do to your numbers. Otherwise use integers like Stripe [1] and Square [2].
+
+- When processing currency values you need to strip currency formatting and standardize the decimal. Great Britain and the United States are two of the few places in the world that use a period to indicate the decimal place. Many other countries use a comma instead. The decimal separator is also called the _radix character_. Likewise, while the U.K. and U.S. use a comma to separate groups of thousands, many other countries use a period instead, and some countries separate thousands groups with a thin space. You need libraries that can encode and decode human-readable values for each currency. You also need to be able to convert currency codes to currency symbols.
+
+- This isn't specific to currency but sometimes what you think is a "number" isn't. You often need to use strings, for example if you need to store a bank account number “01234567789” will have the leading zero stripped if you use a numeric type.
+
+[1] https://stripe.com/docs/api/prices/create#create_price-unit_...
+[2] https://developer.squareup.com/reference/square/objects/Mone...
+
+## Ledgers, Transactions and Periods
+
+Now that we can store, retrieve and manipulate monetary values we have to design how to keep track of them. The core concepts of most financial systems is some type "balance", which is changed via "transactions". The balance may also have the concept of a "close". 
+
+For example, in an accounting system there are the concepts of monthly, quarterly and annual closes. Once a period is closed new transactions cannot affect it - in a sense it should be immutable after being closed. If an "as of" transaction comes in for a date in the closed period, the period can either be re-opened and closed again after the transaction is posted, which is typically done for material transactions, thus restating the period, or the transaction could be posted to the first day of the open period instead if not material.  
+
+Other considerations: 
+
+- When you report on closed periods it is imperative that the reporting is idempotent: Close your periods and generate reports, if/when you regenerate the report it must be identical.
+- “Use a double-entry ledger” is probably the most valuable advice I could have sent myself prior to getting into FinTech. 
+- “Updating transactions” would be better phrased as “use an append-only log / evented architecture” where possible. 
+- Transactions also have various states and it can be useful to use a state machine to manage how transactions are applied. Transactions like credit card payments have a lifecycle with many states: authorized, cleared, voided, returned, declined, etc. It can be tempting to query an existing transaction and update it. This is against fintech rules because of the financial requirement for audibility. Auditors looking at a ledger need to trust that every entry in the ledger was made at a specific time and has not been manipulated in any way. Fintechs need to build transaction tracking systems that add every transaction (even updates to existing transactions) as new records and to lock down databases so that no one, not even god, can change an existing transaction.
+
+## Currency Codes
+
+For every monetary value in your system you will need to maintain the currency code. Use [ISO standard codes](https://www.iso.org/iso-4217-currency-codes.html). For example, the Swiss franc is represented by CHF – the CH being the code for Switzerland in the ISO 3166 code and F for franc. Symbols are not unique. The Australian dollar, Mexican Peso, Singapre Dollar, and US Dollar all use "$". 
+
+Transactions will all need accurate timestamps (more on this below) in order to find the most appropriate exchange rate. 
+
+## Time/Timestamps
+
+Time synchronization is incredibly important in fintech applications for a number of reasons:
+
+1. *Transaction Ordering:* Financial transactions often need to be processed in the order they were initiated. This is especially crucial in high-frequency trading where trades are often made in milliseconds or microseconds. A small difference in timing could potentially lead to substantial financial gains or losses. Therefore, accurate time synchronization ensures fairness and order in the execution of these transactions.
+
+2. *Security:* Accurate timekeeping helps in maintaining security. For instance, time-based one-time passwords (TOTPs) are widely used in two-factor authentication systems. These passwords are valid only for a short period of time and rely on synchronized clocks on the server and client side.
+
+3. *Audit Trails and Dispute Resolution:* Timestamping transactions can help create a precise audit trail, which is critical for detecting and investigating fraudulent activities. In case of any dispute, a detailed and accurate transaction history backed by synchronized time can help resolve the issue.
+
+4. *Distributed Systems:* In distributed systems, time synchronization is important to ensure data consistency. Many financial systems are distributed over different geographical locations, and transactions need to be coordinated between these systems in an orderly fashion. This requires all servers to have their clocks synchronized.
+
+Other considerations: 
+
+1. Use TIMESTAMPTZ. Always. The timestamptz datatype is a time zone-aware date and time data type. Furthermore, even for “date fields”, consider using a timestamptz. Every date implicitly exists in a timezone, and if you ignore that ambiguity you’ll get bitten later.
+2. When you’re using JSON to pass around datetime data, Use ISO8601 date and time with offset info, always. e.g. "transaction_timestamp": "2023‐06‐28T15:55:22.511Z".
+3. Use UTC everywhere, even when you find you can't use it _everywhere_.
+
+## Reporting Periods
+
+I really mis the mistake of NOT using double entry bookkeeping in the way you store transactions.
+Next to that, ensure transactions are immutable, and ensure reporting is idempotent: Close your periods and generate reports for them, when you regenerate the report it should be identical.
+
+This is more domain tips. A lot of technical tips hold for non fintech too.
+
+## Retry Logic
+
+Talking with two time technical cofounder and current fractional fintech CTO Cho-Nan Tsai surfaced a mistake that can lead to a cascading failure. He says, “When integrating with various payment vendors, be sure to set up async queues for those tasks. However, take care with how retries get triggered and handled. We had issues with too many unnecessary retries that blew things up in our system.”
+
+I love this one because it is earned experience. His team was being careful and thinking ahead to do retries on failed API calls, but if a critical system under heavy load isn’t responsive, those retries can pile up.
+
+More generally, I’ve seen both in and out of fintech that unresponsive third party systems are a paved road to cascading system failures. I’d like to suggest that the best—better than code reviews, better than pair programming, better than automated tests—way to prevent getting caught off guard is to do what AWS calls a Game Day. It’s essentially just a risk analysis meeting where developers talk about what could happen when things start going wrong. If you don’t have it as part of your release process, add it. You’ll be amazed at the mistakes you avoid.
+
+## Proven Architectures
+
+Don't be afraid to use formal methods. Queues, retries, event sourcing, payment state handling -- there are "global" properties we desire from these systems: certain things we want to make sure are always true and others that we want to make sure eventually happen. For the single process case, which nearly every developer thinks about, it can seem like a solved problem but we live in a concurrent world with network failures and vendors with errors in their own systems: it's nearly impossible for you to think really hard in your head and be sure that your queue retry strategy will maintain those properties that are important to your business. It's nearly impossible to do this with lightweight, informal testing strategies employed by busy software teams.
+By modelling your systems you will learn what the important failure modes are and you will get better at designing systems that are resilient and efficient.
+
+Card payment systems are fairly unreliable peer-to-peer messaging systems. Be prepared for a lot of complexity. Using an event-sourcing architecture is really useful here for that "auditing" requirement and for debugging transaction state when the network sends you messages in error, out of order, or they forget to retry themselves when they promised to, when merchants send bad data, when POS systems do weird things, etc.
+
+ One of the best ways we managed to keep complexity in check was to model these as state machines (with the state itself being persisted to DB)
+
+
+
+
+---
+---
+---
+
+
+
+Never record an amount without its currency.
+
+2. Reconcile all your data all the time. Never let any data go unaccounted for.
+
+3. Maker-checker is a powerful concept. Embrace it to the fullest across your system.
+
+4. You will be dealing with all sorts of non-standardized financial integrations. A lot. Think adapter pattern as early as possible.
+
+5. You will be answering to multiple regulatory agencies. Create boundaries between them within your system and reduce the surface of compliance as much as possible.
+
+
+
+“Updating transactions” would be better phrased as “use an append-only log / evented architecture”. (Also, “use a double-entry ledger” is probably the most valuable advice I could have sent myself prior to getting into FinTech.)
+
+“Be careful with retry” should be more strictly “use idempotent operations” and link to the canonical Stripe article on idempotency keys (https://stripe.com/blog/idempotency).
+
+Another important one to think about is bitemporality. “Created at” vs “effective at”. Not obvious at first and you’ll have some painful migrations if you don’t build it in. Fowler has a good overview here: https://martinfowler.com/eaaDev/timeNarrative.html.
+
+Edit to add - the advice that maybe using a NoSQL database is pretty bad IMO. I’d advise in the opposite direction - use SERIALIZABLE isolation in a SQL database. Read up on your Aphyr blog posts before trying to do anything distributed. Be paranoid about race conditions / serialization anomalies. If you eventually hit performance issues you need to think hard about what anomalies your access patterns might be subject to. (Obviously HFT won’t use serializable SQL).
+
+Immutable storage where possible - also strongly protects from ransomeware.
+
+	
+
+
+In an effort to make some of these lessons less likely, I’ll enumerate nine common engineering mistakes early fintechs make. Some I’ve drawn from my own experience, and others have come from interviewing members of the fintech community.
+
+1. Security (obviously)
+Of course, when money is involved, security is important. Security is a journey, a priority, a process, not a Jira card to complete. That said, there is one thing that I highly recommend everyone pay attention to that I’ve known many developers to be unfamiliar with: the OWASP top ten. I won’t list them here, but these are the 10 most common web application security mistakes as listed by Open Web Application Security Project. The list is kept up to date yearly as practices and tools change.
+
+2. Using floating point data types
+Everything stored in computer memory is in binary. When floating point numbers, which in software means numbers that have a decimal point somewhere in them, are represented in binary, they can lose precision. For example ten cents (0.10) in binary is like the number one-third (0.333…) in base ten. It’s a number that goes on forever. It looks like this: 0.000110011001100110011001100110011001100110011001100110011...
+
+If you use floating point numbers to represent currency, computers will have to round them, and when you add up enough money, the rounding errors will start to add up and become noticeable, even substantial. Instead, developers should use integers to represent money and count pennies. If money needs to be divided, and division isn’t even, the extra pennies should be apportioned according to well-understood business rules.
+
+
+Midjourney rendering of “a rounding error compounded over time in a fantasy painting style.”
+3. Updating transactions
+Transactions like credit card payments have a lifecycle with many states—authorized, cleared, voided, returned, declined, etc. It can be tempting for web developers that are used to updating the state of objects in a database to query for an existing transaction and update it. This is against fintech rules because of the financial requirement for audibility. Auditors looking at a ledger need to trust that every entry in the ledger was made at a specific time and has not been manipulated in any way. Fintechs need to build transaction tracking systems that add every transaction (even updates to existing transactions) as new records and to lock down databases so that no one, not even god, can change an existing transaction.
+
+Over the last decade, fintechs using RDBMS databases to record transactions have built features onto their databases like a journal of all changes to all data and clever ways of making sure the data hasn’t been modified by storing checksums of data as transactions are added.
+
+Assuming that fast moving entrepreneurs would like to find a way to get to MVP faster than might be possible with the level of engineering required to make a rock solid, RDBMS ledger system from scratch, here are a few options.
+
+I should note that Kelsus has not evaluated all of these, so this list does not represent my endorsement:
+
+This method suggested by AWS to use their QLDB database looks quite interesting. QLDB comes with audibility, write once, and write optimized access built in. It’s worth noting that one fintech architect I spoke to immediately rejected the idea of using QLDB for core banking because it has built-in scalability limitations and doesn’t have reliable market history.
+
+I love challenges to the common wisdom, and the common wisdom of fintech is that you shouldn’t use a NoSQL database to store transactions. This is because out-of-the-box these databases are configured to be “eventually consistent.” It’s fair to read “eventually consistent” as “possibly inconsistent at any given moment.” And if a database is inconsistent, someone could, for example, spend the same money more than once. But there are ways, via database configurations and application code, at your own risk, to make NoSQL databases verifiably consistent. If you know that you’re going to have internet scale transaction throughput demands and want to use DynamoDB, here’s an article with information about how: https://decimals.substack.com/p/things-i-wish-i-knew-before-building
+
+If you want to build your own ledger on an RDBMS, here’s an article for that (but it doesn’t get into data protection and auditing validation): https://blog.journalize.io/posts/an-elegant-db-schema-for-double-entry-accounting/
+
+If you want a managed service to just take care of this for you, have a look at Twisp.
+
+And finally if you want a product to do this for you, but want to host it yourself because you are concerned about third party managed service providers, have a look at TigerBeetle.
+
+4. Multitenancy:
+If your B2B SaaS app for making charter cruise reservations has a weakness that allows someone from one charter company to enter the id of another charter company into the API and get their data, the worst that can happen is a little unfair charter boat competition. In a fintech, these kinds of multitenancy bugs can lead to money losses and privacy regulation violations. Historically, multitenancy in SaaS has been enforced through careful code review and testing, but data across tenants all went into the same database, and there wasn’t a structural way of preventing a SQL query from returning data across customers. Since 2016, major databases like PostgreSQL and Sequel Server have supported row level security thereby making it possible to make parts of the database invisible to people without permissions. If you use an RDBMS for your fintech, definitely consider it as a way of keeping customer data safe. Here’s an intro about how to use it from AWS.
+
+5. Testing and release management
+Deciding how to configure environments—ie dev, sandbox, prod, etc—and how to ensure they are running properly can be a brain teaser in any organization. In fintech, when real money moves on prod, and core functionality depends on numerous third party integrations, it is super challenging. This article is not the place to explain how to do it, but there are three common mistakes to avoid.
+
+Many companies have a really confusing or poorly documented path from sandbox to production for third party integrators. Make this path clear, and while you’re at it, do a risk analysis on whether it could ever be possible for a third party to connect to the wrong environment without catching their own mistake.
+
+Plan for every important configuration of your production environment to be testable. Testability might require multiple test merchants and test accounts that move real money. You never know when you need to double check that the plumbing is working.
+
+An often overlooked requirement is to be able to ensure that the production environment is doing error handling properly. The thing about production systems is that they’re not supposed to have errors, so you can’t see how they performs under error conditions unless you can force errors to happen.
+
+6. Application monitoring
+Deploying to a public cloud like AWS means that some infrastructure monitoring can be added quickly and almost as an afterthought, but application monitoring cannot. Even on day one of your launch, the CEO will want to know things like how many transactions are being processed and what their total dollar amount is. Another thing that tends to happen early in the life of a fintech is that there will be a drop-off between signups and usage, and someone on the product team will start asking if users are experiencing errors. Be ready with good monitoring to be able to answer these kinds of questions from day one.
+
+7. SDK and Library support
+Kris Hansen, CTO of Synctera, a banking as a service (BaaS) company, gets credit for this one. A problem developers, especially those that love using new tools and frameworks, can run into, he said, is “not considering the SDKs and libraries that you will want to include in your project. Knowing how to wrap and use third party libraries for things like DOCv step up, remote deposit capture, and security features is pretty key these days. If your stack choices make this really challenging you're going to have a hard time.”
+
+I can imagine, for example, some serverless architectures that have a lot of business logic in AWS Lambda functions might make it difficult to do dependency and release management with these types of libraries. It’s also worth considering whether the libraries and SDKs you are using are just wrappers for HTTP APIs. In that case, I recommend using caution. I’ve seen too many bugs in third party HTTP API wrapper libraries over the years to use them without first considering whether it might not be better to just call the HTTP API directly with your own code.
+
+8. Be careful with retry logic
+Talking with two time technical cofounder and current fractional fintech CTO Cho-Nan Tsai surfaced a mistake that can lead to a cascading failure. He says, “When integrating with various payment vendors, be sure to set up async queues for those tasks. However, take care with how retries get triggered and handled. We had issues with too many unnecessary retries that blew things up in our system.”
+
+I love this one because it is earned experience. His team was being careful and thinking ahead to do retries on failed API calls, but if a critical system under heavy load isn’t responsive, those retries can pile up.
+
+More generally, I’ve seen both in and out of fintech that unresponsive third party systems are a paved road to cascading system failures. I’d like to suggest that the best—better than code reviews, better than pair programming, better than automated tests—way to prevent getting caught off guard is to do what AWS calls a Game Day. It’s essentially just a risk analysis meeting where developers talk about what could happen when things start going wrong. If you don’t have it as part of your release process, add it. You’ll be amazed at the mistakes you avoid.
+
+9. Loosely defined requirements
+Doug Hurst, former Venmo Head of Growth, mentioned this common mistake that might seem like a product rather than an engineering issue, but it falls to the engineering team to avoid.
+
+Engineering teams working outside of fintech may be used to getting product requirements in the form of mockups and high level business requirements. Senior engineers on their own or in informal meetings distill these requirements down to the level of business rules, which get baked into systems and sometimes forgotten.
+
+Doug says, “having your developers write their own requirements,” is a recipe for unexpected issues and slow feature velocity, because “the product dev interface is so crucial.” He went on to say that if you’re at a fintech where this is happening, take the extra time to document the detailed business rules around transaction state management, error handling and retry logic, and account configuration. Schedule time with the product team, even if they are understaffed, to communicate these rules back out to the business.
+
+I asked in a few places for other examples of tech mistakes that fintechs have made and I am sure that I’m leaving out some surprising and facepalm examples. Please reply to this message with some of your favorites, and I can include them in an update next week.
+
+Thanks for reading. Please consider hiring our team at Kelus to do software development for your company. It goes without saying that we don’t need to be trained on these particular mistakes.
+
+
+---
+---
+---
+
+The skill of spotting false information - rubbish, hogwash, [trumpery](#ref) and, yes, even fake news — is so important these days that scientists have begun serious research on it. They’re attempting to quantify when and why people spread it, who is susceptible to it, how it affects them, and how people can confront it.
+
+According to the philosopher and Princeton emeritus professor Harry Frankfurt in his now-classic 2005 book [“On Bullshit”](https://press.princeton.edu/books/hardcover/9780691122946/on-bullshit), liars at least acknowledge truth exists, bullsh\*tters don't care. By virtue of this, Frankfurt writes, **bullshit is a greater enemy of the truth than lies**.
+
+### Corporate Bullsh\*t
+
+Corporate bullsh\*t can have a positive effect, for example when leaders communicate a vague but inspiring future and employees rally around the vision. This is known as a handy supply of manure for fertilizing new ideas and innovation.
+
+However, corporate bullsh\*t mainly has several negative effects:
+
+- Distrust in leadership,
+- Lower job satisfaction,
+- Reduction in productivity (slower to make decisions), and
+- Poorer quality decisions
+
+The most detrimental consequence of organizational bullsh\*t is likely the **corrosion of organizational decision-making**.
+
+### Defining Corporate Bullsh\*t
+
+Recent [reseach](https://www.researchgate.net/publication/347253147_This_Place_Is_Full_of_It_Towards_an_Organizational_Bullshit_Perception_Scale) created the **Organizational Bullshit Perception Scale (OBPS)**. The scale is designed to gauge perceptions of the extent of organizational bullsh\*t that exists in a workplace. The research revealed three key factors of organizational bullsh\*t:
+
+#### Factor 1. Bullsh\*t Tolerance
+
+The tolerance for bullsh\*t seems to be more pervasive and more accepted in some organizations than others. This variation is likely to be reflected in the extent to which an organization has a culture of **seeking and using evidence to support statements**, as opposed to it being more commonplace to rely on hunches, anecdotes, and personal experiences and opinions. Does the organization reward, accept, ignore, or challenge bullsh\*t statements?
+
+While organizational disregard for the truth may be accepted under certain circumstances, such disregard may lead to organizations making more questionable decisions that could alienate employees. Employees are exceptionally tuned to recognize bullsh\*t and this is a source of frustration for many of them. Worse, management could actually believe the bullsh\*t, and that could ultimately put everyone's jobs at risk by endangering the welfare of the company.
+
+We can measure factor 1 by measuring the extent to which employees believe their organization has a culture that expects workplace statements and discussions **to be grounded in truth** and be **supported by evidence and data**.
+
+#### Factor 2. Leadership Bullsh\*t
+
+The second factor concerns the communication behavior of high-status individuals in organizations. Since senior leaders are the most important and influential bullsh\*tters in organizations, we should measure subordinates’ perceptions of whether their bosses tend to engage in bullsh\*t-related practices.
+
+Employees believe that their superiors are key players in the dissemination of corporate bullsh\*t. Further, employees are likely to have to act based on any bullsh\*t communicated by their bosses. As a result, employees are acutely aware when their superiors use bullsh\*t to advance their own self-interests.
+
+> “We’re really excited about... (_the thing that no one in history has ever been excited about_)”
+>
+> <cite>- Delivered in a joyless monotone</cite>
+
+Bullsh\*t flows both ways, however. There is a simple heuristic as a boss: Are you only hearing good news? That's bad news.
+
+Those at the bottom of an organization have a fairly accurate view of what’s going on. They’re close to the detail; they know what's what. Those at the top must rely on the bubbling-up of information from below, a process that creates layers of bullsh\*t. Individual contributors present a rosy picture of what they are working on to their line managers; who then bullsh\*t their bosses; and so on.
+
+By the time you are a senior leader you should know this pattern. It's your job to discover the truth **despite** this tendency. If your company puts more emphasis on reputation than truth; rewards good news and punishes bad; forces loyalty on its employees rather than a desire to do the right thing; then it's leadership's fault if they are being fed bullsh\*t.
+
+> “One of the most salient features of our culture is that there is so much bullshit. Everyone knows this. Each of us contributes his share. But we tend to take the situation for granted.”
+>
+> <cite>- Harry Frankfurt, Professor of Philosophy Emeritus at Princeton University</cite>
+
+#### Factor 3. Bullsh\*t Language
+
+Bullsh\*t typically contains language that is meant to enhance the credibility of a bullsh\*tter, while at the same time trying to flummox others so they are unable or unwilling to try to penetrate to the lack of truth behind the bullsh\*t.
+
+Corporate jargon is one example of organizational bullsh\*t language, whereby words or expressions are used in an attempt to legitimize something, whilst at the same time using confusing language and thinking. We all know corporate bullsh\*t expressions when we hear them such as “architect plug-and-play functionalities”, “drive upstream convergence”, “exploit bricks-and-clicks channels”, or “disintermediate back-end communities”.
+
+<p className='text-sm'>
+  Expressions courtesy of the <a href='https://www.bullshitgenerator.com/'>Bullshit Generator.</a>
+</p>
+
+Corporate speak is littered with TLAs (three letter acronyms). Things have many different names that essentially mean the same thing but indicate status and inside knowledge. A new product for example may have a code name, a project name to launch it, an "insider reference" name, and an external name for public use. Which name is used internally can project either status (for those in know), or bullsh\*t.
+
+Employees who are bullsh\*t targets are less likely to ask questions, or challenge, when they find it difficult to understand what has been said. Bullsh\*t language therefore goes beyond what is said, but also incorporates **how it is said** – both components compound the actions of bullsh\*tters.
+
+Employees know that the excessive use of such language is a form of bullsh\*t. They sense if a statement is riddled with meaningless language, acronyms, buzzwords, and jargon, then it is very likely to be bullsh\*t. They also highly respect managers that protect them from bullsh\*t - describing a good manager as a "bullsh\*t umbrella", and a bad manager as a "bullsh\*t funnel".
+
+### Measuring Corporate Bullsh\*t
+
+Now we know the three key factors of organizational bullsh\*t (F1: bullsh\*t Tolerance, F2: Leadership bullsh\*t, and F3: bullsh\*t Language) we can attempt to measure those factors. The Organizational Bullshit Perception Scale (OBPS) has identified statements that can be used to measure each of the factors:
+
+| Scale item                                                                                                                     |   F1 |   F2 |   F3 |
+| ------------------------------------------------------------------------------------------------------------------------------ | ---: | ---: | ---: |
+| 1. Evidence must be presented to support decisions made. (1) (R)                                                               | 0.79 |      |      |
+| 2. People often make assertions that they cannot support. (1)                                                                  | 0.61 |      |      |
+| 3. It is easy to get access to the data I need to make good decisions. (1) (R)                                                 | 0.62 |      |      |
+| 4. When making decisions we place more emphasis on evidence than on personal opinions. (1) (R)                                 | 0.79 |      |      |
+| 5. You can persuade people to do things even if the evidence doesn’t support your arguments. (1)                               | 0.62 |      |      |
+| 6. People take the time to gather and analyze data before making decisions. (1) (R)                                            | 0.76 |      |      |
+| 7. If you want to get ahead just keep insisting that everything is going great, even if the evidence says something different. | 0.58 |      |      |
+| 8. My boss will say whatever it takes to pursue their agenda.                                                                  |      | 0.82 |      |
+| 9. When my boss speaks, they usually back up their opinions with logic.(R)                                                     |      | 0.73 |      |
+| 10. My boss often says things that may or may not be true.                                                                     |      | 0.83 |      |
+| 11. Even when people don’t know what they are talking about, my boss will often go along with their suggestions.               |      | 0.63 |      |
+| 12. My boss loves to use acronyms.                                                                                             |      |      | 0.70 |
+| 13. My boss loves to use jargon.                                                                                               |      |      | 0.64 |
+| 14. People use jargon far too often. (1)                                                                                       |      |      | 0.80 |
+| 15. People use acronyms far too often. (1)                                                                                     |      |      | 0.88 |
+
+<div className='text-sm italic'>
+  (1) indicates all these items were prefaced with “In our organization. . .”.<br></br>
+  (R) indicates that the item was reverse-coded.
+</div>
+
+### Responding to Corporate Bullsh\*t
+
+The OBPS provides a simple checklist to diagnose the extent to which employees **believe bullsh\*t is present in an organization**. The tool also enables the identification of specific factors so that these can then be addressed:
+
+- Does communication in the organization occur without regard for evidence?
+- Do senior executives purvey bullsh\*t in their communication?
+- Is there excessive use of acronyms (e.g. CPC, LBH, NBD) and jargon?
+
+In the workplace there are three responses from individuals that work to promote or hinder the prevalence of organizational bullsh\*t:
+
+1. **Disengage** (they try to escape the bullsh\*t, or simply disengage from the bullsh\*t),
+2. **Challenge** (they confront the bullsh\*t), or
+3. **Loyalty** (they embrace and spread the bullsh\*t)
+
+Employees can be coached to challenge and/or disengage with corporate bullsh\*t and strategies can be developed and employed for remedying corporate bullsh\*t. For example, Dr. Jevin West is a professor of information science at the University of Washington who co-created a class at the university, “Calling Bullshit”, that teaches students how to spot and refute the way data, such as statistics and charts, can be manipulated to make false arguments. More than 60 schools have requested permission to use the materials to set up classes of their own and the material was crafted into a [book](https://www.callingbullshit.org/) published in April of 2021.
+
+### References
+
+- [On Bullshit](https://press.princeton.edu/books/hardcover/9780691122946/on-bullshit)
+- [This Place Is Full of It: Towards an Organizational Bullshit Perception Scale](https://www.researchgate.net/publication/347253147_This_Place_Is_Full_of_It_Towards_an_Organizational_Bullshit_Perception_Scale)
+- [Bullshit: a Lexicon](https://www.amazon.com/Bullshit-A-Lexicon-Mark-Peters-ebook/dp/B00TWEMGGQ?linkCode=ogi)
+- [Calling Bullshit](https://www.callingbullshit.org/)
+- [People who are receptive to bullshit tend to overestimate their creativity ability](https://www.psypost.org/2022/06/people-who-are-more-receptive-to-bullshit-also-tend-to-overestimate-their-creativity-ability-study-finds-63373)
+
+---
+
+
+
+
+https://news.ycombinator.com/item?id=36506782
+
+https://metacpan.org/pod/Math::Currency
+https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html
+
+	
+acadavid79 22 days ago | prev | next [–]
+
+A little off-topic, but I would have loved to see mifos / fineract[0] referenced in the article. Great open source banking core having many of the strengths listed
+[0] https://github.com/apache/fineract/
+
+	
+yakshaving_jgt 22 days ago | root | parent | prev | next [–]
+
+Here's the implementation we use at work. You might find some interesting ideas there. It's nicely documented.
+https://hackage.haskell.org/package/safe-money-0.9.1/docs/Mo...
+
+https://lashewi.medium.com/storing-currency-values-and-float-precision-99029c1e8b71
+
