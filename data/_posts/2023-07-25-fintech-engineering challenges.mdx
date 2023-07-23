@@ -16,7 +16,7 @@ seoURL:
 
 Having worked in financial services for most of my career I reflected on the software engineering challenges that are associated with tracking and moving money digitally. Most of these have been learned from hard experience. 
 
-I am intentionally ignoring the broad topic of "security" because that alone is a much longer article - however some of the items below are very strong controls and help with security overall. In addition, you will likely be answering to multiple regulatory agencies. Consider ways to create boundaries between them within your system, and reduce the surface of compliance as much as possible. Good design patterns help with both challenges. 
+I am intentionally ignoring the broad topic of "security" because that alone is a much longer article - however some of the items below are very strong controls and help with security overall. In addition, you will likely be answering to multiple regulatory agencies. Consider ways to create boundaries between them within your system and reduce the surface of compliance as much as possible. Good design patterns help with both challenges. 
 
 ## Table of Contents
 
@@ -32,19 +32,19 @@ I am intentionally ignoring the broad topic of "security" because that alone is 
 
 ## <a name='1'></a>Significant Digits/Rounding
 
-I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example ten cents (0.10) in binary is a number that goes on forever like this: 0.000110011001100110011001100110011001100110011001100110011...
+I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a number that goes on forever like this: 0.000110011001100110011001100110011001100110011001100110011...
 
 If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will start to add up and become noticeable, even substantial. Start with $10.00 USD and divide it equally into three payments, rounded to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10.00. You made a penny disappear into thin air (0.1% of the total value!).
 
-Currency math is actually more closely related to integer math than it is to floating point math. Rounding errors on addition and subtraction are not allowed and division/multiplication should never create more accuracy than the original values. If money needs to be divided, and division isn’t even, rounding should be apportioned according to well-understood business rules. This is best accomplished with a well-tested currency math library in your chosen language.
+Currency math is more closely related to integer math than it is to floating point math. Rounding errors on addition and subtraction are not allowed and division/multiplication should never create more accuracy than the original values. If money needs to be divided, and division isn’t even, rounding should be apportioned according to well-understood business rules. This is best accomplished with a well-tested currency math library in your chosen language.
 
-- How you store monetary values is a key decision and has to align with your currency math library. For accounting applications it's very common to store values as integers (actually `BigInt`) in the database. For example, take the amount of the transaction (let's suppose $100.23) and multiply by 100, 1000, 10000, etc. to get the accuracy you need. So if you only need to store cents and can safely round up or down, just multiply by 100. In the example, you would store the integer 10023. You'll save space in the database and comparing two integers doesn't have the gotcha's of comparing two floats. Others recommend `Decimal(19,4)`. Some relational databases, such as Postgres, support a `Money` type but then you are wedded to that specific database. 
+- How you store monetary values is a key decision and has to align with your currency math library. For accounting applications it's very common to store values as integers (use `BigInt`) in the database. For example, take the amount of the transaction (let's suppose $100.23) and multiply by 100, 1000, 10000, etc. to get the accuracy you need. If you only need to store cents and can safely round up or down, just multiply by 100. In the example, you would store the integer 10023. You'll save space in the database and comparing two integers doesn't have the gotcha's of comparing two floats. Others recommend `Decimal(19,4)`. Some relational databases, such as Postgres, support a `Money` type but then you are wedded to that specific database. 
 
 - If you’re using JSON to pass around monetary quantities (eg. from the frontend to the backend) use integers like [Stripe](https://stripe.com/docs/api/prices/create#create_price-unit_amount) and [Square](https://developer.squareup.com/reference/square/objects/Money). Otherwise, consider putting the values in strings - you never know what the serializers and deserializers across languages will do to your numbers.
 
-- When processing currency values you need to strip currency formatting and standardize the decimal. Great Britain and the United States are two of the few places in the world that use a period to indicate the decimal place. Many other countries use a comma instead - and three digits instead of two. The decimal separator is also called the _radix character_. Likewise, while the U.K. and U.S. use a comma to separate groups of thousands, many other countries use a period, and some countries separate thousands groups with a thin space. You need libraries that can encode and decode human-readable values for each currency. You also need to be able to convert currency codes to currency symbols.
+- When processing currency values you need to strip currency formatting and standardize the decimal. Great Britain and the United States are two of the few places in the world that use a period to indicate the decimal place. Many other countries use a comma instead - and three digits instead of two. The decimal separator is also called the _radix character_. Likewise, while the U.K. and U.S. use a comma to separate groups of thousands, many other countries use a period, and some countries separate thousands with a thin space. You need libraries that can encode and decode human-readable values for each currency. You also need to be able to convert currency codes to currency symbols.
 
-- This isn't specific to currency but sometimes what you think is a "number" isn't. You often need to use strings. For example if you need to store a bank account number like “01234567789” it will have the leading zero stripped if you use a numeric type.
+- This isn't specific to currency but sometimes what you think is a "number" isn't. You often need to use strings. If you need to store a bank account number like “01234567789” it will have the leading zero stripped if you use a numeric type.
 
 ## <a name='2'></a>Ledgers, Accounts and Transactions
 
@@ -56,11 +56,11 @@ Martin Fowler calls this pattern "Event Sourcing":
 >
 > <cite>&mdash; Martin Fowler, Event Sourcing</cite>
 
-We should always be able to start at zero, re-apply the transactions in order, and arrive at the same current account state. However, what happens we we have millions of accounts and billions of transactions? Can we easily and quickly validate our account values? 
+We should always be able to start at zero, re-apply the transactions in order, and arrive at the same current account state. However, what happens we have millions of accounts and billions of transactions? Can we easily and quickly validate our account values? 
 
 This is where double entry accounting comes into play. Double-entry bookkeeping originated in the 13th century in Italy. “Use a double-entry ledger” is probably the most valuable advice I could have sent myself prior to getting into FinTech because they allow you to _reconcile all your data all the time_. 
 
-In fact, the term "balance" comes from double entry accounting - credits must always balance with debits. Thus every transaction is _balanced_ – it sums to zero. For example if we sell a $100 widget but haven't been paid yet, we are owed $100, and we have $100 in revenue:
+In fact, the term "balance" comes from double entry accounting - credits must always balance with debits. Thus, every transaction is _balanced_ – it sums to zero. For example, if we sell a $100 widget but haven't been paid yet, we are owed $100, and we have $100 in revenue:
 
 <div className='leading-3'>
 ```sh
@@ -75,11 +75,11 @@ In fact, the term "balance" comes from double entry accounting - credits must al
 ```
 </div>
 
-In order to understand this further let's introduce some important terms:
+To understand this further let's introduce some terms:
 
 - **Ledger**: A ledger contains accounts and journal (bookkeeping) entries. Every business has one ledger for itself internally. You can also have external ledgers. A bank account is an example of an external ledger.
 
-- **Ledger account**: Ledger accounts categorize the money flowing through the ledger. It is modelled like a tree, with the top most levels pointing to the balance sheet or profit-loss statement. The second level points to items on the reports. The lower levels are customizable. Examples of common ledger accounts are revenue, bank accounts, accounts receivable, and accounts payable.
+- **Ledger account**: Ledger accounts categorize the money flowing through the ledger. It is modelled like a tree, with the topmost levels pointing to the balance sheet or profit-loss statement. The second level points to items on the reports. The lower levels are customizable. Examples of common ledger accounts are revenue, bank accounts, accounts receivable, and accounts payable.
 
 - **Journal entry**: this is a single record in the ledger, comparable to a row in a table. It reflects the actual money movement between ledger accounts. This is what we would consider a transaction.
 
@@ -93,7 +93,7 @@ Other considerations:
 
 ## <a name='3'></a>Transaction States
 
-Transactions have many different states. For example, credit card payment states: authorized, cleared, voided, returned, declined, etc. It can be tempting to just go ahead an update the state on the transaction record. Don't do that! Instead each state change should have it's own immutable record, tracking state changes over time.
+Transactions have many different states. For example, credit card payment states: authorized, cleared, voided, returned, declined, etc. It can be tempting to just go ahead an update the state on the transaction record. Don't do that! Instead, each state change should have its own immutable record, tracking state changes over time.
 
 We need transaction state auditability. Auditors looking at a ledger need to trust that every entry in the ledger was made at a specific time and has not been manipulated in any way. “Updating transactions” would be better phrased as “use an append-only log / evented architecture”. Also, it is very beneficial to design and build your transaction state libraries around a "state machine" that enforces the business rules of state changes. 
 
@@ -105,13 +105,13 @@ I have mentioned immutable data like transactions and transaction state changes 
 
 ## <a name='3'></a>Currency Codes
 
-Never record an amount without it's associated currency code. Use [ISO standard codes](https://www.iso.org/iso-4217-currency-codes.html). For example, the Swiss franc is represented by CHF – the CH being the code for Switzerland in the ISO 3166 code and F for franc. Symbols are not unique by the way. The Australian dollar, Mexican Peso, Singapre Dollar, and US Dollar all use "$". 
+Never record an amount without its associated currency code. Use [ISO standard codes](https://www.iso.org/iso-4217-currency-codes.html). For example, the Swiss franc is represented by CHF – the CH being the code for Switzerland in the ISO 3166 code and F for franc. Symbols are not unique by the way. The Australian dollar, Mexican Peso, Singapre Dollar, and US Dollar all use "$". 
 
-Ammounts/values all need a corresponding currency code, everywhere. In addition, transactions will also need accurate timestamps for many reasons (more on this below - e.g. to find the most accurate exchange rate). 
+Ammounts/values all need a corresponding currency code, everywhere. In addition, transactions will also need accurate timestamps for many reasons (more on this below - e.g., to find the most accurate exchange rate). 
 
 ## <a name='4'></a>Time/Timestamps
 
-Never record a transaction without an accurate timestamp. Timestamps and time synchronization are incredibly important in fintech applications for a number of reasons:
+Never record a transaction without an accurate timestamp. Timestamps and time synchronization are incredibly important in fintech applications for several reasons:
 
 1. *Transaction Ordering:* Financial transactions need to be processed in the order they were initiated. This is especially crucial in high-frequency trading where trades are often made in milliseconds or microseconds. A small difference in timing could potentially lead to substantial financial gains or losses. Therefore, accurate time synchronization ensures order in the execution of these transactions.
 
@@ -124,17 +124,17 @@ Never record a transaction without an accurate timestamp. Timestamps and time sy
 Other considerations: 
 
 1. Use TIMESTAMPTZ. Always. The timestamptz datatype is a time zone-aware date and time data type. Furthermore, even for “date fields” consider using a timestamptz. Every date implicitly exists in a timezone, and if you ignore that ambiguity you’ll get bitten later.
-2. When you’re using JSON to pass around datetime data, Use ISO8601 date and time with offset info, always. e.g. "transaction_timestamp": "2023‐06‐28T15:55:22.511Z".
+2. When you’re using JSON to pass around datetime data, Use ISO8601 date and time with offset info, always. E.g., "transaction_timestamp": "2023‐06‐28T15:55:22.511Z".
 3. Use UTC everywhere, even when you find you can't use it _everywhere_.
-4. Another important one to think about is bitemporality. “Created at” vs “effective at”. Not obvious at first, and you’ll need to build it in. Fowler has a good overview here: https://martinfowler.com/eaaDev/timeNarrative.html.
+4. Another important one to think about is bi-temporality. “Created at” vs “effective at”. Not obvious at first, and you’ll need to build it in. Fowler has a good overview here: https://martinfowler.com/eaaDev/timeNarrative.html.
 
 ## <a name='5'></a>Reporting Periods
 
-When reporting financial results we have the concept of a "close". For example, in an accounting system there are monthly, quarterly and annual closes. Once a period is closed new transactions cannot affect it - it should be effectively immutable after being closed, except we have to handle the edge case of re-opening peiods.  
+When reporting financial results, we have the concept of a "close". For example, in an accounting system there are monthly, quarterly, and annual closes. Once a period is closed new transactions cannot affect it - it should be effectively immutable after being closed, except we have to handle the edge case of re-opening periods.  
 
 If an "as of" (late) transaction arrives for a date/time in a closed period, the period may be re-opened and closed again after the transaction is posted. This can be quite complex as it also requires subsequent transactions to be reversed and re-applied, plus it requires restating the period results, and requires new reports to be issued. This is typically done for material transactions only.
 
-Or, the transaction could be posted to the first moment of the current open period instead if not material. In this example the transaction date/time and posting date/time will be different. The transaction date could be September 23rd, but posted on October 1st (the first day of the open period.) It also requires subsequent transactions to be reversed and re-applied.
+Or the transaction could be posted to the first moment of the current open period instead if not material. In this example the transaction date/time and posting date/time will be different. The transaction date could be September 23rd but posted on October 1st (the first day of the open period.) It also requires subsequent transactions to be reversed and re-applied.
 
 The goal is that financial reporting should be immutable and idempotent: Close your periods and generate reports for them, and if/when you regenerate the report it must be identical.
 
@@ -144,10 +144,10 @@ The goal is that financial reporting should be immutable and idempotent: Close y
 
 ## <a name='7'></a>Proven Architectures
 
-Don't be afraid to use formal methods. Queues, retries, event sourcing, payment state handling -- there are "global" properties we desire from these systems: certain things we want to make sure are always true and others that we want to make sure eventually happen. For the single process case, which nearly every developer thinks about, it can seem like a solved problem but we live in a concurrent world with network failures and vendors with errors in their own systems: it's nearly impossible for you to think really hard in your head and be sure that your queue retry strategy will maintain those properties that are important to your business. It's nearly impossible to do this with lightweight, informal testing strategies employed by busy software teams.
+Don't be afraid to use formal methods. Queues, retries, event sourcing, payment state handling -- there are "global" properties we desire from these systems: certain things we want to make sure are always true and others that we want to make sure eventually happen. For the single process case, which nearly every developer thinks about, it can seem like a solved problem, but we live in a concurrent world with network failures and vendors with errors in their own systems: it's nearly impossible for you to think really hard in your head and be sure that your queue retry strategy will maintain those properties that are important to your business. It's nearly impossible to do this with lightweight, informal testing strategies employed by busy software teams.
 By modelling your systems you will learn what the important failure modes are and you will get better at designing systems that are resilient and efficient.
 
-Card payment systems are fairly unreliable peer-to-peer messaging systems. Be prepared for a lot of complexity. Using an event-sourcing architecture is really useful here for that "auditing" requirement and for debugging transaction state when the network sends you messages in error, out of order, or they forget to retry themselves when they promised to, when merchants send bad data, when POS systems do weird things, etc.
+Card payment systems are unreliable peer-to-peer messaging systems. Be prepared for a lot of complexity. Using an event-sourcing architecture is useful here for that "auditing" requirement and for debugging transaction state when the network sends you messages in error, out of order, or they forget to retry themselves when they promised to, when merchants send bad data, when POS systems do weird things, etc.
 
  One of the best ways we managed to keep complexity in check was to model these as state machines (with the state itself being persisted to DB)
 
@@ -176,9 +176,9 @@ Card payment systems are fairly unreliable peer-to-peer messaging systems. Be pr
 
 
 
-Edit to add - the advice that maybe using a NoSQL database is pretty bad IMO. I’d advise in the opposite direction - use SERIALIZABLE isolation in a SQL database. Read up on your Aphyr blog posts before trying to do anything distributed. Be paranoid about race conditions / serialization anomalies. If you eventually hit performance issues you need to think hard about what anomalies your access patterns might be subject to. (Obviously HFT won’t use serializable SQL).
+Edit to add - the advice that maybe using a NoSQL database is bad IMO. I’d advise in the opposite direction - use SERIALIZABLE isolation in a SQL database. Read up on your Aphyr blog posts before trying to do anything distributed. Be paranoid about race conditions / serialization anomalies. If you eventually hit performance issues you need to think hard about what anomalies your access patterns might be subject to. (Obviously HFT won’t use serializable SQL).
 
-Immutable storage where possible - also strongly protects from ransomeware.
+Immutable storage where possible - also strongly protects from ransomware.
 
 	
 
@@ -187,13 +187,13 @@ Immutable storage where possible - also strongly protects from ransomeware.
 
 5. Testing and release management
 
-Deciding how to configure environments—ie dev, sandbox, prod, etc—and how to ensure they are running properly can be a brain teaser in any organization. In fintech, when real money moves on prod, and core functionality depends on numerous third party integrations, it is super challenging. This article is not the place to explain how to do it, but there are three common mistakes to avoid.
+Deciding how to configure environments—ie dev, sandbox, prod, etc—and how to ensure they are running properly can be a brain teaser in any organization. In fintech, when real money moves on prod, and core functionality depends on numerous third-party integrations, it is super challenging. This article is not the place to explain how to do it, but there are three common mistakes to avoid.
 
-Many companies have a really confusing or poorly documented path from sandbox to production for third party integrators. Make this path clear, and while you’re at it, do a risk analysis on whether it could ever be possible for a third party to connect to the wrong environment without catching their own mistake.
+Many companies have a confusing or poorly documented path from sandbox to production for third party integrators. Make this path clear, and while you’re at it, do a risk analysis on whether it could ever be possible for a third party to connect to the wrong environment without catching their own mistake.
 
 Plan for every important configuration of your production environment to be testable. Testability might require multiple test merchants and test accounts that move real money. You never know when you need to double check that the plumbing is working.
 
-An often overlooked requirement is to be able to ensure that the production environment is doing error handling properly. The thing about production systems is that they’re not supposed to have errors, so you can’t see how they performs under error conditions unless you can force errors to happen.
+An often-overlooked requirement is to be able to ensure that the production environment is doing error handling properly. The thing about production systems is that they’re not supposed to have errors, so you can’t see how they performs under error conditions unless you can force errors to happen.
 
 6. Application monitoring
 
@@ -221,6 +221,7 @@ Talking with two time technical cofounder and current fractional fintech CTO Cho
 - [Things I Wish I Knew Before Building a Ledger](https://www.andriosrobert.com/p/things-i-wish-i-knew-before-building)
 - [Twisp](https://www.twisp.com)
 - [An Elegant DB Schema for Double-Entry Accounting](https://blog.journalize.io/posts/an-elegant-db-schema-for-double-entry-accounting/)
+= [Uber Ledger on DynamoDB and S3](https://www.youtube.com/watch?v=iN6mhI5hFt4&t=45s)
 
 https://news.ycombinator.com/item?id=36506782
 
@@ -228,15 +229,11 @@ https://metacpan.org/pod/Math::Currency
 
 
 	
-acadavid79 22 days ago | prev | next [–]
 
 A little off-topic, but I would have loved to see mifos / fineract[0] referenced in the article. Great open source banking core having many of the strengths listed
 [0] https://github.com/apache/fineract/
 
-	
-yakshaving_jgt 22 days ago | root | parent | prev | next [–]
 
 Here's the implementation we use at work. You might find some interesting ideas there. It's nicely documented.
 https://hackage.haskell.org/package/safe-money-0.9.1/docs/Mo...
 
-=

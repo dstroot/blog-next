@@ -28,7 +28,7 @@
     "algoliasearch": "^4.19.1",
     "date-fns": "2.30.0",
     "dotenv": "^16.3.1",
-    "esbuild": "^0.18.15",
+    "esbuild": "^0.18.16",
     "feed": "^4.2.2",
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
