@@ -7,6 +7,7 @@ export default async function handler(req, res) {
 
   if (!tweetID) {
     return res.status(400).json({
+      status: 400,
       error: 'Please provide a Tweet ID',
     });
   }
@@ -43,6 +44,7 @@ export default async function handler(req, res) {
       // check status
       if (tweets.status !== 200 || tweets.status !== 201) {
         return res.status(tweets.status).json({
+          status: tweets.status,
           error: tweets.detail,
         });
       }

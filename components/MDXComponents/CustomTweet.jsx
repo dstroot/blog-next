@@ -18,6 +18,10 @@ export const CustomTweet = ({ id }) => {
     fetchData();
   }, [URL]);
 
+  if (tweet?.status !== 200 || tweet?.status !== 201) {
+    return null;
+  }
+
   return (
     <>
       {tweet && (
