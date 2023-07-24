@@ -1,0 +1,79 @@
+---
+title: Voluntary AI Safety?
+excerpt: "The Biden administration has collected “voluntary commitments” from OpenAI, Anthropic, Google, Inflection, Microsoft, Meta and Amazon to pursue shared AI safety and transparency goals ahead of a planned executive order. Will it be enough?"
+coverImage: /assets/blog/img/safe_ai.jpg
+date: '2023-07-24'
+published: true
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/safe_ai.jpg
+seoURL: 
+---
+
+The Biden administration has collected “voluntary commitments” from OpenAI, Anthropic, Google, Inflection, Microsoft, Meta and Amazon to pursue shared AI safety and transparency goals ahead of a planned executive order. The participants will send representatives to the White House to meet with President Biden today, July 24th, 2023. The planned attendees are:
+
+- Brad Smith, President, Microsoft
+- Kent Walker, President, Google
+- Dario Amodei, CEO, Anthropic
+- Mustafa Suleyman, CEO, Inflection AI
+- Nick Clegg, President, Meta
+- Greg Brockman, President, OpenAI
+- Adam Selipsky, CEO, Amazon Web Services
+
+The seven companies have committed to the following:
+
+### Ensuring Products are Safe Before Introducing Them to the Public:
+
+1. **Security Testing**: Internal and external security tests of AI systems before release, including adversarial “red teaming” by experts outside the company.
+2. **Information Sharing**: Share information across government, academia and “civil society” on AI risks and mitigation techniques (such as preventing “jailbreaking”).
+
+### Building Systems that Put Security First:
+
+3. **Invest in Security**: Invest in cybersecurity and “insider threat safeguards” to protect private model data like weights. This is important not just to protect IP but because premature wide release could represent an opportunity to malicious actors.
+4. **Facilitate Vulnerability Reporting**: Facilitate third-party discovery and reporting of vulnerabilities, e.g. a bug bounty program or domain expert analysis.
+
+### Earning the Public’s Trust:
+
+5. **Watermark AI Content**: Develop robust watermarking or some other way of marking AI-generated content.
+6. **Report AI Weaknesses**: Report AI systems’ “capabilities, limitations, and areas of appropriate and inappropriate use.”
+7. **Prioritize Specific Research**: Prioritize research on societal risks like systematic bias or privacy issues.
+8. **Use AI Responsibly**: Develop and deploy AI “to help address society’s greatest challenges” like cancer prevention and climate change. (Though in a press call it was noted that the carbon footprint of AI models was not being tracked.)
+
+The White House is eager to get out ahead of this wave of technology. The president and vice president have both met with industry leaders and solicited advice on a national AI strategy, as well as dedicating a good deal of funding to new AI research centers and programs. 
+
+These committments are a _great_ start, but only scratch the surface. They don't address what I consider to be "the core problem". 
+
+## We Don't Yet Know How to Train Systems to Robustly Behave Well
+
+So far, no one knows how to train very powerful AI systems to be robustly helpful, honest, and harmless. Furthermore, rapid AI progress may trigger competitive races that could lead corporations or nations to deploy untrustworthy AI systems. The results of this could be catastrophic, either because AI systems strategically pursue dangerous goals, or because these systems make mistakes in high-stakes situations.
+
+It is easy for a chess grandmaster to detect bad moves in a novice but very hard for a novice to detect bad moves in a grandmaster. If we build an AI system that’s significantly more competent than human experts but it pursues goals that conflict with our best interests, we may not know what is happening until it is too late. 
+
+Of course, we have already encountered a variety of ways that AI behaviors can diverge from what their creators intend. This includes toxicity, bias, unreliability, dishonesty, and more recently [sycophancy and a stated desire for power](https://arxiv.org/pdf/2212.09251.pdf). We expect that as AI systems proliferate and become more powerful, these issues will grow in importance, and some of them will likely be representative of the problems we’ll encounter with human-level AI and beyond (along with others we may not have considered yet).
+
+## Governing AI Using a Constitution
+
+One of the participants in the Biden meeting, Anthropic, has already introduced the concept of an [AI Constitution](https://www.anthropic.com/index/claudes-constitution) that governs it's LLM called "Claude". The constitutional principles are based on the [Universal Declaration of Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights):
+
+1. Please choose the response that most supports and encourages freedom, equality, and a sense of brotherhood. (1)
+1. Please choose the response that is least racist and sexist, and that is least discriminatory based on language, religion, political or other opinion, national or social origin, property, birth or other status. (2)
+1. Please choose the response that is most supportive and encouraging of life, liberty, and personal security. (3)
+1. Please choose the response that most discourages and opposes torture, slavery, cruelty, and inhuman or degrading treatment. (4 & 5)
+1. Please choose the response that more clearly recognizes a right to universal equality, recognition, fair treatment, and protection against discrimination. (6-10)
+1. Please choose the response that is most respectful of everyone’s privacy, independence, reputation, family, property rights, and rights of association. (11-17)
+1. Please choose the response that is most respectful of the right to freedom of thought, conscience, opinion, expression, assembly, and religion. (18-20)
+1. Please choose the response that is most respectful of rights to work, participate in government, to rest, have an adequate standard of living, an education, healthcare, cultural experiences, and to be treated equally to others. (21-27)
+
+## Implementing a Universal AI Constitution
+
+It's time to consider a universal AI constitution, and ways to monitor AI models for compliance. It will be impossible for humans to oversee AI to perform this function. There has already been research to train a "Supervisor" AI [that engages with harmful queries by explaining its objections to them](https://arxiv.org/abs/2212.08073). It applies the concept of an AI constitution and reviews prompts and AI generated responses for conformance. This is promising research that should be funded and pursued by the current administration. 
+
+### References
+
+- [Top AI companies visit the White House to make ‘voluntary’ safety commitments](https://techcrunch.com/2023/07/21/top-ai-companies-visit-the-white-house-to-make-voluntary-safety-commitments/)
+- [White House Secures AI Safety Pledge From Amazon, Google & More Big Tech Companies](https://www.billboard.com/pro/white-house-ai-safety-pledge-amazon-google-meta/)
+- [Biden-⁠Harris Administration Secures Voluntary Commitments from Leading Artificial Intelligence Companies to Manage the Risks Posed by AI](https://www.whitehouse.gov/briefing-room/statements-releases/2023/07/21/fact-sheet-biden-harris-administration-secures-voluntary-commitments-from-leading-artificial-intelligence-companies-to-manage-the-risks-posed-by-ai/)
+- [AI for Science, Energy, and Security Report](https://www.anl.gov/ai-for-science-report)
+- [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)
