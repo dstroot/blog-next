@@ -39,8 +39,15 @@ export default async function handler(req, res) {
           Authorization: `Bearer ${process.env.TWITTER_BEARER_TOKEN}`,
         },
       }).then((res) => res.json());
+
+      // check status
+      if (tweets.status !== 200 || tweets.status !== 201) {
+        return res.status(tweets.status).json({
+          error: tweets.detail,
+        });
+      }
     } catch (err) {
-      return res.status(400).json(err);
+      return res.status(500).json(err);
     }
 
     const getAuthorInfo = (author_id) => {
@@ -51,7 +58,7 @@ export default async function handler(req, res) {
       return (
         mainTweet?.referenced_tweets?.map((referencedTweet) => {
           const fullReferencedTweet = tweets.includes.tweets.find(
-            (tweet) => tweet.id === referencedTweet.id
+            (tweet) => tweet.id === referencedTweet.id,
           );
 
           return {
@@ -63,12 +70,12 @@ export default async function handler(req, res) {
       );
     };
 
-    return tweets.data.reduce((allTweets, tweet) => {
+    return tweets.data?.reduce((allTweets, tweet) => {
       const tweetWithAuthor = {
         ...tweet,
         media:
           tweet?.attachments?.media_keys.map((key) =>
-            tweets.includes.media.find((media) => media.media_key === key)
+            tweets.includes.media.find((media) => media.media_key === key),
           ) || [],
         referenced_tweets: getReferencedTweets(tweet),
         author: getAuthorInfo(tweet.author_id),
