@@ -152,6 +152,14 @@ Card payment systems are unreliable peer-to-peer messaging systems. Be prepared 
  One of the best ways we managed to keep complexity in check was to model these as state machines (with the state itself being persisted to DB)
 
 
+## <a name='7'></a> Reconciliation
+
+Reconciliation: A game designed to frustrate the player
+
+Reconciliation is a business process which arises almost entirely because of a lack of structured data and controls in the pipelines that convey money between businesses or people. Because of this, to a greater or lesser degree worldwide, many people must spend a great deal of time every month reconciling incoming payments to invoices or other money movement. Because of technological and organizational barriers, the people who do this work (in Accounts Payable or Operations or office management or any other seat at the company) often do not have direct visibility into the customer relationships or the full transaction which gave rise to the invoice. 
+
+https://www.bitsaboutmoney.com/archive/a-game-that-intentionally-frustrates-the-player/
+
 
 
 ---
@@ -165,7 +173,11 @@ Card payment systems are unreliable peer-to-peer messaging systems. Be prepared 
 
 3. Maker-checker is a powerful concept. Embrace it to the fullest across your system.
 
-4. You will be dealing with all sorts of non-standardized financial integrations. A lot. Think adapter pattern as early as possible.
+4. You will be dealing with all sorts of non-standardized financial integrations. A lot. Think adapter pattern as early as possible.  https://refactoring.guru/design-patterns/adapter/typescript/example
+
+https://www.bitsaboutmoney.com/archive/a-game-that-intentionally-frustrates-the-player/
+
+
 
 5. You will be answering to multiple regulatory agencies. Create boundaries between them within your system and reduce the surface of compliance as much as possible.
 
