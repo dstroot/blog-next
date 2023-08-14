@@ -62,7 +62,7 @@ Martin Fowler calls this pattern [Event Sourcing](https://martinfowler.com/eaaDe
 >
 > <cite>&mdash; Martin Fowler, Event Sourcing</cite>
 
-We should always be able to start at zero, re-apply the transactions in order, and arrive at the same current account state. However, what happens we have millions of accounts and billions of transactions? Can we easily and quickly validate our account values? How can we spot errors?
+We should always be able to start at zero, re-apply the transactions in order, and arrive at the same current account state. However, what happens if we have millions of accounts and billions of transactions? Can we easily and quickly validate our account values? Can we quickly spot errors?
 
 This is where **double entry accounting** comes into play. Double-entry accounting originated in the 13th century in Italy to ensure the accuracy of banking and financial records. In a double-entry system, the amounts recorded as debits _must always be equal_ to the amounts recorded as credits.
 
