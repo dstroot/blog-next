@@ -1,0 +1,237 @@
+---
+title: Fintech Engineering Challenges
+excerpt: Having worked in financial services for most of my career I want to share some the software engineering challenges that are associated with tracking and moving money digitally. Most of these lessons have been learned the hard way. Hopefully they will be useful to anyone moving into the fintech space.
+coverImage: /assets/blog/img/fintech.jpg
+date: '2023-08-21'
+published: false
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/fintech.jpg
+seoURL:
+---
+
+Having worked in financial services/fintech for most of my career I want to share some the software engineering challenges that are associated with tracking and moving money digitally. Most of these lessons have been learned the hard way. Hopefully they will be useful to anyone moving into the fintech space.
+
+Note: I am intentionally ignoring the broad topic of "security" because that alone is a much longer article - however some of the items below are strong controls and help with security. Good design patterns help with both challenges.
+
+## Table of Contents
+
+| No. | Section                                  |
+| --- | ---------------------------------------- |
+| 1   | [Significant Digits/Rounding](#1)        |
+| 2   | [Ledgers, Accounts and Transactions](#2) |
+| 3   | [Reporting Periods](#3)                  |
+| 4   | [Reconciliation](#4)                     |
+| 5   | [Transaction States](#5)                 |
+| 6   | [Immutability](#6)                       |
+| 7   | [Currency Codes](#7)                     |
+| 8   | [Time/Timestamps](#8)                    |
+| 9   | [Retry Logic](#9)                        |
+| 10  | [Architecture](#10)                      |
+| 11  | [Identity Management](#11)               |
+| 11  | [Testing and Release Management](#12)    |
+| 12  | [Application Monitoring](#13)            |
+
+## <a name='1'></a>Significant Digits/Rounding
+
+This is so critical that I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a repeating binary number that goes on forever like this: 0.000110011001100110011001100110011001100110011001100110011...
+
+If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will add up and become noticeable, even substantial. Start with $10.00 USD and divide it equally into three payments, rounded to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10.00. You made a penny disappear into thin air (0.1% of the total value!).
+
+Currency math is more closely related to integer math than it is to floating point math. Rounding errors on addition and subtraction are not allowed and division/multiplication should never create more accuracy than the original values. If money needs to be divided, and division isn&apos;t even, rounding should be apportioned according to well-understood business rules. In other words, in the example above you should end up with three transactions, two for $3.33 and one for $3.34. This is best accomplished with a well-tested [currency math library](https://metacpan.org/pod/Math::Currency) in your chosen language. Do not attempt to write this yourself.
+
+Notes:
+
+- How you _store_ monetary values is a key decision and has to align with your currency math library. For accounting applications it's very common to store values as integers (e.g., use `BigInt`) in the database. For example, take the amount of the transaction (let's suppose $100.23) and multiply by 100, 1000, 10000, etc. to get the accuracy you need. If you only need to store USD just multiply by 100 (but note many currencies have more than two digits after the decimal). In the example, you would store the integer 10023. You'll save space in the database and comparing two integers doesn't have the gotcha's of comparing two floats. Many recommend `Decimal(19,4)`. Some relational databases, such as Postgres, support a `Money` type but then you are wedded to that specific database.
+
+- When using JSON to pass monetary quantities (e.g., from the frontend to the backend) use integers like [Stripe](https://stripe.com/docs/api/prices/create#create_price-unit_amount) and [Square](https://developer.squareup.com/reference/square/objects/Money). Otherwise, consider putting the values in strings - you never know what the serializers and deserializers across languages will do to your numbers.
+
+- When processing currency values you need to strip currency formatting and standardize the decimal. Great Britain and the United States are two of the few places in the world that use a period to indicate the decimal place. Many other countries use a comma instead - and three digits after the decimal instead of two. The decimal separator is also called the _radix character_. Likewise, while the U.K. and U.S. use a comma to separate groups of thousands, many other countries use a period, and some countries separate thousands with a thin space. You need libraries that can encode and decode human-readable values for each currency. You also need to be able to convert currency codes to currency symbols.
+
+- This isn't specific to currency but sometimes what you think is a "number" isn't. You often need to use strings. If you need to store a bank account number like “01234567789” it will have the leading zero stripped if you use a numeric type.
+
+## <a name='2'></a>Ledgers, Accounts and Transactions
+
+The core concept of most financial systems is a current value which is changed via "transactions". We can model this as an "account" table and a "transaction" table. When a new account is created it has a value of zero. The account value is then updated via transactions (events) and reflects the current state. The transactions are stored for the lifetime as the account, along with precise timestamps so we know the sequence they were applied.
+
+Martin Fowler calls this pattern [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html):
+
+> The fundamental idea of Event Sourcing is that of ensuring every change to the state of an application is captured in an event object, and that these event objects are themselves stored in the sequence they were applied for the same lifetime as the application state itself.
+>
+> <cite>&mdash; Martin Fowler, Event Sourcing</cite>
+
+We should always be able to start at zero, re-apply the transactions in order, and arrive at the same current account state. However, what happens we have millions of accounts and billions of transactions? Can we easily and quickly validate our account values? How can we spot errors?
+
+This is where **double entry accounting** comes into play. Double-entry accounting originated in the 13th century in Italy to ensure the accuracy of banking and financial records. In a double-entry system, the amounts recorded as debits _must always be equal_ to the amounts recorded as credits.
+
+“Use a double-entry ledger” is probably the most valuable advice I could have sent myself prior to getting into fintech because it allows you to _reconcile all your data all the time_.
+
+In fact, the term "balance" comes from double entry accounting - credits must always balance with debits. Thus, every transaction is _balanced_ – it sums to zero. For example, if we sell a $100 widget but haven't been paid yet, we are owed $100, and we have $100 in revenue:
+
+| Ledger Account                                   | Debit       | Credit      |
+| ------------------------------------------------ | ----------- | ----------- |
+| balance_sheet.current_assets.accounts_receivable | $100.00     | $0          |
+| profit_loss.revenue.general                      | $0          | $100.00     |
+| **Balance**                                      | **$100.00** | **$100.00** |
+
+To understand this further let's introduce some terms:
+
+- **Ledger**: A ledger contains accounts and journal (bookkeeping) entries. Every business has one ledger for itself internally. You can also have external ledgers. A bank account is an example of an external ledger.
+
+- **Account**: Ledger accounts categorize the money flowing through the ledger. It is modelled like a tree, with the topmost levels pointing to the balance sheet or profit-loss statement. The second level points to items on the reports. The lower levels are customizable. Examples of common ledger accounts are revenue, accounts receivable, and accounts payable.
+
+- **Journal entry**: this is a single record in the ledger, comparable to a row in a table. It reflects the actual money movement between ledger accounts. This is what we would consider a transaction, or Martin Fowler would call an "event".
+
+- **Credits and Debits**: A debit is an entry that is created to indicate either an increase in assets or a decrease in liabilities on a business&apos;s balance sheet. Credits, on the other hand, work in the opposite way - they are mirrors of one another.
+
+If we are correctly handling transactions via a ledger, we can make sure we are **always in balance**. This is a critical control.
+
+## <a name='3'></a>Reporting Periods
+
+When reporting financial results, we have the concept of a period "close". For example, in an accounting system there are monthly, quarterly, and annual closes. The goal is that financial reporting should be immutable and idempotent: Close your periods and generate reports for them, and if/when you regenerate the report it must be identical.
+
+Once a period is closed new transactions cannot affect it - it should be effectively immutable after being closed, except we must handle the edge case of re-opening periods.
+
+If an "as of" (late) transaction arrives for a date/time in a closed period, the period may be re-opened and closed again after the transaction is posted. This can be quite complex as it also requires subsequent transactions to be reversed and re-applied, plus it requires restating the period results, and requires new financial reports to be issued. This is typically done for material transactions only.
+
+For non-material transactions, the "as-of" transaction is posted to the first moment of the current open period instead. In this example the transaction date/time and posting date/time will be different. The transaction date could be September 23rd but posted on October 1st (the first day of the open period.) This also requires any subsequent transactions to be reversed and re-applied.
+
+## <a name='4'></a> Reconciliation
+
+> Reconciliation: A game designed to frustrate the player.
+
+Reconciliation is a business process which arises almost entirely because of a lack of structured data and controls in the pipelines that convey money between businesses or people. Because of this, to a greater or lesser degree worldwide, many people must spend a great deal of time every month reconciling incoming payments to invoices or other money movement.
+
+Because of technological and organizational barriers, the people who do this work (in Accounts Payable, or Operations, or any other seat at the company) often do not have direct visibility into the customer relationships or the full transaction details which gave rise to the invoice, or payment. Money movement is today, after all, just a message between parties related to some type of contract or event. Reconciliation is a business process which arises almost entirely because of a lack of structured data in the pipelines that convey money between businesses.
+
+For the last several hundred years, these have followed a very well-understood dance. A deal is struck. The exact amount of compensation is decided upon and memorialized by the sender in an invoice. The purchaser receives the invoice, reads it, then wraps money around a metaphorical brick and throws it through a metaphorical window. Someone on the other side of the window then applies forensic science to the question of what caused this particular brick to arrive.
+
+Humans should not be involved in performing reconciliation. They should only be involved in investigating reconciliation issues/errors. My advice is design and **build automated reconciliation into your system from the start**.
+
+The implications are straightforward: this lowers the total cost of payments by eliminating human effort, which is expensive, and human errors, which are expensive and numerous. An underappreciated consequence is that freeing people from drudgery gives them the ability to do more important, meaningful work. However, reconciliation is complicated by the many states that financial transactions may be in.
+
+## <a name='5'></a>Transaction States
+
+Financial transactions have many different states. For example, credit card payment states can be authorized, cleared, voided, returned, declined, etc. It can be tempting to just go ahead an update the state on the transaction record. **Don't do that!** Instead, each state change should have its own immutable record, tracking transaction state changes over time.
+
+You will need transaction state auditability. Auditors looking at a financial system need to trust that every entry in the ledger was made at a specific time and has not been manipulated in any way. “Updating transactions” would be better phrased to an architect as “use an append-only log / event architecture”. Also, it is very beneficial to design and build your transaction state libraries around a "state machine" that enforces the business rules of state changes.
+
+Business rules are a pit of alligators, but some types of logical validation should be built into your transaction posting logic. If you sell widgets that range from $10.00 to $1,000 USD, should you expect to see a sales transaction for $10 million dollars? Or, one for a penny? At the very least these transactions should be flagged for review.
+
+You should build data quality rules on top of your data storage. Data quality rules typically fall into one of six dimensions: accuracy, completeness, consistency, timeliness, validity, and uniqueness. Validity rules such as "can't be null", "can't be less than zero", and "must be in this range" can highlight suspect data quickly.
+
+## <a name='6'></a>Immutability
+
+I have mentioned immutable data like transactions and transaction state changes several times now. There are other key benefits to having data be immutable - as an example, ransomware cannot corrupt or encrypt immutable data. Also, immutable data can be optimized for "write once, read many" access so it can be more performant.
+
+This also helps with auditability, information security, and controls. Auditors, CISO's and regulators love immutable data.
+
+## <a name='7'></a>Currency Codes
+
+**Never** record an amount without its associated currency code. Use [ISO standard codes](https://www.iso.org/iso-4217-currency-codes.html). For example, the Swiss franc is represented by CHF – the CH being the code for Switzerland in the ISO 3166 code and F for franc.
+
+Don't be tempted to use currency symbols - they not unique. The Australian dollar, Mexican Peso, Singapore Dollar, and US Dollar all use "$". Trust me - use ISO standard currency codes.
+
+All amounts/values need a corresponding currency code, _everywhere_. In addition, transactions will also need accurate timestamps for many reasons (e.g., to find the most accurate exchange rate).
+
+## <a name='8'></a>Time/Timestamps
+
+**Never** record a transaction without an accurate timestamp. Timestamps and time synchronization are incredibly important in fintech applications for several reasons:
+
+1. _Transaction Ordering:_ Financial transactions need to be processed in the order they were initiated. This is especially crucial in high-frequency trading where trades are often made in milliseconds or microseconds. A small difference in timing could potentially lead to substantial financial gains or losses. Therefore, accurate time synchronization ensures order in the execution of these transactions.
+
+2. _Security:_ Accurate timekeeping helps in maintaining security. For instance, time-based one-time passwords (TOTPs) are widely used in two-factor authentication systems. These passwords are valid only for a short period of time and rely on synchronized clocks on the server and client side.
+
+3. _Audit Trails and Dispute Resolution:_ Timestamping transactions can help create a precise audit trail, which is critical for detecting and investigating fraudulent activities. In case of any dispute, a detailed and accurate transaction history backed by synchronized time can help resolve the issue.
+
+4. _Distributed Processing:_ fintech systems must scale, and in order to scale and maintain reliability they are architected as distributed systems. In distributed systems, time synchronization is important to ensure data consistency. Many financial systems are distributed over different geographical locations, and transactions need to be coordinated between these systems in an orderly fashion. This requires all servers to have their clocks synchronized.
+
+Think of "currency" as three seperate components: (_currency code, decimal amount, and timestamp_).
+
+Other considerations:
+
+1. Use TIMESTAMPTZ. Always. The timestamptz datatype is a time zone-aware date and time data type. Furthermore, even for “date fields” consider using a timestamptz. Every date implicitly exists in a timezone, and if you ignore that you&apos;ll get bitten later.
+2. When you&apos;re using JSON to pass around datetime data, Use ISO8601 date and time with offset info, **always**. E.g., "transaction_timestamp": "2023‐06‐28T15:55:22.511Z".
+3. Use UTC everywhere, even when you find you can't use it _everywhere_.
+4. Another important one to think about is bitemporality. “Created at” vs “effective at”. Not obvious at first, and you&apos;ll need to build it in. Fowler has a good overview [here](https://martinfowler.com/eaaDev/timeNarrative.html).
+
+## <a name='9'></a>Retry Logic
+
+There are many places in fintech where we want "exactly once" transaction processing. Consider API calls: what if we were designing an API endpoint to charge a customer money; accidentally calling it twice would lead to the customer being double charged.
+
+This is where idempotency keys come into play. When performing an API request, or a transaction, the client generates a unique ID to identify just that operation and sends it up to the server along with the normal payload. The server receives the ID and correlates it with the state of the request on its end. If the client notices a failure, it retries the request _with the same ID_, and from there it’s up to the server to figure out what to do with it.
+
+- On retrying a connection failure, on the second request the server will see the ID for the first time and process it normally.
+- On a failure midway through an operation, the exact behavior is heavily dependent on implementation, but if the previous operation was successfully rolled back by way of an ACID database, it’ll be safe to retry it.
+- On a response failure (i.e., the operation executed successfully, but the client couldn’t get the result), the server simply replies with a cached result of the successful operation.
+
+“Be careful with retry” should be more strictly “use idempotent operations” and link to the canonical Stripe article on [idempotency](https://stripe.com/blog/idempotency).
+
+## <a name='10'></a>Architecture
+
+A well-designed architecture not only ensures optimal performance and scalability but also addresses critical concerns of security, compliance, and user experience. This article provides some clear, high-level advice.
+
+1. **Study any and all code** you can get your hands on first. For example, a great open source banking core having many of the strengths listed is [Apache Fineract](https://github.com/apache/fineract/). Also check out the links in the References section below.
+
+2. **Model your processes**. One of the best to keep complexity in check is to model processes as state machines (with the state itself being persisted to DB). State machines can be formally tested. By modelling your systems, you will learn what the important failure modes are and you will get better at designing systems that are resilient and efficient.
+
+3. **Use formal methods.** Harnessing the capabilities of formal software architecture design methodologies offers a structured approach to conceptualizing, designing, and implementing complex financial systems, ensuring robustness, reliability, and adherence to industry standards. Complex fintech projects involve multidisciplinary teams. Formal architectures provide a shared language and understanding, enhancing collaboration among developers, architects, domain experts, and business stakeholders. Incorporating formal architecture or design methods into fintech endeavors is an investment in long-term success.
+
+4. **Use proven design patterns**. Queues, retries, event sourcing, payment state handling -- we live in a concurrent world with network failures and our system will need to gracefully handle outages. Vendors will have errors and outages too. Use design patterns that help with robustness and reliability.
+
+   Card payment systems are basically unreliable peer-to-peer messaging systems. Be prepared for a lot of complexity. Using an event-sourcing architecture is useful here for that "auditing" requirement and for debugging transaction state when the network sends you messages in error, out of order, or they forget to retry themselves when they promised to, when merchants send bad data, when POS systems do weird things, etc. Your partners **will** send you bad data - be prepared to validate all input data thoroughly and have strategies in place for when it's wrong.
+
+5. **Use well designed, tested, and trusted componentry**. The libraries and SDKs you will need to use will become a large, critical part of your overall technology stack and some of these decisions will be very difficult to unwind if they don't work out. Knowing how to wrap and use third party libraries for things like DOCv step up, remote deposit capture, and security features is table stakes. If your stack choices make this challenging you're going to have a hard time for a long time.
+
+6. **Formalize your testing strategy and code coverage epectations**. It's nearly impossible to be successful with lightweight, informal testing strategies employed by busy software teams. Yes, you will be tempted to "move fast" and use prototypes, etc. But if you don't build in robust automated testing from the start along with methods of managing test data you will have a hard time.
+
+Other considerations:
+
+- Maker-checker is a powerful concept. Embrace it to the fullest across your system.
+- You will be dealing with all sorts of non-standardized financial integrations. A lot. Think [adapter pattern](https://refactoring.guru/design-patterns/adapter/typescript/example) as early as possible.
+- You will likely be answering to multiple regulatory agencies. Create boundaries between them within your system and reduce the surface of compliance as much as possible.
+- Be paranoid about race conditions / serialization anomalies.
+- Use immutable storage where possible (this also protects from ransomware).
+
+## <a name='11'></a>Identity Management
+
+Financial systems attract fraud. One of the best ways to combat fraud is having robust ways to determine that someone is who they claim to be, and that they are a human. Identity management is the bedrock upon which the entire financial ecosystem is built, offering protection against fraud and ensuring the overall robustness of the ecosystem. Identity theft, account takeovers, and fraudulent transactions are just a few examples of the threats that financial institutions face. Identity management acts as a bulwark against these threats.
+
+The financial ecosystem is a complex network of institutions, customers, partners, and regulators. The integrity of this ecosystem relies heavily on the accurate identification and verification of all participants. Identity management plays a crucial role in maintaining the trust and credibility that underpin financial transactions. By establishing a reliable and secure means of confirming identities, financial institutions can confidently interact with each other, customers can trust the services they receive, and regulators can ensure compliance with relevant laws and regulations.
+
+This is where a partner like [Socure](https://www.socure.com/) can help - this is very hard to get right and takes lots of design and build time to get right. My advice is not to do this yourself.
+
+## <a name="12"></a>Testing and Release Management
+
+Deciding how to configure environments — dev, test, prod, etc. — and how to ensure they are running properly can be rough in any organization. In fintech, when **real money** moves on prod, and core functionality depends on numerous third-party integrations, it is very challenging. This article is not the place to explain how to do it, but there are three common mistakes to avoid.
+
+1. Many companies have a confusing or poorly documented path from test to production for third party integrators. Make this path clear, and while you&apos;re at it, do a risk analysis on whether it could ever be possible for a third party to connect to the wrong environment without catching their own mistake.
+
+2. Plan for every important configuration of your production environment to be testable. Testability might require multiple test merchants and test accounts that move real money. You never know when you need to double check that the plumbing is working. Face it: [You Test in Prod](https://increment.com/testing/i-test-in-production/).
+
+3. An often-overlooked requirement is to be able to ensure that the production environment is doing error handling properly. The thing about production systems is that they&apos;re not supposed to have errors, so you can&apos;t see how they perform under error conditions unless you can force errors to happen.
+
+## <a name='13'></a>Application Monitoring
+
+Your application will need a full suite of application metrics that need to be defined **up front** and engineered into the application. Deploying to a public cloud like AWS means that some infrastructure monitoring can be added quickly and almost as an afterthought, but _application_ monitoring cannot.
+
+On day one of your launch, the CEO will want to know things like how many transactions are being processed and what their total dollar amount is. Another thing that tends to happen early in the life of a fintech is that there will be a drop-off between signups and usage, and someone on the product team will start asking if users are experiencing errors. Be ready with good application monitoring to be able to answer these kinds of questions.
+
+What metrics signal fraud attempts? From day one you will have to be vigilant about fraud patterns in your application. Make sure you monitoring on user activity for the inevitable questions that will be coming your way.
+
+### References
+
+- [Double-entry accounting for software engineers](https://www.balanced.software/double-entry-bookkeeping-for-programmers/)
+- [Storing Money and Float Precision](https://lashewi.medium.com/storing-currency-values-and-float-precision-99029c1e8b71)
+- [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)
+- [Decimal and Thousands Separators](https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html)
+- [Books, an immutable double-entry accounting database service](https://developer.squareup.com/blog/books-an-immutable-double-entry-accounting-database-service/)
+- [Double-entry Bookkeeping for Programmers](https://dev.to/kallmanation/double-entry-bookkeeping-for-programmers-3ok9)
+- [An Engineer's Guide to Double-Entry Bookkeeping](https://anvil.works/blog/double-entry-accounting-for-engineers)
+- [Things I Wish I Knew Before Building a Ledger](https://www.andriosrobert.com/p/things-i-wish-i-knew-before-building)
+- [Twisp - The core accounting engine to power any financial product](https://www.twisp.com)
+- [An Elegant DB Schema for Double-Entry Accounting](https://blog.journalize.io/posts/an-elegant-db-schema-for-double-entry-accounting/)
+- [Uber Ledger on DynamoDB and S3](https://www.youtube.com/watch?v=iN6mhI5hFt4&t=45s)
+- [Reconciliation: A game designed to frustrate the player](https://www.bitsaboutmoney.com/archive/a-game-that-intentionally-frustrates-the-player/)
