@@ -1,0 +1,27 @@
+---
+title: Data outlives code
+excerpt: Code is easy to refactor or rewrite. Changing code is computationally inexpensive. Not true with data. Data outliving code is a good problem to have, usually reserved for successful companies..
+coverImage: /assets/blog/img/fintech.jpg
+date: '2023-09-01'
+published: false
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/fintech.jpg
+seoURL:
+---
+
+Data outlives code
+
+
+In development and testing, use the old stuff. Legacy data. Data that precedes your current conceptual model. Data with weird cases, different encodings, and unexpectedly null values.
+
+In many applications, data outlives code. This is certainly the case in enterprise applications, where data can sometimes migrate across several generations of an application. Data may also be more valuable to the organization than the code that processes it.
+While I'm no fan of databases, one obvious advantage is that they provide direct access to the data in a standard way that is decoupled from the specific application code. This makes it easy to perform migrations, backups etc. It also increases one's confidence in the data integrity. Any solution that aims to replace databases altogether must address these concerns. I think that intimately coupling data with the application state, as suggested in the article, does not achieve this.
+
+
+https://www.briansnotes.io/book/designing-data-intensive-applications/
+
+https://news.ycombinator.com/item?id=2945872
+
