@@ -70,8 +70,5 @@ module.exports = {
     The plugins section defines any additional tailwind plugins. We are using typography for 
     markdown/.mdx and line-clamp. 
   */
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-  ],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 };

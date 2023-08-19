@@ -2,7 +2,7 @@
 title: Fintech Engineering Challenges
 excerpt: Having worked in financial services for most of my career I want to share some the software engineering challenges that are associated with tracking and moving money digitally. Most of these lessons have been learned the hard way. Hopefully they will be useful to anyone moving into the fintech space.
 coverImage: /assets/blog/img/fintech.jpg
-date: '2023-08-21'
+date: '2023-08-19'
 published: false
 author:
   name: Dan Stroot
@@ -14,7 +14,7 @@ seoURL:
 
 Having worked in financial services/fintech for most of my career I want to share some the software engineering challenges that are associated with tracking and moving money digitally. Most of these lessons have been learned the hard way. Hopefully they will be useful to anyone moving into the fintech space.
 
-Note: I am intentionally ignoring the broad topic of "security" because that alone is a much longer article - however some of the items below are strong controls and help with security. Good design patterns help with both challenges.
+Note: I am intentionally only lightly touching the broad topic of "security" because that alone is a much longer article - however many of the items below are strong controls and help with security. Good design patterns always seem to compliment security as well.
 
 ## Table of Contents
 
@@ -38,7 +38,7 @@ Note: I am intentionally ignoring the broad topic of "security" because that alo
 
 This is so critical that I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a repeating binary number that goes on forever like this: 0.000110011001100110011001100110011001100110011001100110011...
 
-If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will add up and become noticeable, even substantial. Start with $10.00 USD and divide it equally into three payments, rounded to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10.00. You made a penny disappear into thin air (0.1% of the total value!).
+If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will add up and become noticeable, even substantial. Imagine starting with $10.00 USD and dividing it equally into three payments, rounded to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10.00. You just made a penny disappear into thin air (0.1% of the total value!).
 
 Currency math is more closely related to integer math than it is to floating point math. Rounding errors on addition and subtraction are not allowed and division/multiplication should never create more accuracy than the original values. If money needs to be divided, and division isn&apos;t even, rounding should be apportioned according to well-understood business rules. In other words, in the example above you should end up with three transactions, two for $3.33 and one for $3.34. This is best accomplished with a well-tested [currency math library](https://metacpan.org/pod/Math::Currency) in your chosen language. Do not attempt to write this yourself.
 
@@ -98,19 +98,22 @@ If an "as of" (late) transaction arrives for a date/time in a closed period, the
 
 For non-material transactions, the "as-of" transaction is posted to the first moment of the current open period instead. In this example the transaction date/time and posting date/time will be different. The transaction date could be September 23rd but posted on October 1st (the first day of the open period.) This also requires any subsequent transactions to be reversed and re-applied.
 
+NOTE: some organizations operate on a cash basis vs. an accrual basis. Cash basis is simpler – you either do or don’t have the money. No unwinding required. Unfortunately, I've never seen cash basis accounting in any fintech. 
+
 ## <a name='4'></a> Reconciliation
 
 > Reconciliation: A game designed to frustrate the player.
 
-Reconciliation is a business process which arises almost entirely because of a lack of structured data and controls in the pipelines that convey money between businesses or people. Because of this, to a greater or lesser degree worldwide, many people must spend a great deal of time every month reconciling incoming payments to invoices or other money movement.
+Reconciliation is a business process which arises from "leaks" in the pipelines that convey money between businesses or people (typically because of data quality issues, or network connectivity challenges). Because of this, humans spend a great deal of time every month reconciling incoming payments to invoices, or balances to banks accounts, or other money movement.
 
-Because of technological and organizational barriers, the people who do this work (in Accounts Payable, or Operations, or any other seat at the company) often do not have direct visibility into the customer relationships or the full transaction details which gave rise to the invoice, or payment. Money movement is today, after all, just a message between parties related to some type of contract or event. Reconciliation is a business process which arises almost entirely because of a lack of structured data in the pipelines that convey money between businesses.
+We can make this better. Money movement today is, after all, just a message between parties. Humans should not be involved in performing reconciliation. They should only be involved in investigating reconciliation issues/errors. My advice is:
 
-For the last several hundred years, these have followed a very well-understood dance. A deal is struck. The exact amount of compensation is decided upon and memorialized by the sender in an invoice. The purchaser receives the invoice, reads it, then wraps money around a metaphorical brick and throws it through a metaphorical window. Someone on the other side of the window then applies forensic science to the question of what caused this particular brick to arrive.
+1. Design for guaranteed messaging where/if possible, or idempotency.
+2. Ensure high-quality structured transactional data.
+3. Reconciliation is complicated by the states that financial transactions may be in - use **state machines** to manage valid states and state transitions.
+3. Design and **build automated reconciliation into your system from the start**. Or there are many reconciliation engines available - you don't have to reinvent the wheel. 
 
-Humans should not be involved in performing reconciliation. They should only be involved in investigating reconciliation issues/errors. My advice is design and **build automated reconciliation into your system from the start**.
-
-The implications are straightforward: this lowers the total cost of payments by eliminating human effort, which is expensive, and human errors, which are expensive and numerous. An underappreciated consequence is that freeing people from drudgery gives them the ability to do more important, meaningful work. However, reconciliation is complicated by the many states that financial transactions may be in.
+This lowers the total cost of payments by eliminating human effort, which is expensive, and human errors, which are also expensive (and numerous). An underappreciated consequence is that freeing people from drudgery gives them the ability to do more important, meaningful work.
 
 ## <a name='5'></a>Transaction States
 
@@ -127,6 +130,8 @@ You should build data quality rules on top of your data storage. Data quality ru
 I have mentioned immutable data like transactions and transaction state changes several times now. There are other key benefits to having data be immutable - as an example, ransomware cannot corrupt or encrypt immutable data. Also, immutable data can be optimized for "write once, read many" access so it can be more performant.
 
 This also helps with auditability, information security, and controls. Auditors, CISO's and regulators love immutable data.
+
+NOTE: "Forget me" laws (such as Europe's GDPR, or California's CCPA) do not apply to financial transactions. Otherwise, we would be creating money laundering havens. Other records retention laws come into play for banking, insurance and securities - you must keep what you need to keep, and you should be careful not to keep anything past the records retention necessary. How you store data must conceptually align with the records retention policy necessary. You need to design for the this _up front_. 
 
 ## <a name='7'></a>Currency Codes
 
@@ -148,7 +153,7 @@ All amounts/values need a corresponding currency code, _everywhere_. In addition
 
 4. _Distributed Processing:_ fintech systems must scale, and in order to scale and maintain reliability they are architected as distributed systems. In distributed systems, time synchronization is important to ensure data consistency. Many financial systems are distributed over different geographical locations, and transactions need to be coordinated between these systems in an orderly fashion. This requires all servers to have their clocks synchronized.
 
-Think of "currency" as three seperate components: (_currency code, decimal amount, and timestamp_).
+Think of "currency" as three separate components: (_currency code, decimal amount, and timestamp_).
 
 Other considerations:
 
@@ -173,35 +178,36 @@ This is where idempotency keys come into play. When performing an API request, o
 
 A well-designed architecture not only ensures optimal performance and scalability but also addresses critical concerns of security, compliance, and user experience. This article provides some clear, high-level advice.
 
-1. **Study any and all code** you can get your hands on first. For example, a great open source banking core having many of the strengths listed is [Apache Fineract](https://github.com/apache/fineract/). Also check out the links in the References section below.
+1. **Study existing arcgitectures/code**. Review anything you can get your hands on. For example, a great open source banking core having many of the strengths listed is [Apache Fineract](https://github.com/apache/fineract/). Also check out the links in the References section below.
 
 2. **Model your processes**. One of the best to keep complexity in check is to model processes as state machines (with the state itself being persisted to DB). State machines can be formally tested. By modelling your systems, you will learn what the important failure modes are and you will get better at designing systems that are resilient and efficient.
 
-3. **Use formal methods.** Harnessing the capabilities of formal software architecture design methodologies offers a structured approach to conceptualizing, designing, and implementing complex financial systems, ensuring robustness, reliability, and adherence to industry standards. Complex fintech projects involve multidisciplinary teams. Formal architectures provide a shared language and understanding, enhancing collaboration among developers, architects, domain experts, and business stakeholders. Incorporating formal architecture or design methods into fintech endeavors is an investment in long-term success.
+3. **Use formal methods**. Harnessing the capabilities of formal software architecture design methodologies offers a structured approach to conceptualizing, designing, and implementing complex financial systems, ensuring robustness, reliability, and adherence to industry standards. Complex fintech projects involve multidisciplinary teams. Formal architectures provide a shared language and understanding, enhancing collaboration among developers, architects, domain experts, and business stakeholders. Incorporating formal architecture or design methods into fintech endeavors is an investment in long-term success.
 
 4. **Use proven design patterns**. Queues, retries, event sourcing, payment state handling -- we live in a concurrent world with network failures and our system will need to gracefully handle outages. Vendors will have errors and outages too. Use design patterns that help with robustness and reliability.
 
    Card payment systems are basically unreliable peer-to-peer messaging systems. Be prepared for a lot of complexity. Using an event-sourcing architecture is useful here for that "auditing" requirement and for debugging transaction state when the network sends you messages in error, out of order, or they forget to retry themselves when they promised to, when merchants send bad data, when POS systems do weird things, etc. Your partners **will** send you bad data - be prepared to validate all input data thoroughly and have strategies in place for when it's wrong.
 
-5. **Use well designed, tested, and trusted componentry**. The libraries and SDKs you will need to use will become a large, critical part of your overall technology stack and some of these decisions will be very difficult to unwind if they don't work out. Knowing how to wrap and use third party libraries for things like DOCv step up, remote deposit capture, and security features is table stakes. If your stack choices make this challenging you're going to have a hard time for a long time.
+5. **Use well designed, tested, and trusted componentry**. The libraries and SDKs you will need to use will become a large, critical part of your overall technology stack and some of these decisions will be very difficult to unwind if they don't work out. Knowing how to wrap and use third party libraries for things like DOCv step up, remote deposit capture, and security features is table stakes. If your stack choices make this challenging then you're going to have a hard time for a long time.
 
-6. **Formalize your testing strategy and code coverage epectations**. It's nearly impossible to be successful with lightweight, informal testing strategies employed by busy software teams. Yes, you will be tempted to "move fast" and use prototypes, etc. But if you don't build in robust automated testing from the start along with methods of managing test data you will have a hard time.
+6. **Formalize your testing strategy and code coverage expectations**. It's nearly impossible to be successful with lightweight, informal testing strategies employed by busy software teams. Yes, you will be tempted to "move fast" and use prototypes, etc. But if you don't build in robust automated testing from the start along with methods of managing test data you will have a hard time.
 
 Other considerations:
 
 - Maker-checker is a powerful concept. Embrace it to the fullest across your system.
 - You will be dealing with all sorts of non-standardized financial integrations. A lot. Think [adapter pattern](https://refactoring.guru/design-patterns/adapter/typescript/example) as early as possible.
-- You will likely be answering to multiple regulatory agencies. Create boundaries between them within your system and reduce the surface of compliance as much as possible.
+- You will likely be answering to multiple regulatory agencies. Create boundaries between them within your system and reduce the surface of compliance as much as possible. 
+- Regulatory agencies will inform (define?) your records retention policies - know these before you design your data storage layer.
 - Be paranoid about race conditions / serialization anomalies.
 - Use immutable storage where possible (this also protects from ransomware).
 
 ## <a name='11'></a>Identity Management
 
-Financial systems attract fraud. One of the best ways to combat fraud is having robust ways to determine that someone is who they claim to be, and that they are a human. Identity management is the bedrock upon which the entire financial ecosystem is built, offering protection against fraud and ensuring the overall robustness of the ecosystem. Identity theft, account takeovers, and fraudulent transactions are just a few examples of the threats that financial institutions face. Identity management acts as a bulwark against these threats.
+Financial systems attract fraud. One of the best ways to combat fraud is having robust ways to determine that someone is who they claim to be, and that they are a human. Identity management is the bedrock upon which the entire financial ecosystem is built, ensuring the overall robustness of the ecosystem. Identity theft, account takeovers, and fraudulent transactions are just a few examples of the threats that financial institutions face. Identity management acts as a bulwark against these threats.
 
-The financial ecosystem is a complex network of institutions, customers, partners, and regulators. The integrity of this ecosystem relies heavily on the accurate identification and verification of all participants. Identity management plays a crucial role in maintaining the trust and credibility that underpin financial transactions. By establishing a reliable and secure means of confirming identities, financial institutions can confidently interact with each other, customers can trust the services they receive, and regulators can ensure compliance with relevant laws and regulations.
+The financial ecosystem is a complex network of institutions, customers, partners, and regulators. The integrity of this ecosystem relies heavily on the accurate identification and verification of all participants. By establishing a reliable and secure means of confirming identities, financial institutions can confidently interact with each other, customers can trust the services they receive, and regulators can ensure compliance with relevant laws and regulations.
 
-This is where a partner like [Socure](https://www.socure.com/) can help - this is very hard to get right and takes lots of design and build time to get right. My advice is not to do this yourself.
+This is where a partner like [Socure](https://www.socure.com/) can help - this takes lots of design and build time to get right. My advice is not to do this yourself.
 
 ## <a name="12"></a>Testing and Release Management
 
@@ -219,7 +225,7 @@ Your application will need a full suite of application metrics that need to be d
 
 On day one of your launch, the CEO will want to know things like how many transactions are being processed and what their total dollar amount is. Another thing that tends to happen early in the life of a fintech is that there will be a drop-off between signups and usage, and someone on the product team will start asking if users are experiencing errors. Be ready with good application monitoring to be able to answer these kinds of questions.
 
-What metrics signal fraud attempts? From day one you will have to be vigilant about fraud patterns in your application. Make sure you monitoring on user activity for the inevitable questions that will be coming your way.
+What metrics signal fraud attempts? From day one you will have to be vigilant about fraud patterns in your application. Make sure you are monitoring user activity for the inevitable questions that will be coming your way.
 
 ### References
 
