@@ -129,6 +129,12 @@ You should build data quality rules on top of your data storage. Data quality ru
 
 I have mentioned immutable data like transactions and transaction state changes several times now. There are other key benefits to having data be immutable - as an example, ransomware cannot corrupt or encrypt immutable data. Also, immutable data can be optimized for "write once, read many" access so it can be more performant.
 
+There are some great building blocks to use today such as AWS's [Quantum Ledger Database](https://aws.amazon.com/qldb/). This enables you to track and maintain a sequenced history of every data change using an immutable and transparent journal with built-in cryptographic verification. 
+
+It works like this:
+
+![](https://d1.awsstatic.com/r2018/h/99Product-Page-Diagram_AWS-Quantum.f03953678ba33a2d1b12aee6ee530e45507e7ac9.png)
+
 This also helps with auditability, information security, and controls. Auditors, CISO's and regulators love immutable data.
 
 NOTE: "Forget me" laws (such as Europe's GDPR, or California's CCPA) do not apply to financial transactions. Otherwise, we would be creating money laundering havens. Other records retention laws come into play for banking, insurance and securities - you must keep what you need to keep, and you should be careful not to keep anything past the records retention necessary. How you store data must conceptually align with the records retention policy necessary. You need to design for the this _up front_. 
@@ -180,7 +186,7 @@ A well-designed architecture not only ensures optimal performance and scalabilit
 
 1. **Study existing arcgitectures/code**. Review anything you can get your hands on. For example, a great open source banking core having many of the strengths listed is [Apache Fineract](https://github.com/apache/fineract/). Also check out the links in the References section below.
 
-2. **Model your processes**. One of the best to keep complexity in check is to model processes as state machines (with the state itself being persisted to DB). State machines can be formally tested. By modelling your systems, you will learn what the important failure modes are and you will get better at designing systems that are resilient and efficient.
+2. **Model your business processes**. One of the best to keep complexity in check is to model processes as state machines (with the state itself being persisted to DB). State machines can be formally tested. By modelling your systems, you will learn what the important failure modes are and you will get better at designing systems that are resilient and efficient.
 
 3. **Use formal methods**. Harnessing the capabilities of formal software architecture design methodologies offers a structured approach to conceptualizing, designing, and implementing complex financial systems, ensuring robustness, reliability, and adherence to industry standards. Complex fintech projects involve multidisciplinary teams. Formal architectures provide a shared language and understanding, enhancing collaboration among developers, architects, domain experts, and business stakeholders. Incorporating formal architecture or design methods into fintech endeavors is an investment in long-term success.
 
@@ -190,7 +196,9 @@ A well-designed architecture not only ensures optimal performance and scalabilit
 
 5. **Use well designed, tested, and trusted componentry**. The libraries and SDKs you will need to use will become a large, critical part of your overall technology stack and some of these decisions will be very difficult to unwind if they don't work out. Knowing how to wrap and use third party libraries for things like DOCv step up, remote deposit capture, and security features is table stakes. If your stack choices make this challenging then you're going to have a hard time for a long time.
 
-6. **Formalize your testing strategy and code coverage expectations**. It's nearly impossible to be successful with lightweight, informal testing strategies employed by busy software teams. Yes, you will be tempted to "move fast" and use prototypes, etc. But if you don't build in robust automated testing from the start along with methods of managing test data you will have a hard time.
+6. **Automate Everything**. Use "infrastructure as code" practices to define and deploy infrastructure in a repeatable, auditable manner. On the software side fully embrace continuous integration (CI) and continuous delivery (CD). CI/CD bridges the gaps between development and operation activities and teams by enforcing automation in building, testing and deployment of applications. Leverage DEVOPS best practices to manage environments, automate deploys and create consistency in dev, testing and product releases. 
+
+6. **Formalize your automated testing strategy and code coverage expectations**. It's nearly impossible to be successful with lightweight, informal testing strategies employed by busy software teams. Yes, you will be tempted to "move fast" and use prototypes, etc. But if you don't build in robust automated testing from the start along with methods of managing test data you will have a hard time. You need automated regression testing as a minimum. 
 
 Other considerations:
 
@@ -205,9 +213,11 @@ Other considerations:
 
 Financial systems attract fraud. One of the best ways to combat fraud is having robust ways to determine that someone is who they claim to be, and that they are a human. Identity management is the bedrock upon which the entire financial ecosystem is built, ensuring the overall robustness of the ecosystem. Identity theft, account takeovers, and fraudulent transactions are just a few examples of the threats that financial institutions face. Identity management acts as a bulwark against these threats.
 
-The financial ecosystem is a complex network of institutions, customers, partners, and regulators. The integrity of this ecosystem relies heavily on the accurate identification and verification of all participants. By establishing a reliable and secure means of confirming identities, financial institutions can confidently interact with each other, customers can trust the services they receive, and regulators can ensure compliance with relevant laws and regulations.
+By establishing a reliable and secure means of confirming identities, financial institutions can confidently interact with each other, customers can trust the services they receive, and regulators can ensure compliance with relevant laws and regulations.
 
-This is where a partner like [Socure](https://www.socure.com/) can help - this takes lots of design and build time to get right. My advice is not to do this yourself.
+Start with OAuth 2.0 - the industry-standard protocol for authorization. Understand the [threat model](https://datatracker.ietf.org/doc/html/rfc6819) and attack scenarios you will experience. Use multi-factor authentication and in the future, adopt [passkeys](https://developer.apple.com/passkeys/).
+
+Fintech firms also have "know your customer" regulations, and using OAuth 2.0 is not sufficient to guarantee you are dealing with a specific human. This is where a partner like [Socure](https://www.socure.com/) can help - this takes lots of design and build time to get right. My advice is not to do this yourself.
 
 ## <a name="12"></a>Testing and Release Management
 
@@ -217,11 +227,13 @@ Deciding how to configure environments — dev, test, prod, etc. — and how to 
 
 2. Plan for every important configuration of your production environment to be testable. Testability might require multiple test merchants and test accounts that move real money. You never know when you need to double check that the plumbing is working. Face it: [You Test in Prod](https://increment.com/testing/i-test-in-production/).
 
-3. An often-overlooked requirement is to be able to ensure that the production environment is doing error handling properly. The thing about production systems is that they&apos;re not supposed to have errors, so you can&apos;t see how they perform under error conditions unless you can force errors to happen.
+3. An often-overlooked requirement is to be able to ensure that the production environment is doing error handling properly. The thing about production systems is that they&apos;re not supposed to have errors, so you can&apos;t see how they perform under error conditions unless you can force errors to happen. If you have more courage than I do use something like Netflix's [chaos monkey](https://netflix.github.io/chaosmonkey/) to force validation of failover.
 
 ## <a name='13'></a>Application Monitoring
 
-Your application will need a full suite of application metrics that need to be defined **up front** and engineered into the application. Deploying to a public cloud like AWS means that some infrastructure monitoring can be added quickly and almost as an afterthought, but _application_ monitoring cannot.
+> Customers: not the best early warning system.
+
+Your application will need a full suite of application metrics that need to be defined **up front** and engineered into the application. Deploying to a public cloud like AWS means that some infrastructure monitoring can be added quickly and almost as an afterthought, but _application_ monitoring cannot. Engineers should know when systems fail before anyone else, especially customers.
 
 On day one of your launch, the CEO will want to know things like how many transactions are being processed and what their total dollar amount is. Another thing that tends to happen early in the life of a fintech is that there will be a drop-off between signups and usage, and someone on the product team will start asking if users are experiencing errors. Be ready with good application monitoring to be able to answer these kinds of questions.
 
