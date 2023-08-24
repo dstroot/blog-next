@@ -1,4 +1,4 @@
-import { cn } from '../lib/utils';
+import { cn } from '@/lib/utils';
 import useSWR from 'swr';
 import millify from 'millify';
 
@@ -14,7 +14,7 @@ const StatsCard = ({ name, children, stats }) => {
       <span
         className={cn(
           'duration-300 ease-in-out text-4xl font-black text-gray-700 dark:text-gray-300',
-          !stats ? 'scale-105 blur-lg' : 'scale-100 blur-0'
+          !stats ? 'scale-105 blur-lg' : 'scale-100 blur-0',
         )}
       >
         {children}
