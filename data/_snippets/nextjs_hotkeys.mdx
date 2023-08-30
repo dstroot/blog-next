@@ -1,0 +1,70 @@
+---
+title: 'Nextjs Hotkeys'
+published: true
+date: '2023-08-29'
+summary: 'Here is the easiest way to implement "hot keys" in a Nextjs app using the app router.'
+icon: JavaScripts
+tags:
+  - Javascript
+  - React Hook
+  - React Component
+#  - CSS
+#   - HTML
+---
+
+Here is the easiest way to implement "hot keys" in a Nextjs app. This example is specifically for the new Nextjs app router in Nextjs 13. We will use the Next router and a hook called "useHotkeys" from the [Mantine hooks](https://mantine.dev/pages/getting-started/) library.
+
+In the example below I will use the "/" key to navigate to my application's search route from anywhere in my site.
+
+<CodeBlock>
+
+```JavaScript:hotkeys.js
+use client'
+
+import { useRouter } from 'next/navigation'
+import { useHotkeys } from '@mantine/hooks'
+
+export const Hotkeys = () => {
+  const router = useRouter()
+  useHotkeys([['/', () => router.push(`/search`)]])
+
+  return null
+}
+```
+
+</CodeBlock>
+
+### Usage
+
+Then simply import the Hotkeys component in your layout, or maybe in your site header component. Somewhere where it will be loaded on every page. For simplicity let's just add it to our layout:
+
+<CodeBlock>
+
+```JavaScript:cnExample.tsx
+import '@/styles/globals.css'
+import { Hotkeys } from '@/components/Hotkeys'
+
+export const metadata: Metadata = {
+  title: "Cool Site"
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+
+    <html lang="en">
+      <body>
+        <Hotkeys />
+        {children}
+      </body>
+    </html>
+  )
+}
+```
+
+</CodeBlock>
+
+And Voila! Instant hotkeys in your app. Just press the "/" key and navigate to search. 
