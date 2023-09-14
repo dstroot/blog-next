@@ -4,10 +4,6 @@ import { Header } from '../components/Header';
 import { CMS_NAME } from '../lib/constants';
 import { Container } from '../components/Container';
 
-// images
-// import maker from '../public/assets/blog/img/maker.jpg';
-// import me from '../public/assets/blog/authors/dan.jpeg';
-
 export default function Index() {
   const title = `${CMS_NAME} · About`;
 

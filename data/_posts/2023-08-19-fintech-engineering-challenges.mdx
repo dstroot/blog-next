@@ -36,7 +36,9 @@ Note: I am intentionally only lightly touching the broad topic of "security" bec
 
 ## <a name='1'></a>Significant Digits/Rounding
 
-This is so critical that I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a repeating binary number that goes on forever like this: 0.000110011001100110011001100110011001100110011001100110011...
+This is so critical that I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a repeating binary number that goes on forever like this: 
+
+<div className="text-sm overflow-x-scroll">0.000110011001100110011001100110011001100110011001100110011...</div>
 
 If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will add up and become noticeable, even substantial. Imagine starting with $10.00 USD and dividing it equally into three payments, rounded to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10.00. You just made a penny disappear into thin air (0.1% of the total value!).
 
@@ -70,11 +72,11 @@ This is where **double entry accounting** comes into play. Double-entry accounti
 
 In fact, the term "balance" comes from double entry accounting - credits must always balance with debits. Thus, every transaction is _balanced_ – it sums to zero. For example, if we sell a $100 widget but haven't been paid yet, we are owed $100, and we have $100 in revenue:
 
-| Ledger Account                                   | Debit       | Credit      |
-| ------------------------------------------------ | ----------- | ----------- |
-| balance_sheet.current_assets.accounts_receivable | $100.00     | $0          |
-| profit_loss.revenue.general                      | $0          | $100.00     |
-| **Balance**                                      | **$100.00** | **$100.00** |
+| Ledger Account        | Debit       | Credit      |
+| --------------------  | ----------- | ----------- |
+| receivables | $100.00     | $0          |
+| revenue     | $0          | $100.00     |
+| **Balance**     | **$100.00** | **$100.00** |
 
 To understand this further let's introduce some terms:
 
